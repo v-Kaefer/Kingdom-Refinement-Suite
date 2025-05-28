@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="perk" version="1">
+    <header>
+      <column name="icon_id" type="character varying" />
+      <column name="level" type="integer" />
+      <column name="metaperk_id" type="uuid" />
+      <column name="parent_id" type="uuid" />
+      <column name="perk_id" type="uuid" />
+      <column name="perk_name" type="character varying" />
+      <column name="perk_ui_desc" type="character varying" />
+      <column name="perk_ui_name" type="character varying" />
+      <column name="skill_selector" type="integer" />
+      <column name="stat_selector" type="integer" />
+      <column name="ui_priority" type="integer" />
+      <column name="visibility" type="integer" />
+    </header>
+    <rows>
+    <row autolearnable="False" exclude_in_game_mode="" icon_id="riposte" level="8" metaperk_id="" parent_id="d2da2217-d46d-4cdb-accb-4ff860a3d83e" perk_id="ec4c5274-50e3-4bbf-9220-823b080647c4" perk_name="Riposte" perk_ui_desc="perk_ex_riposte_desc" perk_ui_name="perk_ex_riposte_name" skill_selector="15" stat_selector="" ui_priority="0" visibility="2" />
+    <row autolearnable="False" exclude_in_game_mode="" icon_id="shield_slam" level="" metaperk_id="" parent_id="" perk_id="61e98757-9b32-493b-ad09-0087afdb81be" perk_name="ripo_lsw_01" perk_ui_desc="perk_ex_ripo_text_desc" perk_ui_name="perk_ex_ripo_text_sword" skill_selector="15" stat_selector="" ui_priority="0" visibility="1" />
+    </rows>
+  </table>
+</database>
