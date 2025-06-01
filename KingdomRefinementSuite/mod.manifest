@@ -10,6 +10,8 @@
     <modifies_level>false</modifies_level>
   </info>
   <supports>
-    <kcd_version>1.9</kcd_version>
+    <kcd_version>1.9.4</kcd_version>
+    <kcd_version>1.9.5</kcd_version>
+    <kcd_version>1.9.6.x</kcd_version>
   </supports>
 </kcd_mod>
