@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="text_english" version="1">
+    <header>
+      <column name="key"    type="character varying" />
+      <column name="text"   type="character varying" />
+      <column name="markup" type="character varying" />
+    </header>
+    <rows>
+        <row key="subchapter_397_name" text="On the Trail" markup="On the Trail" />
+        <row key="subchapter_397_description" 
+            text="One of the members of the Neuhof gang, who calls himself Stinky, should be somewhere around Ledečko. Unfortunately, I couldn't find out more, but judging by his nickname, I have a feeling it won't be a very pleasant meeting."
+            markup="One of the members of that Neuhof gang, who calls himself Stinky, should be somewhere around Ledečko. Unfortunately, I couldn't find out more, but judging by his nickname, I have a feeling it won't be a very pleasant meeting.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_323_name" text="In All Decency" markup="In All Decency" />
+        <row key="subchapter_323_description"
+            text="Jan Ptáček has decided to treat his injuries from our hunt in the spa and has asked me to accompany him."
+            markup="Jan Ptáček has decided to treat his injuries from our hunt in the spa and has asked me to accompany him.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_403_name" text="The Plague in Mrchojedy" markup="The Plague in Mrchojedy" />
+        <row key="subchapter_403_description"
+            text="Mrchojedy has been struck by a dangerous disease. First it affected the game and then the villagers themselves."
+            markup="Mrchojedy has been struck by a dangerous disease. First it affected the game and then the villagers themselves.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_384_name" text="In God's Hands" markup="In God's Hands" />
+        <row key="subchapter_384_description"
+            text="I met Johanka at the monastery, and it looks like she's having trouble..."
+            markup="I met Johanka at the monastery, and it looks like she's having trouble...&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_293_name" text="A Friend in Need" markup="...Is a Friend Indeed" />
+        <row key="subchapter_293_description"
+            text="I got Fritz and Matthew a new job at a mill. Now it's time to find out how they're getting on."
+            markup="I got Fritz and Matthew a new job at a mill. Now it's time to find out how they're getting on.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_454_name" text="Sophie's wedding." markup="At Your Service, My Lady" />
+        <row key="subchapter_454_description"
+            text="Stephanie from Talmberg wants an unforgettable wedding for her cousin Sophie."
+            markup="Stephanie from Talmberg wants an unforgettable wedding for her cousin Sophie.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_373_name" text="Stone Dead" markup="The House of God" />
+        <row key="subchapter_373_description"
+            text="There's been an accident at the Sasau Monastery construction works due to bad quality stone. The Talmberg Quarry Master is worried the affair will damage his good name."
+            markup="There's been an accident at the Sasau Monastery construction works due to bad quality stone. The Talmberg Quarry Master is worried the affair will damage his good name.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_365_name" text="True Christians" markup="Waldensians" />
+        <row key="subchapter_365_description"
+            text="Uzhitz has an uninvited guest - the Archbishop’s Vicar. He claims to be here to hunt down a group of heretics in the area. But Sir Hanush is of a different opinion. He thinks the Vicar has come here in order to snoop around his own estate. This is why Sir Hanush wants to see him off back to Prague."
+            markup="Uzhitz has an uninvited guest - the Archbishop’s Vicar. He claims to be here to hunt down a group of heretics in the area. But Sir Hanush is of a different opinion. He thinks the Vicar has come here in order to snoop around his own estate. This is why Sir Hanush wants to see him off back to Prague.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_294_name" text="Execution" markup="Money for Old Rope" />
+        <row key="subchapter_294_description"
+            text="There's to be an execution in Rattay - without Hermann, the Rattay Executioner."
+            markup="There's to be an execution in Rattay - without Hermann, the Rattay Executioner.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_571_name" text="Emergency Supply" markup="Emergency Supply" />
+        <row key="subchapter_571_description"
+            text="Hanekin Hare's band of poachers isn't as merry as it was. They were attacked by the Talmberg soldiers and Hanekin had to hide out in a mine shaft with a handful of his faithful followers. But one of them, Black Lukesh, has lost the faith and plans to desert Hare. He doesn't want to go empty-handed though, especially since he has something put away for a rainy day at his house. Only his house is being watched by the soldiers."
+            markup="Hanekin Hare's band of poachers isn't as merry as it was. They were attacked by the Talmberg soldiers and Hanekin had to hide out in a mine shaft with a handful of his faithful followers. But one of them, Black Lukesh, has lost the faith and plans to desert Hare. He doesn't want to go empty-handed though, especially since he has something put away for a rainy day at his house. Only his house is being watched by the soldiers.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+        <row key="subchapter_393_name" text="The Hunt Begins" markup="The Hunt Begins" />
+        <row key="subchapter_393_description"
+            text="Someone raided the Neuhof stud farm and Sir Radzig has sent me there along with a squad of his men to investigate what has actually happened."
+            markup="Someone raided the Neuhof stud farm and Sir Radzig has sent me there along with a squad of his men to investigate what has actually happened.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(This quest is timed)&amp;lt;/font&amp;gt;" />
+    </rows>
+  </table>
+</database>

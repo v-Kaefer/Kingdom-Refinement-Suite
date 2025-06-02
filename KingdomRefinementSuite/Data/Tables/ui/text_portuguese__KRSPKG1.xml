@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+    <table name="text_portuguese" version="1">
+        <header>
+            <column name="key"    type="character varying" />
+            <column name="text"   type="character varying" />
+            <column name="markup" type="character varying" />
+        </header>
+        <rows>
+            <row key="subchapter_397_name" text="No rastro" markup="No Rastro" />
+            <row key="subchapter_397_description"
+                text="Um dos membros da gangue de Neuhof, um sujeito conhecido como Reeky, deve estar em algum lugar nas proximidades de Ledetchko. Infelizmente, isso é tudo o que consegui descobrir até agora. Acho que não deve ser muito difícil... bem, encontrar o rastro desse Reeky, embora eu não espere que seja um encontro agradável."
+                markup="Um dos membros da gangue de Neuhof, um sujeito conhecido como Reeky, deve estar em algum lugar nas proximidades de Ledetchko. Infelizmente, isso é tudo o que consegui descobrir até agora. Acho que não deve ser muito difícil... bem, encontrar o rastro desse Reeky, embora eu não espere que seja um encontro agradável.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_323_name" text="PRÓXIMO À DIVINDADE" markup="Próximo à Divindade" />
+            <row key="subchapter_323_description"
+                text="Em que vou aos banhos para ver o Lorde Capon, e o que nos acontece lá."
+                markup="Em que vou aos banhos para ver o Lorde Capon, e o que nos acontece lá.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_403_name" text="Peste" markup="Peste" />
+            <row key="subchapter_403_description"
+                text="A aldeia de Merhojed foi atingida por uma praga misteriosa que primeiro infectou os animais e agora os moradores."
+                markup="A aldeia de Merhojed foi atingida por uma praga misteriosa que primeiro infectou os animais e agora os moradores.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_384_name" text="Nas Mãos de Deus" markup="Nas Mãos de Deus" />
+            <row key="subchapter_384_description"
+                text="Encontrei Johanka no monastério, e parece que ela está com problemas..."
+                markup="Encontrei Johanka no monastério, e parece que ela está com problemas...&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_293_name" text="Um Amigo em Apuros" markup="...É um Amigo de Verdade" />
+            <row key="subchapter_293_description"
+                text="Consegui um novo emprego para Fritz e Matthew em um moinho. Agora é hora de descobrir como eles estão se saindo."
+                markup="Consegui um novo emprego para Fritz e Matthew em um moinho. Agora é hora de descobrir como eles estão se saindo.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_454_name" text="O casamento de Sophie." markup="Aos Seus Serviços, Minha Senhora" />
+            <row key="subchapter_454_description"
+                text="Stephanie de Talmberg quer um casamento inesquecível para sua prima Sophie."
+                markup="Stephanie de Talmberg quer um casamento inesquecível para sua prima Sophie.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_373_name" text="Morte Súbita" markup="A Casa de Deus" />
+            <row key="subchapter_373_description"
+                text="Houve um acidente nas obras de construção do Monastério de Sasau devido à má qualidade da pedra. O Mestre da Pedreira de Talmberg está preocupado que o caso prejudique sua reputação."
+                markup="Houve um acidente nas obras de construção do Monastério de Sasau devido à má qualidade da pedra. O Mestre da Pedreira de Talmberg está preocupado que o caso prejudique sua reputação.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_365_name" text="Verdadeiros Cristãos" markup="Valdenses" />
+            <row key="subchapter_365_description"
+                text="Uzhitz tem um visitante indesejado - o Vigário do Arcebispo. Ele afirma estar aqui para caçar um grupo de hereges na região. Mas Sir Hanush tem outra opinião. Ele acha que o Vigário veio para bisbilhotar sua própria propriedade. Por isso Sir Hanush quer mandá-lo de volta para Praga."
+                markup="Uzhitz tem um visitante indesejado - o Vigário do Arcebispo. Ele afirma estar aqui para caçar um grupo de hereges na região. Mas Sir Hanush tem outra opinião. Ele acha que o Vigário veio para bisbilhotar sua própria propriedade. Por isso Sir Hanush quer mandá-lo de volta para Praga.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_294_name" text="Execução" markup="Dinheiro por Cordas Velhas" />
+            <row key="subchapter_294_description"
+                text="Vai haver uma execução em Rattay - sem Hermann, o Carrasco de Rattay."
+                markup="Vai haver uma execução em Rattay - sem Hermann, o Carrasco de Rattay.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_571_name" text="Fornecimento de Emergência" markup="Fornecimento de Emergência" />
+            <row key="subchapter_571_description"
+                text="O bando de caçadores furtivos de Hanekin Hare não está tão animado quanto antes. Eles foram atacados pelos soldados de Talmberg e Hanekin teve que se esconder em uma mina com alguns de seus seguidores fiéis. Mas um deles, Black Lukesh, perdeu a fé e planeja desertar Hare. Ele não quer sair de mãos vazias, especialmente porque tem algo guardado para um dia chuvoso em sua casa. Só que sua casa está sendo vigiada pelos soldados."
+                markup="O bando de caçadores furtivos de Hanekin Hare não está tão animado quanto antes. Eles foram atacados pelos soldados de Talmberg e Hanekin teve que se esconder em uma mina com alguns de seus seguidores fiéis. Mas um deles, Black Lukesh, perdeu a fé e planeja desertar Hare. Ele não quer sair de mãos vazias, especialmente porque tem algo guardado para um dia chuvoso em sua casa. Só que sua casa está sendo vigiada pelos soldados.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_393_name" text="A Caçada Começa" markup="A Caçada Começa" />
+            <row key="subchapter_393_description"
+                text="Alguém atacou o haras de Neuhof e Sir Radzig me enviou para lá junto com um grupo de seus homens para investigar o que realmente aconteceu."
+                markup="Alguém atacou o haras de Neuhof e Sir Radzig me enviou para lá junto com um grupo de seus homens para investigar o que realmente aconteceu.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Esta missão tem tempo)&amp;lt;/font&amp;gt;" />
+        </rows>
+    </table>
+</database>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="rpg_param__krspkg1" version="1">
+    <header>
+      <column name="rpg_param_key" type="character varying" />
+      <column name="rpg_param_value" type="real" />
+    </header>
+    <rows>
+      <row rpg_param_key="StrengthToInventoryCapacity" rpg_param_value="5" />
+      <row rpg_param_key="HerbGatherSkillToRadius" rpg_param_value="0.35" />
+	    <row perk_id="01c3b32a-5751-4c98-b6ab-258d02370382" rpg_param_key="RepairKitItemHealthBestLimit" rpg_param_value="0.2" />
+	    <row perk_id="01c3b32a-5751-4c98-b6ab-258d02370382" rpg_param_key="RepairPriceModif" rpg_param_value="1.2" />
+    </rows>
+  </table>
+</database>

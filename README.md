@@ -6,4 +6,12 @@ A curated set of non-intrusive PTF tweaks to polish your journey through Bohemia
 
 Added:
 
+* Realistic Repairs [Modifications:
+ At lvl20 -> repairs >= 20 durability
+ Repairs prices doubled
+] {Requested Permission}
+* Train More Carry More - PTF {Requested Permission} Does this works?
 * EnhancedEyesByGrimsy {Request Permission}
+* Timed Quests Indicator + translations (needs update)
+* 
+
