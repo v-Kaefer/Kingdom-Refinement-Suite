@@ -1,0 +1,160 @@
+
+
+
+
+## Gameplay
+
+- Get permission
+* [Realistic Repairs](https://www.nexusmods.com/kingdomcomedeliverance/mods/1842?tab=description)
+
+
+### Skills
+
+* [Veteran Hunting](https://www.nexusmods.com/kingdomcomedeliverance/mods/1990)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
+
+### Feature
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
+
+
+## Visuals and Graphics
+
+- Get permission
+* [Enhanced Hair Textures](https://www.nexusmods.com/kingdomcomedeliverance/mods/922)
+* [Original clouds KCD no mipmap](https://www.nexusmods.com/kingdomcomedeliverance/mods/879)
+* []()
+* []()
+
+### UI / QOL
+
+* [Better Drunkenness](https://www.nexusmods.com/kingdomcomedeliverance/mods/1225)
+* [MORE BLOOD](https://www.nexusmods.com/kingdomcomedeliverance/mods/1045)
+* [Custom Texture Tweaks (Inventory)](https://www.nexusmods.com/kingdomcomedeliverance/mods/851)
+* [Inventory Stone and Background Recolor](https://www.nexusmods.com/kingdomcomedeliverance/mods/848)
+* [Ruddys Menus - Collection of Menu Replacer's](https://www.nexusmods.com/kingdomcomedeliverance/mods/347)
+* [Wooden Menus](https://www.nexusmods.com/kingdomcomedeliverance/mods/341)
+* []()
+* []()
+* []()
+
+### Interactive (World) / Improvements (QOL)
+
+* [Blood Mod ALPHA](https://www.nexusmods.com/kingdomcomedeliverance/mods/681)
+* [Neat and Tidy](https://www.nexusmods.com/kingdomcomedeliverance/mods/653)
+* [Official Artwork Loadscreens](https://www.nexusmods.com/kingdomcomedeliverance/mods/531)
+* [Instant Herb Picking](https://www.nexusmods.com/kingdomcomedeliverance/mods/367)
+* [Aliasing-free lightweight Sharpen and Static-Dof Shader](https://www.nexusmods.com/kingdomcomedeliverance/mods/279)
+* [Improved LOD through Depth Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/258)
+* [Volumetric Fog Enabler](https://www.nexusmods.com/kingdomcomedeliverance/mods/19)
+* [Enable Shadows on all lights](https://www.nexusmods.com/kingdomcomedeliverance/mods/65)
+* [WidescreenTorch](https://www.nexusmods.com/kingdomcomedeliverance/mods/63)
+* [Translucent Helmet Vision](https://www.nexusmods.com/kingdomcomedeliverance/mods/165)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
+### Reshades
+
+* [ReformationFX Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/1080)
+* [ID Reshade (update v2)](https://www.nexusmods.com/kingdomcomedeliverance/mods/1012)
+* [Kingdom Come Deliverance Book Of The Dead Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/956)
+* [Photorealistic Beauty](https://www.nexusmods.com/kingdomcomedeliverance/mods/930)
+* [HolyLand Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/785)
+* [Realistic Graphic Overhaul](https://www.nexusmods.com/kingdomcomedeliverance/mods/626)
+* [BEAUTIFUL SHADERS V1.2](https://www.nexusmods.com/kingdomcomedeliverance/mods/427)
+* [Medieval Art of Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/358)
+* [Natural Light (Reshade preset)](https://www.nexusmods.com/kingdomcomedeliverance/mods/264)
+* [NatureArt](https://www.nexusmods.com/kingdomcomedeliverance/mods/255)
+* [Z_Reshade - My idea of realism - More Contrast - Details - Less Saturation and Darker Nights](https://www.nexusmods.com/kingdomcomedeliverance/mods/237)
+* [Kingdom View - ReShade Preset](https://www.nexusmods.com/kingdomcomedeliverance/mods/232)
+* [Ultimate Immersion Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/46)
+* [DECENT ReShade - Natural and Performance Friendly](https://www.nexusmods.com/kingdomcomedeliverance/mods/179)
+* [Project Epyon - True Photorealism and Cinematic Lighting and Effects Overhaul](https://www.nexusmods.com/kingdomcomedeliverance/mods/175)
+* [Reshade complex Final](https://www.nexusmods.com/kingdomcomedeliverance/mods/170)
+* [3DArtists MASTERPIECE](https://www.nexusmods.com/kingdomcomedeliverance/mods/163)
+* [Realistic visual effects (ReShade Preset)](https://www.nexusmods.com/kingdomcomedeliverance/mods/152)
+* [Ideal Bohemia Reshade Preset](https://www.nexusmods.com/kingdomcomedeliverance/mods/145)
+* [Subtle Realism - Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/137)
+* [Aesthetics and Nature - 4 Seasons](https://www.nexusmods.com/kingdomcomedeliverance/mods/135)
+* [BEAUTIFUL PHOTO REALISM V3.0 FINAL RESHADE](https://www.nexusmods.com/kingdomcomedeliverance/mods/132)
+* [Spring ReShade](https://www.nexusmods.com/kingdomcomedeliverance/mods/102)
+* [Better ReShade - Darker Night](https://www.nexusmods.com/kingdomcomedeliverance/mods/100)
+* [R88_Eventide (ReShade Preset)](https://www.nexusmods.com/kingdomcomedeliverance/mods/95)
+* [Perfection Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/68)
+* [Wanderer ReShade](https://www.nexusmods.com/kingdomcomedeliverance/mods/60)
+* [Sovereign Cinematic ReShade Preset](https://www.nexusmods.com/kingdomcomedeliverance/mods/54)
+* [UPDATE 1.3 - REALISTIC LIGHTING RESHADE](https://www.nexusmods.com/kingdomcomedeliverance/mods/42)
+* [Recolour Defined 0 FPS hit Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/22)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
+
+### TBE (To Be Evaluated)
+
+* [How It Should Be KCD Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/1241)
+* [Weather Mod](https://www.nexusmods.com/kingdomcomedeliverance/mods/1193)
+* [Cooking cauldron flickering smoke Fix](https://www.nexusmods.com/kingdomcomedeliverance/mods/1177)
+* [Cloudy Showers](https://www.nexusmods.com/kingdomcomedeliverance/mods/1067)
+* [Super Natural Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/975)
+* [Photorealism-Reshade v.1](https://www.nexusmods.com/kingdomcomedeliverance/mods/839)
+* [Increased Particles Mod](https://www.nexusmods.com/kingdomcomedeliverance/mods/789)
+* [Hoods Over Helmats Removed Clipping Helmets On NPC'S](https://www.nexusmods.com/kingdomcomedeliverance/mods/771)
+* [More Visible Dice](https://www.nexusmods.com/kingdomcomedeliverance/mods/611)
+* [EyMi's Reshade Preset - Darker Look](https://www.nexusmods.com/kingdomcomedeliverance/mods/555)
+* [Third Person Camera Mode](https://www.nexusmods.com/kingdomcomedeliverance/mods/532)
+* [Official Artwork Loadscreens](https://www.nexusmods.com/kingdomcomedeliverance/mods/531)
+* [Reshade KCD Photorealistic](https://www.nexusmods.com/kingdomcomedeliverance/mods/468)
+* [Realism graphics mod](https://www.nexusmods.com/kingdomcomedeliverance/mods/445)
+* [Cine-VIsion](https://www.nexusmods.com/kingdomcomedeliverance/mods/424)
+* [Fix for to sharp shadows and eyeholes in shadows](https://www.nexusmods.com/kingdomcomedeliverance/mods/419)
+* [Simple Realistic Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/405)
+* [Volumetric Fog Shadows](https://www.nexusmods.com/kingdomcomedeliverance/mods/800)
+* [Ambient Occlusion Fix](https://www.nexusmods.com/kingdomcomedeliverance/mods/387)
+* [Sky And Grass Color Correction](https://www.nexusmods.com/kingdomcomedeliverance/mods/392)
+* [Majestic Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/371)
+* [First-Person-View](https://www.nexusmods.com/kingdomcomedeliverance/mods/370)
+* [Sacrum Lumen Realistic Reshade for Kingdom Come Deliverance](https://www.nexusmods.com/kingdomcomedeliverance/mods/282)
+* [TW2 RESHADE](https://www.nexusmods.com/kingdomcomedeliverance/mods/245)
+* [Northern Cold ReShade](https://www.nexusmods.com/kingdomcomedeliverance/mods/223)
+* [MyChoise](https://www.nexusmods.com/kingdomcomedeliverance/mods/217)
+* [Performance Heavy Graphical Overhaul](https://www.nexusmods.com/kingdomcomedeliverance/mods/194)
+* [TiSoBrs EPIC Intro Replacement](https://www.nexusmods.com/kingdomcomedeliverance/mods/196)
+* [The immersion Shader](https://www.nexusmods.com/kingdomcomedeliverance/mods/190)
+* [Disable Headbob](https://www.nexusmods.com/kingdomcomedeliverance/mods/594)
+* [FANTASY ReShade Preset](https://www.nexusmods.com/kingdomcomedeliverance/mods/69)
+* [Cinematic Next-Gen ReShade](https://www.nexusmods.com/kingdomcomedeliverance/mods/59)
+* [KCD PUREVISION - RESHADE](https://www.nexusmods.com/kingdomcomedeliverance/mods/52)
+* [Tydronium Reshade - KKD](https://www.nexusmods.com/kingdomcomedeliverance/mods/44)
+* [Kingdom Come Deliverance Rebirth Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/33)
+* [Hint Reshade](https://www.nexusmods.com/kingdomcomedeliverance/mods/14)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* [ReShade](https://reshade.me)
