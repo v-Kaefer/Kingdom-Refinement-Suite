@@ -1,2 +1,7 @@
 /.embold
-/Mods WIP folder
+/.qodo
+*.zip
+*.rar
+/Mods WIP folder/*
+/KRS-Perks/*
+/KRS-QoL/*
