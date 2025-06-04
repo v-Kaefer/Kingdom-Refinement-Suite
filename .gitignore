@@ -3,6 +3,13 @@
 *.zip
 *.rar
 /KingdomRefinementSuite/*
-/Mods WIP folder/*
+/Mods WIP folder/KingdomComeDeliverance
+/Mods WIP folder/Etc
+/Mods WIP folder/Archery
+/Mods WIP folder/Perks
+/Mods WIP folder/QoL
+/Mods WIP folder/SDK
+/Mods WIP folder/Tables
+/Mods WIP folder/User Interface
 /KRS-Perks/*
 /KRS-QoL/*
