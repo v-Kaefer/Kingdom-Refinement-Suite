@@ -10,6 +10,8 @@
       <column name="text_id" type="integer" />
     </header>
     <rows>
+      <!-- WTF IS THIS: <row class_id="2" document_ui_layout="2" item_id="7c621760-e296-4069-9303-14c05f1745ba" length_in_game_hours="0" recipe_id="43" text_id="24" />-->
+      <!-- Base Values: 4, 6, 8, 10. Mod to 2.5x = 10, 15, 20, 25-->
       <row class_id="1" document_ui_layout="2" item_id="0a9b5b2a-2614-4f11-a987-aab64133bea0" length_in_game_hours="15" recipe_id="" text_id="150" />
       <row class_id="1" document_ui_layout="2" item_id="0defd37d-cfec-446f-b307-e9ef65fea3f3" length_in_game_hours="15" recipe_id="" text_id="147" />
       <row class_id="1" document_ui_layout="2" item_id="15a92bc2-d1f3-438f-a104-c1fc7bd71996" length_in_game_hours="15" recipe_id="" text_id="159" />

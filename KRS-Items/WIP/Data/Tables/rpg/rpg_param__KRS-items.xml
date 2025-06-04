@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="rpg_param__krs-items" version="1">
+    <header>
+      <column name="rpg_param_key" type="character varying" />
+      <column name="rpg_param_value" type="real" />
+    </header>
+    <rows>
+      <!-- Base Value: 20. Reduced by 2.5x to match reading time. -->
+      <row rpg_param_key="ReadingXpPerHour" rpg_param_value="5" />
+    </rows>
+  </table>
+</database>
