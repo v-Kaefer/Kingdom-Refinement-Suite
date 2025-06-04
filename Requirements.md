@@ -25,21 +25,3 @@
 * KNOX'S LABELLED ITEMS XML
 * [benjaminfoo](https://github.com/benjaminfoo/kcd_coding_guide)
 
-
-## For Scripts
-Quick Start: Patching the Lua script
-Unpack Data/Scripts.pak with 7-Zip.
-
-Find the Bow script (likely in Scripts/Weapon/).
-
-Copy it into your mod tree:
-
-MyMod/
-└─ Data/
-   └─ Scripts.pak/         ← treat as a 7-Zip folder
-      └─ Weapon/
-         └─ Bow.lua
-
-- Edit Bow.lua to inject your strength/agi formula around the existing charge-time calculation.
-- Re-zip MyMod/Data/Scripts.pak (rename .zip→.pak).
-- Drop it into your Mods/MyMod/Data/Scripts.pak (or pack it into your Nexus ZIP).
