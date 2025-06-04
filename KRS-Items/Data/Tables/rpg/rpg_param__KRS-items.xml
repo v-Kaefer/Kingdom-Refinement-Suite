@@ -6,7 +6,8 @@
       <column name="rpg_param_value" type="real" />
     </header>
     <rows>
-      <row rpg_param_key="ReadingXpPerHour" rpg_param_value="10" /> <!-- Base 20 -->
+      <!-- Base Value: 20. Reeduceed by 2.5x to match reading time. -->
+      <row rpg_param_key="ReadingXpPerHour" rpg_param_value="5" />
     </rows>
   </table>
 </database>
