@@ -35,8 +35,6 @@
       <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="3157d51d-7461-4fdc-9601-93bd5ed42156" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
       <!-- Buck's Blood Potion (Drink) -->
       <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="92c829ca-41f6-40a7-b8d9-aac5159c7a89" max_status="100" nutrition_benefit="5" refresh_benefit="6" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
-      <!-- ? -->
-      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="4" food_type_id="3" health_benefit="200" item_id="8fb1de6d-2985-45ea-ae9c-007540b4f37e" max_status="100" nutrition_benefit="0" refresh_benefit="0" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
       <!-- Cockerel Potion (Drink) -->
       <row alcohol_content="30" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="c40dc516-9886-4245-8a8b-2cbb16da918d" max_status="100" nutrition_benefit="10" refresh_benefit="20" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
       <!-- Digestion Potion (Drink) -->
@@ -61,7 +59,16 @@
       <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="5" food_type_id="3" health_benefit="0" item_id="3d3f5935-c2e3-4e52-8a16-a6a04ee4a79f" max_status="100" nutrition_benefit="5" refresh_benefit="8" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
       <!-- Spirits (Drink) -->
       <row alcohol_content="90" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="5" item_id="2529e246-6f1b-4529-8d6b-64245207bae8" max_status="100" nutrition_benefit="20" refresh_benefit="15" short_term_nutrition_benefit_ratio="0.63" smoked_item_id="" />
-      <!-- DLC POTIONS GO INTO item.xml-->
+      <!-- DLC POTIONS -->
+      <!-- The Amorous Adventures of Bold Sir Hans Capon -->
+      <!-- Musk of Infinite Allure -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="60825599-3c28-4a5b-ad6a-fda128f8b723" max_status="100" nutrition_benefit="10" refresh_benefit="10" short_term_nutrition_benefit_ratio="" smoked_item_id="" />
+      <!-- Quest No Rest for the Wicked -->
+      <!-- Fake Blood -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="eec58bfb-063e-4838-b78d-3c2b354f1346" max_status="0" nutrition_benefit="0" refresh_benefit="0" short_term_nutrition_benefit_ratio="" smoked_item_id="" />
+      <!-- A Woman's Lot. -->
+      <!-- Chamomile brew -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="4" food_type_id="3" health_benefit="200" item_id="8fb1de6d-2985-45ea-ae9c-007540b4f37e" max_status="100" nutrition_benefit="0" refresh_benefit="0" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
     </rows>
   </table>
 </database>
