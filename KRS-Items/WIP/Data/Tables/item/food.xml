@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="food" version="1">
+    <header>
+      <column name="alcohol_content" type="real" />
+      <column name="cooked_item_id" type="uuid" />
+      <column name="decay_time_hours" type="real" />
+      <column name="dried_item_id" type="uuid" />
+      <column name="food_subtype_id" type="integer" />
+      <column name="food_type_id" type="integer" />
+      <column name="health_benefit" type="real" />
+      <column name="item_id" type="uuid" />
+      <column name="max_status" type="integer" />
+      <column name="nutrition_benefit" type="real" />
+      <column name="refresh_benefit" type="real" />
+      <column name="short_term_nutrition_benefit_ratio" type="real" />
+      <column name="smoked_item_id" type="uuid" />
+    </header>
+    <rows>
+      <!-- Aesop Potion (Drink) -->
+      <row alcohol_content="30" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="73ff1fde-ec8b-41e9-95e3-b5938c715bf1" max_status="100" nutrition_benefit="10" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Love/Amor Potion (Drink) -->
+      <row alcohol_content="20" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="2509115d-59c9-44f8-9802-f600eba63fa9" max_status="100" nutrition_benefit="7" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Antidote (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="8b713d0c-9a04-4354-a53f-ffd384057fa6" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Vitality Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="850d28d9-9d0a-4b2e-9feb-e6c48c5f1aad" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Artemisia Potion (Drink) -->
+      <row alcohol_content="40" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="4" item_id="f1309a89-045f-44ae-a4d9-c997b892a162" max_status="100" nutrition_benefit="10" refresh_benefit="0" short_term_nutrition_benefit_ratio="0.63" smoked_item_id="" />
+      <!-- Bard Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="34d9f446-e5a7-4af4-858a-e96473de814f" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Bivoj's Rage Potion (Drink) -->
+      <row alcohol_content="20" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="2b24a290-ec3c-454c-901e-fea76aa76d74" max_status="100" nutrition_benefit="7" refresh_benefit="10" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Bowman's Brew (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="3157d51d-7461-4fdc-9601-93bd5ed42156" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Buck's Blood Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="92c829ca-41f6-40a7-b8d9-aac5159c7a89" max_status="100" nutrition_benefit="5" refresh_benefit="6" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- ? -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="4" food_type_id="3" health_benefit="200" item_id="8fb1de6d-2985-45ea-ae9c-007540b4f37e" max_status="100" nutrition_benefit="0" refresh_benefit="0" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Cockerel Potion (Drink) -->
+      <row alcohol_content="30" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="c40dc516-9886-4245-8a8b-2cbb16da918d" max_status="100" nutrition_benefit="10" refresh_benefit="20" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Digestion Potion (Drink) -->
+      <row alcohol_content="30" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="eca88106-4bab-4419-8772-4450739c193c" max_status="100" nutrition_benefit="-20" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.6" smoked_item_id="" />
+      <!-- Embrocation (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="10" food_type_id="3" health_benefit="0" item_id="567fc1b1-1424-4784-9da8-5104e2e7354d" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Hair o' the Dog Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="d837e829-d706-4db8-8e3d-e70a16882c96" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Lazarus Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="4" food_type_id="3" health_benefit="100" item_id="2668d311-8667-4f27-b94b-7f6175678f17" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Lullaby Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="5" food_type_id="3" health_benefit="0" item_id="31148cbb-8592-4b26-a1ae-8a9e07e309e6" max_status="100" nutrition_benefit="5" refresh_benefit="-100" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Marigold Decoction (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="4" food_type_id="3" health_benefit="30" item_id="b38c34b7-6016-4f64-9ba2-65e1ce31d4a1" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Nighthawk Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="6b955a9b-d8de-492c-a53e-a052fab4ff0a" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Padfoot Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="ab25a50a-7836-47a9-acb2-5fd93684b8c5" max_status="100" nutrition_benefit="5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+      <!-- Saviour Schnapps (Drink) -->
+      <row alcohol_content="20" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="8" food_type_id="3" health_benefit="0" item_id="928463d9-e21a-4f7c-b5d3-8378ed375cd1" max_status="100" nutrition_benefit="0" refresh_benefit="0" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Witch Potion (Drink) -->
+      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="5" food_type_id="3" health_benefit="0" item_id="3d3f5935-c2e3-4e52-8a16-a6a04ee4a79f" max_status="100" nutrition_benefit="5" refresh_benefit="8" short_term_nutrition_benefit_ratio="0.1" smoked_item_id="" />
+      <!-- Spirits (Drink) -->
+      <row alcohol_content="90" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="5" item_id="2529e246-6f1b-4529-8d6b-64245207bae8" max_status="100" nutrition_benefit="20" refresh_benefit="15" short_term_nutrition_benefit_ratio="0.63" smoked_item_id="" />
+      <!-- DLC POTIONS GO INTO item.xml-->
+    </rows>
+  </table>
+</database>
