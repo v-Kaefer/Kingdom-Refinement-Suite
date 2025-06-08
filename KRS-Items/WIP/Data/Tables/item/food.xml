@@ -93,26 +93,3 @@
     </rows>
   </table>
 </database>
-
-
-
-<!-- Beer -->
-      <row alcohol_content="15" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="52afd6fa-9377-457c-83a2-b5b39321a4dc" max_status="40" nutrition_benefit="7" refresh_benefit="-2" short_term_nutrition_benefit_ratio="0.35" smoked_item_id="" />
-<!-- Cheap Wine -->
-      <row alcohol_content="40" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="3" food_type_id="3" health_benefit="0" item_id="38df365c-a4bb-462b-80cc-eb92f16930fa" max_status="50" nutrition_benefit="10" refresh_benefit="-6" short_term_nutrition_benefit_ratio="0.25" smoked_item_id="" />
-<!-- Drinking Water -->
-      <row alcohol_content="0" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="11" food_type_id="3" health_benefit="1" item_id="0cb47176-06c5-42a9-8d70-969e917eb999" max_status="100" nutrition_benefit="0.5" refresh_benefit="0" short_term_nutrition_benefit_ratio="" smoked_item_id="" />
-<!-- Fine Wine -->
-      <row alcohol_content="40" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="3" food_type_id="3" health_benefit="7" item_id="dea2883f-6bd9-4f6e-bae8-80322d428652" max_status="75" nutrition_benefit="18" refresh_benefit="5" short_term_nutrition_benefit_ratio="0.25" smoked_item_id="" />
-<!-- Mead -->
-      <row alcohol_content="50" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="390c0dc8-23fd-42a0-91f2-a4d42f96a387" max_status="60" nutrition_benefit="10" refresh_benefit="-2" short_term_nutrition_benefit_ratio="0.3" smoked_item_id="" />
-<!-- Milk -->
-      <row alcohol_content="0" cooked_item_id="" decay_time_hours="24" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="51555071-7c55-4da1-9b61-ee3c14fde18b" max_status="10" nutrition_benefit="13" refresh_benefit="0" short_term_nutrition_benefit_ratio="0.6" smoked_item_id="" />
-<!-- Pribyslavitz Boar (dlc) -->
-      <row alcohol_content="5" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="7" food_type_id="3" health_benefit="0" item_id="9e782670-3291-4382-a6d3-a843d13e67d9" max_status="1" nutrition_benefit="10" refresh_benefit="10" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
-<!-- Rosehip wine -->
-      <row alcohol_content="30" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="3" food_type_id="3" health_benefit="5" item_id="ca5a0aa3-e373-48ec-96e4-1c3b9907bac3" max_status="48" nutrition_benefit="16" refresh_benefit="6" short_term_nutrition_benefit_ratio="0.25" smoked_item_id="" />
-<!-- Spirits -->
-      <row alcohol_content="80" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="5" item_id="c64b7286-07b8-4bdf-afd0-359171d35249" max_status="100" nutrition_benefit="20" refresh_benefit="10" short_term_nutrition_benefit_ratio="0.63" smoked_item_id="" />
-<!-- Wine -->
-      <row alcohol_content="40" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="3" food_type_id="3" health_benefit="2" item_id="7c5126cd-b010-4484-8465-22a3d69fa0df" max_status="75" nutrition_benefit="15" refresh_benefit="-2" short_term_nutrition_benefit_ratio="0.25" smoked_item_id="" />
