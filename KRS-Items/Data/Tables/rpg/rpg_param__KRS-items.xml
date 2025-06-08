@@ -6,8 +6,11 @@
       <column name="rpg_param_value" type="real" />
     </header>
     <rows>
-      <!-- Base Value: 20. Reduced by 2.5x to match reading time. -->
       <row rpg_param_key="ReadingXpPerHour" rpg_param_value="5" />
+      <row rpg_param_key="DigestionSpeed" rpg_param_value="0.001302084" />
+      <row rpg_param_key="StarvationPlayerEffectMinMin" rpg_param_value="95" />
+      <row rpg_param_key="StarvationPlayerEffectMaxMax" rpg_param_value="65" />
+      <row rpg_param_key="StarvationPlayerEffectMinMax" rpg_param_value="25" />
     </rows>
   </table>
 </database>

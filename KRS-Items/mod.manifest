@@ -4,7 +4,7 @@
     <name>KRS Items</name>
     <description>All items modifications made for the Kingdom Refinement Suite Collection. A curated set of non-intrusive PTF tweaks to polish your journey through Bohemia.</description>
     <author>Kaleb</author>
-    <version>1.0.0</version>
+    <version>1.1.1</version>
     <created_on>04/06/2025</created_on>
     <modid>krs_items</modid>
     <modifies_level>false</modifies_level>
