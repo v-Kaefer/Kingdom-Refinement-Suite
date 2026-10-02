@@ -1,0 +1,17 @@
+
+== E:/Kingdom-Refinement-Suite/KRS-Items   name='KRS Items' modid='krs_items' -> effective id 'krs_items'
+   PROBLEM Data\Tables\item\document__KRS-items.xml: suffix 'KRS-items' != mod id 'krs_items' - the game will ignore this file
+   PROBLEM Data\Tables\item\food__KRS-items.xml: suffix 'KRS-items' != mod id 'krs_items' - the game will ignore this file
+   PROBLEM Data\Tables\item\item.xml: no '__suffix' - this REPLACES the whole vanilla table
+   PROBLEM Data\Tables\rpg\rpg_param__KRS-items.xml: suffix 'KRS-items' != mod id 'krs_items' - the game will ignore this file
+   PROBLEM Data\Tables\rpg\sleeping_spot_type__KRS-items.xml: suffix 'KRS-items' != mod id 'krs_items' - the game will ignore this file
+
+== E:/Kingdom-Refinement-Suite/KRS-Items\Para publicar (TEMP)   name='KRS Items' modid='krs_items' -> effective id 'krs_items'
+   PROBLEM Data\KRS-Items.pak: not a zip file (a 7z archive renamed .pak is not opened by the game: 'Failed to open the pak'). Create it with 7-Zip as format 'zip'
+   no table patches found
+
+== E:/Kingdom-Refinement-Suite/KingdomRefinementSuite   name='Kingdom Refinement Suite' modid='kingdom_refinement_suite' -> effective id 'kingdom_refinement_suite'
+   PROBLEM Data\Tables\item\document__KRS-items.xml: suffix 'KRS-items' != mod id 'kingdom_refinement_suite' - the game will ignore this file
+   PROBLEM Data\Tables\rpg\rpg_param__KRS.xml: suffix 'KRS' != mod id 'kingdom_refinement_suite' - the game will ignore this file
+
+problems: 8
