@@ -7,6 +7,10 @@ Companion to `ANALYSIS.md` (evidence class B). It supports the workflow you desc
    consumption effect.
 3. Record the verdict and let it justify, limit or veto a rule.
 
+**Scope of use (author's intent):** real-world facts are a light inspiration for small adjustments, at the level of "can help
+with" and "known to be risky", on top of what the game already says; they never override the game or remove its fantasy.
+Verdicts such as `not supported` therefore mean "do not lean on this fact", not "change the game's text".
+
 `claims_ledger.csv` holds the claims (29 so far, one row per claim) and this file holds the sources. A rule in the
 rebalance should cite a ledger row, and a ledger row cites source ids (`S01`...).
 

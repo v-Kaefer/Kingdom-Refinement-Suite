@@ -1,0 +1,598 @@
+key,runtime_value,exists_in_engine,in_vanilla_rpg_param,vanilla_table_value,in_params_reference,params_reference_section
+AdditionalAttackerCountForMaxFadingBuff,2,yes,,,yes,Perks
+AgiDiffToAttackSpeed,0.2,yes,,,yes,Combat
+AgilityXPLevelBase,20,yes,,,yes,Player
+AgilityXPLevelDiff,30,yes,,,yes,Player
+AimCiriticalLimitTime,0.75,yes,,,yes,Ranged Weapon
+AimPainlessDelay,2,yes,,,yes,Ranged Weapon
+AimSkillToZoom,1.5,yes,,,yes,Ranged Weapon
+AimSpreadMax,15,yes,yes,15,yes,Ranged Weapon
+AimSpreadMinRatio,0.3,yes,,,yes,Ranged Weapon
+AimSpreadSkillDecrease,0.05,yes,,,yes,Ranged Weapon
+AimStamCost,20,yes,yes,20,yes,Ranged Weapon
+AimZoomBase,10,yes,,,yes,Ranged Weapon
+AimZoomBaseSkill,10,yes,,,yes,Ranged Weapon
+AimZoomMax,25,yes,,,yes,Ranged Weapon
+AlchemyRecipeStepsTolerance,2,yes,,,yes,Player
+AlchemyToleranceBase,0.5,yes,,,yes,Player
+AlchemyTolerancePerLevel,0.15,yes,,,yes,Player
+AlchemyTrialEndErrorPerkTolerance,1,yes,,,yes,Player
+AlchemyXPPerSuccessfullBrewing,40,yes,yes,40,yes,Player
+AlcoholBaseHangoverDuration,14400,yes,,,yes,Digestion
+AlcoholBlackoutDuration,14400,yes,,,yes,Digestion
+AlcoholContentFPAntidoteThreshold,60,yes,yes,60,yes,Digestion
+AlcoholDigestSpeedModfifOnEmptyStomache,2,yes,yes,2,yes,Digestion
+AlcoholDigestSpeedModfifOnFullStomache,0.5,yes,,,yes,Digestion
+AlcoholDrunkMaxExhaustNegativeEffect,0.005,yes,yes,0.005,yes,Digestion
+AlcoholDrunkThreshold,0.5,yes,,,yes,Digestion
+AlcoholHangoverOffsetModif,1.1,yes,,,yes,Digestion
+AlcoholMaxAGIEffect,2,yes,yes,2,yes,Digestion
+AlcoholMaxCHAEffect,2,yes,yes,2,yes,Digestion
+AlcoholMaxCONEffect,3,yes,,,yes,Digestion
+AlcoholMaxDrinkingSkillHangoverDurationModifier,0.333333,yes,yes,0.333333,yes,Digestion
+AlcoholMaxSPCEffect,2,yes,yes,2,yes,Digestion
+AlcoholMaxSTREffect,2,yes,yes,2,yes,Digestion
+AlcoholMaxVITEffect,2,yes,yes,2,yes,Digestion
+AlcoholMoodMaxExhaustPossitiveEffect,0.0002,yes,yes,0.0002,yes,Digestion
+AlcoholMoodThreshold,0.01,yes,yes,0.01,yes,Digestion
+AlcoholPerkBacchusHangoverEffectMod,1.3,yes,,,yes,Digestion
+AlcoholPerkCorrectResistanceModif,0.5,yes,,,yes,Digestion
+AlcoholPerkDrunkHangoverDurationMod,2,yes,,,yes,Digestion
+AlcoholPerkDrunkMoodRangeMod,2,yes,,,yes,Digestion
+AlcoholPerkLooseTongueSpcChaModif,,NO,,,yes,Digestion
+AlcoholPerkTrueSlavHangoverDurationMod,0.5,yes,,,yes,Digestion
+AlcoholPerkTrueSlavMaxAlcoholMod,0.5,yes,,,yes,Digestion
+AlcoholPerkWrongResistanceModif,2,yes,,,yes,Digestion
+AlcoholismDuration,500000,yes,yes,500000,yes,Digestion
+AlcoholismMaxSkillLevelThreshold,1000,yes,,,yes,Digestion
+AlcoholismRemoveSpeed,0.001,yes,yes,0.001,yes,Digestion
+AlcoholismThreshold,700,yes,,,yes,Digestion
+AlcoholismTickInterval,,NO,,,yes,Digestion
+ArmorDefenseToAttackingWeaponStatus,0.02,yes,yes,0.02,yes,Combat
+ArmorDirtToCharismaCoef,1,yes,,,yes,Combat
+ArmorLoadDiffToMax,10,yes,,,yes,Combat
+ArmorLoadToJumpCost,2,yes,,,yes,Movement and Stamina
+ArmorLoadToRun,0.5,yes,,,yes,Movement and Stamina
+ArmorLoadToSprint,1,yes,,,yes,Movement and Stamina
+ArmorStatusToCharismaCoef,0.67,yes,,,yes,Combat
+ArmorStatusToDefenseCoef,0.67,yes,,,yes,Combat
+AthleticXPAwardDistance,500,yes,,,yes,Player
+AttSkillToHorsePullDown,0.5,yes,,,yes,Horse
+AttStrengthToHorsePullDown,0.5,yes,,,yes,Horse
+AttackEnergyModifier,2,yes,,,yes,Combat
+AttackRequiredStamRatio,0,yes,,,yes,Combat
+AttackSpeedNormal,0.5,yes,,,yes,Combat
+AttackSpeedNormalAgi,5,yes,,,yes,Combat
+AttackSpeedPlayerRelative,1,yes,,,yes,Combat
+AttackStamModMin,0.5,yes,,,yes,Combat
+AverageArmorDefenseWeight,0.5,yes,,,yes,Combat
+AvidReaderReadingSpeed,0.35,yes,,,yes,Player
+BadassnessDiffToSkillCheckResult,2,yes,,,yes,Player
+BarterAngrynessCoefWeightA,1,yes,,,yes,Barter
+BarterAngrynessCoefWeightB,0.7,yes,,,yes,Barter
+BarterCoefWeightA,0.875,yes,,,yes,Barter
+BarterCoefWeightB,80,yes,,,yes,Barter
+BarterDominanceChaBaseE,5,yes,,,yes,Stealth
+BarterDominanceChaWeightC,0.1,yes,,,yes,Stealth
+BarterDominanceRelationshipWeightB,1,yes,,,yes,Stealth
+BarterDominanceSpcWeightA,3,yes,,,yes,Stealth
+BarterDominanceSpcWeightD,10,yes,,,yes,Stealth
+BarterPriceSellRepBuying,1.5,yes,yes,1.5,yes,Barter
+BarterPriceSellRepCoef,1.5,yes,yes,1.5,yes,Barter
+BarterPriceSellRepMultip,-0.5,yes,,,yes,Barter
+BaseAttackStaminaCost,12,yes,yes,12,,
+BaseInventoryCapacity,66,yes,yes,66,yes,Player
+BaseItemDisappearingTime,172800,yes,yes,172800,yes,General
+BasketSuspiciencyNoDealThreashold,1e+07,yes,yes,9999999,yes,Barter
+BasketSuspiciencyThreashold,0.1,yes,,,yes,Barter
+BestVisVolume,10000,yes,,,yes,Stealth
+BigZoneDistanceSlotMod,0.8,yes,,,yes,Player
+BowChargeDurationMax,3,yes,,,yes,Ranged Weapon
+BowChargeDurationMin,1.35,yes,,,yes,Ranged Weapon
+BowPowerToChargeDuration,0.1,yes,,,yes,Ranged Weapon
+BundleAlchemistPerkAdd,1,yes,,,yes,Player
+CaffeineFromFoodCoef,2,yes,,,yes,Digestion
+CaffeineFullThreshold,0.9,yes,,,yes,Digestion
+CarriedBodyMaxStamConsumption,10,yes,,,yes,General
+CarriedBodyWeightCoef,0.25,yes,,,yes,General
+CarriedCarriedWeightCoef,0.5,yes,,,yes,General
+CharismaDiffToSkillCheckResult,0.3,yes,,,yes,Player
+CharismaMulOnExtremeExhaustion,0.75,yes,,,yes,Movement and Stamina
+ClassCourageMoraleWeight,0,yes,yes,0,yes,Combat
+ClinchBackOffDmgRWeight,0.05,yes,yes,0.05,,
+ClothDirtyingUpdatePeriod,50,yes,,,yes,General
+CollisionVelocityDeltaToDmgR,0.25,yes,yes,0.25,yes,General
+CombatAutoAggressionDiffScale,2,yes,,,yes,Combat
+CombatAutoAttackDelayIncreasePerAttacker,0.8,yes,yes,0.8,yes,Combat
+CombatAutoAttackDelayIncreasePerAttackerHorse,0.1,yes,,,yes,Combat
+CombatAutoAttackDelayIncreasePerAttackerMissile,0.2,yes,,,yes,Combat
+CombatAutoAttackDelaySigma,4,yes,,,yes,Combat
+CombatAutoClinchReactionDelayMaxMax,1,yes,,,yes,Combat
+CombatAutoClinchReactionDelayMaxMin,0.5,yes,,,yes,Combat
+CombatAutoClinchReactionDelayMinMax,-0.5,yes,,,yes,Combat
+CombatAutoClinchReactionDelayMinMin,-1,yes,,,yes,Combat
+CombatAutoComboStepsSigma,1.5,yes,,,yes,Combat
+CombatAutoDodgeWeight,1.1,yes,yes,1.1,yes,Combat
+CombatAutoEasyZoneWeight,0.8,yes,,,yes,Combat
+CombatAutoForcedComboStaminaLimit,0.7,yes,,,yes,Combat
+CombatAutoForcedPeriodicalAttackStaminaLimit,0.2,yes,,,yes,Combat
+CombatAutoGuardHysteresis,1.5,yes,,,yes,Combat
+CombatAutoLameGuardOffset,3,yes,,,yes,Combat
+CombatAutoMasterComboSteps,5,yes,,,yes,Combat
+CombatAutoMasterGuardOffset,1,yes,,,yes,Combat
+CombatAutoMaxAimDuration,3,yes,,,yes,Combat
+CombatAutoMaxAimDurationRandomAdd,1,yes,,,yes,Combat
+CombatAutoMaxAtkDistOffset,0.1,yes,,,yes,Combat
+CombatAutoMaxAttackDelay,6,yes,yes,6,yes,Combat
+CombatAutoMaxHuntAttackDuration,60,yes,,,yes,Combat
+CombatAutoMinAtkDistOffset,0,yes,,,yes,Combat
+CombatAutoMinDefenseModeWeight,0.4,yes,,,yes,Combat
+CombatAutoMinHuntAttackDuration,15,yes,,,yes,Combat
+CombatAutoMoveActivityDecreasePerAttacker,0.5,yes,,,yes,Combat
+CombatAutoNaturalComboRatio,0.5,yes,,,yes,Combat
+CombatAutoNoDefenseWeight,0.4,yes,yes,0.4,yes,Combat
+CombatAutoNormalBWeight,2.8,yes,yes,2.8,yes,Combat
+CombatAutoOppZoneAdaptDelayMaxMax,2,yes,,,yes,Combat
+CombatAutoOppZoneAdaptDelayMaxMin,1,yes,,,yes,Combat
+CombatAutoOppZoneAdaptDelayMinMax,0.2,yes,,,yes,Combat
+CombatAutoOppZoneAdaptDelayMinMin,0,yes,,,yes,Combat
+CombatAutoPBWeight,2.5,yes,yes,2.5,yes,Combat
+CombatAutoReactionDelayRangeSpread,0.3,yes,,,yes,Combat
+CombatAutoReactivePreblockMaxDelay,0.8,yes,,,yes,Combat
+CombatAutoReactivePreblockMinDelay,0.3,yes,,,yes,Combat
+CombatAutoRiposteAggressionWeight,0.5,yes,,,yes,Combat
+CombatAutoSPBWeight,1.5,yes,yes,1.5,yes,Combat
+CombatAutoScaleDefensivenessDelayRel,2,yes,,,yes,Combat
+CombatAutoStaticPreblockMaxTime,15,yes,,,yes,Combat
+CombatAutoStaticPreblockRandBias,0.8,yes,,,yes,Combat
+CombatAutoTrickAttackProb,0.8,yes,,,yes,Combat
+CombatAutoTrickDelayVariability,0.3,yes,,,yes,Combat
+CombatAutoTrickInvalidBlockAttackMaxProb,0.5,yes,,,yes,Combat
+CombatAutoTrickMaxProb,0.5,yes,,,yes,Combat
+CombatAutoTrickMinMaxDelay,0.8,yes,,,yes,Combat
+CombatAutoTrickNoAttackProb,0.1,yes,,,yes,Combat
+CombatAutoTrickReactionMaxDelay,8,yes,,,yes,Combat
+CombatAutoTrickReactionMinDelay,0.1,yes,,,yes,Combat
+CombatAutoTrickReactionSkillWeight,4,yes,,,yes,Combat
+CombatAutoTrickReactionStaWeight,1,yes,,,yes,Combat
+CombatAutoUnarmedBlockProb,1.6,yes,yes,1.6,yes,Combat
+CombatAutoWpnHealthBlockMax,20,yes,,,yes,Combat
+CombatAutoWpnHealthMinBlockProb,0.8,yes,yes,0.8,yes,Combat
+CombatAutoZoneChangeDelayMaxMax,10,yes,,,yes,Combat
+CombatAutoZoneChangeDelayMaxMin,5,yes,,,yes,Combat
+CombatAutoZoneChangeDelayMinMax,6,yes,,,yes,Combat
+CombatAutoZoneChangeDelayMinMin,2,yes,,,yes,Combat
+CombatDangerCooldown,3,yes,,,yes,General
+CombatDmgRBonusFromBehind,1.2,yes,yes,1.2,yes,Combat
+CombatHitImmortalUnconsciousDepth,120,yes,yes,120,yes,Stealth
+CombatHitUnconsciousDepth,60,yes,yes,60,yes,Stealth
+CombatMoveApproachHysteresis,1.5,yes,,,yes,Combat
+CombatMoveApproachSprintMinStamina,1,yes,,,yes,Combat
+CorpseDisappearanceTimeDiscovered,5,yes,,,yes,General
+CorpseDisappearanceTimeUndiscovered,25,yes,,,yes,General
+CorpseDisapperanceMinDistanceFromPlayer,100,yes,,,yes,General
+DefaultReadingQuality,0.5,yes,,,yes,Player
+DefaultRelationship,0.5,yes,,,yes,General
+DefaultStateDeltaSpeed,1,yes,,,yes,General
+DefaultVisVolume,0.03,yes,,,yes,Stealth
+DefaultWorldTimeRatio,15,yes,,,yes,General
+DigestionSpeed,0.000578704,yes,,,yes,Digestion
+DistanceCheckInterval,,NO,,,yes,General
+DmgRToHealthCoefA,3,yes,,,yes,Combat
+DmgRToHealthCoefB,1.6,yes,,,yes,Combat
+DogCommandMoraleThreshold,0.15,yes,yes,0.15,,
+DogDisobeyTimeout,300,yes,yes,300,,
+DogMoraleBuffFeed,0.08,yes,yes,0.08,,
+DogMoraleBuffPlay,0.05,yes,yes,0.05,,
+DogMoraleBuffPraise,0.05,yes,yes,0.05,,
+DogMoraleBuffSigma,0,yes,yes,0,,
+DogMoraleDecreaseWithoutInteraction,5.5e-05,yes,yes,5.5E-05,,
+DogMoraleIncreaseSkipTime,0.00011,yes,yes,0.00011,,
+DogPOISearchRadiusMax,50,yes,yes,50,,
+DogPOISearchRadiusMin,20,yes,yes,20,,
+DuringFaderHysteresis,1,yes,,,yes,Perks
+EncumberanceForSecondaryModifiers,0.5,yes,,,yes,Combat
+EncumberedToSpeedSurfaceCoef,0.3,yes,,,yes,Combat
+EquippedWeightSubWithWellWornPerk,0.333333,yes,,,yes,Player
+ExhaustedPlayerEffectMaxMax,60,yes,,,yes,Movement and Stamina
+ExhaustedPlayerEffectMaxMin,30,yes,,,yes,Movement and Stamina
+ExhaustedPlayerEffectMinMax,30,yes,,,yes,Movement and Stamina
+ExhaustedPlayerEffectMinMin,10,yes,,,yes,Movement and Stamina
+ExhaustedThreshold,50,yes,,,yes,Movement and Stamina
+ExhaustionSpeed,0.000578704,yes,,,yes,Movement and Stamina
+ExtremeExhaustionFaintAveragePeriod,300,yes,,,yes,Movement and Stamina
+FactionAngrinessDecayBase,2,yes,yes,2,yes,General
+FactionAngrinessDecayExp,2,yes,yes,2,yes,General
+FactionAngrinessDecayMod,2e-05,yes,yes,2E-05,yes,General
+FactionAngrinessDecayShift,0.25,yes,yes,0.25,yes,General
+FactionAngrinessPropagationCoef,1987,yes,yes,1987,yes,General
+FactionAngrinessPropagationScale,0.1,yes,yes,0.1,yes,General
+FactionRepWeight,3,yes,yes,3,yes,General
+FallDamageMultiplierAtMaxAgility,0.666667,yes,,,yes,Movement and Stamina
+FatCollisionWeightMul,1.4,yes,,,yes,General
+FatalFallHeight,8,yes,,,yes,Movement and Stamina
+FoodFull,100,yes,,,yes,Digestion
+FoodHealSpeed,2,yes,yes,2,yes,Digestion
+FoodHealthThreshold,0.5,yes,,,yes,Digestion
+FoodOverEat,120,yes,,,yes,Digestion
+FoodPoisoningMaxHealthEffectSpeed,0.5,yes,,,yes,Digestion
+FoodPoisoningMaxStatPenalty,10,yes,,,yes,Digestion
+FoodPoisoningMaxValue,100,yes,,,yes,Digestion
+FoodPoisoningMinHealthEffectSpeed,0.1,yes,,,yes,Digestion
+FoodPoisoningThreshold,0.0005,yes,yes,0.0005,yes,Digestion
+FoodPreserverHealthIncreaseAmount,0.5,yes,,,yes,Digestion
+FoodSaltOrSmokePerkDecayModif,0.75,yes,,,yes,Digestion
+FoodTickInterval,,NO,,,yes,Digestion
+FoodWitcherPerkNutritionModif,0.7,yes,,,yes,Digestion
+ForcedFireAimSpreadMalus,7,yes,,,yes,Ranged Weapon
+FromBehindAngle,2.35619,yes,,,yes,Combat
+FullClothDirtyingOnFullSpeed,4000,yes,,,yes,General
+FullClothDirtyingOnZeroSpeed,1,yes,,,yes,General
+GoodArmorDefense,2,yes,,,yes,Combat
+GoodWeaponAttack,3.5,yes,,,yes,Combat
+GoodWeaponDefense,4.5,yes,,,yes,Combat
+HarmlessFallHeight,1,yes,,,yes,Movement and Stamina
+HeadHitKnockOutBaseProbability,0,yes,,,yes,Combat
+HealthDamageToInjury,0.03,yes,yes,0.03,yes,Combat
+HealthDeltaAbsLimit,1000,yes,,,yes,Combat
+HealthFadingFromLimitValue,0.75,yes,,,yes,General
+HealthFull,100,yes,,,yes,Player
+HealthToKnockOut,0,yes,,,yes,Combat
+HealthToMoraleMinCoef,0.2,yes,,,yes,Combat
+HearingToFov,3,yes,,,yes,Stealth
+HeavyWeaponWeight,4,yes,,,yes,Combat
+HerbGatherSkillToCount,0.3,yes,,,yes,Player
+HerbGatherSkillToRadius,0.25,yes,yes,0.25,yes,Player
+HerbGatherXP,7,yes,,,yes,Player
+HerbsInHorseInventoryForHorsenipPerk,30,yes,,,yes,Player
+HerbsInInventoryForFlowerPowerPerk,30,yes,,,yes,Player
+HighbornWealthThreshold,10,yes,,,yes,General
+HorseAttackMaxSpeed,7,yes,,,yes,Horse
+HorseMaxAttackCoef,2.5,yes,,,yes,Horse
+HorseMoraleToThrowOffRider,0.2,yes,yes,0.2,yes,Horse
+HorseMountMaxRelativeEncumberance,1.5,yes,yes,1.5,,
+HorseRidingAwardDistance,500,yes,yes,500,yes,Player
+HorseRidingToHorseCourage,0.05,yes,yes,0.05,yes,Horse
+HorseRidingToHorseStamina,0.02,yes,,,yes,Horse
+HorseRidingXPPerDistance,12.5,yes,yes,12.5,yes,Player
+HorseWithMaxStatsPrice,3115,yes,yes,3115,,
+HorseWithMinStatsPrice,-650,yes,yes,-650,,
+HoundmasterXPContextCommand,2,yes,yes,2,,
+HoundmasterXPFeed,25,yes,yes,25,,
+HoundmasterXPFetch,5,yes,yes,5,,
+HoundmasterXPHit,2,yes,yes,2,,
+HoundmasterXPKill,20,yes,yes,20,,
+HoundmasterXPPOIDiscovery,20,yes,yes,20,,
+HoundmasterXPPlay,15,yes,yes,15,,
+HoundmasterXPPraise,15,yes,yes,15,,
+HourglassTimeout,10,yes,,,yes,Player
+HunterLootAmountAddCoef,0.3,yes,,,yes,Player
+HunterXPKill,15,yes,yes,15,yes,Player
+HunterXPLoot,10,yes,,,yes,Player
+ImmortalHealthMin,1,yes,,,yes,Player
+ImprovedSleepMultiplier,2,yes,,,yes,Player
+InactiveTimeToDestroyOversleep,8,yes,,,yes,Movement and Stamina
+IndulgenceBasePrice,200,yes,yes,200,,
+IndulgenceMinCumulativeReputationImprovement,0.5,yes,yes,0.5,,
+InjuringFallHeight,2.5,yes,,,yes,Movement and Stamina
+InjuryBleedingInterval,6,yes,,,yes,Player
+InjuryHighThreshold,0.8,yes,,,yes,Player
+InjuryLowThreshold,0.2,yes,,,yes,Player
+InjuryRegenInterval,10,yes,,,yes,Player
+ItemDisappearingMulti,3,yes,,,yes,General
+ItemHealthPriceStatusWeight,0.8,yes,yes,0.8,yes,General
+ItemOwnerDescFadeToSuspiciencyExp,0.25,yes,,,yes,Stealth
+ItemOwnerFactionDistanceCoef1,500,yes,,,yes,Stealth
+ItemOwnerFactionDistanceCoef2,300,yes,,,yes,Stealth
+ItemOwnerFactionDistanceToSuspiciencyMax,1,yes,,,yes,Stealth
+ItemOwnerFactionDistanceToSuspiciencyMin,0.25,yes,,,yes,Stealth
+ItemOwnerFadeCoefToSuspiciencyExp,3,yes,,,yes,Stealth
+ItemOwnerFadeCoefToSuspiciencyMul,2,yes,,,yes,Stealth
+ItemOwnerFadeConspicuousnessToHours,10,yes,,,yes,Stealth
+ItemOwnerFadePriceToHours,1,yes,,,yes,Stealth
+ItemOwnerIsShopkeeperToSuspiciency,8,yes,,,yes,Stealth
+ItemOwnerNeverFadesToSuspiciency,10,yes,,,yes,Stealth
+ItemOwnerRelationshipToSuspiciencyMin,0.1,yes,,,yes,Stealth
+JailRecoveryDebuffDurationMultiplier,0.2,yes,,,yes,General
+JailRecoveryDebuffMaxHours,240,yes,yes,240,yes,General
+JumpCostBase,6,yes,yes,6,yes,Movement and Stamina
+LethalDmgR,10,yes,,,yes,Combat
+LocalHeroInfamousReputationThreshold,0.7,yes,,,yes,Perks
+LocationReputationHatedThreshold,0.2,yes,,,yes,General
+LocationReputationLovedThreshold,0.8,yes,,,yes,General
+LockPickingAppropriateTolerance,0.045,yes,,,yes,Player
+LockPickingCursorShakeRange,0.08,yes,yes,0.08,yes,Player
+LockPickingCursorShakeSpeed,30,yes,yes,30,yes,Player
+LockPickingFailRelativeXPMulCoef,0.101563,yes,,,yes,Player
+LockPickingSkillToShakeRel,0.03,yes,yes,0.03,yes,Player
+LockPickingStealthXP,8,yes,yes,8,yes,Player
+LockPickingSuccessXPDivCoef,0.046875,yes,,,yes,Player
+LockPickingSuccessXPMulCoef,18,yes,yes,18,yes,Player
+LockPickingToleranceACoef,0.45,yes,,,yes,Player
+LockPickingToleranceKCoef,0.07,yes,,,yes,Player
+LockPickingToleranceMCoef,0.687,yes,,,yes,Player
+LockPickingToleranceNCoef,0.48,yes,,,yes,Player
+LockPickingTurnBackDivCoef,0.1,yes,,,yes,Player
+LockPickingTurnBackMulCoef,5,yes,yes,5,yes,Player
+LockpickingFailSoundIntensity,0.5,yes,,,yes,Player
+LockpickingLockpickBreakChance,1,yes,,,yes,Player
+LockpickingRelDistanceToSoundIntensity,0.5,yes,,,yes,Player
+LockpickingSoundIntensityMin,0.3,yes,,,yes,Player
+LowHealthThreshold,40,yes,,,yes,Player
+MatPierceableMaxArmor,10,yes,,,yes,Ranged Weapon
+MaxAgilityToMovementSpeedAddition,0.15,yes,,,yes,Movement and Stamina
+MaxArmorLoad,0.2,yes,,,yes,Combat
+MaxAttackSpeedMod,0.4,yes,,,yes,Combat
+MaxCloudAverageForShiningArmor,0.3,yes,,,yes,Perks
+MaxCourageMoraleContextFadingMod,0.03,yes,,,yes,Combat
+MaxDamage,200,yes,yes,200,yes,Combat
+MaxDmgR,4,yes,yes,4,yes,Combat
+MaxFencingWeaponUsageMod,0.2,yes,,,yes,Combat
+MaxHearingSoundAttenuationCoef,0.2,yes,,,yes,Stealth
+MaxItemDisappearingTime,187200,yes,yes,187200,yes,General
+MaxLightProbeValue,65,yes,yes,65,yes,Stealth
+MaxModConspicuousness,1,yes,,,yes,Stealth
+MaxModVisibility,3.5,yes,,,yes,Stealth
+MaxMorale,1,yes,,,yes,Combat
+MaxPedalCost,2,yes,yes,2,yes,Movement and Stamina
+MaxPerfectBlockSlotModifier,0.85,yes,yes,0.85,yes,Player
+MaxPerkPoints,10,yes,,,yes,Perks
+MaxSlashBuffApplyChance,1.5,yes,,,yes,Combat
+MaxSmashBuffApplyChance,0.7,yes,,,yes,Combat
+MaxSpecialPerfectBlockSlotModifier,0.6,yes,yes,0.6,yes,Player
+MaxStabBuffApplyChance,2,yes,,,yes,Combat
+MaxStatToAttackMult,1.1,yes,yes,1.1,yes,Player
+MaxStatToAttackStaminaCostMult,2,yes,yes,2,yes,Combat
+MaxStatToAttackStaminaCostStatDiff,5,yes,,,yes,Combat
+MaxStatToAttackStatDiff,5,yes,,,yes,Player
+MaxStealthHitSoundMultiplier,0.22,yes,yes,0.22,yes,Stealth
+MaxViewRadius,100,yes,,,yes,Stealth
+MaxWeaponBuffCharge,30,yes,,,yes,Combat
+MaxWeatherSoundAttenuationCoef,0.2,yes,,,yes,Stealth
+MetabolismAbsorbSpeed,0.0069,yes,yes,0.0069,yes,Digestion
+MetabolismDigestSpeed,0.0277,yes,yes,0.0277,yes,Digestion
+MetabolismDigestSpeedMultiplier,1.5,yes,,,yes,Digestion
+MinHealthToBeAbleToSleepOrSkiptime,30,yes,,,yes,Movement and Stamina
+MinLeftoverPerks,1,yes,,,yes,Perks
+MinLightProbeVisibility,-1,yes,yes,-1,yes,Stealth
+MinModConspicuousness,-1,yes,,,yes,Stealth
+MinModVisibility,-2,yes,yes,-2,yes,Stealth
+MinMorale,0,yes,,,yes,Combat
+MinPedalCost,1,yes,yes,1,yes,Movement and Stamina
+MinPerfectBlockSlot01,0.3,yes,,,yes,Player
+MinPerkPoints,5,yes,,,yes,Perks
+MinPossibleSleepTime,1.001,yes,,,yes,Movement and Stamina
+MinRelativeStaminaMax,0.3,yes,,,yes,Movement and Stamina
+MinStatToAttackMult,0.5,yes,,,yes,Player
+MinStatToAttackStaminaCostMult,0.8,yes,,,yes,Combat
+MinStealthHitSoundMultiplier,0.06,yes,yes,0.06,yes,Stealth
+MinTrueRelationDistThreshold,1.5,yes,,,yes,Stealth
+MinViewRadius,2.5,yes,yes,2.5,yes,Stealth
+MinWeaponBuffCharge,15,yes,,,yes,Combat
+MoraleContextFadingSpeed,0.05,yes,,,yes,Combat
+MoraleDecisionReliability,0.15,yes,,,yes,Combat
+MoraleForCombat,0.2,yes,,,yes,Combat
+NPCRepWeight,5,yes,yes,5,,
+NightCoefToNoise,0.2,yes,,,yes,Stealth
+NightCoefToVis,-0.5,yes,,,yes,Stealth
+NonSkillBookXP,30,yes,yes,30,yes,Player
+OverallArmorDefenseMoraleWeight,3,yes,,,yes,Combat
+OverallWeaponAttackMoraleWeight,3,yes,,,yes,Combat
+OverreadnessEmptyTime,16,yes,,,yes,Player
+OverreadnessFillTime,8,yes,,,yes,Player
+OversleepnessEmptyTime,12,yes,,,yes,Movement and Stamina
+OversleepnessFillTime,12,yes,,,yes,Movement and Stamina
+PerceivedSuperfactionImportanceThresholdRel,0.333333,yes,,,yes,Stealth
+PerceptionBaseCha,10,yes,,,yes,Stealth
+PerceptionMaxFov,180,yes,,,yes,Stealth
+PerceptionMeanDist,5,yes,,,yes,Stealth
+PerceptionMinFov,90,yes,,,yes,Stealth
+PerceptionPriorBoostPlayer,12,yes,yes,12,yes,Stealth
+PerceptionPriorBoostRangedWeapon,100,yes,,,yes,Stealth
+PerceptionPriorCha,0.3,yes,,,yes,Stealth
+PerceptionPriorConsp,3,yes,,,yes,Stealth
+PerceptionPriorCrimeLockpick,12,yes,yes,12,yes,Stealth
+PerceptionPriorCrimeLoot,12,yes,yes,12,yes,Stealth
+PerceptionPriorDead,25,yes,yes,25,yes,Stealth
+PerceptionPriorDist,2,yes,,,yes,Stealth
+PerceptionPriorEnemyRelationship,-50,yes,,,yes,Stealth
+PerceptionPriorFriendRelationship,-4,yes,,,yes,Stealth
+PerceptionPriorGender,2,yes,,,yes,Stealth
+PerceptionPriorNotHumanRace,-15,yes,,,yes,Stealth
+PerceptionPriorTarget,10,yes,,,yes,Stealth
+PerceptionPriorThreatened,-5,yes,,,yes,Stealth
+PerceptionPriorVisCrimes,6,yes,yes,6,yes,Stealth
+PerceptionPriorVisItems,0.5,yes,,,yes,Stealth
+PerceptionPriorVisPeople,2,yes,,,yes,Stealth
+PerceptionPriorWeapon,8,yes,yes,8,yes,Stealth
+PerkBerserkDuration,30,yes,,,yes,Perks
+PerkBerserkHealthThreshold,0.15,yes,,,yes,Perks
+PerkBloodRushDistance,5,yes,,,yes,Perks
+PerkBloodRushDuration,15,yes,,,yes,Perks
+PerkBrutusCombatDmgRBonusFromBehind,1.3,yes,,,yes,Perks
+PerkCarriedBodyGravediggerWeightMul,0.5,yes,,,yes,Perks
+PerkChainStrikeMaxChain,5,yes,,,yes,Perks
+PerkDaringDebonairWantedLevel,1,yes,,,yes,Perks
+PerkLastGaspCooldown,600,yes,,,yes,Perks
+PerkManlyOdourDirtinessThreshold,0.5,yes,,,yes,Perks
+PerkProperDietActivationTime,120,yes,,,yes,Perks
+PerkTauntAttackerMoraleMultiplier,3,yes,,,yes,Perks
+PerkWaterOfLifeAlcoholMultiplier,0.5,yes,,,yes,Perks
+PerkWaterOfLifeHealthMultiplier,1.5,yes,,,yes,Perks
+PicklockDmgSpeed,10,yes,yes,10,yes,Player
+PicklockFatalRelativeDist,5,yes,,,yes,Player
+PickpocketingAngleChancePenalty,0.0027,yes,,,yes,Player
+PickpocketingComradePerkBonus,0.3,yes,,,yes,Player
+PickpocketingDistance,2,yes,yes,2,,
+PickpocketingFailXPMod,0.3,yes,yes,0.3,yes,Player
+PickpocketingIndicatorSharpness,0,yes,yes,0,yes,Player
+PickpocketingItemUncoverTimePerWeight,0.1,yes,,,yes,Player
+PickpocketingMaxSkillChargeSpeedRatio,6,yes,,,yes,Player
+PickpocketingMaxSkillChargeTime,30,yes,,,yes,Player
+PickpocketingMinChargeTime,2,yes,,,yes,Player
+PickpocketingMisstargetingTolerance,2000,yes,yes,2000,,
+PickpocketingNPCDrunkTimeChanceMod,0.5,yes,,,yes,Player
+PickpocketingNPCHurtTimeChanceMod,0.75,yes,,,yes,Player
+PickpocketingNPCSleepingTimeChanceMod,0.5,yes,,,yes,Player
+PickpocketingRobbedAngrinessChancePenalty,0.05,yes,,,yes,Player
+PickpocketingStealthXP,12,yes,yes,12,yes,Player
+PickpocketingTimeChancePenaltyBest,0.0133,yes,,,yes,Player
+PickpocketingTimeChancePenaltyWorst,0.1,yes,,,yes,Player
+PickpocketingTreasurePriceXP,100,yes,,,yes,Player
+PickpocketingXP,15,yes,yes,15,yes,Player
+PoorWeaponDefense,1,yes,,,yes,Combat
+ProjectileMaxBreakProb,0.7,yes,,,yes,Ranged Weapon
+QuestMoneyRewardScaleConstant,1.2,yes,yes,1.2,yes,General
+RangedWpnCosThetaToAttackMin,0.7,yes,,,yes,Ranged Weapon
+RangedWpnMinPowerCoef,0.1,yes,,,yes,Ranged Weapon
+RangedWpnMinStrCoef,0.5,yes,,,yes,Ranged Weapon
+RangedWpnOptimalDistanceToMinamal,0.5,yes,,,yes,Ranged Weapon
+RangedWpnPowerConstA,1.85,yes,,,yes,Ranged Weapon
+RangedWpnPwrToSpeed,1,yes,,,yes,Ranged Weapon
+RangedWpnSelfHarmCoef,15,yes,yes,15,yes,Ranged Weapon
+RangedWpnSpeedToAttack,0.012,yes,,,yes,Ranged Weapon
+ReadingRestEffectiveness,,NO,,,yes,Player
+ReadingRestUpperLimit,,NO,,,yes,Player
+ReadingXpPerHour,20,yes,yes,20,yes,Player
+RecognitionSpeedNotVisible,-0.5,yes,,,yes,Stealth
+RecognitionTimeDistanceGain,0.1,yes,yes,0.1,yes,Stealth
+RecognitionTimeKNegativeCoef,-6,yes,yes,-6,yes,Stealth
+RecognitionTimeKPositiveCoef,-3,yes,yes,-3,yes,Stealth
+RecognitionTimePCoef,8,yes,yes,8,yes,Stealth
+RelationshipToImpressCharisma,0.8,yes,yes,0.8,yes,General
+RelationshipToPersuadeSpeech,0.8,yes,yes,0.8,yes,General
+RelationshipToThreatenBadassness,0.8,yes,yes,0.8,yes,General
+RepairKitCapacity,200,yes,yes,200,yes,Player
+RepairKitItemHealthBestLimit,0.6,yes,,,yes,Player
+RepairKitItemHealthDefaultLimit,0.8,yes,,,yes,Player
+RepairKitItemPerkBuffHealthThreshold,0.3,yes,,,yes,Player
+RepairKitMaxSkillCapacityCoef,1.5,yes,,,yes,Player
+RepairPriceModif,0.65,yes,yes,0.65,yes,Barter
+ReputationPropagationBiasTime,1800,yes,,,yes,General
+ReputationPropagationCoef,0.3,yes,yes,0.3,yes,General
+ReputationPropagationTime,10800,yes,,,yes,General
+ResetNearbyRelationshipRange,50,yes,,,yes,General
+ResetPublicFriendsRelationshipMin,0.15,yes,yes,0.15,yes,General
+RespawnTimeBase,800,yes,yes,800,yes,General
+RespawnTimeVariation,60,yes,,,yes,General
+RiderAgilityToHorsePullDown,0.5,yes,,,yes,Horse
+RiderHorseStaminaCoef,0.25,yes,,,yes,Horse
+RiderSkillToHorsePullDown,0.5,yes,,,yes,Horse
+RiderThreatToHorseMorale,0.1,yes,,,yes,Horse
+SecondaryStatXPRatio,0.5,yes,yes,0.5,yes,Player
+SharpeningFullNegativeHealthXP,20,yes,,,yes,Player
+SharpeningFullPositiveHealthXP,100,yes,,,yes,Player
+SharpeningMaxDestructionAngle,0.7,yes,,,yes,Player
+SharpeningMaxIdealAngle,0.5,yes,,,yes,Player
+SharpeningMinDestructionAngle,0.6,yes,,,yes,Player
+SharpeningMinEfficiencyHealth,0.3,yes,,,yes,Player
+SharpeningMinIdealAngle,0.3,yes,,,yes,Player
+SharpeningSuccessfulHealthDelta,0.1,yes,yes,0.1,yes,Player
+ShoeHealthDecrease,0.001,yes,yes,0.001,yes,General
+ShoeHealthUpdateDistance,50,yes,,,yes,General
+ShortTermNutritionDigestionSpeedMultiplier,5,yes,,,yes,Digestion
+SkillCap,20,yes,,,yes,Player
+SkillDiffToAttackSpeed,0.1,yes,,,yes,Combat
+SkillToDefense,0.02857,yes,yes,0.02857,yes,Player
+SkillToDmgConstA,250,yes,yes,250,yes,Player
+SkillToFencingBase,0.8,yes,yes,0.8,yes,Player
+SkillToPerfectBlockPowTo,0.5,yes,,,yes,Player
+SkillToRangedWpnAIRange,0.5,yes,,,yes,Ranged Weapon
+SkillXPBlock,2,yes,yes,2,,
+SkillXPComboHit,4,yes,yes,4,,
+SkillXPDrinkAlcohol,1,yes,,,yes,Player
+SkillXPHit,2,yes,yes,2,,
+SkillXPKill,12,yes,yes,12,,
+SkillXPLevelBase,20,yes,,,yes,Player
+SkillXPLevelDiff,30,yes,,,yes,Player
+SkillXPPerfectBlock,8,yes,yes,8,yes,Player
+SkillXPRiposte,8,yes,yes,8,yes,Player
+SkillXPUseRepairKit,5,yes,yes,5,yes,Player
+SleepHealthRegenBaseSpeed,0.00347222,yes,,,yes,Movement and Stamina
+SleepToSaveThreshold,1,yes,,,yes,Movement and Stamina
+SlimCollisionWeightMul,0.8,yes,,,yes,General
+SoulCourageMoraleWeight,5,yes,,,yes,Combat
+SpeechDiffToSkillCheckResult,0.3,yes,,,yes,Player
+SpeechMulOnExtremeExhaustion,0.75,yes,,,yes,Movement and Stamina
+SpeechXPLevelBase,20,yes,yes,20,yes,Player
+SpeechXPLevelDiff,30,yes,yes,30,yes,Player
+SprintCost,3.5,yes,yes,3.5,yes,Movement and Stamina
+StamDamage,8,yes,yes,8,yes,Combat
+StamRegenBase,22,yes,yes,22,yes,Movement and Stamina
+StamRegenBlockMod,0.6,yes,yes,0.6,yes,Movement and Stamina
+StamRegenCooldown,1.5,yes,yes,1.5,yes,Movement and Stamina
+StamRegenFromVit,1,yes,yes,1,yes,Movement and Stamina
+StamRegenMoveMod,0.75,yes,,,yes,Movement and Stamina
+StamRegenRelativeDiff,0.666667,yes,,,yes,Movement and Stamina
+StaminaDamageToInjury,0,yes,,,yes,Combat
+StaminaToHealthDamageMax,0.75,yes,,,yes,Combat
+StaminaToHealthDamageMin,0.25,yes,,,yes,Combat
+StarvationExtremeThreshold,0,yes,,,yes,Digestion
+StarvationHealthLossSpeed,0.001,yes,yes,0.001,yes,Digestion
+StarvationHugeThreshold,25,yes,,,yes,Digestion
+StarvationPlayerEffectMaxMax,75,yes,yes,75,yes,Digestion
+StarvationPlayerEffectMaxMin,120,yes,yes,120,yes,Digestion
+StarvationPlayerEffectMinMax,45,yes,yes,45,yes,Digestion
+StarvationPlayerEffectMinMin,90,yes,yes,90,yes,Digestion
+StarvationThreshold,50,yes,,,yes,Digestion
+StatCap,20,yes,,,yes,Player
+StatToMainLevelBase,0.5,yes,,,yes,Player
+StatXPAgilityPerDodge,2,yes,,,yes,Player
+StatXPComboHit,4,yes,yes,4,yes,Player
+StatXPHit,2,yes,yes,2,yes,Player
+StatXPKill,8,yes,yes,8,yes,Player
+StatXPSpeechPerSequence,1,yes,yes,1,yes,Player
+StatXPSpeechPersuadeSuccessMax,10,yes,,,yes,Player
+StatXPVitalityPerDistance,8,yes,yes,8,yes,Player
+StatXPVitalityPerJump,0.5,yes,yes,0.5,yes,Player
+StatXPVitalityPerKill,15,yes,yes,15,yes,Player
+StatXPVitalityPerVault,0.7,yes,yes,0.7,yes,Player
+StatsToDodgePowTo,0.5,yes,,,yes,Player
+StealthAttackFailXp,10,yes,yes,10,yes,Stealth
+StealthAttackMaxXp,50,yes,yes,50,yes,Stealth
+StealthAttackMinXp,25,yes,yes,25,yes,Stealth
+StealthCooldown,5,yes,,,yes,Stealth
+StealthKillDamage,100,yes,,,yes,Stealth
+StealthKillProbCoefA,4,yes,yes,4,yes,Stealth
+StealthKillProbCoefB,1,yes,yes,1,yes,Stealth
+StealthKillProbCoefC,1,yes,,,yes,Stealth
+StealthKnockOutUnconsciousDepthBase,250,yes,yes,250,yes,Stealth
+StealthSkillToFootstepSoundMult,0.4,yes,yes,0.4,yes,Stealth
+StealthSkillToRecogTime,0.05,yes,yes,0.05,yes,Stealth
+StealthSkillToViewRadiusDecr,0.02,yes,yes,0.02,yes,Stealth
+StealthSneakBaseDistance,4,yes,,,yes,Stealth
+StealthSneakBaseXp,1,yes,,,yes,Stealth
+StealthSneakCheckRadius,15,yes,,,yes,Stealth
+StealthSneakXpSumCoefA,5,yes,,,yes,Stealth
+StealthSneakXpSumCoefB,4,yes,,,yes,Stealth
+StealthToUnconsciousDepth,250,yes,,,yes,Stealth
+StillAndHiddenHysteresis,1.5,yes,,,yes,Perks
+StillBuffDuration,600,yes,,,yes,Perks
+StoryProgressXPLevelBase,20,yes,,,yes,Player
+StoryProgressXPLevelDiff,30,yes,,,yes,Player
+StrAgiToEqwArmorLoad,1,yes,,,yes,Combat
+StrengthToInventoryCapacity,4,yes,,,yes,Player
+StrengthXPLevelBase,20,yes,,,yes,Player
+StrengthXPLevelDiff,30,yes,,,yes,Player
+SuperFactionRepWeight,1,yes,yes,1,yes,General
+SuperWeaponDefense,20,yes,,,yes,Combat
+SurfaceToArmorLoadALWCoef,1,yes,,,yes,Combat
+SurfaceToArmorLoadTWCoef,0.15,yes,,,yes,Combat
+ThreatenStrenghtWeight,0.5,yes,,,yes,General
+ThunderstormBuffRainIntensity,0.3,yes,,,yes,Perks
+TreasureItemPricee,,NO,,,yes,General
+TrueRelationDistThresholdRel,0.333333,yes,,,yes,Stealth
+UnarmedAttackBase,,NO,,,yes,Combat
+UnarmedAttackReqStrBase,2,yes,yes,2,yes,Combat
+UnarmedBlockDefense,3,yes,,,yes,Combat
+UnconsciousDepthFadeoutSpeedBase,1,yes,,,yes,Stealth
+UnconsciousTimeWhenTimeIsNotRunning,8,yes,,,yes,Stealth
+VigourFull,100,yes,,,yes,Movement and Stamina
+VigourTickInterval,,NO,,,yes,Movement and Stamina
+VisionToViewRadius,2,yes,yes,2,yes,Stealth
+VitalityToUnconsciousDepthFadeoutSpeed,1,yes,,,yes,Stealth
+VitalityXPLevelBase,20,yes,yes,20,yes,Player
+VitalityXPLevelDiff,30,yes,yes,30,yes,Player
+WeakBlockStamCoef,2,yes,,,yes,Combat
+WeaponDefenseToAttackingWeaponStatus,0.01,yes,yes,0.01,yes,Combat
+WeaponStatusToAttackCoef,0.5,yes,,,yes,Combat

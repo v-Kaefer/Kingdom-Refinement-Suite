@@ -26,6 +26,11 @@ and the actual table contents. Lines marked *(proposed)* are recommendations, no
 4. **Independent modules.** Each module has its own `mod.manifest`/`modid` and works alone.
 5. **No third-party bytes without permission.** If permission is missing, link the mod as a requirement.
 6. **Scripts and assets stay out of the gameplay modules** until proven (Lua experiments, meshes, textures).
+7. **Follow the engine's patch rules** (measured in game, `docs/tests/PTF_FINDINGS.md`): the patch file suffix equals the
+   mod id (lowercase letters and underscore only), every row lists every column, a `.pak` is a ZIP, and when two mods
+   patch the same row the later one wins whole. `tools/check_patch_names.py` checks the first three.
+8. **Potions: light touch.** Keep the base game's values and fantasy; make small adjustments that add a little real-world
+   plausibility ("can help with", known risks). See `docs/potions/ANALYSIS.md`.
 
 ## 3. Modules
 
@@ -67,14 +72,20 @@ When you change a module:
 | `tools/audit_tables.py`, `tools/check_ownership.py` | table audit and ownership check |
 | `tools/potion_dataset.py`, `tools/potion_model_check.py` | potion dataset and formula check |
 | `tools/lua_api_check.py` | checks that the functions and `RPG.<Key>` names in a Lua mod exist |
+| `tools/check_patch_names.py` | pre-flight check of patch names, mod ids, row completeness and pak format |
+| `docs/tests/PTF_FINDINGS.md`, `docs/tests/run_*.log` | what the game was observed to do (in-game test results) and the raw logs |
+| `docs/params/rpg_constants_runtime.csv` | every rpg constant as the running game reports it (588 exist, 406 hidden, 9 do not exist) |
+| `tools/harness/` | builds and runs the in-game test mods (`build_harness.py`, `run_game_test.ps1`, ...) |
+| `docs/ACTION_PLAN.md` | the plan for the whole project |
 
 ## 5. Where the suite stands today (from the audit)
 
 | Finding | Detail |
 |---|---|
+| **None of the suite's table patches is applied by the game as packaged today** | `KRS-Items` has mod id `krs_items` but patch suffix `KRS-items`; `KingdomRefinementSuite` has id `kingdom_refinement_suite` but suffix `KRS`; the draft `Para publicar (TEMP)/Data/KRS-Items.pak` is a 7z file, which the game cannot open. The same `KRS-Items` files with the suffix renamed to the id were applied and read back correctly in game (`docs/tests/PTF_FINDINGS.md`). The Nexus release may differ |
 | Items is the only module with real files | `KRS-Items/Data`: 56 book rows, 5 `rpg_param` rows, 4 sleeping-spot rows, 1 potion row that differs from vanilla |
 | Potion rebalance is mostly placeholders (and its pipeline cannot run) | `food__KRS-items.xml` has 34 rows; 33 equal vanilla. Only Aesop Potion differs (nutrition 10 -> 2.5, ratio 0.1 -> 0.5). Planned values live in `Potions_GPT.md`. The formula script crashes and the formula would overwrite designed potions: see `docs/potions/ANALYSIS.md` |
-| Possible clash with installed mods | All 34 food rows overlap *Food Spoil Faster* (`decay_time_hours`), 22 overlap *PotionNoSatietyAndHealEnergy*. Because each row repeats every column, a whole-row merge could revert their changes. Merge granularity is **unverified** |
+| Possible clash with installed mods | All 34 food rows overlap *Food Spoil Faster* (`decay_time_hours`), 22 overlap *PotionNoSatietyAndHealEnergy*. Measured in game: the later mod's row replaces the whole row, so the clash is real and load order decides who wins (`docs/tests/PTF_FINDINGS.md`, rule 6) |
 | Reading is set three times | `ReadingXpPerHour`: vanilla 20, `KRS-Items` 5, `KingdomRefinementSuite` 10 (Skill Books Take Time: 10). The 56 book rows are duplicated in `KingdomRefinementSuite` |
 | Repairs: four variants, none consistent | The `perk_rpg_param_override` values (vanilla 0.5 / 0.7 / 0.9) belong to the pseudo-perk **"Hardcore Mode - Constants"**, so they only apply in Hardcore mode; normal mode uses the global `rpg_param` (`RepairPriceModif` 0.65). Realistic Repairs sets 0.1 / 0.6 / 1.2, dev branch 0.2 / 0.7 / 1.3. README says "prices doubled" and level-20 repairs down to 20 % |
 | Stray `perk_id` in `rpg_param` | `KingdomRefinementSuite/.../rpg_param__KRS.xml` (also in Realistic Repairs itself) puts perk rows in the wrong table. Effect unverified |
@@ -109,7 +120,8 @@ the `generic_eye_v01_lashes_diff.dds` texture is no longer referenced by any van
 3. Enhanced Eyes: link as a requirement unless Grimsy agrees to redistribution? *(proposed: yes)*
 4. Perkaholic: require it, or copy parts? *(proposed: require)*
 5. Reading: keep XP 5 with books x2.5, or XP 10 as in the other copies? *(Items currently says 5)*
-6. May a module repeat unchanged columns in a row, or must rows carry only the changed columns? Needs an in-game test.
+6. ~~May a module repeat unchanged columns in a row?~~ **Answered in game:** rows must be complete (a partial row blanks the
+   other columns) and the later mod's row replaces the earlier one entirely, so overlapping mods undo each other.
 7. Is `Libs/Tables/...` loose, or packed into `Data/<module>.pak`? *(proposed: pack)*
 8. Where do the bow mechanics live (KRS-QoL, KRS-Perks, or a new archery module)? They need the in-game test in
    `docs/bow/FEASIBILITY.md` first.

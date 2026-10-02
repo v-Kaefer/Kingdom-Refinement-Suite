@@ -18,10 +18,10 @@ document.
 | Capability | Verdict | Evidence |
 |---|---|---|
 | Change a hidden parameter statically (PTF `rpg_param` row) | **Works** | Immersive Archery ships `BowChargeDurationMin/Max`, `BowPowerToChargeDuration`, `AimSpreadSkillDecrease`, `AimPainlessDelay` as new rows; Parameters Plus carries 425 hidden keys in a full `rpg_param` file. See `docs/table-audit/TABLE_AUDIT.md` |
-| Change a parameter while the game runs (Lua) | **Supported by the engine, never executed in your runs** | `rpgmodule.dll` / `WHGame.dll` contain `setmetatable(RPG, {__index=RPG._GetConstant, __newindex=RPG._SetConstant})` and the native message `Setting RPG constant/param key=%s to val=%f` (error: `no such rpg constant '%s'`). So `RPG.AimSpreadMax = 10` is the intended call |
+| Change a parameter while the game runs (Lua) | **Verified in game**: the value reads back | In the test instance `RPG.AimSpreadMax = 40` and `RPG.BowChargeDurationMax = 40` read back 40 and restored to 15 / 3 (`docs/tests/run_full_api_stats_constants.log`). Also the engine design: `setmetatable(RPG, {__index=RPG._GetConstant, __newindex=RPG._SetConstant})`. **Not verified:** that the bow code uses the new value when aiming |
 | Read a parameter from Lua | **Works** | Vanilla Lua does it: `RPG.MoraleForCombat` in `sb_combat.xml`. Your logs show the same path rejecting unknown names: `no such rpg constant 'GetStat'` |
 | Read Agility / Strength | **Works, with the right API** | Vanilla and the Cheat mod use `player.soul:GetStatLevel('agi')`, `'str'`, `'vit'`, `'cou'`, and `player.soul:GetDerivedStat('cha')` |
-| Load your Lua **without the Cheat mod** | **Works** | The engine itself runs `scripts/main.lua` of every enabled mod (log: `Loading and executing script file 'scripts/main.lua'` followed by `mods/dynamic_bow_stats/data/scripts/main.lua: 2` in the stack) and every `Scripts/Startup/*.lua` (`fpsfix_mod_startup.lua`). See section 8 |
+| Load your Lua **without the Cheat mod** | **Verified in game** | The test mod (`Scripts/Startup/*.lua`, an entity, a UIAction listener) ran with only that mod enabled and `cheat = nil`. The engine also runs `scripts/main.lua` of enabled mods (your bow script was loaded that way). See section 8 |
 | Run code repeatedly | **Works, but not with the function you used** | `Script.SetUpdateFunction` does not exist. Existing options: `Script.SetTimer(ms, fn)` (one shot, re-arm it), `Script.SetTimerForFunction`, or a spawned entity with `Client:OnUpdate` (the 30FPSCutsceneFix mod does this in 1.9.6) |
 | Bow *weight* from Lua | **Partly verified** | The held item can be reached with `player.human:GetItemInHand(0)` (used in `Crime.lua`). `GetRPGParam("ItemWeight")`, `inventory:GetEquippedItem` and `player:GetCurrentWeapon` appear nowhere (guesses). Weight is stored in `pickable_item`; the Lua accessor for it has not been found |
 | Make the change per actor (player only) | **Probably not** | Constants are global (`S_Constants`). NPC archers would read the same value unless the parameter is player-only. Untested |
@@ -38,7 +38,7 @@ document.
 | 03 Jun (several) | `no such rpg constant 'GetStat'`, `'GetPlayerStat'`, `'GetAttribute'`, `'GetStatValue'` | `RPG.<name>` is a *constant lookup*, not a method table. This also confirms the metatable is active |
 | 03 Jun | `Failed to load script file Scripts/player_stats_reader.lua`, `attempt to call global 'player_stats_debug' (a nil value)` | MinimalModTools script path and global names did not match what was loaded |
 | all | `Script.SetUpdateFunction` | Not a member of the `Script` table |
-| all | **`Setting RPG constant/param key=AimSpreadMax` never appears in any log** | `ApplyDynamicBowStats()` returns early when the player is nil, so the key step (writing the constant) was **never executed** |
+| all | `ApplyDynamicBowStats()` returned early because the player was nil, so the key step (writing the constant) never ran | The native `Setting RPG constant...` line is **not** printed at the normal log level (a successful write in the test instance printed nothing), so its absence in your logs proves nothing; the early return is the cause |
 
 So the open question is exactly one line: does `RPG.AimSpreadMax = x` take effect on the next aim?
 
@@ -57,7 +57,7 @@ function BowMod:tick()
   if player and player.soul then
     local agi = player.soul:GetStatLevel('agi')
     local str = player.soul:GetStatLevel('str')
-    RPG.AimSpreadMax = 15 - 10 * math.min(agi, 20) / 20      -- natives log "Setting RPG constant/param ..."
+    RPG.AimSpreadMax = 15 - 10 * math.min(agi, 20) / 20      -- read back with RPG.AimSpreadMax
     RPG.AimStamCost  = 20 - 10 * math.min(str, 20) / 20
   end
   Script.SetTimer(1000, function() BowMod:tick() end)
@@ -113,10 +113,10 @@ Known problem in `Params Reference.md`: some descriptions are shifted by one row
 The nine rows under "Possible variables for my bow mod" in `rpg_param__KRS.xml` are all vanilla values, so they change
 nothing; they are the table-backed subset of the list above.
 
-## 6. Test that settles it (in game, Cheat mod loaded)
+## 6. Test that settles it (in game)
 
-1. Open the console and run `cheat_eval RPG.AimSpreadMax = 40`.
-2. Check the log for `Setting RPG constant/param key=AimSpreadMax to val=40.000000`. An `[Error] no such rpg constant`
+1. (Done by the harness) `RPG.AimSpreadMax = 40` then read it back: it returned 40. In the console, the same is `#RPG.AimSpreadMax = 40`.
+2. Read the value back with `#System.LogAlways(tostring(RPG.AimSpreadMax))`. An `[Error] no such rpg constant`
    means the name is not registered.
 3. Draw a bow and watch the reticle. A visibly wider spread means the bow code reads the value live. No change means
    it is cached; then only the PTF/perk route is left.
@@ -142,7 +142,7 @@ No. The Cheat mod was only a convenience here.
 | Reading stats (`player.soul:GetStatLevel`) | **No** | Used by the game's own scripts (29 times) |
 | Typing test commands in the console | **No, but the syntax matters** | The game's own test scripts run Lua from the console with a leading `#` (`#a = player.soul:GetDerivedStat("cha")`). Your log shows `Unknown command: bow_debug`: a Lua function typed without `#` is treated as a console command. The Cheat mod adds `cheat_eval <lua>` as a wrapper |
 | `cheat:` helper functions, `cheat.player` namespace (what MinimalModTools v1.1 used) | **Yes** | Provided by the Cheat mod; avoid them in the final mod |
-| Seeing the result (log lines) | **No** | `System.LogAlways(...)` and the native `Setting RPG constant/param ...` line go to `kcd.log` |
+| Seeing the result (log lines) | **No** | `System.LogAlways(...)` goes to `kcd.log` |
 
 The console itself must be enabled (the game was run with the dev console available in your logs). A shipped mod
 should have no dependency on the Cheat mod.
@@ -167,3 +167,31 @@ in game:
 ```bash
 python tools/lua_api_check.py --game "<KCD folder>" --params-ref "Params Reference.md" --out docs/bow/API_CHECK.md my_script.lua
 ```
+
+## 10. Draw speed from Strength and Agility
+
+Short answer: **it can work, but the engine already has a Strength link and no Agility link for the bow, so the design has
+two options.** Real values reported by the running game (`docs/params/rpg_constants_runtime.csv`):
+
+| Constant | Value | Meaning (from the DLL strings and `Params Reference.md`) |
+|---|---|---|
+| `BowChargeDurationMin` / `BowChargeDurationMax` | 1.35 s / 3 s | shortest and longest charge-animation time |
+| `BowPowerToChargeDuration` | 0.1 | nominal charge time for a bow with power 1 |
+| `RangedWpnMinStrCoef`, `RangedWpnMinPowerCoef`, `RangedWpnPowerConstA` | 0.5, 0.1, 1.85 | how the strength requirement of a bow and the shooter's strength turn into bow power |
+| `RangedWpnPwrToSpeed`, `RangedWpnSpeedToAttack` | 1, 0.012 | power to arrow launch speed to damage |
+| `AimSpreadMax` / `AimStamCost` / `AimPainlessDelay` | 15 / 20 / 2 | aiming spread and stamina, not the draw |
+
+- **Strength is already part of the chain**: strength relative to the bow's requirement decides the bow's power, and the
+  charge time is tied to that power and clamped between Min and Max. The exact formula is not in the files; it has to be
+  measured in game.
+- **Agility is not in any ranged constant.** The only agility constants are `AgiDiffToAttackSpeed` and
+  `AttackSpeedNormalAgi`, which belong to melee attack speed.
+- **Option A, static (PTF):** change `BowChargeDurationMin/Max` and `BowPowerToChargeDuration` in an `rpg_param` patch
+  (hidden keys, proven to work). Everyone shoots at the new speed, including NPCs; no stat dependence beyond the existing
+  strength link.
+- **Option B, dynamic (Lua):** a timer or entity update computes the draw times from `GetStatLevel('str')` and
+  `GetStatLevel('agi')` and writes `RPG.BowChargeDurationMin/Max`. Writing is verified; whether the bow reads the new
+  value at the next draw is the open test, and NPCs are affected as well because the constants are global.
+- A placeholder shape for option B (numbers are not tuned): `max = 3.0 * (1 - 0.30 * agiFactor - 0.20 * strFactor)`,
+  `min = 1.35 * (1 - 0.20 * agiFactor)`, with `agiFactor = clamp((agi - 10) / 20, 0, 1)` and the same for strength.
+  Keep `min <= max`, and test the extremes in game: very short values may break the draw animation (untested).

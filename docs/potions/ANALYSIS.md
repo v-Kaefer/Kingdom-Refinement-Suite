@@ -112,8 +112,12 @@ Consequences:
 | Magnitudes of herb contributions (+1 energy, -10 health, ...) | **C. arbitrary** | same |
 | The rule "poisonous without charcoal -> at most -5 HP" | **B + C** | a lore rule with an invented number |
 
-Real life only enters through class B, and every class B rule needs a stated source. Class C numbers should come from the game's own
-scale (the vanilla ranges in section 3), not from real-life units.
+**Intent (author, 2 Oct 2026):** the real world is a light inspiration, not a target. Start from what the game already says
+(its herb text and values) and make small adjustments so that a potion reads a little more believable, *without* removing
+the fantasy of the game's potions. A real-world fact is therefore a nudge or a tie-breaker, never a reason to override the
+game: the in-game text wins, effects stay small, and "can help with" is the level of claim (`SOURCES.md` records only what
+a plant is traditionally used for and what is known to be risky). Class C numbers come from the game's own scale (the
+vanilla ranges in section 3), not from real-life units.
 
 ## 6. Method for a proper analysis *(proposed)*
 
@@ -125,10 +129,14 @@ scale (the vanilla ranges in section 3), not from real-life units.
 3. **Units from the game.** Convert with the engine's own constants: `FoodFull` 100, `FoodOverEat` 120, `DigestionSpeed`,
    `ShortTermNutritionDigestionSpeedMultiplier`, `AlcoholContentFPAntidoteThreshold` 60, and the 0-100 alcohol scale.
    Work out what one nutrition point costs in stomach and time before choosing a magnitude.
-4. **One rule = one cited reason.** Each rule names its evidence class (A in-game text / B external, with the source /
-   C balance) and the potions it touches. The Aesop reasoning in `Potions.md` is a good template for the lore side.
+4. **One rule = one short reason.** Each rule names the in-game text it builds on (class A), optionally one real-world
+   "can help with" fact from `claims_ledger.csv` (class B, a nudge only) and the potions it touches. The Aesop reasoning in
+   `Potions.md` is a good template. A rule that needs a real-world source to justify a big change is the wrong rule.
 5. **Make the pipeline reproducible:** fix the base-name mapping, write `refresh_benefit` only, never `weight`, read
-   `docs/potions/potion_dataset.csv`, and emit rows with only the changed columns.
+   `docs/potions/potion_dataset.csv`, and emit **complete rows** (every column of the `food` header). Measured in game
+   (`docs/tests/PTF_FINDINGS.md`): a row with only some columns blanks the rest, and when two mods patch the same row the
+   later one replaces the whole row. So a potion row must carry the vanilla value for every column it does not change, and
+   the mod must be ordered after, or kept apart from, mods such as Food Spoil Faster that edit the same items.
 6. **Acceptance checks** run on every build: no designed potion changes sign or magnitude; buff and food row agree;
    alcohol stays on the vanilla scale; a diff report (vanilla -> new) is attached to the changelog.
 7. **In-game spot check** of three potions (one template, one tuned, one poison) before publishing.
@@ -136,6 +144,6 @@ scale (the vanilla ranges in section 3), not from real-life units.
 ## 7. Not covered here
 
 - No in-game measurement of how the numbers feel, and no simulation of the digestion mechanics.
-- No researched real-life sources: this needs a short reference list (belladonna and henbane toxicity, activated charcoal
-  adsorption, ethanol content of period spirits and wine) before any class B rule is accepted.
+- Real-world sources now exist in `SOURCES.md` and `claims_ledger.csv`; they are context for small nudges, not a requirement
+  for every rule.
 - The buff side (what each buff really does for how long) is listed in `potion_dataset.csv` but not analysed.
