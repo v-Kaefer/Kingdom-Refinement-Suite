@@ -135,6 +135,7 @@ function KRS.stage1()
     try("constants", KRS.constants)
     try("write_test", KRS.write_test)
     try("tables", KRS.tables)
+    if KRS.gate then try("gate menu", KRS.gate, "menu") end
     log("stage1 end")
 end
 
@@ -145,6 +146,8 @@ function KRS.stage2()
     log("stage2 begin")
     try("player", KRS.player)
     try("live_test", KRS.live_test)
+    if KRS.gate then try("gate player", KRS.gate, "player") end
+    if KRS.extra_player then try("extra player", KRS.extra_player) end
     log("end")
     if KRS.quit_after then
         if System.Quit then System.Quit() else System.ExecuteCommand("quit") end

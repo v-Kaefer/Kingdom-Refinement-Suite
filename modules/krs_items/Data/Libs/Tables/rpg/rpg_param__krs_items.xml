@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="rpg_param" version="1">
+    <header>
+      <column name="rpg_param_key" type="character varying" />
+      <column name="rpg_param_value" type="real" />
+    </header>
+    <rows>
+      <row rpg_param_key="ReadingXpPerHour" rpg_param_value="5" />
+      <row rpg_param_key="DigestionSpeed" rpg_param_value="0.001302084" />
+      <row rpg_param_key="StarvationPlayerEffectMinMin" rpg_param_value="95" />
+      <row rpg_param_key="StarvationPlayerEffectMaxMax" rpg_param_value="65" />
+      <row rpg_param_key="StarvationPlayerEffectMinMax" rpg_param_value="25" />
+    </rows>
+  </table>
+</database>

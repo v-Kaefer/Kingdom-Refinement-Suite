@@ -6,6 +6,21 @@ dependency: nothing in phase 1 or later is worth building until phase 0 makes pa
 Effort: S = about half a day, M = 1-2 days, L = several days. Branches follow `docs/OBJECTIVES.md`
 (`krs-items`, `krs-qol`, `krs-perks`, `krs-bow`; docs and tools live on `dev`).
 
+## Progress (2 Oct 2026, phases 0-3 executed)
+
+| Phase | State | Evidence |
+|---|---|---|
+| 0 Packaging | **Done** except 0.5 (branches) | `tools/build_module.py`, `tools/gate.py`, `tools/seed_modules.py`; modules under `modules/`; `docs/tests/gate_*.log` |
+| 1 Perks | Built; menu-stage checks pass, perk rows pending a player-stage run | `modules/krs_perks`, `gate_krs_items_krs_perks_krs_qol_tables.log` |
+| 2 Items | Built; 66 rows + 5 constants read back in game; sleeping spots pending (level table) | `modules/krs_items`, `gate_krs_items_tables.log` |
+| 3 QoL | Built; 3 rpg_param rows read back; override/skill2item rows pending (level tables); repair limits left open | `modules/krs_qol` |
+
+Open because the player stage needs someone to press Continue in the test instance (screen access was not granted
+while the author was away): perk rows, `sleeping_spot_type`, `perk_rpg_param_override`, `skill2item_category`, 4.1 bow
+live-read. Command for that run: `python tools/gate.py krs_items krs_perks krs_qol --mode full`, then press Continue.
+Decisions taken by default (change if wrong): separate mods; Enhanced Eyes left out of the modules; repairs in QoL,
+price x2 only; Riposte shipped as `krs_perks` with an "enable only one of them" note.
+
 ## What changed the plan (verified in game, `docs/tests/PTF_FINDINGS.md`)
 
 1. Patch files are applied only when their suffix equals the mod id. As packaged today, **no KRS table patch loads**.

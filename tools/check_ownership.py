@@ -28,7 +28,7 @@ ownership.csv columns:
     vanilla    vanilla value, for humans
     target     col=value the module must set (empty = not asserted)
     status     shipping | planned | decision | remove
-    lives_in   path prefix (audit label) where the row is expected, e.g. KRS-Items/Data
+    lives_in   path prefix (path of the patch file) where the row is expected, e.g. KRS-Items/Data
     source     where the idea/values come from
     notes
 """
@@ -44,18 +44,18 @@ def load_rows(audit, sources):
     rows = collections.defaultdict(list)  # (table, key) -> [(label, kind, row, file)]
     noop = collections.Counter()
     for r in audit["results"]:
-        if not r.get("base") or not re.search(sources, r["label"]):
+        if not r.get("base") or not re.search(sources, r["file"]):
             continue
         base = "text" if r["base"] == "__text__" else r["base"]
         if r.get("details_omitted"):
             print(f"note: details omitted for {r['label']} {r['table']} ({r['rows']} rows)", file=sys.stderr)
         for kind, k, diff, row in r.get("details", []):
             if kind == "same":
-                noop[(r["label"], base)] += 1
+                noop[(r["file"], base)] += 1
                 continue
-            rows[(base, "/".join(k))].append((r["label"], kind, row, r["file"]))
+            rows[(base, "/".join(k))].append((r["file"], kind, row, r["file"]))
         if r.get("full_replace") and r["rows"] == 0:
-            rows[(base, "*EMPTY-FULL-REPLACE*")].append((r["label"], "changed", {}, r["file"]))
+            rows[(base, "*EMPTY-FULL-REPLACE*")].append((r["file"], "changed", {}, r["file"]))
     return rows, noop
 
 
@@ -63,7 +63,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--audit", default="docs/table-audit/table_audit.json")
     ap.add_argument("--ownership", default="docs/ownership.csv")
-    ap.add_argument("--sources", default=r"^(KRS-Items/Data|KRS-QoL|KRS-Perks|KingdomRefinementSuite)",
+    ap.add_argument("--sources", default=r"^modules/",
                     help="regex of audit labels that count as suite sources (default leaves out scratch folders "
                          "such as 'KRS-Items/WIP Base'; add branch-.* to include other branches)")
     a = ap.parse_args()

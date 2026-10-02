@@ -32,7 +32,7 @@ import sys
 import zipfile
 import xml.etree.ElementTree as ET
 
-SKIP_DIRS = {".git", ".claude", ".embold", ".qodo", "KingdomComeDeliverance", "Knox's Labelled Items (XML)",
+SKIP_DIRS = {".git", ".claude", "dist", ".embold", ".qodo", "KingdomComeDeliverance", "Knox's Labelled Items (XML)",
              "Knox's Labelled Items (XML) - Version 1.0.2", "Knox's Labelled Items (XML)-326-1-0-2"}
 ARCHIVE_EXT = (".zip", ".pak", ".7zip", ".7z", ".rar")
 

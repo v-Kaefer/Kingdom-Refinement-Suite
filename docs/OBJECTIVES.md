@@ -41,6 +41,11 @@ and the actual table contents. Lines marked *(proposed)* are recommendations, no
 | **KRS-Perks** | Riposte at level 10 (Master Strike restored); Perkaholic is a *requirement*, not copied | Restore Riposte (1765), Perkaholic |
 | Outside the suite | Hoods, "more historically accurate item stats", Realistic Horses, Enhanced Eyes | cosmetic or intrusive (`CONTRIBUTING.md`: cosmetic mods stay out of gameplay modules) |
 
+**Where the module code lives (since phases 0-3):** `modules/<id>/` with ids `krs_items`, `krs_qol`, `krs_perks`
+(`krs_bow` and `krs_potions` come later). Build with `python tools/build_module.py --all` (output in `dist/`, ignored by git),
+test in game with `python tools/gate.py <ids>`. The old folders `KRS-Items/`, `KingdomRefinementSuite/` of the main branch are
+the legacy sources (see `tools/seed_modules.py` for how they were converted). Patch suffix must equal the module id.
+
 Required external mods (`Requirements.md`): EarlyBirdNPC, 30FPSCutsceneFixV2, MGsStayCleanLongerGetDirtyGradually,
 Persistentarrows. Table footprint of the ones that were audited: EarlyBird patches `soul` (2390 rows); MGs Stay Clean
 patches `FullClothDirtyingOnFullSpeed` in `rpg_param` and `perk_rpg_param_override`. Neither collides with a suite row.
@@ -136,7 +141,7 @@ The worktree does not contain the game replica, so point `--root` at the main ch
 python tools/audit_tables.py --root "E:/Kingdom-Refinement-Suite" \
     --game "E:/Kingdom-Refinement-Suite/Mods WIP folder/KingdomComeDeliverance" \
     --out docs/table-audit
-python tools/check_ownership.py
+python tools/check_ownership.py        # sources default to '^modules/'
 ```
 
 To include another branch, extract it first and pass it as an extra source:
@@ -144,8 +149,8 @@ To include another branch, extract it first and pass it as an extra source:
 ```bash
 git archive dev KingdomRefinementSuite | tar -x -C /tmp/dev
 python tools/audit_tables.py ... --extra "branch-dev/KingdomRefinementSuite=/tmp/dev/KingdomRefinementSuite"
-python tools/check_ownership.py --sources '^(KRS-Items/Data|branch-dev)'
+python tools/check_ownership.py --sources '^(modules/|branch-dev)'
 ```
 
 Limits of the audit: vanilla is the replica's `Tables.pak` (game version not recorded in the repo); `.7z`/`.rar`
-archives and `KRS-Items.pak` in `Para publicar (TEMP)` could not be read; nothing was run in the game.
+archives and `KRS-Items.pak` in `Para publicar (TEMP)` could not be read; the in-game results are in `docs/tests/` (`PTF_FINDINGS.md`).

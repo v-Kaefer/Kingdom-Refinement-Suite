@@ -66,3 +66,23 @@ tools\harness\run_game_test.ps1 -GameDir "<KCD folder>" -OutFile result.log -Mod
 The runner backs up `Mods\mod_order.txt`, loads only the listed mods, starts the game, waits for the harness line
 `KRS_HARNESS end`, stops the game if needed and restores `mod_order.txt`. Remove the test mods from `Mods` afterwards.
 Side effects: each run creates a new `kcd.log` and moves the previous one into `logbackups/`; the game does not save.
+
+## 5. Module gate results (phases 0-3)
+
+Run by `tools/gate.py` (builds the module, installs it with the `krs_gate` test mod, reads every patched row back through
+the Lua `Database` API and every `rpg_param` row through `RPG.<key>`). Logs: `gate_*.log` in this folder.
+
+| Observation | Evidence |
+|---|---|
+| With the suffix equal to the id, all 8 patch files of `krs_items`, `krs_perks`, `krs_qol` were applied (`modified`/`added` counts match the rows) and 73 of 73 reachable checks (65 rows + 8 constants) read back as in the files | `gate_krs_items_krs_perks_krs_qol_tables.log` |
+| Same result with the author's current Vortex mod list loaded before them (Riposte, Stay Clean, Early Bird, Drink Sound Effects, ...) | `gate_compat_user_mods_tables.log` |
+| `krs_perks` after the upstream Riposte mod: `perk modified: 1, equal: 1` (level changes, Master Strike identical), i.e. the later mod's rows win | same |
+| Localization: a `Localization/<Language>_xml.pak` inside the mod with `text__<modid>.xml` is picked up (`[Mod] Loading localization patch 'Localization	ext__krs_perks.xml'`); a mod without it only logs `Can't open file (Localization	ext__<id>.xml)`, which is harmless | gate logs |
+| The test instance starts in the main-menu scene (level `rataje`); `mm_main/OnStart` arrives after that scene is loaded. At that point `perk`, `buff` and `sleeping_spot_type` have 0 lines; `food`, `item`, `document`, `rpg_param`, `potion` are loaded. A player needs the Continue button | `gate_krs_items_tables.log`, `gate_krs_items_full.log` (full mode waited 6 min at the menu) |
+| The database reports an empty cell as `0`, `-1`, `nil` or an all-zero uuid, depending on the column type | gate log (first run) |
+| Manifest `<kcd_version>1.9.6</kcd_version>` gives `supports game version '1.9.6' explicitly, it will be enabled` | gate logs |
+| Other mods already in the author's list patch `potion` (Drink Sound Effects, 9 rows added), `item` (9 rows) and `soul` (Early Bird, 2390 rows): relevant for the potion module | compat log |
+
+How to repeat: `python tools/gate.py krs_items krs_perks krs_qol` (menu stage, about 3 minutes, no input needed) or `--mode full` and press Continue
+when the main menu appears.
+
