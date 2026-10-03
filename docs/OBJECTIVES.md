@@ -82,6 +82,7 @@ When you change a module:
 | `docs/params/rpg_constants_runtime.csv` | every rpg constant as the running game reports it (588 exist, 406 hidden, 9 do not exist) |
 | `tools/harness/` | builds and runs the in-game test mods (`build_harness.py`, `run_game_test.ps1`, ...) |
 | `docs/ACTION_PLAN.md` | the plan for the whole project |
+| `docs/mods/MODS_REVIEW.md`, `docs/mods/mods_index.csv` | the two Nexus lists (201 unique mods) merged with the external review notes and tied to the KRS modules; rebuilt by `tools/build_mods_index.py` |
 
 ## 5. Where the suite stands today (from the audit)
 

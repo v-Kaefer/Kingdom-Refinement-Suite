@@ -1,0 +1,103 @@
+id,name,name_source,author_or_series,versions,install,krs_area,fix_status,observation
+591,Bushes - Collision Remover,review,,,,,likely still needed (unconfirmed),Invisible collision on bushes; last update 2018-08. Superseded by 2331.
+2331,Bushes Collision Remover Redux,review,,built for 1.9.7,,,unconfirmed (current),26 models; updated 2026-08.
+1323,Skalitz Shield Fix AWL,review,,,,,check patch notes,Blurry Skalitz Shield (A Woman's Lot); last update 2022-01.
+1577,Invisible hands FIX (UPDATE),review,,,,,check patch notes,Forearms invisible with sleeveless clothes; v3.0 late 2023.
+1693,Ravens beak and Spiked warhammer icon swap,review,,,,,check patch notes,Two weapon icons mismatched; 2024-12.
+2066,Distant Smoke and Fire,review,,,,,check patch notes,Pop-in of smoke and flames; 2025-08.
+1380,Black Items Fix,user label,,,,,resolve page first,Page not resolved by the review.
+1566,Lost weapon pack,user label,,,,,bundled fix,Includes a fix for maces invisible when holstered.
+796,Miller Guild Items,user label,,,,,bundled fix,Includes a horse item fix.
+2243,,review,,,CFG,,bundled fix,Wall/NPC pixelation fix through a config file; hardware-specific cfg values.
+1883,Better Pickpocket - FIXED,review,,,,,not a game fix,Fixes a bug in another mod (doubled catch chance in the original).
+1259,Easy Assassination,review,,,,,not a game fix,v1.1 fixed the mod's own manifest warning.
+1327,Weather Overhaul,review,,,,,not a game fix,Replaces a whole shared file; rain-for-days tuning is a design choice.
+1309,,review,,,,,,Replaces a whole shared file (random_event.xml per the page); lists conflicts.
+2333,,review,,,,,,Replaces a whole shared file; lists conflicts.
+1723,,review,,,,,,Replaces a whole shared file (Inventory.gfx); UI cannot use PTF.
+2317,,review,,,,,,Replaces a whole shared file (HUD.gfx); UI cannot use PTF.
+1332,Less headbob,user label,,,LUA,,,Replaces vanilla camerashake.lua loose; may take minutes to apply. Suggest a manifest-based override.
+754,Painted Lords of Leipa Hounskull,user label,,,LEG,,,Legacy install: .pak copied into Data and Data\_fastload. Suggest a Mods-folder package.
+958,Architect,user label,,,DEV,,,Needs the game started in dev mode.
+1009,Perkaholic PTF,review,,1.9.4-1.9.8,PTF,perk table,,Touches perk rows: check against krs_perks rows ec4c5274 / 61e98757. PTF example worth studying.
+770,Perkaholic updated,user label,,,,perk table,,In the tested 1.9.6 list. Separate id from 1009.
+1736,,review,TyburnKetch,,,perk table,,Touches perks.
+1780,,review,TyburnKetch,,,,,Also author of Medieval Poisons (required by 2208).
+1990,,review,,,,perk table,,Touches perks.
+765,Poison overhaul,user label,,,,perk table,,In the tested list; touches perks per the review; potions area.
+2210,,review,Nfrog2swamp1,1.9.8,PTF,perk table,,True Hardcore series; made on 1.9.8.
+2179,,review,Nfrog2swamp1,,PTF,Riposte,,True Hardcore series; closest comparable for the Riposte area.
+2188,,review,Nfrog2swamp1,,PTF,,,True Hardcore series.
+2209,,review,Nfrog2swamp1,,PTF,,,True Hardcore series.
+2208,,review,Nfrog2swamp1,1.9.8,PTF,,,Requires Medieval Poisons (TyburnKetch); made on 1.9.8.
+1629,,review,,,,Riposte,,Recommends using it with Restore Riposte.
+2294,,review,,,,Riposte,,Directional master strikes.
+1678,Better Archery,review,,,,Archery,,Closest comparable to Immersive Archery.
+2040,Polymorphic Projectiles,review,Diaz Dizazter,>=1.9.7,,Archery,,Changes arrow damage values; mixes balance and novelty arrows (suggest split).
+2046,,review,Diaz Dizazter,,PTF,,,Weapons/arrows/ragdolls series.
+2049,,review,Diaz Dizazter,,,,,Weapons/arrows/ragdolls series.
+1743,Persistent arrows,review,,,,Persistent arrows,,The required mod itself.
+2206,,review,DreamMora,,,Persistent arrows,,Overlaps with persistent arrows.
+2190,,review,DreamMora,,,,,KCD2-port series.
+2191,,review,DreamMora,,,,,KCD2-port series.
+2192,,review,DreamMora,,,,,KCD2-port series.
+2194,,review,DreamMora,,,,,KCD2-port series.
+2196,,review,DreamMora,,,,,KCD2-port series.
+2199,,review,DreamMora,,,,,KCD2-port series.
+2218,,review,,,,Stay clean,,Visual comparable to MGsStayClean.
+1260,RPG tweaks,user label,,,,Stay clean,,Large bundle (suggest splitting into modules); in the tested list.
+651,,review,,,,Stay clean,,Large bundle.
+2103,,review,MayDayU1A,,,,,UI series; replaced by 2147.
+2108,,review,MayDayU1A,,,,,UI series.
+2147,,review,MayDayU1A,,,,,UI series; includes the pickpocket window that 2103 replaces.
+797,Sorting mod,user label,,,,Localization,,Renames text: per-language upkeep.
+2203,,review,,,,Localization,,Renames text: per-language upkeep.
+2204,,review,,,,Localization,,Renames text: per-language upkeep.
+808,,review,,,,Localization,,Renames text: per-language upkeep.
+2244,KCSE (Kingdom Come Script Extender),review,JerryYOJ,1.9.8.0 only,KCSE,,,Native or version-locked: add version checks.
+2255,,review,JerryYOJ,,KCSE,,,Plugin that needs 2244.
+2348,,review,,,,,,Native or version-locked code.
+2124,Half-looted,review,,1.9.6 (ok 1.9.7),,,,Large bundle.
+1873,,review,,problems on latest,PTF,,,Large flat multiplier on merchant gold.
+1460,Richer merchants,user label,,,,,,Large flat multiplier on merchant gold.
+1423,,review,,,PTF,,,PTF example worth studying.
+1870,,review,,,PTF,,,PTF example worth studying.
+2022,,review,,,PTF,,,PTF example worth studying.
+2045,,review,,,PTF,,,PTF example worth studying.
+2158,,review,,,PTF,,,Parameter approach (pickpocket); PTF example.
+2171,,review,,,PTF,,,Misses pickpocketed items; combine with 2158.
+2174,,review,,,PTF,,,PTF example worth studying.
+2340,,review,,,PTF,,,Modular files; large bundle done right.
+2299,,review,,,,,,Large bundle.
+2323,,review,,,,,,"Moves items between stashes, horse and pockets: test save safety."
+2276,,review,,,,,,Speed constant is edited by hand.
+2216,,review,,,,,,Repairs other mods' manifests on the fly: back up before trusting.
+1972,,review,,,CFG,,,Hardware-specific cfg values published as general.
+2180,,review,,,CFG,,,Hardware-specific cfg values published as general.
+2153,,review,,,CFG,,,Hardware-specific cfg values published as general.
+1093,Fishing in Bohemia,review,,,,,,Title only; unverified.
+1900,,review,,,,,,Title only; unverified.
+2359,,review,,,,,,Title only; unverified.
+1131,Silver armor,user label,,,,,,The review's search wrongly returned "Playable Daggers" for this id (that is 1689); name from the user's label only.
+1671,,review,,,,,not a defect,Behaviour preference.
+1951,,review,,,,,not a defect,Behaviour preference.
+1647,,review,,,,,not a defect,Behaviour preference.
+284,No mo slo mo,user label,,,,,not a defect,Behaviour preference.
+1040,Disable Combat Slowmotion,review,,,,,,Adjacent (not in the lists).
+1227,30 FPS Cutscene Fix V3,review,,,,30 FPS cutscene fix,,Adjacent; KRS requires a 30 FPS fix mod.
+1236,Easy Combat PTF,review,,,,Riposte,,Adjacent (easy parry and master strike): likely touches the same perk area.
+1296,Kingdom Come Enhanced Edition 2.0,review,,,,,,Adjacent.
+1334,Fast Learning Henry,review,,,,,,Adjacent.
+1416,Toxic Green Armor - PTF Standalone,review,,,PTF,,,Adjacent.
+1689,Playable Daggers,review,,,,,,Adjacent.
+1797,Nighttime Nighthawk,review,,,,,,Adjacent.
+2119,KCD Mod Manager,review,,,,,,Adjacent.
+1765,Restore Riposte,readme,AcSiG,,PTF,Riposte,,Altered by krs_perks; permission granted.
+1419,Immersive Archery,readme,,,,Archery,,Altered by the suite; permission granted.
+2366,,review,,,,,,Never looked up (search cap).
+2367,,review,,,,,,Never looked up (search cap).
+2369,,review,,,,,,Never looked up (search cap).
+2371,,review,,,,,,Never looked up (search cap).
+2372,,review,,,,,,Never looked up (search cap).
+2381,,review,,,,,,Never looked up (search cap).
+2384,,review,,,,,,Never looked up (search cap).
