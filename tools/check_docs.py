@@ -4,7 +4,7 @@ check_docs.py - keeps the documentation consistent (docs/project/DOCS_PLAN.md).
 
     python tools/check_docs.py
 
-Checks, for every Markdown file under docs/ (not archive/, mods-review/raw/, tests/logs/):
+Checks, for every Markdown file under docs/ (not archive/, mods-review/raw/, mods-review/sources/, tests/logs/):
   1. relative links `[text](path)` point to an existing file or folder
   2. backticked repo paths that start with `docs/`, `tools/` or `modules/` exist (glob characters and `<...>` placeholders are skipped)
   3. the file starts with the status block (`> **Status date:** ... | **Kind:** ... | **Trust:** ...`) or a GENERATED marker
@@ -20,7 +20,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths  # noqa: E402
 
-SKIP = ("archive", os.path.join("mods-review", "raw"), os.path.join("tests", "logs"))
+SKIP = ("archive", os.path.join("mods-review", "raw"), os.path.join("mods-review", "sources"), os.path.join("tests", "logs"))
 LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
 TICK = re.compile(r"`((?:docs|tools|modules)/[^`\s*<>{}$]+)`")
 

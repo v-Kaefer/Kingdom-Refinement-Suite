@@ -35,6 +35,7 @@ Consequences:
 ## 3. Startup and tests on 1.9.8
 
 - The main-menu event `mm_main/OnStart` is **not sent** on 1.9.8 (the new start screens come first); events seen: `health_stamina`, `sys_startup`, `sys_loadingvideoscreen` (start, end), `sys_startup/OnEnd`. The harness now runs its table stage on `sys_startup/OnEnd` as well. With that, the module gate passes on 1.9.8: 73 of 73 reachable checks, all 8 patch files applied (`../tests/logs/gate_manifest_probe_1.9.8_tables.log`).
+- **Reported by the author (not tested by the session):** the new EULA screen can be passed by pressing `Q`.
 - `--mode full` (level tables, perks) needs the Continue button; screen control was not available for that run, so it is untested on 1.9.8. It may also need the new EULA screen accepted, which only the author should do.
 - Rules in `ptf-rules.md` that were re-observed on 1.9.8: suffix equals mod id (module patches applied). Not re-measured on 1.9.8: partial rows blanking columns, last mod wins, ZIP-only paks.
 

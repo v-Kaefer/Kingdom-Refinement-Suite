@@ -9,6 +9,8 @@ The only file that is edited every session. Stable goals are in `OBJECTIVES.md`,
 - **Game:** the test install is 1.9.8. The three modules pass the menu-stage gate on 1.9.8 (73/73) and on 1.9.6.
 - **Manifests:** list 1.9.6 to 1.9.8; the engine disables mods whose list lacks the running version, and editing the line is enough to load them (`../engine/game-versions.md`).
 - **Docs:** reorganized (`DOCS_PLAN.md`); `../../CHANGELOG.md` has the full history.
+- **Mod lists:** all lists are merged into `../mods-review/mods_index.csv` (365 mods, 129 of them new from the Vivaldi tabs and screenshots); everything about them is title-based until archives or Nexus pages are available (`../mods-review/MODS_REVIEW.md` section 12).
+- **Repository:** the remote moved while this branch was worked on: PRs #1 (first work), #2 (1.9.8 install note) and #3 (develop into main) are merged, and `develop` replaced `dev`. This branch still has the old docs layout on the remote and two or more local commits that are not pushed; merging `origin/develop` into it was not done (blocked in the session), so the reorganization and the new files need a merge or a PR decided by the author.
 - **Not verified:** rows of level-only tables (perks, sleeping spots, overrides, `skill2item_category`) and the bow live-read; both need the Continue button in the test game, and on 1.9.8 possibly the new EULA screen.
 - **Waiting for the author:** answers in `DECISIONS.md` (open decisions), the missing links for the mod lists, permission replies (`PERMISSIONS.md`), whether to push `dev` and PR #1.
 

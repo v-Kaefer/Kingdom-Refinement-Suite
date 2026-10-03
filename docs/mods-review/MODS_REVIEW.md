@@ -188,3 +188,97 @@ The official 1.9.7 and 1.9.8 notes mention none of: bush collision, the Skalitz 
 - **15 mods outside the lists and the workspace**: the 8 adjacent mods of section 9 (1040, 1236, 1296, 1334, 1416, 1689, 1797, 2119) and 7 found while checking (667, 1853, 1882, 2165, 2173, 2219, 2273: series members and alternatives).
 
 The author said more links were brought than the lists in the repository contain; if some are still missing, send them and they go into `mods-review/sources/` and the index.
+
+## 12. Consolidation of the Vivaldi tabs and the history list (3 Oct 2026)
+
+The author's browser held 180 Nexus tabs (`sources/nexusmods_abas_vivaldi.csv`, names included) and a second session, "New mods lists review",
+merged them with the titles of the history screenshots into a 290-mod title list, an analysis and a verification of the earlier review
+(`raw/new-mods-lists-review/`: `id_titles.csv`, `analysis.md`, `verification.md`, kept exactly as written). This section folds that work into the project.
+Nexus pages were not opened (HTTP 403), so everything about these mods is **title-based**: names are reliable, categories are keyword-based
+with manual fixes, verdicts do not exist yet.
+
+### 12.1 What the index now holds (`mods_index.csv`, 365 rows)
+
+| Group | Ids | Note |
+|---|---|---|
+| In the author's two text lists | 201 | 161 have a title (130 from the history screenshots, the rest from Vivaldi tabs), 40 have none (see 12.7) |
+| Vivaldi tabs | 180 | **56 are in the text lists, 124 are not** |
+| New: in the Vivaldi tabs or screenshots but in neither text list | 129 | 124 from Vivaldi plus 5 only in the screenshots |
+| Workspace or Vortex only | 24 | section 11.4 |
+| Found while checking | 11 | outside every list |
+
+Columns added: `name` (exact tab title where one exists), `category`, `ptf`, `triage`, `in_vivaldi_tabs`, `in_history_screenshots`, `fix_type`, `list_review_note`.
+`triage` is a mechanical sort from the category and the KRS area (rules in `tools/build_mods_index.py`), **not a verdict**:
+"overlap check needed" means the mod edits something KRS also edits and must be compared at table level; "visual only", "UI or maps", "tool", "outside the PTF scope" mean the opposite.
+
+| Triage (all 365 rows) | Rows |
+|---|---|
+| gameplay, no KRS area flagged, still check tables | 85, plus 18 PTF-titled |
+| gameplay, overlap check needed (Archery 14, Combat/riposte 14, Perk/RPG tables 10, Localization 2, Stay-clean 1) | 41, plus 9 PTF-titled |
+| visual only (26 Reshade/ENB presets, 19 `user.cfg` mods) | 45 |
+| UI or maps (replace `.gfx` and map files) | 34 |
+| world or weather 25, content 14, animations/audio 3 | 42 |
+| tool or reference | 12 |
+| out of scope (adult content: 1818, 1900, 2196, 2304) | 4 |
+| unsorted (in the text lists but without a title yet) | 75 |
+
+### 12.2 Categories of the 290 titled mods (from `analysis.md`)
+
+Weapons, armor, items 36 | Maps, UI, HUD 34 | Reshade, ENB, visual presets 26 | World, weather, visuals 25 | Alchemy, food, survival 24 | Combat, AI 23 | Graphics config 19 | Progression, XP, perks 17 | Archery, arrows 15 | Quests, lore, content 14 | Economy, merchants 14 | Crime, stealth, loot 13 | Tools, reference 12 | Horses 8 | Adult 4 | Animations, audio 3 | Other 2 | Fix bundle 1. Of the 290, 28 carry "PTF" in the title (20 from Vivaldi). 26 ids are below 1000 (old uploads): the likeliest to predate the Mods-folder format, so also the likeliest to be disabled on 1.9.8 if their manifest lists only old versions (section 11.3).
+
+### 12.3 Overlap clusters (title-evident, not measured)
+
+| Cluster | Ids | Concern |
+|---|---|---|
+| Archery and arrows | 802, 804, 1084, 1100, 1205, 1090, 1375, 1376, 1419, 1564, 1565, 1678, 1743, 2035, 2040 | All edit bow or arrow values; the suite alters 1419 and requires 1743 |
+| Karnages series (12) | 1558-1563, 1564, 1565, 1566, 1568, 1569, 1570 | One author, many tables: weapons, polearms, arrows, shop prices, durability, `user.cfg` |
+| Combat overhauls | 1070, 1112, 1384, 651, 2256, 2179, 2294, 1629, 1148, 2359, 2192, 2194, 1243, 1612, 1647, 883 | Combat, master-strike and AI tables; **highest conflict risk for `krs_perks`** (Riposte rows) |
+| Weapon and polearm balance | 1088, 2045, 1562, 1563, 1559, 1148, 2046, 1636, 1153, 883 | Same weapon stat tables |
+| Merchants, prices, money | 829, 1105, 1308, 1460, 1548, 2279, 1568, 1578, 1861, 1870, 1873, 1981, 2188 | 1460 (x3 money) and 1873 push the same way and stack |
+| XP and progression | 1518, 1519, 1520, 1572, 1860, 1334, 2340, 1668, 2246, 883, 1009, 2299 | XP, perks and `rpg_param`: the same table as `krs_items` (`ReadingXpPerHour`) and `krs_qol` |
+| Repair and durability | 1292, 1842, 2021, 2348, 1560, 1545, 2173 | The same area as `krs_qol` (`RepairPriceModif`, bridles and saddles) |
+| Helmets | 1337, 1907, 1909, 2081 | Helmet and vision rows |
+| Horses | 129, 1510, 2174, 2223, 2224, 2270, 2271, 2343 | Horse behaviour and caparisons |
+| Weather and sky | 879, 1114, 1193, 1327, 1410, 1982 | Several weather systems |
+| Graphics cfg | 800, 1342, 1367, 1526, 1527, 1528, 1538, 1552, 1561, 1646, 1720, 1972, 2106, 2153, 2180, 2243, 2353 | Same `user.cfg` variables, the last one wins, hardware-specific |
+| Reshade and ENB presets | 26 mods | One at a time; they replace each other rather than conflict with data |
+| Maps | 827, 1182, 1281, 2384, 2156, 955 | Map replacers and overlays |
+| HUD and UI | 978, 1063, 1218, 1956, 2030, 2108, 2147, 2293, 2103, 1723, 2317, 1719, 1780 | `.gfx` files cannot be PTF: conflicts persist |
+| KCD1 Reborn series | 1918, 1927, 1964 | Terrain, vegetation, faces |
+| Sorting and language | 2203, 2204, 2374, 1779, 1479, 797 | Per-language item names; 2374 is the Ukrainian version of 2204 |
+| Translation families | 491 / 2316 (Japanese), 651 / 2256 (Chinese), 2204 / 2374 (Ukrainian) | Count each family as one mod |
+
+### 12.4 Where the new mods meet the KRS modules
+
+| KRS area | Module | Mods on the lists | What to check |
+|---|---|---|---|
+| Perk rows `ec4c5274`, `61e98757` (Riposte, Master Strike) | `krs_perks` | combat overhauls 1070, 1112, 1384, 1148, 2359, 1243, 1612; perk mods 1009, 1736, 1860, 1334, 1572 | Whether they patch the `perk` rows above; the later mod in `mod_order.txt` wins the whole row (measured). Restore Riposte (1765) itself is disabled on 1.9.8 as shipped (`../engine/game-versions.md`) |
+| `ReadingXpPerHour`, books, digestion, starvation, sleeping spots, Aesop potion | `krs_items` | XP mods 1518, 1519, 1520, 2340, 1668, 2246, 883; 1424 sleep, 1426 energy/hunger patch; the potion mods of the Alchemy cluster (8 new) | `rpg_param` key by key (only a shared key collides); `food` rows as whole rows |
+| Herb radius, carry capacity, repair price, bridles, timed-quest text | `krs_qol` | repair cluster (1292, 1842, 2021, 2348, 1560, 1545, 2173); 1938 (herb radius, in the workspace); text renamers 2203, 2204, 2374, 797 | `RepairPriceModif`, `StrengthToInventoryCapacity`, the 22 quest text keys |
+| Archery | future `krs_bow` | the 15 archery mods; the suite alters 1419 and requires 1743 | `AimSpreadMax`, `Bow*` constants, arrow rows |
+| Required mods | none | 2218 Clean Gear, 1863 Dirty And Charismatic (PTF), 1062 camping next to the MGs Stay Clean requirement; 1227 for the 30 FPS fix | the 1227 page title now says "V3"; the installed file and `Requirements.md` say V2 (note in `annotations.csv`) |
+
+All of this is inference from titles. The way to turn it into fact is unchanged (section 7): download the archives, run `tools/audit_tables.py` and `tools/check_patch_names.py` on them, then `tools/gate.py ... --with <mod folders>`.
+
+### 12.5 Fix-type mods added (candidates for the "fixed" check, sections 6 and 11.1)
+
+| Id | Mod (title) | Note |
+|---|---|---|
+| 2332 | Baptism of Fire Fix Redux | The 1.9.7 notes list a Baptism of Fire crash fix: check whether it is now obsolete |
+| 1558 | Karnages_KCD_Essential_Fixes 2.0 | A bundle; each fix needs its own check |
+| 1782, 2343 | elbow clipping; horse caparison fix | Look like vanilla defects: candidates for 1.9.8 |
+| 1227 | 30 FPS Cutscene Fix (page title "V3") | Game-side defect; installed file and `Requirements.md`: V2 |
+| 1424, 1426, 2279, 1991 | Better Sleep Fixed; Energy and Hunger Patch (PTF); Immersive Economy FIXED; a patch for another mod | Not game fixes (they fix other mods) |
+| 1380 | Black Items Fix | Title now known; still not checked |
+
+### 12.6 Outside the suite's scope, and tools
+
+- **Not aligned with "non-intrusive PTF tweaks":** adult content (1818, 1900, 2196, 2304); large content or world replacements (1918, 1927, 1964, 1327, 1356 fan side quest, 1535, 1683).
+- **Tools and reference (12):** 864 Official Modding Tools, 867 APEX Realistic Modding Guide, 1059 Icon ID Resource, 1110 AI Standalone Library, 1479, 1594, 1779, 1829 Mod Order Tool, 2119 KCD Mod Manager, 2216 Mod Organizer Plugin, 2244 KCSE (2255 and 2277 need it; 1.9.8.0 only).
+
+### 12.7 Corrections from the verification session, and what is still open
+
+Applied in `annotations.csv` and the index: 2372 and 2381 now have titles (Trough Washing Animation; Nest of Vipers Stealth; 2366, 2367, 2369, 2371, 2384 are still unresolved); the PTF-titled 1860-1864, 1893, 2005, 2021 are added to the PTF examples; 2035 sits next to 1678 and 2040 as a direct comparable for 1419; translation families (2316, 2256, 2374); hardware-specific cfg 1720 and 2353; 2277 needs KCSE; 1327's "mission file" claim is not supported by its title.
+Corrections to the text above (not edited in place): the project names Restore Riposte (1765) and Immersive Archery (1419) as altered mods in `Requirements.md`, not in the README (section 9). The first review's catalog (130 mods), `unverified.md` and `mods.csv` are still missing and were not recreated.
+
+Still open: **40 ids of the text lists have no title** (284, 708, 754, 762, 765, 770, 795, 796, 797, 840, 891, 892, 905, 913, 915, 942, 958, 966, 1093, 1131, 1203, 1259, 1260, 1374, 1483, 1577, 1904, 2061, 2079, 2084, 2098, 2100, 2132, 2152, 2297, 2330, 2338, 2345, 2362, 2365). 26 of them have the author's own label in `Kingdom Come Mods.txt`; 14 have no name at all. The "Realism & Immersion 2026" collection that the lists probably came from is a possible cross-check source. Every verdict still needs a mod page or an archive.

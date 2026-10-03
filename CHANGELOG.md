@@ -5,6 +5,23 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-03 (third request): all mod lists merged
+
+No game run in this request.
+
+### Mod lists
+- The author's browser tabs (180 Nexus mods, with names: `docs/mods-review/sources/nexusmods_abas_vivaldi.csv` and `.md`) and the notes of the session "New mods lists review" (`docs/mods-review/raw/new-mods-lists-review/`: a 290-mod title list `id_titles.csv`, `analysis.md`, `verification.md`) were copied into the repository exactly as written. The two text lists (`mods_to_verify.txt`, `Kingdom Come Mods.txt`) are unchanged.
+- Finding: of the 180 Vivaldi tabs only 56 were in the two text lists; **124 mods were missing from the project**. With the 5 further ids that only appear in the screenshots and the workspace and checking finds, `docs/mods-review/mods_index.csv` now has **365 rows** (201 from the text lists, 129 new, 24 workspace-only, 11 found while checking), with exact tab titles as names, a keyword category, the PTF flag, a mechanical `triage` column and the reviewing session's note per mod.
+- `tools/build_mods_index.py` rewritten to read every list (text lists, Vivaldi tabs, title list, workspace, annotations); names prefer the exact tab title.
+- `docs/mods-review/MODS_REVIEW.md` section 12: counts, triage table, categories, overlap clusters, where the new mods meet `krs_perks`, `krs_items`, `krs_qol` and archery, fix candidates (new: 2332, 1558, 1782, 2343; not game fixes: 1424, 1426, 2279, 1991), out-of-scope and tools, and the open items (40 text-list ids still without a title, 5 still unresolved ids). Nothing was removed from earlier sections.
+- The corrections of the verification session were applied in `annotations.csv` (titles for 2372 and 2381, PTF examples 1860-1864, 1893, 2005, 2021, translation families, cfg and KCSE notes, a note that the 1227 page is now titled "V3" while the installed file and `Requirements.md` say V2).
+- Everything about these mods is **title-based**: Nexus pages return HTTP 403 and no archives are available, so no verdict exists. The first review's catalog (130 mods), `unverified.md` and `mods.csv` remain missing.
+
+### Other
+- Reported by the author, not yet tried: the 1.9.8 EULA screen can be passed with `Q` (`docs/engine/game-versions.md`, `docs/tests/README.md`).
+- `tools/check_docs.py` skips `mods-review/sources/`.
+- **Repository state found:** the remote moved while the branch was being worked on (PR #1, PR #2 "Document test install update to KCD 1.9.8" and PR #3 develop into main are merged; `dev` was renamed `develop`; `docs/CI_PLAN.md` exists on `claude/compassionate-proskuriakova-002ee9`). This branch still holds the old layout on the remote. Merging `origin/develop` into the branch was attempted and blocked by the session's permission check, so it was **not done**; the local commits (`5d581d9`, `b0a4cc9` and this request's) are unpushed.
+
 ## 2026-10-03 (second session): 1.9.8, mod review, docs reorganization
 
 ### Game version 1.9.8

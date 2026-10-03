@@ -24,4 +24,6 @@ python tools/gate.py krs_items krs_perks krs_qol            # menu stage, no inp
 python tools/gate.py krs_items krs_perks krs_qol --mode full # also needs Continue pressed (level tables)
 ```
 
+On 1.9.8 the first screen is the EULA; the author reports that pressing `Q` passes it (not yet tried by a session).
+
 Limits: the test instance must run with Steam open; use at most a few runs per session, each takes 3 to 6 minutes. On 1.9.8 the main menu does not send `mm_main/OnStart`, so the menu-stage checks start from `sys_startup/OnEnd`.
