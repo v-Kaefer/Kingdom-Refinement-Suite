@@ -4,7 +4,7 @@ Status date: 2 Oct 2026. Plan for turning the repo into shippable, tested, Vorte
 dependency: nothing in phase 1 or later is worth building until phase 0 makes packaged files actually load.
 
 Effort: S = about half a day, M = 1-2 days, L = several days. Branches follow `docs/OBJECTIVES.md`
-(`krs-items`, `krs-qol`, `krs-perks`, `krs-bow`; docs and tools live on `dev`).
+(`krs-items`, `krs-qol`, `krs-perks`, `krs-bow`; docs and tools live on `develop`).
 
 ## Progress (2 Oct 2026, phases 0-3 executed)
 
@@ -38,8 +38,8 @@ price x2 only; Riposte shipped as `krs_perks` with an "enable only one of them" 
 | 0.2 | Rename every patch file and inner table name to `table__<modid>` (for example `rpg_param__krs_items.xml`); delete the empty `item.xml` and the `WIP Base` copies from module folders | checker reports 0 problems on all module folders |
 | 0.3 | `tools/build_module.py`: source tree (`Data/Libs/Tables/...`, `Localization/...`) to `Data/<id>.pak` (ZIP, deflate) + `mod.manifest`, and a Vortex-ready archive (`<id>/mod.manifest`, `<id>/Data/<id>.pak`). Runs checker, audit and ownership check first and fails on any problem | one command produces an installable archive per module |
 | 0.4 | Gate script: build the module, run `harness` in `tables` mode with that module, assert the engine printed `Table ... is patched by ...` for every file and the values read back equal `ownership.csv` targets | gate passes for a module before anything is committed to its branch |
-| 0.5 | Branches: merge `dev` docs and tools into each module branch; module sources live under `KRS-<Module>/src/`; the game replica stays ignored; stop tracking generated and scratch files | each branch builds from a clean clone |
-| 0.6 | Localization patches: Riposte uses `Localization/<Language>_xml.pak` with `text__<modid>.xml` (the engine logs `Loading localization patch`). The Timed Quest Indicator on `dev` uses `Data/Tables/ui/text_*__KRSPKG1.xml`, which is probably the wrong mechanism: confirm with the harness and fix | one translated quest line shows in game |
+| 0.5 | Branches: merge `develop` docs and tools into each module branch; module sources live under `KRS-<Module>/src/`; the game replica stays ignored; stop tracking generated and scratch files | each branch builds from a clean clone |
+| 0.6 | Localization patches: Riposte uses `Localization/<Language>_xml.pak` with `text__<modid>.xml` (the engine logs `Loading localization patch`). The Timed Quest Indicator on `develop` uses `Data/Tables/ui/text_*__KRSPKG1.xml`, which is probably the wrong mechanism: confirm with the harness and fix | one translated quest line shows in game |
 
 Decisions needed before 0.1: one mod or several (recommended: several), Enhanced Eyes out of the suite (recommended: link, do
 not ship), repairs in QoL or Items, Perkaholic as a requirement.

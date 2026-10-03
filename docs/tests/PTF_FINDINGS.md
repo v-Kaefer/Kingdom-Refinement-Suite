@@ -19,7 +19,7 @@ not inferred.
 | 6 | **Rows are replaced whole, last mod wins**: mod 1 set Aesop nutrition 2.5 / ratio 0.5, mod 2 (later in `mod_order.txt`) set decay 123 with all other columns vanilla; the result was nutrition **10**, ratio **0.1**, decay 123. The first mod's change was undone | same log |
 | 7 | Full rows that equal vanilla are counted as `equal` and do not change anything on their own (KRS-Items food: `modified: 1, equal: 33`) | `run_krs_items_as_is_vs_fixed.log` |
 | 8 | Only mods listed in `Mods/mod_order.txt` are loaded (`Loading mods from mods/mod_order.txt`) | session logs |
-| 9 | A `.pak` must be a **ZIP**. A 7z archive renamed `.pak` fails with `Failed to open the pak` (seen 9x for `dynamic_bow_stats.pak` and 7x for `MinimalModTools.pak` in the logs; the copies of those two paks on branch `dev` and `KRS-Items/Para publicar (TEMP)/Data/KRS-Items.pak` start with the 7z signature) | `kcd.log`, `logbackups/` |
+| 9 | A `.pak` must be a **ZIP**. A 7z archive renamed `.pak` fails with `Failed to open the pak` (seen 9x for `dynamic_bow_stats.pak` and 7x for `MinimalModTools.pak` in the logs; the copies of those two paks on branch `develop` and `KRS-Items/Para publicar (TEMP)/Data/KRS-Items.pak` start with the 7z signature) | `kcd.log`, `logbackups/` |
 | 10 | Patches added to a hidden constant work: a new `rpg_param` row `DigestionSpeed` was reported as `added: 1` and the game then returned `RPG.DigestionSpeed = 0.00130208` | `run_krs_items_as_is_vs_fixed.log` |
 
 ## 2. The suite's own files today

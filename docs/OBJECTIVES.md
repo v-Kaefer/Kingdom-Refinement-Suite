@@ -82,6 +82,7 @@ When you change a module:
 | `docs/params/rpg_constants_runtime.csv` | every rpg constant as the running game reports it (588 exist, 406 hidden, 9 do not exist) |
 | `tools/harness/` | builds and runs the in-game test mods (`build_harness.py`, `run_game_test.ps1`, ...) |
 | `docs/ACTION_PLAN.md` | the plan for the whole project |
+| `docs/CI_PLAN.md` | plan for CI/CD: hosted checks, self-hosted in-game gate, release workflow, test backlog |
 | `docs/mods/MODS_REVIEW.md`, `docs/mods/mods_index.csv` | the two Nexus lists (201 unique mods) merged with the external review notes and tied to the KRS modules; rebuilt by `tools/build_mods_index.py` |
 
 ## 5. Where the suite stands today (from the audit)
@@ -93,7 +94,7 @@ When you change a module:
 | Potion rebalance is mostly placeholders (and its pipeline cannot run) | `food__KRS-items.xml` has 34 rows; 33 equal vanilla. Only Aesop Potion differs (nutrition 10 -> 2.5, ratio 0.1 -> 0.5). Planned values live in `Potions_GPT.md`. The formula script crashes and the formula would overwrite designed potions: see `docs/potions/ANALYSIS.md` |
 | Possible clash with installed mods | All 34 food rows overlap *Food Spoil Faster* (`decay_time_hours`), 22 overlap *PotionNoSatietyAndHealEnergy*. Measured in game: the later mod's row replaces the whole row, so the clash is real and load order decides who wins (`docs/tests/PTF_FINDINGS.md`, rule 6) |
 | Reading is set three times | `ReadingXpPerHour`: vanilla 20, `KRS-Items` 5, `KingdomRefinementSuite` 10 (Skill Books Take Time: 10). The 56 book rows are duplicated in `KingdomRefinementSuite` |
-| Repairs: four variants, none consistent | The `perk_rpg_param_override` values (vanilla 0.5 / 0.7 / 0.9) belong to the pseudo-perk **"Hardcore Mode - Constants"**, so they only apply in Hardcore mode; normal mode uses the global `rpg_param` (`RepairPriceModif` 0.65). Realistic Repairs sets 0.1 / 0.6 / 1.2, dev branch 0.2 / 0.7 / 1.3. README says "prices doubled" and level-20 repairs down to 20 % |
+| Repairs: four variants, none consistent | The `perk_rpg_param_override` values (vanilla 0.5 / 0.7 / 0.9) belong to the pseudo-perk **"Hardcore Mode - Constants"**, so they only apply in Hardcore mode; normal mode uses the global `rpg_param` (`RepairPriceModif` 0.65). Realistic Repairs sets 0.1 / 0.6 / 1.2, develop branch 0.2 / 0.7 / 1.3. README says "prices doubled" and level-20 repairs down to 20 % |
 | Stray `perk_id` in `rpg_param` | `KingdomRefinementSuite/.../rpg_param__KRS.xml` (also in Realistic Repairs itself) puts perk rows in the wrong table. Effect unverified |
 | Riposte differs from upstream and vanilla | Vs vanilla: perk `ec4c5274` level 5 -> 10, visibility 0 -> 2; Master Strike perk `61e98757` restored. Upstream (Restore Riposte) used level 8 |
 | Riposte file is in the wrong folder | `Data/perk__riposte.xml`; the game reads `Data/Libs/Tables/rpg/perk__riposte.xml` (as the upstream mod ships it) |
@@ -148,9 +149,9 @@ python tools/check_ownership.py        # sources default to '^modules/'
 To include another branch, extract it first and pass it as an extra source:
 
 ```bash
-git archive dev KingdomRefinementSuite | tar -x -C /tmp/dev
-python tools/audit_tables.py ... --extra "branch-dev/KingdomRefinementSuite=/tmp/dev/KingdomRefinementSuite"
-python tools/check_ownership.py --sources '^(modules/|branch-dev)'
+git archive develop KingdomRefinementSuite | tar -x -C /tmp/develop
+python tools/audit_tables.py ... --extra "branch-develop/KingdomRefinementSuite=/tmp/develop/KingdomRefinementSuite"
+python tools/check_ownership.py --sources '^(modules/|branch-develop)'
 ```
 
 Limits of the audit: vanilla is the replica's `Tables.pak` (game version not recorded in the repo); `.7z`/`.rar`

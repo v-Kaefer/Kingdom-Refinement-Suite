@@ -11,7 +11,7 @@ What it does (everything it decides is written down in modules/<id>/CHANGES.md b
   * patch files are named `<table>__<modid>.xml` (the engine only applies a patch whose suffix equals the mod id)
   * localization goes to modules/<id>/Localization/<Language>/text__<modid>.xml
 
-Sources: working tree of the main checkout (KRS-Items, KingdomRefinementSuite) and branch `dev` (QoL files).
+Sources: working tree of the main checkout (KRS-Items, KingdomRefinementSuite) and branch `develop` (QoL files; named `dev` before 3 Oct 2026).
 Re-running overwrites the generated files; nothing outside modules/ is touched.
 """
 import argparse
@@ -171,7 +171,7 @@ def main():
                 [{"item_category": "armor.horse_bridle.*", "skill_id": "8"}, {"item_category": "armor.horse_saddle.*", "skill_id": "8"}])
     names = {"english": "English", "czech": "Czech", "portuguese": "Portuguese"}
     for low, lang in names.items():
-        t = git_show(f"dev:KingdomRefinementSuite/Data/Tables/ui/text_{low}__KRSPKG1.xml")
+        t = git_show(f"develop:KingdomRefinementSuite/Data/Tables/ui/text_{low}__KRSPKG1.xml")
         rows = [(r["key"], r["text"], r["markup"]) for r in parse_rows(t)]
         write(os.path.join(ROOT, "modules", m, "Localization", lang, f"text__{m}.xml"), text_xml(rows))
         print(f"{m}: {lang}: {len(rows)} text rows")
