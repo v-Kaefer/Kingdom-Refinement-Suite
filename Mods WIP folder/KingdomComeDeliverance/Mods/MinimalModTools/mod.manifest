@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<kcd_mod>
+  <info>
+    <name>Minimal Mod Tools</name>
+    <description>A test for modders to mod</description>
+    <author>Kaleb</author>
+    <version>1.0.0</version>
+    <created_on>03.06.2025</created_on>
+  </info>
+  <supports>
+   <kcd_version>1.9.*</kcd_version>
+  </supports>
+</kcd_mod>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+    <table name="text_czech" version="1">
+        <header>
+            <column name="key"    type="character varying" />
+            <column name="text"   type="character varying" />
+            <column name="markup" type="character varying" />
+        </header>
+        <rows>
+            <row key="subchapter_397_name" text="Na stopě" markup="Na stopě" />
+            <row key="subchapter_397_description" 
+                text="Jeden z členů Neuhofský party, který si říká Smraďoch by se měl nacházet někde v okolí Ledečka. Víc jsem toho bohužel nezjistil, ale dle jeho přezdívky mám pocit, že to nebude úplně příjemné setkání."
+                markup="Jeden z členů té neuhofské bandy, který si říká Smraďoch, by se měl nacházet někde v okolí Ledečka. Víc jsem toho bohužel nezjistil, ale dle jeho přezdívky mám pocit, že to nebude úplně příjemné setkání.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_323_name" text="Ve vší počestnosti" markup="Ve vší počestnosti" />
+            <row key="subchapter_323_description"
+                text="Jan Ptáček se rozhodl lečit si zranění z našeho lovu v lázních a požádal mě, jestli bych ho nechtěl doprovázet."
+                markup="Jan Ptáček se rozhodl léčit si zranění z našeho lovu v lázních a požádal mě, abych ho doprovázel.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_403_name" text="Mor v Mrchojedech" markup="Mor v Mrchojedech" />
+            <row key="subchapter_403_description"
+                text="Mrchojedy ochromila nebezpečná choroba. Nejprve schvátila zvěř a pak se jí nakazili i vesničané. "
+                markup="Mrchojedy ochromila nebezpečná choroba. Nejprve schvátila zvěř a pak se jí nakazili i vesničané.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_384_name" text="V Božích rukou" markup="V Božích rukou" />
+            <row key="subchapter_384_description"
+                text="V klášteře jsem potkal Johanku a vypadá to, že má potíže..."
+                markup="V klášteře jsem potkal Johanku a vypadá to, že má potíže...&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_293_name" text="Z mlejna do louže" markup="Z mlejna do louže" />
+            <row key="subchapter_293_description"
+                text="Našel jsem Frickovi s Matušem novou práci a bylo načase, abych zjistil, jak se jim na mlýně daří."
+                markup="Našel jsem Frickovi s Matušem novou práci a bylo načase, abych zjistil, jak se jim na mlýně daří.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_454_name" text="Žofiina svatba" markup="Žofiina svatba" />
+            <row key="subchapter_454_description"
+                text="Štěpánka, paní z Talmberka, chce, aby si její sestřenice Žofie svou svatbu skutečně zapamatovala."
+                markup="Štěpánka, paní z Talmberka, chce, aby její sestřenice Žofie měla skutečně nezapomenutelnou svatbu.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_373_name" text="Trestající kámen" markup="Trestající kámen" />
+            <row key="subchapter_373_description"
+                text="Na stavbě sázavského kostela se stala nehoda kvůli špatnému kamení. V talmberském lomu, odkud kamení pochází, se bojí, že jim to pokazí jméno."
+                markup="Na stavbě sázavského kostela se stala nehoda kvůli špatnému kamení. V talmberském lomu, odkud kamení pochází, se bojí, že jim to pokazí jméno.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_365_name" text="Skuteční křesťané" markup="Skuteční křesťané" />
+            <row key="subchapter_365_description"
+                text="Do Úžic zavítal nezvaný host - arcibiskupský vikář. Tvrdí, že v okolí pátrá po kacířské skupině. Ale pan Hanuš je jiného názoru. Domnívá se, že vikář sem přišel, aby mohl svobodně čmuchat po jeho statcích a tak ho chce odpoklonkovat zpět do Prahy."
+                markup="Do Úžic zavítal nezvaný host - arcibiskupský vikář. Tvrdí, že v okolí pátrá po kacířské skupině. Ale pan Hanuš je jiného názoru. Domnívá se, že vikář sem přišel, aby mohl svobodně čmuchat po jeho statcích a tak ho chce odpoklonkovat zpět do Prahy.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_294_name" text="Poprava" markup="Poprava" />
+            <row key="subchapter_294_description"
+                text="V Ratajích chystají popravu. Jenže bez ratajského kata Heřmana..."
+                markup="V Ratajích chystají popravu. Jenže bez ratajského kata Heřmana...&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_571_name" text="Železná zásoba" markup="Železná zásoba" />
+            <row key="subchapter_571_description"
+                text="Situace kolem Jana Zajíce se nevyvíjí vůbec dobře. Jeho družinu napadli talmberští vojáci a on sám se musel skrýt se svými věrnými ve štole. Černý Lukeš, člen jeho družiny, má ale pochyby o smyslu celého podniku a hodlá Jana opustit. Nechce ale odcházet s prázdnou, zvlášť když si doma ukryl železnou zásobu na horší časy. Jenže jeho dům hlídají talmberští..."
+                markup="Situace kolem Jana Zajíce se nevyvíjí vůbec dobře. Jeho družinu napadli talmberští vojáci a on sám se musel skrýt se svými věrnými ve štole. Černý Lukeš, člen jeho družiny, má ale pochyby o smyslu celého podniku a hodlá Jana opustit. Nechce však odejít s prázdnou, zvlášť když si doma ukryl železnou zásobu na horší časy. Jenže jeho dům hlídají talmberští...&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+            <row key="subchapter_393_name" text="Masakr" markup="Masakr" />
+            <row key="subchapter_393_description"
+                text="Někdo přepadl Neuhofský hřebčín a pan Racek mě poslal spolu s jednotkou vojáků vyšetřit, co se vlastně stalo."
+                markup="Někdo přepadl neuhofský hřebčín a pan Racek mě poslal spolu s jednotkou vojáků vyšetřit, co se vlastně stalo.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;&amp;lt;font color='#9e2d00'&amp;gt;(Tento quest je časově omezený)&amp;lt;/font&amp;gt;" />
+        </rows>
+    </table>
+</database>
