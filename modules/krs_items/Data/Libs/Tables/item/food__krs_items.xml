@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="food" version="1">
+    <header>
+      <column name="alcohol_content" type="real" />
+      <column name="cooked_item_id" type="uuid" />
+      <column name="decay_time_hours" type="real" />
+      <column name="dried_item_id" type="uuid" />
+      <column name="food_subtype_id" type="integer" />
+      <column name="food_type_id" type="integer" />
+      <column name="health_benefit" type="real" />
+      <column name="item_id" type="uuid" />
+      <column name="max_status" type="integer" />
+      <column name="nutrition_benefit" type="real" />
+      <column name="refresh_benefit" type="real" />
+      <column name="short_term_nutrition_benefit_ratio" type="real" />
+      <column name="smoked_item_id" type="uuid" />
+    </header>
+    <rows>
+      <!-- Aesop Potion (drink): nutrition 10 -> 2.5, short-term ratio 0.1 -> 0.5 -->
+      <row alcohol_content="30" cooked_item_id="" decay_time_hours="0" dried_item_id="" food_subtype_id="" food_type_id="3" health_benefit="0" item_id="73ff1fde-ec8b-41e9-95e3-b5938c715bf1" max_status="100" nutrition_benefit="2.5" refresh_benefit="4" short_term_nutrition_benefit_ratio="0.5" smoked_item_id="" />
+    </rows>
+  </table>
+</database>

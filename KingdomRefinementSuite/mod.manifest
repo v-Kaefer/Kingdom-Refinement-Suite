@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kcd_mod>
   <info>
-    <name>Kingdom Refinement Suite</name>
+    <name>Kingdom Refinement Suite Package 1</name>
     <description>A curated set of non-intrusive PTF tweaks to polish your journey through Bohemia.</description>
     <author>Kaleb</author>
     <version>Alpha 0.0.1</version>
     <created_on>28/05/1999</created_on>
-    <modid>kingdom_refinement_suite</modid>
+    <modid>kingdom_refinement_suite_pkg1</modid>
     <modifies_level>false</modifies_level>
   </info>
   <supports>
-    <kcd_version>1.9.4</kcd_version>
-    <kcd_version>1.9.5</kcd_version>
-    <kcd_version>1.9.6.x</kcd_version>
+    <kcd_version>1.9.x</kcd_version>
   </supports>
 </kcd_mod>

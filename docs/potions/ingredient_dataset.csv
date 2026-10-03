@@ -1,0 +1,23 @@
+item_id,name,is_herb,poisonous,element1,element2,recipes_using,in_game_effect_text
+abb6cc5a-3592-406f-82ab-edfb73e219be,Amanita,False,,,,2,
+3db25e6e-dfe2-4b06-a079-80e6064073c4,Attire,False,,,,1,
+a314b580-bc97-4802-ae1f-8f4803e34503,Belladona,True,True,4,3,7,Very poisonous!
+a4f0f4c8-dc3f-4cb2-be89-f0f56fbb09fa,Boar tooth,False,,,,2,
+a40e513f-045e-421c-99c9-c10dae3d9fe1,Cave mushroom,False,,,,3,
+7259b9bc-dfae-487e-a8bb-c1f500894e0c,Chamomile,True,False,1,4,5,Strengthens agility and speech and induces hunger.
+f879ac63-2ce2-4114-83a2-89643c1ed102,Charcoal,False,,,,3,
+33392df2-2b85-4875-998b-c313de495f57,Cobweb,False,,,,1,
+de134f81-cfbe-422d-9105-df3e0b3b59b5,Comfrey,True,False,2,1,4,"Greatly helps the health and stamina, but induces fatigue."
+a11cc7f6-b499-4003-aef1-938e87b30a2e,Dandelion,True,False,1,2,3,It strengthens vitality and stamina.
+0290b689-c01c-480f-b121-bed71ad1f5e0,Eyewort,True,False,1,0,4,Increases agility and speech.
+b6de890f-068b-4a58-b927-0860becae508,Honey,False,,,,1,
+9b771c16-c0b1-438c-aeda-8c4d3ce28465,Hypericum,True,False,4,1,7,"Improves agility as well as stamina, but somewhat takes away strength and vitality."
+bf7b7c2a-017b-4c7b-b9aa-0c4e29ce5913,Mairigold,True,False,3,2,5,Raises health and vitality.
+7da04bba-0564-42da-bcf1-9a2fc5faf025,Mint,True,False,1,2,6,"Improves speech and dispels fatigue, but increases hunger."
+2ddf6256-0662-44c4-99fe-f713b6d900ea,Paris,True,True,4,0,4,"Reduces stamina, induces sleep and lowers health."
+05bef17b-ddeb-426d-aa53-52ff6d4f521e,Poppy,True,False,3,4,4,Brings fatigue and reduces stamina.
+b9de1d84-a0c1-4b81-9f60-8d7fbb3cb9d4,Salvia,True,False,3,0,7,Improves strength and vitality. It reduces speech.
+a364b800-c1ca-4bd1-92cb-ae1689bfa7ea,Thistle,True,False,3,4,6,"Adds stamina, reduces speech."
+5e9b4fa1-aafa-4352-b5d6-58df2c263caa,Urticaria,True,True,4,3,5,"Improves health, but lowers speech and vitality."
+27b8a61f-36e4-4101-9be5-1b814d43bd8f,Valerian,True,False,2,1,7,"Renews health and energy, but lessens strength."
+4d9e61aa-3f90-4e5d-b836-f9e158196438,Wormwood,True,False,3,0,7,"Greatly increases strength and dispels fatigue, but lowers speech."

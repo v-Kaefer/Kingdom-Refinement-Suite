@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="rpg_param" version="1">
+    <header>
+      <column name="rpg_param_key" type="character varying" />
+      <column name="rpg_param_value" type="real" />
+    </header>
+    <rows>
+      <row rpg_param_key="StrengthToInventoryCapacity" rpg_param_value="5" />
+      <row rpg_param_key="HerbGatherSkillToRadius" rpg_param_value="0.35" />
+      <row rpg_param_key="RepairPriceModif" rpg_param_value="1.3" />
+    </rows>
+  </table>
+</database>

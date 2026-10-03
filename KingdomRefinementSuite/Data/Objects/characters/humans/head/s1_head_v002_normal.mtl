@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Material MtlFlags="524544" vertModifType="0">
+  <SubMaterials>
+    <Material Name="head" MtlFlags="524416" Shader="Humanskin" GenMask="948100000000" StringGenMask="%DIRT_SYSTEM%NORMAL_MAP%SPECULAR_MAP%SUBSURFACE_SCATTERING_MASK%TEMP_SKIN%WRINKLE_BLENDING" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Specular="1.1,1.1,1.1" Opacity="1" Shininess="255" CustomSortPriority="4" vertModifType="0" LayerAct="1">
+      <Textures>
+        <Texture Map="Diffuse" File="objects/characters/humans/head/s1_head_v002_diff.tif" />
+        <Texture Map="Bumpmap" File="objects/characters/humans/head/s1_head_v002_ddna.tif" />
+        <Texture Map="Specular" File="objects/characters/humans/head/s1_head_v002_spec.tif" />
+        <Texture Map="Detail" File="objects/characters/humans/head/henry_dirt_blood_zone_mask.tif" />
+        <Texture Map="Heightmap" File="objects/characters/humans/head/s1_head_v002_wrinkle2_ddn.tif" />
+        <Texture Map="Custom" File="objects/characters/humans/head/s1_head_v002_wrinkle1_ddn.tif" />
+        <Texture Map="[1] Custom" File="objects/characters/humans/head/s1_head_v002_wrinkle_mask.tif" />
+        <Texture Map="Opacity" File="objects/characters/humans/head/s1_head_v002_sss.tif" />
+      </Textures>
+      <PublicParams Melanin="0.015" SSSIndex="1.171" TranslucencyMultiplier="1.395" WrinklesBlend="0.011" IndirectColor="0.25,0.25,0.25" />
+    </Material>
+    <Material Name="eye_overlay" MtlFlags="2621568" Shader="Eye" GenMask="402004000000" StringGenMask="%EYE_AO_OVERLAY%TEMP_EYES%VERTCOLORS" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Specular="0,0,0" Opacity="1" Shininess="255" AlphaTest="1" CustomSortPriority="3" vertModifType="0" LayerAct="1">
+      <Textures>
+        <Texture Map="Diffuse" File="objects/characters/humans/eye/generic_eye_v01_overlay_diff.tif" />
+        <Texture Map="Specular" File="objects/characters/humans/eye/generic_eye_v01_overlay_spec.tif" />
+      </Textures>
+      <PublicParams DiffOccStrength="1" SpecOccStrength="0" IndirectColor="0.25,0.25,0.25" />
+    </Material>
+    <Material Name="eye_lashes" MtlFlags="526466" Shader="Hair" GenMask="40000008" StringGenMask="%ANISO_SPECULAR%HAIR_PASS" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Specular="0.013150366,0.013150366,0.013150366" Opacity="1" Shininess="199" AlphaTest="0.19" CustomSortPriority="2" vertModifType="0" LayerAct="1">
+      <Textures>
+        <Texture Map="Diffuse" File="objects/characters/humans/eye/eye_lashes_diff.tif" />
+      </Textures>
+      <PublicParams SecondaryHighlightShiftAmount="0.1" SoftIntersection="0" ShiftVariation="0" DiffuseWrap="0.75" SecondaryHighlightColor="0.69999999,0.69999999,0.69999999" FresnelScale="1" SecondaryHighlightWidth="1.5" FresnelBias="0" FresnelHighlightColor="0.69999999,0.69999999,0.69999999" AlphaBlendMultiplier="1" SpecularMul="1" IndirectColor="0.25,0.25,0.25" />
+    </Material>
+    <Material Name="eyes" MtlFlags="2621600" Shader="Eye" GenMask="402100000000" StringGenMask="%NORMAL_MAP%TEMP_EYES%VERTCOLORS" SurfaceType="" MatTemplate="" Diffuse="0.53947949,0.50888133,0.42869052" Specular="0.029556835,0.029556835,0.029556835" Opacity="1" Shininess="255" CustomSortPriority="1" vertModifType="0" LayerAct="1">
+      <Textures>
+        <Texture Map="Diffuse" File="objects/characters/humans/eye/generic_eye_v01_diff.tif" />
+        <Texture Map="Bumpmap" File="objects/characters/humans/eye/generic_eye_v01_ddna.tif" />
+        <Texture Map="Specular" File="objects/characters/humans/eye/generic_eye_v01_spec.tif" />
+        <Texture Map="Heightmap" File="textures/defaults/wh/white_diff.tif" />
+        <Texture Map="Custom" File="objects/characters/humans/eye/generic_eye_v01_cornea_ddn.tif" />
+      </Textures>
+      <PublicParams CorneaRefraction="0.0089999996" IrisDepth="0.1" CorneaReflectionFresnelCap="0.5" IrisColor="0.61049557,0.61049557,0.61049557" IrisShadowing="15" CorneaSmoothness="0.74800003" ScleraSSS="1" IrisSSS="0.23999999" IndirectColor="0.24620135,0.24620135,0.24620135" />
+    </Material>
+    <Material Name="mouth" MtlFlags="524448" Shader="Illum" GenMask="C0100000000" StringGenMask="%NORMAL_MAP%SPECULAR_MAP%SUBSURFACE_SCATTERING" SurfaceType="" MatTemplate="" Diffuse="0.21223076,0.21223076,0.21223076" Specular="0.028879838,0.028879838,0.028879838" Opacity="1" Shininess="251" vertModifType="0" LayerAct="1">
+      <Textures>
+        <Texture Map="Diffuse" File="objects/characters/humans/mouth/teeth_v01_diff.tif" />
+        <Texture Map="Bumpmap" File="objects/characters/humans/mouth/teeth_v01_ddna.tif" />
+        <Texture Map="Specular" File="objects/characters/humans/mouth/teeth_v01_spec.tif" />
+      </Textures>
+      <PublicParams EmittanceMapGamma="1" SSSIndex="1.1" IndirectColor="0.25,0.25,0.25" />
+    </Material>
+  </SubMaterials>
+  <PublicParams EmittanceMapGamma="1" SSSIndex="1.1" IndirectColor="0.25,0.25,0.25" />
+</Material>
