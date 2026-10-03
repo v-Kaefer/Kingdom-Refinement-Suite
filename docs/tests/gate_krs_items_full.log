@@ -1,0 +1,69 @@
+﻿[Mod] Loading mods from mods/mod_order.txt
+[Mod] 2 mods loaded from mods/mod_order.txt
+Pak 'localization\common.pak' is opened, root: 'data\'
+[Mod] 'krs_items' supports game version '1.9.6' explicitly, it will be enabled
+[Mod] 'krs_gate' supports game version '1.9.6' explicitly, it will be enabled
+[Warning] Config file mods/krs_gate/mod.cfg not found!
+[Mod] Opening paks in mods/krs_items/data/*.pak
+[Mod] Opening paks in mods/krs_gate/data/*.pak
+Pak 'mods\krs_gate\data\krs_gate.pak' is opened, root: 'data\'
+Table 'rpg_param' is patched by 'rpg_param__krs_items', lines added: 1, modified: 4, equal: 0, time: 0.000
+Table 'sleeping_spot_type' is patched by 'sleeping_spot_type__krs_items', lines added: 0, modified: 4, equal: 0, time: 0.000
+Table 'food' is patched by 'food__krs_items', lines added: 0, modified: 1, equal: 0, time: 0.000
+Table 'document' is patched by 'document__krs_items', lines added: 0, modified: 56, equal: 0, time: 0.000
+Pak 'localization\english_xml.pak' is opened, root: 'localization\'
+These labels caused localization problems:
+Pak 'localization\ipl_english.pak' is opened, root: 'localization\'
+Pak 'localization\english.pak' is opened, root: 'localization\'
+Pak 'localization\ipl_english_hd.pak' is opened, root: 'localization\'
+Pak 'localization\english_hd-part0.pak' is opened, root: 'localization\'
+Pak 'localization\english_hd-part1.pak' is opened, root: 'localization\'
+Pak 'localization\english_dlc2.pak' is opened, root: 'localization\'
+Pak 'localization\english_dlc3.pak' is opened, root: 'localization\'
+Pak 'localization\ipl_english_dlc4.pak' is opened, root: 'localization\'
+Pak 'localization\english_dlc4.pak' is opened, root: 'localization\'
+Pak 'localization\patch\english_patch_010800.pak' is opened, root: 'localization\'
+Pak 'localization\patch\ipl_english_patch_010900.pak' is opened, root: 'localization\'
+Pak 'localization\patch\english_patch_010900.pak' is opened, root: 'localization\'
+Pak 'localization\patch\ipl_english_patch_010902.pak' is opened, root: 'localization\'
+Pak 'localization\patch\english_patch_010902.pak' is opened, root: 'localization\'
+Loading and executing script file 'Scripts/Startup/krs_gate.lua'...
+KRS_HARNESS startup script loaded
+Loading Localization File Localization\text_ui_HUD.xml
+Loading Localization File Localization\text_ui_ingame.xml
+Loading Localization File Localization\text_ui_items.xml
+Loading Localization File Localization\text_ui_menus.xml
+Loading Localization File Localization\text_ui_misc.xml
+Loading Localization File Localization\text_ui_soul.xml
+Loading Localization File Localization\text_ui_tutorials.xml
+Loading Localization File Localization\text_ui_minigames.xml
+Loading Localization File Localization\text_rich_presence.xml
+Loading Localization File Localization\text_ui_dialog.xml
+Loading Localization File Localization\text_ui_quest.xml
+[Mod] Loading localization patches...
+[Warning] XML reader: Can't open file (Localization\text__krs_items.xml)
+[Warning] XML reader: Can't open file (Localization\text__krs_gate.xml)
+[Warning] [Lua Error] scripts/entities/wh/unittests/luatestctrlentity.lua:1: attempt to call field 'getenv' (a nil value)
+[Warning] [Lua Error] Failed to execute file @scripts/entities/wh/unittests/luatestctrlentity.lua: (null) [File=@scripts/entities/wh/unittests/luatestctrlentity.lua]
+Loading lua init script for mod krs_gate ...
+Loading and executing script file 'scripts/mods/krs_gate.lua'...
+KRS_HARNESS ACTION health_stamina/OnStart
+KRS_HARNESS spawn entity ok -> table: 000001D514FB9CC0 on action health_stamina/OnStart
+KRS_HARNESS ACTION sys_startup/OnStart
+============================ Loading level rataje ============================
+[Mod] Opening paks in mods/krs_items/data/levels/rataje/*.pak
+[Mod] Opening paks in mods/krs_gate/data/levels/rataje/*.pak
+KRS_HARNESS ACTION sys_loadingvideoscreen/OnStart
+==== Starting Loading Level Materials ====
+==== Finished loading level Materials: 5025  mtls loaded (0 from LevelCache) in 2.1 sec ====
+[Warning] CGF Loading Failed: Failed to open file 'EngineAssets/Objects/Default.cgf' [File=EngineAssets/Objects/Default.cgf]
+Starting loading level CGF's ...
+[Warning] CGF Loading Failed: Failed to open file 'engineassets/objects/default.cgf' [File=engineassets/objects/default.cgf]
+[Warning] CGF Loading Failed: Failed to open file ''
+[Warning] CGF Loading Failed: Failed to open file 'Objects/props/butcher/skinned_deer_piece03.cgf' [File=Objects/props/butcher/skinned_deer_piece03.cgf]
+Finished loading level CGF's: 12172 objects loaded (9042 from LevelCache) in 10.7 sec
+Starting loading level characters ...
+Finished loading level characters (6.6 sec)
+KRS_HARNESS ACTION sys_loadingvideoscreen/OnEnd
+KRS_HARNESS ACTION mm_main/OnStart
+KRS_HARNESS ACTION sys_startup/OnEnd

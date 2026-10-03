@@ -6,6 +6,11 @@ A curated set of non-intrusive PTF tweaks to polish your journey through Bohemia
 
 Added:
 
+* Realistic Repairs [Modifications:
+ At lvl20 -> repairs >= 20 durability
+ Repairs prices doubled
+] {Requested Permission}
+* Train More Carry More - PTF {Requested Permission} Does this works?
 * EnhancedEyesByGrimsy {Request Permission}
 
 ## Changelog
@@ -19,3 +24,6 @@ The local test install (`Mods WIP folder/KingdomComeDeliverance`) was updated fr
 * Root: `system.cfg` (`wh_sys_version`), `whdlversions.txt`
 
 Left untouched: the test install's `user.cfg` (SQL/modding setup), its `Mods/` folder, logs and `logbackups/`, and test-only folders (`Editor`, `Tools`, `Data_reference`, `outputs`). The test install itself is git-ignored, so this entry only documents the update.
+* Timed Quests Indicator + translations (needs update)
+* 
+
