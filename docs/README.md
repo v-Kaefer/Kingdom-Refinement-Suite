@@ -18,7 +18,7 @@ Everything about the Kingdom Refinement Suite (KRS) except the shipped mods them
 | `project/` | stable and dated project text | `OBJECTIVES.md`, `ROADMAP.md`, `STATUS.md` (edited every session), `DECISIONS.md`, `PERMISSIONS.md`, `DOCS_PLAN.md` |
 | `engine/` | measured game behaviour | `ptf-rules.md`, `lua-and-constants.md`, `game-versions.md`, `lua-api-check.md` (generated), `rpg_constants_runtime.csv` |
 | `modules/` | design notes | `bow/FEASIBILITY.md` (what Lua and hidden constants can do), `potions/ANALYSIS.md` and `potions/SOURCES.md` (formula analysis, real-world sources; datasets and the claims ledger beside them). Items, Perks and QoL are described in `modules/<id>/README.md` at the repo root and in `data/ownership.csv` |
-| `mods-review/` | the third-party mod lists | `MODS_REVIEW.md` (conclusions), `mods_index.csv` (generated, 365 mods), `annotations.csv`, `workspace_mods.csv`, `sources/` (the author's lists: two text lists and the 180 Vivaldi tabs), `raw/` (notes from other sessions as received: the first review, incomplete, and `new-mods-lists-review/` with the 290-title list, its analysis and verification) |
+| `mods-review/` | the third-party mod lists | `MODS_REVIEW.md` (conclusions), `TRIAGE.md` and `mods_triage.csv` (generated triage of all 365 mods), `archive_analysis.csv` (generated, 26 local archives read), `search_evidence.csv` (what the search results established), `mods_index.csv` (generated, 365 mods), `annotations.csv`, `workspace_mods.csv`, `sources/` (the author's lists: two text lists and the 180 Vivaldi tabs), `raw/` (notes from other sessions as received: the first review, incomplete, and `new-mods-lists-review/` with the 290-title list, its analysis and verification) |
 | `data/` | tables the tools read or write | `ownership.csv`, `table-audit/TABLE_AUDIT.md` (generated) |
 | `tests/` | evidence | `README.md` (how to run), `results/` (one line per game run), `logs/` (raw) |
 | `archive/` | superseded | `legacy/` copies of old documents with a reason each |
@@ -40,6 +40,7 @@ Not in `docs/` on purpose: `Params Reference.md` (in the `Mods WIP folder`), the
 | `tools/build_module.py`, `tools/gate.py` | build a module; run it in the test game and read every patched row back |
 | `tools/check_patch_names.py` | pre-flight check of patch names, mod ids, row completeness and pak format |
 | `tools/audit_tables.py`, `tools/check_ownership.py` | what each patch really changes versus vanilla; ownership consistency |
+| `tools/triage_mods.py`, `tools/analyze_mod_archives.py` | triage rules for every mod; read downloaded archives (manifest, paks, patch rows, collisions with the KRS rows) without any network access |
 | `tools/build_mods_index.py`, `tools/scan_workspace_mods.py` | rebuild `mods-review/mods_index.csv` from every list (text lists, Vivaldi tabs, title list, workspace, annotations); list the mods found in the workspace |
 | `tools/potion_dataset.py`, `tools/potion_model_check.py` | potion dataset and formula check |
 | `tools/lua_api_check.py` | checks that the functions and `RPG.<Key>` names in a Lua mod exist |

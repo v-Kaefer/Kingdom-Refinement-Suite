@@ -282,3 +282,62 @@ Applied in `annotations.csv` and the index: 2372 and 2381 now have titles (Troug
 Corrections to the text above (not edited in place): the project names Restore Riposte (1765) and Immersive Archery (1419) as altered mods in `Requirements.md`, not in the README (section 9). The first review's catalog (130 mods), `unverified.md` and `mods.csv` are still missing and were not recreated.
 
 Still open: **40 ids of the text lists have no title** (284, 708, 754, 762, 765, 770, 795, 796, 797, 840, 891, 892, 905, 913, 915, 942, 958, 966, 1093, 1131, 1203, 1259, 1260, 1374, 1483, 1577, 1904, 2061, 2079, 2084, 2098, 2100, 2132, 2152, 2297, 2330, 2338, 2345, 2362, 2365). 26 of them have the author's own label in `Kingdom Come Mods.txt`; 14 have no name at all. The "Realism & Immersion 2026" collection that the lists probably came from is a possible cross-check source. Every verdict still needs a mod page or an archive.
+
+## 13. New review and triage of all 365 mods (3 Oct 2026)
+
+Result files: [`TRIAGE.md`](TRIAGE.md) (generated summary), `mods_triage.csv` (one row per mod: category, KRS modules, evidence class, 1.9.8 load status, collision, priority, action, reason),
+`archive_analysis.csv` (26 archives read), `search_evidence.csv` (what 42 search results established). Tools: `tools/triage_mods.py`, `tools/analyze_mod_archives.py`, `tools/build_mods_index.py`.
+The rules live in `tools/triage_mods.py`, not in this text; change a rule and rerun.
+
+### 13.1 Method and what each evidence class is worth
+
+| Class | Mods | Basis | Trust |
+|---|---|---|---|
+| A: archive read | 18 ids (26 archives) | Files from the author's own Vortex download folder, extracted to a scratch folder and read; nothing was downloaded from the network | **measured** (manifest, paks, patch rows) |
+| B: search result | 41 | A Nexus search result whose URL id matched the title; version, date and a one-line description from its summary | reported; summaries sometimes contradict themselves (see 13.5) |
+| C: title only | 299 | Browser tab title or the author's label, keyword rules | weakest; names are reliable, categories are keyword-based |
+| D: id only | 7 | 2100, 2132, 2297, 2330, 2345, 2362, 2365: search could not resolve them (2345 returned a KCD2 mod) | none |
+
+Priorities: **P1** 3 (act now), **P2** 113 (compare or check before combining), **P3** 199 (optional or not mapped), **P4** 50 (adult content, visual presets). P2 splits into 15 where the evidence names the same values as a KRS row ("likely"), 2 measured, and the rest title-based ("possible").
+
+### 13.2 What reading the archives showed (measured)
+
+- **The published KRS-Items releases do nothing.** Both Nexus files in the Vortex downloads (1.0.0 and 1.1.1) contain `Data/*.pak` that is a 7z archive renamed `.pak` (not a ZIP: the game cannot open it); inside, the files sit under `Tables\...` without the `Libs\` root; the file suffix is `KRS-items` while the mod id is `krs_items`; 1.0.0 lists `1.9.x`, which the 1.9.8 engine rejects, and 1.1.1 has no `mod.manifest`. Any one of these stops the patch; together they confirm that the published mod never applied. `modules/krs_items` replaces them.
+- **Disabled on 1.9.8 as shipped (manifest lists only 1.9.6):** Restore Riposte (1765) and Drink Sound Effects (1730), matching the engine log; the Nexus KRS-Items 1.0.0 (`1.9.x`).
+- **Row collisions with the KRS modules (same table and key):** Alternate Food Spoil 2X (1639) patches the Aesop potion row of `krs_items` (a complete row: whichever loads last wins it whole); Restore Riposte (1765) patches both `krs_perks` rows.
+- **Whole-table replacement:** Hoods Over Helmets (771, a 2019 mod) ships 15 tables as full files named like the vanilla tables, with no suffix (item tables such as `armor.xml` 494 KB and `item.xml` 256 KB, `shop_type2item.xml`, a 385-byte `rpg_param.xml` and an 8.9 MB `soul.xml`). A full file replaces the table, so mods loaded before it are lost for those tables, and it collides with Early Bird (`soul`) and with every `rpg_param` patch by load order.
+- **Malformed manifest:** Clean Items In Trough (1691) has a `mod.manifest` that is not valid XML (mismatched tag); it lists `1.*`, a form that was not tested (only `1.9.*` was).
+- **Id characters:** ids with digits or hyphens (`alternatefoodspoil2x`, `time-hd`, `fpsfixv2`) are only a risk for mods that carry table patches; the table mods in the folder (food, perk, soul, item, potion) match their suffix to the id.
+- **Large packs not extracted** (only manifests read): Lartigue's Upscale Project (two versions, 851 MB and 312 MB) and Solid Helmet Visors (69 MB).
+
+### 13.3 Findings from search summaries (reported) that touch the KRS modules
+
+| Area | Mods | Why it matters |
+|---|---|---|
+| Carry capacity (`StrengthToInventoryCapacity`) | 1860 Train More Carry More PTF (tempbito, scales with strength, x1.25/x1.5, leaves the base weight alone), 1668 Relaxed RPG Params (inventory x3, horse x4), 1260 RPG Tweaks (+60 %) | `krs_qol` sets 4 to 5 for the same key; the three set it differently, so only one can win. 1860 is the source the suite credits and still has "permission requested" |
+| Repairs | 2021 Repair Kits Balanced and Scaled PTF (kit efficiency), 2173 True Hardcore Maintenance, 1292 Ultimate Repair Kit | `krs_qol` repair price and bridle rows; check which keys each touches |
+| Herb picking | 1260 (herb radius), 1572 Increased Experience Gains (optional herb picking), 366 First-person Herb Picking | `HerbGatherSkillToRadius` |
+| Food, alcohol, potions | 1266 Stronger drinks PTF (alcohol percentages in the `food` table; incompatible with whole-file `food.xml` mods), 1483 TSM Slower Food Spoil (x2/3/5), 1639, 765 Poison Overhaul (potions and a new perk), 2208-2210 | `krs_items` Aesop row and the future potion module; complete rows, last wins |
+| XP and reading | 1572 (rpg_param, 1.5x/2x/5x), 1334 Fast Learning Henry (XP x5; was incompatible with other `RPG_PARAMS` mods), 1518-1520 | `ReadingXpPerHour` in `krs_items` |
+| Perk rows | 1009, 1736 Rogue Life (perks in five trees), 1990 Veteran Hunting (adds a perk and a perk buff), 765, 1375 | the two Riposte rows of `krs_perks` only collide if one of them patches the same `perk_id`; unknown until the files are read |
+| Combat | 1629 Exclusive Master Strikes (same author as Restore Riposte, 2025-01-28), 2294 Faster Combat, 1384, 1112, 1070, 651, 2359 | Master-strike rules; 2359 needs an ASI loader and states "Steam 1.9.7-404-504czj4 only" |
+| Shops and soul table | 2061 Meticulously Edited Shops and Services (edits `shop_type2item.xml` and `soul.xml`; "conflicts with mods that change soul.xml": Early Bird patches `soul`) | A conflict inside the author's current setup (726) |
+
+### 13.4 Bow findings that change the plan (reported, untested in game)
+
+- **1100 Faster archery PTF** (DanishPagan, tested on 1.9.6-404-504) sets the hidden constant `BowChargeDurationMax` (1.00, 1.25, 1.50) with a plain `rpg_param` patch and says aim spread is unchanged. A published, widely used mod therefore already does what `docs/engine/ptf-rules.md` measured (hidden constants can be set by a patch row): the static route of the draw-speed idea is established. 1668 and 1260 set the aim spread the same way.
+- **1375 No Aim Spread v2.1** removes bow sway for the **player only** by adding a **perk**, and its variant 2.1b uses two **stat-gated perks** (Strength 10, Agility 8). That points to a route with no script: a perk whose `perk_rpg_param_override` rows carry the constants, unlocked by a stat threshold (vanilla uses `perk_rpg_param_override` for the "Hardcore Mode - Constants" pseudo-perk). It would give stat-dependent steps for the player only, not a smooth formula. **Hypothesis, not tested**: added to the roadmap (`../project/ROADMAP.md`, 4.7).
+- 1419 Immersive Archery (draw to about 16 arrows a minute, arrow speed x1.7, stamina drain lower, damage x1.2) and 1678 Better Archery change draw, speed and stamina together; they are the comparison points for any `krs_bow` values.
+
+### 13.5 Limits and cautions
+
+- Search summaries are model-written. Examples of unreliable ones: for 1483 the summary also named an unrelated title; for 1131 it said the page was removed and named another mod; for 2345 the search returned a KCD2 mod; 2246 returned the KCD2 page. Only the title in the result list (its URL id matched) was accepted as a name; descriptions are "reported".
+- "Overlap" in the triage means topic or named values, not a read table row, except where evidence class A says so.
+- Mod 2359's page calls build `404-504czj4` "1.9.7" while the engine reports 1.9.8 for the same build: version labels differ between authors and the engine.
+
+### 13.6 Can the mods be downloaded for the author?
+
+Not from this environment, and not by working around it:
+- `www.nexusmods.com` and its CDN return HTTP 403 to this machine's requests; `api.nexusmods.com` returns 401 (it needs the author's personal API key, and direct links need a Premium account or a click on the site). Signing in, entering a key or accepting the site's terms on the author's behalf is not something the session may do, and a download needs the author's explicit yes per file.
+- What works: (1) the author downloads through Vortex or the browser as usual; (2) the archives already in the Vortex download folder (26 for KCD) are read in place by `tools/analyze_mod_archives.py` without any download; (3) any further archives dropped into one folder are analysed with the same command, which writes `archive_analysis.csv` and feeds the triage (class A).
+- Suggested order for class A: the P2 mods with "likely" collision (1860, 2021, 1266, 1668, 1260, 1572, 1334, 765, 1990, 1736, 1375, 1100, 1419, 1678, 2246), then the combat group (1629, 2294, 1384, 1112, 1070, 651), then 2061 and 2173.

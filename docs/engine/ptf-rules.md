@@ -29,7 +29,7 @@ Packaged exactly as they are in the repo, `KRS-Items` was **not applied at all**
 files with the suffix renamed to the mod id **were applied and read back correctly**: `rpg_param` added 1 / modified 4,
 `sleeping_spot_type` modified 4, `food` modified 1 (+33 equal), `document` modified 56, and in game
 `ReadingXpPerHour = 5`, `StarvationPlayerEffectMinMin = 95`, a book's reading time 15 h (vanilla 6 h).
-Limits of this statement: it is about the files in the repo; the Nexus release could have been packaged differently,
+Update 3 Oct 2026: the two published Nexus releases (KRS-Items 1.0.0 and 1.1.1, read from the Vortex download folder) show the same and more: the `.pak` is a 7z archive renamed `.pak`, the files inside sit under `Tables\...` without the `Libs\` root, the suffix is `KRS-items` against the id `krs_items`, 1.0.0 lists `1.9.x` (rejected by the 1.9.8 engine) and 1.1.1 has no manifest (`../mods-review/MODS_REVIEW.md` section 13.2). Limits of the earlier statement: it was about the files in the repo; the Nexus release could have been packaged differently,
 and its `.pak` could not be opened (7z).
 
 

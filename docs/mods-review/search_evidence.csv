@@ -1,0 +1,43 @@
+id,title_seen,author,version,updated,tested_on,summary,evidence
+284,No Mo' Slow Mo - Configurable Perfect Block Slow Motion and AI Master Strike frequency,Raok,1.6,,,Adds a console command for the perfect-block slow-motion length (can disable it) and sets how often the AI uses master strikes; optional sound files,result title matched the id
+591,Bushes- Collision Remover,JovianStone,,2018,,Removes collision from bushes (26 models); see check_1.9.8 in annotations,result title matched the id
+754,Painted Lords of Leipa Hounskull,Lars Radziwill,,2019-06-07,,Armor texture mod; legacy install: the .pak goes into Data and Data\_fastload,result title matched the id
+765,Poison Overhaul,Pyrolusite,1.2,2022-07-09,,Buffs or fixes some potions and adds a perk so poisons are useful (formerly Alchemical Warfare); users report it works on 1.9.6 and later,result title matched the id
+796,Miller Guild Items,,,,1.9,Stealth armor set with a unique buff per piece (Thick as Thieves quests); includes a horse item fix,result title matched the id
+797,Inventoried,S I L E N C E R,1.6.3,2020-11-14,,Renames and tags every item for sorting (User Interface); per-language text,result title matched the id
+958,Architect,,0.6.3,2025-12-07,,Base building and crafting; the game must be started with dev mode enabled; no DLC required,result title matched the id
+1084,Overpowered Bows - PTF Edition,DanishPagan,1.1,2020-08-29,,Raises the power of the Sinew and Hans Capon bows (100/200/500/1000 power editions); conflicts with mods that change those bows or override the whole missile_weapon table,result title matched the id
+1093,Fishing in Bohemia,,,,,Only mentioned in a video of mods that still work; no page details seen,mentioned only
+1100,Faster archery - PTF Edition,DanishPagan,,,1.9.6-404-504 FINAL,Sets BowChargeDurationMax (1.00 hard / 1.25 normal / 1.50 easy) through rpg_param; aim spread unchanged. Shows that a published mod already sets this hidden constant by a table patch,result title matched the id
+1131,(page reported removed),,,,,A search summary says the page was removed by staff and names another title for the id; the author's label is silver armor; unreliable,conflicting summary
+1259,Easy Assassination,Jung,1.1,2021-08-13,,Easier knock-out and sneak kills,result title matched the id
+1260,RPG Tweaks,,0.9,2021-07-26,,Clean tweak of the rpg_param XML: stay clean longer; slightly bigger herb radius; lower stamina costs; easier sharpening; carry weight +60%; less bow aim shake; tougher lockpicks; more lockpicking and alchemy XP. Overlaps krs_qol and any bow work,result title matched the id
+1266,Stronger drinks - PTF Edition,DanishPagan,1.0,2021-07-23,,"Raises the alcohol percentage of drinks (beer 8, moonshine 53, wine 18, mead 25 ...) in the food table; incompatible with mods that override the whole food.xml",result title matched the id
+1334,Fast Learning Henry,,,2022-02-12,,XP tables about 5x faster; version 1 raises every skill cap to 25; was not compatible with other mods that modify RPG_PARAMS,result title matched the id
+1375,No Aim Spread (Bow sway disabler),,2.1,,,Adds a perk (True Shot) that removes bow sway for the player only; variant 2.1b has two stat-gated perks (Forceful Grip: Strength min 10; Ranger's Precision: Agility min 8). A perk-based way to change a bow constant per player,result title matched the id
+1384,Modified Combat Overhaul - Directional Combat and smarter AI,Solodric,,2022-06-01,,Directional master strikes and perfect blocks for player and AI; built on the Better Combat and Immersion Compilation Lite by replacing its .pak,result title matched the id
+1419,Immersive Archery,GalaxyES,1.2,2022-10-13,,Draw speed to about 16 arrows per minute; arrow speed x1.7; lower stamina drain; arrow damage x1.2. The suite alters this mod (permission granted),result title matched the id
+1426,Energy and Hunger Patch for Timescale Mods (PTF),Drake0713,1.0,2022-10-26,,Keeps energy and hunger depletion proportional to in-game time when a timescale mod is used; safe if loaded after non-PTF mods,result title matched the id
+1483,TSM Slower Food Spoil,theskymoves,,,,"Food durability x2 (recommended), x3 or x5; needs the From the Ashes DLC. (The same summary also named another title for the id; treat as unreliable)",result title matched the id; conflicting summary
+1572,Increased Experience Gains,Elghinnarisa,,2023-11-27,1.9.6,Changes rpg_param to raise XP gain 1.5x / 2x / 5x; optional herb picking and auto brewing,result title matched the id
+1629,Exclusive Master Strikes - Make Them Reasonable,AcSiG,1.2.0,2025-01-28,,Only heavily armored NPCs keep the master strike; removes NPC tackles; affects only newly spawned NPCs on old saves. Same author as Restore Riposte,result title matched the id
+1668,Relaxed RPG Params,Myrdo,1.0.1,2024-06-21,,Pack of rpg_param values: inventory x3 (horse x4); riding XP +25%; bow aim spread -33%; stamina regen delay -33%; sprint/jump cost -15%; less alchemy grinding; slower dirt. Overlaps krs_qol and bow constants,result title matched the id
+1678,Better Archery,STuRoK,,2025-01-07,,"Faster arrows, shorter draw, lower stamina drain, less aim spread, rebalanced damage; three variants (a no-OP variant added 2025-01-07)",result title matched the id
+1736,Rogue Life,TyburnKetch,1.1,2025-02-17,,"Adds perks to the Stealth, Alchemy, Speech, Drinking and Bow trees and adjusts vanilla perks; recommends Perkaholic",result title matched the id
+1860,Train More Carry More - PTF,tempbito,1.1,2025-02-14,,Carry capacity scales with strength (x1.25 or x1.5) without changing the base carry weight; PTF. The suite's krs_qol carry value derives from it (permission requested),result title matched the id
+1861,Sell Damaged Items At Full Price - PTF,tempbito,1.0,2025-02-14,,Damaged items sell at full price; PTF,result title matched the id
+1862,Faster Inury Regeneration - PTF,tempbito,1.0,2025-02-14,,Injuries heal faster; PTF,result title matched the id
+1864,Cheap Savior Schnapps - PTF,tempbito,1.1,2025-02-15,,Savior schnapps cheap and sold by every merchant; PTF,result title matched the id
+1870,Fair Trade - PTF,tempbito,1.1,2025-03-18,,Items sell at the price they are bought at (base selling price); PTF,result title matched the id
+1904,Better Map Icons,,1.0,2025-03-01,,Resizes map icons; copy a folder into Mods,result title matched the id
+1990,Veteran Hunting,hoskope,,2025-04-25,,Hunting overhaul: gives the player a perk with a custom buff that makes animals skittish; changes animal soul hearing parameters,result title matched the id
+2021,Repair Kits - Balanced and Scaled PTF,AlekseyRaukov,1.1,2025-06-10,,"Rescales armourer, blacksmith, tailor and cobbler kit efficiency (small and large); normal and Hardcore modes. Same area as krs_qol repairs",result title matched the id
+2061,Meticulously Edited Shops and Services,PolarDash,0.4.4,2026-02-16,,"Edits shop_type2item.xml and soul.xml (randomized vendor stock, hours, gold); requires all DLC; conflicts with mods that change soul.xml or shops (Early Bird patches soul)",result title matched the id
+2079,Thin The Herd - Realistic Animal Drops - Reasonable Quests - PTF,,1.2.1,2025-09-28,1.9.6,Rebalances animal loot drops and quest requirements; PTF,result title matched the id
+2084,Mount Horse - Torch Toggle Keys,Sabura31,,2025-09-25,,Key binding for torch and mounting,result title matched the id
+2098,Medieval Poisons - spolszczenie,,,2025-11-17,,Polish translation of Medieval Poisons (TyburnKetch),result title matched the id
+2152,Lighting and Shadow 2.0 - ENB for KCD,MartinSpielt,1.0,2026-02-12,,ENB/ReShade graphics preset with two variants,result title matched the id
+2246,Console Editable RpgParams,,,,,"Makes rpg parameters editable from the console at any time; the search returned the KCD2 page, so the KCD1 page is unconfirmed",mixed result
+2294,Faster Combat - Directional Master Strikes - Better Group Fights,,1.2.0,,,"Modular installer: attack speed profiles, directional master strikes, optional tackle and slow-motion removal, group-fight limits, optional bow reticle",result title matched the id
+2338,Horse Collision Mod,,4.2.2,,,Horse collision reactions by speed; no vanilla file replaced,result title matched the id
+2359,KCD Kombat Tune,pineappleLemonade67,,2026-09-16,Steam 1.9.7-404-504czj4 only,Scales enemy block/riposte/dodge by comparing Warfare and agility of both sides; needs Ultimate ASI Loader (native plugin). The build string czj4 is the one of the 1.9.8 install,result title matched the id

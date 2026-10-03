@@ -68,6 +68,7 @@ not ship), repairs in QoL or Items, Perkaholic as a requirement.
 | 4.4 | Find the Lua accessor for the held bow's weight (`player.human:GetItemInHand(0)` returns a handle; resolve it to an item and its weight) or drop the weight input | decision recorded |
 | 4.5 | If not live: ship the static version (`rpg_param__krs_bow.xml`, hidden keys) and document that it is not stat-dependent | module builds and passes the gate |
 | 4.6 | Package: ZIP pak, mod id `krs_bow`, no dependency on other mods; test together with the common archery mods (Immersive Archery, Persistent Arrows) | no row or constant conflicts in the audit |
+| 4.7 | **Perk route test** (idea from mod 1375, `docs/mods-review/MODS_REVIEW.md` 13.4): a perk unlocked by Strength/Agility thresholds whose `perk_rpg_param_override` rows carry `AimSpreadMax` and `BowCharge*`; check that the override applies to the player only and what it does to NPC archers. No script and no Cheat mod needed if it works | one test run with a loaded save; result in `docs/tests/results/` |
 
 ## Phase 5 - potions (module `krs_potions`, optional) - L
 

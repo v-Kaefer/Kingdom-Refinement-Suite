@@ -85,7 +85,8 @@ def main():
     work = {int(r["id"]): r for r in read_csv(os.path.join(D, "workspace_mods.csv"), "utf-8")}
     viv = {int(r["id"]): r for r in read_csv(os.path.join(D, "sources", "nexusmods_abas_vivaldi.csv"))}
     titles = {int(r["id"]): r for r in read_csv(os.path.join(D, "raw", "new-mods-lists-review", "id_titles.csv"))}
-    ids = sorted(set(verify) | set(tested) | set(ann) | set(work) | set(viv) | set(titles))
+    evid = {int(r["id"]): r for r in read_csv(os.path.join(D, "search_evidence.csv"), "utf-8")}
+    ids = sorted(set(verify) | set(tested) | set(ann) | set(work) | set(viv) | set(titles) | set(evid))
     cols = ["id", "url", "name", "name_source", "scope", "in_mods_to_verify", "times_in_verify_list", "in_tested_1.9.6_list",
             "in_vivaldi_tabs", "in_history_screenshots", "in_workspace", "author_label", "category", "ptf", "triage",
             "author_or_series", "versions", "install", "krs_area", "fix_type", "fix_status", "check_1.9.8", "check_source",
@@ -109,9 +110,10 @@ def main():
                 scope = "found while checking (outside the lists)"
             lists_scope[i] = scope
             # browser titles are the exact page titles; annotation names (search summaries, author labels) come after them
-            name = viv.get(i, {}).get("nome") or t.get("title") or a.get("name") or work.get(i, {}).get("name", "") or label.get(i, "")
+            seen = evid.get(i, {}).get("title_seen", "")
+            name = viv.get(i, {}).get("nome") or t.get("title") or seen or a.get("name") or work.get(i, {}).get("name", "") or label.get(i, "")
             src = ("Vivaldi tab" if i in viv else "") or ("id_titles.csv" if t.get("title") else "") \
-                or (a.get("name_source") if a.get("name") else "") or ("workspace file name" if i in work else "") or ("author label" if i in label else "")
+                or ("search result title" if seen else "") or (a.get("name_source") if a.get("name") else "") or ("workspace file name" if i in work else "") or ("author label" if i in label else "")
             src_t = t.get("source", "")
             cover = "described in review" if a else ("title list only" if t else "no text in the review files")
             w.writerow([i, f"https://www.nexusmods.com/kingdomcomedeliverance/mods/{i}", name, src, scope,

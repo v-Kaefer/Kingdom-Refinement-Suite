@@ -5,6 +5,25 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-03 (fourth request): patch notes, local archives, triage of all mods
+
+No game run in this request.
+
+### Patch notes
+- SteamDB returned HTTP 403, so the official 1.9.7 and 1.9.8 announcements were read from Steam's public news feed instead. `docs/engine/game-versions.md` section 4 now rests on them: 1.9.7 (13 Feb 2026) lists vegetation-system crash fixes and the Quilted Vest transparent-arms fix; the 1.9.8 release (14 Apr 2026) is a small bug-fix and HD-sound patch. Neither mentions modding, tables, bush collision, shield textures, icons or particles. Earlier secondary summaries are kept below the primary text.
+
+### Mods: reading what is already on the machine
+- Nexus (site, CDN and API) cannot be reached from here (403, 401) and downloading is not possible for the session; the author's Vortex download folder already holds 26 KCD archives, which were read in place (nothing downloaded).
+- New `tools/analyze_mod_archives.py` writes `docs/mods-review/archive_analysis.csv`: manifest id and versions, whether the 1.9.8 engine loads it, patch suffix vs id, whole-table replacement, non-ZIP paks, collisions with the rows of `modules/*`.
+- Measured: both published Nexus KRS-Items releases (1.0.0, 1.1.1) are 7z archives renamed `.pak`, with the files under `Tables\` instead of `Libs\Tables\`, suffix `KRS-items` against id `krs_items`, and `1.9.x` (1.0.0) or no manifest (1.1.1): they never applied (`docs/engine/ptf-rules.md`, `MODS_REVIEW.md` 13.2). Alternate Food Spoil 2X (1639) collides with the Aesop row of `krs_items`, Restore Riposte (1765) with both `krs_perks` rows; Hoods Over Helmets (771) ships 15 whole tables; Clean Items In Trough (1691) has an invalid manifest; Drink Sound Effects and Restore Riposte are disabled on 1.9.8.
+
+### Triage of all 365 mods
+- New `tools/triage_mods.py` (rules in the file) writes `docs/mods-review/mods_triage.csv` and the generated `TRIAGE.md`: category, KRS modules touched, evidence class (A archive read 18, B search result 41, C title 299, D id only 7), 1.9.8 load status, row collision (measured / likely / possible / none), priority (P1 3, P2 113, P3 199, P4 50), action and reason.
+- `docs/mods-review/search_evidence.csv`: 42 mods whose Nexus search result title matched the id, with version, date and a one-line description (author, tested version). Resolved 7 of the 14 nameless ids (1904, 2061, 2079, 2084, 2098, 2152, 2338); 7 remain (2100, 2132, 2297, 2330, 2345, 2362, 2365).
+- `MODS_REVIEW.md` section 13: method, measured findings, findings that touch `krs_qol`, `krs_items`, `krs_perks`, bow findings, cautions about unreliable summaries, and the download answer.
+- Bow: published evidence that a plain `rpg_param` patch sets `BowChargeDurationMax` (mod 1100) and that a perk can carry a player-only bow change with stat-gated variants (mod 1375). New roadmap task 4.7 tests the perk route (stat-gated perk plus `perk_rpg_param_override`, no script).
+- `tools/build_mods_index.py` now also takes names from the search results; `docs/README.md` indexes the new files.
+
 ## 2026-10-03 (third request): all mod lists merged
 
 No game run in this request.

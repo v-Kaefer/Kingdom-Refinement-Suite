@@ -41,6 +41,13 @@ Consequences:
 
 ## 4. Official changes (reported, not measured)
 
+**Primary source (read 3 Oct 2026):** Steam's public news feed for app 379430 (`api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=379430`), which carries the two announcements below. SteamDB (`steamdb.info/app/379430/patchnotes/`) returned HTTP 403 to this machine.
+- **Patch 1.9.7 (13 Feb 2026)**, announcement text: a Deep Silver Account feature (horse caparison); stability fixes (three infinite loading screens, a physics deadlock, language-change freezes and crashes, a gather plus skip-time crash, multiple Baptism of Fire crashes, **multiple crashes in the vegetation system**, crashes from invalid models or areas, race conditions); gameplay (two achievements, dice controls); UI (placeholder text, subtitles, Japanese font, compass after a language change); other: **the Quilted Vest made Henry's arms transparent: fixed**.
+- **"Patch Notes: Bug Fixes and Improved HD Sounds" (14 Apr 2026, the 1.9.8 release)**, announcement text: the game locked up on the delete key in menus; items or their state could carry over when creating a new game from the pause menu; HD Sounds DLC files and HD Voiceover patch paks were not used; HD Sounds banks updated.
+- Neither announcement mentions modding support, tables, scripts, bush collision, shield textures, weapon icons, smoke or fire. (An earlier version of this section attributed a ground-foliage fix to PS5 and other items to 1.9.7 from secondary sources; the Steam text above supersedes those summaries.)
+
+The secondary summaries that were used before the Steam text was read are kept below.
+
 | Version | Date | Notes as published (summaries; the full official text could not be fetched) |
 |---|---|---|
 | 1.9.7 | 13 Feb 2026 | PC stability overhaul; fixed infinite loads (bench sleep, siege trebuchet, continue menu), vegetation/model/texture-system crashes, physics deadlocks, memory leaks, language-swap crash; achievements and dice fix; **Quilted Vest transparent arms fixed** (Deep Silver page); text/icon overlap in several languages; Deep Silver account horse caparison; new localizations |
