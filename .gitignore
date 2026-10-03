@@ -1,4 +1,7 @@
 /.embold
+/Mods WIP folder
+/dist/
+docs/table-audit/table_audit.json
 *.zip
 *.rar
 /Mods WIP folder/Tables/Scripts/Entities
