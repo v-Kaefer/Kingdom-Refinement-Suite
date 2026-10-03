@@ -2,14 +2,14 @@
 """
 gate.py - build KRS modules, run them in the test game and assert that every patched value is what the game reports.
 
-    python tools/gate.py krs_items [krs_perks krs_qol]  [--mode tables|full] [--with MOD ...] [--log docs/tests/gate_<name>.log]
+    python tools/gate.py krs_items [krs_perks krs_qol]  [--mode tables|full] [--with MOD ...] [--log docs/tests/logs/gate_<name>.log]
                           [--game "<KCD folder>"] [--timeout 300] [--extra-lua FILE]
 
 tables  (default) starts the game, waits for the main menu, checks every table that is loaded there and quits by itself.
 full              also waits for the player: someone has to press Continue in the test instance (rows of the perk and
                   buff tables only exist once a level is loaded). The check list is the same; unchecked rows fail.
 
-What is asserted (rules measured in docs/tests/PTF_FINDINGS.md):
+What is asserted (rules measured in docs/engine/ptf-rules.md):
   1. the engine logged "Table 'T' is patched by 'T__<id>'" for every patch file of every module
   2. every column of every patch row reads back from the game's database as in the patch file
   3. every rpg_param row reads back through RPG.<key>
@@ -18,12 +18,16 @@ The script installs the modules into <game>/Mods, loads only them (plus --with m
 removes what it installed. Exit code 0 = gate passed.
 """
 import argparse
+import datetime
 import os
 import re
 import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import paths  # noqa: E402
+
 ROOT = os.path.dirname(HERE)
 DEFAULT_GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance")
 
@@ -56,7 +60,7 @@ def main():
     ap.add_argument("--extra-lua")
     ap.add_argument("--keep", action="store_true", help="leave the installed mods in Mods afterwards")
     a = ap.parse_args()
-    log = a.log or os.path.join(ROOT, "docs", "tests", f"gate_{'_'.join(a.modules)}_{a.mode}.log")
+    log = a.log or os.path.join(paths.TEST_LOGS, f"gate_{'_'.join(a.modules)}_{a.mode}_{datetime.datetime.now():%Y%m%d-%H%M}.log")   # never overwrite an older log
 
     if run([sys.executable, os.path.join(HERE, "build_module.py"), *a.modules]).returncode:
         print("GATE FAILED: build")

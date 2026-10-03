@@ -13,7 +13,7 @@ Part of the Kingdom Refinement Suite. Makes food, sleep and reading matter a lit
 | Sleep | Better beds are worth more, the ground stays poor | exceptional 1.0 -> 1.2, high 0.7 -> 0.955, low 0.3 -> 0.325, medium 0.5 -> 0.65 |
 | Potions | Aesop potion feeds less (single row, a first taste of the potion rebalance) | nutrition 10 -> 2.5, short-term ratio 0.1 -> 0.5 |
 
-Exact rows: `Data/Libs/Tables/**` in the source tree (`modules/krs_items`), tracked in `docs/ownership.csv`.
+Exact rows: `Data/Libs/Tables/**` in the source tree (`modules/krs_items`), tracked in `docs/data/ownership.csv`.
 
 ## Install
 

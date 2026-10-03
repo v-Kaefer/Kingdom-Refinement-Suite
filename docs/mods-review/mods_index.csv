@@ -1,0 +1,249 @@
+id,url,in_mods_to_verify,times_in_verify_list,in_tested_1.9.6_list,in_workspace,author_label,name,name_source,author_or_series,versions,install,krs_area,fix_status,check_1.9.8,check_source,observation,scope,review_coverage
+83,https://www.nexusmods.com/kingdomcomedeliverance/mods/83,,,,installed in the test game via Vortex (Mods/MoreResponsiveTargeting831041),,More Responsive Targeting,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+84,https://www.nexusmods.com/kingdomcomedeliverance/mods/84,,,,Archery/Near Perfect Arrows.-84-69-69.zip,,Near Perfect Arrows,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+85,https://www.nexusmods.com/kingdomcomedeliverance/mods/85,,,,Perks/Perkaholic 1.05-85-1-05.zip,,Perkaholic 1.05,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+106,https://www.nexusmods.com/kingdomcomedeliverance/mods/106,,,,Etc/cheat-106-1-58-1732985419.zip,,cheat,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+129,https://www.nexusmods.com/kingdomcomedeliverance/mods/129,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+266,https://www.nexusmods.com/kingdomcomedeliverance/mods/266,,,,Etc/All Referenced Strings-266-1-0.7z,,All Referenced Strings,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+284,https://www.nexusmods.com/kingdomcomedeliverance/mods/284,,,yes,,no mo slo mo,No mo slo mo,user label,,,,,not a defect,,,Behaviour preference.,in the author's lists,described in review
+311,https://www.nexusmods.com/kingdomcomedeliverance/mods/311,,,,Player/5.5-6 Nourishment and 4 Energy lost per hour-311-1-0 | Player/5.5-6 Nourishment and 4 Energy lost per hour-311-1-0.7z,,5.5-6 Nourishment and 4 Energy lost per hour,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+326,https://www.nexusmods.com/kingdomcomedeliverance/mods/326,,,,Etc/Knox's Labelled Items (XML)-326-1-0-2.zip,,Knox's Labelled Items (XML),workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+390,https://www.nexusmods.com/kingdomcomedeliverance/mods/390,,,,Installed to be verified/MGs Stay Clean Longer - Get Dirty Gradually 1.6-390-1-6-1707663382 | installed in the test game via Vortex (Mods/MGsStayCleanLongerGetDirtyGradually16390161707663382),,MGs Stay Clean Longer - Get Dirty Gradually 1.6,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+480,https://www.nexusmods.com/kingdomcomedeliverance/mods/480,,,,Items/Bed Comfort Restored-480-1-0,,Bed Comfort Restored,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+483,https://www.nexusmods.com/kingdomcomedeliverance/mods/483,,,,Items/Dynamic Hoods and Scarfs up and down-483-1-9-1590343806 | Items/Dynamic Hoods and Scarfs up and down-483-1-9-1590343806.zip,,Dynamic Hoods and Scarfs up and down,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+491,https://www.nexusmods.com/kingdomcomedeliverance/mods/491,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+554,https://www.nexusmods.com/kingdomcomedeliverance/mods/554,,,,Etc/Parameters Plus-554-1-5-1562283931 | Etc/Parameters Plus-554-1-5-1562283931.zip,,Parameters Plus,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+591,https://www.nexusmods.com/kingdomcomedeliverance/mods/591,yes,1,,,,Bushes - Collision Remover,review,JovianStone (original),,,,likely still needed (unconfirmed),Still applicable. Its 26 models are byte-identical in every game pak up to 1.9.8 (no patch changed them); official notes do not mention bush collision. 2331 is the rebuilt version; prefer it. Collision itself was not inspected.,measured on the 1.9.8 install + official notes,Invisible collision on bushes; last update 2018-08. Superseded by 2331.,in the author's lists,described in review
+651,https://www.nexusmods.com/kingdomcomedeliverance/mods/651,yes,1,,,,,review,,,,Stay clean,,,,Large bundle.,in the author's lists,described in review
+667,https://www.nexusmods.com/kingdomcomedeliverance/mods/667,,,,,,Naked Armor Fix,nexus search,,,,,,,,Related to the 1577 body-material issue.,found while checking (outside the lists),described in review
+708,https://www.nexusmods.com/kingdomcomedeliverance/mods/708,,,yes,,Viking Set,,,,,,,,,,,in the author's lists,no text in the review files
+726,https://www.nexusmods.com/kingdomcomedeliverance/mods/726,,,,installed in the test game via Vortex (Mods/EarlyBirdNPCrescheduler7262101640796373),,Early Bird NPC rescheduler,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+754,https://www.nexusmods.com/kingdomcomedeliverance/mods/754,,,yes,,Painted Lords of Leipa Hounskull,Painted Lords of Leipa Hounskull,user label,,,LEG,,,,,Legacy install: .pak copied into Data and Data\_fastload. Suggest a Mods-folder package.,in the author's lists,described in review
+762,https://www.nexusmods.com/kingdomcomedeliverance/mods/762,,,yes,,Queen of Sheba's sword,,,,,,,,,,,in the author's lists,no text in the review files
+765,https://www.nexusmods.com/kingdomcomedeliverance/mods/765,,,yes,,poison overhaul,Poison overhaul,user label,,,,perk table,,,,In the tested list; touches perks per the review; potions area.,in the author's lists,described in review
+770,https://www.nexusmods.com/kingdomcomedeliverance/mods/770,,,yes,,perkaholic updated,Perkaholic updated,user label,,,,perk table,,,,In the tested 1.9.6 list. Separate id from 1009.,in the author's lists,described in review
+771,https://www.nexusmods.com/kingdomcomedeliverance/mods/771,,,,Installed to be verified/Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310 | Items/Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310 | Items/Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310.7z,,Hoods Over Helmets Remove Kettle Helmets NPC,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+791,https://www.nexusmods.com/kingdomcomedeliverance/mods/791,,,,Items/All Hoods Up-791-1-1-1562185697.7zip,,All Hoods Up,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+795,https://www.nexusmods.com/kingdomcomedeliverance/mods/795,,,yes,,Midnight Armor Set,,,,,,,,,,,in the author's lists,no text in the review files
+796,https://www.nexusmods.com/kingdomcomedeliverance/mods/796,,,yes,,Miller Guild Items,Miller Guild Items,user label,,,,,bundled fix,,,Includes a horse item fix.,in the author's lists,described in review
+797,https://www.nexusmods.com/kingdomcomedeliverance/mods/797,,,yes,,sorting mod,Sorting mod,user label,,,,Localization,,,,Renames text: per-language upkeep.,in the author's lists,described in review
+800,https://www.nexusmods.com/kingdomcomedeliverance/mods/800,,,,Installed to be verified/VolumetricFogShadows-800-1-1-1563786542 | installed in the test game via Vortex (Mods/VolumetricFogShadows800111563786542),,VolumetricFogShadows,nexus search,,1.9.*,,,,"Enabled on 1.9.8 (wildcard 1.9.*, measured).","engine log, tests/logs",,workspace/installed only,described in review
+802,https://www.nexusmods.com/kingdomcomedeliverance/mods/802,,,,Archery/Archer for 1.9-802-1-1563644280.7z,,Archer for 1.9,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+808,https://www.nexusmods.com/kingdomcomedeliverance/mods/808,yes,1,,,,,review,,,,Localization,,,,Renames text: per-language upkeep.,in the author's lists,described in review
+837,https://www.nexusmods.com/kingdomcomedeliverance/mods/837,,,,Etc/EasyEdit-837--1-1567314659.zip,,EasyEdit,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+840,https://www.nexusmods.com/kingdomcomedeliverance/mods/840,,,yes,,Blood and Iron Encounter System,,,,,,,,,,,in the author's lists,no text in the review files
+891,https://www.nexusmods.com/kingdomcomedeliverance/mods/891,,,yes,,Hand-and-a-Half Sword,,,,,,,,,,,in the author's lists,no text in the review files
+892,https://www.nexusmods.com/kingdomcomedeliverance/mods/892,,,yes,,Baselard Dagger,,,,,,,,,,,in the author's lists,no text in the review files
+905,https://www.nexusmods.com/kingdomcomedeliverance/mods/905,,,yes,,Duke's Sword,,,,,,,,,,,in the author's lists,no text in the review files
+913,https://www.nexusmods.com/kingdomcomedeliverance/mods/913,,,yes,,Joyeuse,,,,,,,,,,,in the author's lists,no text in the review files
+915,https://www.nexusmods.com/kingdomcomedeliverance/mods/915,,,yes,,Early Type Ottoman Turkish Kilij,,,,,,,,,,,in the author's lists,no text in the review files
+942,https://www.nexusmods.com/kingdomcomedeliverance/mods/942,,,yes,,Danish longsword type XVIIIe - Devil's edition,,,,,,,,,,,in the author's lists,no text in the review files
+955,https://www.nexusmods.com/kingdomcomedeliverance/mods/955,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+958,https://www.nexusmods.com/kingdomcomedeliverance/mods/958,,,yes,,Architect,Architect,user label,,,DEV,,,,,Needs the game started in dev mode.,in the author's lists,described in review
+966,https://www.nexusmods.com/kingdomcomedeliverance/mods/966,,,yes,,15th to 16th Century style Ottoman sword,,,,,,,,,,,in the author's lists,no text in the review files
+969,https://www.nexusmods.com/kingdomcomedeliverance/mods/969,,,,Etc/Enhanced Eyes 1.1-969-1-1-1585051202.zip,,Enhanced Eyes 1.1,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1009,https://www.nexusmods.com/kingdomcomedeliverance/mods/1009,yes,1,,Installed to be verified/Perkaholic PTF-1009-1-2-3-1714642782 | Perks/Perkaholic PTF-1009-1-2-3-1714642782.7zip,,Perkaholic PTF,review,,1.9.4-1.9.8,PTF,perk table,,"Already lists 1.9.8. Adds 56 perks incl. Bow, Polearm, Unarmed; fixes Cushion and Art Connoisseur. Translations exist (1027, 1273, 1244).",Nexus page summary via web search (page not opened),Touches perk rows: check against krs_perks rows ec4c5274 / 61e98757. PTF example worth studying.,in the author's lists,described in review
+1040,https://www.nexusmods.com/kingdomcomedeliverance/mods/1040,,,,,,Disable Combat Slowmotion,review,,,,,,,,Adjacent (not in the lists).,found while checking (outside the lists),described in review
+1059,https://www.nexusmods.com/kingdomcomedeliverance/mods/1059,,,,Etc/Icon ID Resource-1059-1-0-1592792055.rar,,Icon ID Resource,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1062,https://www.nexusmods.com/kingdomcomedeliverance/mods/1062,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1088,https://www.nexusmods.com/kingdomcomedeliverance/mods/1088,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1089,https://www.nexusmods.com/kingdomcomedeliverance/mods/1089,,,,Archery/op_swords_attack_plus_100_procent-1089-1-0-1598746186,,op_swords_attack_plus_100_procent,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1092,https://www.nexusmods.com/kingdomcomedeliverance/mods/1092,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1093,https://www.nexusmods.com/kingdomcomedeliverance/mods/1093,,,yes,,Fishing in Bohemia,Fishing in Bohemia,review,,,,,,,,Title only; unverified.,in the author's lists,described in review
+1100,https://www.nexusmods.com/kingdomcomedeliverance/mods/1100,,,,Archery/Faster archery normal-1100-1-0-1600006419.rar,,Faster archery normal,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1105,https://www.nexusmods.com/kingdomcomedeliverance/mods/1105,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1110,https://www.nexusmods.com/kingdomcomedeliverance/mods/1110,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1131,https://www.nexusmods.com/kingdomcomedeliverance/mods/1131,,,yes,,silver armor,Silver armor,user label,,,,,,,,"The review's search wrongly returned ""Playable Daggers"" for this id (that is 1689); name from the user's label only.",in the author's lists,described in review
+1153,https://www.nexusmods.com/kingdomcomedeliverance/mods/1153,,,,Items/mod-1153-1-0-0-1605526312.zip,,mod,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1203,https://www.nexusmods.com/kingdomcomedeliverance/mods/1203,,,yes,,Long Targaryen waffenrock,,,,,,,,,,,in the author's lists,no text in the review files
+1218,https://www.nexusmods.com/kingdomcomedeliverance/mods/1218,yes,1,,Installed to be verified/LartiguesUpscaleProject2.1-1218-2-1-1734099038,,LartiguesUpscaleProject2.1,workspace file name,,,,,,,,,in the author's lists,no text in the review files
+1227,https://www.nexusmods.com/kingdomcomedeliverance/mods/1227,,,,installed in the test game via Vortex (Mods/30FPSCutsceneFixV21227201724448782),,30 FPS Cutscene Fix V3,review,,,,30 FPS cutscene fix,,,,Adjacent; KRS requires a 30 FPS fix mod.,workspace/installed only,described in review
+1236,https://www.nexusmods.com/kingdomcomedeliverance/mods/1236,,,,,,Easy Combat PTF,review,,,,Riposte,,,,Adjacent (easy parry and master strike): likely touches the same perk area.,found while checking (outside the lists),described in review
+1259,https://www.nexusmods.com/kingdomcomedeliverance/mods/1259,,,yes,,Easy Assassination,Easy Assassination,review,,,,,not a game fix,,,v1.1 fixed the mod's own manifest warning.,in the author's lists,described in review
+1260,https://www.nexusmods.com/kingdomcomedeliverance/mods/1260,,,yes,,rpg tweaks,RPG tweaks,user label,,,,Stay clean,,,,Large bundle (suggest splitting into modules); in the tested list.,in the author's lists,described in review
+1296,https://www.nexusmods.com/kingdomcomedeliverance/mods/1296,,,,,,Kingdom Come Enhanced Edition 2.0,review,,,,,,,,Adjacent.,found while checking (outside the lists),described in review
+1308,https://www.nexusmods.com/kingdomcomedeliverance/mods/1308,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1309,https://www.nexusmods.com/kingdomcomedeliverance/mods/1309,yes,1,,,,,review,,,,,,,,Replaces a whole shared file (random_event.xml per the page); lists conflicts.,in the author's lists,described in review
+1311,https://www.nexusmods.com/kingdomcomedeliverance/mods/1311,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1323,https://www.nexusmods.com/kingdomcomedeliverance/mods/1323,yes,1,,,,Skalitz Shield Fix AWL,review,Meatbag101,,,,check patch notes,"No evidence of an official fix (1.9.7/1.9.8 notes do not mention it). Last update 2022-01-19, needs A Woman's Lot. Not testable from the workspace; check the Skalitz shield in game.",Nexus page summary via web search (page not opened) + official notes,Blurry Skalitz Shield (A Woman's Lot); last update 2022-01.,in the author's lists,described in review
+1327,https://www.nexusmods.com/kingdomcomedeliverance/mods/1327,yes,1,,,,Weather Overhaul,review,,,,,not a game fix,,,Replaces a whole shared file; rain-for-days tuning is a design choice.,in the author's lists,described in review
+1330,https://www.nexusmods.com/kingdomcomedeliverance/mods/1330,yes,1,yes,,Noble Sir Hans,,,,,,,,,,,in the author's lists,no text in the review files
+1332,https://www.nexusmods.com/kingdomcomedeliverance/mods/1332,,,yes,,less headbob,Less headbob,user label,,,LUA,,,,,Replaces vanilla camerashake.lua loose; may take minutes to apply. Suggest a manifest-based override.,in the author's lists,described in review
+1334,https://www.nexusmods.com/kingdomcomedeliverance/mods/1334,,,,,,Fast Learning Henry,review,,,,,,,,Adjacent.,found while checking (outside the lists),described in review
+1337,https://www.nexusmods.com/kingdomcomedeliverance/mods/1337,yes,1,yes,,helm vision better,,,,,,,,,,,in the author's lists,no text in the review files
+1355,https://www.nexusmods.com/kingdomcomedeliverance/mods/1355,,,yes,,better crime,,,,,,,,,,,in the author's lists,no text in the review files
+1374,https://www.nexusmods.com/kingdomcomedeliverance/mods/1374,,,yes,,Henry Malone,,,,,,,,,,,in the author's lists,no text in the review files
+1376,https://www.nexusmods.com/kingdomcomedeliverance/mods/1376,,,,Archery/Archery mod - Faster arrows-1376-1-0-1652475252.zip,,Archery mod - Faster arrows,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1380,https://www.nexusmods.com/kingdomcomedeliverance/mods/1380,,,yes,,Black Items Fix,Black Items Fix,user label,,,,,resolve page first,,,Page not resolved by the review.,in the author's lists,described in review
+1386,https://www.nexusmods.com/kingdomcomedeliverance/mods/1386,,,,Items/HoodsUpStandalone - PTF-1386-1-0-1654827508.7zip,,HoodsUpStandalone - PTF,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1416,https://www.nexusmods.com/kingdomcomedeliverance/mods/1416,,,,,,Toxic Green Armor - PTF Standalone,review,,,PTF,,,,,Adjacent.,found while checking (outside the lists),described in review
+1419,https://www.nexusmods.com/kingdomcomedeliverance/mods/1419,,,,Archery/Immersive Archery-1419-1-2-1665671489.zip,,Immersive Archery,readme,,,,Archery,,,,Altered by the suite; permission granted.,workspace/installed only,described in review
+1423,https://www.nexusmods.com/kingdomcomedeliverance/mods/1423,yes,1,,,,Hoods and Scarfs UP (PTF - Dynamic - with Correct Meshes),review,,,PTF,,,,,PTF example worth studying.,in the author's lists,described in review
+1460,https://www.nexusmods.com/kingdomcomedeliverance/mods/1460,,,yes,,richer merchants,Richer merchants,user label,,,,,,,,Large flat multiplier on merchant gold.,in the author's lists,described in review
+1483,https://www.nexusmods.com/kingdomcomedeliverance/mods/1483,,,yes,,tsm slower food spoil,,,,,,,,,,,in the author's lists,no text in the review files
+1485,https://www.nexusmods.com/kingdomcomedeliverance/mods/1485,,,,installed in the test game via Vortex (Mods/SOLIDHELMETVISORS1485121737430681),,SOLID HELMET VISORS,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1566,https://www.nexusmods.com/kingdomcomedeliverance/mods/1566,,,yes,,lost weapon pack,Lost weapon pack,user label,,,,,bundled fix,,,Includes a fix for maces invisible when holstered.,in the author's lists,described in review
+1577,https://www.nexusmods.com/kingdomcomedeliverance/mods/1577,,,yes,,invisible hands fix,Invisible hands FIX (UPDATE),review,Spuchel,,,,check patch notes,Partly overlapped: the official 1.9.7 notes fix transparent arms for one item (Quilted Vest). The mod fixes the body material alphaTest in general (last update 2023-12-13). Keep until tested with a sleeveless item.,Nexus page summary via web search (page not opened) + official notes,Forearms invisible with sleeveless clothes; v3.0 late 2023.,in the author's lists,described in review
+1618,https://www.nexusmods.com/kingdomcomedeliverance/mods/1618,,,,installed in the test game via Vortex (Mods/TimeHDupdatedv12zip1618121714429516),,Time-HD-updated v1.2.zip,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1629,https://www.nexusmods.com/kingdomcomedeliverance/mods/1629,yes,1,,,,,review,,,,Riposte,,,,Recommends using it with Restore Riposte.,in the author's lists,described in review
+1636,https://www.nexusmods.com/kingdomcomedeliverance/mods/1636,yes,1,,,,More Sensible Weapons and Armor,nexus search,,,,,,,,,in the author's lists,described in review
+1647,https://www.nexusmods.com/kingdomcomedeliverance/mods/1647,yes,1,,,,,review,,,,,not a defect,,,Behaviour preference.,in the author's lists,described in review
+1671,https://www.nexusmods.com/kingdomcomedeliverance/mods/1671,yes,1,,,,,review,,,,,not a defect,,,Behaviour preference.,in the author's lists,described in review
+1678,https://www.nexusmods.com/kingdomcomedeliverance/mods/1678,yes,1,,Archery/Better_Archery_no-OP-1678-1-2-1739487614.zip,,Better Archery,review,,,,Archery,,,,Closest comparable to Immersive Archery.,in the author's lists,described in review
+1689,https://www.nexusmods.com/kingdomcomedeliverance/mods/1689,,,,,,Playable Daggers,review,,,,,,,,Adjacent.,found while checking (outside the lists),described in review
+1693,https://www.nexusmods.com/kingdomcomedeliverance/mods/1693,yes,1,,User Interface/Ravens beak icon swap-1693-1-2-1733597371.7z,,Ravens beak and Spiked warhammer icon swap,review,Sibnal,manifest 1.9.6 only,,,check patch notes,"STILL NEEDED. Current Tables.pak has icon 152 on the Raven's beak and 150 on the spiked warhammer; the mod sets them the other way round. It is a 1 KB table patch (player_item, suffix == mod id), but its manifest lists only 1.9.6 so the 1.9.8 engine disables it until the line is edited (an edited manifest loads, measured).",measured on the 1.9.8 install,Two weapon icons mismatched; 2024-12.,in the author's lists,described in review
+1702,https://www.nexusmods.com/kingdomcomedeliverance/mods/1702,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1719,https://www.nexusmods.com/kingdomcomedeliverance/mods/1719,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1720,https://www.nexusmods.com/kingdomcomedeliverance/mods/1720,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1723,https://www.nexusmods.com/kingdomcomedeliverance/mods/1723,yes,1,,Installed to be verified/IntimidationStat-1723-1-1-1728217688,,IntimidationStat,review,,,,,,,,Replaces a whole shared file (Inventory.gfx); UI cannot use PTF.,in the author's lists,described in review
+1730,https://www.nexusmods.com/kingdomcomedeliverance/mods/1730,yes,1,,installed in the test game via Vortex (Mods/DrinkSoundEffects111730111728087257),,Drink Sound Effects 1.1,nexus search,,manifest not 1.9.8,,,,Disabled by the 1.9.8 engine as shipped (measured).,"engine log, tests/logs",,in the author's lists,described in review
+1732,https://www.nexusmods.com/kingdomcomedeliverance/mods/1732,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1736,https://www.nexusmods.com/kingdomcomedeliverance/mods/1736,yes,1,,,,,review,TyburnKetch,,,perk table,,,,Touches perks.,in the author's lists,described in review
+1743,https://www.nexusmods.com/kingdomcomedeliverance/mods/1743,yes,1,,installed in the test game via Vortex (Mods/Persistentarrows1743121729568337),,Persistent arrows,review,,1.9.*,,Persistent arrows,,"Enabled on 1.9.8 (wildcard 1.9.*, measured).","engine log, tests/logs",The required mod itself.,in the author's lists,described in review
+1765,https://www.nexusmods.com/kingdomcomedeliverance/mods/1765,,,,Installed to be verified/Riposte-1765-1-0-2-1735871267 | installed in the test game via Vortex (Mods/Riposte17651021735871267),,Restore Riposte,readme,AcSiG,manifest 1.9.6 only,PTF,Riposte,,Disabled by the 1.9.8 engine as shipped (measured). With only that line edited to 1.9.8 it loaded and its perk patch applied (table level; in-game perk screen not tested).,"engine log, tests/logs",Altered by krs_perks; permission granted.,workspace/installed only,described in review
+1779,https://www.nexusmods.com/kingdomcomedeliverance/mods/1779,yes,1,,Etc/souls_sorted_v1.2-1779-1-2-1736773918.zip,,souls_sorted_v1.2,workspace file name,,,,,,,,,in the author's lists,no text in the review files
+1780,https://www.nexusmods.com/kingdomcomedeliverance/mods/1780,yes,1,,,,,review,TyburnKetch,,,,,,,Also author of Medieval Poisons (required by 2208).,in the author's lists,described in review
+1782,https://www.nexusmods.com/kingdomcomedeliverance/mods/1782,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1797,https://www.nexusmods.com/kingdomcomedeliverance/mods/1797,,,,,,Nighttime Nighthawk,review,,,,,,,,Adjacent.,found while checking (outside the lists),described in review
+1800,https://www.nexusmods.com/kingdomcomedeliverance/mods/1800,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1839,https://www.nexusmods.com/kingdomcomedeliverance/mods/1839,,,,Etc/Realistic Horses-1839-1-0-1739145195.rar,,Realistic Horses,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1842,https://www.nexusmods.com/kingdomcomedeliverance/mods/1842,yes,1,,Etc/Realistic Repairs 1.1-1842-1-1-1739569897.rar,,Realistic Repairs 1.1,workspace file name,,,,,,,,,in the author's lists,no text in the review files
+1853,https://www.nexusmods.com/kingdomcomedeliverance/mods/1853,,,,,,Richer Merchants (PTF),nexus search,,,,,,,,Alternative to 1873/1460.,found while checking (outside the lists),described in review
+1860,https://www.nexusmods.com/kingdomcomedeliverance/mods/1860,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1861,https://www.nexusmods.com/kingdomcomedeliverance/mods/1861,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1862,https://www.nexusmods.com/kingdomcomedeliverance/mods/1862,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1863,https://www.nexusmods.com/kingdomcomedeliverance/mods/1863,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1864,https://www.nexusmods.com/kingdomcomedeliverance/mods/1864,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1870,https://www.nexusmods.com/kingdomcomedeliverance/mods/1870,yes,1,,,,Fair Trade - PTF,review,,,PTF,,,,,PTF example worth studying.,in the author's lists,described in review
+1873,https://www.nexusmods.com/kingdomcomedeliverance/mods/1873,yes,1,,,,Daily Restock And Rich Merchants - PTF,review,tempbito,problems on latest,PTF,,,No version statement found; restocks daily and gives merchants 100x money. The review's 'problems on the latest version' is unconfirmed.,Nexus page summary via web search (page not opened),Large flat multiplier on merchant gold.,in the author's lists,described in review
+1875,https://www.nexusmods.com/kingdomcomedeliverance/mods/1875,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1882,https://www.nexusmods.com/kingdomcomedeliverance/mods/1882,,,,,,Devil's Scowl Sheild Fix,nexus search,,,,,,,,"Another shield fix, next to 1323.",found while checking (outside the lists),described in review
+1883,https://www.nexusmods.com/kingdomcomedeliverance/mods/1883,yes,1,,,,Better Pickpocket - FIXED,review,,,,,not a game fix,,,Fixes a bug in another mod (doubled catch chance in the original).,in the author's lists,described in review
+1893,https://www.nexusmods.com/kingdomcomedeliverance/mods/1893,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1900,https://www.nexusmods.com/kingdomcomedeliverance/mods/1900,yes,1,,,,,review,,,,,,,,Title only; unverified.,in the author's lists,described in review
+1904,https://www.nexusmods.com/kingdomcomedeliverance/mods/1904,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1909,https://www.nexusmods.com/kingdomcomedeliverance/mods/1909,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1914,https://www.nexusmods.com/kingdomcomedeliverance/mods/1914,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1918,https://www.nexusmods.com/kingdomcomedeliverance/mods/1918,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1922,https://www.nexusmods.com/kingdomcomedeliverance/mods/1922,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1926,https://www.nexusmods.com/kingdomcomedeliverance/mods/1926,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1927,https://www.nexusmods.com/kingdomcomedeliverance/mods/1927,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1938,https://www.nexusmods.com/kingdomcomedeliverance/mods/1938,,,,Etc/Herb Picking Radius 2x-1938-1-0-1742117458.zip,,Herb Picking Radius 2x,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1944,https://www.nexusmods.com/kingdomcomedeliverance/mods/1944,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1950,https://www.nexusmods.com/kingdomcomedeliverance/mods/1950,,,,QoL/Skill Books Take Time 2x-1950-1-0-1742313588,,Skill Books Take Time 2x,workspace file name,,,,,,,,,workspace/installed only,no text in the review files
+1951,https://www.nexusmods.com/kingdomcomedeliverance/mods/1951,yes,1,,,,,review,,,,,not a defect,,,Behaviour preference.,in the author's lists,described in review
+1956,https://www.nexusmods.com/kingdomcomedeliverance/mods/1956,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1958,https://www.nexusmods.com/kingdomcomedeliverance/mods/1958,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1961,https://www.nexusmods.com/kingdomcomedeliverance/mods/1961,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1972,https://www.nexusmods.com/kingdomcomedeliverance/mods/1972,yes,1,,,,,review,,,CFG,,,,,Hardware-specific cfg values published as general.,in the author's lists,described in review
+1980,https://www.nexusmods.com/kingdomcomedeliverance/mods/1980,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1981,https://www.nexusmods.com/kingdomcomedeliverance/mods/1981,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1984,https://www.nexusmods.com/kingdomcomedeliverance/mods/1984,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1990,https://www.nexusmods.com/kingdomcomedeliverance/mods/1990,yes,1,,,,,review,,,,perk table,,,,Touches perks.,in the author's lists,described in review
+1991,https://www.nexusmods.com/kingdomcomedeliverance/mods/1991,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+1996,https://www.nexusmods.com/kingdomcomedeliverance/mods/1996,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2005,https://www.nexusmods.com/kingdomcomedeliverance/mods/2005,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2008,https://www.nexusmods.com/kingdomcomedeliverance/mods/2008,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2011,https://www.nexusmods.com/kingdomcomedeliverance/mods/2011,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2012,https://www.nexusmods.com/kingdomcomedeliverance/mods/2012,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2017,https://www.nexusmods.com/kingdomcomedeliverance/mods/2017,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2021,https://www.nexusmods.com/kingdomcomedeliverance/mods/2021,yes,2,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2022,https://www.nexusmods.com/kingdomcomedeliverance/mods/2022,yes,1,,,,,review,,,PTF,,,,,PTF example worth studying.,in the author's lists,described in review
+2030,https://www.nexusmods.com/kingdomcomedeliverance/mods/2030,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2031,https://www.nexusmods.com/kingdomcomedeliverance/mods/2031,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2035,https://www.nexusmods.com/kingdomcomedeliverance/mods/2035,yes,1,,,,Diaz Dizazter Does Bohemia Ordinance and Archery,nexus search,Diaz Dizazter,,,,,,,Same author as 2040/2046/2049; archery.,in the author's lists,described in review
+2040,https://www.nexusmods.com/kingdomcomedeliverance/mods/2040,yes,1,,,,Polymorphic Projectiles,review,Diaz Dizazter,>=1.9.7,,Archery,,Compatible with 1.9.8 by its statement (1.9.7+); requires the 'Loot Info' mod to show multi-damage arrows.,Nexus page summary via web search (page not opened),Changes arrow damage values; mixes balance and novelty arrows (suggest split).,in the author's lists,described in review
+2045,https://www.nexusmods.com/kingdomcomedeliverance/mods/2045,yes,1,,,,,review,,,PTF,,,,,PTF example worth studying.,in the author's lists,described in review
+2046,https://www.nexusmods.com/kingdomcomedeliverance/mods/2046,yes,1,,,,,review,Diaz Dizazter,,PTF,,,,,Weapons/arrows/ragdolls series.,in the author's lists,described in review
+2049,https://www.nexusmods.com/kingdomcomedeliverance/mods/2049,yes,1,,,,,review,Diaz Dizazter,,,,,,,Weapons/arrows/ragdolls series.,in the author's lists,described in review
+2061,https://www.nexusmods.com/kingdomcomedeliverance/mods/2061,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2066,https://www.nexusmods.com/kingdomcomedeliverance/mods/2066,yes,1,,,,Distant Smoke and Fire,review,FogZZZ,"v0.2, 2025-08-22",,,check patch notes,Not verifiable here. Edits libs\particles\wh_particels.xml as a whole file (conflicts with other mods that edit it). Official notes do not mention particles.,Nexus page summary via web search (page not opened),Pop-in of smoke and flames; 2025-08.,in the author's lists,described in review
+2068,https://www.nexusmods.com/kingdomcomedeliverance/mods/2068,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2079,https://www.nexusmods.com/kingdomcomedeliverance/mods/2079,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2081,https://www.nexusmods.com/kingdomcomedeliverance/mods/2081,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2084,https://www.nexusmods.com/kingdomcomedeliverance/mods/2084,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2098,https://www.nexusmods.com/kingdomcomedeliverance/mods/2098,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2100,https://www.nexusmods.com/kingdomcomedeliverance/mods/2100,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2103,https://www.nexusmods.com/kingdomcomedeliverance/mods/2103,yes,1,,,,,review,MayDayU1A,,,,,,,UI series; replaced by 2147.,in the author's lists,described in review
+2106,https://www.nexusmods.com/kingdomcomedeliverance/mods/2106,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2108,https://www.nexusmods.com/kingdomcomedeliverance/mods/2108,yes,1,,,,,review,MayDayU1A,,,,,,,UI series.,in the author's lists,described in review
+2119,https://www.nexusmods.com/kingdomcomedeliverance/mods/2119,,,,,,KCD Mod Manager,review,,,,,,,,Adjacent.,found while checking (outside the lists),described in review
+2124,https://www.nexusmods.com/kingdomcomedeliverance/mods/2124,yes,1,,,,Half-looted,review,,1.9.6 (ok 1.9.7),,,,"No 1.9.8 statement found; it is a bundle of sub-modules, check before use on 1.9.8.",Nexus page summary via web search (page not opened),Large bundle.,in the author's lists,described in review
+2132,https://www.nexusmods.com/kingdomcomedeliverance/mods/2132,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2147,https://www.nexusmods.com/kingdomcomedeliverance/mods/2147,yes,1,,,,,review,MayDayU1A,,,,,,,UI series; includes the pickpocket window that 2103 replaces.,in the author's lists,described in review
+2152,https://www.nexusmods.com/kingdomcomedeliverance/mods/2152,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2153,https://www.nexusmods.com/kingdomcomedeliverance/mods/2153,yes,1,,,,,review,,,CFG,,,,,Hardware-specific cfg values published as general.,in the author's lists,described in review
+2156,https://www.nexusmods.com/kingdomcomedeliverance/mods/2156,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2158,https://www.nexusmods.com/kingdomcomedeliverance/mods/2158,yes,1,,,,,review,,,PTF,,,,,Parameter approach (pickpocket); PTF example.,in the author's lists,described in review
+2165,https://www.nexusmods.com/kingdomcomedeliverance/mods/2165,,,,,,Merchants Richer,nexus search,,,,,,,,Alternative to 1873/1460/1853.,found while checking (outside the lists),described in review
+2171,https://www.nexusmods.com/kingdomcomedeliverance/mods/2171,yes,1,,,,,review,,,PTF,,,,,Misses pickpocketed items; combine with 2158.,in the author's lists,described in review
+2173,https://www.nexusmods.com/kingdomcomedeliverance/mods/2173,,,,,,True Hardcore Maintenance (PTF),nexus search,Nfrog2swamp1,,,,,,,Series member; touches repairs (compare with krs_qol RepairPriceModif).,found while checking (outside the lists),described in review
+2174,https://www.nexusmods.com/kingdomcomedeliverance/mods/2174,yes,2,,,,,review,,,PTF,,,,,PTF example worth studying.,in the author's lists,described in review
+2175,https://www.nexusmods.com/kingdomcomedeliverance/mods/2175,yes,2,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2179,https://www.nexusmods.com/kingdomcomedeliverance/mods/2179,yes,1,,,,True Hardcore Combat (PTF),review,Nfrog2swamp1,made and tested on 1.9.8,PTF,Riposte,,Targets 1.9.8.,Nexus page summary via web search (page not opened),True Hardcore series; closest comparable for the Riposte area.,in the author's lists,described in review
+2180,https://www.nexusmods.com/kingdomcomedeliverance/mods/2180,yes,1,,,,,review,,,CFG,,,,,Hardware-specific cfg values published as general.,in the author's lists,described in review
+2188,https://www.nexusmods.com/kingdomcomedeliverance/mods/2188,yes,1,,,,True Hardcore Economy (PTF),review,Nfrog2swamp1,,PTF,,,,,True Hardcore series.,in the author's lists,described in review
+2190,https://www.nexusmods.com/kingdomcomedeliverance/mods/2190,yes,1,,,,,review,DreamMora,,,,,,,KCD2-port series.,in the author's lists,described in review
+2191,https://www.nexusmods.com/kingdomcomedeliverance/mods/2191,yes,2,,,,,review,DreamMora,,,,,,,KCD2-port series.,in the author's lists,described in review
+2192,https://www.nexusmods.com/kingdomcomedeliverance/mods/2192,yes,1,,,,,review,DreamMora,,,,,,,KCD2-port series.,in the author's lists,described in review
+2194,https://www.nexusmods.com/kingdomcomedeliverance/mods/2194,yes,1,,,,,review,DreamMora,,,,,,,KCD2-port series.,in the author's lists,described in review
+2196,https://www.nexusmods.com/kingdomcomedeliverance/mods/2196,yes,1,,,,,review,DreamMora,,,,,,,KCD2-port series.,in the author's lists,described in review
+2199,https://www.nexusmods.com/kingdomcomedeliverance/mods/2199,yes,1,,,,,review,DreamMora,,,,,,,KCD2-port series.,in the author's lists,described in review
+2202,https://www.nexusmods.com/kingdomcomedeliverance/mods/2202,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2203,https://www.nexusmods.com/kingdomcomedeliverance/mods/2203,yes,1,,,,,review,,,,Localization,,,,Renames text: per-language upkeep.,in the author's lists,described in review
+2204,https://www.nexusmods.com/kingdomcomedeliverance/mods/2204,yes,1,,,,,review,,,,Localization,,,,Renames text: per-language upkeep.,in the author's lists,described in review
+2206,https://www.nexusmods.com/kingdomcomedeliverance/mods/2206,yes,2,,,,,review,DreamMora,,,Persistent arrows,,,,Overlaps with persistent arrows.,in the author's lists,described in review
+2207,https://www.nexusmods.com/kingdomcomedeliverance/mods/2207,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2208,https://www.nexusmods.com/kingdomcomedeliverance/mods/2208,yes,1,,,,Medieval Poisons - True Hardcore Compatibility Patch (PTF),review,Nfrog2swamp1,1.9.8,PTF,,,,,Requires Medieval Poisons (TyburnKetch); made on 1.9.8.,in the author's lists,described in review
+2209,https://www.nexusmods.com/kingdomcomedeliverance/mods/2209,yes,1,,,,Poisonous Enemies - True Hardcore Compatibility Patch (PTF),review,Nfrog2swamp1,,PTF,,,,,True Hardcore series.,in the author's lists,described in review
+2210,https://www.nexusmods.com/kingdomcomedeliverance/mods/2210,yes,1,,,,True Hardcore Alchemy (PTF),review,Nfrog2swamp1,1.9.8,PTF,perk table,,Targets 1.9.8.,Nexus page summary via web search (page not opened),True Hardcore series; made on 1.9.8.,in the author's lists,described in review
+2216,https://www.nexusmods.com/kingdomcomedeliverance/mods/2216,yes,1,,,,,review,,,,,,,,Repairs other mods' manifests on the fly: back up before trusting.,in the author's lists,described in review
+2218,https://www.nexusmods.com/kingdomcomedeliverance/mods/2218,yes,1,,,,,review,,,,Stay clean,,,,Visual comparable to MGsStayClean.,in the author's lists,described in review
+2219,https://www.nexusmods.com/kingdomcomedeliverance/mods/2219,,,,,,True Hardcore Crime (PTF),nexus search,Nfrog2swamp1,made and tested on 1.9.8,,,,,,Series member found while verifying 2179/2210.,found while checking (outside the lists),described in review
+2223,https://www.nexusmods.com/kingdomcomedeliverance/mods/2223,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2224,https://www.nexusmods.com/kingdomcomedeliverance/mods/2224,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2243,https://www.nexusmods.com/kingdomcomedeliverance/mods/2243,yes,1,,,,,review,,,CFG,,bundled fix,,,Wall/NPC pixelation fix through a config file; hardware-specific cfg values.,in the author's lists,described in review
+2244,https://www.nexusmods.com/kingdomcomedeliverance/mods/2244,yes,1,,,,KCSE (Kingdom Come Script Extender),review,JerryYOJ,1.9.8.0 only,KCSE,,,Matches 1.9.8 only; a companion Address Library (2273) also exists for 1.9.8 only.,Nexus page summary via web search (page not opened),Native or version-locked: add version checks.,in the author's lists,described in review
+2246,https://www.nexusmods.com/kingdomcomedeliverance/mods/2246,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2255,https://www.nexusmods.com/kingdomcomedeliverance/mods/2255,yes,1,,,,,review,JerryYOJ,,KCSE,,,,,Plugin that needs 2244.,in the author's lists,described in review
+2256,https://www.nexusmods.com/kingdomcomedeliverance/mods/2256,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2261,https://www.nexusmods.com/kingdomcomedeliverance/mods/2261,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2270,https://www.nexusmods.com/kingdomcomedeliverance/mods/2270,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2271,https://www.nexusmods.com/kingdomcomedeliverance/mods/2271,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2273,https://www.nexusmods.com/kingdomcomedeliverance/mods/2273,,,,,,Address Library For KCSE,nexus search,JerryYOJ,1.9.8 only,,,,,,Companion of 2244.,found while checking (outside the lists),described in review
+2276,https://www.nexusmods.com/kingdomcomedeliverance/mods/2276,yes,1,,,,,review,,,,,,,,Speed constant is edited by hand.,in the author's lists,described in review
+2277,https://www.nexusmods.com/kingdomcomedeliverance/mods/2277,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2279,https://www.nexusmods.com/kingdomcomedeliverance/mods/2279,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2280,https://www.nexusmods.com/kingdomcomedeliverance/mods/2280,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2288,https://www.nexusmods.com/kingdomcomedeliverance/mods/2288,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2293,https://www.nexusmods.com/kingdomcomedeliverance/mods/2293,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2294,https://www.nexusmods.com/kingdomcomedeliverance/mods/2294,yes,1,,,,,review,,,,Riposte,,,,Directional master strikes.,in the author's lists,described in review
+2297,https://www.nexusmods.com/kingdomcomedeliverance/mods/2297,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2299,https://www.nexusmods.com/kingdomcomedeliverance/mods/2299,yes,1,,,,1403 - Historical Rebalance,review,,,,,,,,Large bundle.,in the author's lists,described in review
+2313,https://www.nexusmods.com/kingdomcomedeliverance/mods/2313,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2317,https://www.nexusmods.com/kingdomcomedeliverance/mods/2317,yes,1,,,,,review,,,,,,,,Replaces a whole shared file (HUD.gfx); UI cannot use PTF.,in the author's lists,described in review
+2318,https://www.nexusmods.com/kingdomcomedeliverance/mods/2318,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2323,https://www.nexusmods.com/kingdomcomedeliverance/mods/2323,yes,1,,,,,review,,,,,,,,"Moves items between stashes, horse and pockets: test save safety.",in the author's lists,described in review
+2326,https://www.nexusmods.com/kingdomcomedeliverance/mods/2326,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2330,https://www.nexusmods.com/kingdomcomedeliverance/mods/2330,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2331,https://www.nexusmods.com/kingdomcomedeliverance/mods/2331,yes,1,,,,Bushes Collision Remover Redux,review,,built for 1.9.7,,,unconfirmed (current),Current. Replaces 26 vegetation models; no 1.9.8 statement found on the page summary.,Nexus page summary via web search (page not opened),26 models; updated 2026-08.,in the author's lists,described in review
+2332,https://www.nexusmods.com/kingdomcomedeliverance/mods/2332,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2333,https://www.nexusmods.com/kingdomcomedeliverance/mods/2333,yes,1,,,,,review,,,,,,,,Replaces a whole shared file; lists conflicts.,in the author's lists,described in review
+2338,https://www.nexusmods.com/kingdomcomedeliverance/mods/2338,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2340,https://www.nexusmods.com/kingdomcomedeliverance/mods/2340,yes,1,,,,MatthusTweaks - Equipment and Progression Overhaul (PTF),review,,,PTF,,,Modular PTF; closest comparable to the KRS scope.,Nexus page summary via web search (page not opened),Modular files; large bundle done right.,in the author's lists,described in review
+2343,https://www.nexusmods.com/kingdomcomedeliverance/mods/2343,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2345,https://www.nexusmods.com/kingdomcomedeliverance/mods/2345,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2348,https://www.nexusmods.com/kingdomcomedeliverance/mods/2348,yes,2,,,,,review,,,,,,,,Native or version-locked code.,in the author's lists,described in review
+2349,https://www.nexusmods.com/kingdomcomedeliverance/mods/2349,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2351,https://www.nexusmods.com/kingdomcomedeliverance/mods/2351,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2353,https://www.nexusmods.com/kingdomcomedeliverance/mods/2353,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2359,https://www.nexusmods.com/kingdomcomedeliverance/mods/2359,yes,1,,,,,review,,,,,,,,Title only; unverified.,in the author's lists,described in review
+2362,https://www.nexusmods.com/kingdomcomedeliverance/mods/2362,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2365,https://www.nexusmods.com/kingdomcomedeliverance/mods/2365,yes,1,,,,,,,,,,,,,,in the author's lists,no text in the review files
+2366,https://www.nexusmods.com/kingdomcomedeliverance/mods/2366,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review
+2367,https://www.nexusmods.com/kingdomcomedeliverance/mods/2367,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review
+2369,https://www.nexusmods.com/kingdomcomedeliverance/mods/2369,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review
+2371,https://www.nexusmods.com/kingdomcomedeliverance/mods/2371,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review
+2372,https://www.nexusmods.com/kingdomcomedeliverance/mods/2372,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review
+2381,https://www.nexusmods.com/kingdomcomedeliverance/mods/2381,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review
+2384,https://www.nexusmods.com/kingdomcomedeliverance/mods/2384,yes,1,,,,,review,,,,,,,,Never looked up (search cap).,in the author's lists,described in review

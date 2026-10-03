@@ -1,5 +1,7 @@
 # Real-world sources for the potion rebalance
 
+> **Status date:** 2026-10-03 | **Kind:** design | **Trust:** reported (third-party sources, read status per source) | **Game version:** -
+
 Companion to `ANALYSIS.md` (evidence class B). It supports the workflow you described:
 
 1. Read the ingredient description (in-game herbarium text or the wiki).
@@ -26,7 +28,7 @@ rebalance should cite a ledger row, and a ledger row cites source ids (`S01`...)
 ## Where the in-game text comes from
 
 The game's own herb descriptions are in `Localization/English_xml.pak` (`herb_<name>_desc`, `_effect`) and are
-extracted into `docs/potions/ingredient_dataset.csv` (`in_game_effect_text`). The community wiki shows the same
+extracted into `docs/modules/potions/ingredient_dataset.csv` (`in_game_effect_text`). The community wiki shows the same
 descriptions per herb and the potion recipes:
 [Herbarium](https://kingdom-come-deliverance.fandom.com/wiki/Herbarium) ·
 [Ingredients](https://kingdom-come-deliverance.fandom.com/wiki/Ingredients) ·

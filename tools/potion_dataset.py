@@ -7,10 +7,10 @@ Reads the vanilla tables straight from the game's Tables.pak and Localization/En
     <out>/ingredient_dataset.csv  one line per herb/ingredient used by a recipe
 
 Nothing is guessed: every column is a vanilla value, a join of vanilla values, or a count derived from them.
-The analysis (docs/potions/ANALYSIS.md) and any rebalance formula must start from this file.
+The analysis (docs/modules/potions/ANALYSIS.md) and any rebalance formula must start from this file.
 
     python tools/potion_dataset.py --game "E:/Kingdom-Refinement-Suite/Mods WIP folder/KingdomComeDeliverance" \
-                                   --out docs/potions
+                                   --out docs/modules/potions
 """
 import argparse
 import collections
@@ -72,7 +72,7 @@ def num(v, default=""):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--game", required=True)
-    ap.add_argument("--out", default="docs/potions")
+    ap.add_argument("--out", default="docs/modules/potions")
     a = ap.parse_args()
 
     T = load_tables(a.game)

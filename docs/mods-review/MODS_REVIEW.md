@@ -1,5 +1,7 @@
 # Mod lists review - consolidated
 
+> **Status date:** 2026-10-03 | **Kind:** review | **Trust:** reported and inferred (no mod page or archive was opened) | **Game version:** 1.9.6 and 1.9.8
+
 Status date: 3 Oct 2026. This merges the author's two Nexus lists with the review notes that arrived in
 `Mods WIP folder/new_mods_review/` into one place, and ties them to the three KRS modules. Machine-readable version:
 [`mods_index.csv`](mods_index.csv) (one row per mod id), rebuilt by `python tools/build_mods_index.py`.
@@ -27,7 +29,7 @@ Counts (computed from the lists, they agree with the review README):
   I tried a Nexus page from this session too and got HTTP 403, so the gap cannot be closed from here either.
 - "Files touched" is stated only where a page named a path; otherwise inferred. Verdicts ("slop-risk", "mixed") are opinions on thin evidence.
 - It caught one search error (1131 is the author's "silver armor", not "Playable Daggers", which is 1689). Other ids could carry similar errors.
-- Nothing in the review was measured in game. What this project measured is in `docs/tests/PTF_FINDINGS.md`; where the two meet it is flagged below.
+- Nothing in the review was measured in game. What this project measured is in `docs/engine/ptf-rules.md`; where the two meet it is flagged below.
 
 ## 3. Install methods seen (from page text)
 
@@ -105,7 +107,7 @@ Overlap risk with the three modules, **inferred from names and the review's tabl
 
 How to turn this from inference into fact once the archives are downloaded (all existing tools):
 
-1. Put the archives (or their extracted folders) into a folder and run `python tools/audit_tables.py --root <folder> --out docs/table-audit` to list the tables and rows each mod really changes; `python tools/check_patch_names.py <folder>` flags patches the engine would ignore.
+1. Put the archives (or their extracted folders) into a folder and run `python tools/audit_tables.py --root <folder> --out docs/data/table-audit` to list the tables and rows each mod really changes; `python tools/check_patch_names.py <folder>` flags patches the engine would ignore.
 2. Add the ids to a `--with` run of `python tools/gate.py krs_items krs_perks krs_qol --with <mod folders>`: the log shows `Table 'X' is patched by ...` in load order and whether the KRS rows still read back.
 3. Fill the `krs_area` and `observation` columns in `annotations.csv` from the result and rebuild the index.
 
@@ -138,3 +140,51 @@ How to turn this from inference into fact once the archives are downloaded (all 
 2. Download the archives of the mods that overlap the KRS tables (section 7) so the audit can replace the inferences.
 3. Decide the target game version (1.9.6 vs 1.9.7/1.9.8) before the review's version watchlist is acted on.
 4. The seven ids never looked up, and the 71 unidentified ones, need a manual pass or an allowed Nexus fetch.
+
+## 11. Re-check against game version 1.9.8 (3 Oct 2026)
+
+Nothing above was removed; this section adds what the 1.9.8 install and the official patch notes show. Per-mod detail is in
+`mods_index.csv` (columns `check_1.9.8`, `check_source`). Evidence labels: **measured** = read from the 1.9.8 install or its log,
+**official** = patch notes (summaries; the full texts could not be fetched, `../engine/game-versions.md` section 4),
+**page** = Nexus page summary from a web search (pages themselves are blocked, HTTP 403).
+
+### 11.1 Section 6 (fixes that might be obsolete)
+
+The official 1.9.7 and 1.9.8 notes mention none of: bush collision, the Skalitz shield, weapon icons, smoke and fire. They do list one fix in this area: **Quilted Vest transparent arms** (1.9.7).
+
+| Id | Verdict on 1.9.8 | Basis |
+|---|---|---|
+| 591 Bushes - Collision Remover | **Still applicable, not obsolete.** All 26 models it replaces are byte-identical in every game pak up to 1.9.8, so no patch touched them. 2331 is the rebuilt version (1.9.7 assets); prefer 2331. Collision itself was not inspected | measured + official |
+| 2331 Bushes Collision Remover Redux | Current; no 1.9.8 statement on the page | page |
+| 1323 Skalitz Shield Fix AWL | **Unconfirmed.** No evidence of an official fix; last update 2022-01-19; needs A Woman's Lot. Check the shield in game | page + official |
+| 1577 Invisible hands FIX | **Partly overlapped.** The 1.9.7 note fixes one item (Quilted Vest); the mod fixes the body material's `alphaTest` for all sleeveless clothes (last update 2023-12-13). Keep until tested with another sleeveless item | page + official |
+| 1693 Ravens beak / Spiked warhammer icons | **Still needed.** Current `Tables.pak` still has icon 152 on the Raven's beak and 150 on the spiked warhammer; the mod sets them the other way round. Its manifest lists only 1.9.6, so the 1.9.8 engine disables it until the line is edited | measured |
+| 2066 Distant Smoke and Fire | **Not verifiable here.** Replaces `libs\particles\wh_particels.xml` as a whole file (conflicts with other mods editing it); notes silent on particles; v0.2, 2025-08-22 | page + official |
+| 1380 Black Items Fix | Unresolved (page not identified) | - |
+
+### 11.2 Section 5 (version watchlist) against 1.9.8
+
+| Id | Finding | Worth updating? |
+|---|---|---|
+| 2244 KCSE | v3 matches 1.9.8.0 only; a companion Address Library (2273) is also 1.9.8 only | Yes if the install stays on 1.9.8; useless on older builds |
+| 2040 Polymorphic Projectiles | States 1.9.7+, updated 2026-03-24; needs the "Loot Info" mod for multi-damage arrows | Compatible by its statement |
+| 2331 Bushes Redux | Built on 1.9.7 assets; no 1.9.8 statement | Likely fine (assets unchanged in 1.9.8 data) |
+| 2208, 2210 (True Hardcore series) | Made and tested on 1.9.8; the series also has 2179 Combat, 2188 Economy, 2219 Crime, 2173 Maintenance, 2209 Poisonous Enemies | Current; 2173 touches repairs, compare with `krs_qol` |
+| 2124 Half-looted Rebalance | Made for 1.9.6, "compatible with 1.9.7"; no 1.9.8 statement found | Check before use; it is a large bundle |
+| 1009 Perkaholic PTF | v1.2.3 lists 1.9.4 to 1.9.8 | Already current (older ids 85 and 770 are previous versions) |
+| 1873 Daily Restock And Rich Merchants - PTF | v1.0 by tempbito, no version statement found; the review's "problems on the latest version" is unconfirmed | Unknown; alternatives 1853, 2165, 1460 |
+| 2255, 2348 | Nothing found | - |
+
+### 11.3 The author's own installed mods on 1.9.8 (measured, `../tests/logs/gate_compat_user_mods_1.9.8_tables.log`)
+
+- **Disabled by the engine because their manifest lists only an older version:** Restore Riposte (1765), Drink Sound Effects (1730). Editing that one line loads them (measured with a copy of Riposte and with synthetic mods; `../engine/game-versions.md` section 2). Whether they then behave correctly in a level was not tested.
+- Enabled: Persistent Arrows (1743) and Volumetric Fog Shadows (800) through `1.9.*`; Cheat, Solid Helmet Visors, Time HD, MGs Stay Clean, 30 FPS Cutscene Fix, More Responsive Targeting and Early Bird NPC have no version restriction.
+- The same disabling would hit any mod from the lists whose manifest says `1.9.6` or `1.9.x` (the only working wildcard is `1.9.*`).
+
+### 11.4 Mods added to the index
+
+`mods_index.csv` now has 248 rows: the 201 ids of the two lists plus
+- **32 mods that exist in the workspace or in the Vortex deployment but were not in either list** (for example 1227 30 FPS Cutscene Fix, 1419 Immersive Archery, 1765 Restore Riposte, 1950 Skill Books Take Time 2x, 1938 Herb Picking Radius 2x, 1839 Realistic Horses; the CSV column `scope` marks each row); found by `tools/scan_workspace_mods.py` from the folder names under `Mods WIP folder` and `vortex.deployment.json`. About 30 further entries (loose `.pak` files such as `Dice.pak` and `earlybird.pak`, and folders such as `Food Spoil faster` or `trainmorecarrymore`) have no id in their name and need to be identified by hand (the scanner prints them),
+- **15 mods outside the lists and the workspace**: the 8 adjacent mods of section 9 (1040, 1236, 1296, 1334, 1416, 1689, 1797, 2119) and 7 found while checking (667, 1853, 1882, 2165, 2173, 2219, 2273: series members and alternatives).
+
+The author said more links were brought than the lists in the repository contain; if some are still missing, send them and they go into `mods-review/sources/` and the index.

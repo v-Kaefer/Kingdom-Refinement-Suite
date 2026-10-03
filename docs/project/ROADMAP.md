@@ -1,27 +1,16 @@
 # Kingdom Refinement Suite - action plan
 
+> **Status date:** 2026-10-03 | **Kind:** project | **Trust:** proposal | **Game version:** -
+
 Status date: 2 Oct 2026. Plan for turning the repo into shippable, tested, Vortex-installable mods. It is ordered by
 dependency: nothing in phase 1 or later is worth building until phase 0 makes packaged files actually load.
 
-Effort: S = about half a day, M = 1-2 days, L = several days. Branches follow `docs/OBJECTIVES.md`
+Effort: S = about half a day, M = 1-2 days, L = several days. Branches follow `docs/project/OBJECTIVES.md`
 (`krs-items`, `krs-qol`, `krs-perks`, `krs-bow`; docs and tools live on `dev`).
 
-## Progress (2 Oct 2026, phases 0-3 executed)
+Progress: see `STATUS.md`.
 
-| Phase | State | Evidence |
-|---|---|---|
-| 0 Packaging | **Done** except 0.5 (branches) | `tools/build_module.py`, `tools/gate.py`, `tools/seed_modules.py`; modules under `modules/`; `docs/tests/gate_*.log` |
-| 1 Perks | Built; menu-stage checks pass, perk rows pending a player-stage run | `modules/krs_perks`, `gate_krs_items_krs_perks_krs_qol_tables.log` |
-| 2 Items | Built; 66 rows + 5 constants read back in game; sleeping spots pending (level table) | `modules/krs_items`, `gate_krs_items_tables.log` |
-| 3 QoL | Built; 3 rpg_param rows read back; override/skill2item rows pending (level tables); repair limits left open | `modules/krs_qol` |
-
-Open because the player stage needs someone to press Continue in the test instance (screen access was not granted
-while the author was away): perk rows, `sleeping_spot_type`, `perk_rpg_param_override`, `skill2item_category`, 4.1 bow
-live-read. Command for that run: `python tools/gate.py krs_items krs_perks krs_qol --mode full`, then press Continue.
-Decisions taken by default (change if wrong): separate mods; Enhanced Eyes left out of the modules; repairs in QoL,
-price x2 only; Riposte shipped as `krs_perks` with an "enable only one of them" note.
-
-## What changed the plan (verified in game, `docs/tests/PTF_FINDINGS.md`)
+## What changed the plan (verified in game, `docs/engine/ptf-rules.md`)
 
 1. Patch files are applied only when their suffix equals the mod id. As packaged today, **no KRS table patch loads**.
 2. Rows must be complete and the later mod's row replaces the earlier row entirely.
@@ -66,14 +55,14 @@ not ship), repairs in QoL or Items, Perkaholic as a requirement.
 - Herb radius (0.35), carry capacity (`StrengthToInventoryCapacity`, permission pending), repairs (decision: placement and
   values; remember the `perk_rpg_param_override` values are Hardcore-mode only), Timed Quest Indicator text (EN, CZ, PT).
 - Remove the stray `perk_id` rows from `rpg_param`, fix the single-underscore `skill2item_category` name.
-- Permission tracking: Realistic Repairs, Train More Carry More, Timed Quest Indicator (`docs/OBJECTIVES.md` section 6).
+- Permission tracking: Realistic Repairs, Train More Carry More, Timed Quest Indicator (`docs/project/OBJECTIVES.md` section 6).
 - Done when: gate passes; bridles are repairable in game.
 
 ## Phase 4 - bow mod (branch `krs-bow`) - L
 
 | # | Task | Done when |
 |---|---|---|
-| 4.1 | **Live-read test**: with a loaded save, draw a bow after `RPG.AimSpreadMax = 40` and after `RPG.BowChargeDurationMax = 40`; also the capacity test in the harness. Two ways: a person does the 5-minute test from `docs/bow/FEASIBILITY.md` section 6, or the player stage of the harness (7.2) | answer recorded in `docs/tests/` |
+| 4.1 | **Live-read test**: with a loaded save, draw a bow after `RPG.AimSpreadMax = 40` and after `RPG.BowChargeDurationMax = 40`; also the capacity test in the harness. Two ways: a person does the 5-minute test from `docs/modules/bow/FEASIBILITY.md` section 6, or the player stage of the harness (7.2) | answer recorded in `docs/tests/` |
 | 4.2 | If live: prototype as a script-only mod (`Scripts/Startup/`, entity with `OnUpdate`, no Cheat mod) that computes spread, stamina cost and draw time from `GetStatLevel('str'/'agi')` and writes the constants; log values every second | values follow the stats in the log |
 | 4.3 | Design the formula in a table (inputs, ranges, outputs) with the real constants from `rpg_constants_runtime.csv`; decide how to handle NPC archers (global constants) | formula table reviewed |
 | 4.4 | Find the Lua accessor for the held bow's weight (`player.human:GetItemInHand(0)` returns a handle; resolve it to an item and its weight) or drop the weight input | decision recorded |
@@ -82,7 +71,7 @@ not ship), repairs in QoL or Items, Perkaholic as a requirement.
 
 ## Phase 5 - potions (module `krs_potions`, optional) - L
 
-1. Approve the light-touch method (`docs/potions/ANALYSIS.md` section 6, `SOURCES.md`).
+1. Approve the light-touch method (`docs/modules/potions/ANALYSIS.md` section 6, `SOURCES.md`).
 2. Fix the pipeline: base-name mapping, only `refresh_benefit`, complete rows, deltas bounded from vanilla values.
 3. Write the rule table (each rule: in-game text it builds on, optional real-world "can help with" note, potions touched,
    delta). Use the 12 template potions first; leave designed potions (Poison, Bane, Water of Life, ...) untouched.
@@ -97,7 +86,7 @@ not ship), repairs in QoL or Items, Perkaholic as a requirement.
   and `<supports>` verified (the manifest claims 1.9.4-1.9.6.x, the tests ran on 1.9.6).
 - Compatibility matrix: run the gate with the commonly used mods enabled (Perkaholic, Realistic Repairs, Food Spoil Faster,
   Riposte) and keep the "Table ... is patched by" output and the audit as the report.
-- Keep `docs/ownership.csv` and `docs/table-audit/TABLE_AUDIT.md` updated in every commit.
+- Keep `docs/data/ownership.csv` and `docs/data/table-audit/TABLE_AUDIT.md` updated in every commit.
 
 ## Cross-cutting: test automation (7)
 
@@ -116,7 +105,7 @@ not ship), repairs in QoL or Items, Perkaholic as a requirement.
 | Another mod patches the same rows | audit and gate list every overlap; ship fragile parts as optional mods; document load order |
 | Published Nexus files differ from the repo | compare with the downloaded archive before replacing anything |
 | Permissions (Realistic Repairs, Train More Carry More, Enhanced Eyes) | track in `OBJECTIVES.md` section 6; do not ship files without a yes |
-| Patch rules change in a game update | the harness re-checks them in minutes (`PTF_FINDINGS.md` section 4) |
+| Patch rules change in a game update | the harness re-checks them in minutes (`ptf-rules.md` section 4) |
 
 ## Suggested order for the next two weeks
 

@@ -2,8 +2,8 @@
 """
 params_runtime_csv.py - turn a harness log into the reference table of rpg constants as the running game reports them.
 
-    python tools/harness/params_runtime_csv.py --log docs/tests/run_full_api_stats_constants.log --game "<KCD folder>" \
-        --params-ref "Params Reference.md" --out docs/params/rpg_constants_runtime.csv
+    python tools/harness/params_runtime_csv.py --log docs/tests/logs/run_full_api_stats_constants.log --game "<KCD folder>" \
+        --params-ref "Params Reference.md" --out docs/engine/rpg_constants_runtime.csv
 
 Columns: key, runtime value, exists in the engine, present in the vanilla rpg_param table (and its value),
 present in Params Reference.md (and its section).

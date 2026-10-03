@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 check_patch_names.py - pre-flight check for KCD table-patch (PTF) mods, based on what the game was observed to do
-(docs/tests/PTF_FINDINGS.md):
+(docs/engine/ptf-rules.md):
 
   1. the suffix of every patch file (`table__SUFFIX.xml`) must equal the mod id, otherwise the engine silently ignores it
   2. a mod id may only contain lowercase letters and underscores (no digits, no hyphens)

@@ -1,5 +1,7 @@
 # Dynamic bow mechanics - what the tools can and cannot do
 
+> **Status date:** 2026-10-03 | **Kind:** design | **Trust:** measured on 1.9.6 plus proposal | **Game version:** 1.9.6
+
 Question: can the hidden parameters and the Lua "hack tools" be used to change how the bow works
 (e.g. aim spread and aiming stamina depending on Agility, Strength and bow weight)?
 
@@ -17,8 +19,8 @@ document.
 
 | Capability | Verdict | Evidence |
 |---|---|---|
-| Change a hidden parameter statically (PTF `rpg_param` row) | **Works** | Immersive Archery ships `BowChargeDurationMin/Max`, `BowPowerToChargeDuration`, `AimSpreadSkillDecrease`, `AimPainlessDelay` as new rows; Parameters Plus carries 425 hidden keys in a full `rpg_param` file. See `docs/table-audit/TABLE_AUDIT.md` |
-| Change a parameter while the game runs (Lua) | **Verified in game**: the value reads back | In the test instance `RPG.AimSpreadMax = 40` and `RPG.BowChargeDurationMax = 40` read back 40 and restored to 15 / 3 (`docs/tests/run_full_api_stats_constants.log`). Also the engine design: `setmetatable(RPG, {__index=RPG._GetConstant, __newindex=RPG._SetConstant})`. **Not verified:** that the bow code uses the new value when aiming |
+| Change a hidden parameter statically (PTF `rpg_param` row) | **Works** | Immersive Archery ships `BowChargeDurationMin/Max`, `BowPowerToChargeDuration`, `AimSpreadSkillDecrease`, `AimPainlessDelay` as new rows; Parameters Plus carries 425 hidden keys in a full `rpg_param` file. See `docs/data/table-audit/TABLE_AUDIT.md` |
+| Change a parameter while the game runs (Lua) | **Verified in game**: the value reads back | In the test instance `RPG.AimSpreadMax = 40` and `RPG.BowChargeDurationMax = 40` read back 40 and restored to 15 / 3 (`docs/tests/logs/run_full_api_stats_constants.log`). Also the engine design: `setmetatable(RPG, {__index=RPG._GetConstant, __newindex=RPG._SetConstant})`. **Not verified:** that the bow code uses the new value when aiming |
 | Read a parameter from Lua | **Works** | Vanilla Lua does it: `RPG.MoraleForCombat` in `sb_combat.xml`. Your logs show the same path rejecting unknown names: `no such rpg constant 'GetStat'` |
 | Read Agility / Strength | **Works, with the right API** | Vanilla and the Cheat mod use `player.soul:GetStatLevel('agi')`, `'str'`, `'vit'`, `'cou'`, and `player.soul:GetDerivedStat('cha')` |
 | Load your Lua **without the Cheat mod** | **Verified in game** | The test mod (`Scripts/Startup/*.lua`, an entity, a UIAction listener) ran with only that mod enabled and `cheat = nil`. The engine also runs `scripts/main.lua` of enabled mods (your bow script was loaded that way). See section 8 |
@@ -165,13 +167,13 @@ So the parameters you picked exist; the functions around them did not. Run the t
 in game:
 
 ```bash
-python tools/lua_api_check.py --game "<KCD folder>" --params-ref "Params Reference.md" --out docs/bow/API_CHECK.md my_script.lua
+python tools/lua_api_check.py --game "<KCD folder>" --params-ref "Params Reference.md" --out docs/engine/lua-api-check.md my_script.lua
 ```
 
 ## 10. Draw speed from Strength and Agility
 
 Short answer: **it can work, but the engine already has a Strength link and no Agility link for the bow, so the design has
-two options.** Real values reported by the running game (`docs/params/rpg_constants_runtime.csv`):
+two options.** Real values reported by the running game (`docs/engine/rpg_constants_runtime.csv`):
 
 | Constant | Value | Meaning (from the DLL strings and `Params Reference.md`) |
 |---|---|---|

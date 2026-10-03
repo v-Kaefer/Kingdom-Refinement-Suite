@@ -1,5 +1,7 @@
 # Realistic Potions - where the formula is, what it does, and how to analyse it properly
 
+> **Status date:** 2026-10-03 | **Kind:** design | **Trust:** derived plus proposal | **Game version:** 1.9.6 data
+
 Status: analysis of the existing work. No rebalance values are proposed here on purpose: the in-game values are
 partly designed and partly arbitrary, so the method has to be fixed before the numbers.
 
@@ -133,8 +135,8 @@ vanilla ranges in section 3), not from real-life units.
    "can help with" fact from `claims_ledger.csv` (class B, a nudge only) and the potions it touches. The Aesop reasoning in
    `Potions.md` is a good template. A rule that needs a real-world source to justify a big change is the wrong rule.
 5. **Make the pipeline reproducible:** fix the base-name mapping, write `refresh_benefit` only, never `weight`, read
-   `docs/potions/potion_dataset.csv`, and emit **complete rows** (every column of the `food` header). Measured in game
-   (`docs/tests/PTF_FINDINGS.md`): a row with only some columns blanks the rest, and when two mods patch the same row the
+   `docs/modules/potions/potion_dataset.csv`, and emit **complete rows** (every column of the `food` header). Measured in game
+   (`docs/engine/ptf-rules.md`): a row with only some columns blanks the rest, and when two mods patch the same row the
    later one replaces the whole row. So a potion row must carry the vanilla value for every column it does not change, and
    the mod must be ordered after, or kept apart from, mods such as Food Spoil Faster that edit the same items.
 6. **Acceptance checks** run on every build: no designed potion changes sign or magnitude; buff and food row agree;

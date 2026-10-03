@@ -16,7 +16,7 @@ local function try(label, f, ...)
     return ok, a, b
 end
 
--- 1. which functions exist at run time (confirms docs/bow/API_CHECK.md) ---------------------------------------
+-- 1. which functions exist at run time (confirms docs/engine/lua-api-check.md) ---------------------------------------
 function KRS.api()
     local names = {
         "System.GetEntitiesByClass", "System.GetEntityByName", "System.GetEntityByClass", "System.IsDevModeEnable",
@@ -163,8 +163,12 @@ function KRS_Starter:onAction(actionName, eventName, argTable)
         KRS_Seen[key] = true
         log("ACTION " .. key)
     end
-    -- tables and constants are loaded by the time the main menu starts
-    if KRS.mode == "tables" and actionName == "mm_main" and eventName == "OnStart" then
+    -- tables and constants are loaded by the time the main menu starts. On 1.9.6 that is mm_main/OnStart; on 1.9.8 the
+    -- main menu waits behind new start screens and never sends it, so sys_startup/OnEnd (level running) is accepted too.
+    if KRS.mode == "tables" and not KRS.tables_done
+        and ((actionName == "mm_main" and eventName == "OnStart") or (actionName == "sys_startup" and eventName == "OnEnd")) then
+        KRS.tables_done = true
+        log("tables stage triggered by " .. key)
         try("stage1", KRS.stage1)
         log("end")
         System.Quit()

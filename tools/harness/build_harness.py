@@ -8,7 +8,7 @@ Writes two mods under <game>/Mods:
     krs_harness/    Scripts/Startup/krs_harness.lua + an entity (the test code) and table patches on `food`
     krs_harness_b/   a second patch mod on `food`, used to see how two mods that touch the same row combine
 
-FINDING (see docs/tests/PTF_FINDINGS.md): the engine only applies a table patch whose file suffix equals the mod id
+FINDING (see docs/engine/ptf-rules.md): the engine only applies a table patch whose file suffix equals the mod id
 (`food__krs_harness.xml` for modid `krs_harness`). Both mods therefore name their patch after their own modid.
 
 Patches (vanilla `food` table):
@@ -42,6 +42,8 @@ MANIFEST = """<?xml version="1.0" encoding="utf-8"?>
   </info>
   <supports>
     <kcd_version>1.9.6</kcd_version>
+    <kcd_version>1.9.7</kcd_version>
+    <kcd_version>1.9.8</kcd_version>
   </supports>
 </kcd_mod>
 """

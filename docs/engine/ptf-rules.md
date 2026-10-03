@@ -1,11 +1,9 @@
-# What the game was observed to do (in-game test results)
+# How the game applies table patches (measured)
 
-Tested on the replica in `Mods WIP folder/KingdomComeDeliverance` (build `1.9.6-404-504czj3`, launched through
-`Bin\win64releasedll\kingdomcome.exe` with only the test mods enabled, no Cheat mod). The harness mods are built by
-`tools/harness/build_harness.py` and `tools/harness/build_krs_conformance.py` and run by
-`tools/harness/run_game_test.ps1`; the extracted game logs are the `run_*.log` files in this folder. Everything below was
-read back from the running game (`Database` and `RPG` Lua APIs, or the engine's own "Table ... is patched by" log line),
-not inferred.
+> **Status date:** 2026-10-03 | **Kind:** engine | **Trust:** measured | **Game version:** 1.9.6 (suffix rule re-observed on 1.9.8)
+
+Tested on the replica in `Mods WIP folder/KingdomComeDeliverance`, first on build `1.9.6` (2 Oct 2026) and from 3 Oct on `1.9.8`.
+Everything below was read back from the running game (`Database` and `RPG` Lua APIs, or the engine's own "Table ... is patched by" log line), not inferred. Differences between game versions are in `game-versions.md`.
 
 ## 1. Rules for table patches (PTF)
 
@@ -22,6 +20,7 @@ not inferred.
 | 9 | A `.pak` must be a **ZIP**. A 7z archive renamed `.pak` fails with `Failed to open the pak` (seen 9x for `dynamic_bow_stats.pak` and 7x for `MinimalModTools.pak` in the logs; the copies of those two paks on branch `dev` and `KRS-Items/Para publicar (TEMP)/Data/KRS-Items.pak` start with the 7z signature) | `kcd.log`, `logbackups/` |
 | 10 | Patches added to a hidden constant work: a new `rpg_param` row `DigestionSpeed` was reported as `added: 1` and the game then returned `RPG.DigestionSpeed = 0.00130208` | `run_krs_items_as_is_vs_fixed.log` |
 
+
 ## 2. The suite's own files today
 
 `tools/check_patch_names.py` applies rules 1, 2, 5 and 9 to the repo (report: `check_patch_names_report.txt`).
@@ -33,39 +32,6 @@ files with the suffix renamed to the mod id **were applied and read back correct
 Limits of this statement: it is about the files in the repo; the Nexus release could have been packaged differently,
 and its `.pak` could not be opened (7z).
 
-## 3. Lua and parameters (`run_full_api_stats_constants.log`)
-
-| Observation | Result |
-|---|---|
-| The harness mod's `Scripts/Startup/*.lua`, a spawned entity and a UIAction listener run **without the Cheat mod** | works; `cheat` is `nil` |
-| `Script.SetTimer` called from a startup script | **never fired** (use the listener / entity pattern) |
-| `System.GetEntityByClass`, `System.IsDevMode`, `Script.SetUpdateFunction`, `Game.SetRPGParam`, `Game.GetPlayer` | `nil` (matches `docs/bow/API_CHECK.md`) |
-| Global `player` (table with `soul`, `human`) and `g_localActor` | present once a save is loaded |
-| `player.soul:GetStatLevel('agi'/'str'/'vit'/'spc'/'cou')`, `GetDerivedStat('cha'/'bad'/'mor'/'cap'/'ble')`, `GetState('health')` | work (test save: 15 / 13 / 9 / 14 / 16; capacity 153) |
-| `player.human:GetItemInHand(0)` | callable; returns an empty handle when nothing is held |
-| `RPG.AimSpreadMax = 40` and `RPG.BowChargeDurationMax = 40` | read back 40, restore worked |
-| `RPG.ThisKeyDoesNotExist = 1` | no Lua error, but the engine logs `no such rpg constant` |
-| 597 keys read from `Params Reference.md` + the vanilla table | **588 exist, 9 do not**: `AlcoholPerkLooseTongueSpcChaModif`, `AlcoholismTickInterval`, `DistanceCheckInterval`, `FoodTickInterval`, `ReadingRestEffectiveness`, `ReadingRestUpperLimit`, `TreasureItemPricee`, `UnarmedAttackBase`, `VigourTickInterval`. 406 of the 588 are hidden (not in the vanilla `rpg_param` table). Full list with real values: `docs/params/rpg_constants_runtime.csv` |
-
-## 3b. Not tested yet
-
-- Whether the bow reads `AimSpreadMax`, `AimStamCost` and the `BowCharge*` constants **live** when aiming (needs a person
-  or an automated input to load a save, equip a bow and draw). A first test of this kind (capacity changes when
-  `StrengthToInventoryCapacity` is written) is in the harness but the instance stopped at the main menu in the last runs.
-- Effects on NPC archers.
-- Perk and buff tables (they are only loaded together with a level).
-
-## 4. How to repeat it
-
-```bash
-python tools/harness/build_harness.py --game "<KCD folder>" --params-ref "Params Reference.md" --mode tables
-```
-```powershell
-tools\harness\run_game_test.ps1 -GameDir "<KCD folder>" -OutFile result.log -Mods 'krs_harness','krs_harness_b'
-```
-The runner backs up `Mods\mod_order.txt`, loads only the listed mods, starts the game, waits for the harness line
-`KRS_HARNESS end`, stops the game if needed and restores `mod_order.txt`. Remove the test mods from `Mods` afterwards.
-Side effects: each run creates a new `kcd.log` and moves the previous one into `logbackups/`; the game does not save.
 
 ## 5. Module gate results (phases 0-3)
 

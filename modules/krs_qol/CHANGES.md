@@ -1,6 +1,7 @@
 # krs_qol changes
 
 ## 1.0.0
+- Manifest lists game versions 1.9.6, 1.9.7, 1.9.8. Gate passed on 1.9.8 (menu stage).
 - New module id `krs_qol` with patches `rpg_param__krs_qol.xml`, `perk_rpg_param_override__krs_qol.xml`, `skill2item_category__krs_qol.xml` (all complete rows, suffix = id).
 - The stray `perk_id` rows in `rpg_param` and the bow experiment constants of the old file are not carried over (the bow moves to its own module).
 - Repairs: global price x2 (normal mode) and x2 in the Hardcore constants. Limits left untouched until tested in game.

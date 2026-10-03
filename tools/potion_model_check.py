@@ -4,7 +4,7 @@ potion_model_check.py - evaluate the formula in "Realistic Potions/XmlFilesAnaly
 
 The original script cannot run (it maps alchemy_base names with a wrong prefix and crashes with a KeyError), and it
 writes columns the vanilla `food` table does not have (`energy_benefit`, `weight`). This tool re-implements the same
-arithmetic on top of docs/potions/potion_dataset.csv so the effect of the formula can be inspected before anything
+arithmetic on top of docs/modules/potions/potion_dataset.csv so the effect of the formula can be inspected before anything
 is written into a mod:
 
     nutrition = base.nut + sum(ingredient.nutrition * qty) * base.fac
@@ -12,7 +12,7 @@ is written into a mod:
     health    = sum(ingredient.health * qty) * base.fac ; if a poisonous herb and no charcoal: min(health, -5)
     ratio     = base.ratio ; alcohol = base.alc
 
-    python tools/potion_model_check.py --dataset docs/potions/potion_dataset.csv \
+    python tools/potion_model_check.py --dataset docs/modules/potions/potion_dataset.csv \
         --ingredients "Realistic Potions/ingredients.json" [--csv out.csv]
 """
 import argparse
@@ -38,9 +38,9 @@ def f(v):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dataset", default="docs/potions/potion_dataset.csv")
+    ap.add_argument("--dataset", default="docs/modules/potions/potion_dataset.csv")
     ap.add_argument("--ingredients", default="Realistic Potions/ingredients.json")
-    ap.add_argument("--ingredient-dataset", default="docs/potions/ingredient_dataset.csv")
+    ap.add_argument("--ingredient-dataset", default="docs/modules/potions/ingredient_dataset.csv")
     ap.add_argument("--csv")
     a = ap.parse_args()
 
