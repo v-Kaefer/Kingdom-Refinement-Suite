@@ -5,6 +5,12 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (second request): names checked against links, 20 mods excluded
+
+- Compared the name of every id in all lists with the Nexus API name (545 comparisons) and the downloaded file names with the page names: no wrong id; the only differences are the author's short labels. Details in `docs/mods-review/DOWNLOADS_PLAN.md`.
+- New `docs/mods-review/excluded_mods.csv` (20 mods the author does not want: models, maps, tools, older variants). `tools/triage_mods.py` sets them to P4 "Excluded by the author" and leaves them out of the archives shortlist; `tools/inventory_downloads.py` never lists them as missing. Missing is now 79 (the third batch not yet downloaded).
+- Rule change: no more batches in triage order; pages are opened only from a list the author gives.
+
 ## 2026-10-04: downloads reconciled and sorted (nothing opened)
 
 No game run. The ~200 downloaded archives are untrusted (malware warnings), so nothing was extracted, installed or run.

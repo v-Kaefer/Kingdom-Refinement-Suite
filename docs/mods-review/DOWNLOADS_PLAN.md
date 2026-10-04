@@ -35,6 +35,12 @@ The archives are untrusted (the author received malware warnings while downloadi
 - **Duplicates by hash (3 pairs):** 651 Better Combat and Immersion Compilation, 491 JCD_LootInfo, 106 cheat, each downloaded twice (`(1)` copy). Nothing was deleted.
 - 44 archives carry an upload date after the 1.9.7 patch (13 Feb 2026), read from the file name. That is a hint of freshness, not of compatibility.
 
+## Names against links, and the excluded mods (4 Oct 2026)
+
+The author saw pages of swords, armor, maps and the KCD modding tools in the opened tabs and asked to check the list names against the pages. Result: **no link points at the wrong mod.** The name of every id was compared across all sources (Vivaldi tab, the 290-title list, the author's labels of the "working on 1.9.6" list, search titles) with the Nexus API name: 545 comparisons, 6 differ, and all 6 are the author's short labels (`sorting mod` for 797 Inventoried, `no mo slo mo` for 284, `richer merchants` for 1460, `lost weapon pack` for 1566) or a longer page title (1131 removed, 2079). The archive file names against the page names of the 190 downloaded ids showed no mismatch either. So there was no link to remove; the pages are the right ones for the ids, but the mods are **not wanted**: 11 come from the "working out of the box" list (already in use), 4 are older or similar versions of mods already in use, the rest are models, maps and tools.
+
+The 20 are in [`excluded_mods.csv`](excluded_mods.csv) (1416, 1386, 1374, 1281, 1203, 1182, 1089, 958, 942, 915, 913, 905, 891, 864, 827, 795, 791, 762, 708, 129). The triage puts them at P4 "Excluded by the author", the archives shortlist skips them and `tools/inventory_downloads.py` never reports them as missing. **No page of them is opened again.** My own selection rule was the cause: batches 2 and 3 were filled in triage order, which reaches P3/P4 (models, maps, HUD, reshades, tools) after the 129 P2 mods. **All P2 mods have been asked for; no further batch will be filled by triage order.** More pages are opened only from a list the author gives.
+
 ## Decisions of the author (step 5, answered 4 Oct 2026)
 
 1. **Duplicates:** the three `(1)` copies were deleted (after checking again that their SHA-256 equals the original; they went to the Recycle Bin, not removed permanently).

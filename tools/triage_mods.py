@@ -147,6 +147,10 @@ def main():
         e["summary"] = (e.get("summary", "") + " " + m.get("summary", "")).strip()
         e["_api"] = True
         evs[i] = e
+    excluded = {}   # docs/mods-review/excluded_mods.csv: mods the author does not want (id, name, reason, decided)
+    p = os.path.join(D, "excluded_mods.csv")
+    if os.path.exists(p):
+        excluded = {int(x["id"]): x for x in csv.DictReader(open(p, encoding="utf-8", newline=""))}
     nf = collections.defaultdict(list)
     p = os.path.join(D, "nexus_files.csv")
     if os.path.exists(p):
@@ -166,6 +170,8 @@ def main():
         meta = nm.get(i, {})
         if meta.get("status") in ("removed", "removed_by_staff", "hidden", "under_moderation", "not_published") and prio != "P1":
             prio, action, reason = "P4", "Removed or hidden on Nexus: drop it or find a replacement", "Nexus API status: " + meta["status"]
+        if i in excluded:
+            prio, action, reason = "P4", "Excluded by the author: do not download or review", excluded[i]["reason"]
         uploads = sorted(x["uploaded_at"] for x in nf.get(i, []) if x.get("uploaded_at") and x.get("category") not in ("removed", "archived"))
         last_up = uploads[-1][:10] if uploads else ""
         latest = next((x["version"] for x in sorted(nf.get(i, []), key=lambda y: y.get("uploaded_at", ""), reverse=True)
@@ -258,7 +264,7 @@ def main():
             L += ["File lists and versions were not fetched yet (`python tools/nexus_metadata.py --files`).", ""]
 
     # mods worth reading as archives next: likely or measured collision and not read yet, plus PTF-shaped gameplay in a KRS area
-    todo = [o for o in out if o["evidence"] != "A archive" and o["nexus_status"] in ("", "published")
+    todo = [o for o in out if o["evidence"] != "A archive" and o["nexus_status"] in ("", "published") and o["id"] not in excluded
             and (o["row_collision"].startswith("likely") or (o["priority"] == "P2" and "Study" in o["action"]))]
     S = ["# Archives to read next (generated)", "",
          "> **GENERATED** by `tools/triage_mods.py`: do not edit | **Kind:** review | **Trust:** triage rules plus Nexus API names and status | **Game version:** 1.9.8", "",
