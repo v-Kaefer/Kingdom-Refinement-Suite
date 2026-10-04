@@ -106,8 +106,11 @@ def main():
         raise SystemExit("7-Zip not found at " + SEVENZ)
     krs = krs_rows()
     results = []
-    for arc in sorted(os.listdir(a.src)):
-        p = os.path.join(a.src, arc)
+    # archives lie in the source folder itself or in its sub-folders made by tools/inventory_downloads.py (not _incomplete)
+    found = [(d, n) for d in ["."] + sorted(x for x in os.listdir(a.src) if os.path.isdir(os.path.join(a.src, x)) and x != "_incomplete")
+             for n in sorted(os.listdir(os.path.join(a.src, d)))]
+    for sub, arc in found:
+        p = os.path.join(a.src, sub, arc)
         if not os.path.isfile(p) or not re.search(r"\.(zip|7z|rar|7zip)$", arc, re.I):
             continue
         m = NAME.match(re.sub(r"\.(zip|7z|rar|7zip)$", "", arc, flags=re.I))

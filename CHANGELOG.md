@@ -5,6 +5,16 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04: downloads reconciled and sorted (nothing opened)
+
+No game run. The ~200 downloaded archives are untrusted (malware warnings), so nothing was extracted, installed or run.
+
+- New `tools/inventory_downloads.py`: reads only file names, sizes and SHA-256; compares the folder with `docs/mods-review/download_batches.csv` (the 212 ids asked for: pilot, two batches of 100 tabs, shortlist). Outputs `downloads_inventory.csv`, `downloads_missing.csv`, `DOWNLOADS_STATUS.md`. Result: 204 entries, 186 mod ids, 35 missing (5 only in the Vortex folder, 1 from batch 1, 29 from batch 2), 5 ids not in the index, 3 duplicate pairs, 1 unfinished download.
+- Sorted the 204 entries into `c_<category>/`, `_unmatched/` and `_incomplete/` inside `Installed_to_review` (move only, undo with `--undo`, manifest `_sort_manifest.csv`).
+- `tools/analyze_mod_archives.py` now also walks those sub-folders (not run: it extracts).
+- Plan and open decisions: `docs/mods-review/DOWNLOADS_PLAN.md`.
+- Opened the second batch of 100 Nexus pages (2.5 s apart) before this.
+
 ## 2026-10-03 (sixth request): Nexus API results folded in, download question
 
 No game run in this request.
