@@ -32,11 +32,11 @@ Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (3 ids
 ## Identical copies (same SHA-256)
 
 - `Apex ENB-660-2-2-1590351047.7z` = Apex ENB-660-2-2-1590351047.7z
+- `Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ (1).zip` = Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ.zip
+- `Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ.zip` = Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ (1).zip
 - `Apex ENB-660-2-2-1590351047.7z` = Apex ENB-660-2-2-1590351047.7z
 - `Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727 (1).7z` = Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727.7z
 - `Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727.7z` = Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727 (1).7z
-- `Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ (1).zip` = Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ.zip
-- `Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ.zip` = Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ (1).zip
 
 ## Downloaded mods that are not among the 365 of the index
 
@@ -66,6 +66,7 @@ Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (3 ids
 |---|---|---|---|
 | `Apex ENB-660-2-2-1590351047.7z` | id is not in the index (a misleading link?) | 660 |  |
 | `Não confirmado 711221.crdownload` | incomplete: download again |  |  |
+| `KCSE 2244 3 2026-06-29T13-46Z b37E8uyAU.zip` | downloaded, but not in any batch asked for | 2244 | Kingdom Come Script Extender |
 | `_quarantine_manifest.csv` | no mod id: look at it by hand |  |  |
 | `Ambient_Occlusion_Fix_user_v1.07-387-1-07.7z` | id is not in the index (a misleading link?) | 387 |  |
 | `Apex ENB-660-2-2-1590351047.7z` | id is not in the index (a misleading link?) | 660 |  |
@@ -88,7 +89,6 @@ Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (3 ids
 | `VolumetricFogShadows-800-1-1-1563786542` | downloaded, but not in any batch asked for | 800 | Volumetric Fog Shadows |
 | `IntimidationStat-1723-1-1-1728217688` | downloaded, but not in any batch asked for | 1723 | Intimidation Stat In Inventory |
 | `1.9.8 Steam Epic GOG 2273 1 2026-06-29T13-38Z U5RChtbYi.zip` | downloaded, but not in any batch asked for | 2273 | Address Library For KCSE |
-| `KCSE 2244 3 2026-06-29T13-46Z b37E8uyAU.zip` | downloaded, but not in any batch asked for | 2244 | Kingdom Come Script Extender |
 
 ## Uploaded after the 1.9.7 patch (13 Feb 2026)
 

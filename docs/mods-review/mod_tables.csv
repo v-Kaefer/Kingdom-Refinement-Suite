@@ -386,10 +386,12 @@ id,entry,file_in_mod,table,vanilla_table,style,rows,new,changed,same,dropped_vs_
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/skill_check_difficulty.xml,skill_check_difficulty,skill_check_difficulty,exact,7,0,0,7,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/sleeping_spot_type.xml,sleeping_spot_type,sleeping_spot_type,exact,5,0,0,5,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/social_class.xml,social_class,social_class,exact,54,0,0,54,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul.xml,soul,soul,exact,5025,0,2,5023,0,"courage,str,vit"
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul2hobby.xml,soul2hobby,soul2hobby,exact,2328,0,0,2328,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul2inventory.xml,soul2inventory,soul2inventory,exact,1237,0,0,1237,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul2metarole.xml,soul2metarole,soul2metarole,exact,11906,0,0,11906,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul2perk.xml,soul2perk,soul2perk,exact,48718,0,0,48718,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul2role.xml,soul2role,soul2role,exact,326362,0,0,326362,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul2skill.xml,soul2skill,soul2skill,exact,36442,0,0,36442,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul_ability.xml,soul_ability,soul_ability,exact,54,0,0,54,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/soul_archetype.xml,soul_archetype,soul_archetype,exact,16,0,4,12,0,"body_base_armor,inventory_capacity_multiplier"
@@ -404,6 +406,7 @@ id,entry,file_in_mod,table,vanilla_table,style,rows,new,changed,same,dropped_vs_
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/superfaction.xml,superfaction,superfaction,exact,63,0,0,63,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/superfaction2superfaction_relationship.xml,superfaction2superfaction_relationship,superfaction2superfaction_relationship,exact,274,0,0,274,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/v_rich_presence_text.xml,v_rich_presence_text,v_rich_presence_text,exact,2264,0,0,2264,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/v_soul2role_metarole.xml,v_soul2role_metarole,v_soul2role_metarole,exact,326362,0,0,326362,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/v_soul_character_data.xml,v_soul_character_data,v_soul_character_data,exact,5025,0,0,5025,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/rpg/v_sph_texts.xml,v_sph_texts,v_sph_texts,exact,570,0,0,570,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/shop/shop.xml,shop,shop,exact,163,0,161,2,0,price_sell_multiplier
@@ -419,12 +422,17 @@ id,entry,file_in_mod,table,vanilla_table,style,rows,new,changed,same,dropped_vs_
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/dialogue_functions.xml,dialogue_functions,dialogue_functions,exact,261,0,0,261,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/dialogue_hearing.xml,dialogue_hearing,dialogue_hearing,exact,7,0,0,7,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/dialogue_mood.xml,dialogue_mood,dialogue_mood,exact,86,0,0,86,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/response.xml,response,response,exact,84632,1,0,84631,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/sequence.xml,sequence,sequence,exact,52415,0,1,52414,0,flags
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/sequence2quest_objective.xml,sequence2quest_objective,sequence2quest_objective,exact,6680,0,0,6680,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/sequence_flowchart.xml,sequence_flowchart,sequence_flowchart,exact,2,0,0,2,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/sequence_line.xml,sequence_line,sequence_line,exact,201190,0,0,201190,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/topic.xml,topic,topic,exact,22663,0,0,22663,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/topic2sequence.xml,topic2sequence,topic2sequence,exact,49404,0,1,49403,0,entry_condition
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/topictorole.xml,TopicToRole,?,unknown table,13426,0,13426,0,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/v_branch.xml,v_branch,v_branch,exact,8926,0,0,8926,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/v_dialogue_commands.xml,v_dialogue_commands,v_dialogue_commands,exact,82657,0,0,82657,0,
+883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/v_response_wave_file_recorded.xml,v_response_wave_file_recorded,v_response_wave_file_recorded,exact,156884,0,0,156884,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/v_topic2subchapter_id.xml,v_topic2subchapter_id,v_topic2subchapter_id,exact,5846,0,0,5846,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/text/v_voice_abbreviation.xml,v_voice_abbreviation,v_voice_abbreviation,exact,64,0,0,64,0,
 883,Rebalancing 1.3-883-1-3-1593332571.7z,Tables.pak!Libs/Tables/ui/cf_backer_ingame.xml,cf_backer_ingame,cf_backer_ingame,exact,396,0,0,396,0,
@@ -560,6 +568,7 @@ id,entry,file_in_mod,table,vanilla_table,style,rows,new,changed,same,dropped_vs_
 1629,MakeThemReasonable-1629-1-2-0-1736432412.zip,MakeThemReasonable/Data/MakeThemReasonable.pak!Libs/Tables/rpg/perk__makethemreasonable.xml,perk,perk,exact,2,1,1,0,550,"icon_id,perk_ui_desc,perk_ui_name,stat_selector,visibility"
 1629,MakeThemReasonable-1629-1-2-0-1736432412.zip,MakeThemReasonable/Data/MakeThemReasonable.pak!Libs/Tables/rpg/soul2perk.xml,soul2perk,soul2perk,exact,46449,2422,0,44027,4692,
 1639,AlternateFoodSpoil2X-1639-1-0-1715595738.zip,zzz_AlternateFoodSpoil2X/Data/zzz_AlternateFoodSpoil2X.pak!Libs/Tables/item/food__AlternateFoodSpoil2X.xml,food,food,exact,202,0,111,91,0,decay_time_hours
+1652,catche the worm-1652-1-0-1716593673.zip,catches_the_worm/Data/catchestheworm.pak!Libs/Tables/rpg/soul__catchestheworm.xml,soul,soul,exact,5025,147,2329,2549,147,"time_0,time_1,time_2,time_3,time_4,time_5,time_6,time_7"
 1660,Double Brew Yield-1660-1-0-1717587176.zip,DoubleBrewYield/Data/DoubleBrewYield.pak!Libs/Tables/item/recipe__DoubleBrewYield.xml,recipe,recipe,exact,35,0,35,0,0,max_yield
 1668,Relaxed RPG Params-1668-1-0-1-1718992231.7z,Relaxed_RPG_Params/Data/relaxed_rpg_params.pak!Libs/Tables/rpg/rpg_param__RRPG.xml,rpg_param,rpg_param,exact,33,7,26,0,156,rpg_param_value
 1671,MagusAngrinessBegone-1671-Unknown-1718907026.7z,MagusAngrinessBegone/Data/MagusAngrinessBegone.pak!Libs/Tables/rpg/angriness_enum__MagusAngrinessBegone.xml,angriness_enum__MagusAngrinessBegone,angriness_enum,ptf,7,0,7,0,2,value
@@ -623,7 +632,7 @@ id,entry,file_in_mod,table,vanilla_table,style,rows,new,changed,same,dropped_vs_
 1990,Veteran Hunting 1.0-1990-1-0-1745597572.zip,VeteranHunting/Data/VeteranHunting.pak!Libs/Tables/rpg/perk_buff__VeteranHunting.xml,perk_buff__VeteranHunting,perk_buff,ptf,1,1,0,0,138,
 1990,Veteran Hunting 1.0-1990-1-0-1745597572.zip,VeteranHunting/Data/VeteranHunting.pak!Libs/Tables/rpg/perk__VeteranHunting.xml,perk__VeteranHunting,perk,ptf,1,1,0,0,551,
 1990,Veteran Hunting 1.0-1990-1-0-1745597572.zip,VeteranHunting/Data/VeteranHunting.pak!Libs/Tables/rpg/soul__VeteranHunting.xml,soul__VeteranHunting,soul,ptf,7,0,7,0,5018,"hearing,vision"
-1996,Alcohol Is Not Food Anymore-1996-1-0-1745154676.zip,AlcoholIsNotFoodAnymore/Data/Alcohol_Is_Not_Food_Anymore.pak!Libs/Tables/item/food__Alcohol_Is_Not_Food_Anymore.xml,food,food,exact,8,0,0,8,194,
+1996,Alcohol Is Not Food Anymore-1996-1-0-1745154676.zip,AlcoholIsNotFoodAnymore/Data/Alcohol_Is_Not_Food_Anymore.pak!Libs/Tables/item/food__Alcohol_Is_Not_Food_Anymore.xml,food,food,exact,8,0,8,0,194,nutrition_benefit
 2011,Chefs Kiss 2011 3.7 2026-06-21T22-06Z HM0uQNJkR.7z,dddb_chefs_kiss/Data/Tables.pak!Libs/Tables/item/consumable_item__dddb_chefs_kiss.xml,consumable_item,consumable_item,exact,50,5,38,7,168,buff_id
 2011,Chefs Kiss 2011 3.7 2026-06-21T22-06Z HM0uQNJkR.7z,dddb_chefs_kiss/Data/Tables.pak!Libs/Tables/item/food__dddb_chefs_kiss.xml,food,food,exact,182,0,180,2,26,"alcohol_content,decay_time_hours,food_subtype_id,food_type_id,health_benefit,max_status,nutrition_benefit,refresh_benefi"
 2011,Chefs Kiss 2011 3.7 2026-06-21T22-06Z HM0uQNJkR.7z,dddb_chefs_kiss/Data/Tables.pak!Libs/Tables/item/item__dddb_chefs_kiss.xml,item,item,exact,59,0,4,55,2156,item_name

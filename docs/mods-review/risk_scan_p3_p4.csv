@@ -1,0 +1,228 @@
+id,name,entry,risk,findings,native_sha256,action
+28,No Helmet Vision,No Helmet Vision-28-1-9-1559069013.zip,none,,,kept
+106,Cheat,cheat-106-1-58-1732985419.zip,HIGH,"HIGH: mod Lua loads code dynamically (loadstring/loadfile) and opens files (io.open): a script framework, not a data tweak | MEDIUM: Lua io.open in Cheat/Data/data.pak!Scripts/Startup/main.lua | MEDIUM: Lua loadstring/loadfile/dofile in Cheat/Data/data.pak!Scripts/Startup/main.lua | MEDIUM: Lua io.open in Cheat/Data/data.pak!Scripts/cheat_console.lua | MEDIUM: Lua loadstring/loadfile/dofile in Cheat/Data/data.pak!Scripts/cheat_console.lua | MEDIUM: Lua io.open in Cheat/Data/data.pak!Scripts/cheat_core_exec.lua | MEDIUM: Lua loadstring/loadfile/dofile in Cheat/Data/data.pak!Scripts/cheat_debug.lua | MEDIUM: Lua debug.* in Cheat/Data/data.pak!Scripts/cheat_debug.lua",,quarantined
+129,Equal Horse Caparisons,Equal Caparisons Grouped-129--5-1758213686.zip,none,,,kept
+266,All Referenced Strings In Kingdom Come Deliverance,All Referenced Strings-266-1-0.7z,none,,,kept
+326,Knox's Labelled Items (XML),Knox's Labelled Items (XML)-326-1-0-2.zip,none,,,kept
+387,Ambient_Occlusion_Fix_user_v1.07-387-1-07.7z,Ambient_Occlusion_Fix_user_v1.07-387-1-07.7z,none,,,kept
+392,Sky Fix 1.2-392-1-2.rar,Sky Fix 1.2-392-1-2.rar,none,,,kept
+392,Sky and Grass Fix 1.2-392-1-2.rar,Sky and Grass Fix 1.2-392-1-2.rar,none,,,kept
+483,Hoods and Scarfs UP (dynamic),Dynamic Hoods and Scarfs up and down-483-1-9-1590343806.zip,none,,,kept
+491,Loot Info - Container is empty or I already opened-looted it,JCD_LootInfo-491-1-8-0-1582327030.zip,none,,,kept
+502,zzzz_JCD_CLAM,CLAM-502-1-2-0.zip,none,,,kept
+554,Parameters Plus,Parameters Plus-554-1-5-1562283931.zip,none,,,kept
+611,Dice.pak,Dice.pak,none,,,kept
+657,Binoculars Zoom,BinocularsZoom-657-1-1-1542038638.zip,none,,,kept
+660,Apex ENB-660-2-2-1590351047.7z,Apex ENB-660-2-2-1590351047.7z,none,,,kept
+660,Apex ENB-660-2-2-1590351047.7z,Apex ENB-660-2-2-1590351047.7z,none,,,kept
+667,Naked Armor Fix,Naked Armor Fix 1.1-667-1-1-1545056415.zip,none,,,kept
+726,Early Bird NPC Schedules,Early Bird NPC rescheduler-726-2-1-0-1640796373.7z,none,,,kept
+726,Early Bird NPC Schedules,earlybird.pak,none,,,kept
+754,Painted Lords of Leipa Hounskull,Painted Leipa Hounskull-754-1-0-1559896602.zip,none,,,kept
+771,Hoods Over Helmats Removed Clipping Helmets On NPC'S,Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310,HIGH,"HIGH: mod Lua loads code dynamically (loadstring/loadfile) and opens files (io.open): a script framework, not a data tweak | MEDIUM: nested archive (not readable by the game): Data/Hoods Over Helmets.7zip | MEDIUM: Lua io.open in Data/Scripts/cheat_console.lua | MEDIUM: Lua loadstring/loadfile/dofile in Data/Scripts/cheat_console.lua | MEDIUM: Lua io.open in Data/Scripts/cheat_core_exec.lua | MEDIUM: Lua loadstring/loadfile/dofile in Data/Scripts/cheat_debug.lua | MEDIUM: Lua debug.* in Data/Scripts/cheat_debug.lua | MEDIUM: Lua io.open in Data/Scripts/Startup/main.lua | MEDIUM: Lua loadstring/loadfile/dofile in Data/Scripts/Startup/main.lua",,quarantined
+771,Hoods Over Helmats Removed Clipping Helmets On NPC'S,Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310.7z,HIGH,"HIGH: mod Lua loads code dynamically (loadstring/loadfile) and opens files (io.open): a script framework, not a data tweak | MEDIUM: Lua io.open in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/cheat_console.lua | MEDIUM: Lua loadstring/loadfile/dofile in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/cheat_console.lua | MEDIUM: Lua io.open in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/cheat_core_exec.lua | MEDIUM: Lua loadstring/loadfile/dofile in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/cheat_debug.lua | MEDIUM: Lua debug.* in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/cheat_debug.lua | MEDIUM: Lua io.open in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/Startup/main.lua | MEDIUM: Lua loadstring/loadfile/dofile in mods/Hoods Over Helmets/Data/Hoods Over Helmets.pak!Scripts/Startup/main.lua",,quarantined
+796,Miller Guild Items,Miller Guild Items-796-1-3-1564712669.7z,none,,,kept
+797,Inventoried,Inventoried - Standard-797-1-6-3-1605332384.zip,none,,,kept
+800,Volumetric Fog Shadows,VolumetricFogShadows-800-1-1-1563786542,none,,,kept
+808,Named NPCs,Named NPCs (BIO version) 1.4-808-1-4-1568060707.7z,none,,,kept
+808,Named NPCs,Named NPCs 1.4-808-1-4-1568060673.7z,none,,,kept
+829,Shop Proper,Shop Proper-829-1-0-5-1575357704.7z,none,,,kept
+837,Easy Edit,EasyEdit-837--1-1567314659.zip,none,,,kept
+840,Blood and Iron Encounter System,Blood and Iron Encounter System-840-1-0-1567464422.7z,none,,,kept
+844,Yet Another (Realistic) Reshade,Yet Another Reshade-844-1-0-1567756118.7z,none,,,kept
+867,APEX Realistic Modding Guide tweaks and fixes,cfg files-867-1-4-1585770880.7z,none,,,kept
+879,Original clouds KCD no mipmap,zima101-879-1-0-1575121825.zip,none,,,kept
+892,Baselard Dagger,Baselard Dagger Mod-892-1-0-2-1581856259.zip,none,,,kept
+922,Enhanced Hair Textures,Enhanced Hair Textures by Grimsy 1.1-922-1-1-1583842369.rar,none,,,kept
+930,Photorealistic Beauty,Photorealistic Beauty 3.0-930-3-0-1584403800.zip,none,,,kept
+950,Henry's Castle at Pribyslavits,Castle Pribyslavits-950-1-2-1583519496.zip,MEDIUM,MEDIUM: long base64-like blob in castle_pribyslavits 1.2/data/data.pak!prefabs/smartobjects.xml | MEDIUM: long base64-like blob in castle_pribyslavits 1.2/data/data.pak!prefabs/staticlights.xml,,kept
+955,Treasure Maps Of Bohemia,Treasure Maps Of Bohemia-955-1-9-5-1-1585332038.7z,none,,,kept
+957,Dark Souls Death Screen,DSDeathScreen (Option 1)-957-1-0-1584101845.rar,none,,,kept
+966,15th to 16th Century style Ottoman sword,ottomansword-966-1-0-1584472459.rar,none,,,kept
+969,Enhanced Eyes,Enhanced Eyes 1.1-969-1-1-1585051202.zip,none,,,kept
+972,Let Me Loot,Let Me Loot v1.3-972-1-3-1592335957.zip,HIGH,HIGH: native binary by magic bytes: bin/Win64/dinput8.dll | HIGH: native binary by magic bytes: NativeMods/letmeloot.dll | HIGH: native code file: bin/Win64/dinput8.dll | HIGH: native code file: NativeMods/letmeloot.dll,bin/Win64/dinput8.dll=71c42e0d61e84ebc NativeMods/letmeloot.dll=cdfb3fdae385a502 bin/Win64/dinput8.dll: suspicious strings: none; game-related strings:  || NativeMods/letmeloot.dll: suspicious strings: none; game-related strings: GetGameVersionNumber: Cannot parse system.cfg / system.cfg / Initialize: InjectHooks failed,quarantined
+975,Super Natural Reshade,Super Natural Reshade v1.5-975-v1-5-1587646699.zip,none,,,kept
+977,Alms for Beggars,Beggars_alms_mod_v1.5.2-977-1-5-2-1590399761.zip,none,,,kept
+978,minimalistic HUD,minimalisticHUD-978-1-0-1585828036.zip,none,,,kept
+994,Depth ReShade,Depth Reshade by Ahaut-994-2-0-1586561627.zip,none,,,kept
+1045,MORE BLOOD,More blood-1045-0-2-2-1592095918.zip,none,,,kept
+1046,Rudy ENB for KCD,Rudy ENB for KCD-1046-1-0a-1591826956.rar,none,,,kept
+1059,Icon ID Resource,Icon ID Resource-1059-1-0-1592792055.rar,none,,,kept
+1063,Paper UI,PaperUI-1063-1-0-1593630274.rar,none,,,kept
+1074,Realism Enlighted ReShade - lore-friendly realistic Visual Enhancing and Sharpening - big quality boost on lower resolutions,Realism Enlighted Reshade 1.0-1074-1-0-1594741584.rar,HIGH,HIGH: native binary by magic bytes: dxgi.dll | HIGH: native code file: dxgi.dll | LOW: URL in reshade-shaders/Shaders/Pirate/Pirate_Depth.cfg: https://raw.githubusercontent.com/crosire/reshade-shaders/master/Shaders/ReShade,"dxgi.dll=28205140b368210f dxgi.dll: suspicious strings: CreateRemoteThread, GetAsyncKeyState, InternetOpen, InternetReadFile, http://, https://; game-related strings: glDispatchCompute / glDispatchComputeIndirect / glFramebufferParameteri / glFramebufferParameteriMESA / glGetBufferParameteri64v / glGetBufferParameteriv / glGetFramebufferAttachmentParameteriv / glGetFramebufferParameteriv / glGetFramebufferParameterivMESA / glGetNamedBufferParameteri64v / glGetNamedBufferParameteriv / glGetNamedFramebufferAttachmentParameteriv / glGetNamedFramebufferParameteriv / glGetNamedRenderbufferParameteriv",quarantined
+1080,ReformationFX Reshade,ReformationFX v1.1-1080-v1-1-1597071272.rar,none,,,kept
+1088,Polearms Unleashed,PolearmsUnleashed-1088-2-4-3-1603958640.7z,none,,,kept
+1092,Pollax replacer (Axe and Hammer head interchangable),pollax-1092-1-4-1601148804.7z,none,,,kept
+1093,Fishing in Bohemia,Fishing in Bohemia 1.1-1093-1-1-1598974175.7z,none,,,kept
+1107,Blood and Steel with NO FPS LOSS,Blood and Steel-1107-1-0-1600512585.zip,none,,,kept
+1110,AI Standalone Library,resource-1110-1-5-1603783234.7z,none,,,kept
+1114,Snow Mod,Snow-Mod-1114-0-5-1600873143.zip,none,,,kept
+1153,More historically accurate item stats,mod-1153-1-0-0-1605526312.zip,none,,,kept
+1193,Weather Mod,Weather Mod-1193-1-0-1610176393.7z,HIGH,"HIGH: mod Lua loads code dynamically (loadstring/loadfile) and opens files (io.open): a script framework, not a data tweak | MEDIUM: Lua io.open in mods/Weather/Data/Weather.pak!Scripts/cheat_console.lua | MEDIUM: Lua loadstring/loadfile/dofile in mods/Weather/Data/Weather.pak!Scripts/cheat_console.lua | MEDIUM: Lua io.open in mods/Weather/Data/Weather.pak!Scripts/cheat_core_exec.lua | MEDIUM: Lua loadstring/loadfile/dofile in mods/Weather/Data/Weather.pak!Scripts/cheat_debug.lua | MEDIUM: Lua debug.* in mods/Weather/Data/Weather.pak!Scripts/cheat_debug.lua | MEDIUM: Lua io.open in mods/Weather/Data/Weather.pak!Scripts/Startup/main.lua | MEDIUM: Lua loadstring/loadfile/dofile in mods/Weather/Data/Weather.pak!Scripts/Startup/main.lua",,quarantined
+1196,Better graphics reshade,Better_graphics Reshade-1196-V-1-0-1610810923.zip,none,,,kept
+1197,Proper Cyrillic Fonts,ProperCyrillicFonts.zip-1197-1-2-1612480063.zip,none,,,kept
+1218,Lartigue's Upscale Project 2.0 - Upscaled UI and icons,LartiguesUpscaleProject2.1-1218-2-1-1734099038,MEDIUM,MEDIUM: nested archive (not readable by the game): Data/GameData.7zip,,kept
+1218,Lartigue's Upscale Project 2.0 - Upscaled UI and icons,LartiguesUpscaleProject2.1.1-1218-2-1-1-1750232674.zip,none,,,kept
+1227,30 FPS Cutscene Fix V3,CutsceneFPSFixV3-1227-3-0-1766546982.zip,none,,,kept
+1256,Horus 2.0 KCD Reshade Preset,Horus 2.0 KCD-1256-2-0-1662311636.zip,none,,,kept
+1258,vShade for GShade Realistic Graphic Preset,vShade-1258-1-0-1625557844.zip,none,,,kept
+1259,Easy Assassination,EasyAssassination 1.1-1259-1-1-1628879677.zip,none,,,kept
+1283,KINGDOM CINEMATIC ReShade,Kingdom Cinematic ReShade-1283-2-0-1728918057.rar,none,,,kept
+1291,Eye Candy Reshade,Eye Candy Reshade Preset-1291-1-0-1636232494.rar,none,,,kept
+1308,Less Income Pribyslavitz,less_income_Pribyslavitz-1308-1-1640897693.zip,none,,,kept
+1309,Less Encounters,less_encounters-1309-1-1640901979.zip,none,,,kept
+1311,Knightly Robard and Bernard,Knightly Robard and Bernard-1311-1-1-1641324997.zip,none,,,kept
+1314,Ultimate Ray Tracing KCD Reshade Preset,Reshade Preset file-1314-1-1650805970.zip,none,,,kept
+1322,Mutt Be Quiet,Mutt Be Quiet-1322-1-0-1642520795.7z,none,,,kept
+1327,Weather Overhaul,Weather Overhaul DLC-1327-1-2-1669068726.7z,none,,,kept
+1327,Weather Overhaul,Weather Overhaul-1327-1-2-1669068697.7z,none,,,kept
+1330,Noble Sir Hans,Noble Sir Hans-1330-1-1-1645324411.zip,none,,,kept
+1332,Less Headbob,KCB Less Headbob-1332-1-0-1644512525.7z,none,,,kept
+1337,Helmet Vision,WhisHelmetVision-1337-1-2-1644818002.rar,none,,,kept
+1342,Adjusted Ultra Graphics Config,Adjusted Config-1342-1-0-1666308185.zip,none,,,kept
+1342,Adjusted Ultra Graphics Config,Custom Config-1342-1-0-1666308248.zip,none,,,kept
+1349,Natural Reshade,Reshade preset-1349-1-0-1646765704.zip,none,,,kept
+1355,Better Crime Stealth Plus No Dogs,Better Stealth Plus Crime-1355-1-0-1648906747.zip,none,,,kept
+1356,Fan Side Quest - Heritage,heritage_release-1356-1-2-1648922073.rar,MEDIUM,MEDIUM: Lua loadstring/loadfile/dofile in heritage_release/data/data.pak!scripts/entities/triggers/cinematictrigger.lua | MEDIUM: command or downloader string in heritage_release/data/data.pak!scripts/featuretests/found_checkpoints.csv: CScript,,kept
+1367,Apostalus User Configs,Apostalus_User_Config_Mod-1367-1-2-1650769642.zip,none,,,kept
+1373,Custom UI Loading progress,UI Loading Progress Retexture-1373-1-0-1652104461.zip,none,,,kept
+1391,Better Equipped Runt,Better Equipped Runt-1391-1-0-1655791454.zip,none,,,kept
+1394,KDC ReShader,KDC ReShader-1394-1-0-1656189412.rar,HIGH,HIGH: native binary by magic bytes: ReShader KDC/dxgi.dll | HIGH: native code file: ReShader KDC/dxgi.dll,"ReShader KDC/dxgi.dll=9e319e190d24fa29 ReShader KDC/dxgi.dll: suspicious strings: CreateProcess, CreateRemoteThread, GetAsyncKeyState, InternetOpen, InternetReadFile, ShellExecute, http://, https://; game-related strings: glFramebufferParameteri / glFramebufferParameteriMESA / glGetBufferParameteri64v / glGetFramebufferParameteriv / glGetFramebufferParameterivMESA / glGetNamedBufferParameteri64v / glGetNamedBufferParameteriv / glGetNamedFramebufferAttachmentParameteriv / glGetNamedFramebufferParameteriv / glGetNamedRenderbufferParameteriv / glGetSamplerParameterIiv / glGetSamplerParameterIuiv / glGetSamplerParameterfv / glGetSamplerParameteriv",quarantined
+1403,Ultra Reshade for Low Settings,Ultra ENB for Low Settings-1403-1-0-1659381780.rar,HIGH,HIGH: native binary by magic bytes: bin/Win64/dxgi.dll | HIGH: URL in script bin/Win64/reshade-shaders/Shaders/AstrayFX/TobiiEye_FreePie_AstrayFX.py: http://www.Depth3D.com | HIGH: URL in script bin/Win64/reshade-shaders/Shaders/Depth3D/TobiiEye_FreePie_Depth3D.py: http://www.Depth3D.com | HIGH: native code file: bin/Win64/dxgi.dll | HIGH: script or shortcut file: bin/Win64/reshade-shaders/Shaders/AstrayFX/TobiiEye_FreePie_AstrayFX.py | HIGH: script or shortcut file: bin/Win64/reshade-shaders/Shaders/Depth3D/TobiiEye_FreePie_Depth3D.py,"bin/Win64/dxgi.dll=7520cb9170fca0f0 bin/Win64/dxgi.dll: suspicious strings: CreateRemoteThread, GetAsyncKeyState, InternetOpen, InternetReadFile, ShellExecute, http://, https://; game-related strings: glDispatchCompute / glDispatchComputeIndirect / glFramebufferParameteri / glFramebufferParameteriMESA / glGetBufferParameteri64v / glGetBufferParameteriv / glGetFramebufferAttachmentParameteriv / glGetFramebufferParameteriv / glGetFramebufferParameterivMESA / glGetNamedBufferParameteri64v / glGetNamedBufferParameteriv / glGetNamedFramebufferAttachmentParameteriv / glGetNamedFramebufferParameteriv / glGetNamedRenderbufferParameteriv",quarantined
+1410,Better Rain,Better Rain mod 2.1-1410-2-1-1676326729.zip,none,,,kept
+1414,Real Life Kingdom Come Experience Reshade,Real Life Kingdom Come Experience Reshade-1414-1-0-1-1663774303.rar,none,,,kept
+1423,Hoods and Scarfs UP (PTF - Dynamic - with Correct Meshes),HoodsUp-1423-1-2-1673054605.rar,none,,,kept
+1428,Reshade DOF With UI Mask,MatsoDOFSettings-1428-1-0-1667951429.rar,none,,,kept
+1452,Storable Halberds,Storable Halberds v1.0-1452-1-0-1673203304.rar,none,,,kept
+1460,Merchants Have x3 Money,For 1.9.6-1460-1-1674511920.rar,none,,,kept
+1479,Batch files for all items sorted and easy to read,KCD Batch files-1479-1-0-1676653419.rar,none,,,kept
+1485,SOLID HELMET VISORS,SOLID HELMET VISORS-1485-1-2-1737430681.rar,none,,,kept
+1510,Mount while encumbered,mount_while_encumbered-1510-1-0-1684251631.zip,none,,,kept
+1511,JSCR - Just simple custom Reshade,JSCR RESHADE V3-1511-V3-0-1687154831.rar,none,,,kept
+1526,Force High Quality Trees in the distance,KCD HQ Trees-1526-1-1690937203.zip,none,,,kept
+1527,Infinite Draw Distance,KCD PhotoMode-1527-1-1690992048.zip,none,,,kept
+1528,Enchanced Shadows and Shadow Cascades,KCD 2K Shadow Cascades-1528-1-1691349516.zip,none,,,kept
+1535,Dandelion Baron,DandelionBaron-1535-1-0-1691856480.7z,none,,,kept
+1538,Batch's Ultra Graphics Settings,High Preset-1538-1-1692237999.zip,none,,,kept
+1538,Batch's Ultra Graphics Settings,Medium Preset-1538-1-1692237905.zip,none,,,kept
+1544,Summertime Reshade for Kindom Come,Flunkiii Reshade for Kingdom Come-1544-1-0-1694268222.zip,none,,,kept
+1548,Immersive Economy,Immersive Economy-1548-1-1-1696198684.7z,none,,,kept
+1552,See NPCs and Animals Farther (Increased NPC render distance),NPC_RenderDist_Extreme-1552-1-0-1696674070.zip,none,,,kept
+1552,See NPCs and Animals Farther (Increased NPC render distance),NPC_RenderDist_High-1552-1-0-1696674005.zip,none,,,kept
+1552,See NPCs and Animals Farther (Increased NPC render distance),NPC_RenderDist_Medium-1552-1-0-1696673983.zip,none,,,kept
+1561,Karnages_KCD_user.cfg 2.0,Karnages_KCD_user.cfg 2.0-1561-1-0-0-1700592743.7z,none,,,kept
+1562,Karnages_Polearm_Rebalance 2.0,Karnage's_Polearm_Rebalance 2.0-1562-1-0-0-1700618129.7z,none,,,kept
+1566,Karnages_Lost_Weapons_Pack_Redux 2.0,Karnages_Lost_Weapons_Pack_Redux 2.0-1566-1-0-0-1700619203.7z,none,,,kept
+1568,Karnages_Shop_Prices,Karnages_Shop_Prices-1568-1-0-0-1700623554.7z,none,,,kept
+1570,Karnages_Inventory_Recolour,Karnages_Inventory_Recolour-1570-1-0-0-1700624167.7z,none,,,kept
+1577,Invisible hands FIX (UPDATE),Vest Fix 3.0-1577-3-0-1702474761.zip,none,,,kept
+1589,Realistic Colour Correction Kingdom Come Deliverance,Realistic Colour Correction Kingdom Come Deliveran-1589-1-0-1705385136.rar,none,,,kept
+1603,Sharper graphic reshade for Kingdom Come Deliverance,Kingdom Come Deliverence Present v2.4-1603-2-4-1711991518.zip,none,,,kept
+1605,Formidable Runt,Formidable Runt-1605-1-4-1711201397.zip,none,,,kept
+1618,HD Clock Retexture - Inventory Clock Updated,Time-HD-updated v1.2.zip-1618-1-2-1714429516.zip,none,,,kept
+1625,MadHUDAutoHideHUDRebornEdition,MadHUD-AutoHideHUDRebornEdition-MsRhtBttnComptblVr-1625-r1-1-0-1745126962.zip,none,,,kept
+1636,More Sensible Weapons and Armor,More Sensible Weapons and Armor-1636-1-11-1741394601.zip,none,,,kept
+1646,AutoLimitFPS,AutoLimitFps144-1646-0-1-0-1716157681.zip,none,,,kept
+1654,Boots with Common Plate Chausses,Plate Legs-1654-1-0-1716846598.7z,none,,,kept
+1667,Surface Type Rework,Surface Type Rework-1667-1-0-0-1718540697.7z,none,,,kept
+1683,Roads Are Dangerous - Redux,RAD_redix-1683-0-1-1721003439.zip,none,,,kept
+1689,Playable Daggers,PlayableDaggers-1689-V3-0-1736559656.7z,none,,,kept
+1691,zzz_Clean_Items_In_Trough.pak,zzz_Clean_Items_In_Trough.pak,none,,,kept
+1702,SLEE realistic reshade preset and performance file,GST-1702-1-0-0-1724428743.rar,HIGH,HIGH: native binary by magic bytes: GST Preset + Bonus/Preset/dxgi.dll | HIGH: URL in script GST Preset + Bonus/Preset/reshade-shaders/Shaders/AstrayFX/TobiiEye_FreePie_AstrayFX.py: http://www.Depth3D.com | HIGH: URL in script GST Preset + Bonus/Preset/reshade-shaders/Shaders/Depth3D/TobiiEye_FreePie_Depth3D.py: http://www.Depth3D.com | HIGH: native code file: GST Preset + Bonus/Preset/dxgi.dll | HIGH: script or shortcut file: GST Preset + Bonus/Preset/reshade-shaders/Shaders/AstrayFX/TobiiEye_FreePie_AstrayFX.py | HIGH: script or shortcut file: GST Preset + Bonus/Preset/reshade-shaders/Shaders/Depth3D/TobiiEye_FreePie_Depth3D.py,"GST Preset + Bonus/Preset/dxgi.dll=d39d04d1931ede6e GST Preset + Bonus/Preset/dxgi.dll: suspicious strings: CreateProcess, CreateRemoteThread, GetAsyncKeyState, InternetOpen, InternetReadFile, ShellExecute, http://, https://; game-related strings: glFramebufferParameteri / glFramebufferParameteriMESA / glGetBufferParameteri64v / glGetFramebufferParameteriv / glGetFramebufferParameterivMESA / glGetNamedBufferParameteri64v / glGetNamedBufferParameteriv / glGetNamedFramebufferAttachmentParameteriv / glGetNamedFramebufferParameteriv / glGetNamedRenderbufferParameteriv / glGetSamplerParameterIiv / glGetSamplerParameterIuiv / glGetSamplerParameterfv / glGetSamplerParameteriv",quarantined
+1720,Performance Configuration (Mid-High End),autoexec.cfg-1720-1-1726007579.7z,none,,,kept
+1723,Intimidation Stat In Inventory,IntimidationStat-1723-1-1-1728217688,MEDIUM,MEDIUM: nested archive (not readable by the game): Data/IntimidationStat.7zip,,kept
+1732,Torch Radius,Torch Light Radius-1732-1-0-1728140274.zip,none,,,kept
+1733,TyburnMedievalPoisons,MedievalPoisons-1733-V2-0-1729998376.7z,none,,,kept
+1777,TyburnDiseases,Diseases-1777-V2-0-1739366414.7z,none,,,kept
+1777,TyburnDiseases,Diseases_NoAudio-1777-V2-0-1739366653.7z,none,,,kept
+1779,Semi Sorted soul XML,souls_sorted_v1.2-1779-1-2-1736773918.zip,none,,,kept
+1780,Timed Quest Indicator,TimedQuestIndicator-1780-V1-1-1736764991.7z,none,,,kept
+1800,KCD 2 Reshade,KCD2 Reshade-1800-1-0-1737510963.rar,none,,,kept
+1807,TyburnPoisonousEnemies,PoisonousEnemies-1807-V1-1-1739657277.7z,none,,,kept
+1823,RTX 3050 PACK,3050 8GB VRAM - 16GB RAM-1823-1-1-1739410244.zip,none,,,kept
+1823,RTX 3050 PACK,3050 8GB VRAM - 32GB RAM-1823-1-1-1739410283.zip,none,,,kept
+1829,Mod Order Tool 1.2,EN-1829-1-2-1741033054.zip,HIGH,HIGH: native binary by magic bytes: MOT 1.2 en_US/MOT 1.2 en_US.exe | HIGH: native code file: MOT 1.2 en_US/MOT 1.2 en_US.exe,MOT 1.2 en_US/MOT 1.2 en_US.exe=bc439e469212ea53 MOT 1.2 en_US/MOT 1.2 en_US.exe: suspicious strings: ShellExecute; game-related strings: DispatchMessageW / _invalid_parameter_noinfo_noreturn / _configure_wide_argv / _configthreadlocale,quarantined
+1861,Sell Damaged Items At Full Price - PTF,Sell Damaged Items At Full Price-1861-1-0-1739532223.zip,none,,,kept
+1870,Fair Trade - PTF,Fair Trade-1870-1-0-1739553563.zip,none,,,kept
+1873,Daily Restock And Rich Merchants - PTF,Daily Restock And Rich Merchants-1873-1-0-1739611543.zip,none,,,kept
+1875,KCD1 Enhanced Visuals - UBER Graphics ReShade,KCD1 - Enhanced Visuals - R3MIND ReShade-1875-1-0-0-1739656641.rar,none,,,kept
+1900,Jiggle Physics,Jiggle Physics 1900 1.2 2026-07-17T22-19Z lzEbrHFy3.zip,none,,,kept
+1907,Visorless Helmets,Visorless Helmets-1907-1-0-2-1741145962.zip,none,,,kept
+1909,Helmet-Off Dialog (Beta),Helmet-Off Dialog-1909-1-4-3-1743453648.zip,none,,,kept
+1918,KCD1 Reborn - Verdant Vegetation,Checkers Verdant Vegetation-1918-1-0-1743125688.zip,none,,,kept
+1927,KCD1 Reborn-Terrain and Structures,Checkers Terrain and Structures-1927-1-3-5-1743121857 (1).zip,none,,,kept
+1944,Lore Of Die,Die Of Lore-1944-1-3-1756187796.zip,none,,,kept
+1944,Lore Of Die,Lore Of Die Pricing Module-1944-1-0-1743087028.zip,none,,,kept
+1956,Auto Hide HUD REBORN,AutoHideHUDReborn-1956-1-4-0-1777734198.zip,MEDIUM,MEDIUM: Lua debug.* in AutoHideHUDReborn/Data/AutoHideHUDReborn.pak!Scripts/RHUD.lua,,kept
+1958,Selected Immersion Breaking Music Mute,SIBMM All-1958-1-2-1743947561.zip,none,,,kept
+1961,Unconscious Crime UI,Unconscious Crime UI-1961-1-0-1742809272.zip,none,,,kept
+1964,KCD1 Reborn - Enhanced Faces and Skin,Checkers Enhanced Faces and Skin-1964-0-95-1743115948 (1).zip,none,,,kept
+1972,FINAL Beyond SUPER Ultra Graphics and Visuals Configs,FINAL Beyond SUPER Ultra Graphics and Visuals Conf-1972-1--1743452912.zip,none,,,kept
+1980,Medieval Loading Screens,MedievalLoadingScreens-1980-1-1-1744118421 (1).rar,none,,,kept
+1981,Lesser Income Pribyslavitz - Supplies Cost Patch,LIP - Annual Contract Supplies Cost Patch-1981-1-0-1744439495.zip,none,,,kept
+1981,Lesser Income Pribyslavitz - Supplies Cost Patch,LIP - Supplies Cost Patch-1981-1-1-1744439433.zip,none,,,kept
+1982,Stormy Skies,Stormy_Skies_v1.0.zip-1982-1-0-1744237965 (1).zip,none,,,kept
+1984,Sharpening Overhaul,Sharpening Overhaul-1984-2-1-1749895972.zip,none,,,kept
+2005,Snarky Loading Screens PTF Edition,Snarky Loading Screens PTF-2005-1-0-1746781186.zip,none,,,kept
+2008,Perfection,Preset-2008-1-0-1748032883.zip,MEDIUM,MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/BloomSat/BloomSat v1.0.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/BloomSat/BloomSat v1.1.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/BloomSat/BloomSat v2.0.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/BloomSat/BloomSat v2.1.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/BloomSat/BloomSat v2.2.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/ColorExposure/ColorExposure.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/CRT/CRT v1.0.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/CRT/CRT v1.1.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/DeNoiseR/DeNoiseR v1.0.zip | MEDIUM: nested archive (not readable by the game): reshade-shaders/Shaders/dragoncosmico/DeNoiseR/DeNoiseR v1.1.zip | MEDIUM: nested archive (not readabl,,kept
+2022,Restored Sabres PTF,Restored Sabres PTF-2022-1-1-1779784649.7z,none,,,kept
+2030,Clean and Minimal HUD and Map,Clean and Minimal HUD-2030-0-1-1749657994.zip,none,,,kept
+2031,Mud and Iron Kingdom Come Deliverance Reshade,Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727 (1).7z,none,,,kept
+2031,Mud and Iron Kingdom Come Deliverance Reshade,Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727.7z,none,,,kept
+2046,Arsenal - A Weapons Overhaul - DDDB,Arsenal Melee Weapons Overhaul-2046-6-1774914631.7z,none,,,kept
+2061,Meticulously Edited Shops and Services,Meticulously Edited Shops (and Services)-2061-0-4-4-1771229823.zip,none,,,kept
+2068,SPOA Silver Knight Armor for Kingdom Come Deliverance,SPOA SKA for KCD (2K textures)-2068-1-03-1755982732.zip,none,,,kept
+2079,Thin The Herd - Immersive Hunting and Realistic Animal Loot,Thin The Herd 2079 1.3.1 2026-07-16T19-00Z ksgvwCnjt.zip,none,,,kept
+2084,Mount  Horse - Torch Toggle Keys,Mount Horse - Torch Toggle Keys-2084-1-0-1758809416.rar,none,,,kept
+2100,Diseases - spolszczenie,Diseases - Spolszczenie-2100-1-0-1763742966.rar,none,,,kept
+2103,Pickpocket menu  from KCD2,pickpocket_kcd2 1.1-2103-1-1-0-1764612642 (1).zip,none,,,kept
+2106,High FPS FX (KCD1),High FPS FX 2106 2.1 2026-07-11T22-23Z LQeSByZhK.zip,none,,,kept
+2106,High FPS FX (KCD1),High FPS FX-2106-1-3-1777265116.zip,none,,,kept
+2108,New KCD HUD 2.0,new_hud_2.0 1.3-2108-1-3-0-1770680449 (1).rar,none,,,kept
+2132,MOD file override conflicts and PTF patch detection,ModsCheckEng-2132-1-1-1768208612.7z,none,,,kept
+2152,Lighting and Shadow 2.0 - ENB for KCD,ENB MartinSpielt Preset-2152-1-0-1770911762.zip,none,,,kept
+2153,Engine Tweaks KCD 2.0 - user.cfg details,user.cfg-2153-1-0-1770914009.zip,none,,,kept
+2158,Finders Keepers,FindersKeepers_Wait_No-2158-1-2-1773048312.zip,none,,,kept
+2171,No Stolen Items (PTF),No Stolen Items-2171-1-2-1772686214.zip,none,,,kept
+2174,Horse Body Armor (Barding),Barding Improved-2174-1-0-1-1772742779 (1).zip,none,,,kept
+2175,Enhanced Color Grading,Enhanced Color Grading-2175-1-3-1775786024.zip,none,,,kept
+2180,Optimized CryEngine simple tweaks,cry engine tweaks-2180-1-1-1772892590.rar,none,,,kept
+2190,ENHANCED Bohemian Redux  and FX Overhaul,ENHANCED Bohemian Redux FX Overhaul-2190-2-0-1774439071 (1).rar,none,,,kept
+2191,Realistic Footprints v2.0 KCD I,Realistic Footprints v2.0 KCD1-2191-3-0-1780731196.rar,none,,,kept
+2196,ENHANCED Adult Bounce KCD I,ENHANCED Adult Bounce KCD1-2196-2-0-1774424692.rar,none,,,kept
+2199,DualSense Buttons,DualSense Buttons-2199-2-0-1778555602.rar,none,,,kept
+2202,Animals Looted Statistic Tracker - Separate from Corpses Looted,LootStatSplit-2202-1-1774557285.zip,none,,,kept
+2203,Categorized Sorted Inventory,CategorizedSortedInventory-2203-1-0-0-1775489193.zip,none,,,kept
+2204,A Real Sorted Inventory (ARSI),A Real Sorted Inventory 2204 1.3.3.1 2026-06-26T10-36Z M04BeYC8a.zip,MEDIUM,MEDIUM: Lua loadstring/loadfile/dofile in ARealSortedInventory/Data/ARealSortedInventory.pak!Scripts/mods/ARealSortedInventory.lua,,kept
+2206,Rivers of Blood KCD I HD v2.0,Rivers of Blood KCD I HD v2.0-2206-1-0-1775912726.rar,none,,,kept
+2216,KCD Mod Organizer Plugin (Steam - GOG - Epic),Plugins-2216-3-4-2-1778799500.7z,HIGH,HIGH: script or shortcut file: plugins/basic_games/games/game_kingdomcomedeliverance.py,,quarantined
+2223,Stop Looking Up On Horseback,StopLookingUpOnHorseback-2223-2-1778010739.7z,none,,,kept
+2224,More Realistic Horse Handling,HorseHandlingKCD-2224-1-1778012631.7z,none,,,kept
+2243,Performance Tweaks and best visuals,Autoexec-2243-1-1779736741.rar,none,,,kept
+2243,Performance Tweaks and best visuals,AutoexecCPUTWEAKS 2243 1 2026-06-28T16-43Z zEf3mMkId.rar,none,,,kept
+2244,Kingdom Come Script Extender,KCSE 2244 3 2026-06-29T13-46Z b37E8uyAU.zip,HIGH,HIGH: native binary by magic bytes: Bin/Win64/dinput8.dll | HIGH: native code file: Bin/Win64/dinput8.dll,"Bin/Win64/dinput8.dll=37e49c57c25421b0 Bin/Win64/dinput8.dll: suspicious strings: none; game-related strings: Hooks installed / KCSEPlugin_Version /   {} has no KCSEPlugin_Version export, skipping / Skipping duplicate plugin: {} from {} /   Registered plugin: {} v{} by {} / Plugins / Total plugins found: {} / KCSEPlugin_Load / {} has no KCSEPlugin_Load export / {} returned false from KCSEPlugin_Load / kcd_re REL::IDDatabase / kcd_addresslib_ / This plugin is incompatible with the current game build. / spdlog::thread_pool(): invalid threads_n param (valid range is 1-1000)",quarantined
+2255,Fast Travel Tweaks,FastTravelTweaks 2255 3 2026-06-29T13-59Z EfL7D0slv.zip,HIGH,HIGH: native binary by magic bytes: KCSE/Plugins/FastTravelTweaks.dll | HIGH: native code file: KCSE/Plugins/FastTravelTweaks.dll,KCSE/Plugins/FastTravelTweaks.dll=1af900c3935d4466 KCSE/Plugins/FastTravelTweaks.dll: suspicious strings: none; game-related strings: kcd_re REL::IDDatabase / kcd_addresslib_ / This plugin is incompatible with the current game build. / D:\a\libKCD1\libKCD1\.buildenv\build\FastTravelTweaks\FastTravelTweaks.pdb / KCSEPlugin_Load / KCSEPlugin_Version / _configure_narrow_argv,quarantined
+2261,Proper Third Person View (TPV Camera),Proper Third Person View (TPV Camera) 2261 1.0.1 2026-06-30T19-31Z pA6IjrMhB.zip,HIGH,HIGH: native binary by magic bytes: KCD1_TPVCamera.asi | HIGH: native code file: KCD1_TPVCamera.asi,"KCD1_TPVCamera.asi=b0d21ba68e623c9a KCD1_TPVCamera.asi: suspicious strings: GetAsyncKeyState, ShellExecute, https://; game-related strings: Input_P3_EventTypeDispatch / ActionDispatch_P1_Prologue / ActionDispatch_P2_DoubleDeref / ActionDispatch_P3_StructLea / InputDispatch / ActionDispatch / KCD1_TPVCamera / Menu,Overlay,Combat,Mount,Lockpicking,Dice,Reading,Alchemy,Pickpocketing,Sharpening / combat / UI Menu hooks initialization failed - menu suppression disabled / UI Overlay hooks initialization failed - overlay suppression disabled / Interaction hook initialization failed - camera-space interaction disabled / Player OnAction hook initialization failed - orbit move-detection uses body speed / Critical: third-person camera hook installation failed - mod cannot function",quarantined
+2270,Horse Control Tweaks,HorseControlTweaks 2270 2 2026-06-29T14-02Z OrmK3LNnM.zip,HIGH,HIGH: native binary by magic bytes: KCSE/Plugins/HorseControl.dll | HIGH: native code file: KCSE/Plugins/HorseControl.dll,KCSE/Plugins/HorseControl.dll=da71c8d2ed85229e KCSE/Plugins/HorseControl.dll: suspicious strings: none; game-related strings: kcd_re REL::IDDatabase / kcd_addresslib_ / This plugin is incompatible with the current game build. / D:\a\libKCD1\libKCD1\.buildenv\build\HorseControl\HorseControl.pdb / HorseControl.dll / KCSEPlugin_Load / KCSEPlugin_Version / HorseControls / _configure_narrow_argv,quarantined
+2271,No Horse Manes,NoHorseMane Basic 2271 1.0.1 2026-07-13T20-32Z NYwqvZpIg.zip,none,,,kept
+2273,Address Library For KCSE,1.9.8 Steam Epic GOG 2273 1 2026-06-29T13-38Z U5RChtbYi.zip,none,,,kept
+2277,Toggle Hud - KCSE,ToggleHud 2277 1.1.1 2026-07-05T16-42Z sgZiUxTFA.zip,HIGH,HIGH: native binary by magic bytes: KCSE/Plugins/ToggleHud.dll | HIGH: native code file: KCSE/Plugins/ToggleHud.dll,KCSE/Plugins/ToggleHud.dll=8d7bfa24beb6788a KCSE/Plugins/ToggleHud.dll: suspicious strings: none; game-related strings: ToggleHud.ini / Plugins / Failed to initialize ConfigHandler. Check if ToggleHud.ini exists and is valid. / kcd_re REL::IDDatabase / kcd_addresslib_ / This plugin is incompatible with the current game build. / D:\a\KCD1-ToggleHud\KCD1-ToggleHud\buildRel\ToggleHud.pdb / KCSEPlugin_Load / KCSEPlugin_Version / _configure_narrow_argv,quarantined
+2279,Immersive Economy FIXED,ImmersiveEconomyFIXED 2279 1.0.2 2026-07-17T19-29Z 6b3zKD4k2.zip,none,,,kept
+2288,Light Armour Vambraces,Lightarmvam 2288 1 2026-07-16T21-14Z ZWdhR2r8c.zip,none,,,kept
+2293,Bigger Hud (KCD1),Bigger Hud KCD1 2.0 Update 2293 2 2026-07-19T03-12Z A6blGm0FF.zip,none,,,kept
+2297,Ultimate Loadingscreen Artwork Overhaul,Ultimate Loadingscreen Overhaul 2297 1.1 2026-07-19T21-10Z 2jGTl3Qoz.zip,none,,,kept
+2313,Reshield From Torch,Reshield 2313 3 2026-08-01T01-48Z OrmK3LN3q.zip,none,,,kept
+2317,Enemy Health Bar,EnemyBar 2317 1 2026-07-31T06-38Z VnT2AzaAK.zip,none,,,kept
+2330,Compass and Map Upgrades - Wayfinder,Wayfinder 1.0.2 (Compatibility Patched) 2330 2 2026-09-10T02-01Z 6b3zKD4Qh.zip,none,,,kept
+2333,Homecoming - Runt Fight Redux,Homecoming Runt Fight Redux 2333 1.0.0 2026-08-12T10-25Z JCx5Wpz09.zip,none,,,kept
+2349,KCD1 Map Cursor Contrast - Visible Ring and X,MapCursorContrast Bold 2.1.0 2349 2.1.0 2026-09-05T04-03Z QeXoFvWUO.zip,none,,,kept
+2351,Keyboard Controls,Keyboard Controls - Global 2351 1 2026-09-06T01-30Z 4yvkqUPWj.zip,none,,,kept
+2353,Ultimate Graphics Adjustment,KCD Ultimate Adjustment 2353 1 2026-09-09T14-55Z q1JwghIVc.rar,none,,,kept
+2358,MatthusTweaksKCDarmwea,MT New Armor And Weapon System V1.0 2358 1 2026-09-11T18-39Z EfL7D0sNl.zip,none,,,kept
+2365,KCDT,Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ (1).zip,HIGH,HIGH: native binary by magic bytes: KCDT.asi | HIGH: native code file: KCDT.asi,KCDT.asi=26e01ad1e9913a43 KCDT.asi: suspicious strings: none; game-related strings: masterStrike / inventory.hook.failed / init.inventory.hook.installed / inventory.hook.ready / item.transfer.hook.ready / item.transfer.hook.failed / input.action.hook.ready / input.action.hook.failed / input.registration.hook.ready / input.registration.hook.failed / input.map.creation.hook.ready / input.map.creation.hook.failed / KCDT-test.mode / KCDT-test-report.txt,quarantined
+2365,KCDT,Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ.zip,HIGH,HIGH: native binary by magic bytes: KCDT.asi | HIGH: native code file: KCDT.asi,KCDT.asi=26e01ad1e9913a43 KCDT.asi: suspicious strings: none; game-related strings: masterStrike / inventory.hook.failed / init.inventory.hook.installed / inventory.hook.ready / item.transfer.hook.ready / item.transfer.hook.failed / input.action.hook.ready / input.action.hook.failed / input.registration.hook.ready / input.registration.hook.failed / input.map.creation.hook.ready / input.map.creation.hook.failed / KCDT-test.mode / KCDT-test-report.txt,quarantined
+2366,Faster Book Flipping,FasterBookFlipping 2366 1 2026-09-17T08-10Z aSoQ0kc7B.zip,HIGH,HIGH: native binary by magic bytes: FasterBookFlipping.asi | HIGH: native code file: FasterBookFlipping.asi,FasterBookFlipping.asi=1c25f60f1b6e16cf FasterBookFlipping.asi: suspicious strings: none; game-related strings: %s.ini / KCDT.asi / KCDT_GetVersion / KCDT_IsReady / KCDT_GetGameBase / KCDT_InstallHook / KCDT_ReadMemory,quarantined
+2367,Pray Animation KCD1,Pray Animation KCD1 2367 1 2026-09-18T23-43Z 8HMDLo1Kr.zip,none,,,kept
+2369,Fewer Tournaments,Rattay Tournament 15 Days Cycle 2369 1.0 2026-09-19T12-07Z ZWdhR2rgE.zip,none,,,kept
+2383,Wooden Training Mace,TrainingMace 1.0.0 2383 1 2026-10-01T20-08Z GK8rEaXw5.zip,none,,,kept
+2384,KCD HI-Res Maps,KCD In-game Maps 2384 1.0.0 2026-10-02T17-16Z LQeSByZ98.zip,none,,,kept

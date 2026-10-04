@@ -3,6 +3,7 @@
 audit_mods_deep.py - READ-ONLY analysis of the downloaded P1/P2 mods: what they change, how, where, how much, and whether they carry risk.
 
     python tools/audit_mods_deep.py --src "<downloads folder>"                 analyse every P1/P2 mod that is in the folder
+    python tools/audit_mods_deep.py --src "<folder>" --priorities P3 P4 --include-unlisted --tag p3_p4   other priorities, separate output files
     python tools/audit_mods_deep.py --src "<folder>" --ids 85 1009             only these mod ids
     python tools/audit_mods_deep.py --src "<folder>" --no-quarantine           report risks but move nothing
 
@@ -42,12 +43,12 @@ import paths  # noqa: E402
 D = paths.MODS_REVIEW
 SEVENZ = ama.SEVENZ
 GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance")
-MAX_EXTRACT_MB = 400          # larger archives: only text-like files and small paks are extracted
-MAX_PAK_MB = 200
-MAX_MEMBER = 6 * 1024 * 1024  # bytes read from one text file
+MAX_EXTRACT_MB = 2600         # larger archives: only text-like files and small paks are extracted
+MAX_PAK_MB = 2600
+MAX_MEMBER = 32 * 1024 * 1024  # bytes read from one text file (some table patches are 9 MB)
 BOMB_RATIO = 300
 
-NATIVE_EXT = {".exe", ".dll", ".asi", ".scr", ".sys", ".com", ".msi", ".cpl", ".ocx", ".drv"}
+NATIVE_EXT = {".exe", ".dll", ".asi", ".scr", ".sys", ".com", ".msi", ".cpl", ".ocx", ".drv", ".addon", ".vst"}
 SCRIPT_EXT = {".bat", ".cmd", ".ps1", ".psm1", ".vbs", ".vbe", ".wsf", ".wsh", ".hta", ".lnk", ".jar", ".py", ".sh", ".reg", ".js", ".jse",
               ".url", ".application", ".gadget", ".inf"}
 ARCHIVE_EXT = {".zip", ".7z", ".rar", ".gz", ".tar", ".cab", ".iso", ".7zip"}
@@ -61,7 +62,8 @@ LUA_BAD = [
     (r"\bffi\.", "ffi"), (r"\bdebug\.(sethook|getinfo|setmetatable|getregistry)\b", "debug.*"),
 ]
 SCRIPT_STR = re.compile(r"powershell|cmd\.exe|wscript|cscript|mshta|certutil|bitsadmin|invoke-expression|invoke-webrequest|downloadstring|"
-                        r"frombase64string|regsvr32|rundll32|schtasks|reg add|net user|taskkill|\bwget\b|\bcurl\b", re.I)
+                        r"frombase64string|regsvr32|rundll32|schtasks|reg add|net user|taskkill", re.I)
+SCRIPT_WEAK = re.compile(r"\bwget\b|\bcurl\b", re.I)   # ordinary English words in text: only counted inside script files
 URL = re.compile(r"https?://[^\s\"'<>)\]]+", re.I)
 URL_OK = re.compile(r"nexusmods|github\.com|discord|patreon|ko-fi|buymeacoffee|youtube|youtu\.be|steamcommunity|store\.steampowered|"
                     r"warhorsestudios|kingdomcomerpg|w3\.org|schemas|moddb|paypal\.me|crowdin|imgur|reddit", re.I)
@@ -191,6 +193,7 @@ class Source:
         self.findings = []         # (level, text)
         self.native_sha = {}       # vpath -> sha256 of native files
         self.native_info = {}      # vpath -> text about suspicious imports/strings and game-related strings
+        self.zips = []             # open .pak ZIPs: closed before the scratch folder is deleted (an open handle blocks the delete)
 
     def add_tree(self, root):
         for dp, dn, fn in os.walk(root):
@@ -224,12 +227,21 @@ class Source:
         if ext == ".pak":
             self.add_pak(p, rel, size)
 
+    def close(self):
+        for z in self.zips:
+            try:
+                z.close()
+            except Exception:  # noqa: BLE001
+                pass
+        self.zips = []
+
     def add_pak(self, p, rel, size):
         try:
             z = zipfile.ZipFile(p)
         except zipfile.BadZipFile:
             self.notes.append(f"{rel}: not a ZIP (the game cannot read it either)")
             return
+        self.zips.append(z)
         for zi in z.infolist():
             if zi.is_dir():
                 continue
@@ -273,6 +285,8 @@ def scan_text_risks(src):
         if ext == ".lua":   # comments are not code: URLs and words inside them do not count
             t = re.sub(r"--\[\[.*?\]\]", "", t, flags=re.S)
             t = re.sub(r"--[^\n]*", "", t)
+        if ext in (".lua", ".bat", ".cmd", ".ps1", ".vbs", ".js", ".py", ".sh") and SCRIPT_WEAK.search(t):
+            src.findings.append(("HIGH", f"download tool name in script {vp}: {SCRIPT_WEAK.search(t).group(0)}"))
         if ext not in DOC_EXT and SCRIPT_STR.search(t):
             src.findings.append(("HIGH" if ext in (".lua", ".bat", ".cmd", ".ps1", ".vbs", ".js") else "MEDIUM", f"command or downloader string in {vp}: {SCRIPT_STR.search(t).group(0)}"))
         if ext not in DOC_EXT:
@@ -316,9 +330,11 @@ def analyse_tables(src, vanilla, krs_keys, eff_id):
         p = at.parse_table(raw)
         fname = os.path.basename(vp.split("!")[-1])[:-4]
         if not p:
-            problems.append(f"{vp}: not a readable table")
+            problems.append(f"{vp}: not a readable table (malformed XML, or not a table): the game would reject or ignore it")
             continue
         tname, cols, rows = p
+        if not cols and rows:   # a patch without <header>: the row attributes are the columns
+            cols = sorted(set().union(*[set(r) for r in rows]))
         base, style = at.base_table(tname if tname else fname.split("__")[0], vanilla)
         if base is None:
             base, style = at.base_table(fname, vanilla)
@@ -394,6 +410,14 @@ def categorize_paths(src):
             area["localization"] += 1
             if ext == ".xml":
                 loc_rows.append(rd)
+        elif ext in (".fx", ".fxh") or "reshade" in low or "sweetfx" in low or "enbseries" in low or os.path.basename(low) in ("enblocal.ini", "enbseries.ini", "reshade.ini", "dxgi.ini"):
+            area["reshade/ENB (shaders, presets)"] += 1
+        elif ext == ".ini":
+            try:
+                t_ini = text_of(rd())[:20000].lower()
+            except Exception:  # noqa: BLE001
+                t_ini = ""
+            area["reshade/ENB (shaders, presets)" if ("techniques=" in t_ini or "[effect]" in t_ini or "reshade" in t_ini) else "ini (text settings)"] += 1
         elif ext == ".lua":
             area["scripts (Lua)"] += 1
             lua_files += 1
@@ -438,7 +462,7 @@ def categorize_paths(src):
             except Exception:  # noqa: BLE001
                 pass
         elif ext == ".xml":
-            area["other xml (data)"] += 1
+            area["other game data (xml, not table rows)"] += 1
         else:
             area["other"] += 1
     area["lua identical to vanilla"] = lua_same
@@ -468,6 +492,9 @@ def is_core(base):
     return any(base.startswith(w) or w in base for w in CORE_TABLES) and not any(base.startswith(u) for u in ("text", "ui_", "sound"))
 
 
+GFX_KEY = re.compile(r"^(r|e|sys|q|g|ca|cl|sv|p|t)_", re.I)
+
+
 def grade(m):
     """returns (grade, perceptibility, why) from the measured numbers; the rules are written out in MOD_ANALYSIS.md"""
     R, T, med = m["rows_changed_or_new"], m["tables_touched"], m["median_rel_change"]
@@ -480,33 +507,77 @@ def grade(m):
     # perceptibility
     if big_core >= 1 or R >= 30 or lua_lines >= 150:
         perc = "high"
-    elif R >= 5 or m["cfg_keys"] >= 3 or lua_lines >= 30 or core_rows >= 1:
+    elif R >= 5 or m["cfg_keys"] >= 3 or lua_lines >= 30 or core_rows >= 1 or m["data_xml_files"] >= 1:
         perc = "medium"
     elif R >= 1 or m["assets"] > 0 or m["loc_strings"] > 0:
         perc = "low"
     else:
         perc = "none"
+    if m["unread_large"] and R == 0 and lua_lines == 0 and not native:
+        return "X not analysed", "unknown", "content too large to read (see problems)"
     if native or R >= 400 or T >= 15 or lua_lines >= 3000:
         g = "A changes the most"
-    elif R >= 100 or T >= 6 or lua_lines >= 600:
+    elif R >= 100 or T >= 6 or lua_lines >= 600 or m["data_xml_files"] >= 20:
         g = "B large"
     elif R >= 1 and perc == "high":
         g = "C effective (few rows, strong effect)"
-    elif R >= 1 or lua_lines >= 1 or m["cfg_keys"] >= 1:
+    elif R >= 1 or lua_lines >= 1 or m["cfg_keys"] - m["gfx_cfg"] >= 1 or m["data_xml_files"] >= 1:
         g = "D small tweak"
-    elif m["assets"] > 0 or m["loc_strings"] > 0:
-        g = "E non-perceptive to gameplay (content or text only)"
+    elif m["visual_files"] or m["gfx_cfg"] or m["audio_files"] or m["ui_files"]:
+        g = "E visual, audio or UI only (no gameplay change)"
+    elif m["loc_strings"] > 0:
+        g = "E text only (no gameplay change)"
     else:
         g = "E non-perceptive to gameplay (no effective change found)"
     return g, perc, f"R={R} T={T} median_rel={med:.2f} lua_lines={lua_lines} cfg={m['cfg_keys']} assets={m['assets']} loc={m['loc_strings']} native={'yes' if native else 'no'}"
 
 
+def visual_impact(m):
+    """how much a player would SEE or HEAR (separate from gameplay perceptibility)"""
+    if m["reshade_files"] or m["textures"] >= 20 or m["models"] >= 1 or m["gfx_cfg"] >= 3:
+        return "high"
+    if m["textures"] >= 3 or m["audio_files"] >= 1 or m["ui_files"] >= 1 or m["gfx_cfg"] >= 1:
+        return "medium"
+    if m["textures"] or m["loc_strings"]:
+        return "low"
+    return "none"
+
+
+def domain_of(m):
+    D_ = []
+    if m["rows_changed_or_new"]:
+        D_.append("gameplay data")
+    if m["lua_lines"]:
+        D_.append("scripts")
+    if m["data_xml_files"]:
+        D_.append("other game data (xml)")
+    if m["cfg_keys"] - m["gfx_cfg"] >= 1:
+        D_.append("engine config")
+    if m["gfx_cfg"]:
+        D_.append("graphics config")
+    if m["reshade_files"]:
+        D_.append("post-processing (ReShade/ENB)")
+    if m["textures"] or m["models"]:
+        D_.append("textures/models/animations")
+    if m["audio_files"]:
+        D_.append("audio")
+    if m["ui_files"]:
+        D_.append("UI")
+    if m["loc_strings"]:
+        D_.append("text")
+    if m["native_files"] or m["needs_external"]:
+        D_.append("native/external")
+    return ", ".join(D_) or "none"
+
+
 def depth_layers(m):
     L = []
-    if m["assets"] or m["loc_strings"] or m["ui_files"]:
+    if m["assets"] or m["loc_strings"] or m["ui_files"] or m["reshade_files"]:
         L.append("D0 content/text")
     if m["tables_touched"] or m["table_files"]:
         L.append("D1 data tables (PTF)")
+    if m["data_xml_files"]:
+        L.append("D1 game data xml (not table rows)")
     if m["cfg_keys"]:
         L.append("D2 engine config")
     if m["lua_files"]:
@@ -574,6 +645,10 @@ def analyse_entry(rec, src_root, work, vanilla, krs_keys, args):
                 open(lst, "w", encoding="utf-8").write("\n".join(sel))
                 cmd = [SEVENZ, "x", "-y", "-aoa", "-bd", "-bso0", "-bsp0", "-spd", "-o" + scratch, path, "-i@" + lst]
                 res["extracted"] = f"partial (archive {total // 1048576} MB: text, scripts and small paks only)"
+                big = [e for e in entries if e["path"].lower().endswith(".pak") and e["size"] > MAX_PAK_MB * 1048576]
+                if big:
+                    res["unread_large"] = True
+                    res["problems"].append("content pak not read (too large): " + ", ".join(f"{e['path']} ({e['size'] // 1048576} MB)" for e in big[:3]))
             else:
                 res["extracted"] = "full (scratch, deleted after reading)"
             r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -609,7 +684,11 @@ def analyse_entry(rec, src_root, work, vanilla, krs_keys, args):
          "median_rel_change": statistics.median(rels) if rels else 0.0, "lua_files": lua_files, "lua_lines": lua_lines, "cfg_keys": len(set(cfg)),
          "assets": area.get("textures", 0) + area.get("models/animations/materials", 0) + area.get("audio", 0), "loc_strings": loc_new + loc_changed,
          "ui_files": area.get("ui", 0), "native_files": nat + ext_files, "needs_external": requires_external, "core_rows": core_rows,
-         "core_rows_ge20pct": big_core, "readable": res["readable"]}
+         "core_rows_ge20pct": big_core, "readable": res["readable"], "reshade_files": area.get("reshade/ENB (shaders, presets)", 0),
+         "textures": area.get("textures", 0), "models": area.get("models/animations/materials", 0), "audio_files": area.get("audio", 0),
+         "visual_files": area.get("textures", 0) + area.get("models/animations/materials", 0) + area.get("reshade/ENB (shaders, presets)", 0),
+         "gfx_cfg": len({c for c in cfg if GFX_KEY.match(c)}), "data_xml_files": area.get("other game data (xml, not table rows)", 0),
+         "unread_large": bool(res.get("unread_large"))}
     if res["readable"] == "yes" and not src.files:
         m["readable"] = "no"
         res["problems"].append("no readable file in the archive")
@@ -621,7 +700,7 @@ def analyse_entry(rec, src_root, work, vanilla, krs_keys, args):
     findings = src.findings + res["listing_findings"]
     level = "HIGH" if any(l == "HIGH" for l, _ in findings) else "MEDIUM" if any(l == "MEDIUM" for l, _ in findings) else "LOW" if findings else "none"
     res.update(m)
-    res.update(grade=g, perceptibility=perc, grade_basis=why, depth=depth_layers(m),
+    res.update(grade=g, perceptibility=perc, grade_basis=why, depth=depth_layers(m), visual_impact=visual_impact(m), domain=domain_of(m),
                layout=install_layout(entries_paths, bool(man), kind == "loose file" or any(p.lower().endswith(".pak") for p in entries_paths)),
                areas="; ".join(f"{k}: {v}" for k, v in area.most_common()), tables_list=", ".join(sorted({t["base"] for t in tables if t["new"] + t["changed"] > 0}))[:300],
                rows_new=sum(t["new"] for t in tables), rows_changed=sum(t["changed"] for t in tables), rows_same=sum(t["same"] for t in tables),
@@ -632,6 +711,7 @@ def analyse_entry(rec, src_root, work, vanilla, krs_keys, args):
                native_info=" || ".join(f"{k}: {v}" for k, v in src.native_info.items())[:900], problems_text=" | ".join(dict.fromkeys(res["problems"]))[:600])
     res["_tables"] = tables
     res["_keys"] = keys
+    src.close()
     if scratch:
         rm_tree(scratch)
     return res
@@ -656,7 +736,7 @@ def krs_row_keys(vanilla):
     return out
 
 
-def targets(src_root, only):
+def targets(src_root, only, priorities=("P1", "P2"), include_unlisted=False):
     inv = list(csv.DictReader(open(os.path.join(D, "downloads_inventory.csv"), encoding="utf-8", newline="")))
     tri = {int(r["id"]): r for r in csv.DictReader(open(os.path.join(D, "mods_triage.csv"), encoding="utf-8", newline=""))}
     out = []
@@ -666,25 +746,30 @@ def targets(src_root, only):
         i = int(r["id"])
         if only and i not in only:
             continue
-        if not only and tri.get(i, {}).get("priority") not in ("P1", "P2"):
-            continue
+        if not only:
+            pr = tri[i]["priority"] if i in tri else "unlisted"
+            if pr not in priorities and not (pr == "unlisted" and include_unlisted):
+                continue
         out.append((r, tri.get(i, {})))
     return sorted(out, key=lambda x: (int(x[0]["id"]), x[0]["entry"]))
 
 
-def write_all(results, tri_by_id, quarantined):
+def write_all(results, tri_by_id, quarantined, tag=""):
+    sfx = "_" + tag if tag else ""
     cols = ["id", "name", "priority", "category", "entry", "sub_folder", "kind", "size_mb", "grade", "perceptibility", "depth", "layout", "loads_on_1_9_8",
-            "supports", "manifest_modid", "tables_list", "rows_new", "rows_changed", "rows_same", "rows_dropped", "tables_touched", "median_rel_change",
+            "domain", "visual_impact", "supports", "manifest_modid", "tables_list", "rows_new", "rows_changed", "rows_same", "rows_dropped", "tables_touched", "median_rel_change",
             "lua_files", "lua_lines", "cfg_keys", "assets", "loc_strings", "requires", "risk", "highlights", "areas", "grade_basis", "problems_text", "extracted"]
     for r in results:
         t = tri_by_id.get(r["id"], {})
-        r["name"], r["priority"], r["category"] = t.get("name", ""), t.get("priority", ""), t.get("category", "")
+        r["name"] = t.get("name") or r.get("manifest_name") or r["entry"]
+        r["priority"] = t.get("priority") or "unlisted"
+        r["category"] = t.get("category") or "(not in the 365 index)"
         r["median_rel_change"] = round(r["median_rel_change"], 3)
-    with open(os.path.join(D, "mod_analysis.csv"), "w", encoding="utf-8", newline="") as f:
+    with open(os.path.join(D, f"mod_analysis{sfx}.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(results)
-    with open(os.path.join(D, "mod_tables.csv"), "w", encoding="utf-8", newline="") as f:
+    with open(os.path.join(D, f"mod_tables{sfx}.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, lineterminator="\n")
         w.writerow(["id", "entry", "file_in_mod", "table", "vanilla_table", "style", "rows", "new", "changed", "same", "dropped_vs_vanilla", "changed_columns"])
         for r in results:
@@ -694,13 +779,13 @@ def write_all(results, tri_by_id, quarantined):
     for r in results:
         for k in r["_keys"]:
             owners[k].add(r["id"])
-    with open(os.path.join(D, "mod_overlap.csv"), "w", encoding="utf-8", newline="") as f:
+    with open(os.path.join(D, f"mod_overlap{sfx}.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, lineterminator="\n")
         w.writerow(["table", "key", "mods_changing_it", "mod_ids"])
         for (b, k), ids in sorted(owners.items(), key=lambda x: (-len(x[1]), x[0])):
             if len(ids) > 1:
                 w.writerow([b, "/".join(k), len(ids), " ".join(map(str, sorted(ids)))])
-    with open(os.path.join(D, "risk_scan.csv"), "w", encoding="utf-8", newline="") as f:
+    with open(os.path.join(D, f"risk_scan{sfx}.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, lineterminator="\n")
         w.writerow(["id", "name", "entry", "risk", "findings", "native_sha256", "action"])
         for r in results:
@@ -714,6 +799,9 @@ def main():
     ap.add_argument("--ids", nargs="*", type=int)
     ap.add_argument("--work", default=os.path.join(os.environ.get("TEMP", "."), "ka"))
     ap.add_argument("--no-quarantine", action="store_true")
+    ap.add_argument("--priorities", nargs="*", default=["P1", "P2"], help="triage priorities to read (default P1 P2)")
+    ap.add_argument("--include-unlisted", action="store_true", help="also read downloads whose id is not in the 365 index")
+    ap.add_argument("--tag", default="", help="suffix of the output files, e.g. p3_p4 -> mod_analysis_p3_p4.csv, MOD_ANALYSIS_P3_P4.md")
     a = ap.parse_args()
     if not os.path.exists(SEVENZ):
         raise SystemExit("7-Zip not found at " + SEVENZ)
@@ -724,7 +812,7 @@ def main():
     krs = krs_row_keys(vanilla)
     tri = {int(r["id"]): r for r in csv.DictReader(open(os.path.join(D, "mods_triage.csv"), encoding="utf-8", newline=""))}
     results = []
-    tg = targets(a.src, set(a.ids or []))
+    tg = targets(a.src, set(a.ids or []), tuple(a.priorities), a.include_unlisted)
     print(f"{len(tg)} entries of {len({int(r['id']) for r, _ in tg})} mods to read")
     for n, (rec, t) in enumerate(tg, 1):
         try:
@@ -759,10 +847,10 @@ def main():
                             w.writerow(["from", "to", "id", "reason"])
                         w.writerow([os.path.join(r["sub_folder"], r["entry"]), os.path.join("_quarantine", r["entry"]), r["id"], r["risk_findings"][:300]])
                     quarantined.add(r["entry"])
-    owners = write_all(results, tri, quarantined)
+    owners = write_all(results, tri, quarantined, a.tag)
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import audit_mods_report as rep  # noqa: E402
-    rep.write_reports(results, tri, owners, quarantined)
+    rep.write_reports(results, tri, owners, quarantined, a.tag, "/".join(a.priorities) + (" and unlisted" if a.include_unlisted else ""))
     rm_tree(a.work)
     print("scratch folder removed:", not os.path.exists(a.work))
     print(f"{len(results)} entries analysed; quarantined {len(quarantined)}")

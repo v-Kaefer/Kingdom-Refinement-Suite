@@ -7,13 +7,15 @@ import paths
 
 D = paths.MODS_REVIEW
 GRADES = ["A changes the most", "B large", "C effective (few rows, strong effect)", "D small tweak",
-          "E non-perceptive to gameplay (content or text only)", "E non-perceptive to gameplay (no effective change found)", "X not analysed"]
+          "E visual, audio or UI only (no gameplay change)", "E text only (no gameplay change)",
+          "E non-perceptive to gameplay (no effective change found)", "X not analysed"]
 GRADE_NOTE = {
     "A changes the most": "native code or an external tool, or 400+ rows, or 15+ tables, or 3000+ lines of Lua",
     "B large": "100+ rows, or 6+ tables, or 600+ lines of Lua",
     "C effective (few rows, strong effect)": "1 to 39 rows, but at least one core-gameplay row changes by 20 % or more (or 30+ rows / 150+ lines of Lua reach 'high' perceptibility)",
     "D small tweak": "some rows, config keys or script lines, none of them a large change in a core table",
-    "E non-perceptive to gameplay (content or text only)": "only textures, models, audio, UI or text; no data row changes",
+    "E visual, audio or UI only (no gameplay change)": "textures, models, ReShade/ENB presets, audio, UI or graphics config (r_, e_, sys_ cvars) only; no data row or script changes. Not imperceptible: see the visual impact column",
+    "E text only (no gameplay change)": "only changed or new text strings",
     "E non-perceptive to gameplay (no effective change found)": "nothing found that changes the game (empty, no-op rows, or unreadable pak)",
     "X not analysed": "nothing readable (damaged, encrypted, not a ZIP, or refused by the safety judgement)",
 }
@@ -36,8 +38,10 @@ def short(h, n=3):
     return "; ".join(h.split(" | ")[:n])
 
 
-def write_reports(results, tri, owners, quarantined):
+def write_reports(results, tri, owners, quarantined, tag="", scope="P1/P2"):
+    sfx = "_" + tag.upper() if tag else ""
     today = datetime.date.today().isoformat()
+    csfx = "_" + tag if tag else ""
     by_grade = collections.defaultdict(list)
     for r in results:
         by_grade[r["grade"]].append(r)
@@ -60,11 +64,11 @@ def write_reports(results, tri, owners, quarantined):
             prob["archives whose pak is not a ZIP (not readable by the game)"] += 1
         if any("suffix" in p and "ignored" in p for p in r["problems_text"].split(" | ")):
             prob["archives with a suffix that differs from the mod id (patch ignored)"] += 1
-    L = ["# Mod analysis: what the P1/P2 mods change (generated)", "", HEAD, "",
-         f"Read on {today}: **{len(results)} archives, folders and loose files of {len(mods)} mods** (all P1 and P2 mods that are in the downloads folder). "
+    L = [f"# Mod analysis: what the {scope} mods change (generated)", "", HEAD, "",
+         f"Read on {today}: **{len(results)} archives, folders and loose files of {len(mods)} mods** (all {scope} mods that are in the downloads folder). "
          "Method: each archive is listed with 7-Zip (nothing extracted yet) and judged for risk; the safe ones are extracted to a scratch folder, read with Python "
          "(file names, magic bytes, XML tables compared with the vanilla `Tables.pak`, Lua and config text), and the scratch folder is deleted. "
-         "No file was executed, installed or loaded by the game; no game run was made. Per-mod detail: [`MOD_PROFILES.md`](MOD_PROFILES.md); tables: `mod_analysis.csv`, `mod_tables.csv`, `mod_overlap.csv`, `risk_scan.csv`.", "",
+         f"No file was executed, installed or loaded by the game; no game run was made. Per-mod detail: [`MOD_PROFILES{sfx}.md`](MOD_PROFILES{sfx}.md); tables: `mod_analysis{csfx}.csv`, `mod_tables{csfx}.csv`, `mod_overlap{csfx}.csv`, `risk_scan{csfx}.csv`.", "",
          "## Risk result", "", "| Level | Archives |", "|---|---|"]
     for k in ("HIGH", "MEDIUM", "LOW", "none"):
         L.append(f"| {k} | {risk.get(k, 0)} |")
@@ -91,10 +95,10 @@ def write_reports(results, tri, owners, quarantined):
         rows = sorted(by_grade.get(g, []), key=lambda r: (-r["rows_changed_or_new"], r["id"]))
         if not rows:
             continue
-        L += [f"## {g} ({len(rows)})", "", "| Id | Mod | Layers | Rows (new / changed) | Tables | Median rel. | Perceptible | Highlights | Risk |", "|---|---|---|---|---|---|---|---|---|"]
+        L += [f"## {g} ({len(rows)})", "", "| Id | Mod | Domain | Rows (new / changed) | Tables | Median rel. | Gameplay / visual | Highlights | Risk |", "|---|---|---|---|---|---|---|---|---|"]
         for r in rows:
-            L.append(f"| {r['id']} | {esc(r['name'])[:48]} | {esc(r['depth'].replace('data tables (PTF)', 'tables'))[:46]} | {r['rows_new']} / {r['rows_changed']} | {r['tables_touched']} | "
-                     f"{r['median_rel_change']} | {r['perceptibility']} | {esc(short(r['highlights'], 2))[:150]} | {r['risk']} |")
+            L.append(f"| {r['id']} | {esc(r['name'])[:48]} | {esc(r.get('domain', ''))[:46]} | {r['rows_new']} / {r['rows_changed']} | {r['tables_touched']} | "
+                     f"{r['median_rel_change']} | {r['perceptibility']} / {r.get('visual_impact', '-')} | {esc(short(r['highlights'], 2) or r['areas'])[:150]} | {r['risk']} |")
         L.append("")
     ov = [(k, v) for k, v in owners.items() if len(v) > 1]
     L += ["## Overlap between the analysed mods", "",
@@ -119,17 +123,17 @@ def write_reports(results, tri, owners, quarantined):
     ext = [r for r in results if r["needs_external"] or r["requires"]]
     L += ["## Needs something outside the game files", "",
           "; ".join(f"{r['id']} ({r['requires']})" for r in ext if r["requires"]) or "none found", ""]
-    open(os.path.join(D, "MOD_ANALYSIS.md"), "w", encoding="utf-8", newline="\n").write("\n".join(L))
+    open(os.path.join(D, f"MOD_ANALYSIS{sfx}.md"), "w", encoding="utf-8", newline="\n").write("\n".join(L))
 
-    P = ["# Mod profiles (generated)", "", HEAD, "",
-         "One section per archive of the P1/P2 mods, best first by grade. What it changes, how it is installed, where the data lives, how much it changes (against the vanilla tables), "
-         "what it needs, and the risk result. See [`MOD_ANALYSIS.md`](MOD_ANALYSIS.md) for the grading rules.", ""]
+    P = [f"# Mod profiles: {scope} (generated)", "", HEAD, "",
+         f"One section per archive of the {scope} mods, best first by grade. What it changes, how it is installed, where the data lives, how much it changes (against the vanilla tables), "
+         f"what it needs, and the risk result. See [`MOD_ANALYSIS{sfx}.md`](MOD_ANALYSIS{sfx}.md) for the grading rules.", ""]
     order = {g: i for i, g in enumerate(GRADES)}
     for r in sorted(results, key=lambda r: (order.get(r["grade"], 9), -r["rows_changed_or_new"], r["id"])):
         P += [f"## {r['id']} {esc(r['name'])} ({r['priority']}, {r['category']})", "",
               f"- **What the author says (Nexus summary):** {esc(tri.get(r['id'], {}).get('evidence_summary', '')) or '-'}",
               f"- **File:** `{r['entry']}` ({r['kind']}, {r['size_mb']} MB, `{r['sub_folder']}`), {r['extracted']}",
-              f"- **Grade:** {r['grade']} | **perceptibility:** {r['perceptibility']} | **layers:** {r['depth']}",
+              f"- **Grade:** {r['grade']} | **gameplay perceptibility:** {r['perceptibility']} | **visual/audio impact:** {r.get('visual_impact', '-')} | **layers:** {r['depth']} | **domain:** {r.get('domain', '-')}",
               f"- **How it installs:** {r['layout']}; manifest id `{r['manifest_modid'] or '-'}`, supports `{r['supports'] or '-'}`, loads on 1.9.8: {r['loads_on_1_9_8']}",
               f"- **Where it changes things:** {r['areas'] or 'nothing recognised'}"]
         if r["tables_list"]:
@@ -153,24 +157,35 @@ def write_reports(results, tri, owners, quarantined):
             P.append(f"- **Native file, read statically (never run):** {esc(r['native_sha'])} | {esc(r['native_info'])[:700]}")
         P.append(f"- **Risk:** {r['risk']}" + (f": {esc(r['risk_findings'])[:500]}" if r["risk_findings"] else "") + (" (quarantined)" if r["entry"] in quarantined else ""))
         P.append("")
-    open(os.path.join(D, "MOD_PROFILES.md"), "w", encoding="utf-8", newline="\n").write("\n".join(P))
+    open(os.path.join(D, f"MOD_PROFILES{sfx}.md"), "w", encoding="utf-8", newline="\n").write("\n".join(P))
 
+    write_quarantine()
+
+
+def write_quarantine():
+    """one register for every run: reads all risk_scan*.csv"""
+    import csv
+    import glob
+    notes = read_notes()
+    rows = []
+    for f in sorted(glob.glob(os.path.join(D, "risk_scan*.csv"))):
+        rows += list(csv.DictReader(open(f, encoding="utf-8", newline="")))
     Q = ["# Quarantine and risk register (generated)", "", HEAD, "",
          "Archives with a HIGH finding are **moved** (not deleted) to `Mods WIP folder/Installed_to_review/_quarantine/`; the move is listed in `_quarantine_manifest.csv` "
-         "in that folder. To restore one, move it back to the sub-folder named in the manifest. Nothing in quarantine was run, installed or opened by anything but the reader of this tool.", ""]
-    qr = [r for r in results if r["entry"] in quarantined]
+         "in that folder. To restore one, move it back to the sub-folder named in the manifest. Nothing in quarantine was run, installed or opened by anything but the reader of the tool. "
+         "The register covers every run (`risk_scan*.csv`).", ""]
+    qr = [x for x in rows if x["action"] == "quarantined"]
+    Q += [f"## Quarantined ({len(qr)})", ""]
     if qr:
-        notes = read_notes()
-        Q += ["## Quarantined", "", "| Id | Mod | File | Assessment | Findings | Native file read statically |", "|---|---|---|---|---|---|"]
-        Q += [f"| {r['id']} | {esc(r['name'])} | `{r['entry']}` | {esc(notes.get(r['id'], ''))} | {esc(r['risk_findings'])[:400]} | {esc(r.get('native_sha', ''))[:120]} {esc(r.get('native_info', ''))[:500]} |" for r in qr]
+        Q += ["| Id | Mod | File | Assessment | Findings | Native file read statically |", "|---|---|---|---|---|---|"]
+        Q += [f"| {x['id']} | {esc(x['name'])} | `{x['entry']}` | {esc(notes.get(int(x['id']), ''))} | {esc(x['findings'])[:400]} | {esc(x['native_sha256'])[:600]} |" for x in qr]
     else:
-        Q += ["## Quarantined", "", "none"]
-    mr = [r for r in results if r["risk"] in ("MEDIUM", "LOW") and r["entry"] not in quarantined]
-    Q += ["", "## Kept, with a note", ""]
+        Q.append("none")
+    mr = [x for x in rows if x["risk"] in ("MEDIUM", "LOW") and x["action"] != "quarantined"]
+    Q += ["", f"## Kept, with a note ({len(mr)})", ""]
     if mr:
-        notes = read_notes()
         Q += ["| Id | Mod | File | Level | Assessment | Findings |", "|---|---|---|---|---|---|"]
-        Q += [f"| {r['id']} | {esc(r['name'])} | `{r['entry']}` | {r['risk']} | {esc(notes.get(r['id'], ''))} | {esc(r['risk_findings'])[:400]} |" for r in mr]
+        Q += [f"| {x['id']} | {esc(x['name'])} | `{x['entry']}` | {x['risk']} | {esc(notes.get(int(x['id']), ''))} | {esc(x['findings'])[:400]} |" for x in mr]
     else:
         Q.append("none")
     Q += ["", "## What was checked", "",

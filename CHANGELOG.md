@@ -5,6 +5,15 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (seventh request): branches, and the P3, P4 and unlisted mods read
+
+Branches: `mods-analysis-p1-p2` marks the P1/P2 analysis (cc65109); this work is on `mods-analysis-p3-p4` (not pushed). No game run, no mod run.
+
+- `tools/audit_mods_deep.py` gained `--priorities`, `--include-unlisted` and `--tag` (separate output files), visual impact and domain columns, ReShade/ENB/SweetFX and game-data XML detection, paks up to 2.6 GB, tables up to 32 MB, header-less patches, closing of pak handles before the scratch delete, and a single `QUARANTINE.md` built from every `risk_scan*.csv`. `.bin` is no longer treated as native code (1410 and 2273 restored from quarantine); "curl" in dialog text no longer counts.
+- Read 227 entries of 208 mods (P3, P4, 17 unlisted downloads): results in `MOD_ANALYSIS_P3_P4.md`, `MOD_PROFILES_P3_P4.md`, `*_p3_p4.csv`; conclusions in `MODS_REVIEW.md` section 16. P1/P2 were re-run with the same tool (A 23, B 22, C 53, D 22, E 15, X 3).
+- 17 more mods quarantined (19 archives): the cheat framework (106, 771, 1193), KCSE and its plugins (2244, 2255, 2270, 2277), ASI plugins (2261, 2365, 2366), Let Me Loot (972), four ReShade/ENB packages with `dxgi.dll` (1074, 1394, 1403, 1702), Mod Order Tool (1829), a Mod Organizer plugin (2216). 23 mods in quarantine in all.
+- `risk_notes.csv` now has an assessment for every quarantined and flagged mod.
+
 ## 2026-10-04 (sixth request): read-only deep analysis of the P1/P2 mods
 
 No game run, no mod run: the archives are untrusted, so they were only listed, extracted to a scratch folder, read and deleted.

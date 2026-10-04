@@ -9,3 +9,27 @@ id,assessment
 1009,"The extracted folder is an older version of the mod with Data/Tables/rpg/*__perkaholic.xml (no Libs/ root, so not loaded) and a perkaholic.7zip; the .rar is the current version (a ZIP pak with Libs/Tables). Use the .rar."
 1765,"Two .7zip files (Riposte.7zip, Data/Riposte.7zip): not readable by the game; the working pak is elsewhere in the folder or must be re-packed. Not a security finding."
 2049,"Ships an installer for engine config (DIY Engine, sys_spec_Physics.cfg: physics cvars) and one Lua script (PickableItem__zzzxdddbrdp.lua) that uses loadstring. Engine-level physics changes, not malware-shaped; worth reading the script before use."
+106,"The community Cheat mod itself (framework v1.58, Scripts/Startup/main.lua plus cheat_*.lua): loads code dynamically (loadstring/loadfile) and opens files by design, because it is a console-command framework. Expected for what it is, but it is a script framework with file access: held. The same framework is bundled inside 771, 1193 and 1839."
+771,Hoods Over Helmets (data part: removes kettle helmets from NPCs) bundles the cheat-console Lua framework (cheat_console.lua and others) and a nested .7zip. The framework is not needed for the data part. Held; the table part can be re-packed alone.
+1193,"Weather Mod ships the cheat-console Lua framework next to its weather files (same payload as 771, 1839). Held."
+972,"Let Me Loot: two native files, bin/Win64/dinput8.dll (a loader that hijacks the DirectInput DLL name) and NativeMods/letmeloot.dll. Native code, unverifiable by reading: held."
+1074,"ReShade package: dxgi.dll is the injector (native). The shaders (.fx) and presets (.ini) are text and were read; their URLs point at the public reshade-shaders repository. The DLL is unverified, so the package is held; the preset text is usable with a ReShade you installed yourself."
+1394,"ReShade package with a dxgi.dll injector (native, unverified). Held; the preset text remains readable."
+1403,"ENB/ReShade package for low settings: bin/Win64/dxgi.dll (native, unverified) plus the standard reshade-shaders folder (the .py files are Tobii/FreePIE helper scripts of the Depth3D shader pack, not run by the game; they carry only the shader author's URL). Held."
+1702,"SLEE/GST ReShade preset package with a dxgi.dll injector (native, unverified) and the standard shader folder (same Depth3D helper .py files as 1403). Held; the preset text remains readable."
+1829,"Mod Order Tool 1.2: a Windows executable (MOT 1.2 en_US.exe), an external app that edits mod order. Held until the author decides."
+2216,"Mod Organizer 2 plugin pack (a Python plugin game_kingdomcomedeliverance.py): a script that runs inside Mod Organizer, not in the game. Held (script)."
+2244,"Kingdom Come Script Extender (KCSE): Bin/Win64/dinput8.dll, the native loader that every KCSE plugin needs (2246, 2255, 2270, 2277 and others). Native code: held."
+2255,"Fast Travel Tweaks: KCSE plugin DLL. Native, needs KCSE and Address Library. Held."
+2261,Proper Third Person View: KCD1_TPVCamera.asi (native plugin). Held.
+2270,"Horse Control Tweaks: KCSE plugin DLL (HorseControl.dll). Native, needs KCSE. Held."
+2277,"Toggle Hud: KCSE plugin DLL (ToggleHud.dll). Native, needs KCSE. Held."
+2365,"KCDT: the KCDT.asi plugin (the engine of KcdCombatTune, 2359) in two identical download copies. Native: held."
+2366,Faster Book Flipping: FasterBookFlipping.asi (native plugin). Held.
+950,"Level content (castle prefabs): the long base64-like strings are encoded object data in prefab XML, not a script. Not a security finding."
+1218,"Lartigues Upscale Project (texture upscale): ships Data/GameData.7zip, which the game cannot read, next to the real data. Not a security finding."
+1356,"Fan quest mod (Heritage): a Lua script in the cinematic trigger loads code with loadstring, and a test csv names CScript; both look like vanilla-style quest scaffolding. Read the script before use."
+1723,"Ships Data/IntimidationStat.7zip, which the game cannot read. Not a security finding."
+1956,Auto Hide HUD Reborn: RHUD.lua uses the Lua debug library (debug.*). Common in HUD scripts for introspection; read before use.
+2008,ReShade preset pack: contains nested .zip files of shader versions (BloomSat v1.0 and v1.1). Not readable by the game; harmless as data.
+2204,A Real Sorted Inventory: one Lua script uses loadstring (UI mod). Read before use.
