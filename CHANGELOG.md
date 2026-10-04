@@ -5,6 +5,10 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (fifth request): 49 pages opened from the author's list
+
+- Opened the 49 ids the author listed (random 1.5-2.2 s apart): 47 low-priority mods of the author's own lists plus 129, 1904 and 1296 (1296 is a deleted page). 129 and 1904 were taken out of `excluded_mods.csv` (35 ids now) because the author asked for them again. The ids are batch 5 in `download_batches.csv`; they show as missing (49) until downloaded.
+
 ## 2026-10-04 (fourth request): the 365 against the folder
 
 - `tools/inventory_downloads.py` also writes `docs/mods-review/list_vs_downloads.csv`: one row per mod of `mods_index.csv` with in-folder yes/no, the archive names, the sub-folder and the reason when it is not there. Result: 280 of 365 in the folder (279 with an archive, 1131 through its replacement 2068), 85 not: 37 excluded by the author, 47 low-priority mods of the author's lists, 1 deleted page (1296).

@@ -10,8 +10,8 @@
 |---|---|---|
 | P1 | 3 | act now |
 | P2 | 128 | compare or check before combining |
-| P3 | 145 | optional or not mapped |
-| P4 | 89 | outside the suite's scope |
+| P3 | 147 | optional or not mapped |
+| P4 | 87 | outside the suite's scope |
 
 | Evidence | Mods |
 |---|---|
@@ -29,9 +29,9 @@
 | P2 | Disabled on 1.9.8 by its manifest: edit the version line | 1 |
 | P2 | Study the rows and compare | 25 |
 | P3 | Classify by hand | 3 |
-| P3 | Optional companion: outside the PTF scope, check version support | 84 |
-| P3 | Review: gameplay mod not mapped to a KRS module | 58 |
-| P4 | Excluded by the author: do not download or review | 37 |
+| P3 | Optional companion: outside the PTF scope, check version support | 85 |
+| P3 | Review: gameplay mod not mapped to a KRS module | 59 |
+| P4 | Excluded by the author: do not download or review | 35 |
 | P4 | Optional visual: no table overlap expected | 46 |
 | P4 | Out of scope | 4 |
 | P4 | Removed or hidden on Nexus: drop it or find a replacement | 1 |

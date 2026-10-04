@@ -22,10 +22,12 @@ Read on 2026-10-04 from the downloads folder. Nothing was extracted or run; entr
 |---|---|---|
 | 0 already had (pilot or Vortex downloads) | 12 | 0 |
 | 1 tabs opened, first 100 | 100 | 0 |
-| 2 tabs opened, next 100 | 100 | 0 |
-| 4 tabs opened, third batch | 100 | 0 |
+| 2 tabs opened, next 100 | 100 | 1 |
+| 4 tabs opened, third batch | 99 | 0 |
+| 5 tabs opened, list given by the author | 47 | 47 |
+| 5 tabs opened, list given by the author (reopened) | 1 | 1 |
 
-Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (0 ids). Full inventory: [`downloads_inventory.csv`](downloads_inventory.csv).
+Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (49 ids). Full inventory: [`downloads_inventory.csv`](downloads_inventory.csv).
 
 ## Identical copies (same SHA-256)
 

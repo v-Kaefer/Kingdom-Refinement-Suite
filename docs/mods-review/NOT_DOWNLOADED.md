@@ -4,9 +4,8 @@
 
 Superseded pages count as downloaded (1: see `superseded_mods.csv`). The mods are the ones of the author's lists (mods to verify, working list, Vivaldi tabs, history screenshots).
 
-## Excluded by the author (37)
+## Excluded by the author (35)
 
-- 129 Equal Horse Caparisons
 - 708 Viking Set
 - 762 Queen of Sheba's sword
 - 791 ALL Hoods Up (With Correct Meshes)
@@ -31,7 +30,6 @@ Superseded pages count as downloaded (1: see `superseded_mods.csv`). The mods ar
 - 1719 Quests Checklist
 - 1797 Nighttime Nighthawk
 - 1882 Devil's Scowl Sheild Fix
-- 1904 Better Map Icons
 - 2012 Jubilant Pig Meter
 - 2081 No More Wreath - Lords of Leipa Helmet Wreath Removal and Hounskull Replacer
 - 2119 KCD Mod Manager
@@ -44,12 +42,9 @@ Superseded pages count as downloaded (1: see `superseded_mods.csv`). The mods ar
 - 2374 A Real Sorted Inventory - Ukrainian
 - 2375 A Bohemian Novel - The Veteran of Nicopolis
 
-## Asked for, not downloaded yet (0)
+## Asked for, not downloaded yet (48)
 
-(none)
-
-## In the author's lists, no page opened (low priority) (47)
-
+- 129 Equal Horse Caparisons
 - 994 Depth ReShade
 - 1046 Rudy ENB for KCD
 - 1074 Realism Enlighted ReShade - lore-friendly realistic Visual Enhancing and Sharpening - big quality boost on lower resolutions
@@ -86,6 +81,7 @@ Superseded pages count as downloaded (1: see `superseded_mods.csv`). The mods ar
 - 1823 RTX 3050 PACK
 - 1875 KCD1 Enhanced Visuals - UBER Graphics ReShade
 - 1900 Jiggle Physics
+- 1904 Better Map Icons
 - 1972 FINAL Beyond SUPER Ultra Graphics and Visuals Configs
 - 2031 Mud and Iron Kingdom Come Deliverance Reshade
 - 2106 High FPS FX (KCD1)
@@ -95,8 +91,11 @@ Superseded pages count as downloaded (1: see `superseded_mods.csv`). The mods ar
 - 2180 Optimized CryEngine simple tweaks
 - 2196 ENHANCED Adult Bounce KCD I
 - 2243 Performance Tweaks and best visuals
-- 2304 Female Nudity
 - 2353 Ultimate Graphics Adjustment
+
+## In the author's lists, no page opened (low priority) (1)
+
+- 2304 Female Nudity
 
 ## Removed from Nexus (1)
 
