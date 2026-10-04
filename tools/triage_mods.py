@@ -6,6 +6,7 @@ triage_mods.py - classify and triage every mod of docs/mods-review/mods_index.cs
 
 Evidence classes (what the row stands on, strongest first):
     A  the archive was read (tools/analyze_mod_archives.py, docs/mods-review/archive_analysis.csv)
+    N  the Nexus API (docs/mods-review/nexus_metadata.csv, written by tools/nexus_metadata.py): name, status and the author's own summary
     B  a Nexus search result whose URL id matched the title (docs/mods-review/search_evidence.csv)
     C  the title only (browser tab title, author label)
     D  nothing but the id
@@ -141,6 +142,11 @@ def main():
     p = os.path.join(D, "nexus_metadata.csv")
     if os.path.exists(p):
         nm = {int(x["id"]): x for x in csv.DictReader(open(p, encoding="utf-8", newline="")) if x["id"]}
+    for i, m in nm.items():   # the API summary is the mod author's own short description: it joins the evidence text
+        e = evs.get(i) or {"id": str(i), "title_seen": m["name"], "author": "", "version": "", "updated": "", "tested_on": "", "summary": ""}
+        e["summary"] = (e.get("summary", "") + " " + m.get("summary", "")).strip()
+        e["_api"] = True
+        evs[i] = e
     nf = collections.defaultdict(list)
     p = os.path.join(D, "nexus_files.csv")
     if os.path.exists(p):
@@ -164,7 +170,7 @@ def main():
         last_up = uploads[-1][:10] if uploads else ""
         latest = next((x["version"] for x in sorted(nf.get(i, []), key=lambda y: y.get("uploaded_at", ""), reverse=True)
                        if x.get("category") not in ("removed", "archived")), "")
-        evidence = "A archive" if arc_list else ("B search result" if ev else ("C title" if r["name"] else "D id only"))
+        evidence = "A archive" if arc_list else ("N Nexus API" if ev and ev.get("_api") else ("B search result" if ev else ("C title" if r["name"] else "D id only")))
         if arc_list:
             load = arc["loads_on_1.9.8"]
         elif re.search(r"1\.9\.8", r.get("versions", "") + r.get("check_1.9.8", "") + (ev["version"] if ev else "")):
@@ -237,6 +243,33 @@ def main():
     for o in out:
         if o["load_on_1.9.8"] != "unknown (manifest not seen)":
             L.append(f"| {o['id']} | {o['name'][:44]} | {o['load_on_1.9.8']} |")
+
+    if nm:
+        stat = collections.Counter(m["status"] for m in nm.values())
+        L += ["", "## Nexus API (tools/nexus_metadata.py, run by the author)", "",
+              "Status of the " + str(len(nm)) + " ids: " + ", ".join(f"{k} {v}" for k, v in sorted(stat.items())) + ".", "",
+              "Not published: " + (", ".join(f"{i} {m['name'][:40]} ({m['status']})" for i, m in sorted(nm.items()) if m["status"] != "published") or "none") + ".", "",
+              "Flagged adult by Nexus: " + (", ".join(f"{i} {m['name'][:28]}" for i, m in sorted(nm.items()) if m.get("adult") == "True") or "none") + ".", ""]
+        up = [o for o in out if o["updated_since_1.9.7"] == "yes"]
+        if nf:
+            L += [f"File lists were fetched for {len(nf)} mods; {len(up)} of them have a file uploaded on or after 2026-02-13 (the 1.9.7 patch): "
+                  + (", ".join(f"{o['id']}" for o in up) or "none") + ".", ""]
+        else:
+            L += ["File lists and versions were not fetched yet (`python tools/nexus_metadata.py --files`).", ""]
+
+    # mods worth reading as archives next: likely or measured collision and not read yet, plus PTF-shaped gameplay in a KRS area
+    todo = [o for o in out if o["evidence"] != "A archive" and o["nexus_status"] in ("", "published")
+            and (o["row_collision"].startswith("likely") or (o["priority"] == "P2" and "Study" in o["action"]))]
+    S = ["# Archives to read next (generated)", "",
+         "> **GENERATED** by `tools/triage_mods.py`: do not edit | **Kind:** review | **Trust:** triage rules plus Nexus API names and status | **Game version:** 1.9.8", "",
+         f"{len(todo)} published mods whose Nexus description names the same values as a KRS row (\"likely\") or that are PTF-shaped gameplay mods in a KRS area, "
+         "and whose archive has not been read. Download them the usual way (Vortex or the browser: the page link, tab Files) and put the archives in one folder, then run "
+         "`python tools/analyze_mod_archives.py --src <folder>` and `python tools/triage_mods.py`. No script in this repository downloads mod files.", "",
+         "| Id | Mod | KRS modules | Why | Page | Files |", "|---|---|---|---|---|---|"]
+    for o in sorted(todo, key=lambda x: (not x["row_collision"].startswith("likely"), x["id"])):
+        base = f"https://www.nexusmods.com/kingdomcomedeliverance/mods/{o['id']}"
+        S.append(f"| {o['id']} | {o['name'][:46]} | {o['krs_modules']} | {o['row_collision'].split(':')[0]} | [page]({base}) | [files]({base}?tab=files) |")
+    open(os.path.join(D, "DOWNLOAD_SHORTLIST.md"), "w", encoding="utf-8", newline="\n").write("\n".join(S) + "\n")
 
     L += ["", "## Still to identify or classify by hand", "",
           "Ids without a usable name: " + (", ".join(str(o["id"]) for o in out if not o["name"]) or "none") + ".", "",

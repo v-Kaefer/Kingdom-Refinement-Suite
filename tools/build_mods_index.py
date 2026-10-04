@@ -86,11 +86,12 @@ def main():
     viv = {int(r["id"]): r for r in read_csv(os.path.join(D, "sources", "nexusmods_abas_vivaldi.csv"))}
     titles = {int(r["id"]): r for r in read_csv(os.path.join(D, "raw", "new-mods-lists-review", "id_titles.csv"))}
     evid = {int(r["id"]): r for r in read_csv(os.path.join(D, "search_evidence.csv"), "utf-8")}
-    ids = sorted(set(verify) | set(tested) | set(ann) | set(work) | set(viv) | set(titles) | set(evid))
+    api = {int(r["id"]): r for r in read_csv(os.path.join(D, "nexus_metadata.csv"), "utf-8") if r.get("id")}   # tools/nexus_metadata.py
+    ids = sorted(set(verify) | set(tested) | set(ann) | set(work) | set(viv) | set(titles) | set(evid) | set(api))
     cols = ["id", "url", "name", "name_source", "scope", "in_mods_to_verify", "times_in_verify_list", "in_tested_1.9.6_list",
             "in_vivaldi_tabs", "in_history_screenshots", "in_workspace", "author_label", "category", "ptf", "triage",
             "author_or_series", "versions", "install", "krs_area", "fix_type", "fix_status", "check_1.9.8", "check_source",
-            "observation", "list_review_note", "review_coverage"]
+            "observation", "list_review_note", "nexus_status", "nexus_summary", "review_coverage"]
     out = os.path.join(D, "mods_index.csv")
     rows_out, lists_scope = [], {}
     with open(out, "w", encoding="utf-8", newline="") as f:
@@ -111,8 +112,8 @@ def main():
             lists_scope[i] = scope
             # browser titles are the exact page titles; annotation names (search summaries, author labels) come after them
             seen = evid.get(i, {}).get("title_seen", "")
-            name = viv.get(i, {}).get("nome") or t.get("title") or seen or a.get("name") or work.get(i, {}).get("name", "") or label.get(i, "")
-            src = ("Vivaldi tab" if i in viv else "") or ("id_titles.csv" if t.get("title") else "") \
+            name = api.get(i, {}).get("name") or viv.get(i, {}).get("nome") or t.get("title") or seen or a.get("name") or work.get(i, {}).get("name", "") or label.get(i, "")
+            src = ("Nexus API" if api.get(i, {}).get("name") else "") or ("Vivaldi tab" if i in viv else "") or ("id_titles.csv" if t.get("title") else "") \
                 or ("search result title" if seen else "") or (a.get("name_source") if a.get("name") else "") or ("workspace file name" if i in work else "") or ("author label" if i in label else "")
             src_t = t.get("source", "")
             cover = "described in review" if a else ("title list only" if t else "no text in the review files")
@@ -123,7 +124,8 @@ def main():
                         triage(t, a) if (t or a) else "unsorted (no category yet)", a.get("author_or_series", ""),
                         a.get("versions", ""), a.get("install", ""), a.get("krs_area", "") or t.get("krs_area", ""),
                         t.get("fix_type", ""), a.get("fix_status", ""), a.get("check_1.9.8", ""), a.get("check_source", ""),
-                        a.get("observation", ""), t.get("review_note", ""), cover])
+                        a.get("observation", ""), t.get("review_note", ""), api.get(i, {}).get("status", ""),
+                        api.get(i, {}).get("summary", "")[:300], cover])
             rows_out.append(i)
     dup = sorted(i for i, n in verify.items() if n > 1)
     print(f"links in mods_to_verify.txt: {sum(verify.values())}; unique ids: {len(verify)}; repeated inside it: {dup}")

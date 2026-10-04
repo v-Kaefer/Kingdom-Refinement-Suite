@@ -5,6 +5,13 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-03 (sixth request): Nexus API results folded in, download question
+
+No game run in this request.
+
+- The author ran `tools/nexus_metadata.py`: 365 ids, 363 published, 1296 removed, 1131 removed by staff; the 7 nameless ids now have names (including 2345 Food and Drinks rebalance and 2362 Better Perk Descriptions). `docs/mods-review/nexus_metadata.csv` is committed; `build_mods_index.py` takes names, status and a summary from it; `triage_mods.py` reads the descriptions (new evidence class N: 347 mods, A: 18) and moves removed pages to P4. Counts now P1 3, P2 129, P3 181, P4 52; likely collisions 34.
+- Checked for a download script: none exists in the repository or its tools (`MODS_REVIEW.md` section 14). New generated `docs/mods-review/DOWNLOAD_SHORTLIST.md`: 51 published mods to read as archives next, with page and Files links; no download is automated.
+
 ## 2026-10-03 (fifth request): SteamDB changed files, Nexus API tool
 
 No game run in this request.
