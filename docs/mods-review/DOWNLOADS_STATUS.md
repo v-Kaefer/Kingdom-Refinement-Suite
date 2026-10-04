@@ -8,10 +8,10 @@ Read on 2026-10-04 from the downloads folder. Nothing was extracted or run; entr
 
 | What | Number |
 |---|---|
-| Entries in the folder | 308 (293 archive, 9 folder (already extracted), 1 incomplete download, 5 loose file) |
-| Distinct mod ids found | 289 |
+| Entries in the folder | 309 (294 archive, 9 folder (already extracted), 1 incomplete download, 5 loose file) |
+| Distinct mod ids found | 290 |
 | downloaded, but not in any batch asked for | 4 |
-| id is not in the index (a misleading link?) | 11 |
+| id is not in the index (a misleading link?) | 12 |
 | incomplete: download again | 1 |
 | no mod id: look at it by hand | 2 |
 | ok | 290 |
@@ -47,11 +47,13 @@ Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (0 ids
 | 1777 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/1777) | `Diseases-1777-V2-0-1739366414.7z` | file name |
 | 1777 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/1777) | `Diseases_NoAudio-1777-V2-0-1739366653.7z` | file name |
 | 1807 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/1807) | `PoisonousEnemies-1807-V1-1-1739657277.7z` | file name |
+| 2358 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/2358) | `MT New Armor And Weapon System V1.0 2358 1 2026-09-11T18-39Z EfL7D0sNl.zip` | file name |
 
 ## To look at by hand
 
 | Entry | Status | Id | Mod |
 |---|---|---|---|
+| `MT New Armor And Weapon System V1.0 2358 1 2026-09-11T18-39Z EfL7D0sNl.zip` | id is not in the index (a misleading link?) | 2358 |  |
 | `Não confirmado 711221.crdownload` | incomplete: download again |  |  |
 | `Apex ENB-660-2-2-1590351047.7z` | id is not in the index (a misleading link?) | 660 |  |
 | `CLAM-502-1-2-0.zip` | id is not in the index (a misleading link?) | 502 |  |
@@ -73,4 +75,4 @@ Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (0 ids
 
 ## Uploaded after the 1.9.7 patch (13 Feb 2026)
 
-85 of the archives carry an upload date later than the patch (read from the name). An upload date is not a compatibility test.
+86 of the archives carry an upload date later than the patch (read from the name). An upload date is not a compatibility test.

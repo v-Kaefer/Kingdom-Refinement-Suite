@@ -21,7 +21,7 @@ Inputs:  docs/mods-review/superseded_mods.csv (removed pages whose replacement i
          docs/mods-review/excluded_mods.csv (mods the author does not want; never reported as missing),
          docs/mods-review/download_batches.csv (the ids that were asked for: batch 0 already had, 1 and 2 tabs opened, 3 shortlist only),
          docs/mods-review/mods_triage.csv (name, category, priority, KRS modules), the Vortex download folder (read-only listing).
-Outputs: docs/mods-review/NOT_DOWNLOADED.md (every index mod without a download, by reason), docs/mods-review/downloads_inventory.csv (one row per entry), docs/mods-review/downloads_missing.csv (asked for, not found),
+Outputs: docs/mods-review/list_vs_downloads.csv (all 365 mods of the index against the folder), docs/mods-review/NOT_DOWNLOADED.md (every index mod without a download, by reason), docs/mods-review/downloads_inventory.csv (one row per entry), docs/mods-review/downloads_missing.csv (asked for, not found),
          docs/mods-review/DOWNLOADS_STATUS.md (generated summary).
 """
 import argparse
@@ -215,6 +215,21 @@ def write_outputs(out, mods, batches, src):
     for k, v in groups.items():
         N += [f"## {k} ({len(v)})", ""] + (v or ["(none)"]) + [""]
     open(os.path.join(D, "NOT_DOWNLOADED.md"), "w", encoding="utf-8", newline="\n").write("\n".join(N))
+    # the whole index against the folder: one row per mod of the 365
+    files = collections.defaultdict(list)
+    for r in out:
+        if r["id"] and r["kind"] != "incomplete download":
+            files[int(r["id"])].append(r)
+    sup = {int(x["id"]): x["replaced_by"] for x in read_csv(os.path.join(D, "superseded_mods.csv"))}
+    why = {i: k for k, v in groups.items() for i in (int(x.split()[1]) for x in v)}
+    with open(os.path.join(D, "list_vs_downloads.csv"), "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["id", "name", "category", "priority", "in_folder", "files", "sub_folder", "if_not_in_folder"])
+        for i in sorted(mods):
+            t, fl = mods[i], files.get(i, [])
+            state = "yes" if fl else ("yes: replaced by " + sup[i] if i in sup else "no")
+            w.writerow([i, t["name"], t["category"], t["priority"], state, " | ".join(x["entry"] for x in fl),
+                        " | ".join(sorted({x["folder"] for x in fl})), "" if state != "no" else why.get(i, "")])
     cnt = collections.Counter(r["status"] for r in out)
     kinds = collections.Counter(r["kind"] for r in out)
     ids = {int(r["id"]) for r in out if r["id"]}
