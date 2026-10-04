@@ -10,11 +10,21 @@ The only file that is edited every session. Stable goals are in `OBJECTIVES.md`,
 - **Manifests:** list 1.9.6 to 1.9.8; the engine disables mods whose list lacks the running version, and editing the line is enough to load them (`../engine/game-versions.md`).
 - **Docs:** reorganized (`DOCS_PLAN.md`); `../../CHANGELOG.md` has the full history.
 - **Mod triage:** every mod is classified and prioritized (`../mods-review/TRIAGE.md`, `mods_triage.csv`); 26 local archives were read (measured), 42 mods have search evidence, the rest is title-based. The published KRS-Items releases on Nexus never applied; they must be replaced by `modules/krs_items`.
-- **Mod analysis (4 Oct 2026):** the P1/P2 mods that are downloaded (131 mods) were read statically, graded and risk-scanned; 6 archives are in quarantine (`../mods-review/MOD_ANALYSIS.md`, `QUARANTINE.md`, `MODS_REVIEW.md` section 15). No game run was made.
-- **Mod lists:** all lists are merged into `../mods-review/mods_index.csv` (365 mods, 129 of them new from the Vivaldi tabs and screenshots); everything about them is title-based until archives or Nexus pages are available (`../mods-review/MODS_REVIEW.md` section 12).
-- **Repository:** the remote moved while this branch was worked on: PRs #1 (first work), #2 (1.9.8 install note) and #3 (develop into main) are merged, and `develop` replaced `dev`. This branch still has the old docs layout on the remote and two or more local commits that are not pushed; merging `origin/develop` into it was not done (blocked in the session), so the reorganization and the new files need a merge or a PR decided by the author.
+- **Mod analysis (4 Oct 2026):** the downloaded P1/P2 mods (131 mods, 138 archives) were read statically (listed, extracted to a scratch folder, read, deleted; nothing run), graded (A 22, B 22, C 52, D 14, E 25, X 3) and risk-scanned; 6 archives are quarantined (`../mods-review/MOD_ANALYSIS.md`, `MOD_PROFILES.md`, `QUARANTINE.md`, `MODS_REVIEW.md` section 15). No game run was made. P3 and P4 follow on branch `mods-analysis-p3-p4`.
+- **Mod lists:** all lists are merged into `../mods-review/mods_index.csv` (365 mods). The mods in `Mods WIP folder/Installed_to_review` are the author's definitive list (4 Oct 2026): 280 of the 365 are there (279 archives plus 1131 through its replacement 2068), 37 are excluded by the author, 47 low-priority ones were not downloaded, and 17 downloads are outside the index (`../mods-review/list_vs_downloads.csv`, `NOT_DOWNLOADED.md`, `DOWNLOADS_PLAN.md`).
+- **Repository:** the remote moved while this work was done (PRs #1 to #3 are merged and `develop` replaced `dev`); these branches still have the old docs layout and are not merged with `origin/develop`. See Branches below.
 - **Not verified:** rows of level-only tables (perks, sleeping spots, overrides, `skill2item_category`) and the bow live-read; both need the Continue button in the test game, and on 1.9.8 possibly the new EULA screen.
-- **Waiting for the author:** answers in `DECISIONS.md` (open decisions), the missing links for the mod lists, permission replies (`PERMISSIONS.md`), whether to push `dev` and PR #1.
+- **Waiting for the author:** answers in `DECISIONS.md` (open decisions); what to do with the quarantined native mods (`../mods-review/QUARANTINE.md`: scan, restore or drop); whether the unlisted downloads join the index; permission replies (`PERMISSIONS.md`).
+
+## Branches
+
+| Branch | Holds | State |
+|---|---|---|
+| `claude/review-project-mods-03fe7c` | phases 0-3 modules, docs reorganization, mod lists, triage, downloads inventory | pushed earlier (draft PR); the base of the two below |
+| `mods-analysis-p1-p2` | read-only analysis of the downloaded P1/P2 mods, quarantine of 6 archives, docs | marks the P1/P2 state; pushed |
+| `mods-analysis-p3-p4` | everything of `mods-analysis-p1-p2` plus P3, P4 and unlisted downloads, the visual/domain grading, 17 more quarantined mods, P1/P2 re-run with the same tool | pushed; the branch to continue from |
+
+Order of merging: `mods-analysis-p1-p2` is contained in `mods-analysis-p3-p4`, so merging the latter brings both. Neither is merged with `origin/develop`.
 
 ## Progress of phases 0-3 (2 Oct 2026)
 

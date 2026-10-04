@@ -2,7 +2,7 @@
 
 > **Status date:** 2026-10-03 | **Kind:** project | **Trust:** proposal | **Game version:** -
 
-Status date: 2 Oct 2026. Plan for turning the repo into shippable, tested, Vortex-installable mods. It is ordered by
+Status date: 4 Oct 2026 (phase 8 added). Plan for turning the repo into shippable, tested, Vortex-installable mods. It is ordered by
 dependency: nothing in phase 1 or later is worth building until phase 0 makes packaged files actually load.
 
 Effort: S = about half a day, M = 1-2 days, L = several days. Branches follow `docs/project/OBJECTIVES.md`
@@ -114,3 +114,16 @@ not ship), repairs in QoL or Items, Perkaholic as a requirement.
 2. Phase 1 (Perks) as the first module through the gate end to end.
 3. 7.2 and 4.1 (the player stage and the live-read test), because the bow and Perks both need it.
 4. Phase 2, then Phase 3; Phase 4 and 5 in parallel branches once their gates exist.
+
+## Phase 8 - use what the mod analysis showed (after 4 Oct 2026)
+
+The analysis (`docs/mods-review/MOD_ANALYSIS.md`, `MODS_REVIEW.md` sections 15 and 16) is read-only and measured by reading; nothing here has been played. These steps turn it into decisions for the suite.
+
+| # | Step | Done when |
+|---|---|---|
+| 8.1 | From the grade C lists (few rows, strong effect), pick the candidates per KRS module and compare their values with the KRS rows; record the choice per key | a table per module in `docs/modules/<module>/` |
+| 8.2 | Settle the archives that set rows a KRS module also sets (`mod_analysis*.md`, `mod_overlap*.csv`): which value wins and why | no unexplained overlap left |
+| 8.3 | Decide the quarantined native mods (`QUARANTINE.md`): Windows Security scan then restore, or drop. 2246 (rpg params as console variables) matters for phase 4 | a line per mod in `DECISIONS.md` |
+| 8.4 | Whole-table replacers (85, 883, 2124, 2299 and others): document them as incompatible with the suite, or extract their useful rows as PTF patches (needs the author's permission) | listed in the module READMEs |
+| 8.5 | Add the unlisted downloads to the index; run `tools/nexus_metadata.py --files` for update dates | `mods_index.csv` and `nexus_files.csv` current |
+| 8.6 | Re-read the hidden constants on 1.9.8; the mods use `BowCharge*`, `Aim*`, `CombatAuto*`, `Pickpocketing*` and other hidden keys worth reading | `rpg_constants_runtime.csv` re-measured |

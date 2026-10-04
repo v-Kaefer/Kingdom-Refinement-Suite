@@ -5,6 +5,13 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (seventh request): branch for the P1/P2 analysis, docs brought up to date
+
+No game run, no mod run.
+
+- Branch `mods-analysis-p1-p2` marks the state after the read-only analysis of the downloaded P1/P2 mods (131 mods; 6 archives quarantined).
+- `docs/project/STATUS.md`: mod lists, mod analysis, repository and waiting-for-author bullets brought up to date, and a Branches table. `docs/project/ROADMAP.md`: new phase 8 (use what the analysis showed).
+
 ## 2026-10-04 (sixth request): read-only deep analysis of the P1/P2 mods
 
 No game run, no mod run: the archives are untrusted, so they were only listed, extracted to a scratch folder, read and deleted.
