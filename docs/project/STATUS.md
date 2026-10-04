@@ -1,6 +1,6 @@
 # Status
 
-> **Status date:** 2026-10-03 | **Kind:** project | **Trust:** derived | **Game version:** 1.9.6 and 1.9.8
+> **Status date:** 2026-10-04 | **Kind:** project | **Trust:** derived | **Game version:** 1.9.6 and 1.9.8
 
 The only file that is edited every session. Stable goals are in `OBJECTIVES.md`, the plan in `ROADMAP.md`, decisions in `DECISIONS.md`, what the engine does in `../engine/`.
 
@@ -10,6 +10,7 @@ The only file that is edited every session. Stable goals are in `OBJECTIVES.md`,
 - **Manifests:** list 1.9.6 to 1.9.8; the engine disables mods whose list lacks the running version, and editing the line is enough to load them (`../engine/game-versions.md`).
 - **Docs:** reorganized (`DOCS_PLAN.md`); `../../CHANGELOG.md` has the full history.
 - **Mod triage:** every mod is classified and prioritized (`../mods-review/TRIAGE.md`, `mods_triage.csv`); 26 local archives were read (measured), 42 mods have search evidence, the rest is title-based. The published KRS-Items releases on Nexus never applied; they must be replaced by `modules/krs_items`.
+- **Mod analysis (4 Oct 2026):** the P1/P2 mods that are downloaded (131 mods) were read statically, graded and risk-scanned; 6 archives are in quarantine (`../mods-review/MOD_ANALYSIS.md`, `QUARANTINE.md`, `MODS_REVIEW.md` section 15). No game run was made.
 - **Mod lists:** all lists are merged into `../mods-review/mods_index.csv` (365 mods, 129 of them new from the Vivaldi tabs and screenshots); everything about them is title-based until archives or Nexus pages are available (`../mods-review/MODS_REVIEW.md` section 12).
 - **Repository:** the remote moved while this branch was worked on: PRs #1 (first work), #2 (1.9.8 install note) and #3 (develop into main) are merged, and `develop` replaced `dev`. This branch still has the old docs layout on the remote and two or more local commits that are not pushed; merging `origin/develop` into it was not done (blocked in the session), so the reorganization and the new files need a merge or a PR decided by the author.
 - **Not verified:** rows of level-only tables (perks, sleeping spots, overrides, `skill2item_category`) and the bow live-read; both need the Continue button in the test game, and on 1.9.8 possibly the new EULA screen.

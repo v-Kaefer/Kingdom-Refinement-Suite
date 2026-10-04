@@ -42,7 +42,7 @@ VORTEX = os.path.join(os.environ.get("APPDATA", ""), "Vortex", "downloads", "kin
 ARCH_EXT = (".zip", ".7z", ".rar", ".7zip")
 OLD = re.compile(r"^(?P<name>.+?)-(?P<id>\d{1,4})-(?P<rest>[^/\\]*?)(?:-(?P<ts>\d{10}))?(?: \(\d+\))?$")
 NEW = re.compile(r"^(?P<name>.+?) (?P<id>\d{1,4}) (?P<ver>\S+) (?P<date>\d{4}-\d\d-\d\dT\d\d-\d\dZ) (?P<hash>\w+)$")
-SKIP_DIRS = {"_unmatched", "_incomplete"}
+SKIP_DIRS = {"_unmatched", "_incomplete", "_quarantine"}
 
 
 def is_sort_folder(name):

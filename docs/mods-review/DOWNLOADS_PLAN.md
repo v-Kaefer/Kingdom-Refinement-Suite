@@ -23,7 +23,7 @@ The archives are untrusted (the author received malware warnings while downloadi
 | 5 | The author's decisions | see below | open |
 | 6 | Download what is missing (30 left) | the links are in `downloads_missing.csv`; run step 2 again afterwards | open |
 | 7 | Scan | Windows Security custom scan of the folder, by the author (a scan can quarantine files, so it is the author's call) | open |
-| 8 | Read the archives | `tools/analyze_mod_archives.py --src <folder>` (it walks the sub-folders), then `tools/triage_mods.py`; start with batch 0 to 1 and the P1/P2 mods | not before 7 |
+| 8 | Read the archives (P1/P2 done 4 Oct 2026 with `tools/audit_mods_deep.py`: read-only, scratch extraction, 6 quarantined; see `MOD_ANALYSIS.md`) | `tools/analyze_mod_archives.py --src <folder>` (it walks the sub-folders), then `tools/triage_mods.py`; start with batch 0 to 1 and the P1/P2 mods | not before 7 |
 
 ## Result of step 3 (4 Oct 2026)
 

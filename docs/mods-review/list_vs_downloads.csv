@@ -3,7 +3,7 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 84,Archery - Realistic Arrow Flight,Archery / arrows,P2,yes,Near Perfect Arrows.-84-69-69.zip,c_archery-arrows,
 85,Perkaholic,Progression / XP / perks,P2,yes,Perkaholic 1.05-85-1-05.zip,c_progression-xp-perks,
 106,Cheat,Tools / reference,P3,yes,cheat-106-1-58-1732985419.zip,c_tools-reference,
-129,Equal Horse Caparisons,Horses,P3,no,,,"Asked for, not downloaded yet"
+129,Equal Horse Caparisons,Horses,P3,yes,Equal Caparisons Grouped-129--5-1758213686.zip,c_horses,
 266,All Referenced Strings In Kingdom Come Deliverance,Tools / reference,P3,yes,All Referenced Strings-266-1-0.7z,c_tools-reference,
 284,No Mo' Slow Mo - Configurable Perfect Block Slow Motion and AI Master Strike frequency,Crime / stealth / loot,P2,yes,NoMoSlowMo - Options-284-2-0b-1672359814.7z,c_crime-stealth-loot,
 311,O' Hungry Henry,Alchemy / food / survival,P2,yes,5.5-6 Nourishment and 4 Energy lost per hour-311-1-0.7z,c_alchemy-food-survival,
@@ -22,7 +22,7 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 754,Painted Lords of Leipa Hounskull,Weapons / armor / items,P3,yes,Painted Leipa Hounskull-754-1-0-1559896602.zip,c_weapons-armor-items,
 762,Queen of Sheba's sword,Weapons / armor / items,P4,no,,,Excluded by the author
 765,Poison Overhaul,Alchemy / food / survival,P2,yes,Poison Overhaul v1.2-765-1-2-1657391917.zip,c_alchemy-food-survival,
-770,Perkaholic updated,Progression / XP / perks,P2,yes,Perkaholic 1.07-770-1-07-1561341650.zip,c_progression-xp-perks,
+770,Perkaholic updated,Progression / XP / perks,P2,yes,Perkaholic 1.07-770-1-07-1561341650.zip,_quarantine,
 771,Hoods Over Helmats Removed Clipping Helmets On NPC'S,Quests / lore / content,P3,yes,Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310 | Hoods Over Helmets Remove Kettle Helmets NPC-771-1-1-1562422310.7z,c_quests-lore-content,
 791,ALL Hoods Up (With Correct Meshes),Weapons / armor / items,P4,no,,,Excluded by the author
 795,Midnight Armor Set (v1.9 Compatible),Weapons / armor / items,P4,no,,,Excluded by the author
@@ -59,17 +59,17 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 975,Super Natural Reshade,Reshade / ENB / visual preset,P4,yes,Super Natural Reshade v1.5-975-v1-5-1587646699.zip,c_reshade-enb-visual-preset,
 977,Alms for Beggars,Economy / merchants,P3,yes,Beggars_alms_mod_v1.5.2-977-1-5-2-1590399761.zip,c_economy-merchants,
 978,minimalistic HUD,Maps / UI / HUD,P3,yes,minimalisticHUD-978-1-0-1585828036.zip,c_maps-ui-hud,
-994,Depth ReShade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+994,Depth ReShade,Reshade / ENB / visual preset,P4,yes,Depth Reshade by Ahaut-994-2-0-1586561627.zip,c_reshade-enb-visual-preset,
 1009,Perkaholic - PTF updated (1.9.4-1.9.8),Progression / XP / perks,P2,yes,Perkaholic PTF-1009-1-2-3-1714642782 | Perkaholic PTF-1009-1-2-3-1780997771.rar,c_progression-xp-perks,
 1040,Disable Combat Slowmotion,Combat / AI,P2,yes,DisableCombatSlowmotion.zip-1040-1-9-5-1592222070.zip,c_combat-ai,
 1045,MORE BLOOD,World / weather / visuals,P3,yes,More blood-1045-0-2-2-1592095918.zip,c_world-weather-visuals,
-1046,Rudy ENB for KCD,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1046,Rudy ENB for KCD,Reshade / ENB / visual preset,P4,yes,Rudy ENB for KCD-1046-1-0a-1591826956.rar,c_reshade-enb-visual-preset,
 1059,Icon ID Resource,Tools / reference,P3,yes,Icon ID Resource-1059-1-0-1592792055.rar,c_tools-reference,
 1062,SIM Camping Mini ML 1.5.1.1,Alchemy / food / survival,P2,yes,SIM_Camping.zip-1062-1-5-1-1-1598039154.zip,c_alchemy-food-survival,
 1063,Paper UI,Maps / UI / HUD,P3,yes,PaperUI-1063-1-0-1593630274.rar,c_maps-ui-hud,
 1070,Better Combat,Combat / AI,P2,yes,Better Combat-1070-1-2-1594609210.rar,c_combat-ai,
-1074,Realism Enlighted ReShade - lore-friendly realistic Visual Enhancing and Sharpening - big quality boost on lower resolutions,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
-1080,ReformationFX Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1074,Realism Enlighted ReShade - lore-friendly realistic Visual Enhancing and Sharpening - big quality boost on lower resolutions,Reshade / ENB / visual preset,P4,yes,Realism Enlighted Reshade 1.0-1074-1-0-1594741584.rar,c_reshade-enb-visual-preset,
+1080,ReformationFX Reshade,Reshade / ENB / visual preset,P4,yes,ReformationFX v1.1-1080-v1-1-1597071272.rar,c_reshade-enb-visual-preset,
 1084,Overpowered Bows - PTF Edition,Archery / arrows,P2,yes,op_bows_power_100-1084-1-1-1598736006.rar,c_archery-arrows,
 1088,Polearms Unleashed,Weapons / armor / items,P3,yes,PolearmsUnleashed-1088-2-4-3-1603958640.7z,c_weapons-armor-items,
 1089,Overpowered Swords - PTF Edition,Weapons / armor / items,P4,no,,,Excluded by the author
@@ -88,28 +88,28 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1182,high resolution Kingdome map with all important locations,Maps / UI / HUD,P4,no,,,Excluded by the author
 1193,Weather Mod,World / weather / visuals,P3,yes,Weather Mod-1193-1-0-1610176393.7z,c_world-weather-visuals,
 1195,Get Water,Alchemy / food / survival,P2,yes,Get Water-1195-1-0-1612638603.7z,c_alchemy-food-survival,
-1196,Better graphics reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1196,Better graphics reshade,Reshade / ENB / visual preset,P4,yes,Better_graphics Reshade-1196-V-1-0-1610810923.zip,c_reshade-enb-visual-preset,
 1197,Proper Cyrillic Fonts,Maps / UI / HUD,P3,yes,ProperCyrillicFonts.zip-1197-1-2-1612480063.zip,c_maps-ui-hud,
 1203,Long Targaryen waffenrock,Weapons / armor / items,P4,no,,,Excluded by the author
 1205,ETSGF - Easy to see glowing Arrow feathers  - 1.9.6 - Multi-Colored arrow support,Archery / arrows,P2,yes,ETSGF Multi-Color HiViz (Made by Bluefirevortex)-1205-1-0-1740342886.7z | ETSGF Multi-Color LowViz (Made by Bluefirevortex)-1205-1-0-1740343056.7z,c_archery-arrows,
 1218,Lartigue's Upscale Project 2.0 - Upscaled UI and icons,Maps / UI / HUD,P3,yes,LartiguesUpscaleProject2.1-1218-2-1-1734099038 | LartiguesUpscaleProject2.1.1-1218-2-1-1-1750232674.zip,c_maps-ui-hud,
-1227,30 FPS Cutscene Fix V3,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1227,30 FPS Cutscene Fix V3,Graphics config (cfg),P4,yes,CutsceneFPSFixV3-1227-3-0-1766546982.zip,c_graphics-config-cfg,
 1236,Easy Combat PTF (easy parry and master strike),Combat / AI,P2,yes,easycombat-1236-1-1-1618287536.rar,c_combat-ai,
 1243,Easier Enemies PTF (Dumber Enemies),Combat / AI,P2,yes,02- 50 percent dumber enemies-1243-1-1-1618286957.rar | 04- no npc master strike-1243-1-0-1618262566.rar,c_combat-ai,
-1256,Horus 2.0 KCD Reshade Preset,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
-1258,vShade for GShade Realistic Graphic Preset,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1256,Horus 2.0 KCD Reshade Preset,Reshade / ENB / visual preset,P4,yes,Horus 2.0 KCD-1256-2-0-1662311636.zip,c_reshade-enb-visual-preset,
+1258,vShade for GShade Realistic Graphic Preset,Reshade / ENB / visual preset,P4,yes,vShade-1258-1-0-1625557844.zip,c_reshade-enb-visual-preset,
 1259,Easy Assassination,Crime / stealth / loot,P3,yes,EasyAssassination 1.1-1259-1-1-1628879677.zip,c_crime-stealth-loot,
 1260,RPG Tweaks,Progression / XP / perks,P2,yes,Rpg Tweaks 0.9.1-1260-0-9-1-1627282645.rar,c_progression-xp-perks,
 1266,Stronger drinks - PTF Edition,Alchemy / food / survival,P2,yes,stronger_drinks-1266-1-0-1627071776.rar,c_alchemy-food-survival,
 1281,4K Kingdom Come PNG Map with EVERYTHING,Maps / UI / HUD,P4,no,,,Excluded by the author
-1283,KINGDOM CINEMATIC ReShade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
-1291,Eye Candy Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1283,KINGDOM CINEMATIC ReShade,Reshade / ENB / visual preset,P4,yes,Kingdom Cinematic ReShade-1283-2-0-1728918057.rar,c_reshade-enb-visual-preset,
+1291,Eye Candy Reshade,Reshade / ENB / visual preset,P4,yes,Eye Candy Reshade Preset-1291-1-0-1636232494.rar,c_reshade-enb-visual-preset,
 1292,Ultimate Repair Kit 2.0,Weapons / armor / items,P2,yes,Ultimate Repair Kit 2.0-1292-1-2-1642365001.7z,c_weapons-armor-items,
 1296,Kingdom Come Enhanced Edition 2.0 - DELETED,Quests / lore / content,P4,no,,,Removed from Nexus
 1308,Less Income Pribyslavitz,Economy / merchants,P3,yes,less_income_Pribyslavitz-1308-1-1640897693.zip,c_economy-merchants,
 1309,Less Encounters,Quests / lore / content,P3,yes,less_encounters-1309-1-1640901979.zip,c_quests-lore-content,
 1311,Knightly Robard and Bernard,Quests / lore / content,P3,yes,Knightly Robard and Bernard-1311-1-1-1641324997.zip,c_quests-lore-content,
-1314,Ultimate Ray Tracing KCD Reshade Preset,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1314,Ultimate Ray Tracing KCD Reshade Preset,Reshade / ENB / visual preset,P4,yes,Reshade Preset file-1314-1-1650805970.zip,c_reshade-enb-visual-preset,
 1322,Mutt Be Quiet,Animations / audio,P3,yes,Mutt Be Quiet-1322-1-0-1642520795.7z,c_animations-audio,
 1323,Skalitz Shield Fix AWL,Weapons / armor / items,P2,yes,Skalitz Shield Fix-1323-1-0-1642601960.7z,c_weapons-armor-items,
 1327,Weather Overhaul,World / weather / visuals,P3,yes,Weather Overhaul DLC-1327-1-2-1669068726.7z | Weather Overhaul-1327-1-2-1669068697.7z,c_world-weather-visuals,
@@ -117,11 +117,11 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1332,Less Headbob,Animations / audio,P3,yes,KCB Less Headbob-1332-1-0-1644512525.7z,c_animations-audio,
 1334,Fast Learning Henry,Progression / XP / perks,P2,yes,FastLearningHenry1.0-1334-0-5-1644641439.7z,c_progression-xp-perks,
 1337,Helmet Vision,Weapons / armor / items,P3,yes,WhisHelmetVision-1337-1-2-1644818002.rar,c_weapons-armor-items,
-1342,Adjusted Ultra Graphics Config,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
-1349,Natural Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1342,Adjusted Ultra Graphics Config,Graphics config (cfg),P4,yes,Adjusted Config-1342-1-0-1666308185.zip | Custom Config-1342-1-0-1666308248.zip,c_graphics-config-cfg,
+1349,Natural Reshade,Reshade / ENB / visual preset,P4,yes,Reshade preset-1349-1-0-1646765704.zip,c_reshade-enb-visual-preset,
 1355,Better Crime Stealth Plus No Dogs,Crime / stealth / loot,P3,yes,Better Stealth Plus Crime-1355-1-0-1648906747.zip,c_crime-stealth-loot,
 1356,Fan Side Quest - Heritage,Maps / UI / HUD,P3,yes,heritage_release-1356-1-2-1648922073.rar,c_maps-ui-hud,
-1367,Apostalus User Configs,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1367,Apostalus User Configs,Graphics config (cfg),P4,yes,Apostalus_User_Config_Mod-1367-1-2-1650769642.zip,c_graphics-config-cfg,
 1373,Custom UI Loading progress,Maps / UI / HUD,P3,yes,UI Loading Progress Retexture-1373-1-0-1652104461.zip,c_maps-ui-hud,
 1374,Henry Malone,Quests / lore / content,P4,no,,,Excluded by the author
 1375,No Aim Spread (Bow sway disabler),Archery / arrows,P2,yes,No Aim Spread - Normal version-1375-2-2-1775620893.zip,c_archery-arrows,
@@ -130,17 +130,17 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1384,Modified Combat Overhaul - Directional Combat and smarter AI,Combat / AI,P2,yes,zzz_BCAIC_BetterCombatLite.pak-1384-2-1654111935.zip,c_combat-ai,
 1386,Hoods UP - PTF Standalone,Weapons / armor / items,P4,no,,,Excluded by the author
 1391,Better Equipped Runt,Quests / lore / content,P3,yes,Better Equipped Runt-1391-1-0-1655791454.zip,c_quests-lore-content,
-1394,KDC ReShader,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
-1403,Ultra Reshade for Low Settings,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1394,KDC ReShader,Reshade / ENB / visual preset,P4,yes,KDC ReShader-1394-1-0-1656189412.rar,c_reshade-enb-visual-preset,
+1403,Ultra Reshade for Low Settings,Reshade / ENB / visual preset,P4,yes,Ultra ENB for Low Settings-1403-1-0-1659381780.rar,c_reshade-enb-visual-preset,
 1410,Better Rain,World / weather / visuals,P3,yes,Better Rain mod 2.1-1410-2-1-1676326729.zip,c_world-weather-visuals,
-1414,Real Life Kingdom Come Experience Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1414,Real Life Kingdom Come Experience Reshade,Reshade / ENB / visual preset,P4,yes,Real Life Kingdom Come Experience Reshade-1414-1-0-1-1663774303.rar,c_reshade-enb-visual-preset,
 1416,Toxic Green Armor - PTF Standalone,Weapons / armor / items,P4,no,,,Excluded by the author
 1419,Immersive Archery,Archery / arrows,P2,yes,Immersive Archery-1419-1-2-1665671489.zip,c_archery-arrows,
 1423,Hoods and Scarfs UP (PTF - Dynamic - with Correct Meshes),Weapons / armor / items,P3,yes,HoodsUp-1423-1-2-1673054605.rar,c_weapons-armor-items,
 1424,Better Sleep Fixed,Alchemy / food / survival,P2,yes,Better Sleep Fixed-1424-1-1-1666227085.zip,c_alchemy-food-survival,
 1425,Saving Soles (PTF),Weapons / armor / items,P2,yes,SavingSoles-1425-1-0-1666738645.rar,c_weapons-armor-items,
 1426,Energy and Hunger Patch for Timescale Mods (PTF),Alchemy / food / survival,P2,yes,1to10 Timescale Patch-1426-1-0-1666809096.rar,c_alchemy-food-survival,
-1428,Reshade DOF With UI Mask,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1428,Reshade DOF With UI Mask,Reshade / ENB / visual preset,P4,yes,MatsoDOFSettings-1428-1-0-1667951429.rar,c_reshade-enb-visual-preset,
 1452,Storable Halberds,Weapons / armor / items,P3,yes,Storable Halberds v1.0-1452-1-0-1673203304.rar,c_weapons-armor-items,
 1460,Merchants Have x3 Money,Economy / merchants,P3,yes,For 1.9.6-1460-1-1674511920.rar,c_economy-merchants,
 1479,Batch files for all items sorted and easy to read,Tools / reference,P3,yes,KCD Batch files-1479-1-0-1676653419.rar,c_tools-reference,
@@ -148,23 +148,23 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1485,SOLID HELMET VISORS,Weapons / armor / items,P3,yes,SOLID HELMET VISORS-1485-1-2-1737430681.rar,c_weapons-armor-items,
 1501,Smaller Player Marker on Map,Maps / UI / HUD,P4,no,,,Excluded by the author
 1510,Mount while encumbered,Horses,P3,yes,mount_while_encumbered-1510-1-0-1684251631.zip,c_horses,
-1511,JSCR - Just simple custom Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1511,JSCR - Just simple custom Reshade,Reshade / ENB / visual preset,P4,yes,JSCR RESHADE V3-1511-V3-0-1687154831.rar,c_reshade-enb-visual-preset,
 1518,Waystones Give XP,Progression / XP / perks,P2,yes,Wayshrine gives XP-1518-0-1-1689422764.7z,c_progression-xp-perks,
 1519,Shooting Nests Gives XP,Progression / XP / perks,P2,yes,Shooting Nests Gives XP-1519-0-1-1689446256.7z,c_progression-xp-perks,
 1520,Shooting Archery Targets Gives XP,Progression / XP / perks,P2,yes,Targets give XP-1520-0-1-1689866187.7z,c_progression-xp-perks,
-1526,Force High Quality Trees in the distance,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
-1527,Infinite Draw Distance,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
-1528,Enchanced Shadows and Shadow Cascades,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1526,Force High Quality Trees in the distance,Graphics config (cfg),P4,yes,KCD HQ Trees-1526-1-1690937203.zip,c_graphics-config-cfg,
+1527,Infinite Draw Distance,Graphics config (cfg),P4,yes,KCD PhotoMode-1527-1-1690992048.zip,c_graphics-config-cfg,
+1528,Enchanced Shadows and Shadow Cascades,Graphics config (cfg),P4,yes,KCD 2K Shadow Cascades-1528-1-1691349516.zip,c_graphics-config-cfg,
 1535,Dandelion Baron,Quests / lore / content,P3,yes,DandelionBaron-1535-1-0-1691856480.7z,c_quests-lore-content,
-1538,Batch's Ultra Graphics Settings,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
-1544,Summertime Reshade for Kindom Come,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1538,Batch's Ultra Graphics Settings,Graphics config (cfg),P4,yes,High Preset-1538-1-1692237999.zip | Medium Preset-1538-1-1692237905.zip,c_graphics-config-cfg,
+1544,Summertime Reshade for Kindom Come,Reshade / ENB / visual preset,P4,yes,Flunkiii Reshade for Kingdom Come-1544-1-0-1694268222.zip,c_reshade-enb-visual-preset,
 1545,Saddles Have Durability,Weapons / armor / items,P2,yes,Saddles Have Durability-1545-1-0-1694353149.7z,c_weapons-armor-items,
 1548,Immersive Economy,Economy / merchants,P3,yes,Immersive Economy-1548-1-1-1696198684.7z,c_economy-merchants,
-1552,See NPCs and Animals Farther (Increased NPC render distance),Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1552,See NPCs and Animals Farther (Increased NPC render distance),Graphics config (cfg),P4,yes,NPC_RenderDist_Extreme-1552-1-0-1696674070.zip | NPC_RenderDist_High-1552-1-0-1696674005.zip | NPC_RenderDist_Medium-1552-1-0-1696673983.zip,c_graphics-config-cfg,
 1558,Karnages_KCD_Essential_Fixes 2.0,Fix bundle,P2,yes,Karnages_KCD_Essential_Fixes 2.0-1558-1-0-0-1700590734.7z,c_fix-bundle,
 1559,Karnages_Weapons_Damage_Balance 2.0,Weapons / armor / items,P2,yes,Karnages_Weapons_Damage_Balance 2.0-1559-1-0-0-1700591190.7z,c_weapons-armor-items,
 1560,Karnages_Durability_Redux,Weapons / armor / items,P2,yes,Karnages_Durability_Redux-1560-1-0-0-1700591696.7z,c_weapons-armor-items,
-1561,Karnages_KCD_user.cfg 2.0,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1561,Karnages_KCD_user.cfg 2.0,Graphics config (cfg),P4,yes,Karnages_KCD_user.cfg 2.0-1561-1-0-0-1700592743.7z,c_graphics-config-cfg,
 1562,Karnages_Polearm_Rebalance 2.0,Weapons / armor / items,P3,yes,Karnage's_Polearm_Rebalance 2.0-1562-1-0-0-1700618129.7z,c_weapons-armor-items,
 1563,Karnages_Polearm_Restoration 2.0,Weapons / armor / items,P2,yes,Karnages_Polearm_Restoration 2.0-1563-1-0-0-1700618380.7z,c_weapons-armor-items,
 1564,Karnages_Rebalanced_Bows 2.0,Archery / arrows,P2,yes,Karnages_Rebalanced_Bows 2.0-1564-1-0-0-1700618747.7z,c_archery-arrows,
@@ -176,16 +176,16 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1572,Increased Experience Gains,Progression / XP / perks,P2,yes,Increased Experience Minor - 1.5x-1572-0-1-1701102679.zip,c_progression-xp-perks,
 1577,Invisible hands FIX (UPDATE),Fix bundle,P3,yes,Vest Fix 3.0-1577-3-0-1702474761.zip,c_fix-bundle,
 1578,Weighed Groschen - PTF Version,Economy / merchants,P2,yes,Weiged Groschen - PTF Version-1578-1-9-5-1702120734.zip,c_economy-merchants,
-1589,Realistic Colour Correction Kingdom Come Deliverance,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1589,Realistic Colour Correction Kingdom Come Deliverance,Reshade / ENB / visual preset,P4,yes,Realistic Colour Correction Kingdom Come Deliveran-1589-1-0-1705385136.rar,c_reshade-enb-visual-preset,
 1594,Having trouble with old mods (Question Mark),Tools / reference,P4,no,,,Excluded by the author
-1603,Sharper graphic reshade for Kingdom Come Deliverance,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1603,Sharper graphic reshade for Kingdom Come Deliverance,Reshade / ENB / visual preset,P4,yes,Kingdom Come Deliverence Present v2.4-1603-2-4-1711991518.zip,c_reshade-enb-visual-preset,
 1605,Formidable Runt,Quests / lore / content,P3,yes,Formidable Runt-1605-1-4-1711201397.zip,c_quests-lore-content,
 1612,Remove Auto Camera Lock In Combat,Combat / AI,P2,yes,RemoveAutoCameraLockInCombat-1612-1-0-0-1713519576.7z,c_combat-ai,
 1618,HD Clock Retexture - Inventory Clock Updated,Maps / UI / HUD,P3,yes,Time-HD-updated v1.2.zip-1618-1-2-1714429516.zip,c_maps-ui-hud,
 1629,Exclusive Master Strikes - Make Them Reasonable,Combat / AI,P2,yes,MakeThemReasonable-1629-1-2-0-1736432412.zip,c_combat-ai,
 1636,More Sensible Weapons and Armor,Weapons / armor / items,P3,yes,More Sensible Weapons and Armor-1636-1-11-1741394601.zip,c_weapons-armor-items,
 1639,Alternate Food Spoil (2X),Alchemy / food / survival,P1,yes,AlternateFoodSpoil2X-1639-1-0-1715595738.zip,c_alchemy-food-survival,
-1646,AutoLimitFPS,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1646,AutoLimitFPS,Graphics config (cfg),P4,yes,AutoLimitFps144-1646-0-1-0-1716157681.zip,c_graphics-config-cfg,
 1647,Slo Mo Begone,Combat / AI,P2,yes,SloMoBegone-1647-1-0-0-1716234169.zip,c_combat-ai,
 1652,Catches the Worm,Alchemy / food / survival,P2,yes,catche the worm-1652-1-0-1716593673.zip,c_alchemy-food-survival,
 1654,Boots with Common Plate Chausses,Weapons / armor / items,P3,yes,Plate Legs-1654-1-0-1716846598.7z,c_weapons-armor-items,
@@ -199,9 +199,9 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1683,Roads Are Dangerous - Redux,Quests / lore / content,P3,yes,RAD_redix-1683-0-1-1721003439.zip,c_quests-lore-content,
 1689,Playable Daggers,Weapons / armor / items,P3,yes,PlayableDaggers-1689-V3-0-1736559656.7z,c_weapons-armor-items,
 1693,Ravens beak and Spiked warhammer icon swap,Weapons / armor / items,P2,yes,Ravens beak icon swap-1693-1-2-1733597371.7z,c_weapons-armor-items,
-1702,SLEE realistic reshade preset and performance file,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1702,SLEE realistic reshade preset and performance file,Reshade / ENB / visual preset,P4,yes,GST-1702-1-0-0-1724428743.rar,c_reshade-enb-visual-preset,
 1719,Quests Checklist,Maps / UI / HUD,P4,no,,,Excluded by the author
-1720,Performance Configuration (Mid-High End),Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1720,Performance Configuration (Mid-High End),Graphics config (cfg),P4,yes,autoexec.cfg-1720-1-1726007579.7z,c_graphics-config-cfg,
 1723,Intimidation Stat In Inventory,Maps / UI / HUD,P3,yes,IntimidationStat-1723-1-1-1728217688,c_maps-ui-hud,
 1730,Drink Sound Effects,Alchemy / food / survival,P2,yes,DrinkSoundEffects.pak,c_alchemy-food-survival,
 1732,Torch Radius,World / weather / visuals,P3,yes,Torch Light Radius-1732-1-0-1728140274.zip,c_world-weather-visuals,
@@ -212,11 +212,11 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1780,Timed Quest Indicator,Maps / UI / HUD,P3,yes,TimedQuestIndicator-1780-V1-1-1736764991.7z,c_maps-ui-hud,
 1782,No more clipping elbows for Andrew,World / weather / visuals,P2,yes,Andrew Clothing Fix-1782-1-0-1736793391.rar,c_world-weather-visuals,
 1797,Nighttime Nighthawk,World / weather / visuals,P4,no,,,Excluded by the author
-1800,KCD 2 Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1800,KCD 2 Reshade,Reshade / ENB / visual preset,P4,yes,KCD2 Reshade-1800-1-0-1737510963.rar,c_reshade-enb-visual-preset,
 1818,Kingdom Cum Deliverance,Adult / nudity,P4,no,,,"Asked for, not downloaded yet"
-1823,RTX 3050 PACK,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1823,RTX 3050 PACK,Graphics config (cfg),P4,yes,3050 8GB VRAM - 16GB RAM-1823-1-1-1739410244.zip | 3050 8GB VRAM - 32GB RAM-1823-1-1-1739410283.zip,c_graphics-config-cfg,
 1829,Mod Order Tool 1.2,Tools / reference,P3,yes,EN-1829-1-2-1741033054.zip,c_tools-reference,
-1839,Realistic Horses,Horses,P2,yes,Realistic Horses-1839-1-0-1739145195.rar,c_horses,
+1839,Realistic Horses,Horses,P2,yes,Realistic Horses-1839-1-0-1739145195.rar,_quarantine,
 1842,Realistic Repairs,Weapons / armor / items,P2,yes,Realistic Repairs 1.1-1842-1-1-1739569897.rar,c_weapons-armor-items,
 1853,Richer Merchants (PTF),Economy / merchants,P2,yes,RicherMerchantsPRF-1853-1-0-1739403404.rar,c_economy-merchants,
 1860,Train More Carry More - PTF,Progression / XP / perks,P2,yes,Train More Carry More x10-1860-1-0-1739697344.zip,c_progression-xp-perks,
@@ -226,11 +226,11 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1864,Cheap Savior Schnapps - PTF,Economy / merchants,P2,yes,Cheap Savior Schnapps (No Alcohol Version)-1864-1-1-1739629893.zip,c_economy-merchants,
 1870,Fair Trade - PTF,Economy / merchants,P3,yes,Fair Trade-1870-1-0-1739553563.zip,c_economy-merchants,
 1873,Daily Restock And Rich Merchants - PTF,Economy / merchants,P3,yes,Daily Restock And Rich Merchants-1873-1-0-1739611543.zip,c_economy-merchants,
-1875,KCD1 Enhanced Visuals - UBER Graphics ReShade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+1875,KCD1 Enhanced Visuals - UBER Graphics ReShade,Reshade / ENB / visual preset,P4,yes,KCD1 - Enhanced Visuals - R3MIND ReShade-1875-1-0-0-1739656641.rar,c_reshade-enb-visual-preset,
 1882,Devil's Scowl Sheild Fix,Fix bundle,P4,no,,,Excluded by the author
 1883,Better Pickpocket - FIXED,Crime / stealth / loot,P2,yes,BetterPickpocket-1883-1-1-1773177388.zip,c_crime-stealth-loot,
 1893,Bianca's Ring PTF,Weapons / armor / items,P2,yes,Bianca's Ring PTF-1893-0-1-1740174007.zip,c_weapons-armor-items,
-1900,Jiggle Physics,Adult / nudity,P4,no,,,"Asked for, not downloaded yet"
+1900,Jiggle Physics,Adult / nudity,P4,yes,Jiggle Physics 1900 1.2 2026-07-17T22-19Z lzEbrHFy3.zip,c_adult-nudity,
 1904,Better Map Icons,Maps / UI / HUD,P3,no,,,"Asked for, not downloaded yet"
 1907,Visorless Helmets,Weapons / armor / items,P3,yes,Visorless Helmets-1907-1-0-2-1741145962.zip,c_weapons-armor-items,
 1909,Helmet-Off Dialog (Beta),Weapons / armor / items,P3,yes,Helmet-Off Dialog-1909-1-4-3-1743453648.zip,c_weapons-armor-items,
@@ -247,7 +247,7 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 1958,Selected Immersion Breaking Music Mute,Animations / audio,P3,yes,SIBMM All-1958-1-2-1743947561.zip,c_animations-audio,
 1961,Unconscious Crime UI,Crime / stealth / loot,P3,yes,Unconscious Crime UI-1961-1-0-1742809272.zip,c_crime-stealth-loot,
 1964,KCD1 Reborn - Enhanced Faces and Skin,World / weather / visuals,P3,yes,Checkers Enhanced Faces and Skin-1964-0-95-1743115948 (1).zip,c_world-weather-visuals,
-1972,FINAL Beyond SUPER Ultra Graphics and Visuals Configs,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+1972,FINAL Beyond SUPER Ultra Graphics and Visuals Configs,Graphics config (cfg),P4,yes,FINAL Beyond SUPER Ultra Graphics and Visuals Conf-1972-1--1743452912.zip,c_graphics-config-cfg,
 1980,Medieval Loading Screens,Maps / UI / HUD,P3,yes,MedievalLoadingScreens-1980-1-1-1744118421 (1).rar,c_maps-ui-hud,
 1981,Lesser Income Pribyslavitz - Supplies Cost Patch,Economy / merchants,P3,yes,LIP - Annual Contract Supplies Cost Patch-1981-1-0-1744439495.zip | LIP - Supplies Cost Patch-1981-1-1-1744439433.zip,c_economy-merchants,
 1982,Stormy Skies,World / weather / visuals,P3,yes,Stormy_Skies_v1.0.zip-1982-1-0-1744237965 (1).zip,c_world-weather-visuals,
@@ -263,7 +263,7 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 2021,Repair Kits - Balanced and Scaled PTF,Weapons / armor / items,P2,yes,Repair Kits - Balanced and Scaled PTF-2021-1-2-1779784418.7z,c_weapons-armor-items,
 2022,Restored Sabres PTF,Weapons / armor / items,P3,yes,Restored Sabres PTF-2022-1-1-1779784649.7z,c_weapons-armor-items,
 2030,Clean and Minimal HUD and Map,Maps / UI / HUD,P3,yes,Clean and Minimal HUD-2030-0-1-1749657994.zip,c_maps-ui-hud,
-2031,Mud and Iron Kingdom Come Deliverance Reshade,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+2031,Mud and Iron Kingdom Come Deliverance Reshade,Reshade / ENB / visual preset,P4,yes,Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727 (1).7z | Mud and Iron Kingdom Come Deliverance Reshade-2031-1-0-1749855727.7z,c_reshade-enb-visual-preset,
 2035,Ordinance an Archery Overhaul,Archery / arrows,P2,yes,Ordinance Archery Overhaul DDDB-2035-6-1774914958.7z,c_archery-arrows,
 2040,Polymorphic Projectiles Arrow Overhaul,Archery / arrows,P2,yes,Polymorphic Fire Arrow-2040-2-1774384773.7z,c_archery-arrows,
 2045,Polearms Unleashed Rebalanced Lite Edition PTF,Weapons / armor / items,P2,yes,Polearms Unleashed Rebalanced Lite Edition-2045-1-1-1779784172.7z,c_weapons-armor-items,
@@ -278,29 +278,29 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 2098,Medieval Poisons - spolszczenie,Alchemy / food / survival,P2,yes,spolszczenie do moda Tyburn's Medieval Poisons-2098-1-0-1763383230.rar,c_alchemy-food-survival,
 2100,Diseases - spolszczenie,(unclassified),P3,yes,Diseases - Spolszczenie-2100-1-0-1763742966.rar,c_unclassified,
 2103,Pickpocket menu  from KCD2,Crime / stealth / loot,P3,yes,pickpocket_kcd2 1.1-2103-1-1-0-1764612642 (1).zip,c_crime-stealth-loot,
-2106,High FPS FX (KCD1),Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+2106,High FPS FX (KCD1),Graphics config (cfg),P4,yes,High FPS FX 2106 2.1 2026-07-11T22-23Z LQeSByZhK.zip | High FPS FX-2106-1-3-1777265116.zip,c_graphics-config-cfg,
 2108,New KCD HUD 2.0,Maps / UI / HUD,P3,yes,new_hud_2.0 1.3-2108-1-3-0-1770680449 (1).rar,c_maps-ui-hud,
 2119,KCD Mod Manager,Tools / reference,P4,no,,,Excluded by the author
 2124,Half-looted Rebalance,Progression / XP / perks,P2,yes,Complete EHLR mod collection with documentation 2124 2.5.0 2026-07-22T00-51Z 37afHBvHt.zip,c_progression-xp-perks,
 2132,MOD file override conflicts and PTF patch detection,Fix bundle,P3,yes,ModsCheckEng-2132-1-1-1768208612.7z,c_fix-bundle,
 2147,KCD 2.0,Maps / UI / HUD,P4,no,,,Excluded by the author
-2152,Lighting and Shadow 2.0 - ENB for KCD,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
-2153,Engine Tweaks KCD 2.0 - user.cfg details,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+2152,Lighting and Shadow 2.0 - ENB for KCD,Reshade / ENB / visual preset,P4,yes,ENB MartinSpielt Preset-2152-1-0-1770911762.zip,c_reshade-enb-visual-preset,
+2153,Engine Tweaks KCD 2.0 - user.cfg details,Graphics config (cfg),P4,yes,user.cfg-2153-1-0-1770914009.zip,c_graphics-config-cfg,
 2156,Skalitz Mine Map,Maps / UI / HUD,P4,no,,,Excluded by the author
 2158,Finders Keepers,Crime / stealth / loot,P3,yes,FindersKeepers_Wait_No-2158-1-2-1773048312.zip,c_crime-stealth-loot,
 2165,Merchants Richer,Economy / merchants,P2,yes,MerchantsRicher_3x-2165-1-0-2-1774198117.zip,c_economy-merchants,
 2171,No Stolen Items (PTF),Crime / stealth / loot,P3,yes,No Stolen Items-2171-1-2-1772686214.zip,c_crime-stealth-loot,
 2173,True Hardcore Maintenance (PTF),Repair / durability,P2,yes,True Hardcore Maintenance-2173-2-0-1776308890.zip,c_repair-durability,
 2174,Horse Body Armor (Barding),Horses,P3,yes,Barding Improved-2174-1-0-1-1772742779 (1).zip,c_horses,
-2175,Enhanced Color Grading,Reshade / ENB / visual preset,P4,no,,,"Asked for, not downloaded yet"
+2175,Enhanced Color Grading,Reshade / ENB / visual preset,P4,yes,Enhanced Color Grading-2175-1-3-1775786024.zip,c_reshade-enb-visual-preset,
 2179,True Hardcore Combat (PTF),Combat / AI,P2,yes,True Hardcore Combat-2179-1-3-1778946895.zip,c_combat-ai,
-2180,Optimized CryEngine simple tweaks,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+2180,Optimized CryEngine simple tweaks,Graphics config (cfg),P4,yes,cry engine tweaks-2180-1-1-1772892590.rar,c_graphics-config-cfg,
 2188,True Hardcore Economy (PTF),Combat / AI,P2,yes,True Hardcore Economy-2188-1-3-1779017497.zip,c_combat-ai,
 2190,ENHANCED Bohemian Redux  and FX Overhaul,World / weather / visuals,P3,yes,ENHANCED Bohemian Redux FX Overhaul-2190-2-0-1774439071 (1).rar,c_world-weather-visuals,
 2191,Realistic Footprints v2.0 KCD I,World / weather / visuals,P3,yes,Realistic Footprints v2.0 KCD1-2191-3-0-1780731196.rar,c_world-weather-visuals,
 2192,ENHANCED Toggle Aim Overhaul v2.0 KCD I,Combat / AI,P2,yes,ENHANCED Toggle Aim Overhaul v2.0 KCD1 2192 2.0.1 2026-09-14T17-58Z sgZiUxTkd.zip,c_combat-ai,
 2194,ENHANCED Easy FREE Combat Target Overhaul v3.0 KCD I,Combat / AI,P2,yes,ENHANCED Easy FREE Combat Target Overhaul KCD1-2194-1-1-1774268047.rar,c_combat-ai,
-2196,ENHANCED Adult Bounce KCD I,Adult / nudity,P4,no,,,"Asked for, not downloaded yet"
+2196,ENHANCED Adult Bounce KCD I,Adult / nudity,P4,yes,ENHANCED Adult Bounce KCD1-2196-2-0-1774424692.rar,c_adult-nudity,
 2199,DualSense Buttons,Maps / UI / HUD,P3,yes,DualSense Buttons-2199-2-0-1778555602.rar,c_maps-ui-hud,
 2202,Animals Looted Statistic Tracker - Separate from Corpses Looted,Crime / stealth / loot,P3,yes,LootStatSplit-2202-1-1774557285.zip,c_crime-stealth-loot,
 2203,Categorized Sorted Inventory,Maps / UI / HUD,P3,yes,CategorizedSortedInventory-2203-1-0-0-1775489193.zip,c_maps-ui-hud,
@@ -315,9 +315,9 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 2219,True Hardcore Crime (PTF),Crime / stealth / loot,P2,yes,True Hardcore Crime-2219-1-1-1779142069.zip,c_crime-stealth-loot,
 2223,Stop Looking Up On Horseback,Horses,P3,yes,StopLookingUpOnHorseback-2223-2-1778010739.7z,c_horses,
 2224,More Realistic Horse Handling,Horses,P3,yes,HorseHandlingKCD-2224-1-1778012631.7z,c_horses,
-2243,Performance Tweaks and best visuals,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
+2243,Performance Tweaks and best visuals,Graphics config (cfg),P4,yes,Autoexec-2243-1-1779736741.rar | AutoexecCPUTWEAKS 2243 1 2026-06-28T16-43Z zEf3mMkId.rar,c_graphics-config-cfg,
 2244,Kingdom Come Script Extender,Tools / reference,P3,yes,KCSE 2244 3 2026-06-29T13-46Z b37E8uyAU.zip,c_tools-reference,
-2246,Console Editable RpgParams,Progression / XP / perks,P2,yes,Console Editable RpgParams 2246 3 2026-06-29T13-59Z gZWc5POkF.zip,c_progression-xp-perks,
+2246,Console Editable RpgParams,Progression / XP / perks,P2,yes,Console Editable RpgParams 2246 3 2026-06-29T13-59Z gZWc5POkF.zip,_quarantine,
 2255,Fast Travel Tweaks,Maps / UI / HUD,P3,yes,FastTravelTweaks 2255 3 2026-06-29T13-59Z EfL7D0slv.zip,c_maps-ui-hud,
 2256,Better Combat and Immersion Compilation - Chinese,Combat / AI,P4,no,,,Excluded by the author
 2261,Proper Third Person View (TPV Camera),Maps / UI / HUD,P3,yes,Proper Third Person View (TPV Camera) 2261 1.0.1 2026-06-30T19-31Z pA6IjrMhB.zip,c_maps-ui-hud,
@@ -339,7 +339,7 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 2317,Enemy Health Bar,Maps / UI / HUD,P3,yes,EnemyBar 2317 1 2026-07-31T06-38Z VnT2AzaAK.zip,c_maps-ui-hud,
 2318,Visual Combo Helper,Combat / AI,P2,yes,Visual Combo Helper 1.0.0 2318 1.0.0 2026-07-31T14-42Z uBF0oq5om.zip,c_combat-ai,
 2323,Alchemy Stash Link,Alchemy / food / survival,P2,yes,Zz Alchemy Stash Link 2323 1.0 2026-08-03T20-39Z eXqNkidke.7z,c_alchemy-food-survival,
-2326,Permanent Death,Progression / XP / perks,P2,yes,Permadeath 0.91 2326 0.91 2026-08-09T14-26Z aSoQ0kcTE.zip,c_progression-xp-perks,
+2326,Permanent Death,Progression / XP / perks,P2,yes,Permadeath 0.91 2326 0.91 2026-08-09T14-26Z aSoQ0kcTE.zip,_quarantine,
 2330,Compass and Map Upgrades - Wayfinder,Maps / UI / HUD,P3,yes,Wayfinder 1.0.2 (Compatibility Patched) 2330 2 2026-09-10T02-01Z 6b3zKD4Qh.zip,c_maps-ui-hud,
 2331,Bushes Collision Remover Redux,World / weather / visuals,P2,yes,Bushes Collision Remover Redux 2331 1 2026-08-12T06-14Z 4yvkqUP3B.zip,c_world-weather-visuals,
 2332,Baptism of Fire Fix Redux,Quests / lore / content,P2,yes,Baptism Of Fire Fix Redux 2332 1.0.0 2026-08-12T09-22Z q1JwghIHz.zip,c_quests-lore-content,
@@ -348,11 +348,11 @@ id,name,category,priority,in_folder,files,sub_folder,if_not_in_folder
 2340,MatthusTweaks - Equipment and Progression Overhaul (PTF),Progression / XP / perks,P2,yes,MatthusTweaksKCD All In One V1.5 2340 1.5 2026-09-01T23-59Z mDuHaewyB.zip | MatthusTweaksKCD Layered Damage Fix V1.0 2340 1 2026-09-02T00-01Z M04BeYCgC.zip | MatthusTweaksKCD Sabres V1.0 2340 1 2026-08-31T00-37Z 5RVx9I3GV.zip,c_progression-xp-perks,
 2343,Ultimate Horse Caparison Fix,Horses,P2,yes,Ultimate Horse Caparison Fix V1.0 2343 1.0 2026-08-24T20-12Z yvis1527X.zip,c_horses,
 2345,Food and Drinks rebalance,Alchemy / food / survival,P2,yes,Food And Drinks Rebalance 2345 1 2026-08-30T23-35Z RVnPpl7KV.rar,c_alchemy-food-survival,
-2348,KCD Zero Durability Repair,Weapons / armor / items,P2,yes,KcdZeroDurabilityRepair Release 2348 1 2026-09-03T11-13Z 8HMDLo1kO.zip,c_weapons-armor-items,
+2348,KCD Zero Durability Repair,Weapons / armor / items,P2,yes,KcdZeroDurabilityRepair Release 2348 1 2026-09-03T11-13Z 8HMDLo1kO.zip,_quarantine,
 2349,KCD1 Map Cursor Contrast - Visible Ring and X,Maps / UI / HUD,P3,yes,MapCursorContrast Bold 2.1.0 2349 2.1.0 2026-09-05T04-03Z QeXoFvWUO.zip,c_maps-ui-hud,
 2351,Keyboard Controls,Maps / UI / HUD,P3,yes,Keyboard Controls - Global 2351 1 2026-09-06T01-30Z 4yvkqUPWj.zip,c_maps-ui-hud,
-2353,Ultimate Graphics Adjustment,Graphics config (cfg),P4,no,,,"Asked for, not downloaded yet"
-2359,KCD Kombat Tune,Combat / AI,P2,yes,KcdCombatTune 2359 3 2026-09-12T07-45Z FksyYJVBR.zip,c_combat-ai,
+2353,Ultimate Graphics Adjustment,Graphics config (cfg),P4,yes,KCD Ultimate Adjustment 2353 1 2026-09-09T14-55Z q1JwghIVc.rar,c_graphics-config-cfg,
+2359,KCD Kombat Tune,Combat / AI,P2,yes,KcdCombatTune 2359 3 2026-09-12T07-45Z FksyYJVBR.zip,_quarantine,
 2362,Better Perk Descriptions,Progression / XP / perks,P2,yes,Better Perk Descriptions 2362 1.0 2026-09-13T23-47Z pA6IjrM9q.zip,c_progression-xp-perks,
 2365,KCDT,(unclassified),P3,yes,Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ (1).zip | Kcdt 2365 1 2026-09-16T13-46Z 8HMDLo1KJ.zip,c_unclassified,
 2366,Faster Book Flipping,Maps / UI / HUD,P3,yes,FasterBookFlipping 2366 1 2026-09-17T08-10Z aSoQ0kc7B.zip,c_maps-ui-hud,

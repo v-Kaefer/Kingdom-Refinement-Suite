@@ -1,0 +1,139 @@
+id,name,entry,risk,findings,native_sha256,action
+83,More Responsive Targeting,More Responsive Targeting-83-1-04-1.zip,none,,,kept
+84,Archery - Realistic Arrow Flight,Near Perfect Arrows.-84-69-69.zip,none,,,kept
+85,Perkaholic,Perkaholic 1.05-85-1-05.zip,none,,,kept
+284,No Mo' Slow Mo - Configurable Perfect Block Slow Motion and AI Master Strike frequency,NoMoSlowMo - Options-284-2-0b-1672359814.7z,none,,,kept
+311,O' Hungry Henry,5.5-6 Nourishment and 4 Energy lost per hour-311-1-0.7z,none,,,kept
+366,First-person Herb Picking,First-person Herb Picking-366-1-9-5-1583164522.zip,none,,,kept
+390,Stay Clean Longer - Get Dirty Gradually,MGs Stay Clean Longer - Get Dirty Gradually 1.6-390-1-6-1707663382,MEDIUM,MEDIUM: nested archive (not readable by the game): Data/StayCleanLongerGetDirtyGradually.7zip,,kept
+480,Bed Comfort Restored,Bed Comfort Restored-480-1-0.zip,none,,,kept
+591,Bushes- Collision Remover,Bushes.Only_Collision.Remover.pak,none,,,kept
+651,Better Combat and Immersion Compilation,Better Combat and Immersion Compilation-651-1-6-2-1641836099.zip,none,,,kept
+765,Poison Overhaul,Poison Overhaul v1.2-765-1-2-1657391917.zip,none,,,kept
+770,Perkaholic updated,Perkaholic 1.07-770-1-07-1561341650.zip,HIGH,HIGH: path traversal inside pak: Perkaholic/Data/Perkaholic.pak!../../../Data/Libs/Tables/rpg/perk2perk_exclusivity.tbl | HIGH: path traversal inside pak: Perkaholic/Data/Perkaholic.pak!../../../Data/Libs/Tables/rpg/buff.tbl | HIGH: path traversal inside pak: Perkaholic/Data/Perkaholic.pak!../../../Data/Libs/Tables/rpg/perk.tbl | HIGH: path traversal inside pak: Perkaholic/Data/Perkaholic.pak!../../../Data/Libs/Tables/rpg/perk_buff.tbl | HIGH: path traversal inside pak: Perkaholic/Data/Perkaholic.pak!../../../Data/Libs/Tables/rpg/perk_buff_override.tbl,,quarantined
+802,Archery for 1.9,Archer for 1.9-802-1-1563644280.7z,none,,,kept
+804,Loose (An Archery Mod),Loose (An Archery Mod) V1.1-804-1-1-1565191248.7z,none,,,kept
+883,KingdomCome Rebalancing,Rebalancing 1.3-883-1-3-1593332571.7z,none,,,kept
+1009,Perkaholic - PTF updated (1.9.4-1.9.8),Perkaholic PTF-1009-1-2-3-1714642782,MEDIUM,MEDIUM: nested archive (not readable by the game): Data/perkaholic.7zip,,kept
+1009,Perkaholic - PTF updated (1.9.4-1.9.8),Perkaholic PTF-1009-1-2-3-1780997771.rar,none,,,kept
+1040,Disable Combat Slowmotion,DisableCombatSlowmotion.zip-1040-1-9-5-1592222070.zip,none,,,kept
+1062,SIM Camping Mini ML 1.5.1.1,SIM_Camping.zip-1062-1-5-1-1-1598039154.zip,none,,,kept
+1070,Better Combat,Better Combat-1070-1-2-1594609210.rar,none,,,kept
+1084,Overpowered Bows - PTF Edition,op_bows_power_100-1084-1-1-1598736006.rar,none,,,kept
+1090,Colored Arrows,Colored Arrows and Feathers - White-1090-1-0-3-1599011013.zip,none,,,kept
+1100,Faster archery - PTF Edition,Faster archery easy-1100-1-0-1600006459.rar,none,,,kept
+1105,Service Prices,Service Prices-1105-1-0-1600469221.zip,none,,,kept
+1112,Combat Overhaul,combatoverhaul-1112-1-6-4-1603868865.7z,none,,,kept
+1148,Combo and Weapon rebalance,deadlycombo-1148-1-1605253363.7z,none,,,kept
+1195,Get Water,Get Water-1195-1-0-1612638603.7z,none,,,kept
+1205,ETSGF - Easy to see glowing Arrow feathers  - 1.9.6 - Multi-Colored arrow support,ETSGF Multi-Color HiViz (Made by Bluefirevortex)-1205-1-0-1740342886.7z,none,,,kept
+1205,ETSGF - Easy to see glowing Arrow feathers  - 1.9.6 - Multi-Colored arrow support,ETSGF Multi-Color LowViz (Made by Bluefirevortex)-1205-1-0-1740343056.7z,none,,,kept
+1236,Easy Combat PTF (easy parry and master strike),easycombat-1236-1-1-1618287536.rar,none,,,kept
+1243,Easier Enemies PTF (Dumber Enemies),02- 50 percent dumber enemies-1243-1-1-1618286957.rar,none,,,kept
+1243,Easier Enemies PTF (Dumber Enemies),04- no npc master strike-1243-1-0-1618262566.rar,none,,,kept
+1260,RPG Tweaks,Rpg Tweaks 0.9.1-1260-0-9-1-1627282645.rar,none,,,kept
+1266,Stronger drinks - PTF Edition,stronger_drinks-1266-1-0-1627071776.rar,none,,,kept
+1292,Ultimate Repair Kit 2.0,Ultimate Repair Kit 2.0-1292-1-2-1642365001.7z,none,,,kept
+1323,Skalitz Shield Fix AWL,Skalitz Shield Fix-1323-1-0-1642601960.7z,none,,,kept
+1334,Fast Learning Henry,FastLearningHenry1.0-1334-0-5-1644641439.7z,none,,,kept
+1375,No Aim Spread (Bow sway disabler),No Aim Spread - Normal version-1375-2-2-1775620893.zip,none,,,kept
+1376,Archery mod - Faster arrows (for real),Archery mod - Faster arrows-1376-1-1-1775621786.zip,none,,,kept
+1380,Black Items Fix,BlackItems - PTF-1380-1-1-1780999063.rar,none,,,kept
+1384,Modified Combat Overhaul - Directional Combat and smarter AI,zzz_BCAIC_BetterCombatLite.pak-1384-2-1654111935.zip,none,,,kept
+1419,Immersive Archery,Immersive Archery-1419-1-2-1665671489.zip,none,,,kept
+1424,Better Sleep Fixed,Better Sleep Fixed-1424-1-1-1666227085.zip,none,,,kept
+1425,Saving Soles (PTF),SavingSoles-1425-1-0-1666738645.rar,none,,,kept
+1426,Energy and Hunger Patch for Timescale Mods (PTF),1to10 Timescale Patch-1426-1-0-1666809096.rar,none,,,kept
+1483,TSM Slower Food Spoil,TSM Splower Food Spoil-1483-1-0-1677271171.7z,none,,,kept
+1518,Waystones Give XP,Wayshrine gives XP-1518-0-1-1689422764.7z,none,,,kept
+1519,Shooting Nests Gives XP,Shooting Nests Gives XP-1519-0-1-1689446256.7z,none,,,kept
+1520,Shooting Archery Targets Gives XP,Targets give XP-1520-0-1-1689866187.7z,none,,,kept
+1545,Saddles Have Durability,Saddles Have Durability-1545-1-0-1694353149.7z,none,,,kept
+1558,Karnages_KCD_Essential_Fixes 2.0,Karnages_KCD_Essential_Fixes 2.0-1558-1-0-0-1700590734.7z,none,,,kept
+1559,Karnages_Weapons_Damage_Balance 2.0,Karnages_Weapons_Damage_Balance 2.0-1559-1-0-0-1700591190.7z,none,,,kept
+1560,Karnages_Durability_Redux,Karnages_Durability_Redux-1560-1-0-0-1700591696.7z,none,,,kept
+1563,Karnages_Polearm_Restoration 2.0,Karnages_Polearm_Restoration 2.0-1563-1-0-0-1700618380.7z,none,,,kept
+1564,Karnages_Rebalanced_Bows 2.0,Karnages_Rebalanced_Bows 2.0-1564-1-0-0-1700618747.7z,none,,,kept
+1565,Karnages_Arrow_Balance 2.0,Karnages_Arrow_Balance 2.0-1565-1-0-0-1700618949.7z,none,,,kept
+1569,Karnages_Shield_Restoration,Karnages_Shield_Restoration-1569-1-0-0-1700623905.7z,none,,,kept
+1572,Increased Experience Gains,Increased Experience Minor - 1.5x-1572-0-1-1701102679.zip,none,,,kept
+1578,Weighed Groschen - PTF Version,Weiged Groschen - PTF Version-1578-1-9-5-1702120734.zip,none,,,kept
+1612,Remove Auto Camera Lock In Combat,RemoveAutoCameraLockInCombat-1612-1-0-0-1713519576.7z,none,,,kept
+1629,Exclusive Master Strikes - Make Them Reasonable,MakeThemReasonable-1629-1-2-0-1736432412.zip,none,,,kept
+1639,Alternate Food Spoil (2X),AlternateFoodSpoil2X-1639-1-0-1715595738.zip,none,,,kept
+1647,Slo Mo Begone,SloMoBegone-1647-1-0-0-1716234169.zip,none,,,kept
+1652,Catches the Worm,catche the worm-1652-1-0-1716593673.zip,none,,,kept
+1655,Save Me Henry,MagusSaveMeHenry-1655-Unknown-1720541841.7z,none,,,kept
+1660,Double Brew Yield,Double Brew Yield-1660-1-0-1717587176.zip,none,,,kept
+1668,Relaxed RPG Params,Relaxed RPG Params-1668-1-0-1-1718992231.7z,none,,,kept
+1671,Angriness Begone,MagusAngrinessBegone-1671-Unknown-1718907026.7z,none,,,kept
+1673,Combat musics tweak,Combat music A Stressfull version-1673-1-0-1718966803.zip,none,,,kept
+1673,Combat musics tweak,Combat music A and Unreleased one-1673-1-0-1718968202.zip,none,,,kept
+1678,Better Archery,Better_Archery-1678-1-0-1720015220.7z,none,,,kept
+1693,Ravens beak and Spiked warhammer icon swap,Ravens beak icon swap-1693-1-2-1733597371.7z,none,,,kept
+1730,Drink Sound Effects,DrinkSoundEffects.pak,none,,,kept
+1736,Rogue Life,RogueLife-1736-V1-1-1739826542.7z,none,,,kept
+1743,Persistent Arrows,Persistentarrows-1743-1-2-1729568337.rar,none,,,kept
+1765,Restore Riposte,Riposte-1765-1-0-2-1735871267,MEDIUM,MEDIUM: nested archive (not readable by the game): Riposte.7zip | MEDIUM: nested archive (not readable by the game): Data/Riposte.7zip,,kept
+1782,No more clipping elbows for Andrew,Andrew Clothing Fix-1782-1-0-1736793391.rar,none,,,kept
+1839,Realistic Horses,Realistic Horses-1839-1-0-1739145195.rar,HIGH,"HIGH: mod Lua loads code dynamically (loadstring/loadfile) and opens files (io.open): a script framework, not a data tweak | MEDIUM: Lua io.open in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/cheat_console.lua | MEDIUM: Lua loadstring/loadfile/dofile in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/cheat_console.lua | MEDIUM: Lua io.open in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/cheat_core_exec.lua | MEDIUM: Lua loadstring/loadfile/dofile in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/cheat_debug.lua | MEDIUM: Lua debug.* in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/cheat_debug.lua | MEDIUM: Lua io.open in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/Startup/main.lua | MEDIUM: Lua loadstring/loadfile/dofile in Realistic_Horse/Data/Realistic_Horse.pak!Scripts/Startup/main.lua",,quarantined
+1842,Realistic Repairs,Realistic Repairs 1.1-1842-1-1-1739569897.rar,none,,,kept
+1853,Richer Merchants (PTF),RicherMerchantsPRF-1853-1-0-1739403404.rar,none,,,kept
+1860,Train More Carry More - PTF,Train More Carry More x10-1860-1-0-1739697344.zip,none,,,kept
+1862,Faster Inury Regeneration - PTF,Faster Injury Regeneration x2-1862-1-0-1739533911.zip,none,,,kept
+1863,Dirty And Charismatic - PTF,Dirty And Charismatic-1863-1-0-1739534931.zip,none,,,kept
+1864,Cheap Savior Schnapps - PTF,Cheap Savior Schnapps (No Alcohol Version)-1864-1-1-1739629893.zip,none,,,kept
+1883,Better Pickpocket - FIXED,BetterPickpocket-1883-1-1-1773177388.zip,none,,,kept
+1893,Bianca's Ring PTF,Bianca's Ring PTF-1893-0-1-1740174007.zip,none,,,kept
+1914,Weightless Herbs,Weightless_Herbs-1914-1-1741286285.zip,none,,,kept
+1922,No Prefixes in Alchemy Book,No Prefixes in Alchemy Book-1922-1-0-1-1741961065.zip,none,,,kept
+1926,Potion no Satiety and ADD Heal plus Energy,PotionNoSatietyAndHealEnergy-1926-1-0-1741597951.7z,none,,,kept
+1938,My Herb Picking Radius,Herb Picking Radius 2x-1938-1-0-1742117458.zip,none,,,kept
+1950,Skill Books Take Time,Skill Books Take Time 2x-1950-1-0-1742313588.zip,none,,,kept
+1951,Baths dont affect energy and nourishment,energy increased as if rested-1951-1-0-0-1742338696.7z,none,,,kept
+1990,Veteran Hunting,Veteran Hunting 1.0-1990-1-0-1745597572.zip,none,,,kept
+1991,BCAIC - Restore Hunting Spots - Patch,BCAIC - Restore Hunting Spot Icons - Patch-1991-1-0-1745002325.zip,none,,,kept
+1996,Alcohol Is Not Food Anymore,Alcohol Is Not Food Anymore-1996-1-0-1745154676.zip,none,,,kept
+2011,Chefs Kiss,Chefs Kiss 2011 3.7 2026-06-21T22-06Z HM0uQNJkR.7z,none,,,kept
+2017,Realistic Items,KRS-Items-2017-1-0-0-1749069665.7z,none,,,kept
+2017,Realistic Items,KRS-Items-2017-1-1-1-1749401836.7z,none,,,kept
+2021,Repair Kits - Balanced and Scaled PTF,Repair Kits - Balanced and Scaled PTF-2021-1-2-1779784418.7z,none,,,kept
+2035,Ordinance an Archery Overhaul,Ordinance Archery Overhaul DDDB-2035-6-1774914958.7z,none,,,kept
+2040,Polymorphic Projectiles Arrow Overhaul,Polymorphic Fire Arrow-2040-2-1774384773.7z,none,,,kept
+2045,Polearms Unleashed Rebalanced Lite Edition PTF,Polearms Unleashed Rebalanced Lite Edition-2045-1-1-1779784172.7z,none,,,kept
+2049,Simple Ragdoll Physics,Semi Functional Ragdoll Physics-2049-3-1772969471.7z,MEDIUM,MEDIUM: nested archive (not readable by the game): zzzxdddbrdp/install/DIY Engine/DDDB Do it Yourself Engine Install.7z | MEDIUM: nested archive (not readable by the game): zzzxdddbrdp/install/DIY Engine/sys_spec_Physics.7z | MEDIUM: Lua loadstring/loadfile/dofile in zzzxdddbrdp/Data/zzzxdddbrdp.pak!scripts/PickableItem__zzzxdddbrdp.lua | MEDIUM: nested archive: zzzxdddbrdp/install/DIY Engine/DDDB Do it Yourself Engine Install.7z | MEDIUM: nested archive: zzzxdddbrdp/install/DIY Engine/sys_spec_Physics.7z | LOW: URL in zzzxdddbrdp/install/DIY Engine/sys_spec_Physics.cfg: https://www.cryengine.com/docs/static/engines/cryengine-5/categories/23756816/pa | LOW: URL in zzzxdddbrdp/install/OG Engine/engine.pak!Config/CVarGroups/sys_spec_Physics.cfg: https://www.cryengine.com/docs/static/engines/cryengine-5/categories/23756816/pa,,kept
+2066,Distant Smoke and Fire,DistantFireAndSmoke-2066-0-2-1755855018.zip,none,,,kept
+2098,Medieval Poisons - spolszczenie,spolszczenie do moda Tyburn's Medieval Poisons-2098-1-0-1763383230.rar,none,,,kept
+2124,Half-looted Rebalance,Complete EHLR mod collection with documentation 2124 2.5.0 2026-07-22T00-51Z 37afHBvHt.zip,none,,,kept
+2165,Merchants Richer,MerchantsRicher_3x-2165-1-0-2-1774198117.zip,none,,,kept
+2173,True Hardcore Maintenance (PTF),True Hardcore Maintenance-2173-2-0-1776308890.zip,none,,,kept
+2179,True Hardcore Combat (PTF),True Hardcore Combat-2179-1-3-1778946895.zip,none,,,kept
+2188,True Hardcore Economy (PTF),True Hardcore Economy-2188-1-3-1779017497.zip,none,,,kept
+2192,ENHANCED Toggle Aim Overhaul v2.0 KCD I,ENHANCED Toggle Aim Overhaul v2.0 KCD1 2192 2.0.1 2026-09-14T17-58Z sgZiUxTkd.zip,none,,,kept
+2194,ENHANCED Easy FREE Combat Target Overhaul v3.0 KCD I,ENHANCED Easy FREE Combat Target Overhaul KCD1-2194-1-1-1774268047.rar,none,,,kept
+2207,Findable Herbs HD,Findable Herbs HD-2207-1-0-1776182143.7z,none,,,kept
+2208,Medieval Poisons - True Hardcore Compatibility Patch (PTF),patch True Hardcore Medieval Poisons-2208-1-1-1778440401.zip,none,,,kept
+2209,Poisonous Enemies - True Hardcore Compatibility Patch (PTF),patch True Hardcore Poisonous Enemies-2209-1-0-1776249027.zip,none,,,kept
+2210,True Hardcore Alchemy (PTF),True Hardcore Alchemy-2210-1-2-1778440238.zip,none,,,kept
+2219,True Hardcore Crime (PTF),True Hardcore Crime-2219-1-1-1779142069.zip,none,,,kept
+2246,Console Editable RpgParams,Console Editable RpgParams 2246 3 2026-06-29T13-59Z gZWc5POkF.zip,HIGH,HIGH: native binary by magic bytes: KCSE/Plugins/ConsoleRpgParam.dll | HIGH: native code file: KCSE/Plugins/ConsoleRpgParam.dll,KCSE/Plugins/ConsoleRpgParam.dll=f84e6224b289f9e1 KCSE/Plugins/ConsoleRpgParam.dll: suspicious strings: none; game-related strings: kcse_rpgparam_ / [ConsoleRpgParam] Registered %d float + %d int RPG params as CVars / kcd_re REL::IDDatabase / kcd_addresslib_ / This plugin is incompatible with the current game build. / D:\a\libKCD1\libKCD1\.buildenv\build\ConsoleRpgParam\ConsoleRpgParam.pdb / ConsoleRpgParam.dll / KCSEPlugin_Load / KCSEPlugin_Version / Console RPG Params / _configure_narrow_argv,quarantined
+2276,Instant Herb and faster Alchemy Merger,Instant Herb Picking Merged 4x version 2276 1 2026-07-01T21-38Z 9pAt2OHcY.zip,none,,,kept
+2280,Remove Artemisia (Wormwood) Potion Visual Effect Overlay,No Wormwood Artemisia Potion Effect 2280 1 2026-07-05T17-40Z GK8rEaX2G.zip,none,,,kept
+2294,Faster Combat - Directional Master Strikes - Better Group Fights,FasterCombat FOMOD 2294 1.2.1 2026-07-30T00-33Z U5RChtbhP.zip,none,,,kept
+2299,1403 - Historical Rebalance,1403 2299 1.5 2026-08-21T17-11Z ZWdhR2re2.zip,none,,,kept
+2318,Visual Combo Helper,Visual Combo Helper 1.0.0 2318 1.0.0 2026-07-31T14-42Z uBF0oq5om.zip,none,,,kept
+2323,Alchemy Stash Link,Zz Alchemy Stash Link 2323 1.0 2026-08-03T20-39Z eXqNkidke.7z,none,,,kept
+2326,Permanent Death,Permadeath 0.91 2326 0.91 2026-08-09T14-26Z aSoQ0kcTE.zip,HIGH,HIGH: native binary by magic bytes: _dll/LightFX64.dll | HIGH: script or shortcut file: Install-Permadeath.cmd | HIGH: script or shortcut file: Uninstall-Permadeath.cmd | HIGH: native code file: _dll/LightFX64.dll,_dll/LightFX64.dll=efe39ec64a14d00d _dll/LightFX64.dll: suspicious strings: none; game-related strings: playline hooks installed on  / no playline observed -- file hooks may not be installed /  matches in .text -- refusing to patch this build of WHGame.dll / game-over hook installed / WHGame.dll never appeared -- no game-over hook,quarantined
+2331,Bushes Collision Remover Redux,Bushes Collision Remover Redux 2331 1 2026-08-12T06-14Z 4yvkqUP3B.zip,none,,,kept
+2332,Baptism of Fire Fix Redux,Baptism Of Fire Fix Redux 2332 1.0.0 2026-08-12T09-22Z q1JwghIHz.zip,none,,,kept
+2338,Horse Collision Mod,HorseCollisionMod 2338 6.0.0 2026-09-30T04-12Z vicgJRjyv.zip,none,,,kept
+2340,MatthusTweaks - Equipment and Progression Overhaul (PTF),MatthusTweaksKCD All In One V1.5 2340 1.5 2026-09-01T23-59Z mDuHaewyB.zip,none,,,kept
+2340,MatthusTweaks - Equipment and Progression Overhaul (PTF),MatthusTweaksKCD Layered Damage Fix V1.0 2340 1 2026-09-02T00-01Z M04BeYCgC.zip,none,,,kept
+2340,MatthusTweaks - Equipment and Progression Overhaul (PTF),MatthusTweaksKCD Sabres V1.0 2340 1 2026-08-31T00-37Z 5RVx9I3GV.zip,none,,,kept
+2343,Ultimate Horse Caparison Fix,Ultimate Horse Caparison Fix V1.0 2343 1.0 2026-08-24T20-12Z yvis1527X.zip,none,,,kept
+2345,Food and Drinks rebalance,Food And Drinks Rebalance 2345 1 2026-08-30T23-35Z RVnPpl7KV.rar,none,,,kept
+2348,KCD Zero Durability Repair,KcdZeroDurabilityRepair Release 2348 1 2026-09-03T11-13Z 8HMDLo1kO.zip,HIGH,HIGH: native binary by magic bytes: KcdZeroDurabilityRepair.asi | HIGH: native code file: KcdZeroDurabilityRepair.asi,KcdZeroDurabilityRepair.asi=52929cf9bb98c8d5 KcdZeroDurabilityRepair.asi: suspicious strings: none; game-related strings: repair transaction validation / zero-health override path / [init] MinHook initialization failed: %s / [hook] repair check active at %p (object=%p vtable=%p) / [hook] repair check hook failed at %p: %s / [hook] repair check unresolved: object=%p vtable=%p / [init] active at %p; global zero-health repair override enabled / _configure_narrow_argv,quarantined
+2359,KCD Kombat Tune,KcdCombatTune 2359 3 2026-09-12T07-45Z FksyYJVBR.zip,HIGH,HIGH: native binary by magic bytes: KcdCombatTune.asi | HIGH: native binary by magic bytes: KCDT.asi | HIGH: native code file: KcdCombatTune.asi | HIGH: native code file: KCDT.asi,KcdCombatTune.asi=171e86758a911177 KCDT.asi=26e01ad1e9913a43 KcdCombatTune.asi: suspicious strings: none; game-related strings: KCDT.asi / KCDT_GetVersion / KCDT_IsReady / KCDT_GetGameBase / KCDT_InstallHook / KCDT_ReadMemory / KCDT_ReadCString / KCDT_Log / KCDT_BrainActor / KCDT_ActorSoul / KCDT_SoulSkill / KCDT_SoulStat / KCDT_DefenseWeights / KCDT_SetDefenseOverride || KCDT.asi: suspicious strings: none; game-related strings: masterStrike / inventory.hook.failed / init.inventory.hook.installed / inventory.hook.ready / item.transfer.hook.ready / item.transfer.hook.failed / input.action.hook.ready / input.action.hook.failed / input.registration.hook.ready / input.registration.hook.failed / input.map.creation.hook.ready / input.map.creation.hook.failed / KCDT-test.mode / KCDT-test-report.txt,quarantined
+2362,Better Perk Descriptions,Better Perk Descriptions 2362 1.0 2026-09-13T23-47Z pA6IjrM9q.zip,none,,,kept
+2372,Trough Washing Animation,Trough Washing Animation 2372 1.0 2026-09-26T11-00Z U5RChtbw2.zip,none,,,kept
+2381,Nest of Vipers Stealth,NestOfVipersStealth 2381 1 2026-10-01T03-43Z 2jGTl3QNE.zip,none,,,kept

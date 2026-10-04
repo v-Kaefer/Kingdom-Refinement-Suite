@@ -107,7 +107,7 @@ def main():
     krs = krs_rows()
     results = []
     # archives lie in the source folder itself or in its sub-folders made by tools/inventory_downloads.py (not _incomplete)
-    found = [(d, n) for d in ["."] + sorted(x for x in os.listdir(a.src) if os.path.isdir(os.path.join(a.src, x)) and x != "_incomplete")
+    found = [(d, n) for d in ["."] + sorted(x for x in os.listdir(a.src) if os.path.isdir(os.path.join(a.src, x)) and x not in ("_incomplete", "_quarantine"))
              for n in sorted(os.listdir(os.path.join(a.src, d)))]
     for sub, arc in found:
         p = os.path.join(a.src, sub, arc)

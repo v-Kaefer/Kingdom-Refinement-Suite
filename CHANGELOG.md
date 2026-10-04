@@ -5,6 +5,15 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (sixth request): read-only deep analysis of the P1/P2 mods
+
+No game run, no mod run: the archives are untrusted, so they were only listed, extracted to a scratch folder, read and deleted.
+
+- New `tools/audit_mods_deep.py` (and `tools/audit_mods_report.py`): for each of the 138 archives of the 131 downloaded P1/P2 mods it judges the file list, scans for native code, scripts, shortcuts, dangerous Lua (comments excluded, scripts identical to vanilla ignored), path traversal and encrypted entries (also inside paks), reads the table patches against the vanilla `Tables.pak` (new, changed, identical rows; relative size of the changes), Lua and config use, text strings, install layout and 1.9.8 manifest rule, and grades each mod (A changes the most to E non-perceptive). The scratch folder is deleted (long-path safe).
+- Results (generated, `docs/mods-review/`): `MOD_ANALYSIS.md`, `MOD_PROFILES.md`, `QUARANTINE.md`, `mod_analysis.csv`, `mod_tables.csv`, `mod_overlap.csv`, `risk_scan.csv`; hand notes in `risk_notes.csv`; conclusions in `MODS_REVIEW.md` section 15.
+- **6 archives quarantined** (moved to `Installed_to_review/_quarantine/`, with `_quarantine_manifest.csv`): 770, 1839, 2246, 2326, 2348, 2359. Windows Security had no recorded detection. 4 more are kept with a note.
+- `tools/inventory_downloads.py` and `tools/analyze_mod_archives.py` know the `_quarantine` folder.
+
 ## 2026-10-04 (fifth request): 49 pages opened from the author's list
 
 - Opened the 49 ids the author listed (random 1.5-2.2 s apart): 47 low-priority mods of the author's own lists plus 129, 1904 and 1296 (1296 is a deleted page). 129 and 1904 were taken out of `excluded_mods.csv` (35 ids now) because the author asked for them again. The ids are batch 5 in `download_batches.csv`; they show as missing (49) until downloaded.
