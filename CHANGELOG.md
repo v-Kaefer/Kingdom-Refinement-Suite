@@ -5,9 +5,15 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (eighth request): docs for both branches, push
+
+No game run, no mod run.
+
+- STATUS (mod lists, mod analysis, repository, waiting-for-author, a Branches table) and ROADMAP (phase 8, use what the analysis showed) brought up to date on `mods-analysis-p1-p2` and on `mods-analysis-p3-p4` (which contains the former). Both branches pushed to `origin`.
+
 ## 2026-10-04 (seventh request): branches, and the P3, P4 and unlisted mods read
 
-Branches: `mods-analysis-p1-p2` marks the P1/P2 analysis (cc65109); this work is on `mods-analysis-p3-p4` (not pushed). No game run, no mod run.
+Branches: `mods-analysis-p1-p2` marks the P1/P2 analysis (cc65109); this work is on `mods-analysis-p3-p4` (pushed in the eighth request). No game run, no mod run.
 
 - `tools/audit_mods_deep.py` gained `--priorities`, `--include-unlisted` and `--tag` (separate output files), visual impact and domain columns, ReShade/ENB/SweetFX and game-data XML detection, paks up to 2.6 GB, tables up to 32 MB, header-less patches, closing of pak handles before the scratch delete, and a single `QUARANTINE.md` built from every `risk_scan*.csv`. `.bin` is no longer treated as native code (1410 and 2273 restored from quarantine); "curl" in dialog text no longer counts.
 - Read 227 entries of 208 mods (P3, P4, 17 unlisted downloads): results in `MOD_ANALYSIS_P3_P4.md`, `MOD_PROFILES_P3_P4.md`, `*_p3_p4.csv`; conclusions in `MODS_REVIEW.md` section 16. P1/P2 were re-run with the same tool (A 23, B 22, C 53, D 22, E 15, X 3).
