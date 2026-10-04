@@ -2,3 +2,5 @@
 /Mods WIP folder
 /dist/
 docs/data/table-audit/table_audit.json
+.env
+*.apikey

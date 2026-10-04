@@ -5,6 +5,14 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-03 (fifth request): SteamDB changed files, Nexus API tool
+
+No game run in this request.
+
+- SteamDB pages for 1.9.7 and 1.9.8 (saved as PDF by the author) read with `pdftotext`: `docs/engine/game-versions.md` section 4 now lists the changed files per build. 1.9.7 (build 21751157) modified `Tables.pak`, `Scripts.pak`, all localization paks and the binaries (`WHGame.dll` +1.09 MiB); 1.9.8 (build 22623230) modified only `pak.cfg` and `ipl_patch_010903.pak`. So table and script data are the same on 1.9.7 and 1.9.8, and the hidden `rpg` constant defaults (read on 1.9.6) should be re-read on 1.9.8.
+- `openapi.yaml` (Nexus API 3.0.0) read. New `tools/nexus_metadata.py`: read-only calls for mod name, status, file list, versions and upload dates; no download endpoint is used; `--selftest` runs against a fake server. The author runs it with a personal key in `NEXUS_API_KEY`; `tools/triage_mods.py` adds `nexus_status`, `nexus_latest_version`, `updated_since_1.9.7` when its output exists. A personal API key pasted into the chat was not used and appears in no file; it should be revoked and replaced. `.gitignore` now ignores `.env` and `*.apikey`.
+- `docs/project/DECISIONS.md` records the credentials decision; `MODS_REVIEW.md` section 13.7 explains what the API can answer.
+
 ## 2026-10-03 (fourth request): patch notes, local archives, triage of all mods
 
 No game run in this request.

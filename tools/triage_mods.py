@@ -136,6 +136,16 @@ def main():
     evs = {int(e["id"]): e for e in csv.DictReader(open(os.path.join(D, "search_evidence.csv"), encoding="utf-8", newline=""))}
     for e in evs.values():
         e["summary"] = e.get("summary", "")
+    # optional: files written by tools/nexus_metadata.py when the author runs it with a personal API key
+    nm = {}
+    p = os.path.join(D, "nexus_metadata.csv")
+    if os.path.exists(p):
+        nm = {int(x["id"]): x for x in csv.DictReader(open(p, encoding="utf-8", newline="")) if x["id"]}
+    nf = collections.defaultdict(list)
+    p = os.path.join(D, "nexus_files.csv")
+    if os.path.exists(p):
+        for x in csv.DictReader(open(p, encoding="utf-8", newline="")):
+            nf[int(x["id"])].append(x)
 
     out = []
     for r in rows:
@@ -147,6 +157,13 @@ def main():
         cat, cat_src = classify(r)
         mods = modules_for(r, cat, ev, arc)
         prio, action, reason = decide(r, cat, mods, ev, arc)
+        meta = nm.get(i, {})
+        if meta.get("status") in ("removed", "removed_by_staff", "hidden", "under_moderation", "not_published") and prio != "P1":
+            prio, action, reason = "P4", "Removed or hidden on Nexus: drop it or find a replacement", "Nexus API status: " + meta["status"]
+        uploads = sorted(x["uploaded_at"] for x in nf.get(i, []) if x.get("uploaded_at") and x.get("category") not in ("removed", "archived"))
+        last_up = uploads[-1][:10] if uploads else ""
+        latest = next((x["version"] for x in sorted(nf.get(i, []), key=lambda y: y.get("uploaded_at", ""), reverse=True)
+                       if x.get("category") not in ("removed", "archived")), "")
         evidence = "A archive" if arc_list else ("B search result" if ev else ("C title" if r["name"] else "D id only"))
         if arc_list:
             load = arc["loads_on_1.9.8"]
@@ -163,7 +180,9 @@ def main():
             "id": i, "name": r["name"], "scope": r["scope"], "category": cat, "category_source": cat_src, "ptf": r["ptf"],
             "krs_modules": " ".join(mods), "evidence": evidence, "load_on_1.9.8": load, "row_collision": collision,
             "priority": prio, "action": action, "reason": reason,
-            "last_updated": ev["updated"] if ev else "", "author": (ev["author"] if ev and ev["author"] else r.get("author_or_series", "")),
+            "last_updated": last_up or (ev["updated"] if ev else ""), "author": (ev["author"] if ev and ev["author"] else r.get("author_or_series", "")),
+            "nexus_status": meta.get("status", ""), "nexus_latest_version": latest,
+            "updated_since_1.9.7": ("yes" if last_up >= "2026-02-13" else "no") if last_up else "",
             "evidence_summary": (ev["summary"][:300] if ev else ""),
         })
     out.sort(key=lambda x: (x["priority"], x["id"]))

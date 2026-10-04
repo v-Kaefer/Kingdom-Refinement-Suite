@@ -40,6 +40,7 @@ Not in `docs/` on purpose: `Params Reference.md` (in the `Mods WIP folder`), the
 | `tools/build_module.py`, `tools/gate.py` | build a module; run it in the test game and read every patched row back |
 | `tools/check_patch_names.py` | pre-flight check of patch names, mod ids, row completeness and pak format |
 | `tools/audit_tables.py`, `tools/check_ownership.py` | what each patch really changes versus vanilla; ownership consistency |
+| `tools/nexus_metadata.py` | read-only Nexus API v3 client (names, status, files, versions, dates; no downloads), run by the author with a personal key in `NEXUS_API_KEY`; feeds the triage |
 | `tools/triage_mods.py`, `tools/analyze_mod_archives.py` | triage rules for every mod; read downloaded archives (manifest, paks, patch rows, collisions with the KRS rows) without any network access |
 | `tools/build_mods_index.py`, `tools/scan_workspace_mods.py` | rebuild `mods-review/mods_index.csv` from every list (text lists, Vivaldi tabs, title list, workspace, annotations); list the mods found in the workspace |
 | `tools/potion_dataset.py`, `tools/potion_model_check.py` | potion dataset and formula check |

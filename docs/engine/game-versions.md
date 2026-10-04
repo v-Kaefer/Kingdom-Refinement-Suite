@@ -46,6 +46,18 @@ Consequences:
 - **"Patch Notes: Bug Fixes and Improved HD Sounds" (14 Apr 2026, the 1.9.8 release)**, announcement text: the game locked up on the delete key in menus; items or their state could carry over when creating a new game from the pause menu; HD Sounds DLC files and HD Voiceover patch paks were not used; HD Sounds banks updated.
 - Neither announcement mentions modding support, tables, scripts, bush collision, shield textures, weapon icons, smoke or fire. (An earlier version of this section attributed a ground-foliage fix to PS5 and other items to 1.9.7 from secondary sources; the Steam text above supersedes those summaries.)
 
+**Changed files per build (SteamDB pages saved as PDF by the author on 3 Oct 2026, `Patch 1.9.7 ... SteamDB.pdf` and `Patch Notes_ Bug Fixes and Improved HD Sounds ... SteamDB.pdf` in the repository root; read with `pdftotext`):**
+
+| Build | Depot 379432 (game data) | Other depots |
+|---|---|---|
+| **1.9.7**, build 21751157, 13 Feb 2026 | added `Bin/Win64Shared/pros.sdk.x64.dll` (11.11 MiB) and `Data/patch/ipl_patch_010903.pak` (269 KiB); modified **`Data/Tables.pak` (+151 KiB)**, **`Data/Scripts.pak` (+183 KiB)**, `Data/pak.cfg`, `Data/videos-part0.pak` (-34.9 MiB), all 14 `Localization/*_xml.pak` (+0.8 to +36 KiB) | `goldmaster_bin` (379433): modified **`Bin/Win64/WHGame.dll` (+1.09 MiB)** and `KingdomCome.exe`, `system.cfg`, `whdlversions.txt`, removed `Bin/Win64/version`; DLC depots: `Scripts_DLC2.pak`, `Scripts_DLC3.pak` |
+| **1.9.8**, build 22623230, 14 Apr 2026 | modified only `Data/pak.cfg` (-119 B) and `Data/patch/ipl_patch_010903.pak` (+144 B) | the HD Sound Pack depot (836900) |
+
+What this means for the project:
+- **Tables and scripts changed in 1.9.7, not in 1.9.8.** Everything measured on the 1.9.8 install about the data (vanilla rows, the table audit) equals 1.9.7; mods tested "on 1.9.6" were tested against the old `Tables.pak` and `Scripts.pak`.
+- **`WHGame.dll` changed in 1.9.7 (+1.09 MiB).** Hidden `rpg` constants have their defaults in the binary, so `rpg_constants_runtime.csv` (read on 1.9.6) may differ on 1.9.7/1.9.8, and native plugins (KCSE, ASI loader mods such as 2359) are tied to the new binary (matches the "1.9.8.0 only" and "1.9.7-404-504czj4" statements). A constants read on 1.9.8 is a cheap harness run still to do.
+- The 1.9.8 patch does not touch any file a table or script mod patches.
+
 The secondary summaries that were used before the Steam text was read are kept below.
 
 | Version | Date | Notes as published (summaries; the full official text could not be fetched) |
