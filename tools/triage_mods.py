@@ -151,6 +151,10 @@ def main():
     p = os.path.join(D, "excluded_mods.csv")
     if os.path.exists(p):
         excluded = {int(x["id"]): x for x in csv.DictReader(open(p, encoding="utf-8", newline=""))}
+    superseded = {}   # docs/mods-review/superseded_mods.csv: a removed page whose replacement the author already has (id, replaced_by, note)
+    p = os.path.join(D, "superseded_mods.csv")
+    if os.path.exists(p):
+        superseded = {int(x["id"]): x for x in csv.DictReader(open(p, encoding="utf-8", newline=""))}
     nf = collections.defaultdict(list)
     p = os.path.join(D, "nexus_files.csv")
     if os.path.exists(p):
@@ -170,6 +174,8 @@ def main():
         meta = nm.get(i, {})
         if meta.get("status") in ("removed", "removed_by_staff", "hidden", "under_moderation", "not_published") and prio != "P1":
             prio, action, reason = "P4", "Removed or hidden on Nexus: drop it or find a replacement", "Nexus API status: " + meta["status"]
+        if i in superseded:
+            prio, action, reason = "P4", "Replaced by " + superseded[i]["replaced_by"] + ": nothing to download", superseded[i]["note"]
         if i in excluded:
             prio, action, reason = "P4", "Excluded by the author: do not download or review", excluded[i]["reason"]
         uploads = sorted(x["uploaded_at"] for x in nf.get(i, []) if x.get("uploaded_at") and x.get("category") not in ("removed", "archived"))

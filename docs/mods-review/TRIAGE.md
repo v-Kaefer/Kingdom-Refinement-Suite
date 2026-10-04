@@ -9,9 +9,9 @@
 | Priority | Mods | Meaning |
 |---|---|---|
 | P1 | 3 | act now |
-| P2 | 129 | compare or check before combining |
-| P3 | 161 | optional or not mapped |
-| P4 | 72 | outside the suite's scope |
+| P2 | 128 | compare or check before combining |
+| P3 | 145 | optional or not mapped |
+| P4 | 89 | outside the suite's scope |
 
 | Evidence | Mods |
 |---|---|
@@ -25,16 +25,17 @@
 | P1 | Replace the published release | 1 |
 | P1 | Resolve the measured row collision | 2 |
 | P2 | Check on 1.9.8 whether the fix is still needed | 10 |
-| P2 | Compare tables | 93 |
+| P2 | Compare tables | 92 |
 | P2 | Disabled on 1.9.8 by its manifest: edit the version line | 1 |
 | P2 | Study the rows and compare | 25 |
 | P3 | Classify by hand | 3 |
-| P3 | Optional companion: outside the PTF scope, check version support | 95 |
-| P3 | Review: gameplay mod not mapped to a KRS module | 63 |
-| P4 | Excluded by the author: do not download or review | 20 |
+| P3 | Optional companion: outside the PTF scope, check version support | 84 |
+| P3 | Review: gameplay mod not mapped to a KRS module | 58 |
+| P4 | Excluded by the author: do not download or review | 37 |
 | P4 | Optional visual: no table overlap expected | 46 |
 | P4 | Out of scope | 4 |
-| P4 | Removed or hidden on Nexus: drop it or find a replacement | 2 |
+| P4 | Removed or hidden on Nexus: drop it or find a replacement | 1 |
+| P4 | Replaced by 2068: nothing to download | 1 |
 
 ## P1 and the archive-measured mods
 
@@ -86,7 +87,7 @@
 | 2338 | Horse Collision Mod | likely: evidence names the same values | Horse collision reactions by speed; no vanilla file replaced This mod adds animations and physical reactions with immersive detail when Henr |  |
 | 2362 | Better Perk Descriptions | likely: evidence names the same values | Changes the perk descriptions to include precise information about the perk. Finally you can make informed choices! |  |
 
-Title-based only: 83, 284, 651, 1040, 1070, 1112, 1148, 1236, 1243, 1384, 1518, 1519, 1520, 1563, 1569, 1612, 1629, 1647, 1655, 1671, 1673, 1863, 1950, 2045, 2049, 2124, 2179, 2188, 2192, 2194, 2208, 2209, 2256, 2294, 2299, 2318, 2326, 2340, 2359, 2381.
+Title-based only: 83, 284, 651, 1040, 1070, 1112, 1148, 1236, 1243, 1384, 1518, 1519, 1520, 1563, 1569, 1612, 1629, 1647, 1655, 1671, 1673, 1863, 1950, 2045, 2049, 2124, 2179, 2188, 2192, 2194, 2208, 2209, 2294, 2299, 2318, 2326, 2340, 2359, 2381, 2256.
 
 ### krs_items: 45 mods (16 with measured or likely collision)
 

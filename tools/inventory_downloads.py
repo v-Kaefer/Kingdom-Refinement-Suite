@@ -17,10 +17,11 @@ The mod id is read from the Nexus file name. Two shapes exist:
 Files without an id (a loose .pak that Vortex unpacked, a renamed file) are matched by name against the Vortex download folder
 and against the mod names of the index; what cannot be matched goes to the folder _unmatched for a person to look at.
 
-Inputs:  docs/mods-review/excluded_mods.csv (mods the author does not want; never reported as missing),
+Inputs:  docs/mods-review/superseded_mods.csv (removed pages whose replacement is already downloaded),
+         docs/mods-review/excluded_mods.csv (mods the author does not want; never reported as missing),
          docs/mods-review/download_batches.csv (the ids that were asked for: batch 0 already had, 1 and 2 tabs opened, 3 shortlist only),
          docs/mods-review/mods_triage.csv (name, category, priority, KRS modules), the Vortex download folder (read-only listing).
-Outputs: docs/mods-review/downloads_inventory.csv (one row per entry), docs/mods-review/downloads_missing.csv (asked for, not found),
+Outputs: docs/mods-review/NOT_DOWNLOADED.md (every index mod without a download, by reason), docs/mods-review/downloads_inventory.csv (one row per entry), docs/mods-review/downloads_missing.csv (asked for, not found),
          docs/mods-review/DOWNLOADS_STATUS.md (generated summary).
 """
 import argparse
@@ -182,7 +183,10 @@ def write_outputs(out, mods, batches, src):
         w.writeheader()
         w.writerows(sorted(out, key=lambda r: (int(r["id"]) if r["id"] else 99999, r["entry"])))
     excluded = {int(x["id"]) for x in read_csv(os.path.join(D, "excluded_mods.csv"))}   # the author does not want these: never listed as missing
-    have = {int(r["id"]) for r in out if r["id"] and r["kind"] != "incomplete download"} | excluded
+    superseded = {int(x["id"]) for x in read_csv(os.path.join(D, "superseded_mods.csv"))}   # removed pages whose replacement is already downloaded
+    have = {int(r["id"]) for r in out if r["id"] and r["kind"] != "incomplete download"}
+    not_downloaded = sorted(i for i in mods if i not in have and i not in superseded)
+    have |= excluded
     vortex_ids = set(vortex_names().values())
     missing = []
     for i, b in sorted(batches.items(), key=lambda kv: (kv[1]["batch"], kv[0])):
@@ -199,6 +203,18 @@ def write_outputs(out, mods, batches, src):
         w.writeheader()
         w.writerows(missing)
 
+    groups = collections.OrderedDict((k, []) for k in ("Excluded by the author", "Asked for, not downloaded yet", "In the author's lists, no page opened (low priority)", "Removed from Nexus"))
+    for i in not_downloaded:
+        t = mods[i]
+        k = ("Excluded by the author" if i in excluded else "Removed from Nexus" if t["nexus_status"] != "published"
+             else "Asked for, not downloaded yet" if i in batches else "In the author's lists, no page opened (low priority)")
+        groups[k].append(f"- {i} {t['name']}")
+    N = [f"# Not downloaded: {len(not_downloaded)} of the {len(mods)} mods of the index", "",
+         "> **GENERATED** by `tools/inventory_downloads.py`: do not edit | **Kind:** status | **Trust:** file names in the downloads folder against the index | **Game version:** 1.9.8", "",
+         f"Superseded pages count as downloaded ({len(superseded)}: see `superseded_mods.csv`). The mods are the ones of the author's lists (mods to verify, working list, Vivaldi tabs, history screenshots).", ""]
+    for k, v in groups.items():
+        N += [f"## {k} ({len(v)})", ""] + (v or ["(none)"]) + [""]
+    open(os.path.join(D, "NOT_DOWNLOADED.md"), "w", encoding="utf-8", newline="\n").write("\n".join(N))
     cnt = collections.Counter(r["status"] for r in out)
     kinds = collections.Counter(r["kind"] for r in out)
     ids = {int(r["id"]) for r in out if r["id"]}

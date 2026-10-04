@@ -5,6 +5,10 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (third request): 17 more removed, 1131 superseded
+
+- The 17 undownloaded pages of the third batch were added to `excluded_mods.csv` (37 ids). New `superseded_mods.csv`: 1131 (SPOA Silver Knight Armor, deleted on Nexus) is replaced by 2068, which the author already has. `tools/inventory_downloads.py` writes the generated `NOT_DOWNLOADED.md` (85 of 365 mods by reason); the 47 low-priority mods are the author's own list members, only no page of them was opened. Missing against what was asked for: 0.
+
 ## 2026-10-04 (second request): names checked against links, 20 mods excluded
 
 - Compared the name of every id in all lists with the Nexus API name (545 comparisons) and the downloaded file names with the page names: no wrong id; the only differences are the author's short labels. Details in `docs/mods-review/DOWNLOADS_PLAN.md`.

@@ -41,6 +41,12 @@ The author saw pages of swords, armor, maps and the KCD modding tools in the ope
 
 The 20 are in [`excluded_mods.csv`](excluded_mods.csv) (1416, 1386, 1374, 1281, 1203, 1182, 1089, 958, 942, 915, 913, 905, 891, 864, 827, 795, 791, 762, 708, 129). The triage puts them at P4 "Excluded by the author", the archives shortlist skips them and `tools/inventory_downloads.py` never reports them as missing. **No page of them is opened again.** My own selection rule was the cause: batches 2 and 3 were filled in triage order, which reaches P3/P4 (models, maps, HUD, reshades, tools) after the 129 P2 mods. **All P2 mods have been asked for; no further batch will be filled by triage order.** More pages are opened only from a list the author gives.
 
+## Corrections by the author (4 Oct 2026, later)
+
+- **17 mods removed from the wanted list** (the pages opened in the third batch that were not downloaded: 1501, 1594, 1719, 1797, 1882, 1904, 2012, 2081, 2119, 2147, 2156, 2218, 2256, 2316, 2371, 2374, 2375). They are in `excluded_mods.csv` now (37 ids), so nothing is missing any more from what was asked for.
+- **1131 SPOA Silver Knight Armor is not lost:** the page was deleted on Nexus, but the author already has its replacement in the review folder, `SPOA SKA for KCD (2K textures)`, id 2068. `superseded_mods.csv` records this; 1131 counts as downloaded.
+- **The 47 "never asked" mods are the author's own:** 15 come from the "mods to verify" list, 31 from the Vivaldi tabs and 1 from the history screenshots (mostly reshades, graphics configs and adult content). They are not mine; "never asked" only meant that no page of them was opened in the batches. [`NOT_DOWNLOADED.md`](NOT_DOWNLOADED.md) lists every index mod without a download by reason (85 of 365).
+
 ## Decisions of the author (step 5, answered 4 Oct 2026)
 
 1. **Duplicates:** the three `(1)` copies were deleted (after checking again that their SHA-256 equals the original; they went to the Recycle Bin, not removed permanently).
