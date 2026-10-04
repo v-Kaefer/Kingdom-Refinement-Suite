@@ -94,7 +94,9 @@ def vortex_names():
         for n in os.listdir(VORTEX):
             i, _, _, _ = parse(n)
             if i:
-                out[norm(os.path.splitext(n)[0])] = i
+                stem = os.path.splitext(n)[0]
+                m = NEW.match(stem) or OLD.match(stem)
+                out[norm(m.group("name") if m else stem)] = i
     return out
 
 
@@ -103,7 +105,7 @@ def match_without_id(name, vortex, mods):
     key = norm(os.path.splitext(name)[0])
     if len(key) < 4:
         return None, ""
-    hits = [i for k, i in vortex.items() if key in k]
+    hits = [i for k, i in vortex.items() if key in k or (len(k) >= 6 and k in key)]
     if len(set(hits)) == 1:
         return hits[0], "matched by name in the Vortex download folder"
     hits = [int(r["id"]) for r in mods.values() if key and (key == norm(r["name"]) or (len(key) >= 6 and key in norm(r["name"])))]
@@ -214,6 +216,12 @@ def write_outputs(out, mods, batches, src):
     ident = [r for r in out if r["identical_to"]]
     if ident:
         L += ["## Identical copies (same SHA-256)", ""] + [f"- `{r['entry']}` = {r['identical_to']}" for r in ident] + [""]
+    foreign = sorted((r for r in out if r["id"] and r["status"].startswith("id is not")), key=lambda r: int(r["id"]))
+    if foreign:
+        L += ["## Downloaded mods that are not among the 365 of the index", "",
+              "| Id | Page | File | Where the id came from |", "|---|---|---|---|"]
+        L += [f"| {r['id']} | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/{r['id']}) | `{r['entry']}` | {r['id_from']} |" for r in foreign]
+        L.append("")
     odd = [r for r in out if r["status"] != "ok"]
     if odd:
         L += ["## To look at by hand", "", "| Entry | Status | Id | Mod |", "|---|---|---|---|"]

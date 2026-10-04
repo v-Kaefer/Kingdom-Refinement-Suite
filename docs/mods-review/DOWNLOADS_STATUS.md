@@ -8,32 +8,34 @@ Read on 2026-10-04 from the downloads folder. Nothing was extracted or run; entr
 
 | What | Number |
 |---|---|
-| Entries in the folder | 204 (189 archive, 9 folder (already extracted), 1 incomplete download, 5 loose file) |
-| Distinct mod ids found | 186 |
+| Entries in the folder | 207 (192 archive, 9 folder (already extracted), 1 incomplete download, 5 loose file) |
+| Distinct mod ids found | 192 |
 | downloaded, but not in any batch asked for | 4 |
-| id is not in the index (a misleading link?) | 5 |
+| id is not in the index (a misleading link?) | 6 |
 | incomplete: download again | 1 |
-| no mod id: look at it by hand | 3 |
-| ok | 191 |
+| no mod id: look at it by hand | 2 |
+| ok | 194 |
 
 ## Asked for versus found
 
 | Batch | Asked for | Missing |
 |---|---|---|
-| 0 already had (pilot or Vortex downloads) | 12 | 5 |
+| 0 already had (pilot or Vortex downloads) | 12 | 0 |
 | 1 tabs opened, first 100 | 100 | 1 |
 | 2 tabs opened, next 100 | 100 | 29 |
 
-Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (35 ids). Full inventory: [`downloads_inventory.csv`](downloads_inventory.csv).
+Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (30 ids). Full inventory: [`downloads_inventory.csv`](downloads_inventory.csv).
 
-## Identical copies (same SHA-256)
+## Downloaded mods that are not among the 365 of the index
 
-- `Better Combat and Immersion Compilation-651-1-6-2-1641836099 (1).zip` = Better Combat and Immersion Compilation-651-1-6-2-1641836099.zip
-- `Better Combat and Immersion Compilation-651-1-6-2-1641836099.zip` = Better Combat and Immersion Compilation-651-1-6-2-1641836099 (1).zip
-- `JCD_LootInfo-491-1-8-0-1582327030 (1).zip` = JCD_LootInfo-491-1-8-0-1582327030.zip
-- `JCD_LootInfo-491-1-8-0-1582327030.zip` = JCD_LootInfo-491-1-8-0-1582327030 (1).zip
-- `cheat-106-1-58-1732985419 (1).zip` = cheat-106-1-58-1732985419.zip
-- `cheat-106-1-58-1732985419.zip` = cheat-106-1-58-1732985419 (1).zip
+| Id | Page | File | Where the id came from |
+|---|---|---|---|
+| 502 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/502) | `CLAM-502-1-2-0.zip` | file name |
+| 611 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/611) | `Dice.pak` | matched by name in the Vortex download folder |
+| 660 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/660) | `Apex ENB-660-2-2-1590351047.7z` | file name |
+| 1691 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/1691) | `zzz_Clean_Items_In_Trough.pak` | matched by name in the Vortex download folder |
+| 1733 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/1733) | `MedievalPoisons-1733-V2-0-1729998376.7z` | file name |
+| 1807 | [page](https://www.nexusmods.com/kingdomcomedeliverance/mods/1807) | `PoisonousEnemies-1807-V1-1-1739657277.7z` | file name |
 
 ## To look at by hand
 
@@ -47,7 +49,7 @@ Missing list with links: [`downloads_missing.csv`](downloads_missing.csv) (35 id
 | `Food Spoil faster` | no mod id: look at it by hand |  |  |
 | `MedievalPoisons-1733-V2-0-1729998376.7z` | id is not in the index (a misleading link?) | 1733 |  |
 | `PoisonousEnemies-1807-V1-1-1739657277.7z` | id is not in the index (a misleading link?) | 1807 |  |
-| `zzz_Clean_Items_In_Trough.pak` | no mod id: look at it by hand |  |  |
+| `zzz_Clean_Items_In_Trough.pak` | id is not in the index (a misleading link?) | 1691 |  |
 | `VolumetricFogShadows-800-1-1-1563786542` | downloaded, but not in any batch asked for | 800 | Volumetric Fog Shadows |
 | `IntimidationStat-1723-1-1-1728217688` | downloaded, but not in any batch asked for | 1723 | Intimidation Stat In Inventory |
 | `1.9.8 Steam Epic GOG 2273 1 2026-06-29T13-38Z U5RChtbYi.zip` | downloaded, but not in any batch asked for | 2273 | Address Library For KCSE |

@@ -14,6 +14,7 @@ No game run. The ~200 downloaded archives are untrusted (malware warnings), so n
 - `tools/analyze_mod_archives.py` now also walks those sub-folders (not run: it extracts).
 - Plan and open decisions: `docs/mods-review/DOWNLOADS_PLAN.md`.
 - Opened the second batch of 100 Nexus pages (2.5 s apart) before this.
+- Author's answers: the three `(1)` duplicates were moved to the Recycle Bin (SHA-256 re-checked); the five batch-0 mods were copied from the Vortex download folder (6 archives, 2017 has two). The inventory now also lists the downloaded mods that are not among the 365 (6 ids) and matches loose files by name in both directions; missing is down to 30.
 
 ## 2026-10-03 (sixth request): Nexus API results folded in, download question
 

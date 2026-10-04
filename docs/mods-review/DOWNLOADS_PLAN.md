@@ -21,7 +21,7 @@ The archives are untrusted (the author received malware warnings while downloadi
 | 3 | Reconcile | asked-for minus found = missing; found minus asked-for = extras; id not in the index = misleading link; identical SHA-256 = duplicate copy; `.crdownload` = unfinished | done: `DOWNLOADS_STATUS.md`, `downloads_missing.csv` |
 | 4 | Sort into sub-folders | `--sort --apply`: `c_<triage category>/`, `_unmatched/`, `_incomplete/`; every move is recorded in `_sort_manifest.csv`, `--undo` puts everything back | done (204 moves) |
 | 5 | The author's decisions | see below | open |
-| 6 | Download what is missing | the links are in `downloads_missing.csv`; run step 2 again afterwards | open |
+| 6 | Download what is missing (30 left) | the links are in `downloads_missing.csv`; run step 2 again afterwards | open |
 | 7 | Scan | Windows Security custom scan of the folder, by the author (a scan can quarantine files, so it is the author's call) | open |
 | 8 | Read the archives | `tools/analyze_mod_archives.py --src <folder>` (it walks the sub-folders), then `tools/triage_mods.py`; start with batch 0 to 1 and the P1/P2 mods | not before 7 |
 
@@ -35,9 +35,9 @@ The archives are untrusted (the author received malware warnings while downloadi
 - **Duplicates by hash (3 pairs):** 651 Better Combat and Immersion Compilation, 491 JCD_LootInfo, 106 cheat, each downloaded twice (`(1)` copy). Nothing was deleted.
 - 44 archives carry an upload date after the 1.9.7 patch (13 Feb 2026), read from the file name. That is a hint of freshness, not of compatibility.
 
-## Decisions for the author (step 5)
+## Decisions of the author (step 5, answered 4 Oct 2026)
 
-1. Delete the three `(1)` copies, or leave them? (Left in place by default.)
-2. Copy the five batch-0 archives from the Vortex download folder into the review folder, so one folder holds everything? (A copy only; not done.)
-3. The 29 batch-2 mods still missing are mostly swords and armor (P3). Download them, or drop them from the list?
-4. The five "not in the index" ids: add them to the index (they were downloaded, so someone wanted them), or treat them as wrong links?
+1. **Duplicates:** the three `(1)` copies were deleted (after checking again that their SHA-256 equals the original; they went to the Recycle Bin, not removed permanently).
+2. **Batch 0:** copied from the Vortex download folder into the review folder (a copy; the Vortex originals are untouched): 83, 1090, 1639, 1743 and two archives of 2017. Note: the Vortex files of 2017 are named `KRS-Items-2017-...` (2.6 and 2.7 KB), not "Realistic Items"; the id and the name do not agree and the contents were not looked at.
+3. **Missing batch 2 (29) and 1084:** open (30 ids in `downloads_missing.csv`).
+4. **Ids not in the index:** listed in `DOWNLOADS_STATUS.md` (6 ids: 502 CLAM, 611 Dice, 660 Apex ENB, 1691 Clean Items In Trough, 1733 Medieval Poisons, 1807 Poisonous Enemies); not yet added to the index.
