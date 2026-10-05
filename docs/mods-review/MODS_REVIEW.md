@@ -382,3 +382,101 @@ The author declared the downloaded mods the definitive list and asked for a read
 - **Native route exists for runtime parameter work:** 2246 registers the rpg params as console variables (its strings), which the PTF route cannot do; it stays quarantined until a scan.
 
 Files (generated): [`MOD_ANALYSIS.md`](MOD_ANALYSIS.md) (method, grading, ranking, overlaps), [`MOD_PROFILES.md`](MOD_PROFILES.md) (one section per archive), [`QUARANTINE.md`](QUARANTINE.md), `mod_analysis.csv`, `mod_tables.csv`, `mod_overlap.csv`, `risk_scan.csv`.
+
+
+## 16. Sub-categories of the graded mods and the ranking inside each (4 Oct 2026)
+
+The author asked, for the mods graded A to E, for sub-categories of mods that change the same PTF tables or the same
+kind of file, and a ranking inside each sub-category by how effective and how well developed they are.
+`tools/subcategorize_mods.py` does it from the CSVs the deep analysis already wrote: **no archive was opened again**,
+nothing was extracted and no game run was made. Result: **129 mods** (the 131 minus the 2 that are not analysable),
+**17 sub-categories**, **33 grade/sub-category groups**. Full tables: [`MOD_SUBCATEGORIES.md`](MOD_SUBCATEGORIES.md),
+`mod_subcategories.csv`.
+
+**The sub-category is the footprint, not the title.** Two mods in one sub-category write into the same tables, so they
+also collide with each other and can be compared row for row. The thematic label of `mods_index.csv` is kept beside it
+and the two sometimes disagree: 2338 Horse Collision Mod is a Horses mod whose every row is a perk or a buff, 284 No
+Mo' Slow Mo is listed under Crime but writes combat rows, and the True Hardcore modules 2188 (economy) and 2210
+(alchemy) are both labelled Combat / AI in the index. The index labels are worth correcting from this.
+
+**Two scores, both 0 to 100** (rules and weights in [`MOD_SUBCATEGORIES.md`](MOD_SUBCATEGORIES.md)): *effect* = how much
+the mod measurably changes (rows, tables, relative size of the change, perceptibility, depth layers, size of its Lua or
+config part) and *build* = how well the archive is made (loads on 1.9.8, correct PTF suffixes, patches inside
+`Libs/Tables`, no whole-table replacement, no dropped vanilla rows, risk). The rank is 0.55 x effect + 0.45 x build.
+Neither says whether a mod is fun or balanced: no mod was installed or run.
+
+**What the comparison showed**
+- **The big comparable groups are small-mod groups:** Alchemy/food/survival 17, Economy/loot/item stats 16,
+  Perks/skills/XP 16, Combat 11, Lua-only 11, Archery 9 (all nine at grade C), Weapons/armour/durability 8.
+- **Archery is the cleanest contest:** nine grade-C mods set the same hidden `Aim*`/`Bow*` constants. Six write correct
+  PTF patches (1565, 1419, 1678, 1564, 1084, 1100); 804 and 802 replace the whole `rpg_param` table, so they overwrite
+  every other mod's parameter rows (802 also has no manifest); 1376 would not load on 1.9.8 at all.
+- **Near-duplicates can be chosen between:** 1853 Richer Merchants (78 rows of `shop_type2item`, column `amount`) and
+  2165 Merchants Richer (79 rows, `amount` and `shop_type_id`) do the same job equally well; one of the two is enough.
+- **The three Perkaholic packages are not equal:** 1009 in its `.rar` form is the only one that both loads on 1.9.8 and
+  patches correctly (its other archive, the extracted folder, has its 6 patches outside `Libs/Tables` and is never
+  loaded); 770 is quarantined for path traversal and replaces 5 whole tables; 85 does not load on 1.9.8 and its
+  replacements drop 156 vanilla rows.
+- **Food spoiling:** 1483 TSM (111 rows of `food`, correctly suffixed, three alternative strengths in one archive)
+  and 1639 Alternate Food Spoil (the same 111 rows and also correctly suffixed, 2X only) are both sound; 2345 Food and
+  Drinks rebalance changes more (155 rows, four columns) but ships the file as plain `food.xml`, which replaces the
+  whole vanilla table.
+- **Sleep:** both 480 Bed Comfort Restored and 1424 Better Sleep Fixed replace the whole `sleeping_spot_type` table, and
+  1424 does not load on 1.9.8 either; neither is a model to copy.
+- **A mod whose patch the game ignores:** 1883 Better Pickpocket - FIXED ships `rpg_param__better_pickpocket.xml` while
+  its manifest states the id `BetterPickpocket`; by the measured suffix rule the file is never loaded. The same finding
+  on 284, 1578, 1736, 1893 and 2124 rests on an id the deep analysis derived from the mod name because the manifest
+  carries none, and those archives bundle several sub-mods with one manifest each, so there it is a doubt to confirm per
+  sub-mod, not a fault.
+- **Three mods change nothing readable:** 1996 Alcohol Is Not Food Anymore and 1652 Catches the Worm ship table files in
+  which no row differs from vanilla, and 1673 Combat musics tweak has no row at all.
+- **The row and table counts in `MOD_ANALYSIS.md` are inflated for archives with alternative options,** which ship
+  the same patch several times, and because it counts table *files* rather than distinct tables: 2294 Faster Combat
+  counts 2985 rows in 55 files where there are 1300 rows in 10 tables, 1483 counts 333 rows against 111, and 284, 651,
+  1260, 1334, 1563, 1736, 1862, 1863 and 2124 are affected as well. `mod_subcategories.csv` carries both counts; the
+  ranking uses the de-duplicated one.
+- **Whole-table replacement is what separates the mods most:** the 14 archives that do it hold 7 of the 10
+  lowest build scores (85, 1424, 1629, 2124, 770, 883, 1260), while the top of every sub-category is almost always a
+  correctly suffixed PTF patch. The True Hardcore set (2219, 2188, 2210, 2179, 2173) and 2299 1403 - Historical
+  Rebalance are the best-built large mods.
+- **The four native mods (2246, 2326, 2348, 2359) cannot be ranked on effect at all** and are ordered by build and risk
+  only; all four are quarantined.
+
+
+## 17. Where the graded mods intersect (4 Oct 2026)
+
+Follow-up to section 16, same read-only basis: `tools/mod_intersections.py` crosses the mods against each other.
+Full tables: [`MOD_INTERSECTIONS.md`](MOD_INTERSECTIONS.md), `mod_intersections.csv`.
+
+**89 of the 129 graded mods write table rows; 1384 pairs of them intersect.** 442 pairs write at least one of the
+same rows, 942 more write into the same table without sharing a row, and 296 of the pairs include a mod that
+replaces one of those tables whole. What that costs is set by the measured rules in `../engine/ptf-rules.md`: a row
+is replaced whole and the last mod in `mod_order.txt` wins (rule 6), and a row that lists only some columns blanks
+the others (rule 5), so a shared row means one mod's work is silently undone and can take unrelated columns with it.
+
+- **The broad rebalances cannot be combined with anything, including each other:** 2124 Half-looted Rebalance and 2299
+  1403 - Historical Rebalance share **2766 rows**, 2299 and 2340 MatthusTweaks 1565, 883 and 2299 1038, 1560
+  Karnages_Durability_Redux and 2299 960. Pick one of them and treat the rest as sources, not as co-installs.
+- **883 KingdomCome Rebalancing overrides 87 of the other 88 table-writing mods** because it ships a full copy of the
+  tables (398 whole tables, no suffix). 1260 RPG Tweaks overrides 40, and 802, 804 and 1334 override 38 each by
+  replacing `rpg_param` outright; 2345 overrides 16 on `food`; 85 and 770 override 28 and 26 on the perk tables.
+- **`rpg_param` is the crowded room:** `CombatAutoSPBWeight` is set by 12 mods, `CombatAutoMaxAttackDelay` by 11, and
+  five more combat parameters by 10 each. Any two combat mods from section 16 will meet there.
+- **The archery group of nine all meet on the same rows:** the ten shared `ammo` rows are written by 9 mods (1376,
+  1419, 1565, 1678, 2035, 2049, 2124, 2179, 2299), and the `Aim*`/`Bow*` parameters by up to 9. Inside the group they
+  are strictly alternatives, and 802 and 804 additionally wipe every other mod's `rpg_param` rows, not just the
+  archery ones.
+- **Food spoiling is a four-way tie:** 1483, 1639, 2011 and 2345 share 102 to 143 `food` rows with each other, and
+  2345 replaces the whole table, so it beats the other three outright wherever it loads last.
+- **The sleep mods collide in a group of three:** 480, 1062 and 1424 all replace `sleeping_spot_type` whole.
+- **Only 1671 Angriness Begone writes rows nobody else touches** (`angriness_enum`), and 40 mods change no table row,
+  so their Lua, config and asset collisions are invisible to this method.
+- **25 mods write 55 readable rows that `krs_items`, `krs_qol` or `krs_perks` also write** (1950's list is cut in the source, so there are more). The repeat offenders are
+  `rpg_param:RepairPriceModif` and the matching `perk_rpg_param_override` row (883, 1842, 2173, 2188, 2340),
+  `food:73ff1fde...` Aqua Vitalis (651, 1926, 2011, 2124, 2210, 2299, 2345), `rpg_param:HerbGatherSkillToRadius`
+  (1260, 1558, 1938, 2210, 2299), `rpg_param:StrengthToInventoryCapacity` (651, 883, 1839, 1860) and
+  `rpg_param:ReadingXpPerHour` (1260, 1334, 1558, 1572). Each is a decision for the suite, not a bug.
+
+Data gap found while doing this: `krs_collisions` is not a column of `mod_analysis.csv` and the *Same rows as KRS*
+line of [`MOD_PROFILES.md`](MOD_PROFILES.md) is cut at 300 characters, so 1950's list is incomplete here. Writing
+that field to the CSV in `tools/audit_mods_deep.py` needs a re-run of the deep analysis, which re-reads the archives.

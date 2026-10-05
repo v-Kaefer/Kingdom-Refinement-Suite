@@ -5,6 +5,35 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-04 (tenth request): illustrated PDF report
+
+No game run, no mod run, no archive opened, nothing downloaded.
+
+- New `tools/build_report_pdf.py`: builds `docs/mods-review/RELATORIO_MODS_A-E.pdf` (15 pages, Portuguese) from the generated CSVs. Charts and diagrams are inline SVG written by the tool itself (no chart library, no web font, no CDN); the page is printed by the local Edge or Chrome in headless mode, so nothing is installed.
+- Contents: cover, executive summary, the method as a pipeline diagram, the A-E grades, the 17 sub-categories stacked by grade, an effect-against-build scatter, PTF patch versus whole-table replacement side by side, the suffix rule with the 1883 case, the four kinds of intersection with the rule-6 load-order diagram, the most contested tables, the 883 replacement case, the KRS collisions drawn on the suite's own real patch file, practical decisions and the limits.
+- Code examples are real files, not invented: `modules/krs_qol/Data/Libs/Tables/rpg/rpg_param__krs_qol.xml` and `modules/krs_qol/mod.manifest`. Palette validated with the data-viz checker (adjacent-pair CVD and normal-vision floors pass; the contrast warning is answered by direct labels on every segment).
+- Correction while building it: the KRS-shared row count is **55 readable rows**, not 56. The earlier figure counted the item that `MOD_PROFILES.md` cuts in the middle at 300 characters. `MODS_REVIEW.md` section 17, `STATUS.md` and the previous changelog entry were corrected.
+
+## 2026-10-04 (ninth request): where the graded mods intersect
+
+No game run, no mod run, no archive opened: derived from `mod_overlap.csv`, `mod_tables.csv`, `mod_subcategories.csv` and the KRS lines of `MOD_PROFILES.md`.
+
+- New `tools/mod_intersections.py`: crosses the 89 graded mods that write table rows against each other. **1384 pairs intersect**: 442 write at least one of the same rows, 942 more write into the same table without sharing a row, and 296 of the pairs include a mod that replaces one of those tables whole. Generated: `docs/mods-review/MOD_INTERSECTIONS.md`, `mod_intersections.csv` (one row per pair, with the tables and the shared-row count).
+- The three kinds are separated because the game treats them differently (`docs/engine/ptf-rules.md`): a shared row is replaced whole and the last mod in `mod_order.txt` wins (rule 6, and rule 5 means it can blank columns the other mod never touched); the same table with different rows coexists; a file without the PTF suffix replaces the table and overrides every other mod on it.
+- Listed per sub-category (which mods of one group are strict alternatives), across sub-categories (337 pairs that share rows while doing different jobs), per replacing mod (883 overrides 87 of the other 88 table-writing mods; 1260 overrides 40; 802, 804 and 1334 override 38 each), and per contested row (`CombatAutoSPBWeight` is set by 12 mods, ten `ammo` rows by 9).
+- **25 mods write 55 readable rows that `krs_items`, `krs_qol` or `krs_perks` also write** (1950's list is cut at 300 characters in the source, so there are more), listed per module: `RepairPriceModif` (883, 1842, 2173, 2188, 2340), Aqua Vitalis `food` (651, 1926, 2011, 2124, 2210, 2299, 2345), `HerbGatherSkillToRadius` (1260, 1558, 1938, 2210, 2299), `StrengthToInventoryCapacity` (651, 883, 1839, 1860), `ReadingXpPerHour` (1260, 1334, 1558, 1572).
+- Conclusions in `docs/mods-review/MODS_REVIEW.md` section 17. Data gap recorded there: `krs_collisions` is not a column of `mod_analysis.csv` and the profiles line is cut at 300 characters, so 1950's KRS list is incomplete until the deep analysis is re-run.
+
+## 2026-10-04 (eighth request): sub-categories of the A-E mods and a ranking inside each
+
+No game run, no mod run, no archive opened: this works only on the CSVs the deep analysis already wrote.
+
+- New `tools/subcategorize_mods.py`: puts each of the **129 mods graded A to E** into one of **17 sub-categories** of mods that write into the same tables (PTF) or the same kind of file, and ranks them inside each of the **33 grade/sub-category groups**. Every changed row is counted towards the system of its table (`rpg_param` is split over the systems of its changed keys; `buff` rows are shared out over the mod's other systems); a mod with no table row is grouped by the file it does change (Lua, .cfg, non-table XML, assets, text). Generated: `docs/mods-review/MOD_SUBCATEGORIES.md`, `mod_subcategories.csv`.
+- Two scores, 0 to 100: **effect** (rows, tables, relative size of the change, perceptibility, depth layers, Lua/config size) and **build** (loads on 1.9.8, correct PTF suffixes, patches inside `Libs/Tables`, whole-table replacements, dropped vanilla rows, risk); rank = 0.55 x effect + 0.45 x build. The native mods have no measurable effect and are ranked by build and risk only.
+- Two counting corrections against `MOD_ANALYSIS.md` (both counts are kept in the CSV): a patch that an archive ships several times as alternative options (2X/3X/5X folders) counts **once**, and tables are counted as distinct vanilla tables instead of table files. 2294 Faster Combat: 2985 rows in 55 files there, 1300 rows in 10 tables here; 284, 651, 1260, 1334, 1483, 1563, 1736, 1862, 1863 and 2124 are also affected.
+- The "suffix is not the mod id" finding is split by evidence: a fault where `mod.manifest` states the id (1883 Better Pickpocket - FIXED, whose patch the game therefore never loads), a doubt to confirm per sub-mod where the deep analysis had to derive the id from the mod name and the archive bundles several sub-mods with one manifest each (284, 1578, 1736, 1893, 2124).
+- Conclusions in `docs/mods-review/MODS_REVIEW.md` section 16: the archery group of nine mods that set the same hidden constants, the three unequal Perkaholic packages, the interchangeable merchant mods (1853, 2165), three mods that change nothing readable (1652, 1673, 1996), and the index labels that disagree with the files (2188, 2210, 284, 2338).
+
 ## 2026-10-04 (seventh request): branch for the P1/P2 analysis, docs brought up to date
 
 No game run, no mod run.
