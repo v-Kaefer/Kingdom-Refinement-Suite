@@ -1,0 +1,109 @@
+------------------------------
+Tutorial for mod install
+------------------------------
+https://www.youtube.com/watch?v=fIslN5MFE94
+
+-----------------------------------------------------------------------------------
+Mods - Working 1.9.6 - No Extra fixes needed - Working out of the box
+-----------------------------------------------------------------------------------
+[] 1) less headbob
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1332
+
+[] 2) helm vision better
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1337
+
+[] 3) better crime
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1355
+
+[] 4) poison overhaul
+https://www.nexusmods.com/kingdomcomedeliverance/mods/765
+
+[] 5) lost weapon pack
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1566
+
+[] 6) sorting mod
+https://www.nexusmods.com/kingdomcomedeliverance/mods/797
+
+[] 7) invisible hands fix
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1577
+
+[] 8) silver armor
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1131
+
+[] 9) tsm slower food spoil
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1483
+
+[] 10) perkaholic updated
+https://www.nexusmods.com/kingdomcomedeliverance/mods/770
+
+[] 11) richer merchants
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1460
+
+[] 12) rpg tweaks
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1260
+
+[] 13) no mo slo mo
+https://www.nexusmods.com/kingdomcomedeliverance/mods/284
+
+[] 14) Architect
+https://www.nexusmods.com/kingdomcomedeliverance/mods/958
+
+[] 15) Miller Guild Items
+https://www.nexusmods.com/kingdomcomedeliverance/mods/796
+
+[] 16) Black Items Fix
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1380
+
+[] 17) Duke's Sword
+https://www.nexusmods.com/kingdomcomedeliverance/mods/905
+
+[] 18) Midnight Armor Set
+https://www.nexusmods.com/kingdomcomedeliverance/mods/795
+
+[] 19) Fishing in Bohemia
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1093
+
+[] 20) Noble Sir Hans
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1330
+
+[] 21) Joyeuse
+https://www.nexusmods.com/kingdomcomedeliverance/mods/913
+
+[] 22) Baselard Dagger
+https://www.nexusmods.com/kingdomcomedeliverance/mods/892
+
+[] 23) Danish longsword type XVIIIe - Devil's edition
+https://www.nexusmods.com/kingdomcomedeliverance/mods/942
+
+[] 24) 15th to 16th Century style Ottoman sword
+https://www.nexusmods.com/kingdomcomedeliverance/mods/966
+
+[] 25) Viking Set
+https://www.nexusmods.com/kingdomcomedeliverance/mods/708
+
+[] 26) Early Type Ottoman Turkish Kilij
+https://www.nexusmods.com/kingdomcomedeliverance/mods/915
+
+[] 27) Long Targaryen waffenrock
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1203
+
+[] 28) Blood and Iron Encounter System
+https://www.nexusmods.com/kingdomcomedeliverance/mods/840
+
+[] 29) Painted Lords of Leipa Hounskull
+https://www.nexusmods.com/kingdomcomedeliverance/mods/754
+
+[] 30) Queen of Sheba's sword
+https://www.nexusmods.com/kingdomcomedeliverance/mods/762
+
+[] 31) Hand-and-a-Half Sword
+https://www.nexusmods.com/kingdomcomedeliverance/mods/891
+
+[] 32) Easy Assassination
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1259
+
+------------------------------
+OPTIONAL
+------------------------------
+[] 33) Henry Malone
+https://www.nexusmods.com/kingdomcomedeliverance/mods/1374

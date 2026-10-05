@@ -1,0 +1,366 @@
+id,name,summary,status,adult
+83,More Responsive Targeting,Loosens up the targeting system and makes it easier to move around in a fight and engage multiple opponents at once.,published,False
+84,Archery - Realistic Arrow Flight,This is a revision of PcFreaky99's Faster Arrows.  I'd like to thank him for his work and saving me the time to find the files myself.I have used his mod and re-calibrated the numbers so that the arrow flight is a bit more realistic.   It's,published,False
+85,Perkaholic,"Adds additional perks to existing perk lists as well as adding perks to the Bow, Polearm and Unarmed skills.",published,False
+106,Cheat,"Adds console commands to spawn/teleport/kill NPCs, unlimited F5 quicksave, auto run console commands on game start, manipulate money, buffs, items, perks, skills, stats, stolen items, time, weather, wanted level, merchants, recipes, access",published,False
+129,Equal Horse Caparisons,"Players can change the colour/style of the padded quilt blanket armour (Caparison) on their horse without worry of stat changes, choice by colour/style not by stats!",published,False
+266,All Referenced Strings In Kingdom Come Deliverance,"This contains console commands, as well as other things. Search for ""wh_"" to find Warhorse commands.",published,False
+284,No Mo' Slow Mo - Configurable Perfect Block Slow Motion and AI Master Strike frequency,"This mod adds a console command to configure the length of the Perfect Block slow-motion effect, including disabling it completely. Also includes optional mods to disable the slow motion sound effect, and control AI Master Strike frequency",published,False
+311,O' Hungry Henry,"More realistic needs pertaining to eating and sleeping. Increased Hunger and Fatigue requiring you to very carefully chose what to eat and you will have to keep an eye on your tiredness. Also changes energy gained from sleeping per hour,",published,False
+326,Knox's Labelled Items (XML),Knox's Labelled Items is a mod resource which aims to make adjusting equipment (all weapons and armour/clothing) variables much easier by including each item's in-game name in commented XML.,published,False
+366,First-person Herb Picking,Forces the game to stay in first-person-view when picking herbs.,published,False
+390,Stay Clean Longer - Get Dirty Gradually,"This is a simple mod to keep your clothes clean for a longer distance.They will get dirty gradually and you need to wash them, but not as often as in the base game.",published,False
+480,Bed Comfort Restored,Brings back the Comfort value of beds that have been nerfed by Patch 1.3Compatible with Patch 1.4.1,published,False
+483,Hoods and Scarfs UP (dynamic),This mod simply makes 37 hoods and 7 scarfs to be warn up and down (hoods and scarfs are dynamic),published,False
+491,Loot Info - Container is empty or I already opened-looted it,"Displays in the Loot/Open/Steal button whether the content is empty or has already been opened. / Zeigt beim Plündern/Öffnen/Stehlen-Button an, ob der Inhalt leer ist oder ob schon geöffnet wurde.Compatible with DLC ""From The Ashes"".",published,False
+554,Parameters Plus,"Great resource for anyone interested in modding KCD. Featuring some 420+ gameplay parameters not readily available in the file provided by Warhorse to tweak, this resource will allow for additional fine tuning of many gameplay systems for",published,False
+591,Bushes- Collision Remover,Removes those annoying collision boxes on all bushes,published,False
+651,Better Combat and Immersion Compilation,A compilation of mods that aim to improve combat and immersion in KC:D,published,False
+667,Naked Armor Fix,"Fix the player naked armor, so you are not overpowered anymore in Stealth missions.",published,False
+708,Viking Set,"This adds a Viking set, containing Axe, Sword, Shield and Helmet.",published,False
+726,Early Bird NPC Schedules,"Changes NPC schedules so they start their days earlier and waste less daylight. NPC activities that start in the morning now start earlier, while afternoon and evening activities are only slightly altered. Monk schedules are not altered for",published,False
+754,Painted Lords of Leipa Hounskull,This mod turns this otherwise standard looking hounskull into a medieval state of the art!,published,False
+762,Queen of Sheba's sword,Playable version of the Queen of Sheba's sword,published,False
+765,Poison Overhaul,"Previously called ""Alchemical Warfare"". A simple mod that buff/fix some potions and adds a new perk, making poisons more useful, and in some cases, actually work. Heavily inspired by ProBane from darkavatar7.",published,False
+770,Perkaholic updated,"Adds additional perks to existing perk lists as well as adding perks to the Bow, Polearm and Unarmed skills. Updated for 1.9.* (All credits for the mod creation to Xylosi, I just updated the mod to work with 1.9)",published,False
+771,Hoods Over Helmats Removed Clipping Helmets On NPC'S,ALL Hood over helmets work that I listed and Scarfs I Added for Henry and Theresa.Of Course I Did Not Add The Hood/Scarf You Like But if I did not add it it did not work.Read the read me.,published,False
+791,ALL Hoods Up (With Correct Meshes),Puts all of the hoods up in Kingdom Come Deliverance,published,False
+795,Midnight Armor Set (v1.9 Compatible),"Updated Midnight Armor Set (Without the extras some other mods add to it; A Silent Assassin adds a lot of random stuff, Toxic Green Armor adds new armor that is cool but some of the textures replace existing armor (Bernard's Cuirass) to",published,False
+796,Miller Guild Items,Adds a new stealth armor set.  Each item has a unique buff.  The items are obtained by doing the Thick as Thieves quests from the Miller guild.1.9 compatible.  Now with bonus horse item fix,published,False
+797,Inventoried,"This mod sorts 100% of all in-game items in your inventory by adding (Tags), and painstakingly renaming every single item for maximum utility and readability. // Expanding upon the original item categories, the result is a clean yet",published,False
+800,Volumetric Fog Shadows,"This mod turns on volumetric shadows for fog, making it look better and more realistic.",published,False
+802,Archery for 1.9,"An update of archery variables 'rpg_param,xml' for 1.9",published,False
+804,Loose (An Archery Mod),A rebalance of KCD’s archery gameplay.,published,False
+808,Named NPCs,Adds proper names to the NPCs of Kingdom Come Deliverance.,published,False
+827,All Maps From Kingdom Come Deliverance - Ultra High Resolution,All 16 maps from Kingdom Come: Deliverance. Includes the full global map at 8k and all of the individual towns at 4k resolution. This also includes DLC maps for Pribyslavitz and for Thereza's version of Skalitz.  All maps were extracted,published,False
+829,Shop Proper,Shop proper with Shop Proper. A trader and shop overhaul mod.,published,False
+837,Easy Edit,"Do you find it hard to read xml and edit what your looking for without having to jump back and forth between google and your xml to find item id's, names, buff id's ect ect. I set out to make modding easier for me but considering i'v spent",published,False
+840,Blood and Iron Encounter System,The encounter system from Blood and Iron Overhaul as a stand-alone mod.,published,False
+844,Yet Another (Realistic) Reshade,"Yet Another Reshade, This is just my preset for Reshade, based on realism, with couple of mods and ingame tweaks for finetuning.No FPS loss!EDIT: I've forgotten to mention, in the readme included in this mod is some more ,(possibly),",published,False
+864,Official Kingdom Come Deliverance Modding Tools,The official tools for creating mods in Kingdom Come: Deliverance.,published,False
+867,APEX Realistic Modding Guide tweaks and fixes,I try to explain here everything step by step to let your game look as realistic as possible :D,published,False
+879,Original clouds KCD no mipmap,Improves the quality of clouds in the sky.A drop in performance is not noticed.Clouds with mipmap removed.,published,False
+883,KingdomCome Rebalancing,"This Mod changes:- Weapons (mostly Swords)- Armor (Weight, Denfenserating, Prices, ...)- Skills/Perks (Lvl up slower, other Levels required to learn perks, changed some Perks)- Changed RPG Params (for harder combat or less player and horse",published,False
+891,Hand-and-a-Half Sword,Adds a new custom 15th century hand-and-a-half sword.,published,False
+892,Baselard Dagger,Adds a new custom 14th century baselard dagger.,published,False
+905,Duke's Sword,"Adds a new 15th century Type XVIIIa sword with a hollow ground blade and a Type V ""fishtail"" pommel",published,False
+913,Joyeuse,"Adds a new sword based on Joyeuse, which was used for the coronations of French kings.",published,False
+915,Early Type Ottoman Turkish Kilij,A new model of early type Ottoman Turkic saber for people who want to act like Cumans in game :)sword model is taken from 15th century early period types of Ottoman Turkish / Mamluk sabers.guard is steel blade is damascus steel and hilt is,published,False
+922,Enhanced Hair Textures,"No more glowing hair and increase of clarity and contrast to all NPCs hair/beards, also fixes some weird hair colors for now.",published,False
+930,Photorealistic Beauty,"A photorealistic/realistic Reshade preset, made with the idea to recreate the perception of the real world by the eyes more than a camera even though pictures and videos are been used to make comparisions",published,False
+942,Danish longsword type XVIIIe - Devil's edition,EN - This mod adds a Danish longsword type XVIIIe into the game - Devil's edition. ---CZ - Tento mod přidává do hry Dánský dlouhý meč typu XVIIIe - Ďábelská edice.,published,False
+950,Henry's Castle at Pribyslavits,"Finally, Henry has a castle in Pribyslavits to call home",published,False
+955,Treasure Maps Of Bohemia,Treasure Maps Of Bohemia is a hand-drawn retexture of all Treasure Maps and Ancient Maps found in Kingdom Come: Deliverance and all its DLC.,published,False
+957,Dark Souls Death Screen,Changes KCD death screen (2 possible options) to enhance your experience while you DIE,published,False
+958,Architect,Architect - A modification which introduces base-building features and other mechanics to Kingdom Come Deliverance.,published,False
+966,15th to 16th Century style Ottoman sword,A new model of 15th / 16th century  type Ottoman Turkish saber for people who want to act like Cumans in game :),published,False
+969,Enhanced Eyes,"Makes eyes more vivid, sharper and natural, together with eyelashes fix to all characters including Henry.",published,False
+972,Let Me Loot,[OUT OF DATE] Game is on pause while looting. Pick those items with no fear of being stubbed or something.,published,False
+975,Super Natural Reshade,"A subtle, lightweight, non over-the-top natural color correction for KCD.",published,False
+977,Alms for Beggars,"EN:Henry now can give alms to refugees/beggars in Rattay.CZ:Jindra nyní může dávat almužnu žebrákům/uprchlíkům v Ratajích.Lokalizace / Localization:CZE,ENG,FRA,GER,RUS,CHN,PL",published,False
+978,minimalistic HUD,"Are you annoyed by the huge Vanilla HUD? This mod gives you a ""minimalistic HUD"" that is not as intrusive as the Vanilla one with full control over the HUD elements via keybinds.",published,False
+994,Depth ReShade,"Get rid of the flat default look of KCD! Simple, minimal ReShade using two effects for brighter sunlight, deeper shadows, and widened contrast. Low/no performance hit",published,False
+1009,Perkaholic - PTF updated (1.9.4-1.9.8),"Adds additional perks to existing perk lists as well as adding perks to the Bow, Polearm and Unarmed skills. 56 in total.",published,False
+1040,Disable Combat Slowmotion,Disables the annoying Slowmotion that occurs during combat,published,False
+1045,MORE BLOOD,"More blood particles spawned on hit, making your enemies bleed longer and your hits more satisfying!",published,True
+1046,Rudy ENB for KCD,My ENB preset for KCD. slightly improves the game's appearance.,published,False
+1059,Icon ID Resource,"A mod resource containing a useful set of images showing all available buff, perk and object icons with corresponding IDs.",published,False
+1062,SIM Camping Mini ML 1.5.1.1,"SIM Camping Mini Multilingual - Ru+En+Fr+De, corrections and ideas are accepted.",published,False
+1063,Paper UI,A paper retexture of the KCD user interface.,published,False
+1070,Better Combat,"The horrendous combat we've all grown to hate where all you had to do was press Q when prompted to Master Strike your way to victory is no more.MANUAL INSTALLATION:Extract the folder 'Zeeb - Better Combat' into ""...\Steam\steamapps\common\",published,False
+1074,Realism Enlighted ReShade - lore-friendly realistic Visual Enhancing and Sharpening - big quality boost on lower resolutions,"Reshade Preset aiming for overall grahpic enhancing the lil washed out look of the game, while trying to preserve it's tone and realistic colour palette. Adds a nuance of saturation.It really sharpens the game, making it suitable and",published,False
+1080,ReformationFX Reshade,Brighter and realistic color correction for KCD,published,False
+1084,Overpowered Bows - PTF Edition,Increase the power on the Sinew and Hans Capon's bow.,published,False
+1088,Polearms Unleashed,"This is the most comprehensive polearm overhaul available right now for KCD. Enables perfect block and feint for polearms, as well as adds combos for polearms. You can also feint other polearm users now.",published,False
+1089,Overpowered Swords - PTF Edition,This mod increased the attack/power value on seven of the ingame swords.,published,False
+1090,Colored Arrows,Adds colored stripes to the arrows and colors the feathers to make them easier to see in grass/ground. Optionally with plain feathers.,published,False
+1092,Pollax replacer (Axe and Hammer head interchangable),Replaces lucerne hammer with a pollax model. Comes with an optional script that will allow you to swap between the axe and hammer head in game in real time.,published,False
+1093,Fishing in Bohemia,Adds fishing to the lands of Bohemia!,published,False
+1100,Faster archery - PTF Edition,This mod decrease the charge duration (how fast you can charge a bow). There are three editions.,published,False
+1105,Service Prices,"Increases the prices for basic services(Bathhouse, Trainers, Beds, Horses)",published,False
+1107,Blood and Steel with NO FPS LOSS,"Gives a better and more realistic look, with nearly NO fps loss",published,False
+1110,AI Standalone Library,Mod library/resource to use in my mods and in other mods,published,False
+1112,Combat Overhaul,Makes directional combat matter.,published,False
+1114,Snow Mod,This mod replaces several texture files to make the world of Kingdom Come: Deliverance look snowy.,published,False
+1131,SPOA SILVER KNIGHT ARMOR for KCD - DELETED,High detailed and one of the most beautiful armor for Kingdom Come: Deliverance.4K textureshand painted patternsscratches textures,removed_by_staff,False
+1148,Combo and Weapon rebalance,"Makes weapons weaker (sans polearms, will have to be done with polearms unleashed) and combos stronger.",published,False
+1153,More historically accurate item stats,"The real transitional armour is way better in terms of defence, including brigandines, plates, chain mails and even gambesons.This mod will manage to enhance the defensive abilities of most types of armour and will have some alternations in",published,False
+1182,high resolution Kingdome map with all important locations,high resolution Kingdome map with all important locations,published,False
+1193,Weather Mod,Play in any weather as long as you want.Slow motion or even God Mode.,published,False
+1195,Get Water,"Adds a water canteen that players can use to get water ingame. Is meant as a complementary Mod for ""Fishing in Bohemia"" by Chrisaton6799 and ""SIM Camping Mini"" by VVL99.",published,False
+1196,Better graphics reshade,Better graphics reshade is a mod that aims to improve the graphics in the game.,published,False
+1197,Proper Cyrillic Fonts,This mod introduce proper (closer to original) glyphs to cyrillic subset of game fonts.Enjoy the beauty of medieval calligraphy.,published,False
+1203,Long Targaryen waffenrock,Long Targaryen waffenrock for the Kingdom Come Deliverance.,published,False
+1205,ETSGF - Easy to see glowing Arrow feathers  - 1.9.6 - Multi-Colored arrow support,"An update of the old but loved ETSGF mod to work with the latest PTF update for KCD (1.9.6). Now has multi-colored arrow versions, thanks to Bluefirevortex!",published,False
+1218,Lartigue's Upscale Project 2.0 - Upscaled UI and icons,Full AI upscale of the game's UI.,published,False
+1227,30 FPS Cutscene Fix V3,"V3 Update: Thanks to webspam the mod should now work without spamming the console and automatically set your in game max FPS. V2 Update: Automatically increases FPS, no keybind required anymore!A very basic mod to increase the fps of the in",published,False
+1236,Easy Combat PTF (easy parry and master strike),Combat made easy :1-Easier Parries and Master Strikes from the player character.,published,False
+1243,Easier Enemies PTF (Dumber Enemies),"This mod makes enemies less aggressive by reducing how often they dodge, parry, attack, and how often they attack in groups.Comes in 4 versions, 0%, 25%, 50%, and 75% easier than vanilla. All of these versions stop npcs from using master",published,False
+1256,Horus 2.0 KCD Reshade Preset,"Reshade Preset for ""Kingdom Come: Deliverance"" to greatly improve your visual experience.",published,False
+1258,vShade for GShade Realistic Graphic Preset,You will see KCD like never before.,published,False
+1259,Easy Assassination,Improve Knock out & Sneak Kill. No more reloading to stealth kill/ knock out!,published,False
+1260,RPG Tweaks,Various tweaks to make the game more enjoyable,published,False
+1266,Stronger drinks - PTF Edition,This mod increases the alcohol percentage in all drinks by about 50%,published,False
+1281,4K Kingdom Come PNG Map with EVERYTHING,A 4k Resolution map with all discoverable locations.,published,False
+1283,KINGDOM CINEMATIC ReShade,A Lightweight ReShade preset that gives the game a much brighter and warmer environment as well as sharpness and visual clarity.,published,False
+1291,Eye Candy Reshade,IntroductionHello and welcome to my first ever Reshade Preset for KCD!I tried to make this as realistic and beautiful as possible without any oversharpening etc.This preset is for Reshade 4.9.1WARNING: I am not responsible for your game,published,False
+1292,Ultimate Repair Kit 2.0,"This mod aims to recreate the experience of Ultimate Repair Kit that will actually work with the new version of the game, be compatible with most other mods and hopefully won't break with time. It allows you to use repair kits to repair",published,False
+1296,Kingdom Come Enhanced Edition 2.0 - DELETED,,removed,False
+1308,Less Income Pribyslavitz,"This makes changes to periodic expenses and incomes generated by various buildings created in the new settlement, Pribyslavitz (or resulted after Judgements).Useful for slow-paced players who wish to enjoy the atmosphere, habits and",published,False
+1309,Less Encounters,"This makes changes to the chances of random encounters along roads (contact with various and often hostile NPCs).Useful for slow-paced players who wish to enjoy the atmosphere, habits and landscapes of the game.Vanilla meetings are too",published,False
+1311,Knightly Robard and Bernard,This mod equips the knights Sir Robard and Sir Bernard with appropriate armor.,published,False
+1314,Ultimate Ray Tracing KCD Reshade Preset,A reshade with Ray Tracing Global Illumination,published,False
+1322,Mutt Be Quiet,Removes the annoying howling from Mutt,published,False
+1323,Skalitz Shield Fix AWL,Fixed a issue with the Skalitz Shield you get from Theresa after finishing her part in A Woman's Lot.,published,False
+1327,Weather Overhaul,"Personally I wasn't a huge fan of one particular weather type, which made it rain a lot during sunny days, now that type of weather should look more like a rainy day.NOW WITH DLC SUPPORT!",published,False
+1330,Noble Sir Hans,Changes Sir Hans' outfit to look more noble,published,False
+1332,Less Headbob,This mod makes headbob less annoying,published,False
+1334,Fast Learning Henry,I decided to make a quick mod for my save game that changes the xp tables to be around a 5x faster gain and increased the level cap for all skills to 25. Randomly thought of a roleplay save after finishing my hardcore merciful speech save.,published,False
+1337,Helmet Vision,Improves/Widens your Helmet vision by 20%,published,False
+1342,Adjusted Ultra Graphics Config,"A config for better performance using Ultra graphic settings. Improves texture streaming, LODs, lighting, and tweaked shadows for increased FPS.",published,False
+1349,Natural Reshade,"Uses qUINT_mxao, needs access to depth buffer.",published,False
+1355,Better Crime Stealth Plus No Dogs,Makes Crime and Stealth a bit more enjoyable and less annoying by toning down the AI detection and Crime reporting in the game.,published,False
+1356,Fan Side Quest - Heritage,This is a fan created Side Quest for Kingdom Come: Deliverance.Quest features English and Czech translations.(Any other localization uses English),published,False
+1367,Apostalus User Configs,"Enables Volumetric Fog, volumetric fog shadows, FOV 100, FPS Limit of 255, VSync, texture streaming improvements, etc...",published,False
+1373,Custom UI Loading progress,First mod upload for KCD.More to come.Contains 5 dds graphics to overwrite 5 original dds graphics to alter the loading progress UI element of the game.,published,False
+1374,Henry Malone,Immersion breaking!!!! Henry's face retexture adding Post Malone face tattoos,published,False
+1375,No Aim Spread (Bow sway disabler),Disables horizontal bow swaying when aiming. New version doesn't affect NPC accuracy!!,published,False
+1376,Archery mod - Faster arrows (for real),"Makes arrows leave the bow much faster (possibly making them more realistic since the default arrows seem too slow), enabling you to hit moving targets easier etc.",published,False
+1380,Black Items Fix,"fixes items that should be black but are e.g. burgundy,grey etc.renaming items into proper colors + adding standalone versions of their black variant",published,False
+1384,Modified Combat Overhaul - Directional Combat and smarter AI,"Master Strikes now require precise direction matching, Perfect Blocks require side matching, for both the player and the AI. This means you won't ever get hit with a master strike or perfect block unless you mess up, and getting out of bad",published,False
+1386,Hoods UP - PTF Standalone,43 hoods/scarfs standalone with hoods UP,published,False
+1391,Better Equipped Runt,Runt with more pieces of armor for more realistic look and difficulty,published,False
+1394,KDC ReShader,ReShader,published,False
+1403,Ultra Reshade for Low Settings,"Tested in low settings, 1080p, except textures and antialiasing (High). Performance Loss ~10-15%. (i7 3770, GTX 1070). Aims to improve looks without sacrificing too much fps at low settings.",published,False
+1410,Better Rain,"Improves the appearance of rain to be more realistic and in particular makes it less visible, less bright at night",published,False
+1414,Real Life Kingdom Come Experience Reshade,"I've made a Reshade that adds more detail to the world making them wood effects stand out more as well as the ground, lighting, walls, vehicle textures and dirt marks, and skin. It also adds a bit more darkness to shadowed areas making it",published,False
+1416,Toxic Green Armor - PTF Standalone,"Mod adds unique set of black armor (toxic version) + sword, two shields and caparison. PTF standalone , english + czech localization",published,False
+1419,Immersive Archery,The draw speed and arrow speed in the game feel way too low so in order to make archery more realistic -ish the draw is faster along with the flight speed of the arrows.,published,False
+1423,Hoods and Scarfs UP (PTF - Dynamic - with Correct Meshes),Combines Ctobias and Hankyspanky69boi's previous mods and updates the files to EDIT things rather than overwrite them under the PTF framework.  This should improve functionality and compatibility,published,False
+1424,Better Sleep Fixed,"This is a fixed version of BlickMang's Better Sleep mod. As luck would have it they gave us permission to modify, fix and upgrade so long as credit to the original author is provided.",published,False
+1425,Saving Soles (PTF),"(PTF) I found myself running around bare foot just to protect the durability of my boots, well with this you wont need to anymore",published,False
+1426,Energy and Hunger Patch for Timescale Mods (PTF),(PTF) Patch for use with eg SknTheLisper's Timescale mod to make Energy and Nourishment deplete at the correct rates (proportional to an unmodded game's rate),published,False
+1428,Reshade DOF With UI Mask,"Reshade DOF settings using ""MatsoDOF"" complete with UI Mask for 1080p, 1440p and 2160p",published,False
+1452,Storable Halberds,"Storable & useable Halberds like other melee weapon (sword, axe, mace).",published,False
+1460,Merchants Have x3 Money,Compatible with 1.9.6 as of 1/24/2023.It triples the amount of money every merchant has in the game.,published,False
+1479,Batch files for all items sorted and easy to read,This is a set of batch files with approximately all item id's in the game.,published,False
+1483,TSM Slower Food Spoil,"Extends the expiration date on all foodstuffs, either by 2X (recommended), 3X, or 5X.",published,False
+1485,SOLID HELMET VISORS,"SOLID HELMET VISORS - Redrawn helmet visors to remove blurrines, makes them slightly wider and sharper.",published,False
+1501,Smaller Player Marker on Map,Replaced the player marker on map with a smaller figure.,published,False
+1510,Mount while encumbered,Allows mounting of your horse even with encumbrance factor of 10.,published,False
+1511,JSCR - Just simple custom Reshade,"Base on Sovereign reshade and apex enb, i tweak some setting to make it lightning look most natural and real like in Bohemia 1403. It contains Tonemap, technicolor2, fimicpass, level, curve,dpx, level plus,clarity...",published,False
+1518,Waystones Give XP,"Activating wayside shrines, conciliatory crosses, and images of saints in churches add 1 xp to reading if the object hasn't been discovered and/ or activated yet...",published,False
+1519,Shooting Nests Gives XP,Shooting nests will give XP on Archery(weapon_bow) if the nest hasn't dropped down yet...,published,False
+1520,Shooting Archery Targets Gives XP,Another one in my additional XP series of mods...,published,False
+1526,Force High Quality Trees in the distance,Forces the game to render High Quality trees in the distance instead of the default 2D billboard trees.,published,False
+1527,Infinite Draw Distance,Infinite Draw Distance and other Tweaks with a press of a button (great for taking screenshots).,published,False
+1528,Enchanced Shadows and Shadow Cascades,Increased Shadow fidelity by increasing the LOD 0 Sun Shadow Cascade range and increased Shadow Map Resolution.,published,False
+1535,Dandelion Baron,"""Dandelion Baron"" attempts to rein in the more egregious aspects of Herbalism's economic impact, and more generally, to moderate the pace of the player's accumulation of wealth.",published,False
+1538,Batch's Ultra Graphics Settings,"Many tweaks to CryEngine, huge visual impact while retaining the original KCD look that we all love.Read description for more info.",published,False
+1544,Summertime Reshade for Kindom Come,Better colors and Ambient Occlusion,published,False
+1545,Saddles Have Durability,Saddles have actual durability so that they aren't completely destroyed in one hit to the horse.,published,False
+1548,Immersive Economy,"Base game Henry earns way too much money considering his position, this mod tries to remedy it a bit.",published,False
+1552,See NPCs and Animals Farther (Increased NPC render distance),"This mod allows you to see NPCs and animals live out their lives from very far away (by increasing their render distance only). No more enemy ambushes or NPCs on the road ""popping-in"" and killing immersion. See entire villages/towns/castles",published,False
+1558,Karnages_KCD_Essential_Fixes 2.0,Total overhaul of the games RPG_Param File,published,False
+1559,Karnages_Weapons_Damage_Balance 2.0,"Full overhaul of weapons damages, does not include polearms or bows",published,False
+1560,Karnages_Durability_Redux,Massively increases armor and weapon durability,published,False
+1561,Karnages_KCD_user.cfg 2.0,My user.cfg File,published,False
+1562,Karnages_Polearm_Rebalance 2.0,a total overhaul of Polearms Damage,published,False
+1563,Karnages_Polearm_Restoration 2.0,Restores Polearm Skill and adds Polearms to Blacksmiths,published,False
+1564,Karnages_Rebalanced_Bows 2.0,a total overhaul of bow power and behavior,published,False
+1565,Karnages_Arrow_Balance 2.0,Total Overhaul of Arrow Damage and Flight,published,False
+1566,Karnages_Lost_Weapons_Pack_Redux 2.0,re-implements  and balances the lost weapons that the devs decided to not include,published,False
+1568,Karnages_Shop_Prices,Total Overhaul of shop costs and sell prices,published,False
+1569,Karnages_Shield_Restoration,Restores Shield Skill,published,False
+1570,Karnages_Inventory_Recolour,Changes the colour of the inventory,published,False
+1572,Increased Experience Gains,"Increases experience gain by 1.5, 2x or 5x",published,False
+1577,Invisible hands FIX (UPDATE),This will fix the invisible forearms when wearing sleeveless clothes,published,False
+1578,Weighed Groschen - PTF Version,Add a weight to the in game currency. - PTF Version!,published,False
+1589,Realistic Colour Correction Kingdom Come Deliverance,"This Reshade presset improves the color scheme in the game,       balances the contrast, color brightness.",published,False
+1594,Having trouble with old mods (Question Mark),This is a modlist i spent maybe 20 hours making to find the best enhanced experience completely compatible with 1.9.6 without editing any files. Just download and play.,published,False
+1603,Sharper graphic reshade for Kingdom Come Deliverance,"My Reshade present for Kingdom Come: Deliverance. Improved sharpening, so it has less blurry textures, more alive colors, brighter nights and more. Impact on FPS  is max 10 FPS. See pictures for difference.",published,False
+1605,Formidable Runt,Runt will become a formidable opponent during his final encounter with Henry. The original game Runt was a let down in so many ways. The fight was over quickly and did not feel like a climactic moment at all. The 'Better Equipped Runt' mod,published,False
+1612,Remove Auto Camera Lock In Combat,"Are you tired of trying to play this game over and over, only to drop it because the combat is too frustrating? Look no further. This mod completely disables automatic camera locking in combat, but keeps manual locking, and even improves",published,False
+1618,HD Clock Retexture - Inventory Clock Updated,"Now the clock at inventory page and fast travel page are also retextured. Retexture of the time spinner in wait interface, inventory and fast travel.",published,False
+1629,Exclusive Master Strikes - Make Them Reasonable,"Classify NPCs,only those wearing heavy armor can use master strike.给敌人分级，重甲单位才能使用大师反，同时移除所有npc的阻截能力,让你对抗多个无甲、轻甲敌人更加容易。",published,False
+1636,More Sensible Weapons and Armor,"Improves armour & weapons to be more sensible, with clearer roles and more logical stats, giving many items a new lease on life while staying very close to vanilla. Ever wondered why the Cuman Harness is so bad, a ""Heavy"" shield is lighter",published,False
+1639,Alternate Food Spoil (2X),Doubles the time it takes for food to spoil.,published,False
+1646,AutoLimitFPS,"Automatically uncap framerate during fasttravel, sleep and wait, and recap it when done.",published,False
+1647,Slo Mo Begone,"Disables slow motion for perfect blocks and dodges in combat completely.Experience the enhanced ""combat flow"" !",published,False
+1652,Catches the Worm,All NPCs have a revised daily routine. They no longer sleep half the day. All immortal NPCs are now also mortal. (There are a handful of scripted NPCs that cannot have their immortality removed.),published,False
+1654,Boots with Common Plate Chausses,Allows the player to wear any boots with the shoe-less variant of the Common plate chausses,published,False
+1655,Save Me Henry,Adds new quality of life keybindings. Also changes the key layout from the controller setup to a user-friendly PC mouse and keyboard.,published,False
+1660,Double Brew Yield,Doubling the brewing yield in Alchemy,published,False
+1667,Surface Type Rework,Reworks the physical attributes (mainly the pierceability) of surfaces and materials.,published,False
+1668,Relaxed RPG Params,"just a pack of some more ""relaxed/forgiving"" RPG parameters",published,False
+1671,Angriness Begone,"Disables the angriness system, which informs NPCs that Henry is responsible for all unsolved crimes in the game world.",published,False
+1673,Combat musics tweak,A mod that tweak the combat musics as best as possibleNot compatible with other musics mod that use the layer !,published,False
+1678,Better Archery,PTF.  Improved yet balanced Speed and DMG of arrows and draw,published,False
+1683,Roads Are Dangerous - Redux,"This mod aims to mimick what was done with the original mod from 2018 ""Roads Are Dangerous"" which hasn't been updated in quite a while.Intended modification: Increase the ambush and random combat encounters with Quick Travel and riding from",published,False
+1689,Playable Daggers,Fight with dual wielding daggers.,published,False
+1693,Ravens beak and Spiked warhammer icon swap,It only took 6 years for someone to make this mod,published,False
+1702,SLEE realistic reshade preset and performance file,"Optimization file and Realistic preset for Reshade! That looks very good, has eye adaptation and properly adjusted HDR along with Tonemaper.",published,False
+1719,Quests Checklist,"This spreadsheet for Kingdom Come: Deliverance includes a comprehensive list of all main and side quests, with timed quests clearly marked. Track your progress by checking off completed quests and follow the suggested order to ensure you",published,False
+1720,Performance Configuration (Mid-High End),"I have had some luck improving my overall FPS outside of towns with this autoexec.cfg file. I wanted to upload mine in case it is useful to anyone else. Settings are based on my current hardware (Ryzen 7 3700x, RTX 4070, 16GB RAM, 1GB NVMe",published,False
+1723,Intimidation Stat In Inventory,Displaying current intimidation stat in inventory.,published,False
+1730,Drink Sound Effects,"This mod will replace the ""eating"" sound effect certain drinks use with the potion ""drinking"" sound effect.",published,False
+1732,Torch Radius,Increases the range of the torch.,published,False
+1736,Rogue Life,A collection of modules to balance and enhance stealth play.,published,False
+1743,Persistent Arrows,your arrows will stay firmly fixed on the exact location where you hit the npc bodies.,published,False
+1765,Restore Riposte,Restore Riposte for player use.Pick up your weapons and get a head start on adapting to the new combat system before KCD2 comes!,published,False
+1779,Semi Sorted soul XML,This file is a semi sorted XML for the original soul.xml file naming all souls present in the game,published,False
+1780,Timed Quest Indicator,Add an indication to the quest log for quests that are time sensitive.,published,False
+1782,No more clipping elbows for Andrew,Replaces Andrew the inn-keeper's body clothing to stop his elbows clipping through the sleeves.,published,False
+1797,Nighttime Nighthawk,"Nighttime Nighthawk adds a perk which uses the same night vision as the Nighthawk potion.  The perk automatically adds night vision every night and removes night vision every morning.  This lets you navigate KCD's dark nights easier, even",published,False
+1800,KCD 2 Reshade,"Adds clarity, color correction, depth, better overall lightning, deeper shadows,",published,False
+1818,Kingdom Cum Deliverance,"With KCD 2 releasing today, I decided to upload my mod to Nexus as a way to prestige the devs.",published,False
+1823,RTX 3050 PACK,"This pack enhances performance, ensuring stable 60+ FPS on RTX 3050 (Mobile), RTX 3050TI, RTX 3050 (Desktop).",published,False
+1829,Mod Order Tool 1.2,"MOT (Mod Order Tool) is a lightweight and user-friendly tool for getting mod_order in Kingdom Come: Deliverance with ease. It scans your mod folder, and creates a mod_order.txt file to organize your mods. The tool also handles folder name",published,False
+1839,Realistic Horses,Reduce horse carrying capacity to add realism and inventory management,published,False
+1842,Realistic Repairs,Allows you to use your repair tools on gears that have above 10 durability left.,published,False
+1853,Richer Merchants (PTF),Every Merchant in the game have 10.000 Groschens,published,False
+1860,Train More Carry More - PTF,"Increase the amount you can carry the more strength you have, this mod doesn't change the basic carry weight value so it should be compatible with mods that changes that - PTF (compatible with other PTF mods)",published,False
+1861,Sell Damaged Items At Full Price - PTF,"With this mod, you can sell damaged items at their full price (as if they were in perfect condition) - PFT (should be compatible with PTF mods).",published,False
+1862,Faster Inury Regeneration - PTF,This mod makes injuries heal faster - PTF (should be compatible with PTF mods).,published,False
+1863,Dirty And Charismatic - PTF,"With this mod, dirt and armor state will no longer affect Henry's charisma - PTF (should be compatible with PTF mods).",published,False
+1864,Cheap Savior Schnapps - PTF,"Save without going broke. With this mod, you can buy savior schnapps really cheap, find them sold everywhere and with abundance - PTF compatible",published,False
+1870,Fair Trade - PTF,Sell items at the same price you buy at - PTF Compatible,published,False
+1873,Daily Restock And Rich Merchants - PTF,"Merchants will restock daily (or the alternative frequency you've chosen), and will have 100 times more money.",published,False
+1875,KCD1 Enhanced Visuals - UBER Graphics ReShade,"A ReShade preset that aims to further enhance the visual fidelity and better immerse you in the gameworld.Works best with ""UBER Quality Mod"".(HDR Compatible)",published,False
+1882,Devil's Scowl Sheild Fix,Fixed an issue with the Devil's Scowl Shield texture being blurry on some graphical settings,published,False
+1883,Better Pickpocket - FIXED,"This mod makes it easier to pickpocket drunk and sleeping NPCs by reducing the chance of waking them up, as it should be.",published,False
+1893,Bianca's Ring PTF,"This is a work in progress mod aiming to bring the Bianca's Ring mods to a PTF version, but to make it less OP",published,False
+1900,Jiggle Physics,Adds Jiggle Physics,published,True
+1904,Better Map Icons,Smaller icons on maps - Too big icons are resized to a readable scale. Also reworked icons.,published,False
+1907,Visorless Helmets,Visorless helmets to make Henry look normal in conversations,published,False
+1909,Helmet-Off Dialog (Beta),"This mod automatically unequips your helmet, head chainmail and coif when starting a conversation with an NPC, then re-equips them when the dialog ends.",published,False
+1914,Weightless Herbs,Makes alchemy herbs weightless,published,False
+1918,KCD1 Reborn - Verdant Vegetation,"This mod enriches KCD1 with lush, dense vegetation, bringing a more vibrant and immersive natural environment inspired by KCD2. Carefully optimized for performance and visual quality, it enhances forests, fields, and foliage for a more",published,False
+1922,No Prefixes in Alchemy Book,Removes sorting mod prefixes from the alchemy book.,published,False
+1926,Potion no Satiety and ADD Heal plus Energy,Changes almost all potions in the game.,published,False
+1927,KCD1 Reborn-Terrain and Structures,This mod brings a complete overhaul to the textures of both the terrain and structures in Kingdom Come: Deliverance.,published,False
+1938,My Herb Picking Radius,Double the herb picking radius.,published,False
+1944,Lore Of Die,Expand how die's experienced in the game.,published,False
+1950,Skill Books Take Time,Reading books take time.,published,False
+1951,Baths dont affect energy and nourishment,Bathmaids don't feed and caffeinate you! Optional: slower energy increase,published,False
+1956,Auto Hide HUD REBORN,"Automatically hides and shows HUD elements at the right moments during gameplay. In addition, it adds the ""Eagle Eye"" perk from KCD2.",published,False
+1958,Selected Immersion Breaking Music Mute,"This seems to be always problem to my ears and immersion. Reminds me of Oblivion and it's combat music, you heard combat music before you saw the enemy.",published,False
+1961,Unconscious Crime UI,I feel it's little too much that you can view map and see where your crime has been reported.,published,False
+1964,KCD1 Reborn - Enhanced Faces and Skin,"This mod not only improves face and skin textures with sharper details but completely eliminates the issue of slow loading and late face rendering. NPCs will always appear clear and natural, without blurry or delayed textures.",published,False
+1972,FINAL Beyond SUPER Ultra Graphics and Visuals Configs,"My very first mod! i just love gaming and modding my games so much and as i went on, something in me always wanted to learn more or mod myself. so today i present you my very first own small mod.",published,False
+1980,Medieval Loading Screens,Turns some of the Codex images into loading screens.,published,False
+1981,Lesser Income Pribyslavitz - Supplies Cost Patch,Tiny mod to revert some supplies costs from Lesser Income Pribyslavitz.,published,False
+1982,Stormy Skies,"Stormy Skies is a simple weather mod that fixes the cloudless rainstorms in KCD. No more immersion-shattering ""sun showers."" It is lightweight, doesn't affect performance at all, and is a 100% game changer (literally) when it comes to",published,False
+1984,Sharpening Overhaul,Overhauls Grindstone and sharpening of weapons.,published,False
+1990,Veteran Hunting,"Started as experiment.. turned to Hunting overhaul, kind of..",published,False
+1991,BCAIC - Restore Hunting Spots - Patch,BCAIC is must have mod for every run. This tiny patch restores hunting spot markers for the map.,published,False
+1996,Alcohol Is Not Food Anymore,Exactly as the title says Alcohol Is Not Food Anymore.,published,False
+2005,Snarky Loading Screens PTF Edition,"Inject some humour into your life, this time without replacing game files.",published,False
+2008,Perfection,Needs access to depth-buffer.,published,False
+2011,Chefs Kiss,"UI supported - New rules for foods, drinks, potions, poisons, health regen, stamina regen, weapon and stat buffs, nutrition, energy, starvation and more",published,False
+2012,Jubilant Pig Meter,"Good heavens, it's nearly full!",published,False
+2017,Realistic Items,All items modifications made for the Kingdom Refinement Suite Collection.,published,False
+2021,Repair Kits - Balanced and Scaled PTF,"Fixes the imbalance between small and large armourer’s kits by adjusting their efficiency. All repair kits received a small balanced boost, making them more useful while preserving gameplay balance in both normal and Hardcore modes.",published,False
+2022,Restored Sabres PTF,"Adds the previously unused Oriental Blade to the swordsmith’s shop with new textures. Allows enemies to use the Rider’s Sabre, which was not used by any enemies before. Buffs and balances the weak Nicopolis Sabre, making it usable while",published,False
+2030,Clean and Minimal HUD and Map,Makes vanilla HUD and Map elements smaller and transparent for less intrusive and more immersive experience.,published,False
+2031,Mud and Iron Kingdom Come Deliverance Reshade,"A Vanilla+ reshade for better colour, contrast and sharpness with 2 Versions.Each one has a brighter one.",published,False
+2035,Ordinance an Archery Overhaul,"Complete++ overhaul of the entire Archery system, for both Henry and NPC's.",published,False
+2040,Polymorphic Projectiles Arrow Overhaul,Complete++ arrow overhaul. Killing Cumans with a watermelon is now on your bucket list,published,False
+2045,Polearms Unleashed Rebalanced Lite Edition PTF,"A streamlined and rebalanced version of the great Polearms Unleashed mod, focused on realism and core gameplay. The polearm skill is now visible and functional, and every polearm has fully reworked stats. Experience playable, storable, and",published,False
+2046,Arsenal - A Weapons Overhaul - DDDB,Complete++ Overhaul of all of the melee weapons within the lands of Bohemia,published,False
+2049,Simple Ragdoll Physics,"More Ragdolls, less Kinematics",published,False
+2061,Meticulously Edited Shops and Services,"Overhauls vendors, mostly by expanding their inventories and then randomizing what's for sale. Later, I want to include separate addons that modify service prices.",published,False
+2066,Distant Smoke and Fire,"Increases smoke and fire draw distance for chimneys, campfires, and torches.",published,False
+2068,SPOA Silver Knight Armor for Kingdom Come Deliverance,Silver Piece of Art - Silver Knight Armor for KCD. Stylish armor with high details. Max resolution 4K (4096x4096).,published,False
+2079,Thin The Herd - Immersive Hunting and Realistic Animal Loot,Realistic animal loot quantities with rebalanced hunting and meat-delivery quests.,published,False
+2081,No More Wreath - Lords of Leipa Helmet Wreath Removal and Hounskull Replacer,Removes the ornamental wreath from the Lords of Leipa Helmet or replaces it with the House of Zoul Hounskull Helmet. Original stats and gameplay remain unchanged.,published,False
+2084,Mount  Horse - Torch Toggle Keys,"This mod combines two features into one: with a single key you can equip your torch, and with another key you can easily mount or dismount your horse.",published,False
+2098,Medieval Poisons - spolszczenie,"Pełne spolszczenie do moda Tyburn's Medieval Poisons. Tłumaczenie obejmuje wszystkie nowe trucizny (m.in. arszenik, mandragora, szczwół), receptury, składniki oraz księgę ""Liber de Venenis"". Zachowano zgodność z polskim nazewnictwem w grze.",published,False
+2100,Diseases - spolszczenie,Pełne spolszczenie do moda Diseases. Tłumaczenie zachowuje klimat gry i jest zgodne z oficjalną polską lokalizacją.,published,False
+2103,Pickpocket menu  from KCD2,"Replaces the original pickpocket wheel in Kingdom Come: Deliverance 1 with the updated, clean and beautiful version from Kingdom Come: Deliverance 2.",published,False
+2106,High FPS FX (KCD1),Particle Framerates Increased,published,False
+2108,New KCD HUD 2.0,"This mod completely overhauls the look of the HUD in Kingdom Come: Deliverance, making it cleaner, more modern, and more visually appealing.",published,False
+2119,KCD Mod Manager,"The full KCD Mod Manager with complete support for Kingdom Come: Deliverance (KCD1). Install, organize, update, and manage mods with the same feature set as the KCD2 version, now fully compatible with the original game.",published,False
+2124,Half-looted Rebalance,"This is a collection of mods, focused on increasing the gameplay depth, realism and removing some frustrations without changing the game too much. It rebalances most items, tweaks combat and game difficulty, fixes few things and adds some",published,False
+2132,MOD file override conflicts and PTF patch detection,"用于检测MOD中PAK文件里的文件覆盖冲突，以及查询所有PTF补丁文件Used to detect file coverage conflicts in PAK files within mods, and to query all PTF patch files",published,False
+2147,KCD 2.0,This mod brings a fresh new experience to Kingdom Come: Deliverance.,published,False
+2152,Lighting and Shadow 2.0 - ENB for KCD,ENB Preset for KCD,published,False
+2153,Engine Tweaks KCD 2.0 - user.cfg details,Engine Tweaks KCD 2.0 - user.cfg details,published,False
+2156,Skalitz Mine Map,Skalitz Mine Map is to help you navigate the mines.,published,False
+2158,Finders Keepers,This PTF mod speeds up the time until items loose their stolen status.Versions: Wait_No or Wait_Less_2x.,published,False
+2165,Merchants Richer,"Merchants have 3x the money.A standalone PTF mod for the most recent game version.Sets in shop_type2item.xml: amount=3x for item_id=""5ef63059-322e-4e1b-abe8-926e100c770e"" (Groschen)",published,False
+2171,No Stolen Items (PTF),Prevents stolen items from being identified as stolen. Items are immediately able to be sold. Immediately updates any stolen items in the player's inventory.,published,False
+2173,True Hardcore Maintenance (PTF),"Rebalances repair kits, makes you pay full repair costs at shops, and removes repair kits from enemy inventories and camps. More details below.",published,False
+2174,Horse Body Armor (Barding),"Improved version of ""Barding (new items)"" mod. Adds 3 armor items for the horse, which fit into the dedicated horse body armor slot. PTF mod, fully localized, compatible with latest game version and the body armor correctly overlaps with",published,False
+2175,Enhanced Color Grading,"This mod makes some adjusts in the lights, shadows and color grading, to bring visuals similar to those of Kingdom Come: Deliverance 2.",published,False
+2179,True Hardcore Combat (PTF),"Makes combat more realistic, aggressive and combo-centered. Improves archery with faster bows and arrows, but makes it more punishing when you're weak. More details below.",published,False
+2180,Optimized CryEngine simple tweaks,"High-end CryEngine user.cfg that optimizes memory budgets, texture streaming and anti-aliasing for PCs. Reduces stutter and texture pop-in while keeping a sharp image.",published,False
+2188,True Hardcore Economy (PTF),"Shops sell to you at inflated prices and buy from you at drastically lower ones, haggling is more difficult, service costs are through the roof, and poverty is widespread throughout the region. More details below.",published,False
+2190,ENHANCED Bohemian Redux  and FX Overhaul,"ENHANCED Bohemian Redux is a compact graphics mod that makes the game’s visuals richer and more expressive,  with enhanced FX particles and new smoke effects, while keeping the style clean and performance-friendly.",published,False
+2191,Realistic Footprints v2.0 KCD I,"Realistic Footprints v2.0 represents a major leap in environmental immersion. This version expands ground interaction, deepensatmosphere, elevates realism without compromising stability.",published,False
+2192,ENHANCED Toggle Aim Overhaul v2.0 KCD I,Tired of not being able to hit anyone with long-range weapons?Hans Capon laughing at you? I have a wonderful solution.,published,False
+2194,ENHANCED Easy FREE Combat Target Overhaul v3.0 KCD I,"Now there is a free target in the game that doesn't stick to enemies, making it better flexible to control the battle. Full gamepad support is available.",published,False
+2196,ENHANCED Adult Bounce KCD I,Add realistic breast physics to your game! Enjoy natural movements and animations that make gameplay more immersive and lifelike.,published,False
+2199,DualSense Buttons,"Adds visual representations of DualSense gamepad buttons to the game for more intuitive control.  Now, all actions are highlighted with the iconic DualSense button prompts, enhancing immersion and making the interface feel truly next-gen.",published,False
+2202,Animals Looted Statistic Tracker - Separate from Corpses Looted,"Splits the vanilla Corpses looted statistic into two separate tracked values: ""Corpses looted"" for human NPC corpses and ""Animals looted"" for animal corpses. The mod updates the in-game Player → Statistics → Crime screen automatically and",published,False
+2203,Categorized Sorted Inventory,"Strongly based on ""Sorted Inventory (2026)﻿""Re added stats for tacks and charm items, added alcohol %, changed the food system (sorting by raw, smoked, cooked, ...).Removed redundant descriptions for weapons and armor. Example: Sword - Long",published,False
+2204,A Real Sorted Inventory (ARSI),"This mod approaches inventory sorting differently than standard sorting mods. Instead of simply adding tags as prefixes to the localized strings, this mod intervenes more deeply in the inventory sorting process. It takes into account the",published,False
+2206,Rivers of Blood KCD I HD v2.0,"Realistic, dynamic, and brutal - the port of the best definitive blood mod for KCD II.",published,False
+2207,Findable Herbs HD,Makes hard to find herbs less hard to find by changing their visuals.,published,False
+2208,Medieval Poisons - True Hardcore Compatibility Patch (PTF),"A compatibility patch for 'Medieval Poisons', designed to work seamlessly with the 'True Hardcore' mod series. More details below.",published,False
+2209,Poisonous Enemies - True Hardcore Compatibility Patch (PTF),"Offers a selection of two compatibility patches for 'Poisonous Enemies', designed to work seamlessly with the 'True Hardcore' mod series. More details below.",published,False
+2210,True Hardcore Alchemy (PTF),"Reduces the error tolerance of alchemy, rebalances potions and alchemy perks, and removes the exploit that allows a single potion to be applied to multiple food items. More details below.",published,False
+2216,KCD Mod Organizer Plugin (Steam - GOG - Epic),"An advanced MO2 plugin that automatically generates your mod_order.txt upon launch, repairs broken XML manifests on the fly, and enforces strict engine compatibility across all storefronts.",published,False
+2218,Clean Gear - No Visual Dirt - Clean Armor Override (KCD1),Removes visual dirt buildup from all clothing and armor while preserving gameplay mechanics. No more dirty clothes/armor.,published,False
+2219,True Hardcore Crime (PTF),"Fragile lockpicks, tougher pickpocketing, increased noise, harsher punishments, unforgiving reputation, a perk overhaul, and more. More details below.",published,False
+2223,Stop Looking Up On Horseback,Stop looking up (seeing so much sky) while riding a horse.,published,False
+2224,More Realistic Horse Handling,My personal preference of horse handling in KCD.,published,False
+2243,Performance Tweaks and best visuals,"A cfg that combines most of the cfg tweaks made by other respective modders, plus some CryEngine tweaks",published,False
+2244,Kingdom Come Script Extender,A tool to expand KCD modding capabilities,published,False
+2246,Console Editable RpgParams,"Expose rpgparams to console, you can set them and see them come into effect in real time",published,False
+2255,Fast Travel Tweaks,1. Added ESC to interrupt fast travel anytime 2.Added click E on checkpoint marker to fast travel to checkpoint marker,published,False
+2256,Better Combat and Immersion Compilation - Chinese,This is the Chinese translation of Better Combat and Immersion Compilation.,published,False
+2261,Proper Third Person View (TPV Camera),"A third-person camera mod for Kingdom Come: Deliverance, with camera collision and frustum-culling correction, a partial raycast-based crosshair fix, and an experimental free-look orbit mode.",published,False
+2270,Horse Control Tweaks,"Tweaks the horse's canter/sprint controls to be shift toggle canter and hold shift sprint, from hold canter and double-tap before hold sprint.",published,False
+2271,No Horse Manes,"Removes mane of horses that spawn with caparison, so it does not stick through the cloth. Optionally also removes mane of the player's horse.",published,False
+2273,Address Library For KCSE,Database to make KCSE plugins platform independent,published,False
+2276,Instant Herb and faster Alchemy Merger,Mods that change animations usually conflict in KCD. This is T0rvadaL's instant herb picking with faster alchemy animations thrown in by me.,published,False
+2277,Toggle Hud - KCSE,KCSE plugin that toggles configurable elements of HUD on key press at an engine level,published,False
+2279,Immersive Economy FIXED,I fixed the errors in: Immersive Economy - https://www.nexusmods.com/kingdomcomedeliverance/mods/1548?tab=files&file_id=6927&nmm=1,published,False
+2280,Remove Artemisia (Wormwood) Potion Visual Effect Overlay,The mod completely removes the blueish greenish visual effect from your screen when you drink Artemisia (Wormwood) potion.,published,False
+2288,Light Armour Vambraces,"Simple, lightweight and effective. The mod changes Vambraces to be classified as light armour, no other items or stats changed.",published,False
+2293,Bigger Hud (KCD1),Increases the size of the Compass and QAM Bar,published,False
+2294,Faster Combat - Directional Master Strikes - Better Group Fights,"Faster combat with directional Master Strikes, optional no tackles, reduced enemy swarming and no slow motion.",published,False
+2297,Ultimate Loadingscreen Artwork Overhaul,Tired of staring at the same 6 loading screens? This mod adds 37 new artworks to the rotation and gives the existing ones a visual upgrade.,published,False
+2299,1403 - Historical Rebalance,"A historically grounded overhaul of equipment, economy, combat, AI, progression, and survival.",published,False
+2304,Female Nudity,"Total remake of the female nude mod, only when they are wearing no clothes.",published,True
+2313,Reshield From Torch,Equipping a torch removes your shield. This mod puts it back.,published,False
+2316,Loot Info - Japanese,Loot Infoの日本語翻訳ファイルです。,published,False
+2317,Enemy Health Bar,This mod displays the locked-on enemy's health bar at the top-center of the screen. ロックオンしている敵の体力が画面中央上に大きく表示されるMODです。,published,False
+2318,Visual Combo Helper,Displays your learned melee combos on the HUD whenever a supported weapon is drawn.,published,False
+2323,Alchemy Stash Link,"Alchemy Workbench Stash Link automatically links all of Henry's Master Stashes (Inn rooms, Ratay bed, home chests, mobile camping stashes) as well as your Horse's inventory directly to any Alchemy Bench you interact with!",published,False
+2326,Permanent Death,Pick how many lives a playthrough gets. Spend them all - and that run is over.,published,False
+2330,Compass and Map Upgrades - Wayfinder,"Your map marker points the way and clears itself when you arrive, plus free map zoom",published,False
+2331,Bushes Collision Remover Redux,"A clean, modern rebuild of JovianStone's original Bushes - Collision Remover for Kingdom Come: Deliverance.",published,False
+2332,Baptism of Fire Fix Redux,"A targeted Redux fix for the long-standing false ""Too many of your men have died"" failure during Baptism of Fire.",published,False
+2333,Homecoming - Runt Fight Redux,A more believable and immersive rebuild of the first fight with Runt during Homecoming.,published,False
+2338,Horse Collision Mod,This mod adds animations and physical reactions with immersive detail when Henry collides with NPCs while on horseback as well as new horsemanship perks .,published,False
+2340,MatthusTweaks - Equipment and Progression Overhaul (PTF),This mod fixes and rebalances: + Misused items + Layered damage.,published,False
+2343,Ultimate Horse Caparison Fix,"Short Description Fixes horse mane clipping through caparisons while preserving the tail. Full-cover caparisons hide the mane, while open-neck caparisons keep it visible.",published,False
+2345,Food and Drinks rebalance,"A small mod to rebalance the nutrition, health and refresh benefits of all food and/or drinks in the game.",published,False
+2348,KCD Zero Durability Repair,Allows repair craftsmen to repair items with zero durability through the standard repair menu.,published,False
+2349,KCD1 Map Cursor Contrast - Visible Ring and X,Makes the Kingdom Come: Deliverance map cursor easier to see while preserving the original ring-and-X shape. Includes a tested stable version and an optional bold variant.,published,False
+2351,Keyboard Controls,If you prefer keyboard & mouse for any reason—especially if you struggle with selecting bottom-left and bottom-right stances using mouse movements—this mod is for you. 何らかの事情でキーボード＆マウス操作にこだわる方。特に戦闘で右下や左下をマウス操作で選ぶのが苦手な人のためのMODです,published,False
+2353,Ultimate Graphics Adjustment,Use User.cfg to improve game graphics and optimize performance.,published,False
+2359,KCD Kombat Tune,"Enemies scale to the matchup. Higher Warfare and agility than your opponent means fewer of their perfect blocks, master strikes and dodges; lower means more. One JSON file to tune it",published,False
+2362,Better Perk Descriptions,Changes the perk descriptions to include precise information about the perk. Finally you can make informed choices!,published,False
+2365,KCDT,My personal modding library. Do not download it unless it’s required by some of my other mods.,published,False
+2366,Faster Book Flipping,Alchemy bench book pages flip at 3x,published,False
+2367,Pray Animation KCD1,This mod consists to Play Animation Sequences for Kingdom Come: Deliverance 1.,published,False
+2369,Fewer Tournaments,"This mod lets you choose how often the Rattay Tournament should occur, replacing the weekly cycle with longer intervals to stop constant notification spam.",published,False
+2371,Circator Weapon Check Disabled,"Disables the circators in the monestary from checking, if Henry has any weapons on him. effectively fixes the bug where Henry gets falsely accused of being armed and banned from the cloister.",published,False
+2372,Trough Washing Animation,Adds a Trough Washing animation just like in KCD2!,published,False
+2374,A Real Sorted Inventory - Ukrainian,Ukrainian translation for A Real Sorted Inventory (ARSI) 1.3.3.1. Українська локалізація для ARSI.,published,False
+2375,A Bohemian Novel - The Veteran of Nicopolis,"A novel in notebooks: read the memoirs of a Bohemian veteran of the 1396 Nicopolis crusade, one quire at a time, for small XP boosts.",published,False
+2381,Nest of Vipers Stealth,No more omniscient guards in Nest of Vipers! You can actually sabotage the food pots and arrow barrels without getting automatically caught- if you have the stealth skills to do so!,published,False
+2384,KCD HI-Res Maps,"All in-game maps from KCD (region and locations), extracted from game files, to be used as reference, wallpapers, RPG material, etc.",published,False

@@ -14,7 +14,7 @@ Output:
     dist/<id>/                         what goes into <game>/Mods/<id>/ (also what Vortex installs)
     dist/<id>-<version>.zip            Vortex-ready archive (the folder <id>/ at its root)
 
-The patch rules the build enforces come from the in-game tests in docs/tests/PTF_FINDINGS.md:
+The patch rules the build enforces come from the in-game tests in docs/engine/ptf-rules.md:
     suffix of every `table__suffix.xml` == mod id, rows complete, no whole-table replacement, ZIP paks.
 The build fails (exit 1) when tools/check_patch_names.py reports a problem, before and after packing.
 """

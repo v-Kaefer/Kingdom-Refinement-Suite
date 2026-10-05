@@ -50,6 +50,8 @@ MANIFEST = """<?xml version="1.0" encoding="utf-8"?>
   </info>
   <supports>
     <kcd_version>1.9.6</kcd_version>
+    <kcd_version>1.9.7</kcd_version>
+    <kcd_version>1.9.8</kcd_version>
   </supports>
 </kcd_mod>
 """

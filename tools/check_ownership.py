@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-check_ownership.py - keep docs/ownership.csv and the real module files in sync.
+check_ownership.py - keep docs/data/ownership.csv and the real module files in sync.
 
-Run tools/audit_tables.py first (it writes docs/table-audit/table_audit.json), then:
+Run tools/audit_tables.py first (it writes docs/data/table-audit/table_audit.json), then:
 
-    python tools/check_ownership.py [--audit docs/table-audit/table_audit.json]
-                                    [--ownership docs/ownership.csv]
+    python tools/check_ownership.py [--audit docs/data/table-audit/table_audit.json]
+                                    [--ownership docs/data/ownership.csv]
                                     [--sources REGEX]
 
 Every row a KRS module file changes (status new/changed in the audit) must be listed in
@@ -61,8 +61,8 @@ def load_rows(audit, sources):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--audit", default="docs/table-audit/table_audit.json")
-    ap.add_argument("--ownership", default="docs/ownership.csv")
+    ap.add_argument("--audit", default="docs/data/table-audit/table_audit.json")
+    ap.add_argument("--ownership", default="docs/data/ownership.csv")
     ap.add_argument("--sources", default=r"^modules/",
                     help="regex of audit labels that count as suite sources (default leaves out scratch folders "
                          "such as 'KRS-Items/WIP Base'; add branch-.* to include other branches)")
