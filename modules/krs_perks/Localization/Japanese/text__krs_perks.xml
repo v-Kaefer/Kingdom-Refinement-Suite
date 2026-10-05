@@ -20,4 +20,614 @@
 <Row>
 <Cell>perk_ex_ripo_text_sword</Cell><Cell>Master Strike</Cell><Cell>Master Strike</Cell>
 </Row>
+<Row>
+<Cell>perk_featherweight_2_desc</Cell>
+<Cell>Falling will cause you 50% less injury.</Cell>
+<Cell>落下ダメージを 50% 軽減する。</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_2_name</Cell>
+<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_desc</Cell>
+<Cell>Falling will cause you 75% less injury.</Cell>
+<Cell>落下ダメージを 75% 軽減する。</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_name</Cell>
+<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>使用に俊敏さが必要な武器で、攻撃時の持久力消費量が 5% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_name</Cell>
+<Cell>Fighting Stance I</Cell>
+<Cell>闘争態勢 I</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>使用に俊敏さが必要な武器で、攻撃時の持久力消費量が 7.5% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_name</Cell>
+<Cell>Fighting Stance II</Cell>
+<Cell>闘争態勢 II</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>使用に俊敏さが必要な武器で、攻撃時の持久力消費量が 10% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_name</Cell>
+<Cell>Fighting Stance III</Cell>
+<Cell>闘争態勢 III</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_desc</Cell>
+<Cell>Increases your Speech level by +3 in the countryside. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Townsman perk simultaneously.</Cell>
+<Cell>田舎での話術に 3 ポイントのボーナスを得る。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 市民のパークとは併用できない。</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_name</Cell>
+<Cell>Yokel</Cell>
+<Cell>田舎者</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_desc</Cell>
+<Cell>Increases your Speech level by +3 in towns and villages. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Yokel perk simultaneously.</Cell>
+<Cell>町や村での話術に 3 ポイントのボーナスを得る。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 田舎者のパークとは併用できない。</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_name</Cell>
+<Cell>Townsman</Cell>
+<Cell>市民</Cell>
+</Row>
+<Row>
+<Cell>perk_film_grip_name</Cell>
+<Cell>Firm Grip I</Cell>
+<Cell>堅握 I</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 20% more stamina.</Cell>
+<Cell>自身の攻撃が防御されると、相手は 20% 多く持久力を消費する。</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_name</Cell>
+<Cell>Firm Grip II</Cell>
+<Cell>堅握 II</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 25% more stamina.</Cell>
+<Cell>自身の攻撃が防御されると、相手は 25% 多く持久力を消費する。</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_name</Cell>
+<Cell>Firm Grip III</Cell>
+<Cell>堅握 III</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_desc</Cell>
+<Cell>If you've got enough fragrant herbs in your inventory, you have 15% higher chance of overpowering your opponent in a clinch.</Cell>
+<Cell>インベントリに薫り高い薬草がたくさん入っていれば、クリンチで相手を上回ることが出来る確率が 15% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_name</Cell>
+<Cell>Sweet Scent</Cell>
+<Cell>甘い香り</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_desc</Cell>
+<Cell>Your armour provides 5% more protection overall.</Cell>
+<Cell>あなたの防具は防御力が 5% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_name</Cell>
+<Cell>Turtle Skin</Cell>
+<Cell>亀の皮膚</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_desc</Cell>
+<Cell>During the night your stamina regenerates 15% faster, however during the day it regenerates 15% slower.</Cell>
+<Cell>夜間の持久力回復が 15% 早くなる但し、日中の持久力回復は 15% 遅くなる。</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_name</Cell>
+<Cell>One with the Shadows</Cell>
+<Cell>影と共に</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_desc</Cell>
+<Cell>You are an unstoppable force! Whilst in combat you move 10% quicker and your enemies are more likely to flee. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Immovable Object perk simultaneously.</Cell>
+<Cell>あなたは止められない力を得る! 戦闘中は移動速度が 10% 上昇し、敵が戦闘から逃げる確率が上昇する。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 動かない物体のパークとは併用できない。</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_name</Cell>
+<Cell>Unstoppable Force</Cell>
+<Cell>止められない力</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_desc</Cell>
+<Cell>You are an immovable object! Whilst in combat your armour is 10% more effective, but you move 20% slower. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Unstoppable Force perk simultaneously.</Cell>
+<Cell>あなたは動かない物体です! 戦闘中は防具の効果に 10% のボーナスを得る一方、移動速度が 20% 低下する。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 止められない力のパークとは併用できない。</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_name</Cell>
+<Cell>Immovable Object</Cell>
+<Cell>動かない物体</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_desc</Cell>
+<Cell>Whilst in combat your Strength and Agility increases by 2.</Cell>
+<Cell>戦闘中は筋力と俊敏さに +2 のボーナスを得る。</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_name</Cell>
+<Cell>Tactician</Cell>
+<Cell>戦術家</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_desc</Cell>
+<Cell>Whilst in a forest, your Strength increases by 2.</Cell>
+<Cell>森にいる間は、筋力に +2 のボーナスを得る。</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_name</Cell>
+<Cell>Lumberjack</Cell>
+<Cell>木こり</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_desc</Cell>
+<Cell>Upon reaching low health, you will enter a frenzied state, making enemies more likely to flee.</Cell>
+<Cell>生命力が低くなると、狂乱状態となり敵が戦闘から逃げる確率が上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_name</Cell>
+<Cell>Berserker</Cell>
+<Cell>ベルセルク</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_desc</Cell>
+<Cell>In combat against women, you deal 10%  more damage.</Cell>
+<Cell>戦闘中は女性に与えるダメージが 10% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_name</Cell>
+<Cell>Axe Murderer</Cell>
+<Cell>斧殺人鬼</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_desc</Cell>
+<Cell>Whilst in combat you run 25% faster.</Cell>
+<Cell>戦闘中は走る速度が 25% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_name</Cell>
+<Cell>Feral</Cell>
+<Cell>野生</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_desc</Cell>
+<Cell>Whilst in combat you take 5% less damage.</Cell>
+<Cell>戦闘中に受けるダメージが 5% 低下する。</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_name</Cell>
+<Cell>Relentless I</Cell>
+<Cell>無慈悲 I</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_desc</Cell>
+<Cell>Whilst in combat you take 7.5% less damage.</Cell>
+<Cell>戦闘中に受けるダメージが 7.5% 低下する。</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_name</Cell>
+<Cell>Relentless II</Cell>
+<Cell>無慈悲 II</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_desc</Cell>
+<Cell>Whilst in combat you take 10% less damage.</Cell>
+<Cell>戦闘中に受けるダメージが 10% 低下する。</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_name</Cell>
+<Cell>Relentless III</Cell>
+<Cell>無慈悲 III</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 2.5% more damage.</Cell>
+<Cell>メイス又は筋力を使用する武器で与えるダメージが 2.5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_name</Cell>
+<Cell>Brute I</Cell>
+<Cell>残酷 I</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage.</Cell>
+<Cell>メイス又は筋力を使用する武器で与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_name</Cell>
+<Cell>Brute II</Cell>
+<Cell>残酷 II</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your opponent is more likely to flee.</Cell>
+<Cell>メイス又は筋力を使用する武器で戦闘中、敵が逃げる確率が上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_name</Cell>
+<Cell>Smash and Bash</Cell>
+<Cell>衝撃と粉砕</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage to your opponent's equipment.</Cell>
+<Cell>メイス又は筋力を使用する武器で、相手の装備に与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_name</Cell>
+<Cell>Shattering Blows I</Cell>
+<Cell>打ち砕く打撃 I</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 10% more damage to your opponent's equipment.</Cell>
+<Cell>メイス又は筋力を使用する武器で、相手の装備に与えるダメージが 10% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_name</Cell>
+<Cell>Shattering Blows II</Cell>
+<Cell>打ち砕く打撃 II</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 5% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>メイス又は筋力を使用する武器で、頭部への一撃で敵を昏倒させられる確率が 5% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_name</Cell>
+<Cell>Headcrusher I</Cell>
+<Cell>頭部圧砕 I</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 10% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>メイス又は筋力を使用する武器で、頭部への一撃で敵を昏倒させられる確率が 10% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_name</Cell>
+<Cell>Headcrusher II</Cell>
+<Cell>頭部圧砕 II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>ポールアーム又は筋力を使用する武器で、持久力の消費が 5% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_name</Cell>
+<Cell>Hypertrophy I</Cell>
+<Cell>肥大化 I</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>ポールアーム又は筋力を使用する武器で、持久力の消費が 7.5% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_name</Cell>
+<Cell>Hypertrophy II</Cell>
+<Cell>肥大化 II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>ポールアーム又は筋力を使用する武器で、持久力の消費が 10% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_name</Cell>
+<Cell>Hypertrophy III</Cell>
+<Cell>肥大化 III</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_desc</Cell>
+<Cell>Whilst in combat you deal 5% more damage to enemy equipment.</Cell>
+<Cell>戦闘中に相手の装備へ与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_name</Cell>
+<Cell>Regimental Training I</Cell>
+<Cell>連隊訓練 I</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_desc</Cell>
+<Cell>Whilst in combat you deal 10% more damage to enemy equipment.</Cell>
+<Cell>戦闘中に相手の装備へ与えるダメージが 10% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_name</Cell>
+<Cell>Regimental Training II</Cell>
+<Cell>連隊訓練 II</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_desc</Cell>
+<Cell>Whilst in combat you deal 15% more damage to enemy equipment.</Cell>
+<Cell>戦闘中に相手の装備へ与えるダメージが 15% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_name</Cell>
+<Cell>Regimental Training III</Cell>
+<Cell>連隊訓練 III</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_desc</Cell>
+<Cell>Whilst in combat against Cumans you deal 5% more damage.</Cell>
+<Cell>クマン人との戦闘時に与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_name</Cell>
+<Cell>Scourge of the Cumans</Cell>
+<Cell>クマン人の災い</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_desc</Cell>
+<Cell>When outnumbered heavily you will swing your weapon up to twice as fast.</Cell>
+<Cell>数では敵が勝る状態において、武器を振る速度が上昇し最大２倍になる。</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_name</Cell>
+<Cell>Fury Swipes</Cell>
+<Cell>怒りの猛打</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_desc</Cell>
+<Cell>Once your opponent has started bleeding, the chances of making them bleed elsewhere are 10% higher.</Cell>
+<Cell>対戦相手が出血すると、他の部位も出血する確率が 10% 上昇します。</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_name</Cell>
+<Cell>Bloodied Strikes</Cell>
+<Cell>血まみれの殴打</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your weapon swings are 10% faster.</Cell>
+<Cell>ポールアーム又は筋力を使用する武器で、武器を振る速度が 10% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_name</Cell>
+<Cell>Armstrong</Cell>
+<Cell>アームストロング</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_1</Cell>
+<Cell>Your shooting is 5% more accurate.</Cell>
+<Cell>射撃の精度が 5% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_1</Cell>
+<Cell>Steady Shot I</Cell>
+<Cell>正射 I</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_2</Cell>
+<Cell>Your shooting is 7.5% more accurate.</Cell>
+<Cell>射撃の精度が 7.5% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_2</Cell>
+<Cell>Steady Shot II</Cell>
+<Cell>正射 II</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_3</Cell>
+<Cell>Your shooting is 10% more accurate.</Cell>
+<Cell>射撃の精度が 10% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_3</Cell>
+<Cell>Steady Shot III</Cell>
+<Cell>正射 III</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_desc</Cell>
+<Cell>You are 5% more likely to knock out enemies when targeting the head.</Cell>
+<Cell>頭部をねらった場合、 敵を昏倒させられる確率が 5% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_name</Cell>
+<Cell>Headhunter</Cell>
+<Cell>ヘッドハンター</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_desc</Cell>
+<Cell>You are 20% more likely to cause bleeding. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Poisoner perk simultaneously.</Cell>
+<Cell>敵が出血する確率が 20% 上昇する。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 毒殺者のパークとは併用できない。</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_name</Cell>
+<Cell>Serration</Cell>
+<Cell>鋸歯</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_desc</Cell>
+<Cell>You are 20% more likely to poison your enemy. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Serration perk simultaneously.</Cell>
+<Cell>敵を毒状態にする確率が 20% 上昇する。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 鋸歯のパークとは併用できない。</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_name</Cell>
+<Cell>Poisoner</Cell>
+<Cell>毒殺者</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_desc</Cell>
+<Cell>Your maximum stamina is increased by 10%.</Cell>
+<Cell>最大持久力が 10% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_name</Cell>
+<Cell>Proficiency</Cell>
+<Cell>熟練</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_desc</Cell>
+<Cell>You are 50% quieter whilst in forests.</Cell>
+<Cell>森の中で物音が 50% 減少する。</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_name</Cell>
+<Cell>Lone Hunter</Cell>
+<Cell>ローン ハンター</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_desc</Cell>
+<Cell>After killing the first enemy in an encounter, you gain 5% more damage for the rest of the encounter.</Cell>
+<Cell>遭遇戦で最初の敵を倒すこと、その戦闘中与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_name</Cell>
+<Cell>Hawkish</Cell>
+<Cell>鷹のように</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_desc</Cell>
+<Cell>You can easily overcome wounds. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Strikes will wound you 5% less.</Cell>
+<Cell>傷が治りやすくなる。 &lt;br/&gt;&amp;nbsp;&lt;br/&gt;被撃時に負傷する確率が 5% 低下する。</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_name</Cell>
+<Cell>Martial Artist</Cell>
+<Cell>格闘家</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_desc</Cell>
+<Cell>You can sprint 20% faster, and run 10% faster at all times.</Cell>
+<Cell>ダッシュの速度が 20% 上昇する、永続的に走る速度が 10% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_name</Cell>
+<Cell>Physical Fitness</Cell>
+<Cell>健康体</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_desc</Cell>
+<Cell>You deal 5% more damage in combat.</Cell>
+<Cell>戦闘時に与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_name</Cell>
+<Cell>Hard Hitter</Cell>
+<Cell>ハード ヒッター</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_desc</Cell>
+<Cell>Whilst drunk, you are 25% more likely to dodge enemy attacks.</Cell>
+<Cell>アルコール摂取時は、回避確率が 25% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_name</Cell>
+<Cell>Drunken Brawler</Cell>
+<Cell>酔喧</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_desc</Cell>
+<Cell>Your brawling experience means you bleed out much slower.</Cell>
+<Cell>これまでの乱闘の経験により、出血速度が大幅に低下する。</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_name</Cell>
+<Cell>Diehard</Cell>
+<Cell>ダイハード</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_desc</Cell>
+<Cell>You are 15% more effective at winning clinchs.</Cell>
+<Cell>クリンチに勝つ確率が 15% 上昇する。</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_name</Cell>
+<Cell>Wrestler</Cell>
+<Cell>レスラー</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_desc</Cell>
+<Cell>You cause 5% greater damage to your opponent's armour and equipment.</Cell>
+<Cell>敵の装備品に与えるダメージが 5% 増加する。</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_name</Cell>
+<Cell>Street Fighter</Cell>
+<Cell>ストリート ファイター</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_desc</Cell>
+<Cell>You regenerate your stamina 5% quicker.</Cell>
+<Cell>持久力回復が 5% 早くなる。</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_name</Cell>
+<Cell>Fighting Spirit</Cell>
+<Cell>闘志</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_agility_desc</Cell>
+<Cell>Agility is a measure of speed, movement and nimbleness. An agile character not only moves faster, but is also better at evading strikes, can skilfully wield more sophisticated weapons, such as sabres, and is more skilled at archery. Archery in turn will also increase agility. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Agility perk points at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>俊敏さは、スピードや移動、すばやさの指標だ。俊敏なキャラクターはすばやく動けるだけでなく、敵の攻撃を避けやすくなる。さらにサーベルなどの高度な武器を上手に扱えるようにもなる。加えて、弓術のスキルが上達する。逆に弓術が上昇すると俊敏さも上がる。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、5、7、9、12、14、16、18、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_speech_desc</Cell>
+<Cell>Speech gauges the character's ability to talk his way out of situations. It is improved by talking to people and successful persuasions. As a result, a good speaker can settle many conflicts before they even arise, haggle better or disconcert a foe he wouldn't be able to overcome in combat.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Speech perk points at levels: 4, 7, 10, 14, 17, 20.</Cell>
+<Cell>話術は、危険な状況を言葉巧みに逃れる技術の指標となる。これは、人々と会話したり、上手く説得したりすることで向上していく。話術が向上すると、様々な問題を争いになる前の段階で収めることが出来る。さらに価格交渉の成功率も上昇し、戦闘では敵わない敵を混乱させることも可能になる。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル4、7、10、14、17、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_defense_desc0</Cell>
+<Cell>Increases the time you can hold a perfect block or dodge as well as increasing the defence stat of weapons and shields.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>防御スキルが上がると、パーフェクトブロックや回避可能な時間が延長される。また、武器や盾の防御性能も上昇する。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、5、8、10、13、15、18、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_fencing_desc0</Cell>
+<Cell>Total fighting skill with weapons or unarmed. The more skilful a warrior you are, the faster your attacks are and the harder it is for an opponent to defend against them. Also, your weapons will be less damaged by attacking and defending.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>これは武器を持った状態、あるいは素手での総合的な戦闘スキルだ。卓越した戦士であればあるほど、攻撃速度が上昇し、敵に防御される可能性が低下する。また、攻撃や防御時に武器が受けるダメージも低下する。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、5、8、10、13、15、18、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_axe_desc0</Cell>
+<Cell>Axe skill makes you more proficient with axes, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>斧スキルが上昇すると、斧の扱いが上達し、攻撃力が上昇する。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、5、7、9、12、14、16、18、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_mace_desc0</Cell>
+<Cell>Mace skill makes you more proficient with maces, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>メイススキルが上昇すると、メイスの扱いが上達し、攻撃力が上昇する。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、5、7、9、12、14、16、18、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_large_desc0</Cell>
+<Cell>Long weapon skill makes you more proficient with long weapons, like halberds, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>ロングウェポンスキルが上昇すると、槍やポールアームの扱いが上達し、攻撃力が上昇する。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、5、7、9、12、14、16、18、20でアンロックされる</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_bow_desc0</Cell>
+<Cell>Bow skill makes you more proficient with bows and arrows, increasing the power of your attacks. Until you reach level 5, you are unable to hold the bow correctly and when firing, the string will flay your forearm, causing injury, unless you are wearing a vambrace or other armguard, in which case firing will only drain Stamina.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>弓スキルが上昇すると、弓と矢の扱いが上達し、攻撃力が上昇する。レベル5に達するまでは、弓を正しく持つことができず、矢を射ると弦で前腕に怪我をしてしまう。ヴァンブレイスなどの腕防具を着けていれば、怪我は免れ、持久力の低下のみに止めることができる。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、6、9、12、15、18、20でアンロックされる。</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_unarmed_desc0</Cell>
+<Cell>Unarmed Combat skill makes you more proficient when fighting with your fists, increasing the damage you make.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>素手での戦闘スキルが上昇すると、戦闘時に拳での余ダメージ量が上昇する。&lt;br/&gt;&amp;nbsp;&lt;br/&gt;追加パークポイントはレベル3、6、9、12、15、18、20でアンロックされる。</Cell>
+</Row>
 </Table>

@@ -20,4 +20,614 @@
 <Row>
 <Cell>perk_ex_ripo_text_sword</Cell><Cell>Master Strike</Cell><Cell>Master Strike</Cell>
 </Row>
+<Row>
+<Cell>perk_featherweight_2_desc</Cell>
+<Cell>Falling will cause you 50% less injury.</Cell>
+<Cell>Cadere ti ferisce il  50% in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_2_name</Cell>
+<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_desc</Cell>
+<Cell>Falling will cause you 75% less injury.</Cell>
+<Cell>Cadere ti ferisce il  75% in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_name</Cell>
+<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>Quando brandisci un'arma basata sull'agilità, consumi il  5% di stamina in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_name</Cell>
+<Cell>Fighting Stance I</Cell>
+<Cell>Postura da combattimento I</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>Quando brandisci un'arma basata sull'agilità, consumi il  7.5% di stamina in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_name</Cell>
+<Cell>Fighting Stance II</Cell>
+<Cell>Postura da combattimento II</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>Quando brandisci un'arma basata sull'agilità, consumi il  10% di stamina in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_name</Cell>
+<Cell>Fighting Stance III</Cell>
+<Cell>Postura da combattimento III</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_desc</Cell>
+<Cell>Increases your Speech level by +3 in the countryside. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Townsman perk simultaneously.</Cell>
+<Cell>Incrementa la tua abilità oratoria di +3 quando ti trovi in campagna. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Non puoi avere questo talento assieme a Cittadino.</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_name</Cell>
+<Cell>Yokel</Cell>
+<Cell>Campagnolo</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_desc</Cell>
+<Cell>Increases your Speech level by +3 in towns and villages. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Yokel perk simultaneously.</Cell>
+<Cell>Incrementa la tua abilità oratoria di +3 nelle città e nei villaggi. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Non puoi avere questo talento assieme a Campagnolo.</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_name</Cell>
+<Cell>Townsman</Cell>
+<Cell>Cittadino</Cell>
+</Row>
+<Row>
+<Cell>perk_film_grip_name</Cell>
+<Cell>Firm Grip I</Cell>
+<Cell>Presa Sicura I</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 20% more stamina.</Cell>
+<Cell>Bloccare i tuoi attacchi fa consumare il 20% più stamina ai tuoi avversari.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_name</Cell>
+<Cell>Firm Grip II</Cell>
+<Cell>Presa Sicura II</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 25% more stamina.</Cell>
+<Cell>Bloccare i tuoi attacchi fa consumare il 25% più stamina ai tuoi avversari.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_name</Cell>
+<Cell>Firm Grip III</Cell>
+<Cell>Presa Sicura III</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_desc</Cell>
+<Cell>If you've got enough fragrant herbs in your inventory, you have 15% higher chance of overpowering your opponent in a clinch.</Cell>
+<Cell>Se possiedi abbastanza erbe fragranti nel tuo inventario, hai il  15% di possibilità in più di vincere una presa.</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_name</Cell>
+<Cell>Sweet Scent</Cell>
+<Cell>Fragranza</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_desc</Cell>
+<Cell>Your armour provides 5% more protection overall.</Cell>
+<Cell>La tua armatura offre il 5% di protezione extra.</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_name</Cell>
+<Cell>Turtle Skin</Cell>
+<Cell>Pelle Coriacea</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_desc</Cell>
+<Cell>During the night your stamina regenerates 15% faster, however during the day it regenerates 15% slower.</Cell>
+<Cell>Durante la notte la tua stamina si rigenera il 15% più velocemente, tuttavia durante il giorno si rigenera il 15% più lentamente.</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_name</Cell>
+<Cell>One with the Shadows</Cell>
+<Cell>Tuttuno con le Ombre</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_desc</Cell>
+<Cell>You are an unstoppable force! Whilst in combat you move 10% quicker and your enemies are more likely to flee. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Immovable Object perk simultaneously.</Cell>
+<Cell>Sei una forza Incontenibile! Quando sei in combattimento ti muovi il  10% più velocemente e i tuoi nemici sono più propensi alla fuga. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Non puoi avere questo talento assieme a Oggetto Inamovibile.</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_name</Cell>
+<Cell>Unstoppable Force</Cell>
+<Cell>Forza Incontenibile</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_desc</Cell>
+<Cell>You are an immovable object! Whilst in combat your armour is 10% more effective, but you move 20% slower. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Unstoppable Force perk simultaneously.</Cell>
+<Cell>Sei un Oggetto Inamovibile! Durante il combattimento la tua armatura è più efficiente del 10% tuttavia ti muovi il 20% più lentamente. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Non puoi avere questo talento assieme a Forza Incontenibile.</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_name</Cell>
+<Cell>Immovable Object</Cell>
+<Cell>Oggetto Inamovibile</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_desc</Cell>
+<Cell>Whilst in combat your Strength and Agility increases by 2.</Cell>
+<Cell>Mentre sei in combattimento, la tua forza e agilità aumentano di 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_name</Cell>
+<Cell>Tactician</Cell>
+<Cell>Tattico</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_desc</Cell>
+<Cell>Whilst in a forest, your Strength increases by 2.</Cell>
+<Cell>Mentre ti trovi nella foresta, la tua forza aumenta di 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_name</Cell>
+<Cell>Lumberjack</Cell>
+<Cell>Taglialegna</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_desc</Cell>
+<Cell>Upon reaching low health, you will enter a frenzied state, making enemies more likely to flee.</Cell>
+<Cell>Quando la tua salute è a livelli critici, entri in uno stato di frenesia, i nemici circostanti avranno più probabilità di fuggire dal terrore.</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_name</Cell>
+<Cell>Berserker</Cell>
+<Cell>Berserker</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_desc</Cell>
+<Cell>In combat against women, you deal 10%  more damage.</Cell>
+<Cell>In combattimento infliggi il 10%  di danno in più alle donne.</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_name</Cell>
+<Cell>Axe Murderer</Cell>
+<Cell>Jack lo Squartatore</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_desc</Cell>
+<Cell>Whilst in combat you run 25% faster.</Cell>
+<Cell>Mentre sei in combattimento corri il  25% più velocemente.</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_name</Cell>
+<Cell>Feral</Cell>
+<Cell>Ferale</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_desc</Cell>
+<Cell>Whilst in combat you take 5% less damage.</Cell>
+<Cell>Mentre sei in combattimento subisci il 5% di danno in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_name</Cell>
+<Cell>Relentless I</Cell>
+<Cell>Inflessibile I</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_desc</Cell>
+<Cell>Whilst in combat you take 7.5% less damage.</Cell>
+<Cell>Mentre sei in combattimento subisci il 7.5% di danno in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_name</Cell>
+<Cell>Relentless II</Cell>
+<Cell>Inflessibile II</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_desc</Cell>
+<Cell>Whilst in combat you take 10% less damage.</Cell>
+<Cell>Mentre sei in combattimento subisci il 10% di danno in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_name</Cell>
+<Cell>Relentless III</Cell>
+<Cell>Inflessibile III</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 2.5% more damage.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, infliggi il 2.5% di danno in più.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_name</Cell>
+<Cell>Brute I</Cell>
+<Cell>Brutale I</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, infliggi il 5% di danno in più.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_name</Cell>
+<Cell>Brute II</Cell>
+<Cell>Brutale II</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your opponent is more likely to flee.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, il tuo avversario è più propenso a fuggire.</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_name</Cell>
+<Cell>Smash and Bash</Cell>
+<Cell>Colpisci e Frantuma</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage to your opponent's equipment.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, infliggi il 5% di danno extra all'equipaggiamento del tuo avversario.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_name</Cell>
+<Cell>Shattering Blows I</Cell>
+<Cell>Colpi Frantumanti I</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 10% more damage to your opponent's equipment.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, infliggi il 10% di danno extra all'equipaggiamento del tuo avversario.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_name</Cell>
+<Cell>Shattering Blows II</Cell>
+<Cell>Colpi Frantumanti II</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 5% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, hai il  5% di possibilità extra di incapacitare l'avversario colpendolo alla testa.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_name</Cell>
+<Cell>Headcrusher I</Cell>
+<Cell>Spaccacrani I</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 10% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>Mentre usi mazze o altre armi basate sulla forza, hai il  10% di possibilità extra di incapacitare l'avversario colpendolo alla testa.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_name</Cell>
+<Cell>Headcrusher II</Cell>
+<Cell>Spezzacrani II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>Mentre usi armi lunghe o altre armi basate sulla forza, i tuoi colpi richiedono il 5% di stamina in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_name</Cell>
+<Cell>Hypertrophy I</Cell>
+<Cell>Ipertrofia I</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>Mentre usi armi lunghe o altre armi basate sulla forza, i tuoi colpi richiedono il 7.5% di stamina in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_name</Cell>
+<Cell>Hypertrophy II</Cell>
+<Cell>Ipertrofia II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>Mentre usi armi lunghe o altre armi basate sulla forza, i tuoi colpi richiedono il 10% di stamina in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_name</Cell>
+<Cell>Hypertrophy III</Cell>
+<Cell>Ipertrofia III</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_desc</Cell>
+<Cell>Whilst in combat you deal 5% more damage to enemy equipment.</Cell>
+<Cell>Mentre sei in combattimento, infliggi il 5% di danno extra all'equipaggiamento del tuo avversario.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_name</Cell>
+<Cell>Regimental Training I</Cell>
+<Cell>Addestramento Rigoroso I</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_desc</Cell>
+<Cell>Whilst in combat you deal 10% more damage to enemy equipment.</Cell>
+<Cell>Mentre sei in combattimento, infliggi il 10% di danno extra all'equipaggiamento del tuo avversario.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_name</Cell>
+<Cell>Regimental Training II</Cell>
+<Cell>Addestramento Rigoroso II</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_desc</Cell>
+<Cell>Whilst in combat you deal 15% more damage to enemy equipment.</Cell>
+<Cell>Mentre sei in combattimento, infliggi il 15% di danno extra all'equipaggiamento del tuo avversario.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_name</Cell>
+<Cell>Regimental Training III</Cell>
+<Cell>Addestramento Rigoroso III</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_desc</Cell>
+<Cell>Whilst in combat against Cumans you deal 5% more damage.</Cell>
+<Cell>Mentre in combattimento contro Cumans I tuoi colpi infliggono il  5% more damage.</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_name</Cell>
+<Cell>Scourge of the Cumans</Cell>
+<Cell>Flagello dei Cumani</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_desc</Cell>
+<Cell>When outnumbered heavily you will swing your weapon up to twice as fast.</Cell>
+<Cell>Quando sei in inferiorità numerica, i tuoi colpi sono veloci il doppio.</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_name</Cell>
+<Cell>Fury Swipes</Cell>
+<Cell>Fendenti Furiosi</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_desc</Cell>
+<Cell>Once your opponent has started bleeding, the chances of making them bleed elsewhere are 10% higher.</Cell>
+<Cell>Una volta che il tuo avversario comincia a sanguinare, hai il 10% di possibilità in più di farlo sanguinare ancora in un punto differente.</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_name</Cell>
+<Cell>Bloodied Strikes</Cell>
+<Cell>Fendenti Sanguinari</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your weapon swings are 10% faster.</Cell>
+<Cell>Mentre usi armi lunghe o altre armi basate sulla forza, i tuoi colpi sono il 10% più veloci.</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_name</Cell>
+<Cell>Armstrong</Cell>
+<Cell>Braccio Nerboruto</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_1</Cell>
+<Cell>Your shooting is 5% more accurate.</Cell>
+<Cell>I tuoi tiri sono il 5% più accurati.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_1</Cell>
+<Cell>Steady Shot I</Cell>
+<Cell>Occhio di Falco I</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_2</Cell>
+<Cell>Your shooting is 7.5% more accurate.</Cell>
+<Cell>I tuoi tiri sono il 7.5% più accurati.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_2</Cell>
+<Cell>Steady Shot II</Cell>
+<Cell>Occhio di Falco II</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_3</Cell>
+<Cell>Your shooting is 10% more accurate.</Cell>
+<Cell>I tuoi tiri sono il 10% più accurati.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_3</Cell>
+<Cell>Steady Shot III</Cell>
+<Cell>Occhio di Falco III</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_desc</Cell>
+<Cell>You are 5% more likely to knock out enemies when targeting the head.</Cell>
+<Cell>Hai il  5% di possibilità in più di abbattere un nemico colpendolo alla testa.</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_name</Cell>
+<Cell>Headhunter</Cell>
+<Cell>Cacciatore di Teste</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_desc</Cell>
+<Cell>You are 20% more likely to cause bleeding. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Poisoner perk simultaneously.</Cell>
+<Cell>Hai il 20% di probabilità extra di infliggere sanguinamento. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Non puoi avere anche il talento Avvelenatore.</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_name</Cell>
+<Cell>Serration</Cell>
+<Cell>Seghettatura</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_desc</Cell>
+<Cell>You are 20% more likely to poison your enemy. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Serration perk simultaneously.</Cell>
+<Cell>Hai il 20% di probabilità in più di avvelenare il tuo obiettivo. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Non puoi avere questo talento assieme a Seghettatura.</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_name</Cell>
+<Cell>Poisoner</Cell>
+<Cell>Avvelenatore</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_desc</Cell>
+<Cell>Your maximum stamina is increased by 10%.</Cell>
+<Cell>La tua stamina è aumentata del 10%.</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_name</Cell>
+<Cell>Proficiency</Cell>
+<Cell>Competente</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_desc</Cell>
+<Cell>You are 50% quieter whilst in forests.</Cell>
+<Cell>Sei il 50% più silenzioso nella foresta.</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_name</Cell>
+<Cell>Lone Hunter</Cell>
+<Cell>Cacciatore Solitario</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_desc</Cell>
+<Cell>After killing the first enemy in an encounter, you gain 5% more damage for the rest of the encounter.</Cell>
+<Cell>Dopo aver ucciso il tuo primo avversario, il tuo danno aumenta del 5% fino alla fine del combattimento.</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_name</Cell>
+<Cell>Hawkish</Cell>
+<Cell>Ferino</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_desc</Cell>
+<Cell>You can easily overcome wounds. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Strikes will wound you 5% less.</Cell>
+<Cell>Riesci ad ignorare le ferite superficiali. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;i colpi ti feriscono il 5% in meno.</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_name</Cell>
+<Cell>Martial Artist</Cell>
+<Cell>Artista Marziale</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_desc</Cell>
+<Cell>You can sprint 20% faster, and run 10% faster at all times.</Cell>
+<Cell>Puoi scattare il 20% più velocemente, e ti muovi il 10% più velocemente.</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_name</Cell>
+<Cell>Physical Fitness</Cell>
+<Cell>Idoneità Fisica</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_desc</Cell>
+<Cell>You deal 5% more damage in combat.</Cell>
+<Cell>I tuoi colpi infliggono il  5% di danni in più.</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_name</Cell>
+<Cell>Hard Hitter</Cell>
+<Cell>Colpo Devastante</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_desc</Cell>
+<Cell>Whilst drunk, you are 25% more likely to dodge enemy attacks.</Cell>
+<Cell>Mentre sei ubriaco, Hai il 25% di possibilità in più di schivare un attacco avversario.</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_name</Cell>
+<Cell>Drunken Brawler</Cell>
+<Cell>Combattente Ubriaco</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_desc</Cell>
+<Cell>Your brawling experience means you bleed out much slower.</Cell>
+<Cell>Grazie alla tua esperienza nelle risse, sanguini molto più lentamente.</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_name</Cell>
+<Cell>Diehard</Cell>
+<Cell>Duro a Morire</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_desc</Cell>
+<Cell>You are 15% more effective at winning clinchs.</Cell>
+<Cell>Hai il 15% di possibilità in più di vincere una presa.</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_name</Cell>
+<Cell>Wrestler</Cell>
+<Cell>Lottatore</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_desc</Cell>
+<Cell>You cause 5% greater damage to your opponent's armour and equipment.</Cell>
+<Cell>Causi il 5% di danno extra all'armatura e l'equipaggiamento dei tuoi avversari.</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_name</Cell>
+<Cell>Street Fighter</Cell>
+<Cell>Combattente di Strada</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_desc</Cell>
+<Cell>You regenerate your stamina 5% quicker.</Cell>
+<Cell>Rigeneri la Stamina il 5% più velocemente.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_name</Cell>
+<Cell>Fighting Spirit</Cell>
+<Cell>Spirito Guerriero</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_agility_desc</Cell>
+<Cell>Agility is a measure of speed, movement and nimbleness. An agile character not only moves faster, but is also better at evading strikes, can skilfully wield more sophisticated weapons, such as sabres, and is more skilled at archery. Archery in turn will also increase agility. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Agility perk points at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>L'agilità è una misura di velocità, movimento e scioltezza. Un personaggio agile non solo si muove più velocemente, ma è anche più bravo a schivare i colpi, può maneggiare abilmente armi più sofisticate, come le sciabole, ed è più abile nel tiro con l'arco. Il tiro con l'arco a sua volta aumenterà anche l'agilità. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Ottieni talenti Agilità ai livelli: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_speech_desc</Cell>
+<Cell>Speech gauges the character's ability to talk his way out of situations. It is improved by talking to people and successful persuasions. As a result, a good speaker can settle many conflicts before they even arise, haggle better or disconcert a foe he wouldn't be able to overcome in combat.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Speech perk points at levels: 4, 7, 10, 14, 17, 20.</Cell>
+<Cell>L'Oratoria misura la capacità del personaggio di destreggiarsi nei discorsi. Questa caratteristica viene migliorata parlando con le persone o avendo successo nei tentativi di persuasione. di conseguenza un buon oratore può risolvere i conflitti ancor prima che nascano.Un livello altro in Oratoria inoltre consente di ottenere prezzi migliori o convincere avversari a ritirarsi senza combattere..&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 4, 7, 10, 14, 17, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_defense_desc0</Cell>
+<Cell>Increases the time you can hold a perfect block or dodge as well as increasing the defence stat of weapons and shields.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>La difesa aumenta il tempo a disposizione per parare un colpo o per schivarlo, inoltre aumenta la difesa di scudi ed armi.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_fencing_desc0</Cell>
+<Cell>Total fighting skill with weapons or unarmed. The more skilful a warrior you are, the faster your attacks are and the harder it is for an opponent to defend against them. Also, your weapons will be less damaged by attacking and defending.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>L’arte bellica misura la tua capacità nel combattimento, con armi o senza, più sei competente e più saranno veloci, forti e precisi i tuoi colpi e sarà più difficile per il tuo avversario difendersi. Inoltre le tue armi si rovineranno di meno durante il combattimento.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_axe_desc0</Cell>
+<Cell>Axe skill makes you more proficient with axes, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>La Maestria di Ascia ti permette di usare con maggiore competenza le asce, aumentando la potenza dei tuoi colpi.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_mace_desc0</Cell>
+<Cell>Mace skill makes you more proficient with maces, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>La Maestria di Mazza ti permette di usare con maggiore competenza le mazze, aumentando la potenza dei tuoi colpi.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_large_desc0</Cell>
+<Cell>Long weapon skill makes you more proficient with long weapons, like halberds, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>La Maestria con le Armi Lunghe ti rende più competente nell'uso di armi lunghe, come per esempio le alabarde, aumentando la potenza dei colpi.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_bow_desc0</Cell>
+<Cell>Bow skill makes you more proficient with bows and arrows, increasing the power of your attacks. Until you reach level 5, you are unable to hold the bow correctly and when firing, the string will flay your forearm, causing injury, unless you are wearing a vambrace or other armguard, in which case firing will only drain Stamina.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>La Maestria con l'Arco ti rende più competente nell'uso di archi e frecce di vario tipo, aumentando il danno inflitto da ogni colpo. Fino al livello 5, non sei capace di tenere l'arco in modo corretto, quindi quando tiri una freccia, la corda ferirà il tuo avambraccio, causando una ferita, a meno che tu non stia usando una protezione per le braccia, in questo caso consumerai solo un po' di stamina.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_unarmed_desc0</Cell>
+<Cell>Unarmed Combat skill makes you more proficient when fighting with your fists, increasing the damage you make.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>La Maestria nel Corpo a Corpo ti rende più competente nelle risse, aumentando il danno inflitto dai tuoi pugni.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nuovi talenti si sbloccano ai livelli: 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
 </Table>

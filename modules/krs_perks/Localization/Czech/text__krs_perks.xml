@@ -20,4 +20,614 @@
 <Row>
 <Cell>perk_ex_ripo_text_sword</Cell><Cell>Master Strike</Cell><Cell>Master Strike</Cell>
 </Row>
+<Row>
+<Cell>perk_featherweight_2_desc</Cell>
+<Cell>Falling will cause you 50% less injury.</Cell>
+<Cell>Pád ti způsobí o 50% menší poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_2_name</Cell>
+<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_desc</Cell>
+<Cell>Falling will cause you 75% less injury.</Cell>
+<Cell>Pád ti způsobí o 75% menší poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_name</Cell>
+<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>Při útoku se zbraňemi vztahujícími se na obratnost budou tvoje útoky brát o 5% staminy méně.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_name</Cell>
+<Cell>Fighting Stance I</Cell>
+<Cell>Bojový postoj I</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>Při útoku se zbraňemi vztahujícími se na obratnost budou tvoje útoky brát o 7.5% staminy méně.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_name</Cell>
+<Cell>Fighting Stance II</Cell>
+<Cell>Bojový postoj II</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>Při útoku se zbraňemi vztahujícími se na obratnost budou tvoje útoky brát o 10% staminy méně.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_name</Cell>
+<Cell>Fighting Stance III</Cell>
+<Cell>Bojový postoj III</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_desc</Cell>
+<Cell>Increases your Speech level by +3 in the countryside. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Townsman perk simultaneously.</Cell>
+<Cell>Zvyšuje tvoji výřečnost na venkově o 3. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nemůžeš kombinovat s perkem Měšťák.</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_name</Cell>
+<Cell>Yokel</Cell>
+<Cell>Křupan</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_desc</Cell>
+<Cell>Increases your Speech level by +3 in towns and villages. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Yokel perk simultaneously.</Cell>
+<Cell>Zvyšuje tvoji výřečnost ve městech a vesnicích o 3. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nemůžeš kombinovat s perkem Křupan..</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_name</Cell>
+<Cell>Townsman</Cell>
+<Cell>Měšťák</Cell>
+</Row>
+<Row>
+<Cell>perk_film_grip_name</Cell>
+<Cell>Firm Grip I</Cell>
+<Cell>Pevná ruka I</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 20% more stamina.</Cell>
+<Cell>Blokování tvých úderů ubírá protivníkovi o 20% více staminy.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_name</Cell>
+<Cell>Firm Grip II</Cell>
+<Cell>Pevná ruka II</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 25% more stamina.</Cell>
+<Cell>Blokování tvých úderů ubírá protivníkovi o 25% více staminy.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_name</Cell>
+<Cell>Firm Grip III</Cell>
+<Cell>Pevná ruka III</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_desc</Cell>
+<Cell>If you've got enough fragrant herbs in your inventory, you have 15% higher chance of overpowering your opponent in a clinch.</Cell>
+<Cell>Když u sebe máš dostatek voňavých bylin, máš o 15% větší šanci na přemožení nepřítele při zaklesnutí.</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_name</Cell>
+<Cell>Sweet Scent</Cell>
+<Cell>Sladká vůně</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_desc</Cell>
+<Cell>Your armour provides 5% more protection overall.</Cell>
+<Cell>Tvoje brnění poskytuje o 5% více celkové obrany.</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_name</Cell>
+<Cell>Turtle Skin</Cell>
+<Cell>Želví kůže</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_desc</Cell>
+<Cell>During the night your stamina regenerates 15% faster, however during the day it regenerates 15% slower.</Cell>
+<Cell>V noci se tvá stamina regeneruje o 15% rychleji, ale ve dne o 15% pomaleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_name</Cell>
+<Cell>One with the Shadows</Cell>
+<Cell>Ve stínech</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_desc</Cell>
+<Cell>You are an unstoppable force! Whilst in combat you move 10% quicker and your enemies are more likely to flee. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Immovable Object perk simultaneously.</Cell>
+<Cell>Jsi nezastavitelný! V boji se pohybuješ o 10% rychleji a zvyšuje se šance, že tvoji nepřátelé z boje prchnou. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nemůžeš kombinovat s perkem Nehybný.</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_name</Cell>
+<Cell>Unstoppable Force</Cell>
+<Cell>Nezastavitelný</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_desc</Cell>
+<Cell>You are an immovable object! Whilst in combat your armour is 10% more effective, but you move 20% slower. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Unstoppable Force perk simultaneously.</Cell>
+<Cell>Jsi neústupný! V boji je tvé brnění o 10% efektivnější, ale pohybuješ se o 20% pomaleji. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nemůžeš kombinovat s perkem Nezastavitelný.</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_name</Cell>
+<Cell>Immovable Object</Cell>
+<Cell>Neústupný</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_desc</Cell>
+<Cell>Whilst in combat your Strength and Agility increases by 2.</Cell>
+<Cell>V boji se tvá síla a obratnost zvětšuje o 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_name</Cell>
+<Cell>Tactician</Cell>
+<Cell>Taktik</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_desc</Cell>
+<Cell>Whilst in a forest, your Strength increases by 2.</Cell>
+<Cell>V lese se tvá síla zvětšuje o 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_name</Cell>
+<Cell>Lumberjack</Cell>
+<Cell>Dřevorubec</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_desc</Cell>
+<Cell>Upon reaching low health, you will enter a frenzied state, making enemies more likely to flee.</Cell>
+<Cell>Jakmile ti zdraví klesne k minimu, rozzuříš se. Tím se zvyšuje šance, že tvoji nepřátelé z boje prchnou.</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_name</Cell>
+<Cell>Berserker</Cell>
+<Cell>Berserk</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_desc</Cell>
+<Cell>In combat against women, you deal 10%  more damage.</Cell>
+<Cell>V boji proti ženám způsobuješ o 10% více poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_name</Cell>
+<Cell>Axe Murderer</Cell>
+<Cell>Vrah se sekerou</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_desc</Cell>
+<Cell>Whilst in combat you run 25% faster.</Cell>
+<Cell>V boji běžíš o 25% rychleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_name</Cell>
+<Cell>Feral</Cell>
+<Cell>Divoký</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_desc</Cell>
+<Cell>Whilst in combat you take 5% less damage.</Cell>
+<Cell>V boji ti je způsobováno o 5% menší poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_name</Cell>
+<Cell>Relentless I</Cell>
+<Cell>Nemilosrdný I</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_desc</Cell>
+<Cell>Whilst in combat you take 7.5% less damage.</Cell>
+<Cell>V boji ti je způsobováno o 7.5% menší poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_name</Cell>
+<Cell>Relentless II</Cell>
+<Cell>Nemilosrdný II</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_desc</Cell>
+<Cell>Whilst in combat you take 10% less damage.</Cell>
+<Cell>V boji ti je způsobováno o 10% menší poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_name</Cell>
+<Cell>Relentless III</Cell>
+<Cell>Nemilosrdný III</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 2.5% more damage.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní způsobuješ o 2.5% více poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_name</Cell>
+<Cell>Brute I</Cell>
+<Cell>Surovec I</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní způsobuješ o 5% více poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_name</Cell>
+<Cell>Brute II</Cell>
+<Cell>Surovec II</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your opponent is more likely to flee.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní se zvyšuje šance, že tvůj nepřítel prchne.</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_name</Cell>
+<Cell>Smash and Bash</Cell>
+<Cell>Třískat a tlouct</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage to your opponent's equipment.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní způsobuješ o 5% více poškození do brnění nepřítele.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_name</Cell>
+<Cell>Shattering Blows I</Cell>
+<Cell>Zničující údery I</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 10% more damage to your opponent's equipment.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní způsobuješ o 5% více poškození do brnění nepřítele.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_name</Cell>
+<Cell>Shattering Blows II</Cell>
+<Cell>Zničující údery II</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 5% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní máš o 5% větší šanci na zneschopnění nepřítele úderem do hlavy.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_name</Cell>
+<Cell>Headcrusher I</Cell>
+<Cell>Louskáček I</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 10% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>Při používání drtivých nebo jiných silových zbraní máš o 10% větší šanci na omráčení nepřítele úderem do hlavy.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_name</Cell>
+<Cell>Headcrusher II</Cell>
+<Cell>Louskáček II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>Při používání dřevcových nebo jiných silových zbraní tvé útoky vyžadují o 5% méně staminy.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_name</Cell>
+<Cell>Hypertrophy I</Cell>
+<Cell>Hypertrofie I</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>Při používání dřevcových nebo jiných silových zbraní tvé útoky vyžadují o 7.5% méně staminy.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_name</Cell>
+<Cell>Hypertrophy II</Cell>
+<Cell>Hypertrofie II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>Při používání dřevcových nebo jiných silových zbraní tvé útoky vyžadují o 10% méně staminy.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_name</Cell>
+<Cell>Hypertrophy III</Cell>
+<Cell>Hypertrofie III</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_desc</Cell>
+<Cell>Whilst in combat you deal 5% more damage to enemy equipment.</Cell>
+<Cell>V boji způsobuješ o 5% více poškození do výbavy nepřítele.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_name</Cell>
+<Cell>Regimental Training I</Cell>
+<Cell>Výcvik pluku I</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_desc</Cell>
+<Cell>Whilst in combat you deal 10% more damage to enemy equipment.</Cell>
+<Cell>V boji způsobuješ o 10% více poškození do výbavy nepřítele.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_name</Cell>
+<Cell>Regimental Training II</Cell>
+<Cell>Výcvik pluku II</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_desc</Cell>
+<Cell>Whilst in combat you deal 15% more damage to enemy equipment.</Cell>
+<Cell>V boji způsobuješ o 15% více poškození do výbavy nepřítele.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_name</Cell>
+<Cell>Regimental Training III</Cell>
+<Cell>Výcvik pluku III</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_desc</Cell>
+<Cell>Whilst in combat against Cumans you deal 5% more damage.</Cell>
+<Cell>V boji proti Kumánům způsobuješ o 5% více poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_name</Cell>
+<Cell>Scourge of the Cumans</Cell>
+<Cell>Postrach Kumánů</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_desc</Cell>
+<Cell>When outnumbered heavily you will swing your weapon up to twice as fast.</Cell>
+<Cell>V boji proti velké přesile se zbraní oháníš až dvakrát rychleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_name</Cell>
+<Cell>Fury Swipes</Cell>
+<Cell>Zuřivé výpady</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_desc</Cell>
+<Cell>Once your opponent has started bleeding, the chances of making them bleed elsewhere are 10% higher.</Cell>
+<Cell>Když tvůj nepřítel začne krvácet, šance na způsobení dalšího krvácení se zvyšuje o 10%.</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_name</Cell>
+<Cell>Bloodied Strikes</Cell>
+<Cell>Zakrvácené údery</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your weapon swings are 10% faster.</Cell>
+<Cell>Při používání dřevcových nebo jiných silových zbraní se oháníš o 10% rychleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_name</Cell>
+<Cell>Armstrong</Cell>
+<Cell>Silná paže</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_1</Cell>
+<Cell>Your shooting is 5% more accurate.</Cell>
+<Cell>Tvoje střelba je o 5% přesnější.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_1</Cell>
+<Cell>Steady Shot I</Cell>
+<Cell>Pevný úchop I</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_2</Cell>
+<Cell>Your shooting is 7.5% more accurate.</Cell>
+<Cell>Tvoje střelba je o 7.5% přesnější.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_2</Cell>
+<Cell>Steady Shot II</Cell>
+<Cell>Pevný úchop II</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_3</Cell>
+<Cell>Your shooting is 10% more accurate.</Cell>
+<Cell>Tvoje střelba je o 10% přesnější.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_3</Cell>
+<Cell>Steady Shot III</Cell>
+<Cell>Pevný úchop III</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_desc</Cell>
+<Cell>You are 5% more likely to knock out enemies when targeting the head.</Cell>
+<Cell>O 5% se ti zvyšuje šance na omráčení nepřítele při míření na hlavu.</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_name</Cell>
+<Cell>Headhunter</Cell>
+<Cell>Lovec hlav</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_desc</Cell>
+<Cell>You are 20% more likely to cause bleeding. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Poisoner perk simultaneously.</Cell>
+<Cell>Máš o 20% větší šanci, že tvůj nepřítel začne krvácet. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nemůžeš kombinovat s perkem Travič.</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_name</Cell>
+<Cell>Serration</Cell>
+<Cell>Zoubkování</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_desc</Cell>
+<Cell>You are 20% more likely to poison your enemy. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Serration perk simultaneously.</Cell>
+<Cell>Máš o 20% větší šanci, že svého nepřítele otrávíš. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nemůžeš kombinovat s perkem Zoubkování.</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_name</Cell>
+<Cell>Poisoner</Cell>
+<Cell>Travič</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_desc</Cell>
+<Cell>Your maximum stamina is increased by 10%.</Cell>
+<Cell>Tvoje maximální stamina je zvýšena o 10%.</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_name</Cell>
+<Cell>Proficiency</Cell>
+<Cell>Znalost svého oboru</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_desc</Cell>
+<Cell>You are 50% quieter whilst in forests.</Cell>
+<Cell>V lesech jsi o 50% tišší.</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_name</Cell>
+<Cell>Lone Hunter</Cell>
+<Cell>Lovec samotář</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_desc</Cell>
+<Cell>After killing the first enemy in an encounter, you gain 5% more damage for the rest of the encounter.</Cell>
+<Cell>Po zabití prvního nepřítele v boji získáváš o 5% větší poškození až do konce boje.</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_name</Cell>
+<Cell>Hawkish</Cell>
+<Cell>Krvelačný</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_desc</Cell>
+<Cell>You can easily overcome wounds. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Strikes will wound you 5% less.</Cell>
+<Cell>Snáze překonáváš zranění. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Údery tě zraňují o 5% méně.</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_name</Cell>
+<Cell>Martial Artist</Cell>
+<Cell>Bojový umělec</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_desc</Cell>
+<Cell>You can sprint 20% faster, and run 10% faster at all times.</Cell>
+<Cell>Můžeš o 20% rychleji sprintovat a za všech okolností běžet o 10% rychleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_name</Cell>
+<Cell>Physical Fitness</Cell>
+<Cell>Fyzická zdatnost</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_desc</Cell>
+<Cell>You deal 5% more damage in combat.</Cell>
+<Cell>V boji způsobuješ o 5% větší poškození.</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_name</Cell>
+<Cell>Hard Hitter</Cell>
+<Cell>Ocelová pěst</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_desc</Cell>
+<Cell>Whilst drunk, you are 25% more likely to dodge enemy attacks.</Cell>
+<Cell>Když se opiješ, je pro tebe vyhýbání útokům o 25% snazší. Technika boje známá také pod názvem "Opilý box".</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_name</Cell>
+<Cell>Drunken Brawler</Cell>
+<Cell>Opilý rváč</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_desc</Cell>
+<Cell>Your brawling experience means you bleed out much slower.</Cell>
+<Cell>Z rvaček si neodnášíš jen modřiny, ale i zkušenosti. Krvácíš o dost pomaleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_name</Cell>
+<Cell>Diehard</Cell>
+<Cell>Tvrdohlavec</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_desc</Cell>
+<Cell>You are 15% more effective at winning clinchs.</Cell>
+<Cell>Jsi o 15% efektivnější ve vyhrávání zaklesnutí.</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_name</Cell>
+<Cell>Wrestler</Cell>
+<Cell>Zápasník</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_desc</Cell>
+<Cell>You cause 5% greater damage to your opponent's armour and equipment.</Cell>
+<Cell>Způsobuješ o 5% větší poškození do brnění a výstroje nepřítele.</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_name</Cell>
+<Cell>Street Fighter</Cell>
+<Cell>Pouliční rváč</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_desc</Cell>
+<Cell>You regenerate your stamina 5% quicker.</Cell>
+<Cell>Stamina se ti obnovuje o 5% rychleji.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_name</Cell>
+<Cell>Fighting Spirit</Cell>
+<Cell>Bojový duch</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_agility_desc</Cell>
+<Cell>Agility is a measure of speed, movement and nimbleness. An agile character not only moves faster, but is also better at evading strikes, can skilfully wield more sophisticated weapons, such as sabres, and is more skilled at archery. Archery in turn will also increase agility. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Agility perk points at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Obratnost je měřítko rychlosti, mrštnosti a schopnosti pohybu obecně. Obratnější postava se nejen rychleji hýbe, ale také lépe uhýbá útokům, šikovněji manipuluje s náročnějšími zbraněmi, jako jsou šavle, a lépe střílí z luku. Obratnost se cvičí bojem a lukostřelbou.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Perkové body k Obratnosti získáváš na úrovních: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_speech_desc</Cell>
+<Cell>Speech gauges the character's ability to talk his way out of situations. It is improved by talking to people and successful persuasions. As a result, a good speaker can settle many conflicts before they even arise, haggle better or disconcert a foe he wouldn't be able to overcome in combat.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Speech perk points at levels: 4, 7, 10, 14, 17, 20.</Cell>
+<Cell>Výřečnost měří schopnost postavy vymluvit se z problémů. Zlepšuje se mluvením a úspěchy při přesvědčování. V důsledku pak dobrý řečník může mnoho konfliktů zažehnat ještě dřív, než vypuknou, může lépe smlouvat o cenách nebo zmást toho, koho by v boji neporazil.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Perkové body k Výřečnosti získáváš na úrovních: 4, 7, 10, 14, 17, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_defense_desc0</Cell>
+<Cell>Increases the time you can hold a perfect block or dodge as well as increasing the defence stat of weapons and shields.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>Zvyšuje dobu, po kterou můžeš provést perfektní kryt a vyhnutí a zároveň zvyšuje obranu u zbraní a štítů.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_fencing_desc0</Cell>
+<Cell>Total fighting skill with weapons or unarmed. The more skilful a warrior you are, the faster your attacks are and the harder it is for an opponent to defend against them. Also, your weapons will be less damaged by attacking and defending.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>Celková schopnost boje se všemi zbraněmi i boje beze zbraně. Čím zdatnější bojovník jsi, tím jsou tvé útoky pro protivníka rychlejší a hůře se mu vykrývají. Současně se ti při obraně a útoku méně poškozují zbraně.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_axe_desc0</Cell>
+<Cell>Axe skill makes you more proficient with axes, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Zlepšuje tvé bojové schopnosti se sekerami a zvyšuje sílu útoku touto zbraní.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_mace_desc0</Cell>
+<Cell>Mace skill makes you more proficient with maces, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Zlepšuje tvé bojové schopnosti s palcáty a dalšími drtivými zbraněmi a zvyšuje sílu útoku těmito zbraněmi.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_large_desc0</Cell>
+<Cell>Long weapon skill makes you more proficient with long weapons, like halberds, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Zlepšuje tvé bojové schopnosti s dřevcovými zbraněmi, jako jsou halapartny a sudlice, a zvyšuje sílu útoku těmito zbraněmi.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_bow_desc0</Cell>
+<Cell>Bow skill makes you more proficient with bows and arrows, increasing the power of your attacks. Until you reach level 5, you are unable to hold the bow correctly and when firing, the string will flay your forearm, causing injury, unless you are wearing a vambrace or other armguard, in which case firing will only drain Stamina.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>Zlepšuje tvé střelecké dovednosti s lukem a zvyšuje sílu útoku touto zbraní. Do páté úrovně neumíš luk ani správně držet a při střelbě se tětivou šleháš do předloktí, což tě zraňuje. S nátepníkem je to pouze vyčerpávající.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_unarmed_desc0</Cell>
+<Cell>Unarmed Combat skill makes you more proficient when fighting with your fists, increasing the damage you make.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>Boj beze zbraně zlepšuje tvé dovednosti při pěstním souboji a zvyšuje poškození působené tvými údery.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Nové perkové body získáváš na úrovních: 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
 </Table>

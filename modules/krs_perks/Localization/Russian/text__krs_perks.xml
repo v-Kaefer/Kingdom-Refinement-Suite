@@ -20,4 +20,614 @@
 <Row>
 <Cell>perk_ex_ripo_text_sword</Cell><Cell>Master Strike</Cell><Cell>Мастерский Удар</Cell>
 </Row>
+<Row>
+<Cell>perk_featherweight_2_desc</Cell>
+<Cell>Falling will cause you 50% less injury.</Cell>
+<Cell>Ты получаешь на 50% меньше урона от падения.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_2_name</Cell>
+<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_desc</Cell>
+<Cell>Falling will cause you 75% less injury.</Cell>
+<Cell>Ты получаешь на 75% меньше урона от падения.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_name</Cell>
+<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>Вы ловко управляетесь с оружием, ваши атаки затрачивают на 5% меньше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_name</Cell>
+<Cell>Fighting Stance I</Cell>
+<Cell>Боевая стойка I</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>Вы ловко управляетесь с оружием, ваши атаки затрачивают на 7.5% меньше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_name</Cell>
+<Cell>Fighting Stance II</Cell>
+<Cell>Боевая стойка II</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_desc</Cell>
+<Cell>Whilst agility weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>Вы ловко управляетесь с оружием, ваши атаки затрачивают на 10% меньше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_name</Cell>
+<Cell>Fighting Stance III</Cell>
+<Cell>Боевая стойка III</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_desc</Cell>
+<Cell>Increases your Speech level by +3 in the countryside. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Townsman perk simultaneously.</Cell>
+<Cell>Повышает уровень красноречия на +3 в сельской местности. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Не сочетается с умением "Горожанин".</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_name</Cell>
+<Cell>Yokel</Cell>
+<Cell>Селянин</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_desc</Cell>
+<Cell>Increases your Speech level by +3 in towns and villages. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Yokel perk simultaneously.</Cell>
+<Cell>Повышает уровень красноречия на +3 в городах и деревнях. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Не сочетается с умением "Селянин".</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_name</Cell>
+<Cell>Townsman</Cell>
+<Cell>Горожанин</Cell>
+</Row>
+<Row>
+<Cell>perk_film_grip_name</Cell>
+<Cell>Firm Grip I</Cell>
+<Cell>Крепкая рука I</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 20% more stamina.</Cell>
+<Cell>Для блокирования вашего удара противник использует на 20% больше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_name</Cell>
+<Cell>Firm Grip II</Cell>
+<Cell>Крепкая рука II</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_desc</Cell>
+<Cell>Blocking your strikes will cost an opponent 25% more stamina.</Cell>
+<Cell>Для блокирования вашего удара противник использует на 25% больше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_name</Cell>
+<Cell>Firm Grip III</Cell>
+<Cell>Крепкая рука III</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_desc</Cell>
+<Cell>If you've got enough fragrant herbs in your inventory, you have 15% higher chance of overpowering your opponent in a clinch.</Cell>
+<Cell>Если в вашем инвентаре достаточно ароматных трав, у вас на 15% больше шансов одолеть противника в клинче.</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_name</Cell>
+<Cell>Sweet Scent</Cell>
+<Cell>Сладкий аромат</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_desc</Cell>
+<Cell>Your armour provides 5% more protection overall.</Cell>
+<Cell>Ваша броня защищает вас на 5% лучше.</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_name</Cell>
+<Cell>Turtle Skin</Cell>
+<Cell>Черепашья кожа</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_desc</Cell>
+<Cell>During the night your stamina regenerates 15% faster, however during the day it regenerates 15% slower.</Cell>
+<Cell>Ночью ваша выносливость восстанавливается на 15% быстрее, однако днем она восстанавливается на 15% медленнее.</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_name</Cell>
+<Cell>One with the Shadows</Cell>
+<Cell>Один среди теней</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_desc</Cell>
+<Cell>You are an unstoppable force! Whilst in combat you move 10% quicker and your enemies are more likely to flee. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Immovable Object perk simultaneously.</Cell>
+<Cell>Вы неостанавливаемая сила! Пока вы в бою, вы двигаетесь на 10% быстрее, и ваши враги с большей вероятностью обратятся в бегство. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Не сочетается с умением "Недвижимый объект".</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_name</Cell>
+<Cell>Unstoppable Force</Cell>
+<Cell>Неостанавливаемая сила</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_desc</Cell>
+<Cell>You are an immovable object! Whilst in combat your armour is 10% more effective, but you move 20% slower. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You can't have the Unstoppable Force perk simultaneously.</Cell>
+<Cell>Вы недвижимый объект, в бою ваша броня на 10% эффективнее, но двигаетесь вы на 20% медленнее. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Не сочетается с перком "Неостановимая сила".</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_name</Cell>
+<Cell>Immovable Object</Cell>
+<Cell>Недвижимый объект</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_desc</Cell>
+<Cell>Whilst in combat your Strength and Agility increases by 2.</Cell>
+<Cell>Во время боя ваша сила и ловкость увеличивается на 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_name</Cell>
+<Cell>Tactician</Cell>
+<Cell>Тактик</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_desc</Cell>
+<Cell>Whilst in a forest, your Strength increases by 2.</Cell>
+<Cell>В лесу ваша сила увеличивается на 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_name</Cell>
+<Cell>Lumberjack</Cell>
+<Cell>Лесоруб</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_desc</Cell>
+<Cell>Upon reaching low health, you will enter a frenzied state, making enemies more likely to flee.</Cell>
+<Cell>Когда ваше здороаье достигает крайне низкого значения, вы превращаетесь в берсерка, что увеличивает шанс обратить вашего противника в бегство.</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_name</Cell>
+<Cell>Berserker</Cell>
+<Cell>Берсеркер</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_desc</Cell>
+<Cell>In combat against women, you deal 10%  more damage.</Cell>
+<Cell>В бою с женщинами вы наносите на 10% больше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_name</Cell>
+<Cell>Axe Murderer</Cell>
+<Cell>Убийца топора</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_desc</Cell>
+<Cell>Whilst in combat you run 25% faster.</Cell>
+<Cell>Находясь в бою, вы бежите на 25% быстрее.</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_name</Cell>
+<Cell>Feral</Cell>
+<Cell>Одичавший</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_desc</Cell>
+<Cell>Whilst in combat you take 5% less damage.</Cell>
+<Cell>В бою вы получаете на 5% меньше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_name</Cell>
+<Cell>Relentless I</Cell>
+<Cell>Неослабевающий I</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_desc</Cell>
+<Cell>Whilst in combat you take 7.5% less damage.</Cell>
+<Cell>В бою вы получаете на 7.5% меньше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_name</Cell>
+<Cell>Relentless II</Cell>
+<Cell>Неослабевающий II</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_desc</Cell>
+<Cell>Whilst in combat you take 10% less damage.</Cell>
+<Cell>В бою вы получаете на 10% меньше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_name</Cell>
+<Cell>Relentless III</Cell>
+<Cell>Неослабевающий III</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 2.5% more damage.</Cell>
+<Cell>Используя булаву, или любое другое оружие требующее для обращения грубой силы, вы наносите на 2.5% больше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_name</Cell>
+<Cell>Brute I</Cell>
+<Cell>Грубиян I</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage.</Cell>
+<Cell>Используя булаву, или любое другое оружие требующее для обращения грубой силы, вы наносите на 5% больше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_name</Cell>
+<Cell>Brute II</Cell>
+<Cell>Грубиян II</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your opponent is more likely to flee.</Cell>
+<Cell>При использовании булав или другого силового оружия ваш противник с большей вероятностью сбежит.</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_name</Cell>
+<Cell>Smash and Bash</Cell>
+<Cell>Круши-ломай</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 5% more damage to your opponent's equipment.</Cell>
+<Cell>Используя булаву, или любое другое оружие требующее для обращения грубой силы, вы наносите на 5% больше урона экипировке противника.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_name</Cell>
+<Cell>Shattering Blows I</Cell>
+<Cell>Сокрушительные удары I</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, you deal 10% more damage to your opponent's equipment.</Cell>
+<Cell>Используя булаву, или любое другое оружие требующее для обращения грубой силы, вы наносите на 10% больше урона экипировке противника.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_name</Cell>
+<Cell>Shattering Blows II</Cell>
+<Cell>Сокрушительные удары II</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 5% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>При использовании булавы или другого оружия требующего для обращения грубой силы, у тебя на 5% больше шансов вывести противника из строя ударом в голову.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_name</Cell>
+<Cell>Headcrusher I</Cell>
+<Cell>Крушитель черепов I</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_desc</Cell>
+<Cell>Whilst using maces or other strength weapons, your have a 10% higher chance to incapacitate an opponent with a headshot.</Cell>
+<Cell>При использовании булавы или другого оружия требующего для обращения грубой силы, у тебя на 10% больше шансов вывести противника из строя ударом в голову.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_name</Cell>
+<Cell>Headcrusher II</Cell>
+<Cell>Крушитель черепов II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 5% less stamina.</Cell>
+<Cell>При использовании древкового оружия, ваши атаки затрачивают на 5% меньше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_name</Cell>
+<Cell>Hypertrophy I</Cell>
+<Cell>Гипертрофия I</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 7.5% less stamina.</Cell>
+<Cell>При использовании древкового оружия, ваши атаки затрачивают на 7.5% меньше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_name</Cell>
+<Cell>Hypertrophy II</Cell>
+<Cell>Гипертрофия II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your attacks will demand 10% less stamina.</Cell>
+<Cell>При использовании древкового оружия, ваши атаки затрачивают на 10% меньше выносливости.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_name</Cell>
+<Cell>Hypertrophy III</Cell>
+<Cell>Гипертрофия III</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_desc</Cell>
+<Cell>Whilst in combat you deal 5% more damage to enemy equipment.</Cell>
+<Cell>В бою вы наносите на 5% больше урона вражеской экипировке.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_name</Cell>
+<Cell>Regimental Training I</Cell>
+<Cell>Боевое обучение I</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_desc</Cell>
+<Cell>Whilst in combat you deal 10% more damage to enemy equipment.</Cell>
+<Cell>В бою вы наносите на 10% больше урона вражеской экипировке.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_name</Cell>
+<Cell>Regimental Training II</Cell>
+<Cell>Боевое обучение II</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_desc</Cell>
+<Cell>Whilst in combat you deal 15% more damage to enemy equipment.</Cell>
+<Cell>В бою вы наносите на 15% больше урона вражеской экипировке.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_name</Cell>
+<Cell>Regimental Training III</Cell>
+<Cell>Боевое обучение III</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_desc</Cell>
+<Cell>Whilst in combat against Cumans you deal 5% more damage.</Cell>
+<Cell>Сражаясь с половцами, вы наносите на 5% больше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_name</Cell>
+<Cell>Scourge of the Cumans</Cell>
+<Cell>Бич половцев</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_desc</Cell>
+<Cell>When outnumbered heavily you will swing your weapon up to twice as fast.</Cell>
+<Cell>Когда вы в меньшинстве, вы размахиваете мечов в два раза быстрее.</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_name</Cell>
+<Cell>Fury Swipes</Cell>
+<Cell>Яростный размах</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_desc</Cell>
+<Cell>Once your opponent has started bleeding, the chances of making them bleed elsewhere are 10% higher.</Cell>
+<Cell>Как только у вашего противника началось кровотечение, шансы заставить его кровоточить в другом месте на 10% выше.</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_name</Cell>
+<Cell>Bloodied Strikes</Cell>
+<Cell>Кровавые удары</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_desc</Cell>
+<Cell>Whilst using polearms or other strength weapons, your weapon swings are 10% faster.</Cell>
+<Cell>Когда вы используете древковое или другое силовое оружие, ваши удары оружия становятся на 10% быстрее.</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_name</Cell>
+<Cell>Armstrong</Cell>
+<Cell>Армстронг</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_1</Cell>
+<Cell>Your shooting is 5% more accurate.</Cell>
+<Cell>Ваши выстрелы на 5% точнее.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_1</Cell>
+<Cell>Steady Shot I</Cell>
+<Cell>Точная стрельба I</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_2</Cell>
+<Cell>Your shooting is 7.5% more accurate.</Cell>
+<Cell>Ваши выстрелы на 7.5% точнее.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_2</Cell>
+<Cell>Steady Shot II</Cell>
+<Cell>Точная стрельба II</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_3</Cell>
+<Cell>Your shooting is 10% more accurate.</Cell>
+<Cell>Ваши выстрелы на 10% точнее.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_3</Cell>
+<Cell>Steady Shot III</Cell>
+<Cell>Точная стрельба III</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_desc</Cell>
+<Cell>You are 5% more likely to knock out enemies when targeting the head.</Cell>
+<Cell>Шанс ошеломить противника выстрелом в голову повышается на 5%.</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_name</Cell>
+<Cell>Headhunter</Cell>
+<Cell>Охотник за головами</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_desc</Cell>
+<Cell>You are 20% more likely to cause bleeding. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Poisoner perk simultaneously.</Cell>
+<Cell>Шанс вызвать кровотечение повышается на 20%. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Не сочетается с умением "Отравитель".</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_name</Cell>
+<Cell>Serration</Cell>
+<Cell>Зазубренность</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_desc</Cell>
+<Cell>You are 20% more likely to poison your enemy. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; You can't have the Serration perk simultaneously.</Cell>
+<Cell>Шанс отравить противника повышается на 20%. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Не сочетается с умением "Зазубренность".</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_name</Cell>
+<Cell>Poisoner</Cell>
+<Cell>Отравитель</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_desc</Cell>
+<Cell>Your maximum stamina is increased by 10%.</Cell>
+<Cell>Максимальный запас выносливости увеличен на 10%.</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_name</Cell>
+<Cell>Proficiency</Cell>
+<Cell>Cноровка</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_desc</Cell>
+<Cell>You are 50% quieter whilst in forests.</Cell>
+<Cell>Находясь в лесу, вы становитесь на 50% тише.</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_name</Cell>
+<Cell>Lone Hunter</Cell>
+<Cell>Одинокий Охотник</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_desc</Cell>
+<Cell>After killing the first enemy in an encounter, you gain 5% more damage for the rest of the encounter.</Cell>
+<Cell>После убийства первого противника в бою, вы наносите на 5% больше урона до конца боя.</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_name</Cell>
+<Cell>Hawkish</Cell>
+<Cell>Ястреб</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_desc</Cell>
+<Cell>You can easily overcome wounds. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Strikes will wound you 5% less.</Cell>
+<Cell>Вам легче переносить ранения. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Удары наносят вам на 5% меньше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_name</Cell>
+<Cell>Martial Artist</Cell>
+<Cell>Мастер боевых искусств</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_desc</Cell>
+<Cell>You can sprint 20% faster, and run 10% faster at all times.</Cell>
+<Cell>Скорость спринта повышается на 20%, а скорость бега - на 10%.</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_name</Cell>
+<Cell>Physical Fitness</Cell>
+<Cell>Физическая подготовка</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_desc</Cell>
+<Cell>You deal 5% more damage in combat.</Cell>
+<Cell>В бою вы наносите на 5% больше урона.</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_name</Cell>
+<Cell>Hard Hitter</Cell>
+<Cell>Тяжеловес</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_desc</Cell>
+<Cell>Whilst drunk, you are 25% more likely to dodge enemy attacks.</Cell>
+<Cell>Пока вы пьяны, вы на 25% лучше уклоняетесь от ударов.</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_name</Cell>
+<Cell>Drunken Brawler</Cell>
+<Cell>Пьяный боец</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_desc</Cell>
+<Cell>Your brawling experience means you bleed out much slower.</Cell>
+<Cell>Благодаря опыту бойца, вы меньше истекаете кровью.</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_name</Cell>
+<Cell>Diehard</Cell>
+<Cell>Живучий</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_desc</Cell>
+<Cell>You are 15% more effective at winning clinchs.</Cell>
+<Cell>Вы на 15% эффективнее выигрываете клинчи.</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_name</Cell>
+<Cell>Wrestler</Cell>
+<Cell>Борец</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_desc</Cell>
+<Cell>You cause 5% greater damage to your opponent's armour and equipment.</Cell>
+<Cell>Вы наносите на 5% больший урон броне и экипировке вашего противника.</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_name</Cell>
+<Cell>Street Fighter</Cell>
+<Cell>Уличный боец</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_desc</Cell>
+<Cell>You regenerate your stamina 5% quicker.</Cell>
+<Cell>Вы восстанавливаете свою выносливость на 5% быстрее.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_name</Cell>
+<Cell>Fighting Spirit</Cell>
+<Cell>Боевой дух</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_agility_desc</Cell>
+<Cell>Agility is a measure of speed, movement and nimbleness. An agile character not only moves faster, but is also better at evading strikes, can skilfully wield more sophisticated weapons, such as sabres, and is more skilled at archery. Archery in turn will also increase agility. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Agility perk points at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Ловкость - это мера скорости, подвижности и проворства. Ловкий персонаж не только быстрее передвигается, но также лучше избегает ударов, более умело сражается требовательным к навыкам оружием, таким как сабли, и хорошо стреляет из лука. В свою очередь, стрельба из лука, как и другие виды боя, также увеличивает ловкость.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_speech_desc</Cell>
+<Cell>Speech gauges the character's ability to talk his way out of situations. It is improved by talking to people and successful persuasions. As a result, a good speaker can settle many conflicts before they even arise, haggle better or disconcert a foe he wouldn't be able to overcome in combat.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;You get Speech perk points at levels: 4, 7, 10, 14, 17, 20.</Cell>
+<Cell>Красноречие влияет на способность персонажа обернуть ситуацию к своей выгоде с помощью беседы. Оно растет, когда персонажу удается уговаривать своих собеседников. В итоге хороший оратор способен утрясти множество конфликтов еще до их начала, лучше торговаться или  привести в замешательство врага так, что тот не сможет победить в бою.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 4, 7, 10, 14, 17, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_defense_desc0</Cell>
+<Cell>Increases the time you can hold a perfect block or dodge as well as increasing the defence stat of weapons and shields.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>Увеличивает время, в течение которого вы можете удерживать идеальный блок или уклоняться, а также увеличивает защитные характеристики оружия и щитов.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_fencing_desc0</Cell>
+<Cell>Total fighting skill with weapons or unarmed. The more skilful a warrior you are, the faster your attacks are and the harder it is for an opponent to defend against them. Also, your weapons will be less damaged by attacking and defending.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>Общий навык ведения боя с оружием или без. Чем лучше ваши боевые навыки, тем стремительней ваши атаки и тем сложнее врагам от них защититься. Также ваше оружие будет меньше повреждаться при нанесении ударов или их парировании.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_axe_desc0</Cell>
+<Cell>Axe skill makes you more proficient with axes, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Навык боя топором позволяет вам лучше сражаться топором, усиливая ваши атаки.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_mace_desc0</Cell>
+<Cell>Mace skill makes you more proficient with maces, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Навык боя булавой позволяет вам лучше сражаться булавой, усиливая ваши атаки.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_large_desc0</Cell>
+<Cell>Long weapon skill makes you more proficient with long weapons, like halberds, increasing the power of your attacks.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>Навык боя древковым оружием позволяет вам лучше сражаться древковым оружием, таким как алебарда, усиливая ваши атаки.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_bow_desc0</Cell>
+<Cell>Bow skill makes you more proficient with bows and arrows, increasing the power of your attacks. Until you reach level 5, you are unable to hold the bow correctly and when firing, the string will flay your forearm, causing injury, unless you are wearing a vambrace or other armguard, in which case firing will only drain Stamina.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>Навык стрельбы из лука позволяет вам эффективнее обращаться с луком и стрелами, усиливая ваши атаки. Пока вы не получите 5 уровень, вы не сможете правильно держать лук, и при стрельбе тетива будет бить по вашему предплечью, раня его, если вы не будете носить накладку или какую-то иную защиту. В последнем случае будет расходоваться лишь выносливость.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_unarmed_desc0</Cell>
+<Cell>Unarmed Combat skill makes you more proficient when fighting with your fists, increasing the damage you make.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>Навык боя без оружия позволяет вам лучше драться на кулаках, увеличивая наносимый вами урон.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Новые очки умений становятся доступными на уровнях 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
 </Table>

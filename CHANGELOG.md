@@ -5,6 +5,20 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-05: perk workbench, the review method, and the Perkaholic content merged into krs_perks
+
+No game run. Archives were opened read-only, with an extractor that refuses entries climbing out of the target folder.
+
+- **Workbench** `Mods WIP folder/Perks/perkaholic-riposte-workbench`: the 10 Perkaholic/Riposte/perk instances of `Installed_to_review` (85, 770, 1009 x2, 1375, 1563, 1569, 1629, 1765, 1990), originals in `_sources/`, opened copies in `extracted/`, data and page in `notes/`. Mod 770's five `../../../Data/Libs/Tables/rpg/*.tbl` entries were **blocked** at extraction; nothing was written outside the folder.
+- New `tools/analyze_perk_mods.py`, `tools/perk_balance.py`, `tools/perks_workbench_page.py`: read each instance against the vanilla tables, join every perk with the effect it grants, and build the review page (published as an Artifact, copy in `notes/perks-workbench.html`).
+- New `docs/mods-review/REVIEW_METHOD.md`: the method itself - workbench, full file inventory by type, manifest, the four per-file questions, row comparison, effect codes read from the vanilla buffs that use them (confirmed vs deduced), line-by-line harvesting, and the rule that balance is parked and never dropped in silence.
+- New `tools/build_krs_perks.py`: merges the harvested content into `modules/krs_perks` with every row carrying the complete vanilla column set. Written: 58 perk rows (56 new + the 2 Riposte rows already there), 58 buffs, 56 perk_buff, 17 perk_buff_override, 3 exclusivities, 1 skill row. `tools/check_patch_names.py`: 0 problems.
+- Balance applied as the author decided: `perk_heavy_swing` `wat*1.2` -> **`wat*1.07,wac*1.1`**; `perk_reading_Cushion` reverted to the game's value (row not shipped); "Featherweight" reverted to "Like a feather" with the ladder **0.75 -> 0.60 -> 0.45**; Townsman now requires Highborn and Yokel requires Lowborn (`parent_id`). Parked with `include=False`, not discarded: `perk_art_admirer_reward` (cha+1 -> cha+2) and `perk_against_all_odds` (interface only).
+- `Mods WIP folder/Reviewed_Mods/` created mirroring the structure of `Installed_to_review`, with `_reviewed.csv`. **1009 (folder copy)** and **1765** moved there as reviewed and discarded: the first because its six tables are byte-identical to the .rar, the second because `modules/krs_perks` already carries the same two rows, better packaged.
+- Findings worth keeping: the game marks **15 skills hidden** with their UI text already written (Shield, Long Weapon, Crossbow, Dagger, Smithing, Fishing, First Aid and others); **PTF cannot delete a row**, so removing a perk from NPCs has no patch form; `wac` is the attack cost/time and `mst` is maximum stamina (both were translated wrongly in the first pass); the 56 Perkaholic perk names are the author's own (none of their text keys exist among the game's 81,033) and **Serration** collides with a visible perk of the game.
+- **Measured in game by the author (5 Oct 2026):** with the Riposte perk un-hidden, both techniques work and the button pressed in the reaction window decides which: **block gives the Master Strike, attack gives an automatic Riposte**. The perk is the real riposte and coexists with the Master Strike instead of replacing it. This corrects a wrong inference in this review: the perk has zero `perk_buff` rows, and that was read as "no effect". Combat-behaviour perks (`Riposte`, `Hunt attack`, the `ripo_*` family) carry no buff because the engine reads the perk id in native code; the rule is now written in `REVIEW_METHOD.md`.
+- Decided with the author: 85, 770, 1375 and 1629 are out; the Riposte implementation stays the project's own; renaming the 56 perks, their descriptions, icons and UI order is deferred until the instance review ends.
+
 ## 2026-10-04 (seventh request): branch for the P1/P2 analysis, docs brought up to date
 
 No game run, no mod run.

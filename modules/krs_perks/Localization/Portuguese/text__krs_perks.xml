@@ -20,4 +20,614 @@
 <Row>
 <Cell>perk_ex_ripo_text_sword</Cell><Cell>Master Strike</Cell><Cell>Master Strike</Cell>
 </Row>
+<Row>
+<Cell>perk_featherweight_2_desc</Cell>
+<Cell>As quedas provocam 50% menos lesões.</Cell>
+<Cell>As quedas provocam 50% menos lesões.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_2_name</Cell>
+<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_desc</Cell>
+<Cell>As quedas provocam 75% menos lesões.</Cell>
+<Cell>As quedas provocam 75% menos lesões.</Cell>
+</Row>
+<Row>
+<Cell>perk_featherweight_3_name</Cell>
+<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_desc</Cell>
+<Cell>Seus ataques exigem 5% menos Vigor. Só se aplica a armas que requeiram Agilidade para empunhar.</Cell>
+<Cell>Seus ataques exigem 5% menos Vigor. Só se aplica a armas que requeiram Agilidade para empunhar.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_1_name</Cell>
+<Cell>Postura de combate I</Cell>
+<Cell>Postura de combate I</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_desc</Cell>
+<Cell>Seus ataques exigem 7.5% menos Vigor. Só se aplica a armas que requeiram Agilidade para empunhar.</Cell>
+<Cell>Seus ataques exigem 7.5% menos Vigor. Só se aplica a armas que requeiram Agilidade para empunhar.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_2_name</Cell>
+<Cell>Postura de combate II</Cell>
+<Cell>Postura de combate II</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_desc</Cell>
+<Cell>Seus ataques exigem 10% menos Vigor. Só se aplica a armas que requeiram Agilidade para empunhar.</Cell>
+<Cell>Seus ataques exigem 10% menos Vigor. Só se aplica a armas que requeiram Agilidade para empunhar.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_stance_3_name</Cell>
+<Cell>Postura de combate III</Cell>
+<Cell>Postura de combate III</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_desc</Cell>
+<Cell>A habilidade Oratória aumenta em +3 nas zonas rurais. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Citadino.</Cell>
+<Cell>A habilidade Oratória aumenta em +3 nas zonas rurais. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Citadino.</Cell>
+</Row>
+<Row>
+<Cell>perk_yokel_name</Cell>
+<Cell>Caipira</Cell>
+<Cell>Caipira</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_desc</Cell>
+<Cell>A habilidade Oratória aumenta em +3 nas cidades e vilarejos. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Caipira.</Cell>
+<Cell>A habilidade Oratória aumenta em +3 nas cidades e vilarejos. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Caipira.</Cell>
+</Row>
+<Row>
+<Cell>perk_townsman_name</Cell>
+<Cell>Citadino</Cell>
+<Cell>Citadino</Cell>
+</Row>
+<Row>
+<Cell>perk_film_grip_name</Cell>
+<Cell>Punho firme I</Cell>
+<Cell>Punho firme I</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_desc</Cell>
+<Cell>Bloquear seus ataques custará 20% a mais de Vigor do seu oponente.</Cell>
+<Cell>Bloquear seus ataques custará 20% a mais de Vigor do seu oponente.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_2_name</Cell>
+<Cell>Punho firme II</Cell>
+<Cell>Punho firme II</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_desc</Cell>
+<Cell>Bloquear seus ataques custará 25% a mais de Vigor do seu oponente.</Cell>
+<Cell>Bloquear seus ataques custará 25% a mais de Vigor do seu oponente.</Cell>
+</Row>
+<Row>
+<Cell>perk_firm_grip_3_name</Cell>
+<Cell>Punho firme III</Cell>
+<Cell>Punho firme III</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_desc</Cell>
+<Cell>Se você tiver ervas aromáticas suficientes em seu inventário, terá 15% a mais de chance de dominar seu oponente em combate próximo.</Cell>
+<Cell>Se você tiver ervas aromáticas suficientes em seu inventário, terá 15% a mais de chance de dominar seu oponente em combate próximo.</Cell>
+</Row>
+<Row>
+<Cell>perk_sweet_scent_name</Cell>
+<Cell>Aroma doce</Cell>
+<Cell>Aroma doce</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_desc</Cell>
+<Cell>Sua armadura fornece 5% a mais de proteção geral.</Cell>
+<Cell>Sua armadura fornece 5% a mais de proteção geral.</Cell>
+</Row>
+<Row>
+<Cell>perk_turtle_skin_name</Cell>
+<Cell>Casco de tartaruga</Cell>
+<Cell>Casco de tartaruga</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_desc</Cell>
+<Cell>O Vigor se regenera 15% mais rápido à noite, mas 15% mais devagar durante o dia.</Cell>
+<Cell>O Vigor se regenera 15% mais rápido à noite, mas 15% mais devagar durante o dia.</Cell>
+</Row>
+<Row>
+<Cell>perk_one_with_the_shadows_name</Cell>
+<Cell>Amigo das sombras</Cell>
+<Cell>Amigo das sombras</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_desc</Cell>
+<Cell>Você é uma força imparável! Durante o combate, você se move 10% mais rápido e é mais provável que seus inimigos fujam. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Objeto Imóvel.</Cell>
+<Cell>Você é uma força imparável! Durante o combate, você se move 10% mais rápido e é mais provável que seus inimigos fujam. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Objeto Imóvel.</Cell>
+</Row>
+<Row>
+<Cell>perk_unstoppable_force_name</Cell>
+<Cell>Força imparável</Cell>
+<Cell>Força imparável</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_desc</Cell>
+<Cell>Você é um objeto imóvel! Durante o combate, sua armadura é 10% mais eficaz, mas você se move 20% mais devagar. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Força Imparável.</Cell>
+<Cell>Você é um objeto imóvel! Durante o combate, sua armadura é 10% mais eficaz, mas você se move 20% mais devagar. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Força Imparável.</Cell>
+</Row>
+<Row>
+<Cell>perk_immovable_object_name</Cell>
+<Cell>Objeto imóvel</Cell>
+<Cell>Objeto imóvel</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_desc</Cell>
+<Cell>Durante o combate, sua Força e Agilidade aumentam em 2.</Cell>
+<Cell>Durante o combate, sua Força e Agilidade aumentam em 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_tactician_name</Cell>
+<Cell>Tático</Cell>
+<Cell>Tático</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_desc</Cell>
+<Cell>Enquanto estiver em uma floresta, sua Força aumenta em 2.</Cell>
+<Cell>Enquanto estiver em uma floresta, sua Força aumenta em 2.</Cell>
+</Row>
+<Row>
+<Cell>perk_lumberjack_name</Cell>
+<Cell>Lenhador</Cell>
+<Cell>Lenhador</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_desc</Cell>
+<Cell>Ao atingir a saúde baixa, você entrará em um estado de frenesi, tornando os inimigos mais propensos a fugir.</Cell>
+<Cell>Ao atingir a saúde baixa, você entrará em um estado de frenesi, tornando os inimigos mais propensos a fugir.</Cell>
+</Row>
+<Row>
+<Cell>perk_berserker_name</Cell>
+<Cell>Berserker</Cell>
+<Cell>Berserker</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_desc</Cell>
+<Cell>Em combate contra mulheres, você causa 10% a mais de dano.</Cell>
+<Cell>Em combate contra mulheres, você causa 10% a mais de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_axe_murderer_name</Cell>
+<Cell>Assassino do machado</Cell>
+<Cell>Assassino do machado</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_desc</Cell>
+<Cell>Durante o combate, você corre 25% mais rápido.</Cell>
+<Cell>Durante o combate, você corre 25% mais rápido.</Cell>
+</Row>
+<Row>
+<Cell>perk_feral_name</Cell>
+<Cell>Feroz</Cell>
+<Cell>Feroz</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_desc</Cell>
+<Cell>Durante o combate, você recebe 5% a menos de dano.</Cell>
+<Cell>Durante o combate, você recebe 5% a menos de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_1_name</Cell>
+<Cell>Implacável I</Cell>
+<Cell>Implacável I</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_desc</Cell>
+<Cell>Durante o combate, você recebe 7.5% a menos de dano.</Cell>
+<Cell>Durante o combate, você recebe 7.5% a menos de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_2_name</Cell>
+<Cell>Implacável II</Cell>
+<Cell>Implacável II</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_desc</Cell>
+<Cell>Durante o combate, você recebe 10% a menos de dano.</Cell>
+<Cell>Durante o combate, você recebe 10% a menos de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_relentless_3_name</Cell>
+<Cell>Implacável III</Cell>
+<Cell>Implacável III</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 2,5% a mais de dano.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 2,5% a mais de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_1_name</Cell>
+<Cell>Brutal I</Cell>
+<Cell>Brutal I</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 5% a mais de dano.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 5% a mais de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_brute_2_name</Cell>
+<Cell>Brutal II</Cell>
+<Cell>Brutal II</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, é mais provável que seus inimigos fujam.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, é mais provável que seus inimigos fujam.</Cell>
+</Row>
+<Row>
+<Cell>perk_smash_and_bash_name</Cell>
+<Cell>Esmagar e bater</Cell>
+<Cell>Esmagar e bater</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 5% a mais de dano ao equipamento oponente.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 5% a mais de dano ao equipamento oponente.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_1_name</Cell>
+<Cell>Golpes destruidores I</Cell>
+<Cell>Golpes destruidores I</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 10% a mais de dano ao equipamento do seu oponente.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você causa 10% a mais de dano ao equipamento do seu oponente.</Cell>
+</Row>
+<Row>
+<Cell>perk_shattering_blows_2_name</Cell>
+<Cell>Golpes destruidores II</Cell>
+<Cell>Golpes destruidores II</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você tem 5% a mais de chance de incapacitar um oponente com um acerto na cabeça.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você tem 5% a mais de chance de incapacitar um oponente com um acerto na cabeça.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_1_name</Cell>
+<Cell>Triturador de cabeça I</Cell>
+<Cell>Triturador de cabeça I</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_desc</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você tem 10% a mais de chance de incapacitar um oponente com um acerto na cabeça.</Cell>
+<Cell>Ao usar maças ou outras armas de Força, você tem 10% a mais de chance de incapacitar um oponente com um acerto na cabeça.</Cell>
+</Row>
+<Row>
+<Cell>perk_headcrusher_2_name</Cell>
+<Cell>Triturador de cabeça II</Cell>
+<Cell>Triturador de cabeça II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_desc</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus ataques exigem 5% menos Vigor.</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus ataques exigem 5% menos Vigor.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_1_name</Cell>
+<Cell>Hipertrofia I</Cell>
+<Cell>Hipertrofia I</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_desc</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus ataques exigem 7.5% menos Vigor.</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus ataques exigem 7.5% menos Vigor.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_2_name</Cell>
+<Cell>Hipertrofia II</Cell>
+<Cell>Hipertrofia II</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_desc</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus ataques exigem 10% menos Vigor.</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus ataques exigem 10% menos Vigor.</Cell>
+</Row>
+<Row>
+<Cell>perk_hypertrophy_3_name</Cell>
+<Cell>Hipertrofia III</Cell>
+<Cell>Hipertrofia III</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_desc</Cell>
+<Cell>Durante o combate, você causa 5% a mais de dano ao equipamento inimigo.</Cell>
+<Cell>Durante o combate, você causa 5% a mais de dano ao equipamento inimigo.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_1_name</Cell>
+<Cell>Treinamento regimental I</Cell>
+<Cell>Treinamento regimental I</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_desc</Cell>
+<Cell>Durante o combate, você causa 10% a mais de dano ao equipamento inimigo.</Cell>
+<Cell>Durante o combate, você causa 10% a mais de dano ao equipamento inimigo.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_2_name</Cell>
+<Cell>Treinamento regimental II</Cell>
+<Cell>Treinamento regimental II</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_desc</Cell>
+<Cell>Durante o combate, você causa 15% a mais de dano ao equipamento inimigo.</Cell>
+<Cell>Durante o combate, você causa 15% a mais de dano ao equipamento inimigo.</Cell>
+</Row>
+<Row>
+<Cell>perk_regimental_training_3_name</Cell>
+<Cell>Treinamento regimental III</Cell>
+<Cell>Treinamento regimental III</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_desc</Cell>
+<Cell>Durante o combate contra Cumanos, você causa 5% a mais de dano.</Cell>
+<Cell>Durante o combate contra Cumanos, você causa 5% a mais de dano.</Cell>
+</Row>
+<Row>
+<Cell>perk_scourge_of_the_cumans_name</Cell>
+<Cell>Terror dos Cumanos</Cell>
+<Cell>Terror dos Cumanos</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_desc</Cell>
+<Cell>Quando estiver em menor número, você balançará sua arma até duas vezes mais rápido.</Cell>
+<Cell>Quando estiver em menor número, você balançará sua arma até duas vezes mais rápido.</Cell>
+</Row>
+<Row>
+<Cell>perk_fury_swipes_name</Cell>
+<Cell>Golpes de fúria</Cell>
+<Cell>Golpes de fúria</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_desc</Cell>
+<Cell>Uma vez que seu oponente começou a sangrar, as chances de fazê-lo sangrar em outro lugar são 10% maiores.</Cell>
+<Cell>Uma vez que seu oponente começou a sangrar, as chances de fazê-lo sangrar em outro lugar são 10% maiores.</Cell>
+</Row>
+<Row>
+<Cell>perk_bloodied_strikes_name</Cell>
+<Cell>Ataques sangrentos</Cell>
+<Cell>Ataques sangrentos</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_desc</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus golpes são 10% mais rápidos.</Cell>
+<Cell>Ao usar armas de haste ou outras armas de Força, seus golpes são 10% mais rápidos.</Cell>
+</Row>
+<Row>
+<Cell>perk_armstrong_name</Cell>
+<Cell>Braço forte</Cell>
+<Cell>Braço forte</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_1</Cell>
+<Cell>Seu disparo é 5% mais preciso.</Cell>
+<Cell>Seu disparo é 5% mais preciso.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_1</Cell>
+<Cell>Disparo firme I</Cell>
+<Cell>Disparo firme I</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_2</Cell>
+<Cell>Seu disparo é 7.5% mais preciso.</Cell>
+<Cell>Seu disparo é 7.5% mais preciso.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_2</Cell>
+<Cell>Disparo firme II</Cell>
+<Cell>Disparo firme II</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_desc_3</Cell>
+<Cell>Seu disparo é 10% mais preciso.</Cell>
+<Cell>Seu disparo é 10% mais preciso.</Cell>
+</Row>
+<Row>
+<Cell>perk_steady_shot_name_3</Cell>
+<Cell>Disparo firme III</Cell>
+<Cell>Disparo firme III</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_desc</Cell>
+<Cell>Você tem 5% mais chances de nocautear os inimigos ao mirar na cabeça.</Cell>
+<Cell>Você tem 5% mais chances de nocautear os inimigos ao mirar na cabeça.</Cell>
+</Row>
+<Row>
+<Cell>perk_headhunter_name</Cell>
+<Cell>Caçador de cabeças</Cell>
+<Cell>Caçador de cabeças</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_desc</Cell>
+<Cell>Você tem 20% mais chances de causar sangramento. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Envenenador.</Cell>
+<Cell>Você tem 20% mais chances de causar sangramento. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Envenenador.</Cell>
+</Row>
+<Row>
+<Cell>perk_serrated_arrows_name</Cell>
+<Cell>Lacerador</Cell>
+<Cell>Lacerador</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_desc</Cell>
+<Cell>Você tem 20% mais chances de envenenar seu inimigo. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Lacerador.</Cell>
+<Cell>Você tem 20% mais chances de envenenar seu inimigo. &lt;br/&gt;&amp;nbsp;&lt;br/&gt; Você não pode ter a vantagem Lacerador.</Cell>
+</Row>
+<Row>
+<Cell>perk_poisoned_arrows_name</Cell>
+<Cell>Envenenador</Cell>
+<Cell>Envenenador</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_desc</Cell>
+<Cell>Seu Vigor máxima é aumentada em 10%.</Cell>
+<Cell>Seu Vigor máxima é aumentada em 10%.</Cell>
+</Row>
+<Row>
+<Cell>perk_proficiency_name</Cell>
+<Cell>Proficiência</Cell>
+<Cell>Proficiência</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_desc</Cell>
+<Cell>Você fica 50% mais silencioso nas florestas.</Cell>
+<Cell>Você fica 50% mais silencioso nas florestas.</Cell>
+</Row>
+<Row>
+<Cell>perk_lone_hunter_name</Cell>
+<Cell>Caçador solitário</Cell>
+<Cell>Caçador solitário</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_desc</Cell>
+<Cell>Depois de matar o primeiro inimigo em um encontro, você ganha 5% a mais de dano pelo resto do encontro.</Cell>
+<Cell>Depois de matar o primeiro inimigo em um encontro, você ganha 5% a mais de dano pelo resto do encontro.</Cell>
+</Row>
+<Row>
+<Cell>perk_hawkish_name</Cell>
+<Cell>Linha dura</Cell>
+<Cell>Linha dura</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_desc</Cell>
+<Cell>Você pode facilmente superar feridas. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Golpes vão ferir você 5% a menos.</Cell>
+<Cell>Você pode facilmente superar feridas. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Golpes vão ferir você 5% a menos.</Cell>
+</Row>
+<Row>
+<Cell>perk_martial_artist_name</Cell>
+<Cell>Artista marcial</Cell>
+<Cell>Artista marcial</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_desc</Cell>
+<Cell>Sua velocidade de arrancada 20% mais rápido e correr 10% mais rápido o tempo todo.</Cell>
+<Cell>Sua velocidade de arrancada 20% mais rápido e correr 10% mais rápido o tempo todo.</Cell>
+</Row>
+<Row>
+<Cell>perk_physical_fitness_name</Cell>
+<Cell>Aptidão física</Cell>
+<Cell>Aptidão física</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_desc</Cell>
+<Cell>Você causa 5% a mais de dano em combate.</Cell>
+<Cell>Você causa 5% a mais de dano em combate.</Cell>
+</Row>
+<Row>
+<Cell>perk_hard_hitter_name</Cell>
+<Cell>Espancador</Cell>
+<Cell>Espancador</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_desc</Cell>
+<Cell>Enquanto estiver bêbado, você tem 25% mais chances de desviar dos ataques inimigos.</Cell>
+<Cell>Enquanto estiver bêbado, você tem 25% mais chances de desviar dos ataques inimigos.</Cell>
+</Row>
+<Row>
+<Cell>perk_drunken_brawler_name</Cell>
+<Cell>Brigão bêbado</Cell>
+<Cell>Brigão bêbado</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_desc</Cell>
+<Cell>Sua experiência de briga significa que você sangra muito mais devagar.</Cell>
+<Cell>Sua experiência de briga significa que você sangra muito mais devagar.</Cell>
+</Row>
+<Row>
+<Cell>perk_diehard_name</Cell>
+<Cell>Duro de matar</Cell>
+<Cell>Duro de matar</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_desc</Cell>
+<Cell>Você é 15% mais eficaz em ganhar combate próximo.</Cell>
+<Cell>Você é 15% mais eficaz em ganhar combate próximo.</Cell>
+</Row>
+<Row>
+<Cell>perk_wrestler_name</Cell>
+<Cell>Clinchador</Cell>
+<Cell>Clinchador</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_desc</Cell>
+<Cell>Você causa 5% a mais de dano à armadura e equipamento do seu oponente.</Cell>
+<Cell>Você causa 5% a mais de dano à armadura e equipamento do seu oponente.</Cell>
+</Row>
+<Row>
+<Cell>perk_street_fighter_name</Cell>
+<Cell>Lutador de rua</Cell>
+<Cell>Lutador de rua</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_desc</Cell>
+<Cell>Você regenera seu Vigor 5% mais rápido.</Cell>
+<Cell>Você regenera seu Vigor 5% mais rápido.</Cell>
+</Row>
+<Row>
+<Cell>perk_fighting_spirit_name</Cell>
+<Cell>Espírito de lutador</Cell>
+<Cell>Espírito de lutador</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_agility_desc</Cell>
+<Cell>A Agilidade rege a velocidade, movimento e ligeireza. Um personagem ágil não só se move mais rápido como também se esquiva melhor dos ataques, maneja habilmente armas mais sofisticadas, como sabres, e é mais hábil no disparo com arco e flecha. O disparo com arco e flecha, por sua vez, também aumenta a Agilidade. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Você ganha pontos de Agilidade nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>A Agilidade rege a velocidade, movimento e ligeireza. Um personagem ágil não só se move mais rápido como também se esquiva melhor dos ataques, maneja habilmente armas mais sofisticadas, como sabres, e é mais hábil no disparo com arco e flecha. O disparo com arco e flecha, por sua vez, também aumenta a Agilidade. &lt;br/&gt;&amp;nbsp;&lt;br/&gt;Você ganha pontos de Agilidade nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_stat_speech_desc</Cell>
+<Cell>A Oratória rege a capacidade do personagem de resolver problemas na conversa. Ele fica melhor no tato com as pessoas, persuadindo-as. Em consequência, um bom orador pode resolver muitos conflitos antes mesmo que eles surjam, pechinchar melhor, ou desconcertar um inimigo que ele não conseguiria superar em combate.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Você ganha pontos de Oratóriade nos níveis: 4, 7, 10, 14, 17, 20.</Cell>
+<Cell>A Oratória rege a capacidade do personagem de resolver problemas na conversa. Ele fica melhor no tato com as pessoas, persuadindo-as. Em consequência, um bom orador pode resolver muitos conflitos antes mesmo que eles surjam, pechinchar melhor, ou desconcertar um inimigo que ele não conseguiria superar em combate.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Você ganha pontos de Oratóriade nos níveis: 4, 7, 10, 14, 17, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_defense_desc0</Cell>
+<Cell>Aumenta o tempo que você consegue manter um bloqueio perfeito ou esquiva, assim como aumenta as estatísticas de defesa de armas e escudos.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>Aumenta o tempo que você consegue manter um bloqueio perfeito ou esquiva, assim como aumenta as estatísticas de defesa de armas e escudos.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_fencing_desc0</Cell>
+<Cell>A habilidade total de combate com armas ou desarmado. Quanto mais hábil for um guerreiro, mais rápido serão seus ataques e mais difícil será para um oponente se defender contra eles. Além disso, suas armas serão menos danificadas ao atacar e defender.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+<Cell>A habilidade total de combate com armas ou desarmado. Quanto mais hábil for um guerreiro, mais rápido serão seus ataques e mais difícil será para um oponente se defender contra eles. Além disso, suas armas serão menos danificadas ao atacar e defender.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 8, 10, 13, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_axe_desc0</Cell>
+<Cell>A habilidade com Machado o torna mais proficiente com machados, e aumenta o poder de seus ataques.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>A habilidade com Machado o torna mais proficiente com machados, e aumenta o poder de seus ataques.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_mace_desc0</Cell>
+<Cell>A habilidade com Maça o torna mais proficiente com maças, aumentando o poder de seus ataques.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>A habilidade com Maça o torna mais proficiente com maças, aumentando o poder de seus ataques.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_large_desc0</Cell>
+<Cell>A habilidade com armas longas torna você mais proficiente com armas longas, como alabardas, aumentando o poder de seus ataques.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+<Cell>A habilidade com armas longas torna você mais proficiente com armas longas, como alabardas, aumentando o poder de seus ataques.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 5, 7, 9, 12, 14, 16, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_bow_desc0</Cell>
+<Cell>A habilidade com Arco o torna mais proficiente com arcos e flechas e aumenta o poder de seus ataques. Até o nível 5 você não é capaz de segurar seu arco corretamente e uma corda tensionada de um arco poderoso irá esfolar seu braço e causar ferimentos a menos que você esteja usando alguma proteção, e nesse caso atirar só consumirá Vigor.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>A habilidade com Arco o torna mais proficiente com arcos e flechas e aumenta o poder de seus ataques. Até o nível 5 você não é capaz de segurar seu arco corretamente e uma corda tensionada de um arco poderoso irá esfolar seu braço e causar ferimentos a menos que você esteja usando alguma proteção, e nesse caso atirar só consumirá Vigor.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
+<Row>
+<Cell>ui_skill_weapon_unarmed_desc0</Cell>
+<Cell>A habilidade de Combate Desarmado o torna mais proficiente com seus punhos e aumenta o dano que você causa.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 6, 9, 12, 15, 18, 20.</Cell>
+<Cell>A habilidade de Combate Desarmado o torna mais proficiente com seus punhos e aumenta o dano que você causa.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;Novos pontos são desbloqueados nos níveis: 3, 6, 9, 12, 15, 18, 20.</Cell>
+</Row>
 </Table>
