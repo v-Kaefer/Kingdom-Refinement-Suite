@@ -5,6 +5,11 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-06 (second part): 2049 rebased and run in the replica game
+
+- `tools/adb_cut.py rebase`: three-way merge inside each fragment of a cut made on an older game file. 2049 (built on the original file): 307 of 324 operations kept, 161 identical and 146 moved onto the current fragments (145 of them under a longer key because the game's patches added `oppMale+oppFemale` to FragTags); 21 left out (structure changed by the game 17, fragment gone 4).
+- Game test in the replica (`E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance`, menu stage, 1.9.8): new `tools/harness/krs_adbtest.lua` and `build_adbtest.py`. Wash + rebased 2049 gives the same log as the baseline; a control file cut at 3 MB gives `XML reader: unclosed token` and `Invalid animation DB for actor 'DummyTarget'` from startup on. Logs in `docs/tests/logs/adbtest_*`. Measured: the game parses a mod's `kcd_male_database.adb` at startup. `krs_adbtest` was removed afterwards and `mod_order.txt` restored.
+
 ## 2026-10-06: krs_exploration merge tests
 
 No game run. Archives read through scratch folders that were deleted.

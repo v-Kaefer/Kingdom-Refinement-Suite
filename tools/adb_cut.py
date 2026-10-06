@@ -273,9 +273,163 @@ def apply(a):
     return 0
 
 
+# ------------------------------------------------------------------------------------------------------------------------------ rebase
+GAME_ADDED_TAGS = {"oppMale", "oppFemale", "stealthFront", "stealthBehind"}   # tags the game's patches appended to existing fragments' FragTags
+
+
+def skeleton(el):
+    return (el.tag, tuple(skeleton(c) for c in el))
+
+
+def walk(el, path=()):
+    yield path, el
+    for i, c in enumerate(el):
+        yield from walk(c, path + (i,))
+
+
+def node_at(el, path):
+    for i in path:
+        el = el[i]
+    return el
+
+
+def attr_changes(b, t):
+    """attribute differences between two fragments with the same structure: [(path, tag, attribute, old, new)]; None when the structure differs"""
+    if skeleton(b) != skeleton(t):
+        return None
+    out = []
+    for (path, be), (_, te) in zip(walk(b), walk(t)):
+        for k in sorted(set(be.attrib) | set(te.attrib)):
+            if be.get(k) != te.get(k):
+                out.append((path, be.tag, k, be.get(k), te.get(k)))
+    return out
+
+
+def rebase(a):
+    """Move a cut made on an older game file onto the current one, attribute by attribute (a 3-way merge inside each fragment)."""
+    base = parse_text(load(a.cut_base))
+    onto = parse_text(load(a.onto))
+    mod, cbase, ops = read_cut(a.cut)
+    by_key_base, by_key_onto = collections.defaultdict(list), collections.defaultdict(list)
+    for f in base:
+        by_key_base[(f["fid"], f["tags"], f["fragtags"])].append(f)
+    for f in onto:
+        by_key_onto[(f["fid"], f["tags"], f["fragtags"])].append(f)
+    by_fid_onto = collections.defaultdict(list)
+    for f in onto:
+        by_fid_onto[f["fid"]].append(f)
+    used = set()
+    new_ops, report, per_attr = [], [], collections.Counter()
+    status = collections.Counter()
+    for o in ops:
+        key = (o["fid"], o["tags"], o["fragtags"])
+        if o["type"] != "replace":
+            new_ops.append(o)
+            status["not a replace: copied"] += 1
+            continue
+        cur = [f for f in by_key_onto[key] if f["start"] not in used]
+        direct = [f for f in cur if f["md5"] == o["old"]]
+        if direct:
+            used.add(direct[0]["start"])
+            new_ops.append(o)
+            status["direct (the fragment is the same in the current game)"] += 1
+            continue
+        bfr = [f for f in by_key_base[key] if f["md5"] == o["old"]]
+        if not bfr:
+            report.append((o["fid"], o["tags"], o["fragtags"], "lost", "", "the cut's own base fragment was not found"))
+            status["lost"] += 1
+            continue
+        B = ET.fromstring(bfr[0]["raw"])
+        T = ET.fromstring(o["raw"])
+        changes = attr_changes(B, T)
+        if changes is None:
+            report.append((o["fid"], o["tags"], o["fragtags"], "conflict", "", "the mod changed the structure of the fragment (children added or removed)"))
+            status["conflict: structure changed by the mod"] += 1
+            continue
+        targets, how = [f for f in cur if skeleton(ET.fromstring(f["raw"])) == skeleton(B)], "same key"
+        if not cur:
+            # the game's patches added opponent tags to the fragment's FragTags (oppMale+oppFemale, and a stealthFront/stealthBehind split):
+            # the same fragment under a longer key. Every longer key that only ADDS those tags is the same fragment.
+            bt = set(o["fragtags"].split("+")) if o["fragtags"] else set()
+            more = [f for f in by_fid_onto[o["fid"]] if f["tags"] == o["tags"] and f["start"] not in used and bt <= set(f["fragtags"].split("+"))
+                    and (set(f["fragtags"].split("+")) - bt) <= GAME_ADDED_TAGS]
+            targets, how = [f for f in more if skeleton(ET.fromstring(f["raw"])) == skeleton(B)], "same fragment under a longer key (the game added opponent tags)"
+            cur = more
+        if not targets:
+            report.append((o["fid"], o["tags"], o["fragtags"], "conflict", "", "the game changed the structure of this fragment" if cur else "the fragment no longer exists in the current game"))
+            status["conflict: structure changed by the game" if cur else "conflict: fragment gone"] += 1
+            continue
+        for f in targets:
+            C = ET.fromstring(f["raw"])
+            applied, clashes = [], []
+            for path, tag, attr, old, new in changes:
+                node = node_at(C, path)
+                cur_val = node.get(attr)
+                where = f"{tag}[{'/'.join(map(str, path))}]@{attr}"
+                if cur_val == old:
+                    if new is None:
+                        del node.attrib[attr]
+                    else:
+                        node.set(attr, new)
+                    applied.append(f"{where}: {old} -> {new}")
+                    per_attr[(tag, attr)] += 1
+                elif cur_val == new:
+                    applied.append(f"{where}: already {new} in the game")
+                else:
+                    clashes.append(f"{where}: base {old}, game now {cur_val}, mod {new}")
+            used.add(f["start"])
+            real = [x for x in applied if "already" not in x]
+            if not real and not clashes:
+                status["already in the game"] += 1
+                report.append((f["fid"], f["tags"], f["fragtags"], "already", "; ".join(applied), ""))
+                continue
+            if not real:
+                report.append((f["fid"], f["tags"], f["fragtags"], "conflict", "", "; ".join(clashes)))
+                status["conflict: every changed attribute was also changed by the game"] += 1
+                continue
+            ET.indent(C, space="  ", level=3)
+            raw = "      " + ET.tostring(C, encoding="unicode").strip() + "\n"
+            new_ops.append(dict(type="replace", fid=f["fid"], tags=f["tags"], fragtags=f["fragtags"], old=f["md5"], new=digest(raw), raw=raw, cut=o["cut"], mod=o["mod"]))
+            tag_note = "" if how == "same key" else f" [{how}: was FragTags {o['fragtags']!r}]"
+            if clashes:
+                status["rebased, some attributes left out (the game changed them too)"] += 1
+                report.append((f["fid"], f["tags"], f["fragtags"], "partial", "; ".join(applied) + tag_note, "; ".join(clashes)))
+            else:
+                status["rebased" + ("" if how == "same key" else " onto the longer key") + " (every attribute applied to the current fragment)"] += 1
+                report.append((f["fid"], f["tags"], f["fragtags"], "rebased", "; ".join(applied) + tag_note, ""))
+    root = ET.Element("adbcut", mod=mod, base=a.onto, note=f"rebased from {cbase} onto {a.onto} attribute by attribute (adb_cut rebase)")
+    for o in new_ops:
+        e = ET.SubElement(root, "op", type=o["type"], fid=o["fid"], tags=o["tags"], fragtags=o["fragtags"])
+        if o["old"]:
+            e.set("old", o["old"])
+        if o["raw"]:
+            e.set("new", digest(o["raw"]))
+            e.text = "\n" + o["raw"].replace("\r\n", "\n")
+    ET.indent(root, space="  ")
+    os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
+    ET.ElementTree(root).write(a.out, encoding="utf-8", xml_declaration=True)
+    print(f"rebased cut {a.out}: {len(new_ops)} of {len(ops)} operations kept")
+    for k, n in status.most_common():
+        print(f"  {n:4d}  {k}")
+    if per_attr:
+        print("  attributes moved onto the current fragments:", ", ".join(f"{t}.{at} x{n}" for (t, at), n in per_attr.most_common(8)))
+    if a.report:
+        import csv
+        with open(a.report, "w", newline="", encoding="utf-8") as fh:
+            w = csv.writer(fh)
+            w.writerow(["fid", "tags", "fragtags", "status", "applied_changes", "left_out_or_reason"])
+            w.writerows(report)
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
+    r = sub.add_parser("rebase")
+    r.add_argument("--cut", required=True)
+    r.add_argument("--cut-base", required=True, help="the game file the cut was made against, e.g. vanilla:base")
+    r.add_argument("--onto", default="vanilla:010902")
+    r.add_argument("--out", required=True)
+    r.add_argument("--report")
     m = sub.add_parser("make")
     m.add_argument("--mod", required=True)
     m.add_argument("--mod-adb", required=True)
@@ -297,6 +451,9 @@ def main():
     a = ap.parse_args()
     if a.cmd == "make":
         make(a)
+        return 0
+    if a.cmd == "rebase":
+        rebase(a)
         return 0
     if a.cmd == "list":
         list_cut(a)
