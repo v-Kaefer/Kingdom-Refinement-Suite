@@ -52,11 +52,6 @@ def load(spec, game=GAME):
     return open(spec, "rb").read().decode("utf-8")
 
 
-FID = re.compile(r"^    <(?P<tag>\w+)(?:>(?P<body>\r?\n.*?)^    </(?P=tag)>| ?/>)[ \t]*\r?\n", re.S | re.M)
-FRAG = re.compile(r"^      <Fragment\b[^>]*?(?:/>|>.*?^      </Fragment>)[ \t]*\r?\n", re.S | re.M)
-ATTR = re.compile(r'(\w+)="([^"]*)"')
-
-
 def canon(raw):
     return re.sub(r"\s+", "", ET.tostring(ET.fromstring(raw), encoding="unicode"))
 
@@ -70,19 +65,54 @@ def region(text):
 
 
 def parse_text(text):
-    """-> list of dicts: fid, tags, fragtags, raw, md5, start, end (absolute offsets in text)"""
-    a, b = region(text)
-    out = []
-    for m in FID.finditer(text, a, b + 20):
-        body = m.group("body")
-        if body is None:
-            continue
-        off = m.start("body")
-        for f in FRAG.finditer(body):
-            raw = f.group(0)
-            at = dict(ATTR.findall(raw[: raw.index(">") + 1]))
-            out.append(dict(fid=m.group("tag"), tags=at.get("Tags", ""), fragtags=at.get("FragTags", ""), raw=raw, md5=digest(raw), start=off + f.start(), end=off + f.end()))
+    """-> list of dicts: fid, tags, fragtags, raw, md5, start, end (offsets in text).
+    The file is read with a real XML parser that reports where every <Fragment> starts and ends, so fragments written on one line, with other
+    indentation or self-closing are found like the others (mods are made with different tools). The surrounding whole lines belong to the fragment."""
+    import xml.parsers.expat as expat
+    if not text.isascii():
+        raise SystemExit("the animation database is expected to be ASCII")
+    data = text.encode("ascii")
+    out, stack, cur = [], [], {}
+    p = expat.ParserCreate()
+
+    def start(name, attrs):
+        stack.append(name)
+        if len(stack) == 4 and stack[1] == "FragmentList" and name == "Fragment":
+            st = p.CurrentByteIndex
+            tag_end = data.index(b">", st) + 1
+            cur["f"] = dict(fid=stack[2], tags=attrs.get("Tags", ""), fragtags=attrs.get("FragTags", ""), start=st, selfclosing=data[tag_end - 2:tag_end] == b"/>", tag_end=tag_end)
+
+    def end(name):
+        if len(stack) == 4 and name == "Fragment" and "f" in cur:
+            f = cur.pop("f")
+            s = f["start"]
+            e = f["tag_end"] if f["selfclosing"] else data.index(b">", p.CurrentByteIndex) + 1      # end of a self-closing tag, or of the end tag
+            ls = data.rfind(b"\n", 0, s) + 1
+            if data[ls:s].strip() == b"":
+                s = ls
+            nl = data.find(b"\n", e)
+            if nl != -1 and data[e:nl].strip() == b"":
+                e = nl + 1
+            f["start"], f["end"] = s, e
+            f["raw"] = text[s:e]
+            f["md5"] = digest(f["raw"])
+            out.append(f)
+        stack.pop()
+    p.StartElementHandler, p.EndElementHandler = start, end
+    p.Parse(data, True)
     return out
+
+
+def et_multiset(text):
+    """independent of the offsets above: fragments counted through ElementTree (used to verify a merged file)"""
+    root = ET.fromstring(re.sub(r"^\s*<\?xml[^>]*\?>", "", text))
+    c = collections.Counter()
+    for fl in root.findall("FragmentList"):
+        for fid in fl:
+            for fr in fid:
+                if fr.tag == "Fragment":
+                    c[(fid.tag, fr.get("Tags", ""), fr.get("FragTags", ""), hashlib.md5(re.sub(r"\s+", "", ET.tostring(fr, encoding="unicode")).encode()).hexdigest()[:12])] += 1
+    return c
 
 
 def multiset(frs):
@@ -103,10 +133,10 @@ def make(a):
         return (not fid_re or fid_re.search(k[0])) and (not tag_re or tag_re.search(k[1] + " " + k[2])) and not (exc_re and exc_re.search(k[1] + " " + k[2]))
     added, removed = mm - bm, bm - mm
     by_add, by_rem = collections.defaultdict(list), collections.defaultdict(list)
-    for k in sorted(added):
-        by_add[k[:3]].append(k)
-    for k in sorted(removed):
-        by_rem[k[:3]].append(k)
+    for k, n in sorted(added.items()):          # a fragment can occur several times with the same content: keep every occurrence
+        by_add[k[:3]].extend([k] * n)
+    for k, n in sorted(removed.items()):
+        by_rem[k[:3]].extend([k] * n)
     raw_of = {(f["fid"], f["tags"], f["fragtags"], f["md5"]): f["raw"] for f in mod}
     ops = []
     for key, adds in by_add.items():
@@ -163,13 +193,18 @@ def apply(a):
     text = load(a.base)
     nl = "\r\n" if "\r\n" in text else "\n"
     base_frs = parse_text(text)
-    expected = multiset(base_frs)
+    expected = et_multiset(text)      # verification below uses ElementTree on both sides, independent of the offset parser
+    if sum(expected.values()) != len(base_frs):
+        raise SystemExit(f"the offset parser found {len(base_frs)} fragments, ElementTree {sum(expected.values())}: not safe to edit this file")
     allops, problems, seen = [], [], {}
     for c in a.cut:
         _, _, ops = read_cut(c)
         for o in ops:
             k = (o["fid"], o["tags"], o["fragtags"], o["old"] or ("add:" + o["new"]))
             ident = (o["type"], o["new"])
+            if k in seen and seen[k][1] == o["cut"]:      # the same cut lists the same change twice: two copies of one fragment, both are applied
+                allops.append(o)
+                continue
             if k in seen:
                 if seen[k][0] == ident:
                     print(f"  same change in {seen[k][1]} and {o['cut']} ({o['type']} {o['fid']}): applied once")
@@ -215,13 +250,13 @@ def apply(a):
     out = text
     for _, (s, e, new) in sorted(enumerate(edits), key=lambda x: (x[1][0], x[1][1], x[0]), reverse=True):
         out = out[:s] + new + out[e:]
-    got = multiset(parse_text(out))
+    got = et_multiset(out)
     expected = +expected
     if got != expected:
         print("VERIFICATION FAILED: merged file differs from 'game file + cuts' in", sum(((got - expected) + (expected - got)).values()), "fragments; not written")
         return 3
     open(a.out, "wb").write(out.encode("utf-8"))
-    print(f"wrote {a.out}: {dict(stats)}; verified: the game's {sum(multiset(base_frs).values())} fragments with exactly these changes ({sum(got.values())} now)")
+    print(f"wrote {a.out}: {dict(stats)}; verified (ElementTree): the game's {len(base_frs)} fragments with exactly these changes ({sum(got.values())} now)")
     return 0
 
 
