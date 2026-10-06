@@ -6,7 +6,6 @@
       <column name="perk_id" type="uuid" />
     </header>
     <rows>
-      <row buff_id="44d83d12-9709-4e54-9b7d-9b6bcfb630be" perk_id="010b08c7-5346-402c-a7cb-a084d624b62e" />
       <row buff_id="44d83d20-9709-4e54-9b7d-9b6bcfb630be" perk_id="010b08d0-5346-402c-a7cb-a084d624b62e" />
       <row buff_id="44d83d21-9709-4e54-9b7d-9b6bcfb630be" perk_id="010b08d1-5346-402c-a7cb-a084d624b62e" />
       <row buff_id="44d83d22-9709-4e54-9b7d-9b6bcfb630be" perk_id="010b08d2-5346-402c-a7cb-a084d624b62e" />

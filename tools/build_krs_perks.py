@@ -39,6 +39,8 @@ LIKE_A_FEATHER = "010b08c7-5346-402c-a7cb-a084d624b62e"    # vanilla perk the mo
 FEATHER_II = "010b08c8-5346-402c-a7cb-a084d624b62e"
 FEATHER_III = "010b08c9-5346-402c-a7cb-a084d624b62e"
 TOWNSMAN = "010b0811-5346-402c-a7cb-a084d624b62e"
+KNOCK_II = "010b0812-5346-402c-a7cb-a084d624b62e"
+KNOCK_III = "010b0813-5346-402c-a7cb-a084d624b62e"
 YOKEL = "010b0810-5346-402c-a7cb-a084d624b62e"
 
 # ---------------------------------------------------------------- balance policy
@@ -46,7 +48,8 @@ YOKEL = "010b0810-5346-402c-a7cb-a084d624b62e"
 BUFF_RULES = {
     "perk_heavy_swing":      (True,  "o +20% do Perkaholic é forte demais; +7% confirmado",
                               "wat*1.07,wac*1.1"),
-    "perk_like_a_feather":   (True,  "primeiro degrau da escada de queda", "fdm*0.75"),
+    "perk_like_a_feather":   (False, "degrau I fica o do jogo: fdm*0.7 = 30% menos dano de "
+                              "queda, o número final que o autor fixou. Não enviar a linha", None),
     "perk_like_a_feather_2": (True,  "segundo degrau (o mod trazia 0.5)", "fdm*0.60"),
     "perk_like_a_feather_3": (True,  "terceiro degrau (o mod trazia 0.25)", "fdm*0.45"),
     "perk_reading_Cushion":  (False, "revertido ao valor do jogo: não enviar a linha", None),
@@ -63,6 +66,8 @@ PERK_ROW_RULES = {
 PERK_FIXES = {
     FEATHER_II:  {"perk_name": "Like a Feather II"},
     FEATHER_III: {"perk_name": "Like a Feather III"},
+    KNOCK_II:    {"perk_name": "Knock Knock II"},
+    KNOCK_III:   {"perk_name": "Knock Knock III"},
     TOWNSMAN:    {"parent_id": HIGHBORN},
     YOKEL:       {"parent_id": LOWBORN},
 }
@@ -74,6 +79,7 @@ TEXT_FIXES = {
     "perk_featherweight_2_name": "Like a Feather II",
     "perk_featherweight_3_name": "Like a Feather III",
     "perk_film_grip_name": "Knock Knock I",                 # the game's "Firm hand", renamed
+    "perk_like_a_feather_name": "Like a Feather I",         # the game shows "Featherweight"
     "perk_firm_grip_2_name": "Knock Knock II",
     "perk_firm_grip_3_name": "Knock Knock III",
 }
@@ -82,6 +88,20 @@ TEXT_FIXES = {
 # translation is left alone. key -> (as the mod wrote it, what the buff really does).
 # The mod's Like a Feather text claims the opposite of its own formula: fdm*0.60 is 40% less fall
 # damage, not 50%, and fdm*0.45 is 55%, not 75%.
+# Keys inherited from mod 1765 carried its author's "ex" namespace. They are ours now, so they
+# carry ours. Renaming a key means renaming it in the language files and in the perk rows that
+# point at it, which KEY_RENAMES does in one pass.
+KEY_RENAMES = {
+    "perk_ex_riposte_name":    "perk_krs_riposte_name",
+    "perk_ex_riposte_desc":    "perk_krs_riposte_desc",
+    "perk_ex_ripo_text_sword": "perk_krs_ripo_text_sword",
+    "perk_ex_ripo_text_desc":  "perk_krs_ripo_text_desc",
+}
+
+NL = chr(10)
+ROW = NL.join(["<Row>", "<Cell>{k}</Cell>", "<Cell>{v}</Cell>", "<Cell>{v}</Cell>",
+               "</Row>"])
+
 TEXT_NUMBER_FIXES = {
     "perk_featherweight_2_desc": ("50", "40"),
     "perk_featherweight_3_desc": ("75", "55"),
@@ -114,6 +134,10 @@ def build(args):
     vcols, vrows = van["perk"]
     van_perk = {r["perk_id"]: r for r in vrows}
     keep = existing_rows(os.path.join(out_dir, f"perk__{SUFFIX}.xml"), "perk")
+    # a row written by an earlier build is kept as it is, but a later decision in PERK_FIXES still
+    # has to reach it - otherwise a rename only ever applies to rows written for the first time
+    for r in keep:
+        r.update(PERK_FIXES.get(r["perk_id"], {}))
     kept_ids = {r["perk_id"] for r in keep}
     perk_rows, skipped = list(keep), []
     for r in read_rows(src, "perk__perkaholic.xml"):
@@ -172,13 +196,20 @@ def build(args):
         key = [c for c, _ in cols]
         for r in rws:
             index[tuple(r.get(k, "") for k in key[:2])] = r
-        rows_out = []
+        rows_out, noop = [], []
         for r in read_rows(src, fname):
             base = index.get(tuple(r.get(k, "") for k in key[:2]), {})
-            rows_out.append(vanilla.complete_row(cols, base, **{k: v for k, v in r.items()
-                                                                if k in dict(cols)}))
+            row = vanilla.complete_row(cols, base, **{k: v for k, v in r.items()
+                                                      if k in dict(cols)})
+            # rule 7: a row that equals the game's own changes nothing, and only widens the
+            # surface this module shares with other mods
+            if base and all((base.get(c, "") or "") == (row.get(c, "") or "") for c, _ in cols):
+                noop.append(tuple(row.get(k, "") for k in key[:2]))
+                continue
+            rows_out.append(row)
         simple[table] = rows_out
-        report[table] = (len(rows_out), [])
+        report[table] = (len(rows_out), [(f"{a}/{b}", "idêntica ao jogo: não enviada")
+                                         for a, b in noop])
 
     if args.dry_run:
         return report, buff_changed, skipped, buff_skipped
@@ -228,7 +259,34 @@ def merge_text(args):
             with open(dest, "w", encoding="utf-8") as f:
                 f.write(have.rstrip().removesuffix("</Table>").rstrip() + "\n"
                         + "\n".join(add) + "\n</Table>\n")
-    return fix_text()
+    out = fix_text()
+    out.update(rename_keys())
+    return out
+
+
+def rename_keys():
+    """Apply KEY_RENAMES to the module's language files and to the perk rows that reference them."""
+    changed = collections.Counter()
+    base = os.path.join(MODULE, "Localization")
+    for lang in sorted(os.listdir(base)):
+        dest = os.path.join(base, lang, f"text__{SUFFIX}.xml")
+        if not os.path.exists(dest):
+            continue
+        text = before = open(dest, encoding="utf-8").read()
+        for old_k, new_k in KEY_RENAMES.items():
+            text = text.replace(f"<Cell>{old_k}</Cell>", f"<Cell>{new_k}</Cell>")
+        if text != before:
+            open(dest, "w", encoding="utf-8").write(text)
+            changed["localização:" + lang] += 1
+    table = os.path.join(MODULE, "Data", "Libs", "Tables", "rpg", f"perk__{SUFFIX}.xml")
+    if os.path.exists(table):
+        text = before = open(table, encoding="utf-8").read()
+        for old_k, new_k in KEY_RENAMES.items():
+            text = text.replace(f'"{old_k}"', f'"{new_k}"')
+        if text != before:
+            open(table, "w", encoding="utf-8").write(text)
+            changed["perk__krs_perks.xml"] += 1
+    return changed
 
 
 def fix_text():
@@ -255,6 +313,12 @@ def fix_text():
                 return m.group(1) + m.group(2).replace(wrong, right)
             text = re.sub(r"(<Cell>" + re.escape(key) + r"</Cell>\s*)((?:<Cell>.*?</Cell>\s*){1,2})",
                           swap, text, flags=re.S)
+        # a name we decide to override may not be among the mod's own keys at all
+        add = [ROW.format(k=k, v=v) for k, v in TEXT_FIXES.items()
+               if v is not None and f"<Cell>{k}</Cell>" not in text]
+        if add:
+            body = text.rstrip().removesuffix("</Table>").rstrip()
+            text = NL.join([body] + add + ["</Table>", ""])
         if text != before:
             open(dest, "w", encoding="utf-8").write(text)
             changed[lang] += 1

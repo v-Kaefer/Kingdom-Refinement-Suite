@@ -3,17 +3,17 @@
 <Cell>perk_perfect_block_desc</Cell><Cell>You've learned to fend off the opponent's blow with a well-timed block. You'll know exactly when to block from the appearance of a green shield in the middle of the combat rose:&amp;lt;br/&amp;gt;&amp;lt;img src='img://Libs/UI/Textures/Dynamic/ccursorPerfectblock.dds' width='79' height='74'&amp;gt;&amp;lt;br/&amp;gt;This block costs you no stamina! &amp;lt;br/&amp;gt;&amp;lt;br/&amp;gt;If, while executing the Perfect Block, you also hit the Strike button, you'll execute an immediate &amp;lt;font color='#512D00'&amp;gt;riposte&amp;lt;/font&amp;gt;. Your opponent can only defend against a riposte by means of a Perfect Block, and you can also use the same defence if the tables are turned.:&amp;lt;br/&amp;gt; :&amp;lt;br/&amp;gt;Executing Perfect Blocks and Ripostes demonstrates superior swordsmanship, which can also intimidate a less experienced foe.</Cell><Cell>你已经学会在正确的时机用格挡来抵挡敌人的攻击了。格挡的时机出现时，战斗指示器的中心会出现绿色的盾牌，此时按下格挡键就会进行完美格挡。&amp;lt;br/&amp;gt;&amp;lt;img src='img://Libs/UI/Textures/Dynamic/ccursorPerfectblock.dds' width='79' height='74'&amp;gt;&amp;lt;br/&amp;gt; 这次格挡不会消耗你任何耐力！&amp;lt;br/&amp;gt;&amp;lt;br/&amp;gt; </Cell>
 </Row>
 <Row>
-<Cell>perk_ex_riposte_desc</Cell>
+<Cell>perk_krs_riposte_desc</Cell>
 <Cell>You've learned to fend off the opponent's blow with a well-timed block. You'll know exactly when to block from the appearance of a green shield in the middle of the combat rose:&amp;lt;br/&amp;gt;&amp;lt;img src='img://Libs/UI/Textures/Dynamic/ccursorPerfectblock.dds' width='79' height='74'&amp;gt;&amp;lt;br/&amp;gt;This block costs you no stamina! &amp;lt;br/&amp;gt;&amp;lt;br/&amp;gt;If, while executing the Perfect Block, you also hit the Strike button, you'll execute an immediate &amp;lt;font color='#512D00'&amp;gt;riposte&amp;lt;/font&amp;gt;. Your opponent can only defend against a riposte by means of a Perfect Block, and you can also use the same defence if the tables are turned.:&amp;lt;br/&amp;gt; :&amp;lt;br/&amp;gt;Executing Perfect Blocks and Ripostes demonstrates superior swordsmanship, which can also intimidate a less experienced foe.</Cell><Cell>只有掌握了完美格挡才能学习反击。 &amp;lt;br/&amp;gt; &amp;lt;br/&amp;gt;如果你在打出完美格挡的同时按下攻击键，则会立刻发动一次反击。你的对手只能使用完美格挡来防住反击，如果局势改变了，你还可以再使用一次同样的防御手段。&amp;lt;br/&amp;gt; &amp;lt;br/&amp;gt;能够使用完美格挡和反击是剑术高超的证明，还可以吓住经验尚浅的敌人。</Cell>
 </Row>
 <Row>
-<Cell>perk_ex_riposte_name</Cell><Cell>Riposte</Cell><Cell>反击</Cell>
+<Cell>perk_krs_riposte_name</Cell><Cell>Riposte</Cell><Cell>反击</Cell>
 </Row>
 <Row>
-<Cell>perk_ex_ripo_text_desc</Cell><Cell>A masterful combat technique that combines defence and attack in one move. You execute it by pressing the block button at the start of your opponent's strike, which you will recognise by the appearance of a green shield in the middle of the combat rose, the same as in the case of a Perfect Block. But to execute the Master Strike instead of a Perfect Block, you must react quickly and press Block right at the very start of the window of opportunity for the Perfect Block.:&amp;lt;br/&amp;gt; :&amp;lt;br/&amp;gt;How long that window is open depends on the difference in level between your Weapon skill and your opponent's. If the opponent is more experienced, executing the Master Strike is almost impossible. If the opponent is weaker, the window for executing the Master Strike is practically the same as for the Perfect Block.:&amp;lt;br/&amp;gt; :&amp;lt;br/&amp;gt;The Master Strike is a very powerful technique against which there is no defence.</Cell><Cell>一个将攻击和防御合为一体的大师级格斗技巧。在敌人开始发动攻击时，按下格挡按钮但，不发动完美格挡，而是发动大师攻击。你必须集中精神，快速反应，在发动完美格挡的时机前按下格挡按钮。 &amp;lt;br/&amp;gt; &amp;lt;br/&amp;gt;这个时机的长短取决于你和你对手的武器技能等级之差。如果敌人更加老练，则你几乎不可能发动大师攻击。如果敌人更弱一些，则发动大师攻击的时机基本和发动完美格挡的时机一样长。 &amp;lt;br/&amp;gt; &amp;lt;br/&amp;gt;对待没有防御的敌人时，大师攻击非常有效。</Cell>
+<Cell>perk_krs_ripo_text_desc</Cell><Cell>A masterful combat technique that combines defence and attack in one move. You execute it by pressing the block button at the start of your opponent's strike, which you will recognise by the appearance of a green shield in the middle of the combat rose, the same as in the case of a Perfect Block. But to execute the Master Strike instead of a Perfect Block, you must react quickly and press Block right at the very start of the window of opportunity for the Perfect Block.:&amp;lt;br/&amp;gt; :&amp;lt;br/&amp;gt;How long that window is open depends on the difference in level between your Weapon skill and your opponent's. If the opponent is more experienced, executing the Master Strike is almost impossible. If the opponent is weaker, the window for executing the Master Strike is practically the same as for the Perfect Block.:&amp;lt;br/&amp;gt; :&amp;lt;br/&amp;gt;The Master Strike is a very powerful technique against which there is no defence.</Cell><Cell>一个将攻击和防御合为一体的大师级格斗技巧。在敌人开始发动攻击时，按下格挡按钮但，不发动完美格挡，而是发动大师攻击。你必须集中精神，快速反应，在发动完美格挡的时机前按下格挡按钮。 &amp;lt;br/&amp;gt; &amp;lt;br/&amp;gt;这个时机的长短取决于你和你对手的武器技能等级之差。如果敌人更加老练，则你几乎不可能发动大师攻击。如果敌人更弱一些，则发动大师攻击的时机基本和发动完美格挡的时机一样长。 &amp;lt;br/&amp;gt; &amp;lt;br/&amp;gt;对待没有防御的敌人时，大师攻击非常有效。</Cell>
 </Row>
 <Row>
-<Cell>perk_ex_ripo_text_sword</Cell><Cell>Master Strike: Sword</Cell><Cell>大师攻击</Cell>
+<Cell>perk_krs_ripo_text_sword</Cell><Cell>Master Strike: Sword</Cell><Cell>大师攻击</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_2_desc</Cell>
@@ -619,5 +619,9 @@
 <Cell>ui_skill_weapon_unarmed_desc0</Cell>
 <Cell>Unarmed Combat skill makes you more proficient when fighting with your fists, increasing the damage you make.&lt;br/&gt;&amp;nbsp;&lt;br/&gt;New perk points unlock at levels: 3, 6, 9, 12, 15, 18, 20.</Cell>
 <Cell>格斗的战技能力增加赤手空拳作战的熟练度，增加你的拳头造成的伤害 &lt;br/&gt;&amp;nbsp;&lt;br/&gt; 新的技能点会在达到3、6、9、12、15、18和20级时解锁</Cell>
+</Row>
+<Row>
+<Cell>perk_like_a_feather_name</Cell>
+<Cell>Like a Feather I</Cell><Cell>Like a Feather I</Cell>
 </Row>
 </Table>

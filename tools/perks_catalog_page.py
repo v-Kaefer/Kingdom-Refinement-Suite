@@ -117,6 +117,24 @@ def collect():
         loc[m.group(1).strip()] = m.group(2)
     f["loc_keys"] = len(loc)
 
+    import zipfile as _zip
+    want = {P[p].get("perk_ui_name") for r in mp for p in [r.get("parent_id") or ""] if p in P}
+    want |= {r.get("perk_ui_name") for r in vp}
+    gtext = {}
+    for pak in ("English_xml.pak", "English.pak"):
+        pth = os.path.join(vanilla.DEFAULT_GAME, "Localization", pak)
+        if not os.path.exists(pth):
+            continue
+        z = _zip.ZipFile(pth)
+        for zi in z.infolist():
+            if not zi.filename.lower().endswith(".xml"):
+                continue
+            t = vanilla.read_member(z, zi).decode("utf-8-sig", "replace")
+            for m in re.finditer(r"<Row><Cell>([^<]+)</Cell><Cell>(.*?)</Cell>", t, re.S):
+                k = m.group(1).strip()
+                if k in want and k not in gtext:
+                    gtext[k] = clean(m.group(2))
+
     link = collections.defaultdict(list)
     for r in mpb:
         link[r["perk_id"]].append(r["buff_id"])
@@ -134,6 +152,14 @@ def collect():
 
     _, vpb = vanilla.load("rpg/perk_buff")
     vlink = {(r["buff_id"], r["perk_id"]) for r in vpb}
+
+    def disp(pid):
+        """the name a perk shows on screen: our override first, then the game's own text."""
+        row = P.get(pid or "", {})
+        key = row.get("perk_ui_name") or ""
+        if key in loc:
+            return clean(loc[key])
+        return gtext.get(key) or row.get("perk_name") or pid
 
     entries = []
     for r in mp:
@@ -162,7 +188,7 @@ def collect():
             "order": r.get("ui_priority") or "", "icon": r.get("icon_id") or "",
             "icon_vanilla": vicons.get(r.get("icon_id"), 0),
             "stat": r.get("stat_selector") or "", "excl_mode": r.get("exclude_in_game_mode") or "",
-            "parent": P.get(r.get("parent_id") or "", {}).get("perk_name") if r.get("parent_id") else "",
+            "parent": disp(r.get("parent_id")) if r.get("parent_id") else "",
             "parent_new": (r.get("parent_id") or "") not in VP and bool(r.get("parent_id")),
             "meta": P.get(r.get("metaperk_id") or "", {}).get("perk_name") if r.get("metaperk_id") else "",
             "buffs": buffs, "ladder": ladder,
