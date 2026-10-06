@@ -22,23 +22,21 @@
 </Row>
 <Row>
 <Cell>perk_featherweight_2_desc</Cell>
-<Cell>Falling will cause you 50% less injury.</Cell>
-<Cell>落下ダメージを 50% 軽減する。</Cell>
+<Cell>Falling will cause you 40% less injury.</Cell>
+<Cell>落下ダメージを 40% 軽減する。</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_2_name</Cell>
-<Cell>Like a Feather II</Cell>
-<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell><Cell>Like a Feather II</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_3_desc</Cell>
-<Cell>Falling will cause you 75% less injury.</Cell>
-<Cell>落下ダメージを 75% 軽減する。</Cell>
+<Cell>Falling will cause you 55% less injury.</Cell>
+<Cell>落下ダメージを 55% 軽減する。</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_3_name</Cell>
-<Cell>Like a Feather III</Cell>
-<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell><Cell>Like a Feather III</Cell>
 </Row>
 <Row>
 <Cell>perk_fighting_stance_1_desc</Cell>
@@ -92,8 +90,7 @@
 </Row>
 <Row>
 <Cell>perk_film_grip_name</Cell>
-<Cell>Firm Grip I</Cell>
-<Cell>堅握 I</Cell>
+<Cell>Knock Knock I</Cell><Cell>Knock Knock I</Cell>
 </Row>
 <Row>
 <Cell>perk_firm_grip_2_desc</Cell>
@@ -102,8 +99,7 @@
 </Row>
 <Row>
 <Cell>perk_firm_grip_2_name</Cell>
-<Cell>Firm Grip II</Cell>
-<Cell>堅握 II</Cell>
+<Cell>Knock Knock II</Cell><Cell>Knock Knock II</Cell>
 </Row>
 <Row>
 <Cell>perk_firm_grip_3_desc</Cell>
@@ -112,8 +108,7 @@
 </Row>
 <Row>
 <Cell>perk_firm_grip_3_name</Cell>
-<Cell>Firm Grip III</Cell>
-<Cell>堅握 III</Cell>
+<Cell>Knock Knock III</Cell><Cell>Knock Knock III</Cell>
 </Row>
 <Row>
 <Cell>perk_sweet_scent_desc</Cell>

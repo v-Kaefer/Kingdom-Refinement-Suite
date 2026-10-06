@@ -22,23 +22,21 @@
 </Row>
 <Row>
 <Cell>perk_featherweight_2_desc</Cell>
-<Cell>As quedas provocam 50% menos lesões.</Cell>
-<Cell>As quedas provocam 50% menos lesões.</Cell>
+<Cell>As quedas provocam 40% menos lesões.</Cell>
+<Cell>As quedas provocam 40% menos lesões.</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_2_name</Cell>
-<Cell>Like a Feather II</Cell>
-<Cell>Like a Feather II</Cell>
+<Cell>Like a Feather II</Cell><Cell>Like a Feather II</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_3_desc</Cell>
-<Cell>As quedas provocam 75% menos lesões.</Cell>
-<Cell>As quedas provocam 75% menos lesões.</Cell>
+<Cell>As quedas provocam 55% menos lesões.</Cell>
+<Cell>As quedas provocam 55% menos lesões.</Cell>
 </Row>
 <Row>
 <Cell>perk_featherweight_3_name</Cell>
-<Cell>Like a Feather III</Cell>
-<Cell>Like a Feather III</Cell>
+<Cell>Like a Feather III</Cell><Cell>Like a Feather III</Cell>
 </Row>
 <Row>
 <Cell>perk_fighting_stance_1_desc</Cell>
@@ -92,8 +90,7 @@
 </Row>
 <Row>
 <Cell>perk_film_grip_name</Cell>
-<Cell>Punho firme I</Cell>
-<Cell>Punho firme I</Cell>
+<Cell>Knock Knock I</Cell><Cell>Knock Knock I</Cell>
 </Row>
 <Row>
 <Cell>perk_firm_grip_2_desc</Cell>
@@ -102,8 +99,7 @@
 </Row>
 <Row>
 <Cell>perk_firm_grip_2_name</Cell>
-<Cell>Punho firme II</Cell>
-<Cell>Punho firme II</Cell>
+<Cell>Knock Knock II</Cell><Cell>Knock Knock II</Cell>
 </Row>
 <Row>
 <Cell>perk_firm_grip_3_desc</Cell>
@@ -112,8 +108,7 @@
 </Row>
 <Row>
 <Cell>perk_firm_grip_3_name</Cell>
-<Cell>Punho firme III</Cell>
-<Cell>Punho firme III</Cell>
+<Cell>Knock Knock III</Cell><Cell>Knock Knock III</Cell>
 </Row>
 <Row>
 <Cell>perk_sweet_scent_desc</Cell>

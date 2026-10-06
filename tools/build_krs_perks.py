@@ -67,11 +67,24 @@ PERK_FIXES = {
     YOKEL:       {"parent_id": LOWBORN},
 }
 # display text to replace in every language (the mod's own keys)
+# A name is one string for every language (that is how the game ships proper nouns too).
 TEXT_FIXES = {
     "perk_featherweight_1_name": None,                      # tier I reverts to the game's text
     "perk_featherweight_1_desc": None,
     "perk_featherweight_2_name": "Like a Feather II",
     "perk_featherweight_3_name": "Like a Feather III",
+    "perk_film_grip_name": "Knock Knock I",                 # the game's "Firm hand", renamed
+    "perk_firm_grip_2_name": "Knock Knock II",
+    "perk_firm_grip_3_name": "Knock Knock III",
+}
+
+# A description must not be flattened to English, so only the wrong number is replaced and every
+# translation is left alone. key -> (as the mod wrote it, what the buff really does).
+# The mod's Like a Feather text claims the opposite of its own formula: fdm*0.60 is 40% less fall
+# damage, not 50%, and fdm*0.45 is 55%, not 75%.
+TEXT_NUMBER_FIXES = {
+    "perk_featherweight_2_desc": ("50", "40"),
+    "perk_featherweight_3_desc": ("75", "55"),
 }
 
 
@@ -215,6 +228,37 @@ def merge_text(args):
             with open(dest, "w", encoding="utf-8") as f:
                 f.write(have.rstrip().removesuffix("</Table>").rstrip() + "\n"
                         + "\n".join(add) + "\n</Table>\n")
+    return fix_text()
+
+
+def fix_text():
+    """Apply TEXT_FIXES and TEXT_NUMBER_FIXES to the rows already in the module's language files.
+
+    merge_text only adds keys that are not there yet, so a decision taken after the first build
+    would never reach the files without this pass.
+    """
+    changed = collections.Counter()
+    base = os.path.join(MODULE, "Localization")
+    for lang in sorted(os.listdir(base)):
+        dest = os.path.join(base, lang, f"text__{SUFFIX}.xml")
+        if not os.path.exists(dest):
+            continue
+        text = before = open(dest, encoding="utf-8").read()
+        for key, new in TEXT_FIXES.items():
+            if new is None:
+                continue
+            text = re.sub(r"(<Cell>" + re.escape(key) + r"</Cell>\s*)<Cell>.*?</Cell>\s*<Cell>.*?</Cell>",
+                          lambda m: f"{m.group(1)}<Cell>{new}</Cell><Cell>{new}</Cell>",
+                          text, flags=re.S)
+        for key, (wrong, right) in TEXT_NUMBER_FIXES.items():
+            def swap(m, wrong=wrong, right=right):
+                return m.group(1) + m.group(2).replace(wrong, right)
+            text = re.sub(r"(<Cell>" + re.escape(key) + r"</Cell>\s*)((?:<Cell>.*?</Cell>\s*){1,2})",
+                          swap, text, flags=re.S)
+        if text != before:
+            open(dest, "w", encoding="utf-8").write(text)
+            changed[lang] += 1
+    return changed
 
 
 def main():
