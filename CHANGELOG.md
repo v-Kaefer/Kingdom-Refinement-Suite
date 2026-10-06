@@ -5,6 +5,15 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-06: krs_exploration prepared
+
+No game run, no mod run. The Trough Washing Animation archive was listed, its `.pak` extracted to a scratch folder inside `dist/` and deleted.
+
+- New module `modules/krs_exploration` (branch `krs-exploration`): `Scripts/Startup/krs_exploration.lua` with the shrine/cross reading XP and the nest XP (ideas of 1518 and 1519, code written for the module, wrapping `CaptionObject:OnUsed` and `Nest.Client:OnHit`).
+- Optional package `krs_exploration_wash` from cuts of 2372 in `src/wash/` (2 animation fragments, 3 text diffs, 1 Lua file, a list of 21 binary assets with sha256). Left out of 2372: 187 crossbow fragments, the crossbow tags, 157 crossbow event blocks, the boiler eating animations.
+- New `tools/adb_cut.py` (fragment-level cuts of an animation database, applied to the game's file with a check that the result is the game's fragments plus exactly those changes), `tools/text_cut.py` (diffs applied to the game's own text files; the result reproduces the mod's file byte for byte for so_water_tube and workbehaviors) and `tools/build_exploration.py`.
+- `docs/project/PERMISSIONS.md`: 1518, 1519 and 2372 recorded as not requested; the wash package must not be published.
+
 ## 2026-10-04 (tenth request): illustrated PDF report
 
 No game run, no mod run, no archive opened, nothing downloaded.

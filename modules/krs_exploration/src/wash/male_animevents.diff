@@ -1,0 +1,30 @@
+--- vanilla
++++ mod
+@@ -53457,5 +53457,27 @@
+     <event name="audio_trigger" time="0.92790329" endTime="0.92790329" parameter="n_pe_shovel2_use" bone="" offset="0,0,0" dir="0,0,0" model="" />
+     <event name="audio_trigger" time="0.93315667" endTime="0.93315667" parameter="stone_falling" bone="" offset="0,0,0" dir="0,0,0" model="" />
+   </animation>
++  <animation name="animations/humans/male/behavior/player_washing_watertube.caf">
++    <event name="footstep" time="0.02601852" endTime="0.02601852" parameter="fq_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="foley" time="0.07111111" endTime="0.07111363" parameter="move_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="effect" time="0.1" endTime="0.6948757" parameter="workBehaviors.bathhouse.splash_3" bone="Human_Male" offset="0,0.75,0.55" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.1130864" endTime="0.1130864" parameter="f_n_water_lap_bm" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.1933333" endTime="0.2183636" parameter="f_n_water_lap_bq" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="foley" time="0.200216" endTime="0.200216" parameter="move_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.2848148" endTime="0.2848148" parameter="f_n_water_lap_al" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="foley" time="0.4283025" endTime="0.4283025" parameter="move_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.4702469" endTime="0.4702469" parameter="f_n_water_lap_bm" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="effect" time="0.4736111" endTime="0.6948757" parameter="workBehaviors.bathhouse.splash_3" bone="Human_Male" offset="0,0.75,0.55" dir="0,0,0" model="" />
++    <event name="effect" time="0.5" endTime="0.6948757" parameter="workBehaviors.bathhouse.splash_3" bone="Human_Male" offset="0,0.75,0.55" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.5511111" endTime="0.5511111" parameter="f_n_water_lap_bq" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.6751851" endTime="0.6751851" parameter="f_n_water_lap_al" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="foley" time="0.6908333" endTime="0.6908409" parameter="foleyaq_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="foley" time="0.7841976" endTime="0.7841976" parameter="foleyaq_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.7954629" endTime="0.7954629" parameter="f_n_water_lap_am" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="audio_trigger" time="0.8529938" endTime="0.8529938" parameter="f_n_water_lap_am" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="foley" time="0.8669136" endTime="0.8669136" parameter="foleyaq_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="footstep" time="0.8857098" endTime="0.8857098" parameter="fq_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++    <event name="footstep" time="0.991574" endTime="0.991574" parameter="fdq_mat" bone="" offset="0,0,0" dir="0,0,0" model="" />
++  </animation>
+ </anim_event_list>
+ 
