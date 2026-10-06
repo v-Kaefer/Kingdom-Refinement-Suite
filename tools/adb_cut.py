@@ -196,7 +196,7 @@ def apply(a):
     expected = et_multiset(text)      # verification below uses ElementTree on both sides, independent of the offset parser
     if sum(expected.values()) != len(base_frs):
         raise SystemExit(f"the offset parser found {len(base_frs)} fragments, ElementTree {sum(expected.values())}: not safe to edit this file")
-    allops, problems, seen = [], [], {}
+    allops, problems, seen, skipped = [], [], {}, []
     for c in a.cut:
         _, _, ops = read_cut(c)
         for o in ops:
@@ -221,7 +221,11 @@ def apply(a):
             hit = [f for f in cands if f["md5"] == o["old"] and f["start"] not in claimed]
             if not hit:
                 state = "already changed" if o["type"] == "replace" and any(f["md5"] == o["new"] for f in cands) else "stale (the file has a different fragment)"
-                problems.append(f"{o['type']} {o['fid']} Tags={o['tags']!r} FragTags={o['fragtags']!r} from {o['cut']}: {state}")
+                msg = f"{o['type']} {o['fid']} Tags={o['tags']!r} FragTags={o['fragtags']!r} from {o['cut']}: {state}"
+                if a.skip_stale:
+                    skipped.append((o["cut"], o["type"], o["fid"], o["tags"], o["fragtags"], state))
+                else:
+                    problems.append(msg)
                 continue
             f = hit[0]
             claimed.add(f["start"])
@@ -242,6 +246,14 @@ def apply(a):
                 edits.append((pos, pos, f"    <{o['fid']}>{nl}{raw}    </{o['fid']}>{nl}"))
             expected[(o["fid"], o["tags"], o["fragtags"], digest(raw))] += 1
         stats[o["type"]] += 1
+    if skipped:
+        print(f"  skipped {len(skipped)} operation(s) that do not fit the file (--skip-stale): " + ", ".join(f"{n} {st}" for st, n in collections.Counter((x[5], x[0]) for x in skipped).items()))
+        if a.report:
+            import csv
+            with open(a.report, "w", newline="", encoding="utf-8") as fh:
+                w = csv.writer(fh)
+                w.writerow(["cut", "op", "fid", "tags", "fragtags", "why_skipped"])
+                w.writerows(skipped)
     if problems:
         print("NOT WRITTEN, problems:")
         for p in problems:
@@ -255,6 +267,7 @@ def apply(a):
     if got != expected:
         print("VERIFICATION FAILED: merged file differs from 'game file + cuts' in", sum(((got - expected) + (expected - got)).values()), "fragments; not written")
         return 3
+    os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     open(a.out, "wb").write(out.encode("utf-8"))
     print(f"wrote {a.out}: {dict(stats)}; verified (ElementTree): the game's {len(base_frs)} fragments with exactly these changes ({sum(got.values())} now)")
     return 0
@@ -277,6 +290,8 @@ def main():
     p.add_argument("--cut", nargs="+", required=True)
     p.add_argument("--base", default="vanilla:010902")
     p.add_argument("--out", required=True)
+    p.add_argument("--skip-stale", action="store_true", help="drop replace/remove operations whose expected fragment is not in the file (a cut made on an older base) and report them")
+    p.add_argument("--report", help="CSV of the skipped operations")
     ls = sub.add_parser("list")
     ls.add_argument("--cut", nargs=1, required=True)
     a = ap.parse_args()

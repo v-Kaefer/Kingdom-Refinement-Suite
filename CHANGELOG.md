@@ -5,6 +5,13 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-06: krs_exploration merge tests
+
+No game run. Archives read through scratch folders that were deleted.
+
+- Branch `krs-exploration-merges` (stacked on `krs-exploration`): cuts of 1563, 2276 and 2049 in `modules/krs_exploration/src/merge_tests/`, with a README of the cuts, the commands and the results. Merging them with the wash cut gives one animation database with no conflict between cuts; 163 of 2049's 324 operations are stale (fragments the game's patches changed) and need an attribute-level rebase; 2294's variant is still to be chosen. 2045 is the same file as 1563 and counts as one.
+- `tools/adb_cut.py`: `--skip-stale` and `--report` for cuts made on an older base.
+
 ## 2026-10-06: krs_exploration prepared
 
 No game run, no mod run. The Trough Washing Animation archive was listed, its `.pak` extracted to a scratch folder inside `dist/` and deleted.
