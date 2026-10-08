@@ -44,7 +44,7 @@
        <Behavior canSkip="1">
 +        <LuaGate code="&quot;return entity.id == g_localActor.id&quot;" saveVersion="2">
 +          <Then canSkip="1">
-+<LuaGate code="&quot;local t = System.GetCurrTime() if TroughWashBusyUntil and t &lt; TroughWashBusyUntil then return false end TroughWashBusyUntil = t + 7 return true&quot;" saveVersion="2"><Then canSkip="1"><LuaWrapper onEnter="&quot;ActionMapManager.EnableActionFilter(&apos;only_dialog&apos;, true)&quot;" onExit="&quot;ActionMapManager.EnableActionFilter(&apos;only_dialog&apos;, false)&quot;">
++<LuaGate code="&quot;local t = System.GetCurrTime() if TroughWashBusyUntil and t &lt; TroughWashBusyUntil then return false end TroughWashBusyUntil = t + 7 return true&quot;" saveVersion="2"><Then canSkip="1"><LuaWrapper onEnter="&quot;ActionMapManager.EnableActionFilter(&apos;only_dialog&apos;, true) if TroughWash then TroughWash.Begin() end&quot;" onExit="&quot;ActionMapManager.EnableActionFilter(&apos;only_dialog&apos;, false) if TroughWash then TroughWash.End() end&quot;">
 +          <Sequence>
 +            <SuppressFailure>
 +              <SendMessageToNPC target="__player" type="player:holsterWeapon" values="" timeType="GameTime" timeoutType="OnProcessed" timeout="-1" answer="" />
