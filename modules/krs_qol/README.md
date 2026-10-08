@@ -29,3 +29,9 @@ Puts the shield back when the torch is put away. It is a Lua script in a pak, no
 - Permission to include it in a KRS package has not been asked, so nothing of it is stored here; see `docs/project/PERMISSIONS.md` on `develop`.
 - Works with `krs_exploration_wash`: the wash pauses Reshield through Reshield's own `enabled` flag while it runs (the wash takes the torch off and gives it back by itself), then puts the flag back. Without Reshield installed the wash does nothing extra.
 - Console commands of the mod: `rs_status`, `rs_dump`, `rs_off`, `rs_on`, `rs_debug`.
+
+Build the companion from the author's archive (checks the hashes above, writes `dist/reshield`; `--install` also copies it into a game folder and adds it to `mod_order.txt`):
+
+    python tools/build_qol_reshield.py --from "<Reshield 2313 ... .zip>" [--install "<KCD folder>"]
+
+Played together with `krs_exploration_wash` in the test game (2026-10-08): the torch returns after the wash, Reshield returns the shield when the torch is put away, and both work together.
