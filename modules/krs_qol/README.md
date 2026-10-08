@@ -17,3 +17,15 @@ Based on ideas from Realistic Repairs, Herb Picking Radius 2x, Train More Carry 
 
 ## Install
 Vortex: install `krs_qol-<version>.zip`. Manually: copy the `krs_qol` folder into `Mods/` and add `krs_qol` to `Mods/mod_order.txt`.
+
+## Optional: Reshield (Nexus 2313, by Conway)
+Puts the shield back when the torch is put away. It is a Lua script in a pak, not a table patch, so it is **not** part of the `krs_qol` zip. It is installed as the author's own mod (`reshield`, version 2.0), unchanged, and goes after `krs_qol` in `mod_order.txt`.
+
+| File in the author's archive | sha256 |
+|---|---|
+| `Reshield/Data/reshield.pak` | `4134e5531fa87eceef5464722d34cc01d5ffa90eaa323274a1f35df0bd804b7f` |
+| `Reshield/mod.manifest` | `1da90973688458ac9ba8ad279b8d9cf6c1490db4b702cd7ad9c22693af90dbe8` |
+
+- Permission to include it in a KRS package has not been asked, so nothing of it is stored here; see `docs/project/PERMISSIONS.md` on `develop`.
+- Works with `krs_exploration_wash`: the wash pauses Reshield through Reshield's own `enabled` flag while it runs (the wash takes the torch off and gives it back by itself), then puts the flag back. Without Reshield installed the wash does nothing extra.
+- Console commands of the mod: `rs_status`, `rs_dump`, `rs_off`, `rs_on`, `rs_debug`.

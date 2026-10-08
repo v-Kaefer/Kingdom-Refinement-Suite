@@ -7,3 +7,6 @@
 - Repairs: global price x2 (normal mode) and x2 in the Hardcore constants. Limits left untouched until tested in game.
 - Quest texts moved from `Tables/ui/text_*__KRSPKG1.xml` (a mechanism the game does not use for text) to `Localization/<Language>_xml.pak` with `text__krs_qol.xml`; the engine loads the patch (log line `Loading localization patch`).
 - Checked in game at the main menu: the three `rpg_param` rows and the constants. The override and `skill2item_category` rows need a level.
+
+## Unreleased
+- Optional Reshield (2313) documented with the hashes of the original files; it stays the author's unchanged mod, nothing of it is copied here. Played together with `krs_exploration_wash` in the test game: torch returns after the wash; the Reshield pause during the wash is in `krs_exploration` and waits for a play test.
