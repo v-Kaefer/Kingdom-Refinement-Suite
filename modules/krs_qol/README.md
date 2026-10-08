@@ -17,3 +17,6 @@ Based on ideas from Realistic Repairs, Herb Picking Radius 2x, Train More Carry 
 
 ## Install
 Vortex: install `krs_qol-<version>.zip`. Manually: copy the `krs_qol` folder into `Mods/` and add `krs_qol` to `Mods/mod_order.txt`.
+
+## Planned
+- Reshield From Torch (Nexus 2313, by Conway): puts the shield back when the torch is put away. Script-only (a Lua file in a pak), so krs_qol would need a built pak, not just loose tables. Permission to include it is not asked yet; until then the original mod is installed beside krs_qol in the test game. Notes in `docs/tests/README.md`.

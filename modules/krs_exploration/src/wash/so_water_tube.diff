@@ -32,7 +32,7 @@
                </Then>
                <Else canSkip="1">
                  <ExecuteLua code="&quot;Game.SendInfoText(&apos;@waterTube_wash_max_text&apos;,false)&quot;" />
-@@ -339,9 +342,47 @@
+@@ -339,9 +342,49 @@
        <Variable name="helperID" type="_int" values="-1" form="single" />
        <Variable name="savePos" type="common:vec3" values="" form="single" />
        <Variable name="saveRot" type="common:vec3" values="" form="single" />
@@ -49,6 +49,7 @@
 +            <SuppressFailure>
 +              <SendMessageToNPC target="__player" type="player:holsterWeapon" values="" timeType="GameTime" timeoutType="OnProcessed" timeout="-1" answer="" />
 +            </SuppressFailure>
++            <SuppressFailure><VarOperation varName="&quot;equippedTorch&quot;" targetVarName="&quot;&quot;" operation="&quot;Reinit&quot;" argument="&quot;&quot;" /></SuppressFailure>
 +            <SuppressFailure>
 +              <Sequence>
 +                <GraphSearch Origin="&quot;&quot;" Borders="&quot;&quot;" depth="&quot;1&quot;" selection="&quot;true&quot;" SearchPattern="&quot;Depth&quot;" EdgePruning="&quot;parent,inventory&quot;" AllowedEdges="&quot;&quot;" SubGraph="&quot;inventory&quot;" AllowSubtraph="&quot;false&quot;" includeOrigin="&quot;false&quot;" excludeOrigin="&quot;false&quot;" failOnEmpty="&quot;true&quot;" SetOperationChoice="&quot;Intersection|And&quot;" errorOnEmpty="&quot;false&quot;" shortCircuit="&quot;false&quot;" skipTraversed="&quot;true&quot;">
@@ -72,6 +73,7 @@
 +              </Sequence>
 +            </SuppressFailure>
 +            <SuppressFailure><IfCondition failOnCondition="&quot;false&quot;" condition="&quot;$glove ~= $__null&quot;"><Sequence><EquipItem item="&quot;glove&quot;" Target="&quot;&quot;" /></Sequence></IfCondition></SuppressFailure>
++            <SuppressFailure><IfCondition failOnCondition="&quot;false&quot;" condition="&quot;$equippedTorch ~= $__null&quot;"><Sequence><EquipItem item="&quot;equippedTorch&quot;" Target="&quot;&quot;" /></Sequence></IfCondition></SuppressFailure>
 +            <ExecuteLua code="&quot;g_localActor.actor:WashDirtAndBlood(0.8) &#10;Game.SendInfoText(&apos;@waterTube_wash_text&apos;,false)&quot;" />
 +          </Sequence>
 +        </LuaWrapper></Then><Else canSkip="1"><Sequence><Success /></Sequence></Else></LuaGate>
@@ -80,7 +82,7 @@
          <FuseBox StatusPropagation="&quot;Child&quot;" OneCleanup="&quot;true&quot;" saveVersion="2">
            <Child canSkip="1">
              <Sequence>
-@@ -372,6 +413,8 @@
+@@ -372,6 +415,8 @@
              </Sequence>
            </OnFail>
          </FuseBox>
