@@ -1,0 +1,635 @@
+<?xml version='1.0' encoding='utf-8'?>
+<adbcut mod="2276" base="vanilla:010902" note="Instant Herb Picking Merged (2276). Third-party text.">
+  <op type="replace" fid="AlchemyPutBowl" tags="" fragtags="alchemyMortar" old="0b09101d9a84" new="a11edb834b35">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyMortar"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_bowl_to_mortar" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.73247999" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.77" StartTime="0" Duration="0.48444939" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyPutBowl" tags="" fragtags="alchemyPot" old="51df93ca180f" new="03014d31fe3a">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyPot"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_bowl_to_pot" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.62812507" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="3.7899997" StartTime="0" Duration="1.3914783" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.86179841" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.herbs_pouring" /&gt;
+              &lt;JointName value="" /&gt;
+              &lt;AttachmentName value="hand_right" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.3382015" StartTime="0" Duration="0.58999991" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyPutHerb" tags="" fragtags="alchemyBowl" old="d799e6581232" new="ba9e83f9d8c4">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBowl"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_herb_to_bowl" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyPutHerb" tags="" fragtags="alchemyMortar" old="4ee81e227dbf" new="6b7293995b08">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyMortar"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_herb_to_mortar" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.60000002" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="1.9524479" StartTime="0" Duration="0.3311429" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyPutHerb" tags="" fragtags="alchemyPot" old="1c84c584c8d0" new="8179622d866e">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyPot"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_herb_to_pot" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.32556823" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.55" StartTime="0" Duration="0.75200295" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.92778003" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.herbs_pouring" /&gt;
+              &lt;JointName value="" /&gt;
+              &lt;AttachmentName value="hand_right" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyPutMortar" tags="" fragtags="alchemyBowl" old="2b1032134013" new="3635703a2286">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBowl"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_mortar_to_bowl" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.34424093" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="4.77" StartTime="0" Duration="0.85839748" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyPutMortar" tags="" fragtags="alchemyPot" old="252617fc0028" new="adc74520b523">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyPot"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_mortar_to_pot" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.40160021" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="5.9663901" StartTime="0" Duration="1.2291741" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="2.4000001" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.herbs_pouring" /&gt;
+              &lt;JointName value="LeftHandSlot" /&gt;
+              &lt;AttachmentName value="hand_left" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="-0.050000001" /&gt;
+                &lt;Element value="-0.07" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="1.5999999" StartTime="0" Duration="0.4000001" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemyBellow" old="4b1306224dcb" new="a175c920baa8">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBellow"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_bellow" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemyBowl" old="d939b57671ea" new="7225480f9f22">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBowl"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_bowl" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemyFlask" old="e29db208c47e" new="39d77a920d28">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyFlask"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_potion_flask" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemyMortar" old="e0fa81fbd312" new="e0accbdec2e9">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyMortar"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_mortar" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemySlot1" old="70f5b3c81ae4" new="0c7e106565c0">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySlot1"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_herb_1" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemySlot2" old="c1800c731745" new="7e766b58146c">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySlot2"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_herb_2" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyReturn" tags="" fragtags="alchemySlot3" old="7296df49e02a" new="fc5e670dd307">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySlot3"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.30000001" /&gt;
+          &lt;Animation name="alchemy_return_herb_3" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemyBellow" old="c7df70cd7dc3" new="a765dcc67cbc">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBellow"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_bellow" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemyBowl" old="95da35d10097" new="e2d206d3b633">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBowl"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_bowl" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemyFlask" old="eb1a2ce6eae5" new="88de72897ace">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyFlask"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.15280092" /&gt;
+          &lt;Animation name="alchemy_pick_potion_flask" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.15280092" StartTime="0" Duration="0.43472624" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.3111839" StartTime="0" Duration="0.75712013" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemyMortar" old="1f55d2ef3dd0" new="7b49c8cb7585">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyMortar"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_mortar" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.2" StartTime="0" Duration="0.79999995" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemySlot1" old="42436d268f46" new="73155a8705a1">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySlot1"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="2.0861626e-07" /&gt;
+          &lt;Animation name="alchemy_pick_herb_1" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.69999999" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.9699838" StartTime="0" Duration="0.89021087" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemySlot2" old="ec3d61db77d6" new="6508d7eb003a">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySlot2"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_pick_herb_2" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.69999999" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.6265457" StartTime="0" Duration="0.62333345" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyTake" tags="" fragtags="alchemySlot3" old="d5e5273e9622" new="dd11f58f623a">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySlot3"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_pick_herb_3" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.44785765" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.3595476" StartTime="0" Duration="1.0500176" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyBellow" old="c14f8b46fb58" new="e87d5f914726">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyBellow"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_use_bellow" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyHoney" old="21733f34701b" new="3efa5555ef02">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyHoney"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_special_2" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.2" StartTime="0" Duration="0.60000002" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="3.6271622" StartTime="0" Duration="0.55599976" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyHooch" old="8c475e2a6be6" new="3cdc36c3d70a">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyHooch"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_vial_4" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.2" StartTime="0" Duration="0.45821762" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="7.2505598" StartTime="0" Duration="0.65309143" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="3.1293366" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.spiritus_pouring" /&gt;
+              &lt;JointName value="" /&gt;
+              &lt;AttachmentName value="hand_left" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="0.84066343" StartTime="0" Duration="0.41369486" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyMortar" old="8ff40a5524b1" new="e5d477f2f36c">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyMortar"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_use_mortar" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.3637501" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="6.9344811" StartTime="0" Duration="1.0718718" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyOil" old="4f12339d6230" new="8b40c5892938">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyOil"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_vial_3" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.2" StartTime="0" Duration="0.59987205" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="7.399931" StartTime="0" Duration="1.2802858" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="3.03" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.oil_pouring" /&gt;
+              &lt;JointName value="" /&gt;
+              &lt;AttachmentName value="hand_left" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="1.8199999" StartTime="0" Duration="0.42999983" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyPot" old="52a5fda7a5c1" new="9ff5c3f1e5c6">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyPot"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_finish_pot" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.49280328" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="6.8553963" StartTime="0" Duration="0.68903828" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemySandglass" old="200ddee6699e" new="42722ac5a055">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemySandglass"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0" /&gt;
+          &lt;Animation name="alchemy_use_sandglass" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.60556996" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="2.4698703" StartTime="0" Duration="0.30296016" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyVine" old="66032e3da7eb" new="119ecd4120a2">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyVine"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_vial_2" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.21978153" StartTime="0" Duration="0.31360459" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="8.4776468" StartTime="0" Duration="1.5078888" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="4.4771471" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.wine_pouring" /&gt;
+              &lt;JointName value="" /&gt;
+              &lt;AttachmentName value="hand_left" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="1.0892577" StartTime="0" Duration="0.83828211" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="AlchemyUse" tags="" fragtags="alchemyWater" old="62b6d6801901" new="6586c517913d">
+      &lt;Fragment BlendOutDuration="0.2" Tags="" FragTags="alchemyWater"&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="alchemy_pick_vial_1" speed="4"  /&gt;
+        &lt;/AnimLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="0.26624" StartTime="0" Duration="0.39449984" /&gt;
+          &lt;Procedural type="AnimateCamera"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;Offset value="0" /&gt;
+              &lt;BlendPos value="0" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="9.0305433" StartTime="0" Duration="0.89418888" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+        &lt;ProcLayer&gt;
+          &lt;Blend ExitTime="3.6300001" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="ParticleEffect"&gt;
+            &lt;ProceduralParams&gt;
+              &lt;EffectName value="WH_Particels.other.water_pouring" /&gt;
+              &lt;JointName value="" /&gt;
+              &lt;AttachmentName value="hand_left" /&gt;
+              &lt;PosOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/PosOffset&gt;
+              &lt;RotOffset&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+                &lt;Element value="0" /&gt;
+              &lt;/RotOffset&gt;
+              &lt;CloneAttachment value="false" /&gt;
+              &lt;KillOnExit value="false" /&gt;
+              &lt;KeepEmitterActive value="false" /&gt;
+            &lt;/ProceduralParams&gt;
+          &lt;/Procedural&gt;
+          &lt;Blend ExitTime="1.9699998" StartTime="0" Duration="0.2" /&gt;
+          &lt;Procedural type="" /&gt;
+        &lt;/ProcLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="replace" fid="PickingHerbs" tags="" fragtags="" old="d79272cde600" new="1258cc237e06">
+      &lt;Fragment BlendOutDuration="0.2" Tags=""&gt;
+        &lt;AnimLayer&gt;
+          &lt;Blend ExitTime="0" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="gate_long_open_front_right" /&gt;
+          &lt;Blend ExitTime="0.2" StartTime="0" Duration="0.2" /&gt;
+          &lt;Animation name="" /&gt;
+        &lt;/AnimLayer&gt;
+      &lt;/Fragment&gt;
+</op>
+  <op type="remove" fid="PickingHerbs" tags="Scope_HoldItem" fragtags="" old="f357011e8858" />
+  <op type="remove" fid="PickingHerbs" tags="Scope_Looking" fragtags="" old="051cdfcc16ed" />
+</adbcut>

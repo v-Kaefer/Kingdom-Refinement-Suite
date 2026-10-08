@@ -1,6 +1,6 @@
 # KRS Exploration
 
-Part of the Kingdom Refinement Suite. Small rewards for exploring. **Status: prepared, not yet run in the test game** (branch `krs-exploration`).
+Part of the Kingdom Refinement Suite. Small rewards for exploring. **Status: v1.0.0** (branch `krs-exploration`). The wash and the torch return were played in the test game; the XP scripts load without error but their XP gain has not been seen in play yet. The animation cuts of 1563/2045, 2276, 2294 and 2049 (`src/merge_tests/`) are kept for the next iteration and are not part of v1.
 
 ## What it contains (author's decision of 2026-10-06)
 | Part | Package | Idea from | What | How |
