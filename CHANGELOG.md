@@ -14,6 +14,8 @@ Played by the author in the replica game (1.9.8): the trough wash animation work
 - `krs-qol`: Reshield documented as an optional companion with the sha256 of the author's two files; `tools/build_qol_reshield.py` reads them from the author's archive. Nothing of the mod is stored in the repository; permission is not asked yet.
 - Log check of the play session (`kcd.log`): both packages accepted for 1.9.8, paks opened, init scripts loaded, `shrine and cross XP installed`, `nest XP installed`, no "Invalid animation DB", no Lua error from KRS code. The XP scripts write nothing when they give XP, so their effect is **not** verified yet.
 
+Decision of the author: `krs_exploration` and `krs_exploration_wash` are **v1.0.0**. The cuts of 1563 (with 2045), 2276, 2294 and 2049 stay for the next iteration; they are in `src/merge_tests/` and are not built into v1.
+
 Learned (for the next iterations):
 - A mod that unequips something must give it back. Read a mod's behaviour trees for `UnEquipItem` without a matching `EquipItem` (2372 had that bug).
 - Do not edit a third-party script to make two mods agree. Look for the switch the script already has (`Reshield.enabled`) and flip it from our own wrapper, with an `if Reshield then` guard so the soft dependency costs nothing when the mod is absent.

@@ -4,7 +4,7 @@
     <name>KRS Exploration</name>
     <description>Kingdom Refinement Suite - exploration: small skill XP for reading wayside shrines and crosses, shooting down nests, and a wash animation at water troughs.</description>
     <author>Kaleb</author>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <created_on>06/10/2026</created_on>
     <modid>krs_exploration</modid>
     <modifies_level>false</modifies_level>

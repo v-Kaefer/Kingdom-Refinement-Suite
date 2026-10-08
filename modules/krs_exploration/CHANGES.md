@@ -1,5 +1,8 @@
 # krs_exploration changes
 
+## 1.0.0 (2026-10-08, v1 of krs_exploration)
+Declared v1 by the author after the wash, the torch return and Reshield were played together in the test game. Contents: the two XP scripts and the optional wash package, as listed below. The XP scripts are installed without error (log) but their XP gain has not been seen in play yet. Kept for the next iteration, not part of v1: the animation cuts of 1563 (also 2045), 2276, 2294 and 2049 (`src/merge_tests/`, no conflict with the wash in the menu-stage test).
+
 ## 0.0.1 (prepared, not yet run in the game)
 - Module id `krs_exploration`, manifest listing game versions 1.9.6, 1.9.7, 1.9.8.
 - `Data/Scripts/Startup/krs_exploration.lua`: +1 `reading` XP for a shrine or cross read for the first time (wraps `CaptionObject:OnUsed`) and +1 `weapon_bow` XP for a nest shot down (wraps `Nest.Client:OnHit`). Installed at script load and again when the loading screen ends.
