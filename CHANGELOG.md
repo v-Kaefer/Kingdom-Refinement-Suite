@@ -5,6 +5,25 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-08: wash confirmed in game, torch return, Reshield, what was learned
+
+Played by the author in the replica game (1.9.8): the trough wash animation works, gloves come off, the torch comes back, Reshield (2313) and the wash work together.
+
+- `krs_exploration_wash`: the player's torch is put back in hand after the wash (`so_water_tube.diff`). 2372 took it off and only gave the glove back.
+- `troughwash.lua` pauses Reshield while the wash runs (`Reshield.enabled`, restored 1.5 s after the wash), so the shield is not put in hand while the torch is off. Reshield's code is not touched.
+- `krs-qol`: Reshield documented as an optional companion with the sha256 of the author's two files; `tools/build_qol_reshield.py` reads them from the author's archive. Nothing of the mod is stored in the repository; permission is not asked yet.
+- Log check of the play session (`kcd.log`): both packages accepted for 1.9.8, paks opened, init scripts loaded, `shrine and cross XP installed`, `nest XP installed`, no "Invalid animation DB", no Lua error from KRS code. The XP scripts write nothing when they give XP, so their effect is **not** verified yet.
+
+Learned (for the next iterations):
+- A mod that unequips something must give it back. Read a mod's behaviour trees for `UnEquipItem` without a matching `EquipItem` (2372 had that bug).
+- Do not edit a third-party script to make two mods agree. Look for the switch the script already has (`Reshield.enabled`) and flip it from our own wrapper, with an `if Reshield then` guard so the soft dependency costs nothing when the mod is absent.
+- Text changes are kept as unified diffs against the game's own file: apply with `text_cut.py apply`, edit the output, regenerate with `text_cut.py make`. Hand-editing hunk counts is error-prone. Check the result parses (`ElementTree`) before building.
+- A menu-stage run (`run_game_test.ps1` with `krs_adbtest`) proves that packages load, the animation database parses and the Lua files compile. It cannot show behaviour that needs a character. `harness done=False` in its report is a known false alarm when the end marker is in the log.
+- `python -I` removes the current folder from the path, so relative paths to our own scripts fail inside `-c`; use absolute paths.
+- The worktree-isolated session refuses computed paths, heredocs and chained commands: write scripts with the file tool and run plain commands.
+- Third-party material stays out of the repository: read from the author's archive at build time, check sha256, mark the package "do not publish" until permission is answered (`docs/project/PERMISSIONS.md`).
+- Open: 2294 variant, 21 operations of 2049 that could not be rebased (14 `CombatBlockBroken`, 3 `LadderGetOff` changed in structure, 4 `CombatStealthHitSuccess` gone), XP effect in play, torch lost if the wash is interrupted, permissions for 2372 and Reshield.
+
 ## 2026-10-06 (second part): 2049 rebased and run in the replica game
 
 - `tools/adb_cut.py rebase`: three-way merge inside each fragment of a cut made on an older game file. 2049 (built on the original file): 307 of 324 operations kept, 161 identical and 146 moved onto the current fragments (145 of them under a longer key because the game's patches added `oppMale+oppFemale` to FragTags); 21 left out (structure changed by the game 17, fragment gone 4).
