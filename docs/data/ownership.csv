@@ -5,10 +5,10 @@ rpg_param,DigestionSpeed,krs_items,"0.000578704 (hidden, read at runtime)",rpg_p
 rpg_param,StarvationPlayerEffectMinMin,krs_items,90,rpg_param_value=95,shipping,modules/krs_items,KRS Items README,
 rpg_param,StarvationPlayerEffectMaxMax,krs_items,75,rpg_param_value=65,shipping,modules/krs_items,KRS Items README,
 rpg_param,StarvationPlayerEffectMinMax,krs_items,45,rpg_param_value=25,shipping,modules/krs_items,KRS Items README,
-sleeping_spot_type,0,krs_items,1.0,sleeping_quality=1.2,shipping,modules/krs_items,Bed Comfort Restored (480) - values differ,exceptional
-sleeping_spot_type,1,krs_items,0.7,sleeping_quality=0.955,shipping,modules/krs_items,Bed Comfort Restored (480) - values differ,high
-sleeping_spot_type,2,krs_items,0.3,sleeping_quality=0.325,shipping,modules/krs_items,Bed Comfort Restored (480) - values differ,low
-sleeping_spot_type,3,krs_items,0.5,sleeping_quality=0.65,shipping,modules/krs_items,Bed Comfort Restored (480) - values differ,medium
+sleeping_spot_type,0,krs_exploration,1.0,sleeping_quality=1.2,shipping,modules/krs_exploration,Bed Comfort Restored (480) - values differ,exceptional
+sleeping_spot_type,1,krs_exploration,0.7,sleeping_quality=0.955,shipping,modules/krs_exploration,Bed Comfort Restored (480) - values differ,high
+sleeping_spot_type,2,krs_exploration,0.3,sleeping_quality=0.325,shipping,modules/krs_exploration,Bed Comfort Restored (480) - values differ,low
+sleeping_spot_type,3,krs_exploration,0.5,sleeping_quality=0.65,shipping,modules/krs_exploration,Bed Comfort Restored (480) - values differ,medium
 food,73ff1fde-ec8b-41e9-95e3-b5938c715bf1,krs_items,nutrition 10 / short-term ratio 0.1,nutrition_benefit=2.5,shipping,modules/krs_items,Potions.md / Potions_GPT.md (Aesop Potion),Only potion row that really differs from vanilla today.
 food,*,krs_items,,,planned,modules/krs_items,Potions_GPT.md + Realistic Potions pipeline,"The 33 other potion rows of the old KRS-Items file equalled vanilla and were dropped from the module (a later mod's complete row replaces an earlier one, so a no-op row could undo another mod's change). Real potion changes belong to the optional krs_potions module (phase 5)."
 perk_rpg_param_override,01c3b32a-5751-4c98-b6ab-258d02370382/RepairKitItemHealthBestLimit,krs_qol,0.5,,open,modules/krs_qol,Realistic Repairs (1842),"Not shipped. Normal-mode defaults are 0.6 / 0.8 (hidden constants, runtime csv); Hardcore overrides 0.5 / 0.7. What the README goal 'at lvl 20 repairs >= 20 durability' needs in these numbers is untested; needs a repair-kit experiment in game."

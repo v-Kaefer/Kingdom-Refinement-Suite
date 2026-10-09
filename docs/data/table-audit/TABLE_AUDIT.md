@@ -46,7 +46,7 @@ Every key set by more than one source is marked **CONFLICT**.
 - changed: 61e98757-9b32-493b-ad09-0087afdb81be icon_id: ->shield_slam, level: 14->, perk_ui_desc: ->perk_ex_ripo_text_desc, perk_ui_name: ->perk_ex_ripo_text_sword, skill_selector: 16->15, visibility: 0->1
 
 ### modules - `sleeping_spot_type`
-`modules/krs_items/Data/Libs/Tables/rpg/sleeping_spot_type__krs_items.xml`  key = ['sleeping_spot_type_id']
+`modules/krs_exploration/Data/Libs/Tables/rpg/sleeping_spot_type__krs_exploration.xml`  key = ['sleeping_spot_type_id']
 
 - changed: 0 sleeping_quality: 1->1.2
 - changed: 1 sleeping_quality: 0.7->0.955

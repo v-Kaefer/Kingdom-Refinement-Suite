@@ -5,6 +5,35 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-09: sleeping spots moved to krs_exploration; KRS-Items workbench
+
+- The four `sleeping_spot_type` rows (better beds, derived from Bed Comfort Restored 480) moved from `krs_items` to `krs_exploration` by the author's decision: file `sleeping_spot_type__krs_exploration.xml` (rows unchanged, suffix now the module's id), `docs/data/ownership.csv` updated, READMEs, CHANGES (both "Unreleased"), manifest descriptions and `OBJECTIVES.md` follow. Versions are not bumped. `tools/check_patch_names.py` reports 0 problems on both modules; both build (`tools/build_module.py krs_items`, `tools/build_exploration.py core`) with the beds in the exploration pak only. No game run. The generated `docs/data/table-audit/` still shows the old path until `tools/audit_tables.py` is run again.
+- `Mods WIP folder/Items/` (local, outside git): `Realistic_Items_2017/` has copies of the two Nexus releases of Realistic Items (1.0.0 and 1.1.1; originals stay in `Installed_to_review/c_weapons-armor-items`), `KRS-Items_workbench/` has copies of the Digestion x2.25 row and the Aesop potion row plus a README. Realistic Items 1.1.1 is what `krs_items` 2.0.0 repackages; the `KRS-Items.pak` in the Steam folder is byte-identical to its pak (a 7z with `Tables/` paths and no manifest, so it never loaded). The Steam folder was only read.
+- Package folders `Realistic Potions`, `Gluttony Rebalanced` and `Exploration Reworked` created in `WIP_Mods/` (outside git), each with one `PREVISTO.md` (what is planned, what exists, what is needed for v1.0). The absolute default paths of the tools now point to `WIP_Mods` (the author renamed `Mods WIP folder`); the relative references inside the repository and the old docs still say `Mods WIP folder`.
+- This chat now works on KRS-Items; each division of the suite gets its own chat. Naming of the pieces to replace the grade labels is still to come.
+
+## 2026-10-09: Grade B batch 1 (food and service prices) and Perkaholic files moved
+
+Second pass, read only, on 1483, 1639, 2011, 2345 and 1105 (`docs/mods-review/GRADE_B_LOTE1.html`, `grade_b_lote1_food.csv`, tool `tools/build_grade_b_lote1.py`). Nothing was built, run or moved to `Reviewed_Mods`.
+
+- Spoilage: the four food mods write the same column of the same rows. 2011 and 2345 give less than the 1483 2X in 66 of 68 and 22 of 24 shared items and agree with each other in 1 of 21. 1639 repeats 2X with the Dead Chicken error (24 -> 2400 h). 2011 sets 0 (never spoils) on 7 items that spoil in the game, and its `decay_ime_hours` typo blanks the test item "crystal meth".
+- Nutrition: both lower it (median -3 points); 2011 also raises refresh (+9 median, 155 of 168 items) and gives health to 127 foods that had none. 82 of 123 shared items go the same way, 37 opposite (20 of them meats).
+- KRS Items already speeds digestion 2.25x (`DigestionSpeed`); stacking the 2345 reduction on it would make cooked meat hold about 1 hour of hunger instead of about 10 (derived, ignores the short-term ratio).
+- 2011's terms forbid use in "ANY mod collection": only ideas with our own numbers, never its rows. 1105 is one 6-row `sequence` patch plus three whole game scripts.
+- Decisions of the author: spoilage goes to a fine-tuning step by food class (`grade_b_lote1_spoilage_classes.csv`, column `chosen_h` empty) and nothing is consolidated yet; food nutrition/refresh is added to the final review; snack system and service prices are still open. Logged in `docs/project/DECISIONS.md`.
+- Reference sheet `docs/mods-review/GRADE_B_FOME.html` (tool `tools/build_grade_b_fome.py`): hunger and digestion parameters. `DigestionSpeed` is per world-time second (same value as `ExhaustionSpeed`; `SleepHealthRegenBaseSpeed` x 8 world hours = 100 confirms the unit): full to "hungry" (50) takes 24 world hours in the game and 10.7 with KRS Items, full to starving 48 and 21.3. "Hungry after 3 world hours" needs 8x the game rate. The real-time ratio is not in the game data (engine side); the page takes the author's 1:360 as an input. In the same pass the food type names were taken from the game's `food_type` table instead of being inferred.
+- Files: Perkaholic 1.07 (770) went from `Installed_to_review/_quarantine` to `Mods WIP folder/Perks/_quarantine` (the path-traversal finding still holds), Perkaholic PTF 1009 (rar) from `Installed_to_review/c_progression-xp-perks` to `Perks/`. 85 is already in `Perks/` with the same sha256; the duplicate in `c_progression-xp-perks` is left for the author to confirm its removal.
+
+## 2026-10-08: Grade B first pass (21 mods, read only)
+
+Static review of the 21 Grade B mods, as asked: what each mod is, what it changes, how they relate. No mod was run, no game was started, nothing was moved to `Reviewed_Mods`.
+
+- Every file of every archive was listed and compared with game 1.9.8 (CRC per pak member, table row by row and cell by cell, Lua by lines, text by string) and with the 2020 reference tables (`Data/Tables_reference.pak`) to tell a stale value from a deliberate one. The declared game version was not used as proof.
+- Result (`docs/mods-review/GRADE_B.md`, `GRADE_B_REVIEW.html`, `grade_b_files.csv`, `grade_b_cells.csv`, `grade_b_summary.json`, `grade_b_intersections.csv`, `grade_b_overview.csv`): 8 sub-categories (food, perks, combat, weapons, equipment, economy, rules, Lua), a ranking with reasons inside each, 20 balance articles (value, original, new, what depends on it, effect), 78 measured mod pairs (identical, conflicting and complementary rows; whole-table replacements marked), the errors found and 18 open questions (Q1 to Q18).
+- Three local inputs read from the mod archives (`grade_b_newrows.json`, `grade_b_scripts.json`, `grade_b_text.csv`: third-party rows, script excerpts and strings) are **not in the repository** (`.gitignore`); `tools/grade_b_extract.py` writes them again from the archives, and the page builders need them.
+- Verdicts: 3 usable as they are (1483, 1009, 2173), 5 informative, 9 with warnings, 4 with a defect or out of scope (1639, 770, 85, 2343). 85 and 770 are identical to each other on all 186 shared rows; 1009 is the corrected line.
+- Tools: `tools/grade_b_extract.py` (read-only extraction), `tools/params_info.py`, `tools/grade_b_data*.py` (curated texts), `tools/grade_b_page_style.py`, `tools/build_grade_b_page.py`.
+
 ## 2026-10-08: wash confirmed in game, torch return, Reshield, what was learned
 
 Played by the author in the replica game (1.9.8): the trough wash animation works, gloves come off, the torch comes back, Reshield (2313) and the wash work together.

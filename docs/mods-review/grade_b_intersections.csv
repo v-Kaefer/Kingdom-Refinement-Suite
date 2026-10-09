@@ -1,0 +1,79 @@
+mod_a,mod_b,kind,shared_rows,identical_rows,conflict_rows,complementary_rows,cells_same,cells_different,whole_table_in,tables
+1009,85,Redundante com divergência,192,175,16,1,1851,59,buff perk perk2perk_exclusivity perk_buff perk_buff_override skill,buff 59; perk 57; perk_buff 55; perk_buff_override 17; perk2perk_exclusivity 3; skill 1
+1009,770,Redundante com divergência,186,171,15,0,1844,58,buff perk perk_buff perk_buff_override,buff 57; perk 57; perk_buff 55; perk_buff_override 17
+770,85,Redundante,186,186,0,0,1902,0,buff perk perk_buff perk_buff_override,buff 57; perk 57; perk_buff 55; perk_buff_override 17
+2011,2345,Tabela inteira,143,2,140,1,6,231,food,food 143
+1384,1112,Redundante com divergência,141,134,7,0,7418,7,,combat_action_perfect_block 130; rpg_param 9; perk_rpg_param_override 2
+1483,1639,Redundante com divergência,111,110,1,0,110,1,,food 111
+1483,2011,Conflito direto,102,1,67,34,1,67,,food 102
+1483,2345,Tabela inteira,102,2,22,78,2,22,food,food 102
+1639,2011,Conflito direto,102,1,67,34,1,67,,food 102
+1639,2345,Tabela inteira,102,2,22,78,2,22,food,food 102
+2179,1112,Conflito direto,31,4,27,0,26,27,,rpg_param 29; perk_rpg_param_override 2
+2179,1384,Conflito direto,29,5,24,0,15,24,,rpg_param 17; buff 7; perk_rpg_param_override 5
+2179,2035,Conflito direto,25,0,17,8,0,24,,pickable_item 13; ammo 12
+2179,1558,Conflito direto,21,3,18,0,5,18,,rpg_param 15; perk_rpg_param_override 6
+1384,1558,Conflito direto,14,1,13,0,2,13,,rpg_param 9; perk_rpg_param_override 5
+1112,1558,Conflito direto,14,1,13,0,1,13,,rpg_param 12; perk_rpg_param_override 2
+85,2179,Tabela inteira,12,1,2,9,1,2,buff perk2perk_exclusivity,buff 12
+2011,2179,Conflito direto,6,0,6,0,0,12,,food 6
+2345,2179,Tabela inteira,6,0,1,5,0,1,food,food 6
+2173,1558,Conflito direto,6,0,6,0,2,6,,perk_rpg_param_override 3; rpg_param 3
+85,1384,Tabela inteira,4,0,0,4,0,0,buff,buff 4
+1009,2179,Conflito direto,2,0,1,1,0,1,,buff 2
+1009,1384,Complementar,1,0,0,1,0,0,,buff 1
+1009,2045,Redundante,1,1,0,0,1,0,,skill 1
+85,2045,Redundante,1,1,0,0,1,0,skill,skill 1
+2179,2173,Conflito direto,1,0,1,0,0,1,,buff 1
+1483,2179,Complementar,0,0,0,0,0,0,,
+1483,1062,Complementar,0,0,0,0,0,0,,
+1639,2179,Complementar,0,0,0,0,0,0,,
+1639,1062,Complementar,0,0,0,0,0,0,,
+2011,1009,Complementar,0,0,0,0,0,0,,
+2011,770,Tabela inteira,0,0,0,0,0,0,buff,
+2011,85,Tabela inteira,0,0,0,0,0,0,buff,
+2011,1384,Complementar,0,0,0,0,0,0,,
+2011,2045,Complementar,0,0,0,0,0,0,,
+2011,2035,Complementar,0,0,0,0,0,0,,
+2011,2173,Complementar,0,0,0,0,0,0,,
+2011,1380,Complementar,0,0,0,0,0,0,,
+2011,2209,Complementar,0,0,0,0,0,0,,
+2011,1062,Complementar,0,0,0,0,0,0,,
+2345,1062,Tabela inteira,0,0,0,0,0,0,food,
+1009,2173,Complementar,0,0,0,0,0,0,,
+1009,2209,Complementar,0,0,0,0,0,0,,
+1009,1062,Complementar,0,0,0,0,0,0,,
+770,2179,Tabela inteira,0,0,0,0,0,0,buff,
+770,1384,Tabela inteira,0,0,0,0,0,0,buff,
+770,2173,Tabela inteira,0,0,0,0,0,0,buff,
+770,2209,Tabela inteira,0,0,0,0,0,0,buff,
+770,1062,Tabela inteira,0,0,0,0,0,0,buff perk perk_buff,
+85,2173,Tabela inteira,0,0,0,0,0,0,buff,
+85,2209,Tabela inteira,0,0,0,0,0,0,buff,
+85,1062,Tabela inteira,0,0,0,0,0,0,buff perk perk_buff,
+2179,2045,Complementar,0,0,0,0,0,0,,
+2179,1380,Complementar,0,0,0,0,0,0,,
+2179,2209,Complementar,0,0,0,0,0,0,,
+2179,1062,Complementar,0,0,0,0,0,0,,
+1384,2045,Complementar,0,0,0,0,0,0,,
+1384,2173,Complementar,0,0,0,0,0,0,,
+1384,2209,Complementar,0,0,0,0,0,0,,
+1384,1062,Complementar,0,0,0,0,0,0,,
+1112,2045,Complementar,0,0,0,0,0,0,,
+1112,2173,Complementar,0,0,0,0,0,0,,
+1112,2343,Complementar,0,0,0,0,0,0,,
+2045,2035,Complementar,0,0,0,0,0,0,,
+2045,2173,Complementar,0,0,0,0,0,0,,
+2045,1380,Complementar,0,0,0,0,0,0,,
+2045,2209,Complementar,0,0,0,0,0,0,,
+2045,1062,Complementar,0,0,0,0,0,0,,
+2035,2173,Complementar,0,0,0,0,0,0,,
+2035,1380,Complementar,0,0,0,0,0,0,,
+2035,2209,Complementar,0,0,0,0,0,0,,
+2035,1062,Complementar,0,0,0,0,0,0,,
+2173,1380,Complementar,0,0,0,0,0,0,,
+2173,2209,Complementar,0,0,0,0,0,0,,
+2173,1062,Complementar,0,0,0,0,0,0,,
+1380,2209,Complementar,0,0,0,0,0,0,,
+1380,1062,Complementar,0,0,0,0,0,0,,
+2209,1062,Complementar,0,0,0,0,0,0,,
