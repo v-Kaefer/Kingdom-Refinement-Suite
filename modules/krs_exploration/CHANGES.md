@@ -1,7 +1,7 @@
 # krs_exploration changes
 
-## Unreleased (2026-10-09)
-- Better beds: `Data/Libs/Tables/rpg/sleeping_spot_type__krs_exploration.xml` (4 complete rows: exceptional 1.0 -> 1.2, high 0.7 -> 0.955, low 0.3 -> 0.325, medium 0.5 -> 0.65). Moved here from `krs_items` by the author's decision; the rows are unchanged and the patch suffix now equals this module's id. Derived from Bed Comfort Restored (480), whose values differ. Not yet read back in game: sleeping spots only exist inside a level (player-stage run pending, as before). Not part of the v1.0.0 that was played.
+## Unreleased (2026-10-10)
+- The better beds (`sleeping_spot_type`, 4 rows from Bed Comfort Restored 480) are **held out** of the module by the author's decision: the recovery of sleep stays as in the game (8 hours is the perfect sleep; less or more has its adverse effects). The file is kept as `src/held/sleeping_spot_type__krs_exploration.xml`, outside `Data`, so it is not packaged. `docs/data/ownership.csv` marks the four rows as `held`.
 
 ## 1.0.0 (2026-10-08, v1 of krs_exploration)
 Declared v1 by the author after the wash, the torch return and Reshield were played together in the test game. Contents: the two XP scripts and the optional wash package, as listed below. The XP scripts are installed without error (log) but their XP gain has not been seen in play yet. Kept for the next iteration, not part of v1: the animation cuts of 1563 (also 2045), 2276, 2294 and 2049 (`src/merge_tests/`, no conflict with the wash in the menu-stage test).

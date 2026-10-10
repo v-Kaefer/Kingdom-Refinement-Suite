@@ -8,6 +8,7 @@ Log of decisions and open questions. Newest first. A decision taken by default w
 
 | Date | Decision | Why | By |
 |---|---|---|---|
+| 2026-10-10 | Keep the KRS Items hunger parameters; keep sleep recovery as in the game (the better beds are held out of v1, parked in `krs_exploration/src/held/`); the hunger threshold and other parameters are tuned one at a time from here | author's instruction | author |
 | 2026-10-10 | Gluttony Rebalanced v1 direction: possibly keep the day at 96 minutes (ratio 15), sleep logic and recoveries untouched, hunger every 4 to 6 world hours, `StarvationThreshold` adjustable, other parameters tuned one at a time; the better beds conflict with untouched sleep (open) | author's instruction; see the "v1" section of `docs/modules/gluttony/ANALISE_BASE.html` | author |
 | 2026-10-10 | Gluttony Rebalanced is planned for a world hour of 6 real minutes (ratio 10; today it is 4, ratio 15, measured): every world-time rate or duration that would stretch by 50% is compensated first, then the author's changes are added on top; the hunger bar thresholds are adjusted to pair with the new rate (values not chosen yet) | author's instruction; see `docs/modules/gluttony/ANALISE_BASE.html` | author |
 | 2026-10-09 | Fourth package: **Leech & Lore Reworked** (books and specific healing/treatment items such as bandages); Gluttony Rebalanced takes all other consumables | author's answers and choice of name | author |

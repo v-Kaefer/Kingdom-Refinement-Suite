@@ -5,6 +5,12 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-10: eating and waiting measured in game; hunger parameters of KRS Items kept; beds held out
+
+- Author's decisions: keep the KRS Items hunger parameters as they are (`DigestionSpeed` 0.001302084 and the three `StarvationPlayerEffect*` rows); keep the recovery of sleep as in the game (8 hours is the perfect sleep, less or more has adverse effects). Consequence: the four better-beds rows were taken out of `krs_exploration` and parked as `modules/krs_exploration/src/held/sleeping_spot_type__krs_exploration.xml` (not packaged; `ownership.csv` marks them `held`); the manifest description lost "and better beds".
+- Measured in the replica 1.9.8 (probe in `eat` mode, latest save, nothing saved): eating a loaf (nutrition 17, `max_status` 50) took hunger from 59.91 to 76.91, +17.0000 at once, so `max_status` is **not** a ceiling on the bar (an earlier reading is now settled as wrong); a Bard potion added +3.5 and restored energy; after the potion hunger fell 6 times faster for at least 22 s (the short-term part digests 5x faster on top of the normal rate); waiting 8 world hours (Wait dialog) changed neither hunger (79.5382) nor energy (99.8435): the engine stops digestion and tiredness during a skip. Sleeping itself is not measured (the bed was next to the character but the camera could not be aimed with absolute mouse moves). `player.soul:SetState('hunger', 60)` works from Lua. The replica's menu has no Continue: Resume only returns to the empty menu scene, so Load Game and the newest save were used.
+- `tools/harness/build_timeprobe.py --mode eat --hunger N --run-s S` builds the eat-mode probe (sets the hunger once, logs every change); the page `docs/modules/gluttony/ANALISE_BASE.html` lists what KRS Items already changes and the results.
+
 ## 2026-10-10: Gluttony Rebalanced v1 direction (day stays at 96 minutes, sleep untouched)
 
 - Author's direction: possibly keep the day at 96 minutes (ratio 15) for v1, with the sleep logic and its recoveries working and preferably untouched; hunger every 4 to 6 world hours (16 to 24 real minutes); `StarvationThreshold` may change; tune all parameters step by step and keep fixed the ones that are better fixed. The six-minute hour plan stays in the page as an alternative outside v1.

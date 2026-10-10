@@ -63,6 +63,36 @@ function KRSTimeProbe:Constants()
     end
 end
 
+-- mode "eat": set the hunger state once, then log every change of hunger/exhaust/stamina/health (so the effect of eating, sleeping or
+-- waiting done by hand shows up with its size) and a full sample every 5 s; quits after KRS_TP_RUN_S seconds. Several copies of the
+-- entity can be alive: the globals make sure the hunger is set once and each change is logged once.
+function KRSTimeProbe:EatMode()
+    if not (player and player.soul) then return end
+    local now = (os and os.time) and os.time() or 0
+    if not KRS_TP_T0 then KRS_TP_T0 = now log("EAT armed at os.time=" .. tostring(now)) end
+    local el = now - KRS_TP_T0
+    if el >= 10 and not KRS_TP_HungerSet then
+        KRS_TP_HungerSet = true
+        local ok, err = pcall(function() player.soul:SetState("hunger", KRS_TP_HUNGER or 60) end)
+        log("SETSTATE hunger=" .. tostring(KRS_TP_HUNGER or 60) .. " ok=" .. tostring(ok) .. " err=" .. tostring(err) .. " readback=" .. tostring(st("hunger")))
+        KRS_TP_SetAt = now
+    end
+    local h, e, sta, hp = st("hunger"), st("exhaust"), st("stamina"), st("health")
+    local key = tostring(h) .. "|" .. tostring(e) .. "|" .. tostring(hp)
+    if key ~= KRS_TP_LastKey then
+        KRS_TP_LastKey = key
+        log(string.format("CH el=%d hunger=%s exhaust=%s health=%s stamina=%s hr=%s", el, tostring(h), tostring(e), tostring(hp), tostring(sta), tostring(cal("GetWorldHourOfDay"))))
+    end
+    if now - (KRS_TP_LastFull or 0) >= 5 then
+        KRS_TP_LastFull = now
+        self:Sample("eat")
+    end
+    if el >= (KRS_TP_RUN_S or 480) then
+        log("end")
+        if System.Quit then System.Quit() else System.ExecuteCommand("quit") end
+    end
+end
+
 function KRSTimeProbe:OnReset()
     self:Activate(1)
     self.ft = 0
@@ -102,6 +132,7 @@ function KRSTimeProbe.Client:OnUpdate(frameTime)
         end
         self.last_hour = h
     end
+    if KRS_TP_MODE == "eat" then self:EatMode() return end
     local havePlayer = player and player.soul
     if self.phase == "menu" then
         if self.ft >= self.next_sample and self.ft < 600 then self:Sample("menu") self.next_sample = self.ft + 3 end

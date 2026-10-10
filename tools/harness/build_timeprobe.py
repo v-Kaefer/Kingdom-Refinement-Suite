@@ -22,6 +22,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--game", required=True)
     ap.add_argument("--remove", action="store_true")
+    ap.add_argument("--mode", choices=["time", "eat"], default="time", help="time: clock and ratio test; eat: set hunger once and log every change (eat, sleep or wait by hand)")
+    ap.add_argument("--hunger", type=float, default=60.0)
+    ap.add_argument("--run-s", type=int, default=480)
     a = ap.parse_args()
     folder = os.path.join(a.game, "Mods", "krs_timeprobe")
     if a.remove:
@@ -29,7 +32,7 @@ def main():
         print("removed", folder)
         return
     files = {
-        "Scripts/Startup/krs_timeprobe.lua": open(os.path.join(HERE, "krs_timeprobe.lua"), encoding="utf-8").read(),
+        "Scripts/Startup/krs_timeprobe.lua": f'KRS_TP_MODE = "{a.mode}"\nKRS_TP_HUNGER = {a.hunger}\nKRS_TP_RUN_S = {a.run_s}\n' + open(os.path.join(HERE, "krs_timeprobe.lua"), encoding="utf-8").read(),
         "Scripts/Entities/KRSTimeProbe.lua": open(os.path.join(HERE, "krs_timeprobe_entity.lua"), encoding="utf-8").read(),
         "Entities/KRSTimeProbe.ent": '<Entity\n        Name="KRSTimeProbe"\n        Script="Scripts/Entities/KRSTimeProbe.lua"\n/>\n',
     }

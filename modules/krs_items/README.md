@@ -26,4 +26,4 @@ Patches are complete rows, and when two mods change the same row the later mod i
 Mods that touch the same rows: Skill Books Take Time 2x (documents), Food Spoil
 Faster and PotionNoSatietyAndHealEnergy (food row of the Aesop potion). Load krs_items last if you want its values.
 
-Author: Kaleb. Book timing derived from "Skill Books Take Time 2x" by hoskope. The better beds moved to `krs_exploration`.
+Author: Kaleb. Book timing derived from "Skill Books Take Time 2x" by hoskope. The better beds are not part of the module: they were held out on 2026-10-10 (sleep recovery stays as in the game); the rows wait in `krs_exploration/src/held/`.

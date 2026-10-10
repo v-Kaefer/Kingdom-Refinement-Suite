@@ -332,6 +332,10 @@ MEAS = [
     ("Constantes na 1.9.8", "lidas em jogo, iguais às da 1.9.6: `DigestionSpeed` 0,000578704, `ExhaustionSpeed` 0,000578704, `FoodFull` 100, `FoodOverEat` 120, `StarvationThreshold` 50, `StarvationHugeThreshold` 25, `StarvationExtremeThreshold` 0, `ShortTermNutritionDigestionSpeedMultiplier` 5", "c"),
     ("Relógio real em Lua", "`os.time` existe (segundos inteiros); `os.clock` não. O `kcd.log` não traz hora por linha: o script que vigia o log marcou a hora de chegada de cada linha, com 0,4 s de precisão", "c"),
     ("Dia e noite", "a hora do dia (`GetWorldHourOfDay`, 0 a 24) e o comando `e_TimeOfDay` dão a mesma hora; não medi nascer e pôr do sol, só uma janela de 0,6 h de mundo (de 5,0 a 5,65). Com razão 15, uma volta completa leva 96 minutos reais", "d"),
+    ("Comer (teste E2)", "com a fome em 59,91, comer um pão (nutrição 17, `max_status` 50) levou a barra a 76,91: **+17,0000, na hora**. O `max_status` **não é teto** (a barra passou de 50). Uma poção de bardo somou +3,5 na hora e devolveu o vigor a 100. Depois da poção a barra caiu 6 vezes mais depressa (0,073 por degrau de 2,04 s contra 0,0122), por pelo menos 22 s: é a parte de curto prazo, que digere 5x mais rápido além do ritmo normal", "c"),
+    ("Esperar (Wait) 8 horas (parte do teste E1)", "a hora do mundo foi de 5,15 a 13,48 e a fome ficou **exatamente igual** (79,5382 antes e depois) e o vigor também (99,8435). Esperar não gasta fome nem vigor: o motor zera a digestão e o cansaço durante o avanço de tempo. Dormir é outro tipo de avanço; não medido", "c"),
+    ("Mexer na fome por script", "`player.soul:SetState('hunger', 60)` funcionou (lido de volta 60) e só vale na memória; nada foi salvo. A tela de inventário mostra 'Nourishment' (a fome) e 'Energy' (o vigor) arredondados", "c"),
+    ("Menu da réplica", "não há botão Continue nesta instalação: 'Resume' só volta à cena vazia do menu. Foi preciso Load Game e o save mais recente (194)", "c"),
     ("Testes que falharam", "o primeiro probe criou o sensor no menu e o nível o destruiu ao carregar o save; a segunda versão o recria, mas deixou várias cópias ativas, que repetiram o teste da razão em cascata (10, 6,67, 4,44, 2,96, 1,98). Os dados continuam válidos (cada linha traz a razão lida), mas o valor final da razão em memória ficou errado até o jogo fechar. Nenhum save foi gravado", "c"),
 ]
 meas_table = table(["Etapa", "Estado", "Confiança"], [[a, b, f'<span class="cf cf-{k}">{CONF[k][0]}</span>'] for a, b, k in MEAS])
@@ -360,6 +364,15 @@ for u_meal, lab in ((8.0, "Lanche"), (U900, "Refeição"), (17.5, "Refeição gr
     for t in (4, 5, 6):
         r = u_meal / t
         rate_rows.append([f"{lab} ({num(u_meal, 1)} u)", f"{t} h; {t * 4} min reais", num(r, 2), f"{r / 3600:.6f}".replace(".", ","), num(r / (DIG * 3600), 2) + "x", num(r / (DIG_K * 3600), 2) + "x"])
+krs_table = table(["Área", "Mudança", "Jogo → KRS Items"], [
+    ["Fome", "`DigestionSpeed` (constante oculta): a comida é digerida 2,25x mais depressa", "0,000578704 → 0,001302084 (de cheio a 'com fome': 24 h → 10,7 h; uma refeição de 900 kcal segura 2,8 h)"],
+    ["Fome", "`StarvationPlayerEffectMinMin`: efeitos de fome mais raros no nível baixo", "90 → 95"],
+    ["Fome", "`StarvationPlayerEffectMaxMax`", "75 → 65"],
+    ["Fome", "`StarvationPlayerEffectMinMax`: efeitos mais frequentes no nível alto", "45 → 25"],
+    ["Poção", "Poção de Aesop: sacia menos", "nutrição 10 → 2,5; parte de curto prazo 0,1 → 0,5"],
+    ["Livros", "56 livros de habilidade: leitura 2,5x mais longa; XP por hora de leitura", "4 / 6 / 8 / 10 h → 10 / 15 / 20 / 25 h; `ReadingXpPerHour` 20 → 5"],
+    ["Camas", "saíram do KRS Items e do Exploration Reworked (ficam fora da v1)", "o sono fica como no jogo"],
+])
 rate_table = table(["Comida", "Segura a fome por (mundo; tempo real, hora de 4 min)", "Unidades por hora", "`DigestionSpeed`", "vs jogo", "vs KRS Items"], rate_rows, nums=(2, 3, 4, 5))
 
 L0 = 80.0
@@ -392,22 +405,24 @@ FIX = [
 fix_table = table(["Parâmetro", "Papel na v1"], [[a, b] for a, b in FIX])
 
 TESTS = [
-    ("E1. Sono", "dormir N horas numa cama com fome e vigor conhecidos; ler antes e depois fome, vigor e vida", "a digestão e o gasto de vigor continuam durante o sono? quanto vigor o sono devolve por hora? limita a fome o tempo de sono?"),
-    ("E2. Comer", "comer o pão com a fome em 30 e em 70; ler a barra antes, logo depois e 1 minuto depois", "o teto `max_status` existe? a parte de curto prazo cai mais rápido? quanto sobe a barra"),
-    ("E3. Fome nos limiares", "deixar a fome cruzar 50 e 25 em um save de teste; ler os efeitos e o tempo entre eles", "o que cada limiar liga e com que intervalo (unidade de `StarvationPlayerEffect*`)"),
-    ("E4. Digestão em cenas e diálogos", "ler a fome durante uma conversa e uma cena", "explica a barra parada de 3 minutos da medição"),
-    ("E5. Vigor e estamina", "andar, correr e lutar um tempo conhecido; ler vigor e estamina", "gasto real de energia por atividade"),
+    ("E1. Sono", "dormir N horas numa cama com fome e vigor conhecidos; ler antes e depois fome, vigor e vida", "A FAZER. Parcial: esperar 8 h (Wait) não gasta fome nem vigor. Falta dormir de verdade: a cama estava ao lado do personagem, mas não consegui mirar nela pelo mouse"),
+    ("E2. Comer", "comer o pão com a fome em 60 e ler a barra antes e depois", "FEITO: +17 na hora; `max_status` não é teto; a parte de curto prazo digere 6x mais depressa por um tempo"),
+    ("E3. Fome nos limiares", "deixar a fome cruzar 50 e 25 em um save de teste; ler os efeitos e o tempo entre eles", "A FAZER: o que cada limiar liga e com que intervalo (unidade de `StarvationPlayerEffect*`)"),
+    ("E4. Digestão em cenas e diálogos", "ler a fome durante uma conversa e uma cena", "A FAZER. Pista: esperar zera a digestão, o que pode explicar a barra parada de 3 minutos"),
+    ("E5. Vigor e estamina", "andar, correr e lutar um tempo conhecido; ler vigor e estamina", "A FAZER: gasto real de energia por atividade"),
 ]
-tests_table = table(["Teste", "Como", "O que responde"], [[a, b, c] for a, b, c in TESTS])
+tests_table = table(["Teste", "Como", "Estado e resultado"], [[a, b, c] for a, b, c in TESTS])
 
 V1SEC = f"""
 <h2 id="v1">v1: o dia fica em 96 minutos, o sono intocado</h2>
-<p class="lead">Decisão do autor (10 out 2026): talvez manter o dia em 96 minutos (razão 15, medida) na v1, com a lógica do sono e suas recuperações funcionando e, de preferência, intocadas; a fome deve voltar a cada 4 a 6 horas de mundo (16 a 24 minutos reais), e o `StarvationThreshold` pode mudar se fizer sentido. Nada de compensar o relógio: a seção anterior de hora de 6 minutos fica como alternativa fora da v1. ^d</p>
+<p class="lead">Decisões do autor (10 out 2026): o dia fica em 96 minutos (razão 15, medida) na v1; a recuperação do sono fica **igual à do jogo** (8 horas é o sono perfeito; menos ou mais tem efeitos adversos); **os parâmetros de fome do KRS Items ficam como estão**; o ajuste fino segue em todos os parâmetros, deixando fixos os que forem melhores fixos. A seção de hora de 6 minutos fica como alternativa fora da v1. ^d</p>
+<h3>O que o KRS Items já muda</h3>
+{krs_table}
 <h3>1. Ritmo da fome para 4 a 6 horas</h3>
-<p class="note">Quanto a digestão precisa ser para uma comida de cada tamanho segurar a fome por 4, 5 ou 6 horas de mundo (unidades a {num(K_MED, 0)} kcal, mediana da calibração). O ritmo do jogo ({num(DIG * 3600, 2)} unidades por hora) já dá {num(hrs(U900, DIG), 1)} h para uma refeição de {num(U900, 0)} unidades: o ritmo do KRS Items ({num(DIG_K * 3600, 2)}) é rápido demais para esse alvo. ^d</p>
+<p class="note">Quanto a digestão precisa ser para uma comida de cada tamanho segurar a fome por 4, 5 ou 6 horas de mundo (unidades a {num(K_MED, 0)} kcal, mediana da calibração). O ritmo do jogo ({num(DIG * 3600, 2)} unidades por hora) já dá {num(hrs(U900, DIG), 1)} h para uma refeição de {num(U900, 0)} unidades: o ritmo do KRS Items ({num(DIG_K * 3600, 2)}), que fica na v1 por decisão do autor, segura essa mesma refeição por {num(hrs(U900, DIG_K), 1)} h, abaixo das 4 a 6 horas da tabela. ^d</p>
 {rate_table}
 <h3>2. A barra e o sono</h3>
-<p class="note">O jogo recusa deitar quando a fome impediria dormir o mínimo (`MinPossibleSleepTime`, descrição do jogo), então a fome limita o sono. Dormir 8 horas custa 8 vezes o ritmo em unidades se a digestão continuar durante o sono (não medido, ver teste E1). Limiar necessário para a fome chegar 4, 5 ou 6 horas depois de comer até 80 (ponto de partida suposto, `max_status` não medido). ^d</p>
+<p class="note">O jogo recusa deitar quando a fome impediria dormir o mínimo (`MinPossibleSleepTime`, descrição do jogo), então a fome limita o sono. Dormir 8 horas custaria 8 vezes o ritmo em unidades se a digestão continuasse durante o sono; esperar 8 horas custou zero (medido), e dormir ainda não foi medido (teste E1). Limiar necessário para a fome chegar 4, 5 ou 6 horas depois de comer até 80 (ponto de partida suposto; comer soma a nutrição inteira na hora, sem teto, medido). ^c</p>
 {bar_v1_table}
 <p class="note">Ritmos entre x1,25 e x1,5 do jogo, com o limiar entre {num(80 - DIG * 3600 * 1.25 * 6, 0)} e {num(80 - DIG * 3600 * 1.5 * 4, 0)}, cumprem 4 a 6 horas e deixam o sono de 8 horas custar de {num(8 * DIG * 3600 * 1.25, 0)} a {num(8 * DIG * 3600 * 1.5, 0)} unidades: cabe na barra sem encostar no zero. O x2,25 do KRS Items custa {num(8 * DIG_K * 3600, 0)} unidades por noite e faz a fome chegar {num(hrs(U900, DIG_K), 1)} horas depois de uma refeição. ^d</p>
 <h3>3. Energia (vigor)</h3>
@@ -465,7 +480,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <p class="note">Horas de mundo = unidades ÷ ritmo (`DigestionSpeed` × 3.600). Ignora a parte de curto prazo da comida (digere {num(rv('ShortTermNutritionDigestionSpeedMultiplier'))}x mais rápido), então é ordem de grandeza. ^d</p>
 {meal_table}
 {item_table}
-<p class="note">`max_status` (pão 50, carne assada 40, queijo 30, sopa 20; bebidas 100) tem significado não verificado. Lido como teto da barra ele não fecha: a carne assada (40) nunca tiraria o jogador da fome, que começa em 50. Não use `max_status` para nenhuma conta até um teste no jogo. ^n</p>
+<p class="note">`max_status` (pão 50, carne assada 40, queijo 30, sopa 20; bebidas 100) **não é teto da barra**: medido em jogo, um pão (max_status 50) levou a fome de 59,9 a 76,9. O significado dele continua desconhecido. ^c</p>
 
 <h2 id="validade">Validade: quanto duram os alimentos</h2>
 <p class="lead">Jogo contra uma estimativa de validade sem geladeira (ambiente fresco a porão), em horas de mundo, e quanto isso dura em tempo real. Só os números de geladeira (carne, aves, ovos) têm fonte: [Minnesota Department of Health](https://www.health.mn.gov/people/foodsafety/store/cold.html) (carne de boi, porco e cordeiro 3 a 5 dias a 4 °C; aves e carne moída 1 a 2 dias; ovos com casca 3 a 5 semanas; ovos cozidos 1 semana). O resto é conhecimento geral e deve ser conferido antes de virar regra. ^d</p>
@@ -504,6 +519,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <script>{JS}</script>
 """
 page = re.sub(r"`([^`<]+)`", r"<code>\1</code>", page)
+page = re.sub(r"\*\*([^*<]+)\*\*", r"<b>\1</b>", page)
 page = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', page)
 page = re.sub(r"\s*\^([cdn])\b", lambda m: f' <span class="cf cf-{m.group(1)}" title="{esc(CONF[m.group(1)][0])}: {esc(CONF[m.group(1)][1])}">{CONF[m.group(1)][0]}</span>', page)
 out = os.path.join(OUTDIR, "ANALISE_BASE.html")
