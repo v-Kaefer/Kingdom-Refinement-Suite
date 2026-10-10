@@ -8,6 +8,7 @@ Log of decisions and open questions. Newest first. A decision taken by default w
 
 | Date | Decision | Why | By |
 |---|---|---|---|
+| 2026-10-09 | Fourth package: **Leech & Lore Reworked** (books and specific healing/treatment items such as bandages); Gluttony Rebalanced takes all other consumables | author's answers and choice of name | author |
 | 2026-10-09 | KRS-Items will have packages that bring a whole category together: **Realistic Potions** (all potion changes), **Gluttony Rebalanced** (food and the player's consumables) and **Exploration Reworked** (= `krs_exploration`); `krs-` modules stay the individual pieces. Technical ids are not renamed yet. Each package has a folder with one `PREVISTO.md` in `WIP_Mods/` (outside git) until its v1.0 review | author's instruction; `Mods WIP folder` was renamed `WIP_Mods` | author |
 | 2026-10-09 | The sleeping spot rows (better beds) belong to `krs_exploration`, not `krs_items`; KRS-Items keeps books, reading XP, digestion, starvation and the Aesop potion | author's instruction; one chat per division of the suite, this one for KRS-Items | author |
 | 2026-10-09 | Grade B batch 1 (1483, 1639, 2011, 2345, 1105): spoilage goes to a fine-tuning step, nothing is consolidated yet; food nutrition/refresh is added to the final review; the snack system (2011) and service prices (1105) have no answer yet | `../mods-review/GRADE_B_LOTE1.html`; the author wants to tune the spoilage values by food class first | author |

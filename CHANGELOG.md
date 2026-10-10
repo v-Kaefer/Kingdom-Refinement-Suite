@@ -5,6 +5,13 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-09: Gluttony Rebalanced base analysis; Leech & Lore Reworked named
+
+- Fourth package named by the author: **Leech & Lore Reworked** (books and the specific healing/treatment items such as bandages); folder with a `PREVISTO.md` in `WIP_Mods/` (outside git). Gluttony Rebalanced takes all other consumables; potions stay in Realistic Potions.
+- `docs/modules/gluttony/ANALISE_BASE.html` (tool `tools/build_gluttony_base.py`), read only, nothing tested in game: one unit of `nutrition_benefit` is worth about 28 to 240 kcal (median 69) from the items' weights, so the game's 50 units per world day are about 3,400 kcal, the daily need of a very active man, and the KRS Items x2.25 is about 7,700. A mixed meal of about 900 kcal holds hunger for 6.3 world hours in the game and 2.8 with KRS Items, close to the 4 to 6 hours of a real person; what is far from real is the bar (full to "hungry" takes 24 world hours). Cooked and raw foods last about as long as in real life without a fridge; smoked, cured, roots, eggs, apples and cheese last 3 to 50 times less.
+- A day of 4, 5 or 6 minutes: every duration measured in world time (hunger, tiredness, sleep, spoilage, alcohol, reputation, dropped items) stretches by 1.25x or 1.5x in real time with no parameter change; combat and buff seconds do not. Keeping today's real-time pace would need `DigestionSpeed` x1.25 or x1.5. The game data does not hold the day length; only `Calendar.SetWorldTimeRatio` exists, and whether a script-set value persists is not verified (the page takes the author's 4 minutes per day as an input).
+- Fix: the number formatter of the new builder cut trailing zeros of whole numbers (50 shown as 5); fixed before publishing.
+
 ## 2026-10-09: sleeping spots moved to krs_exploration; KRS-Items workbench
 
 - The four `sleeping_spot_type` rows (better beds, derived from Bed Comfort Restored 480) moved from `krs_items` to `krs_exploration` by the author's decision: file `sleeping_spot_type__krs_exploration.xml` (rows unchanged, suffix now the module's id), `docs/data/ownership.csv` updated, READMEs, CHANGES (both "Unreleased"), manifest descriptions and `OBJECTIVES.md` follow. Versions are not bumped. `tools/check_patch_names.py` reports 0 problems on both modules; both build (`tools/build_module.py krs_items`, `tools/build_exploration.py core`) with the beds in the exploration pak only. No game run. The generated `docs/data/table-audit/` still shows the old path until `tools/audit_tables.py` is run again.

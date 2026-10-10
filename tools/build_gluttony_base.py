@@ -1,0 +1,320 @@
+"""Gluttony Rebalanced: base analysis (hunger, food shelf life, day length) against the game's own values.
+
+Reads docs/engine/rpg_constants_runtime.csv, Params Reference.md, the unmodified game's tables (food, pickable_item) and
+modules/krs_items. Writes docs/modules/gluttony/ANALISE_BASE.html (Portuguese). Nothing is run, nothing outside docs/ is written.
+Run: python tools/build_gluttony_base.py
+"""
+import csv
+import html
+import os
+import re
+import statistics as st
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+OUTDIR = os.path.join(ROOT, "docs", "modules", "gluttony")
+os.makedirs(OUTDIR, exist_ok=True)
+sys.path.insert(0, HERE)
+import grade_b_extract as gx          # noqa: E402
+import grade_b_page_style as S        # noqa: E402
+
+CONF = {"c": ("confirmado", "lido nos arquivos, no jogo ou no log"), "d": ("deduzido", "inferido do nome, da ajuda, de conhecimento geral ou de fonte externa"), "n": ("não verificado", "precisa de teste no jogo")}
+
+
+def esc(t):
+    return html.escape(str(t), quote=False)
+
+
+def rich(t):
+    t = esc(t)
+    t = re.sub(r"`([^`]+)`", r"<code>\1</code>", t)
+    t = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", t)
+    t = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+    return re.sub(r"\s*\^([cdn])\b", lambda m: f' <span class="cf cf-{m.group(1)}" title="{esc(CONF[m.group(1)][0])}: {esc(CONF[m.group(1)][1])}">{CONF[m.group(1)][0]}</span>', t)
+
+
+def num(x, nd=2):
+    if abs(x - round(x)) < 1e-9:
+        return str(int(round(x)))
+    t = f"{x:.{nd}f}"
+    if "." in t:
+        t = t.rstrip("0").rstrip(".")
+    return t.replace(".", ",")
+
+
+def table(head, rows, cls="t compact", nums=()):
+    th = "".join(f"<th>{esc(h)}</th>" for h in head)
+    body = ""
+    for r in rows:
+        body += "<tr>" + "".join(f'<td class="{"num" if i in nums else ""}">{c if str(c).startswith("<") else rich(c)}</td>' for i, c in enumerate(r)) + "</tr>"
+    return f'<div class="scroll"><table class="{cls}"><thead><tr>{th}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+def fmt_s(sec):
+    if sec < 90:
+        return f"{num(sec, 0)} s"
+    if sec < 5400:
+        return f"{num(sec / 60, 1)} min"
+    return f"{num(sec / 3600, 1)} h"
+
+
+def rt(w):
+    """a span the script fills with the real time of `w` world hours, at the chosen day length"""
+    return f'<span data-w="{w:.5f}"></span>'
+
+
+# ---------------------------------------------------------------- data
+RUNTIME = {r["key"]: r for r in csv.DictReader(open(os.path.join(ROOT, "docs", "engine", "rpg_constants_runtime.csv"), encoding="utf-8"))}
+KRS = dict(re.findall(r'rpg_param_key="([A-Za-z]+)" rpg_param_value="([^"]*)"', open(os.path.join(ROOT, "modules", "krs_items", "Data", "Libs", "Tables", "rpg", "rpg_param__krs_items.xml"), encoding="utf-8").read()))
+
+
+def rv(k):
+    return float(RUNTIME[k]["runtime_value"])
+
+
+DIG, DIG_K = rv("DigestionSpeed"), float(KRS["DigestionSpeed"])
+FULL, THR, HUGE, EXTR, OVER = rv("FoodFull"), rv("StarvationThreshold"), rv("StarvationHugeThreshold"), rv("StarvationExtremeThreshold"), rv("FoodOverEat")
+UPD, UPD_K = DIG * 86400, DIG_K * 86400          # units per world day
+
+
+def hrs(units, rate):
+    return units / rate / 3600.0
+
+
+G = gx.Game()
+PK = {r["item_id"]: r for r in G.tables["pickable_item"]["rows"]}
+FOOD = {r["item_id"]: r for r in G.tables["food"]["rows"]}
+NAME = {re.sub(r"\s*\[[0-9a-f]{8}\]$", "", G.label(i)): i for i in FOOD}
+
+# ---------------------------------------------------------------- 1. calibration: what is one unit of nutrition worth
+REF = [("Bread", 265, "pão de trigo"), ("Beef_cooked", 250, "carne bovina assada"), ("hardboiled_egg", 155, "ovo cozido"), ("Cheese quarter", 400, "queijo duro"),
+       ("Apple", 52, "maçã"), ("lentil_soup", 100, "ensopado de lentilha"), ("Salami_01", 430, "salame seco"), ("porridge", 70, "mingau")]
+cal_rows, kcal_units = [], []
+for n, k100, lab in REF:
+    i = NAME[n]
+    w = float(PK[i]["weight"])
+    nu = float(FOOD[i]["nutrition_benefit"])
+    kcal = w * 10 * k100
+    ku = kcal / nu
+    kcal_units.append(ku)
+    cal_rows.append([f"{n} ({lab})", num(w), num(nu), num(k100), num(kcal), num(ku, 0)])
+K_MED = st.median(kcal_units)
+K_LO, K_HI = min(kcal_units), max(kcal_units)
+cal_table = table(["Item do jogo", "Peso no jogo (kg)", "Nutrição", "kcal por 100 g (referência)", "kcal do item inteiro", "kcal por unidade de nutrição"], cal_rows, nums=(1, 2, 3, 4, 5))
+
+# ---------------------------------------------------------------- 2. what a person like Henry spends
+W_KG, H_CM, AGE = 75, 175, 25
+BMR = 10 * W_KG + 6.25 * H_CM - 5 * AGE + 5
+LEVELS = [("Sedentário ou atividade leve", 1.55), ("Moderadamente ativo (exemplo da FAO)", 1.85), ("Muito ativo (trabalho braçal, marcha, combate)", 2.2)]
+en_rows = []
+for lab, pal in LEVELS:
+    e = BMR * pal
+    cells = [lab, num(pal), num(e, 0)]
+    for k in (40, K_MED, 120):
+        upd = e / k
+        rate = upd / 86400
+        cells.append(f"{num(upd, 0)} u/dia; {rate:.6f}".replace(".", ",") + f" ({num(rate / DIG, 2)}x jogo; {num(rate / DIG_K, 2)}x KRS)")
+    en_rows.append(cells)
+energy_table = table(["Atividade", "PAL", "kcal por dia", "Se 1 unidade = 40 kcal", f"Se 1 unidade = {num(K_MED, 0)} kcal (mediana)", "Se 1 unidade = 120 kcal"], en_rows, nums=(1, 2))
+
+# ---------------------------------------------------------------- 3. meal interval in the bar
+MEALS = [("Lanche (cerca de 500 kcal)", 500), ("Refeição (cerca de 900 kcal)", 900), ("Refeição grande (cerca de 1200 kcal)", 1200)]
+meal_rows = []
+for lab, kcal in MEALS:
+    u = kcal / K_MED
+    meal_rows.append([lab, num(u, 1), num(hrs(u, DIG), 1) + " h", rt(hrs(u, DIG)), num(hrs(u, DIG_K), 1) + " h", rt(hrs(u, DIG_K))])
+meal_table = table(["Comida", f"Unidades (a {num(K_MED, 0)} kcal)", "Segura a fome no jogo", "Em tempo real", "Segura a fome no KRS Items", "Em tempo real"], meal_rows, nums=(1, 2, 4))
+
+# game items as meals
+item_rows = []
+for n in ("Bread", "Beef_cooked", "Rabbit meat cooked", "lentil_soup", "Smoked Rabbit meat", "hardboiled_egg", "Apple"):
+    i = NAME[n]
+    nu = float(FOOD[i]["nutrition_benefit"])
+    item_rows.append([n, num(nu), FOOD[i]["max_status"], num(hrs(nu, DIG), 1) + " h", num(hrs(nu, DIG_K), 1) + " h"])
+item_table = table(["Item do jogo", "Nutrição", "`max_status`", "Horas de fome no jogo", "No KRS Items"], item_rows, nums=(1, 2, 3, 4))
+
+U900 = 900 / K_MED
+# ---------------------------------------------------------------- 4. states, game versus a real person
+state_rows = [
+    ["Fome volta depois de uma refeição mista", "4 a 6 h", f"{num(hrs(U900, DIG), 1)} h para uma refeição de {num(U900, 0)} unidades (cerca de 900 kcal)", f"{num(hrs(U900, DIG_K), 1)} h"],
+    ["Fome forte, irritação", "12 a 24 h sem comer", f"{num(hrs(FULL - THR, DIG), 1)} h de cheio até 'com fome' (50)", f"{num(hrs(FULL - THR, DIG_K), 1)} h"],
+    ["Fraqueza marcada", "2 a 3 dias sem comer", f"{num(hrs(FULL - HUGE, DIG), 1)} h até a fome grande (25)", f"{num(hrs(FULL - HUGE, DIG_K), 1)} h"],
+    ["Inanição (efeito máximo no jogo)", "semanas sem comer até risco de vida", f"{num(hrs(FULL - EXTR, DIG), 1)} h até 0", f"{num(hrs(FULL - EXTR, DIG_K), 1)} h"],
+]
+state_table = table(["Estado", "Pessoa real (mesma atividade)", "Jogo (horas de mundo)", "KRS Items"], state_rows)
+
+# ---------------------------------------------------------------- 5. shelf life
+CLASSES = [  # name, game h, real low h, real high h, note
+    ("Carne e peixe crus", 24, 12, 72, "ambiente 12 a 24 h; porão frio 2 a 3 dias; geladeira: aves e carne moída 1 a 2 dias, peças de boi, porco e cordeiro 3 a 5 dias"),
+    ("Miúdos crus", 24, 12, 36, "como a carne crua, mais rápido"),
+    ("Leite", 24, 12, 36, "sem refrigeração dura menos de um dia"),
+    ("Cogumelos crus", 24, 24, 72, ""),
+    ("Carne e peixe cozidos", 48, 24, 72, "ambiente 1 dia; porão 2 a 3 dias"),
+    ("Verduras cozidas e sopas", 48, 24, 72, ""),
+    ("Ovo cozido duro", 48, 72, 168, "1 semana na geladeira"),
+    ("Ovo cru com casca", 48, 336, 840, "3 a 5 semanas na geladeira; 2 semanas ou mais em ambiente fresco"),
+    ("Pão e massas", 96, 72, 168, "pão denso de centeio dura mais que o de trigo"),
+    ("Raízes e repolho crus", 96, 336, 2160, "porão fresco: semanas a meses"),
+    ("Carne defumada, curada e seca", 120, 336, 2160, "sal, fumaça e secagem: semanas a meses"),
+    ("Maçã e pera", 120, 720, 2160, "porão: 1 a 3 meses"),
+    ("Queijo duro", 120, 720, 4320, "1 a 6 meses"),
+]
+shelf_rows = []
+for nme, g, lo, hi, note in CLASSES:
+    shelf_rows.append([nme + " ^d", num(g), num(g * 2), f"{num(lo)} a {num(hi)}", f"{num(g / hi, 2)} a {num(g / lo, 2)}x", rt(g), rt(g * 2), note])
+shelf_table = table(["Classe", "Jogo (h)", "2X (h)", "Realista (h, ambiente fresco a porão)", "Jogo ÷ realista", "Jogo em tempo real", "2X em tempo real", "Observação"], shelf_rows, nums=(1, 2, 3, 4))
+
+# ---------------------------------------------------------------- 6. day length scenarios
+DAYS = (4, 5, 6)
+
+
+def real(h, d):
+    return fmt_s(h * 3600.0 * d * 60.0 / 86400.0)
+
+
+scen = [("Cheio até 'com fome', jogo", hrs(FULL - THR, DIG)), ("Cheio até 'com fome', KRS Items", hrs(FULL - THR, DIG_K)),
+        (f"Refeição de {num(U900, 0)} unidades segura, jogo", hrs(U900, DIG)), (f"Refeição de {num(U900, 0)} unidades segura, KRS Items", hrs(U900, DIG_K)),
+        ("Carne crua estraga (24 h)", 24), ("Carne cozida estraga (48 h)", 48), ("Carne defumada estraga (120 h)", 120), ("Mesma, com o 2X (240 h)", 240),
+        ("Dormir 8 h (regeneração cheia)", 8), ("Item solto no chão some (2 dias)", 48), ("Reputação se propaga (3 h)", 3)]
+scen_rows = [[lab, num(h, 1)] + [real(h, d) for d in DAYS] + [num(h * 3600 / (d * 60 / 86400 * 3600) / 3600, 0) if False else ""] for lab, h in scen]
+scen_rows = [[lab, num(h, 1) + " h"] + [real(h, d) for d in DAYS] for lab, h in scen]
+scen_table = table(["Duração em tempo de mundo", "Horas de mundo", "Dia de 4 min", "Dia de 5 min", "Dia de 6 min"], scen_rows, nums=(1, 2, 3, 4))
+
+keep_rows = []
+for lab, rate in (("Jogo", DIG), ("KRS Items", DIG_K)):
+    keep_rows.append([lab, f"{rate:.6f}".replace(".", ",")] + [f"{(rate * d / 4):.6f}".replace(".", ",") + f" ({num(d / 4, 2)}x)" for d in (5, 6)])
+keep_table = table(["Base", "`DigestionSpeed` hoje (dia de 4 min)", "Para manter o mesmo ritmo em tempo real, dia de 5 min", "Dia de 6 min"], keep_rows)
+
+ratio_rows = [[f"{d} min", num(86400 / (d * 60), 0), num(24 / d, 1) + " h", num(3600 / (86400 / (d * 60)), 1) + " s"] for d in DAYS]
+ratio_table = table(["Dia inteiro dura", "Segundos de mundo por segundo real", "Horas de mundo por minuto real", "Uma hora de mundo dura"], ratio_rows, nums=(1, 2, 3))
+
+MECH = [
+    ("Fome (`DigestionSpeed`) e cansaço (`ExhaustionSpeed`)", "segundo de mundo", "os valores não mudam; em tempo real, tudo fica 1,25x (5 min) ou 1,5x (6 min) mais devagar", "c"),
+    ("Sono: regeneração (`SleepHealthRegenBaseSpeed`, 8 h de mundo), ficar acordado e dormir demais (12 h)", "hora de mundo", "idem; o avanço de tempo (dormir, esperar) é acelerado pelo motor, então o que o jogador espera na tela pode não mudar", "d"),
+    ("Apodrecimento (`decay_time_hours`) e a perk Proper diet (120 h)", "hora de mundo", "idem: a carne crua dura 4, 5 ou 6 minutos reais", "c"),
+    ("Álcool, ressaca (4 h de mundo), intoxicação, veneno", "segundo de mundo", "idem", "c"),
+    ("Itens soltos somem (2 dias), corpos reaparecem (800 min), reputação se propaga (3 h)", "tempo de mundo", "idem: duram 25% ou 50% mais em tempo real", "c"),
+    ("Horários de NPCs, lojas, toque de recolher, dia e noite", "relógio do mundo", "cada atividade tem mais tempo real; cada noite dura mais; viagens a pé gastam menos horas de mundo por minuto andado (-20% ou -33%), logo menos fome e menos apodrecimento por viagem", "d"),
+    ("Combate, buffs de comida e de poção (segundos), perks de combate (`PerkBerserkDuration` 30)", "segundo real", "não mudam; mas uma luta de 1 minuto gasta 6 h de mundo (dia de 4 min), 4,8 h (5 min) ou 4 h (6 min): a fome por luta cai", "d"),
+    ("Sujeira da roupa, desgaste de armas e armaduras", "distância ou uso", "não dependem do relógio", "d"),
+    ("Leitura de livros (10 a 25 h) e esperas", "hora de mundo no avanço de tempo", "mesma duração em horas de mundo; o tempo real do avanço depende do motor", "n"),
+]
+mech_table = table(["Mecânica", "Medida em", "Efeito de passar o dia de 4 para 5 ou 6 minutos", "Confiança"], [[a, b, c, f'<span class="cf cf-{k}">{CONF[k][0]}</span>'] for a, b, c, k in MECH])
+
+STEPS = [
+    "**Medir o dia de hoje.** Cronometrar quantos segundos reais dura uma hora do relógio do jogo (o Time-HD, já instalado, mostra o relógio). Isso confirma ou corrige a entrada de minutos por dia desta página.",
+    "**Escolher o que se ancora.** Três escolhas possíveis, que dão números diferentes: (a) por dia de mundo, para que o gasto de energia seja o de uma pessoa ativa; (b) por intervalo entre refeições, de 4 a 6 horas de mundo; (c) por minuto real de jogo, para a fome não atrapalhar o ritmo de quem joga.",
+    "**Testar o comando de tempo no jogo réplica.** O jogo tem `Calendar.GetWorldTimeRatio()` e `Calendar.SetWorldTimeRatio(x)` (o menu de trapaça do jogador usa 600 para acelerar e depois devolve o valor lido). Falta ver se um valor gravado por um script de abertura permanece depois de carregar um save, dormir, conversar e viajar, ou se o motor o devolve. ^n",
+    "**Se o comando funcionar,** definir quem é dono do ritmo do dia (não é comida: afeta tudo) e afinar, juntos, `DigestionSpeed`, `ExhaustionSpeed` e o apodrecimento.",
+    "**Se não funcionar,** manter o dia e mover só os parâmetros de necessidade: resolve fome e apodrecimento, mas não horários de NPCs, noite e viagens.",
+]
+
+FIND = [
+    ("A taxa de fome do jogo já é de uma pessoa muito ativa; o KRS Items passa muito disso", f"Pelo peso e pela nutrição dos itens, 1 unidade vale {num(K_LO, 0)} a {num(K_HI, 0)} kcal (mediana {num(K_MED, 0)}). A {num(K_MED, 0)} kcal por unidade, o jogo gasta {num(UPD, 0)} unidades por dia de mundo, cerca de {num(UPD * K_MED, 0)} kcal, que é o que gasta quem faz trabalho braçal pesado (Henry: {num(BMR * 1.85, 0)} a {num(BMR * 2.2, 0)} kcal). Com o KRS Items (x2,25) seriam cerca de {num(UPD_K * K_MED, 0)} kcal por dia. A conta depende muito da calibração (o intervalo vai de 40 a 120 kcal por unidade), então não fecha sozinha uma decisão. ^d"),
+    ("O intervalo entre refeições do jogo é o de uma pessoa real, se a refeição for de tamanho real", f"Uma refeição de cerca de 900 kcal vale {num(900 / K_MED, 1)} unidades e segura a fome por {num(hrs(900 / K_MED, DIG), 1)} h de mundo no jogo e {num(hrs(900 / K_MED, DIG_K), 1)} h no KRS Items. Uma pessoa real volta a sentir fome de 4 a 6 h depois de uma refeição mista (um estudo mediu cerca de 306 min para o estômago esvaziar após 800 kcal, em 9 jovens). O que afasta o jogo da realidade é a barra: de cheio (100) a 'com fome' (50) são 24 h, porque um pão inteiro (17) ou uma carne assada (21) valem 1.400 a 1.600 kcal. ^d"),
+    ("Os conservados duram muito menos que na vida real; os crus são parecidos", "Carne crua em 24 h é o que se espera sem geladeira. Mas defumado, curado e seco (120 h), raízes (96 h), ovo cru (48 h), maçã (120 h) e queijo (120 h) duram de 3 a 50 vezes menos que na vida real. Como o jogo comprime o dia, um mês real de validade seria 2 horas de jogo (dia de 4 min): a validade realista literal não serve, e vale escolher valores comprimidos por classe. ^d"),
+    ("Esticar o dia para 5 ou 6 minutos muda o tempo real de tudo que é medido em tempo de mundo", "Fome, cansaço, sono, apodrecimento, álcool, reputação e itens no chão passam a durar 25% ou 50% mais em tempo real, sem mexer em nenhum parâmetro. Combate e buffs ficam iguais. Para manter a cadência real de hoje, a digestão teria de subir na mesma proporção. ^d"),
+    ("O ritmo do dia não está nos dados do jogo", "Só existe o comando de script `Calendar.SetWorldTimeRatio`; a constante `DefaultWorldTimeRatio` (15) é descrita como base do avanço rápido de tempo. Os tempos reais desta página usam os seus 4 minutos por dia (razão 360) e se recalculam no campo abaixo. ^n"),
+]
+fhtml = "".join(f'<div class="find"><h3>{esc(t)}</h3><p>{rich(d)}</p></div>' for t, d in FIND)
+steps_html = "<ol>" + "".join(f"<li>{rich(s)}</li>" for s in STEPS) + "</ol>"
+
+JS = r"""
+(function(){
+  var inp=document.getElementById('dmin');
+  function fmt(s){ if(s<90) return Math.round(s)+' s'; if(s<5400) return (s/60).toFixed(1).replace('.',',')+' min'; return (s/3600).toFixed(1).replace('.',',')+' h'; }
+  function upd(){
+    var d=parseFloat((inp.value||'').replace(',','.')); if(!(d>0)) d=4;
+    var R=86400/(d*60);
+    [].slice.call(document.querySelectorAll('[data-w]')).forEach(function(e){ e.textContent=fmt(parseFloat(e.dataset.w)*3600/R); });
+    document.getElementById('ratio-r').textContent=Math.round(R*10)/10;
+    document.getElementById('ratio-h').textContent=fmt(3600/R);
+  }
+  inp.addEventListener('input',upd);
+  [].slice.call(document.querySelectorAll('[data-set]')).forEach(function(b){ b.addEventListener('click',function(){ inp.value=b.dataset.set; upd(); }); });
+  upd();
+})();
+"""
+
+nav = "".join(f'<a href="#{i}">{t}</a>' for i, t in (("resumo", "Resumo"), ("relogio", "Relógio"), ("energia", "Energia"), ("fome", "Fome"), ("validade", "Validade"), ("dia", "Dia de 5 ou 6 min"), ("plano", "Plano"), ("fontes", "Fontes e limites")))
+page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gluttony Rebalanced, análise de base</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>{S.CSS}
+.ratio{{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:10px 14px;margin:12px 0}}
+.ratio input{{font:inherit;width:5rem;padding:4px 6px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:3px}}
+.ratio button{{font:inherit;padding:4px 10px;background:var(--surface2);color:var(--ink);border:1px solid var(--line);border-radius:3px;cursor:pointer}}
+</style>
+<div class="top"><b>Gluttony Rebalanced</b><nav>{nav}</nav></div>
+<main>
+<header>
+<h1>Gluttony Rebalanced: análise de base contra o jogo</h1>
+<p class="lead">Quanto duram os alimentos, quanto tempo uma pessoa com a atividade de Henry aguenta sem fome, e o que muda ao esticar o dia de 4 para 5 ou 6 minutos. Compara tudo com os valores do jogo 1.9.8 e com o que o KRS Items já faz. Só leitura: nada foi alterado nem testado no jogo, e nenhum valor novo foi escolhido.</p>
+<p class="legend"><span><span class="cf cf-c">confirmado</span> lido nos arquivos</span><span><span class="cf cf-d">deduzido</span> inferido, de conhecimento geral ou de fonte externa</span><span><span class="cf cf-n">não verificado</span> precisa de teste</span></p>
+</header>
+
+<h2 id="resumo">Resumo</h2>
+<div class="cols">{fhtml}</div>
+
+<h2 id="relogio">Relógio: quanto dura o dia</h2>
+<div class="ratio"><label for="dmin"><b>Minutos reais por dia de mundo</b></label><input id="dmin" type="text" inputmode="decimal" value="4">
+<button type="button" data-set="4">4</button><button type="button" data-set="5">5</button><button type="button" data-set="6">6</button>
+<span>Razão: <b id="ratio-r"></b> segundos de mundo por segundo real; uma hora de mundo dura <b id="ratio-h"></b>.</span></div>
+<p class="note">Os valores marcados "em tempo real" mudam com este campo. A razão não está nos dados do jogo (ver o resumo). Se os seus 4 minutos forem por hora de mundo e não por dia, digite 96. ^n</p>
+{ratio_table}
+
+<h2 id="energia">Energia: quanto vale uma unidade de nutrição</h2>
+<p class="lead">O jogo mede a comida em unidades de nutrição (`nutrition_benefit`). Para compará-las com uma pessoa, convertemos o item inteiro (peso do jogo × kcal por 100 g de um alimento parecido) em kcal. Os kcal de referência são valores aproximados de conhecimento geral. ^d</p>
+{cal_table}
+<p class="note">A unidade vale de {num(K_LO, 0)} a {num(K_HI, 0)} kcal, mediana {num(K_MED, 0)}. A diferença vem de o jogo dar o mesmo tipo de peso a itens muito diferentes (um queijo de 0,6 kg dá só 10 unidades, um pão de 0,6 kg dá 17). ^d</p>
+<h3>O que Henry gasta por dia</h3>
+<p class="note">Estimativa para um homem de {W_KG} kg, {H_CM} cm e {AGE} anos (metabolismo basal de {num(BMR, 0)} kcal pela equação de Mifflin-St Jeor); a atividade vem do fator PAL da [FAO](https://www.fao.org/3/y5686e/y5686e08.htm): a faixa moderada tem 1,85 como exemplo e a muito ativa (trabalho braçal) fica entre 2,0 e 2,4 ([tabela de PAL](https://en.wikipedia.org/wiki/Physical_activity_level)). Henry anda, carrega equipamento e luta, então a faixa de 1,85 a 2,2 é a mais próxima. A FAO adverte que esses valores são para grupos, não para indivíduos. ^d</p>
+{energy_table}
+<p class="note">Cada célula mostra as unidades por dia e o `DigestionSpeed` que daria esse gasto, com o múltiplo do valor do jogo ({DIG:.9f}) e do KRS Items ({DIG_K:.9f}).</p>
+
+<h2 id="fome">Fome: quanto tempo até sentir fome</h2>
+<h3>Uma pessoa real e o jogo</h3>
+{state_table}
+<p class="note">A volta da fome em 4 a 6 horas é plausível, mas não há um número firme: [um estudo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12534588/) mediu cerca de 306 minutos para o esvaziamento do estômago após uma refeição mista de 800 kcal em 9 adultos jovens, e a fome depende também de hormônios e da composição da refeição. As demais linhas são conhecimento geral, sem fonte aqui. ^d</p>
+<h3>Quanto segura cada comida</h3>
+<p class="note">Horas de mundo = unidades ÷ ritmo (`DigestionSpeed` × 3.600). Ignora a parte de curto prazo da comida (digere {num(rv('ShortTermNutritionDigestionSpeedMultiplier'))}x mais rápido), então é ordem de grandeza. ^d</p>
+{meal_table}
+{item_table}
+<p class="note">`max_status` é o teto que cada item permite atingir na barra (pão 50, carne assada 40, queijo 30, sopa 20; bebidas 100); a leitura é deduzida do nome e dos valores. Ele já impede estocar fome com um só tipo de comida. ^d</p>
+
+<h2 id="validade">Validade: quanto duram os alimentos</h2>
+<p class="lead">Jogo contra uma estimativa de validade sem geladeira (ambiente fresco a porão), em horas de mundo, e quanto isso dura em tempo real. Só os números de geladeira (carne, aves, ovos) têm fonte: [Minnesota Department of Health](https://www.health.mn.gov/people/foodsafety/store/cold.html) (carne de boi, porco e cordeiro 3 a 5 dias a 4 °C; aves e carne moída 1 a 2 dias; ovos com casca 3 a 5 semanas; ovos cozidos 1 semana). O resto é conhecimento geral e deve ser conferido antes de virar regra. ^d</p>
+{shelf_table}
+<p class="note">Sem refrigeração, uma regra prática é que a validade cai pela metade a cada 10 °C a mais; por isso o porão fresco é a coluna mais alta e o verão, a mais baixa. ^d</p>
+
+<h2 id="dia">Dia de 5 ou 6 minutos: o que muda</h2>
+<h3>Se só o dia mudar</h3>
+<p class="lead">Nenhum parâmetro muda, só o relógio. Tempo real de cada duração em tempo de mundo. ^d</p>
+{scen_table}
+<h3>Se a cadência em tempo real de hoje for mantida</h3>
+<p class="lead">Para a fome voltar no mesmo tempo real com o dia mais longo, a digestão sobe na proporção do dia. O custo é gastar mais energia por dia de mundo (x1,25 ou x1,5), o que afasta o jogo da realidade por dia. ^d</p>
+{keep_table}
+<h3>Outras mecânicas</h3>
+{mech_table}
+
+<h2 id="plano">Plano</h2>
+{steps_html}
+
+<h2 id="fontes">Fontes e limites</h2>
+<ul>
+<li>Parâmetros do jogo: `rpg_constants_runtime.csv` (constantes ocultas lidas no 1.9.6), `Params Reference.md` (descrições) e as tabelas `food` e `pickable_item` do 1.9.8 da réplica, só leitura.</li>
+<li>Fontes externas: [FAO, cálculo de necessidades de energia](https://www.fao.org/3/y5686e/y5686e08.htm); [Wikipedia, nível de atividade física](https://en.wikipedia.org/wiki/Physical_activity_level); [Minnesota Department of Health, tabela de armazenamento](https://www.health.mn.gov/people/foodsafety/store/cold.html); [esvaziamento gástrico e apetite após uma refeição mista](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12534588/). Nenhuma foi lida por inteiro; os números citados estão nos resumos.</li>
+<li>A calibração de kcal por unidade usa pesos do jogo e kcal de referência de memória; o intervalo é largo de propósito.</li>
+<li>Não há medição no jogo: nem do dia, nem do efeito de mudar a razão, nem da fome em jogo.</li>
+</ul>
+<footer>Gerado por <code>tools/build_gluttony_base.py</code> a partir do jogo 1.9.8 da réplica e de <code>modules/krs_items</code>.</footer>
+</main>
+<script>{JS}</script>
+"""
+page = re.sub(r"`([^`<]+)`", r"<code>\1</code>", page)
+page = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', page)
+page = re.sub(r"\s*\^([cdn])\b", lambda m: f' <span class="cf cf-{m.group(1)}" title="{esc(CONF[m.group(1)][0])}: {esc(CONF[m.group(1)][1])}">{CONF[m.group(1)][0]}</span>', page)
+out = os.path.join(OUTDIR, "ANALISE_BASE.html")
+open(out, "w", encoding="utf-8", newline="\n").write(page)
+print("wrote", out, len(page), "bytes; kcal/unit", round(K_LO), round(K_MED), round(K_HI), "BMR", round(BMR))
