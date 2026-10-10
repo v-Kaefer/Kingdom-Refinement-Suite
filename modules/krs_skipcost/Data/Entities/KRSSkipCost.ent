@@ -1,0 +1,4 @@
+<Entity
+        Name="KRSSkipCost"
+        Script="Scripts/Entities/KRSSkipCost.lua"
+/>

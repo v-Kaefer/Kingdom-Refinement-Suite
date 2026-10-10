@@ -5,6 +5,10 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-10: krs_skipcost becomes a module of the Gluttony Rebalanced package
+
+- Author's request. `modules/krs_skipcost` (id `krs_skipcost`, version 0.1.0; `mod.manifest`, README, CHANGES, `Data/Scripts/Startup/krs_skipcost.lua`, `Data/Scripts/Entities/KRSSkipCost.lua`, `Data/Entities/KRSSkipCost.ent`) holds the scripts that were in `tools/harness/skipcost/` (moved with `git mv`); `build_skipcost.py` now builds the test copy from the module. `tools/build_module.py krs_skipcost` builds it and `check_patch_names.py` reports 0 problems. The built entity and `.ent` are byte-identical to the copy tested in game; the startup script differs only by the config line the test builder adds (defaults are the same). The module itself was not loaded in game as a built archive. It is a scripts-only module (no tables), so `ownership.csv` has no rows for it. The package folder `WIP_Mods/Gluttony Rebalanced/PREVISTO.md` lists it.
+
 ## 2026-10-10: Wait and sleep cost hunger again (krs_skipcost prototype); how the engine skips time
 
 - Author's rule: with the KRS Items hunger parameters, sleeping costs 50% and waiting 75% of the awake hunger cost; reading and fainting count as 50% (a book can only be read on a bed or better); vigour stays as the engine has it. The Wait-after-cancelling-the-bed shortcut had to be closed.

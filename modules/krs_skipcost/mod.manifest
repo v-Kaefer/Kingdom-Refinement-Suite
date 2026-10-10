@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kcd_mod>
+  <info>
+    <name>KRS Skip Cost</name>
+    <description>Kingdom Refinement Suite - waiting and sleeping cost hunger again: the game charges nothing during a time skip, this charges a share of the awake cost.</description>
+    <author>Kaleb</author>
+    <version>0.1.0</version>
+    <created_on>10/10/2026</created_on>
+    <modid>krs_skipcost</modid>
+    <modifies_level>false</modifies_level>
+  </info>
+  <supports>
+    <kcd_version>1.9.6</kcd_version>
+    <kcd_version>1.9.7</kcd_version>
+    <kcd_version>1.9.8</kcd_version>
+  </supports>
+</kcd_mod>

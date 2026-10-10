@@ -1,4 +1,6 @@
-# krs_skipcost (prototype)
+# krs_skipcost: test tooling
+
+The mod is now `modules/krs_skipcost` (README and CHANGES there; part of the Gluttony Rebalanced package). This folder keeps the builder that installs a test copy with the shares set from the command line. The text below is the original prototype note.
 
 Takes hunger off after a Wait or a sleep. The engine charges no hunger during a time skip (measured in game 1.9.8), so a mod that
 raises the digestion speed (KRS Items) makes the night free. This script charges, after each skip,
@@ -18,9 +20,9 @@ can only be read on a bed or better.
 
 ## How it works
 
-- `krs_skipcost.lua` (startup script) keeps the settings and makes sure one entity is alive; a startup script has no frame hook, an
+- `modules/krs_skipcost/Data/Scripts/Startup/krs_skipcost.lua` (startup script) keeps the settings and makes sure one entity is alive; a startup script has no frame hook, an
   entity has (`Client:OnUpdate`).
-- `krs_skipcost_entity.lua` finds a skip from the frame time: during a Wait or a sleep the engine feeds the frame hook frames of
+- `modules/krs_skipcost/Data/Scripts/Entities/KRSSkipCost.lua` finds a skip from the frame time: during a Wait or a sleep the engine feeds the frame hook frames of
   about 0.25 s (normal ones are 0.02 to 0.05 s) and the clock moves by ratio x frame time, so the world seconds of those frames are the
   skipped time. The clock ratio is not used: it changes with the hours chosen and the last hour of a skip runs at the normal ratio.
 - The kind comes from `player.player:IsLaying()` / `IsSitting()` while the skip runs. An earlier version flagged "sleep" when a bed was
@@ -45,4 +47,4 @@ the oldest autosave.
 - Wait of 3.991 h cost 9.534, Wait of 1.993 h cost 4.761 (rate x hours x 0.75), and the bar read back equal to the target;
 - posture: stand awake, lay in the sleep dialog, then sit and stand after cancelling; a Wait after cancelling was charged 0.75.
 
-Not tested: a real sleep with the mod, a Wait while sitting, reading a book, fainting. Not a module of the package yet.
+Not tested: a real sleep with the mod, a Wait while sitting, reading a book, fainting.

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-build_skipcost.py - install the KRS Skip Cost prototype into a KCD install (Mods/krs_skipcost).
+build_skipcost.py - install a test copy of the krs_skipcost module into a KCD install (Mods/krs_skipcost).
 
     python tools/harness/skipcost/build_skipcost.py --game "<KCD folder>" [--wait 0.75] [--sit 0.5] [--sleep 0.5] [--apply 1] [--remove]
 
 The engine charges no hunger while the clock is skipped (Wait, sleep). This mod takes hunger off after each skip: hours skipped x the
 awake hunger rate x a factor chosen by the posture of the player during the skip (--wait standing, --sit sitting, --sleep lying). Vigour and health are untouched.
-It logs one line per skip to kcd.log with the prefix KRS_SC. The scripts are krs_skipcost.lua (starter) and krs_skipcost_entity.lua.
+It logs one line per skip to kcd.log with the prefix KRS_SC. The source is the module `modules/krs_skipcost`; this builds a copy with the shares set from the command line, for tests.
 """
 import argparse
 import os
@@ -32,12 +32,13 @@ def main():
         shutil.rmtree(folder, ignore_errors=True)
         print("removed", folder)
         return
+    root = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
+    src = os.path.join(root, "modules", "krs_skipcost", "Data")
     cfg = f"KRS_SC_CFG = {{ wait = {a.wait}, sit = {a.sit}, sleep = {a.sleep}, apply = {a.apply} }}\n"
-    files = {
-        "Scripts/Startup/krs_skipcost.lua": cfg + open(os.path.join(HERE, "krs_skipcost.lua"), encoding="utf-8").read(),
-        "Scripts/Entities/KRSSkipCost.lua": open(os.path.join(HERE, "krs_skipcost_entity.lua"), encoding="utf-8").read(),
-        "Entities/KRSSkipCost.ent": '<Entity\n        Name="KRSSkipCost"\n        Script="Scripts/Entities/KRSSkipCost.lua"\n/>\n',
-    }
+    files = {}
+    for rel in ("Scripts/Startup/krs_skipcost.lua", "Scripts/Entities/KRSSkipCost.lua", "Entities/KRSSkipCost.ent"):
+        text = open(os.path.join(src, rel), encoding="utf-8").read()
+        files[rel] = cfg + text if rel.startswith("Scripts/Startup") else text
     bh.write_mod(a.game, "krs_skipcost", "krs_skipcost", "KRS Skip Cost", files)
 
 
