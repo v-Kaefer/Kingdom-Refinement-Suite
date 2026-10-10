@@ -5,6 +5,13 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-10: Gluttony Rebalanced v1 direction (day stays at 96 minutes, sleep untouched)
+
+- Author's direction: possibly keep the day at 96 minutes (ratio 15) for v1, with the sleep logic and its recoveries working and preferably untouched; hunger every 4 to 6 world hours (16 to 24 real minutes); `StarvationThreshold` may change; tune all parameters step by step and keep fixed the ones that are better fixed. The six-minute hour plan stays in the page as an alternative outside v1.
+- `docs/modules/gluttony/ANALISE_BASE.html`, section "v1": for a 13-unit (about 900 kcal) meal to hold hunger 4 to 6 world hours, `DigestionSpeed` is 0.000606 to 0.000909 (x1.05 to x1.57 of the game, 0.47x to 0.70x of the KRS Items x2.25, which holds the same meal 2.8 h). With the rate at x1.25 to x1.5 and a "hungry" threshold between 64 and 67 (after eating to 80), the cadence fits and a night of 8 h costs 21 to 25 units. `ExhaustionSpeed` x1.5 would make 16 h awake reach "exhausted" (50), but the sleep recovery per hour is not measured, so it is only a candidate.
+- Fixed in v1: the clock ratio, `SleepHealthRegenBaseSpeed`, `Oversleepness*`, `MinPossibleSleepTime`, `MinHealthToBeAbleToSleepOrSkiptime`, the starvation effect and health constants. Open question: the better beds (`sleeping_spot_type`, in Exploration Reworked) change the sleep recovery, so they conflict with "sleep untouched".
+- Tests still needed (E1 to E5 in the page): sleeping (does digestion and tiredness continue, how much does sleep restore), eating (is `max_status` a ceiling), the starvation thresholds, digestion during scenes, stamina use.
+
 ## 2026-10-10: six-minute day plan for Gluttony Rebalanced; can the day be timed unattended
 
 - Author's rule for a 6 minute day: everything that becomes 50% longer in real time is compensated first (rates per world second x1.5, durations in world time /1.5), then the author's own changes are added on top. `docs/modules/gluttony/ANALISE_BASE.html` lists the 16 constants and the spoilage rows with their compensated values (e.g. `DigestionSpeed` 0.000578704 -> 0.000868056; with the KRS Items x2.25 on top 0.001953126, which would replace today's 0.001302084). Sleep and reading (accelerated time skips) and the starvation effect intervals (unit unverified) are left as they are. Nothing was written to a module.

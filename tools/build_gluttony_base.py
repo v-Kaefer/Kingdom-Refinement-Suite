@@ -301,7 +301,7 @@ NUT_X = [(h, h * DIG_CK * 3600 / U900) for h in (3, 4, 5)]
 nut_text = "; ".join(f"para a refeição segurar {h} h de mundo, a nutrição teria de ser x{num(x, 1)}" for h, x in NUT_X)
 
 SIX = f"""
-<h2 id="seis">Plano para a hora de mundo de 6 minutos</h2>
+<h2 id="seis">Alternativa fora da v1: hora de mundo de 6 minutos</h2>
 <p class="lead">Regra do autor (10 out 2026): tudo que fica 50% mais longo em tempo real com a hora de mundo de 6 minutos (dia de 144 minutos, razão 10) é compensado, e só depois entram as mudanças do autor, somadas por cima. Os tempos reais desta seção são sempre para a hora de mundo de 6 minutos. ^d</p>
 <h3>1. Compensar o que estica</h3>
 <p class="note">Taxas por segundo de mundo sobem x1,5; durações em tempo de mundo caem ÷1,5. Todas já existem como constantes do jogo; a primeira (`DigestionSpeed`) é escrita hoje pelo KRS Items por linha de patch de `rpg_param`. ^c</p>
@@ -353,7 +353,75 @@ JS = r"""
 })();
 """
 
-nav = "".join(f'<a href="#{i}">{t}</a>' for i, t in (("resumo", "Resumo"), ("relogio", "Relógio"), ("energia", "Energia"), ("fome", "Fome"), ("validade", "Validade"), ("dia", "Dia de 5 ou 6 min"), ("seis", "Plano de 6 min"), ("medir", "Medir o dia"), ("plano", "Plano"), ("fontes", "Fontes e limites")))
+# ---------------------------------------------------------------- 8. v1: the day stays at 96 minutes (ratio 15), sleep untouched
+EXH_THR = rv("ExhaustedThreshold")
+rate_rows = []
+for u_meal, lab in ((8.0, "Lanche"), (U900, "Refeição"), (17.5, "Refeição grande")):
+    for t in (4, 5, 6):
+        r = u_meal / t
+        rate_rows.append([f"{lab} ({num(u_meal, 1)} u)", f"{t} h; {t * 4} min reais", num(r, 2), f"{r / 3600:.6f}".replace(".", ","), num(r / (DIG * 3600), 2) + "x", num(r / (DIG_K * 3600), 2) + "x"])
+rate_table = table(["Comida", "Segura a fome por (mundo; tempo real, hora de 4 min)", "Unidades por hora", "`DigestionSpeed`", "vs jogo", "vs KRS Items"], rate_rows, nums=(2, 3, 4, 5))
+
+L0 = 80.0
+bar_v1 = []
+for mult in (1.0, 1.25, 1.5, 2.0, DIG_K / DIG):
+    r = DIG * 3600 * mult
+    thr = {t: L0 - r * t for t in (4, 5, 6)}
+    zero = (L0 - r * 5) / r
+    bar_v1.append([("Jogo" if mult == 1.0 else "KRS Items (x2,25)" if mult > 2.2 else f"x{num(mult, 2)}"), num(r, 2), num(100 / r, 1) + " h", num(8 * r, 0) + " u",
+                   f"{num(thr[4], 0)} / {num(thr[5], 0)} / {num(thr[6], 0)}", num(zero, 1) + " h"])
+bar_v1_table = table(["Ritmo", "Unidades por hora", "De 100 a 0", "Custo de dormir 8 h", "Limiar para 'com fome' 4 / 5 / 6 h depois de comer até 80", "De 'com fome' (limiar de 5 h) até 0"], bar_v1, nums=(1, 2, 3, 4, 5))
+
+exh_rows = []
+for mult in (1.0, 1.25, 1.5, 2.0):
+    r = rv("ExhaustionSpeed") * 3600 * mult
+    exh_rows.append([f"x{num(mult, 2)}", num(r, 2), num((100 - EXH_THR) / r, 1) + " h", num(16 * r, 0) + " u", num(8 * r, 0) + " u"])
+exh_table = table(["`ExhaustionSpeed`", "Unidades por hora", "De 100 até 'exausto' (50)", "Gasto de 16 h acordado", "Gasto de 8 h dormindo, se continuasse"], exh_rows, nums=(1, 2, 3, 4))
+
+FIX = [
+    ("Razão do tempo (dia de 96 min, razão 15)", "fixo na v1: sem script de tempo, sem compensação"),
+    ("Sono: `SleepHealthRegenBaseSpeed`, `OversleepnessFill/EmptyTime`, `MinPossibleSleepTime`, `MinHealthToBeAbleToSleepOrSkiptime`", "fixos (a lógica e as recuperações do sono ficam como no jogo)"),
+    ("Recuperação de vigor e vida ao dormir (qualidade da cama, `sleeping_spot_type`)", "fixa: as camas melhores que moram no Exploration Reworked (1,2 / 0,955 / 0,325 / 0,65) mudam o sono; decidir se ficam fora da v1"),
+    ("`StarvationHealthLossSpeed`, `FoodHealSpeed`, `FoodPoisoning*`, `StarvationPlayerEffect*`", "fixos até medir a unidade e o efeito"),
+    ("`DigestionSpeed`", "ajustável: único lugar onde o ritmo da fome muda sem tocar no sono (se a digestão continuar durante o sono, ver testes)"),
+    ("`StarvationThreshold` (50), `StarvationHugeThreshold` (25), `StarvationExtremeThreshold` (0)", "ajustáveis: dizem quando a fome começa, aperta e vira inanição"),
+    ("`ExhaustionSpeed`", "candidato: só se a recuperação do sono comportar; hoje não medida"),
+    ("`nutrition_benefit`, `refresh_benefit`, `short_term_nutrition_benefit_ratio` dos alimentos", "ajustáveis (revisão final de nutrição)"),
+    ("`decay_time_hours`", "ajustável, por classe (ajuste fino em andamento)"),
+]
+fix_table = table(["Parâmetro", "Papel na v1"], [[a, b] for a, b in FIX])
+
+TESTS = [
+    ("E1. Sono", "dormir N horas numa cama com fome e vigor conhecidos; ler antes e depois fome, vigor e vida", "a digestão e o gasto de vigor continuam durante o sono? quanto vigor o sono devolve por hora? limita a fome o tempo de sono?"),
+    ("E2. Comer", "comer o pão com a fome em 30 e em 70; ler a barra antes, logo depois e 1 minuto depois", "o teto `max_status` existe? a parte de curto prazo cai mais rápido? quanto sobe a barra"),
+    ("E3. Fome nos limiares", "deixar a fome cruzar 50 e 25 em um save de teste; ler os efeitos e o tempo entre eles", "o que cada limiar liga e com que intervalo (unidade de `StarvationPlayerEffect*`)"),
+    ("E4. Digestão em cenas e diálogos", "ler a fome durante uma conversa e uma cena", "explica a barra parada de 3 minutos da medição"),
+    ("E5. Vigor e estamina", "andar, correr e lutar um tempo conhecido; ler vigor e estamina", "gasto real de energia por atividade"),
+]
+tests_table = table(["Teste", "Como", "O que responde"], [[a, b, c] for a, b, c in TESTS])
+
+V1SEC = f"""
+<h2 id="v1">v1: o dia fica em 96 minutos, o sono intocado</h2>
+<p class="lead">Decisão do autor (10 out 2026): talvez manter o dia em 96 minutos (razão 15, medida) na v1, com a lógica do sono e suas recuperações funcionando e, de preferência, intocadas; a fome deve voltar a cada 4 a 6 horas de mundo (16 a 24 minutos reais), e o `StarvationThreshold` pode mudar se fizer sentido. Nada de compensar o relógio: a seção anterior de hora de 6 minutos fica como alternativa fora da v1. ^d</p>
+<h3>1. Ritmo da fome para 4 a 6 horas</h3>
+<p class="note">Quanto a digestão precisa ser para uma comida de cada tamanho segurar a fome por 4, 5 ou 6 horas de mundo (unidades a {num(K_MED, 0)} kcal, mediana da calibração). O ritmo do jogo ({num(DIG * 3600, 2)} unidades por hora) já dá {num(hrs(U900, DIG), 1)} h para uma refeição de {num(U900, 0)} unidades: o ritmo do KRS Items ({num(DIG_K * 3600, 2)}) é rápido demais para esse alvo. ^d</p>
+{rate_table}
+<h3>2. A barra e o sono</h3>
+<p class="note">O jogo recusa deitar quando a fome impediria dormir o mínimo (`MinPossibleSleepTime`, descrição do jogo), então a fome limita o sono. Dormir 8 horas custa 8 vezes o ritmo em unidades se a digestão continuar durante o sono (não medido, ver teste E1). Limiar necessário para a fome chegar 4, 5 ou 6 horas depois de comer até 80 (ponto de partida suposto, `max_status` não medido). ^d</p>
+{bar_v1_table}
+<p class="note">Ritmos entre x1,25 e x1,5 do jogo, com o limiar entre {num(80 - DIG * 3600 * 1.25 * 6, 0)} e {num(80 - DIG * 3600 * 1.5 * 4, 0)}, cumprem 4 a 6 horas e deixam o sono de 8 horas custar de {num(8 * DIG * 3600 * 1.25, 0)} a {num(8 * DIG * 3600 * 1.5, 0)} unidades: cabe na barra sem encostar no zero. O x2,25 do KRS Items custa {num(8 * DIG_K * 3600, 0)} unidades por noite e faz a fome chegar {num(hrs(U900, DIG_K), 1)} horas depois de uma refeição. ^d</p>
+<h3>3. Energia (vigor)</h3>
+<p class="note">`ExhaustedThreshold` = {num(EXH_THR, 0)}: abaixo disso o jogador fica exausto. A 1,5x do ritmo do jogo, de 100 a exausto leva 16 horas acordado, que combina com 8 horas de sono. O sono tem de devolver o que foi gasto, e a recuperação por hora do sono não foi medida (teste E1); por isso `ExhaustionSpeed` fica como candidato, não como decisão. ^d</p>
+{exh_table}
+<h3>4. O que fica fixo e o que se ajusta</h3>
+{fix_table}
+<p class="note">Atenção: as camas melhores (sleeping_quality 1,2 / 0,955 / 0,325 / 0,65) foram para o Exploration Reworked e alteram a recuperação do sono. Se o sono tem de ficar intocado, elas ficam de fora da v1. ^d</p>
+<h3>5. Testes que faltam antes de fechar os valores</h3>
+{tests_table}
+<p class="note">Método de ajuste: escolher um alvo, calcular os parâmetros com as tabelas acima, aplicar no `krs_items` da réplica, medir com o probe e comparar com o alvo; repetir até que fome, vigor e sono fechem juntos. Os parâmetros fixos da tabela só mudam se um teste mostrar que é preciso. ^d</p>
+"""
+
+nav = "".join(f'<a href="#{i}">{t}</a>' for i, t in (("resumo", "Resumo"), ("relogio", "Relógio"), ("energia", "Energia"), ("fome", "Fome"), ("validade", "Validade"), ("dia", "Dia de 5 ou 6 min"), ("v1", "v1: dia de 96 min"), ("seis", "Alternativa: hora de 6 min"), ("medir", "Medir o dia"), ("plano", "Plano"), ("fontes", "Fontes e limites")))
 page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gluttony Rebalanced, análise de base</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -414,6 +482,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <h3>Outras mecânicas</h3>
 {mech_table}
 
+{V1SEC}
 {SIX}
 <h2 id="medir">Medido no jogo (10 out 2026)</h2>
 <p class="lead">Execução única na réplica 1.9.8 com só o mod de teste `krs_timeprobe` carregado e o save mais recente (194, o que o Continue carregaria). O jogo abriu, mediu e fechou sozinho; o menu pedia Escape e Load Game porque não mostra Continue nesta instalação. ^c</p>
