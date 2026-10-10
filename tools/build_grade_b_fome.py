@@ -254,7 +254,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 {mod_table}
 
 <h2 id="comidas">Cada comida: quanto sacia</h2>
-<p class="lead">O ganho de uma comida está em três colunas da tabela `food`: `nutrition_benefit` (quanto sobe a barra), `short_term_nutrition_benefit_ratio` (parte que digere {num(rt('ShortTermNutritionDigestionSpeedMultiplier'))}x mais rápido) e `max_status` (teto que o item permite atingir; a leitura é deduzida). ^d</p>
+<p class="lead">O ganho de uma comida está em três colunas da tabela `food`: `nutrition_benefit` (quanto sobe a barra), `short_term_nutrition_benefit_ratio` (parte que digere {num(rt('ShortTermNutritionDigestionSpeedMultiplier'))}x mais rápido) e `max_status` (significado não verificado: a leitura como teto da barra não fecha, porque a carne assada tem 40, abaixo do limiar de fome de 50). ^n</p>
 {food_table}
 <h3>Exemplos, em horas de fome</h3>
 <p class="note">Horas = nutrição ÷ ritmo. Ignora a parte de curto prazo, então é ordem de grandeza. ^d</p>
@@ -263,7 +263,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <h2 id="limites">Limites</h2>
 <ul>
 <li>A razão entre tempo real e tempo de mundo não consta nos dados lidos; o valor 360 é o seu. As conversões são aritmética sobre os parâmetros.</li>
-<li>O mecanismo exato da parte de curto prazo, o teto `max_status` e as unidades dos efeitos de inanição vêm de nomes e da ajuda do jogo, sem teste.</li>
+<li>O mecanismo exato da parte de curto prazo, o significado de `max_status` e as unidades dos efeitos de inanição vêm de nomes e da ajuda do jogo, sem teste.</li>
 <li>Os valores 'do jogo' vêm da leitura de 1.9.6; no 1.9.8 o binário mudou e as constantes ocultas podem ter mudado.</li>
 </ul>
 <footer>Gerado por <code>tools/build_grade_b_fome.py</code> a partir de <code>docs/engine/rpg_constants_runtime.csv</code>, <code>Params Reference.md</code>, as tabelas do jogo e <code>modules/krs_items</code>.</footer>

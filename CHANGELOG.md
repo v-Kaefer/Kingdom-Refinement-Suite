@@ -5,6 +5,14 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-10: six-minute day plan for Gluttony Rebalanced; can the day be timed unattended
+
+- Author's rule for a 6 minute day: everything that becomes 50% longer in real time is compensated first (rates per world second x1.5, durations in world time /1.5), then the author's own changes are added on top. `docs/modules/gluttony/ANALISE_BASE.html` lists the 16 constants and the spoilage rows with their compensated values (e.g. `DigestionSpeed` 0.000578704 -> 0.000868056; with the KRS Items x2.25 on top 0.001953126, which would replace today's 0.001302084). Sleep and reading (accelerated time skips) and the starvation effect intervals (unit unverified) are left as they are. Nothing was written to a module.
+- The hunger bar: at the compensated KRS rate, full to "hungry" (50) is 7.1 world hours (1.8 real minutes at 6 min a day); the page gives the `StarvationThreshold` needed for other targets (1 min -> 72, 2.5 min -> 30; 4 min does not fit in the bar) and the nutrition scale that would make a 900 kcal meal last 3 to 5 world hours (x1.6 to x2.7). Demand: about 28 nutrition units per real minute, a loaf every 36 s, against 8 units without any change.
+- `max_status` of `food` was read as a ceiling on the bar in two earlier pages; that reading does not hold (cooked beef has 40, below the hunger line 50), so it is now marked unverified in `GRADE_B_FOME.html` and the new page.
+- Timing the day unattended (read only, nothing run): the game starts and quits by itself through the harness (proven); `Calendar.GetWorldTime`, `GetWorldHourOfDay`, `IsWorldTimePaused` and `GetWorldTimeRatio` exist in the game's scripts; a per-frame hook exists; `kcd.log` has no time per line, so the runner would stamp arrivals. Open: whether the world clock runs at the main menu; otherwise a loaded save (Continue) is needed.
+- Files: the duplicate copy of Perkaholic 1.05 (85) in `Installed_to_review/c_progression-xp-perks` was deleted at the author's request (same sha256 as the copy in `Perks/`).
+
 ## 2026-10-09: Gluttony Rebalanced base analysis; Leech & Lore Reworked named
 
 - Fourth package named by the author: **Leech & Lore Reworked** (books and the specific healing/treatment items such as bandages); folder with a `PREVISTO.md` in `WIP_Mods/` (outside git). Gluttony Rebalanced takes all other consumables; potions stay in Realistic Potions.

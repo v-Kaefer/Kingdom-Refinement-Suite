@@ -220,6 +220,122 @@ FIND = [
 fhtml = "".join(f'<div class="find"><h3>{esc(t)}</h3><p>{rich(d)}</p></div>' for t, d in FIND)
 steps_html = "<ol>" + "".join(f"<li>{rich(s)}</li>" for s in STEPS) + "</ol>"
 
+# ---------------------------------------------------------------- 7. six minutes a day: compensate, then add the author's changes
+D6 = 6.0
+
+
+def rt6(h):
+    return real(h, 6)
+
+F = 1.5
+DIG_C = DIG * F
+DIG_CK = DIG_C * (DIG_K / DIG)           # compensated, then the author's x2.25 on top
+RATE = {"jogo": DIG, "comp": DIG_C, "compk": DIG_CK}
+W_PER_MIN = 24 / D6                      # world hours per real minute at 6 min a day
+
+
+def scn(label, rate):
+    uph = rate * 3600
+    to50, to25, to0 = hrs(FULL - THR, rate), hrs(FULL - HUGE, rate), hrs(FULL - EXTR, rate)
+    return [label, f"{rate:.9f}".replace(".", ","), num(uph, 2), f"{num(to50, 1)} h; " + rt6(to50), f"{num(to25, 1)} h; " + rt6(to25), f"{num(to0, 1)} h; " + rt6(to0), f"{num(U900 / (rate * 3600), 1)} h; " + rt6(U900 / (rate * 3600))]
+
+
+# the real-time pace is shown at the day length typed in the box, but the rows are built for 6 min a day
+six_rows = [scn("A. Jogo sem compensar (dia de 6 min)", DIG), scn("B. Compensado (x1,5): o mesmo ritmo real de hoje", DIG_C), scn("C. Compensado + as mudanças do autor (x2,25 do KRS Items)", DIG_CK)]
+six_table = table(["Cenário", "`DigestionSpeed`", "Unidades por hora de mundo", "Cheio até 'com fome' (50)", "Até a fome grande (25)", "Até 0", f"Uma refeição de {num(U900, 0)} unidades segura"], six_rows, nums=(1, 2))
+
+COMP = [  # key, factor kind, note
+    ("DigestionSpeed", "mul", "fome; é a linha que o KRS Items já escreve (hoje 0,001302084)"),
+    ("ExhaustionSpeed", "mul", "cansaço de longo prazo; mesmo valor da fome no jogo"),
+    ("MetabolismDigestSpeed", "mul", "digestão de álcool e veneno"),
+    ("MetabolismAbsorbSpeed", "mul", "absorção (remoção) de álcool e veneno"),
+    ("AlcoholismDuration", "div", "duração do alcoolismo, em tempo de mundo"),
+    ("AlcoholBaseHangoverDuration", "div", "ressaca, em tempo de mundo"),
+    ("AlcoholBlackoutDuration", "div", "apagão por álcool; a unidade não está documentada"),
+    ("ReputationPropagationTime", "div", "tempo para a reputação se espalhar, em tempo de mundo"),
+    ("ReputationPropagationBiasTime", "div", "variação do tempo acima"),
+    ("BaseItemDisappearingTime", "div", "item solto no chão some, em tempo de mundo"),
+    ("MaxItemDisappearingTime", "div", "idem, limite"),
+    ("RespawnTimeBase", "div", "corpo escondido reaparece, em minutos de jogo"),
+    ("StillBuffDuration", "div", "ficar parado ativa o buff, em segundos de mundo"),
+    ("PerkProperDietActivationTime", "div", "dieta que ativa a perk Proper diet, em horas"),
+    ("ItemOwnerFadePriceToHours", "div", "horas de mundo por decigrosh para o dono esquecer um item"),
+    ("ItemOwnerFadeConspicuousnessToHours", "div", "idem, por ponto de visibilidade"),
+]
+comp_rows = []
+for k, kind, note in COMP:
+    v0 = float(RUNTIME[k]["runtime_value"])
+    v1 = v0 * F if kind == "mul" else v0 / F
+    comp_rows.append([f"`{k}`", num(v0, 9), ("x1,5" if kind == "mul" else "÷1,5"), num(v1, 9 if v1 < 100 else 1), note])
+comp_table = table(["Parâmetro", "Jogo", "Regra", "Compensado", "O que é"], comp_rows, nums=(1, 3))
+
+SPOIL = [24, 48, 72, 96, 120]
+spoil_rows = [[f"{num(g)} h", num(g / F, 1) + " h", rt6(g / F), "x2: " + num(2 * g / F, 1) + " h", rt6(2 * g / F)] for g in SPOIL]
+spoil_table = table(["Jogo (`decay_time_hours`)", "Compensado (÷1,5)", "Em tempo real", "Com uma mudança do autor de x2 (exemplo)", "Em tempo real"], spoil_rows, nums=(0, 1, 3))
+
+NOT = [
+    ("`SleepHealthRegenBaseSpeed`, `OversleepnessFillTime`, `OversleepnessEmptyTime`, `MinPossibleSleepTime`", "acontecem durante o avanço de tempo (dormir, esperar), que o motor acelera: a duração em horas de mundo é o que importa, não o relógio"),
+    ("`OverreadnessFillTime`, `OverreadnessEmptyTime` e `length_in_game_hours` dos livros", "leitura também é avanço de tempo"),
+    ("`StarvationHealthLossSpeed`, `FoodHealSpeed`, `FoodPoisoning*HealthEffectSpeed`", "a unidade (segundo de mundo ou real) não está documentada; decidir depois de medir"),
+    ("`StarvationPlayerEffect*` (90, 120, 45, 75)", "unidade não verificada; o KRS Items já mexe em três deles"),
+    ("Buffs em segundos (comida, poção, perk de combate)", "tempo real, não mudam com o dia"),
+    ("Horários de NPCs, lojas, noite", "seguem o relógio do mundo; o dia mais longo dá mais tempo real a cada atividade, e isso fica de bônus"),
+]
+not_table = table(["Fica como está", "Por quê"], [[a, b] for a, b in NOT])
+
+# the bar: where the hungry line has to sit for a given real-time target, at the rate of scenario C
+bar_rows = []
+for t in (1.0, 1.5, 1.8, 2.5, 3.0, 4.0):
+    wh = t * W_PER_MIN
+    units = DIG_CK * 3600 * wh
+    thr = FULL - units
+    verdict = f"{num(thr, 0)}" if thr >= 0 else "impossível: gasta mais que a barra inteira"
+    bar_rows.append([f"{num(t, 1)} min", num(wh, 1) + " h", num(units, 0), verdict])
+bar_table = table(["Cheio até 'com fome' em (tempo real, dia de 6 min)", "Horas de mundo", "Unidades gastas", "Limiar `StarvationThreshold` necessário"], bar_rows, nums=(1, 2, 3))
+
+CONS = []
+for lab, rate in (("A. Jogo sem compensar", DIG), ("B. Compensado", DIG_C), ("C. Compensado + KRS Items", DIG_CK)):
+    upm = rate * 3600 * W_PER_MIN
+    CONS.append([lab, num(upm, 1), num(upm * 10 / 17, 1), num(upm * 10 / 21, 1), num(upm * 10 / 8, 1)])
+cons_table = table(["Cenário (dia de 6 min)", "Unidades gastas por minuto real", "Pães (17) em 10 min", "Carnes assadas (21) em 10 min", "Sopas (8) em 10 min"], CONS, nums=(1, 2, 3, 4))
+NUT_X = [(h, h * DIG_CK * 3600 / U900) for h in (3, 4, 5)]
+nut_text = "; ".join(f"para a refeição segurar {h} h de mundo, a nutrição teria de ser x{num(x, 1)}" for h, x in NUT_X)
+
+SIX = f"""
+<h2 id="seis">Plano para 6 minutos por dia</h2>
+<p class="lead">Regra do autor (10 out 2026): tudo que fica 50% mais longo em tempo real com o dia de 6 minutos é compensado, e só depois entram as mudanças do autor, somadas por cima. Os tempos reais desta seção são sempre para o dia de 6 minutos. ^d</p>
+<h3>1. Compensar o que estica</h3>
+<p class="note">Taxas por segundo de mundo sobem x1,5; durações em tempo de mundo caem ÷1,5. Todas já existem como constantes do jogo; a primeira (`DigestionSpeed`) é escrita hoje pelo KRS Items por linha de patch de `rpg_param`. ^c</p>
+{comp_table}
+<h3>Apodrecimento</h3>
+<p class="note">Todas as linhas de `decay_time_hours` (111 perecíveis) ÷1,5; as mudanças por classe, como o x2 do 1483, entram depois. Os 91 itens com 0 (não estragam) ficam como estão. ^d</p>
+{spoil_table}
+<h3>O que não se compensa</h3>
+{not_table}
+<h3>2. Fome: antes e depois das mudanças</h3>
+{six_table}
+<p class="note">B devolve o ritmo real de hoje (o mesmo de um dia de 4 minutos sem compensar). C é B com a digestão x2,25 do KRS Items por cima: {f'{DIG_CK:.9f}'.replace('.', ',')}, que substituiria o 0,001302084 atual. ^d</p>
+<h3>3. A barra de fome</h3>
+<p class="lead">A taxa do cenário C esvazia {num(DIG_CK * 3600, 2)} unidades por hora de mundo. Com a barra de hoje (cheio 100, 'com fome' 50, grande 25, zero 0), isso dá {num(hrs(FULL - THR, DIG_CK), 1)} h de mundo (cerca de {num(hrs(FULL - THR, DIG_CK) / W_PER_MIN, 1)} min reais) de cheio até 'com fome'. A tabela mostra onde o limiar teria de ficar para outros tempos. ^d</p>
+{bar_table}
+<p class="note">Duas alavancas pareiam a barra com o ritmo: o limiar (e os de fome grande e zero) e o valor de nutrição dos alimentos. Quanto à segunda: {nut_text} (refeição de {num(U900, 0)} unidades, cerca de 900 kcal). Subir `StarvationThreshold` faz a fome chegar antes; descê-lo dá folga. `FoodFull` (100) e `FoodOverEat` (120) definem a barra inteira; mexer neles muda a reserva máxima. ^d</p>
+<h3>4. O que isso pede do jogador</h3>
+<p class="note">Consumo por minuto real de jogo, que é o que as quedas de drop de animais e os preços de mercado vão pressionar. ^d</p>
+{cons_table}
+<p class="note">Em C o jogador gasta o equivalente a um pão a cada cerca de {num(17 / (DIG_CK * 3600 * W_PER_MIN) * 60, 0)} segundos reais, andando ou lutando; nada disso considera dormir, esperar ou ler, que passam o relógio acelerado. Comparar com a oferta (drops e preços) é o próximo passo. ^d</p>
+"""
+
+MEAS = [
+    ("Iniciar o jogo e sair sozinho", "provado: `tools/harness/run_game_test.ps1` e `tools/gate.py` abrem o jogo da réplica, esperam a linha `KRS_HARNESS end` no `kcd.log` e o encerram; exige o Steam aberto e nenhum KCD rodando", "c"),
+    ("Ler o relógio do mundo em Lua", "`Calendar.GetWorldTime()` (segundos de mundo; os scripts do jogo tiram o resto por 86400 para a hora do dia), `GetWorldHourOfDay()` (0 a 24), `IsWorldTimePaused()` e `GetWorldTimeRatio()` existem nos scripts do jogo; ainda não foram chamados em teste", "n"),
+    ("Rodar código a cada quadro", "provado: uma entidade com `Client:OnUpdate(frameTime)` (padrão do harness); `Script.SetTimer` de script de abertura nunca disparou", "c"),
+    ("Medir o tempo real", "o `kcd.log` não traz hora por linha. Duas saídas: o PowerShell que já vigia o log marca a hora de chegada de cada linha (1 a 3 s de precisão, serve para um dia de 4 a 6 minutos), ou `os.time` (usado uma vez nos scripts do jogo; não testado). Somar `frameTime` é arriscado: o `system.cfg` fala em frametime escalado", "d"),
+    ("Ter o mundo andando", "o relógio só deve correr com um nível carregado e o jogador existindo. Os testes anteriores pararam no menu, o 1.9.8 tem telas novas antes dele, e o modo `full` pede que alguém aperte Continue. Não se sabe se o relógio já corre no menu", "n"),
+    ("Dia e noite", "não achei tabela de nascer e pôr do sol nos dados lidos; luzes e portas usam `GetWorldHourOfDay` com limites por entidade. A medida direta é horas de mundo por segundo real; o dia e a noite saem por proporção das horas", "d"),
+    ("Interferências", "dormir, esperar, diálogos e cenas mudam a razão ou pausam o relógio; descartar esses intervalos com `IsWorldTimePaused` e a razão lida", "d"),
+]
+meas_table = table(["Etapa", "Estado", "Confiança"], [[a, b, f'<span class="cf cf-{k}">{CONF[k][0]}</span>'] for a, b, k in MEAS])
+
 JS = r"""
 (function(){
   var inp=document.getElementById('dmin');
@@ -237,7 +353,7 @@ JS = r"""
 })();
 """
 
-nav = "".join(f'<a href="#{i}">{t}</a>' for i, t in (("resumo", "Resumo"), ("relogio", "Relógio"), ("energia", "Energia"), ("fome", "Fome"), ("validade", "Validade"), ("dia", "Dia de 5 ou 6 min"), ("plano", "Plano"), ("fontes", "Fontes e limites")))
+nav = "".join(f'<a href="#{i}">{t}</a>' for i, t in (("resumo", "Resumo"), ("relogio", "Relógio"), ("energia", "Energia"), ("fome", "Fome"), ("validade", "Validade"), ("dia", "Dia de 5 ou 6 min"), ("seis", "Plano de 6 min"), ("medir", "Medir o dia"), ("plano", "Plano"), ("fontes", "Fontes e limites")))
 page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gluttony Rebalanced, análise de base</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -281,7 +397,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <p class="note">Horas de mundo = unidades ÷ ritmo (`DigestionSpeed` × 3.600). Ignora a parte de curto prazo da comida (digere {num(rv('ShortTermNutritionDigestionSpeedMultiplier'))}x mais rápido), então é ordem de grandeza. ^d</p>
 {meal_table}
 {item_table}
-<p class="note">`max_status` é o teto que cada item permite atingir na barra (pão 50, carne assada 40, queijo 30, sopa 20; bebidas 100); a leitura é deduzida do nome e dos valores. Ele já impede estocar fome com um só tipo de comida. ^d</p>
+<p class="note">`max_status` (pão 50, carne assada 40, queijo 30, sopa 20; bebidas 100) tem significado não verificado. Lido como teto da barra ele não fecha: a carne assada (40) nunca tiraria o jogador da fome, que começa em 50. Não use `max_status` para nenhuma conta até um teste no jogo. ^n</p>
 
 <h2 id="validade">Validade: quanto duram os alimentos</h2>
 <p class="lead">Jogo contra uma estimativa de validade sem geladeira (ambiente fresco a porão), em horas de mundo, e quanto isso dura em tempo real. Só os números de geladeira (carne, aves, ovos) têm fonte: [Minnesota Department of Health](https://www.health.mn.gov/people/foodsafety/store/cold.html) (carne de boi, porco e cordeiro 3 a 5 dias a 4 °C; aves e carne moída 1 a 2 dias; ovos com casca 3 a 5 semanas; ovos cozidos 1 semana). O resto é conhecimento geral e deve ser conferido antes de virar regra. ^d</p>
@@ -297,6 +413,12 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 {keep_table}
 <h3>Outras mecânicas</h3>
 {mech_table}
+
+{SIX}
+<h2 id="medir">Dá para medir o dia sozinho?</h2>
+<p class="lead">Sem executar nada, só lendo os scripts, as ferramentas e os logs do repositório: sim, tecnicamente, com uma etapa que ainda depende de decisão. O jogo se abre e se fecha sozinho (provado), o relógio do mundo é legível em Lua e um gancho por quadro existe. Falta o jogador carregado, que hoje exige apertar Continue. ^d</p>
+{meas_table}
+<p class="note">Teste mínimo antes de tudo: ler `Calendar.GetWorldTime()` duas vezes no menu, com 20 s de intervalo. Se o relógio já correr ali, a medida sai 100% sozinha. Se não correr, é preciso um save carregado: ou você aperta Continue uma vez, ou eu controlo a tela do jogo com a sua autorização. Nada disso foi executado. ^n</p>
 
 <h2 id="plano">Plano</h2>
 {steps_html}
