@@ -1,0 +1,22 @@
+id,name,subcategory,rank,verdict,files,rows_new,rows_changed,whole_table_replacements,balance_entries
+1483,TSM Slower Food Spoil,"Comida, bebida e apodrecimento",1,Candidato,7,0,333,0,B1
+1639,Alternate Food Spoil (2X),"Comida, bebida e apodrecimento",4,Rejeitar,3,0,111,0,B1
+2011,Chefs Kiss (DDDB),"Comida, bebida e apodrecimento",2,Investigar / decidir,11,56,267,0,B1 B2 B3 B4
+2345,Jesoo333's Food and Drinks Rebalance,"Comida, bebida e apodrecimento",3,Investigar / decidir,3,0,155,1,B1 B2
+1009,Perkaholic - PTF updated (1.9.4-1.9.8),Perks: a linha Perkaholic,1,Candidato,20,187,7,0,B15
+770,Perkaholic updated (v1.07),Perks: a linha Perkaholic,2,Rejeitar,17,184,2,5,B15
+85,Perkaholic (v1.05),Perks: a linha Perkaholic,3,Rejeitar,28,188,86,6,B15
+2179,True Hardcore Combat (PTF),"Combate: ritmo da IA, bloqueio e vigor",1,Investigar / decidir,24,72,148,0,B5 B6 B8 B9 B10 B11 B12
+1384,Modified Combat Overhaul - Directional Combat (BCAIC Lite),"Combate: ritmo da IA, bloqueio e vigor",2,Investigar / decidir,4,160,21,0,B5 B6 B7 B8 B9 B11
+1112,Combat Overhaul (directional combat),"Combate: ritmo da IA, bloqueio e vigor",3,Investigar / decidir,6,226,17,0,B5 B6 B7 B8
+2045,Polearms Unleashed Rebalanced Lite Edition (PURLE),Armas e munição: estatísticas,1,Investigar / decidir,21,64,42,0,B13 B7 B20
+2035,Ordinance - an Archery Overhaul (DDDB),Armas e munição: estatísticas,2,Investigar / decidir,12,10,48,0,B12
+2173,True Hardcore Maintenance (PTF),"Equipamento: conteúdo, manutenção e visual",1,Candidato,18,7,41,0,B14
+1380,Black Items - PTF,"Equipamento: conteúdo, manutenção e visual",2,Conteúdo novo,15,54,5,0,B20
+2209,Poisonous Enemies - True Hardcore Compatibility Patch (PTF),"Equipamento: conteúdo, manutenção e visual",3,Depende de outro mod,15,36,0,0,B20
+2343,Ultimate Horse Caparison Fix,"Equipamento: conteúdo, manutenção e visual",4,Fora de escopo / arriscado,11,2,4,0,
+1105,Service Prices,Economia de serviços e acampamento,2,Investigar / decidir,5,0,6,0,B18
+1062,SIM Camping Mini ML,Economia de serviços e acampamento,1,Conteúdo novo,27,39,12,1,B19
+1558,Karnages KCD Essential Fixes 2.0,Regras globais: o pacote de parâmetros,1,Investigar / decidir,5,26,129,0,B5 B6 B8 B9 B16 B17
+2318,Visual Combo Helper,Auxiliares de interface e de script (Lua),1,Fora do escopo,7,0,0,0,
+2323,Alchemy Stash Link,Auxiliares de interface e de script (Lua),2,Candidato a QoL,4,0,0,0,

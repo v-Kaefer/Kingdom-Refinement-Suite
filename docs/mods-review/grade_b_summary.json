@@ -1,0 +1,1390 @@
+[
+ {
+  "id": "85",
+  "archive": "Perkaholic 1.05-85-1-05.zip",
+  "problems": [
+   "Libs/Tables/rpg/perk.xml: columns of the game's table missing from the header (rule 5: they are blanked): autolearnable, exclude_in_game_mode"
+  ],
+  "tables": {
+   "buff": {
+    "files": 1,
+    "new": 57,
+    "changed": 63,
+    "same": 315,
+    "dropped": 61,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk": {
+    "files": 1,
+    "new": 56,
+    "changed": 4,
+    "same": 481,
+    "dropped": 66,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk2perk_exclusivity": {
+    "files": 1,
+    "new": 3,
+    "changed": 0,
+    "same": 17,
+    "dropped": 2,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk_buff": {
+    "files": 1,
+    "new": 55,
+    "changed": 0,
+    "same": 116,
+    "dropped": 22,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk_buff_override": {
+    "files": 1,
+    "new": 17,
+    "changed": 0,
+    "same": 8,
+    "dropped": 3,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "skill": {
+    "files": 1,
+    "new": 0,
+    "changed": 19,
+    "same": 12,
+    "dropped": 2,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   }
+  },
+  "files": 30,
+  "listing_findings": [],
+  "entry": "Perkaholic 1.05-85-1-05.zip"
+ },
+ {
+  "id": "770",
+  "archive": "Perkaholic 1.07-770-1-07-1561341650.zip",
+  "problems": [],
+  "tables": {
+   "perk_buff_override": {
+    "files": 1,
+    "new": 17,
+    "changed": 0,
+    "same": 11,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk2perk_exclusivity": {
+    "files": 1,
+    "new": 0,
+    "changed": 0,
+    "same": 19,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk_buff": {
+    "files": 1,
+    "new": 55,
+    "changed": 0,
+    "same": 138,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 56,
+    "changed": 1,
+    "same": 438,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "perk": {
+    "files": 1,
+    "new": 56,
+    "changed": 1,
+    "same": 550,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   }
+  },
+  "files": 19,
+  "listing_findings": [],
+  "entry": "Perkaholic 1.07-770-1-07-1561341650.zip"
+ },
+ {
+  "id": "1009",
+  "archive": "Perkaholic PTF-1009-1-2-3-1780997771.rar",
+  "problems": [
+   "Libs/Tables/rpg/perk__perkaholic.xml: columns of the game's table missing from the header (rule 5: they are blanked): autolearnable, exclude_in_game_mode; row attributes not declared in the header: autolearnable, exclude_in_game_mode"
+  ],
+  "tables": {
+   "buff": {
+    "files": 1,
+    "new": 56,
+    "changed": 5,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "perkaholic"
+    ]
+   },
+   "perk2perk_exclusivity": {
+    "files": 1,
+    "new": 3,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "perkaholic"
+    ]
+   },
+   "perk_buff_override": {
+    "files": 1,
+    "new": 17,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "perkaholic"
+    ]
+   },
+   "perk_buff": {
+    "files": 1,
+    "new": 55,
+    "changed": 0,
+    "same": 1,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "perkaholic"
+    ]
+   },
+   "perk": {
+    "files": 1,
+    "new": 56,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "perkaholic"
+    ]
+   },
+   "skill": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "perkaholic"
+    ]
+   }
+  },
+  "files": 34,
+  "listing_findings": [],
+  "entry": "Perkaholic PTF-1009-1-2-3-1780997771.rar"
+ },
+ {
+  "id": "1062",
+  "archive": "SIM_Camping.zip-1062-1-5-1-1-1598039154.zip",
+  "problems": [
+   "Libs/Tables/rpg/perk__sim_camping.xml: columns of the game's table missing from the header (rule 5: they are blanked): autolearnable"
+  ],
+  "tables": {
+   "food": {
+    "files": 1,
+    "new": 1,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "item": {
+    "files": 1,
+    "new": 5,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "ointment_item": {
+    "files": 1,
+    "new": 4,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 5,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "player_item": {
+    "files": 1,
+    "new": 5,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "questible_item": {
+    "files": 1,
+    "new": 4,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "perk_buff": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "perk": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   },
+   "sleeping_spot_type": {
+    "files": 1,
+    "new": 3,
+    "changed": 0,
+    "same": 5,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   },
+   "shop_type2item": {
+    "files": 1,
+    "new": 6,
+    "changed": 12,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "sim_camping"
+    ]
+   }
+  },
+  "files": 32,
+  "listing_findings": [],
+  "entry": "SIM_Camping.zip-1062-1-5-1-1-1598039154.zip"
+ },
+ {
+  "id": "1105",
+  "archive": "Service Prices-1105-1-0-1600469221.zip",
+  "problems": [],
+  "tables": {
+   "sequence": {
+    "files": 1,
+    "new": 0,
+    "changed": 6,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "service_prices"
+    ]
+   }
+  },
+  "files": 6,
+  "listing_findings": [],
+  "entry": "Service Prices-1105-1-0-1600469221.zip"
+ },
+ {
+  "id": "1112",
+  "archive": "combatoverhaul-1112-1-6-4-1603868865.7z",
+  "problems": [],
+  "tables": {
+   "combat_action_perfect_block": {
+    "files": 1,
+    "new": 156,
+    "changed": 0,
+    "same": 12,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "combatoverhaul"
+    ]
+   },
+   "combat_attack_type": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "combatoverhaul"
+    ]
+   },
+   "perk_rpg_param_override": {
+    "files": 1,
+    "new": 41,
+    "changed": 2,
+    "same": 1,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "combatoverhaul"
+    ]
+   },
+   "rpg_param": {
+    "files": 1,
+    "new": 29,
+    "changed": 13,
+    "same": 1,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "combatoverhaul"
+    ]
+   },
+   "soul": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "combatoverhaul"
+    ]
+   }
+  },
+  "files": 7,
+  "listing_findings": [],
+  "entry": "combatoverhaul-1112-1-6-4-1603868865.7z"
+ },
+ {
+  "id": "1380",
+  "archive": "BlackItems - PTF-1380-1-1-1780999063.rar",
+  "problems": [],
+  "tables": {
+   "armor": {
+    "files": 1,
+    "new": 6,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "clothing_raycast": {
+    "files": 1,
+    "new": 1,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "clothing": {
+    "files": 1,
+    "new": 6,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "equippable_item": {
+    "files": 1,
+    "new": 6,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "item": {
+    "files": 1,
+    "new": 6,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 6,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "player_item": {
+    "files": 1,
+    "new": 6,
+    "changed": 5,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   },
+   "shop_type2item": {
+    "files": 1,
+    "new": 17,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "black_items"
+    ]
+   }
+  },
+  "files": 19,
+  "listing_findings": [],
+  "entry": "BlackItems - PTF-1380-1-1-1780999063.rar"
+ },
+ {
+  "id": "1384",
+  "archive": "zzz_BCAIC_BetterCombatLite.pak-1384-2-1654111935.zip",
+  "problems": [],
+  "tables": {
+   "combat_action_perfect_block": {
+    "files": 1,
+    "new": 150,
+    "changed": 0,
+    "same": 2,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "BCAIC"
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 0,
+    "changed": 8,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "BCAIC"
+    ]
+   },
+   "perk_rpg_param_override": {
+    "files": 1,
+    "new": 0,
+    "changed": 5,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "BCAIC"
+    ]
+   },
+   "rpg_param": {
+    "files": 1,
+    "new": 10,
+    "changed": 8,
+    "same": 3,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "BCAIC"
+    ]
+   }
+  },
+  "files": 5,
+  "listing_findings": [],
+  "entry": "zzz_BCAIC_BetterCombatLite.pak-1384-2-1654111935.zip"
+ },
+ {
+  "id": "1483",
+  "archive": "TSM Splower Food Spoil-1483-1-0-1677271171.7z",
+  "problems": [],
+  "tables": {
+   "food": {
+    "files": 3,
+    "new": 0,
+    "changed": 333,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "slowerfoodspoil"
+    ]
+   }
+  },
+  "files": 10,
+  "listing_findings": [],
+  "entry": "TSM Splower Food Spoil-1483-1-0-1677271171.7z"
+ },
+ {
+  "id": "1558",
+  "archive": "Karnages_KCD_Essential_Fixes 2.0-1558-1-0-0-1700590734.7z",
+  "problems": [
+   "Libs/Tables/rpg/rpg_param__Karnages_KCD_Essential_Fixes.xml: row attributes not declared in the header: perk_id"
+  ],
+  "tables": {
+   "document_required_skill": {
+    "files": 1,
+    "new": 0,
+    "changed": 40,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "Karnages_KCD_Essential_Fixes"
+    ]
+   },
+   "perk_rpg_param_override": {
+    "files": 1,
+    "new": 3,
+    "changed": 13,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "Karnages_KCD_Essential_Fixes"
+    ]
+   },
+   "rpg_param": {
+    "files": 1,
+    "new": 23,
+    "changed": 76,
+    "same": 2,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "Karnages_KCD_Essential_Fixes"
+    ]
+   }
+  },
+  "files": 6,
+  "listing_findings": [],
+  "entry": "Karnages_KCD_Essential_Fixes 2.0-1558-1-0-0-1700590734.7z"
+ },
+ {
+  "id": "1639",
+  "archive": "AlternateFoodSpoil2X-1639-1-0-1715595738.zip",
+  "problems": [],
+  "tables": {
+   "food": {
+    "files": 1,
+    "new": 0,
+    "changed": 111,
+    "same": 91,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "AlternateFoodSpoil2X"
+    ]
+   }
+  },
+  "files": 4,
+  "listing_findings": [],
+  "entry": "AlternateFoodSpoil2X-1639-1-0-1715595738.zip"
+ },
+ {
+  "id": "2011",
+  "archive": "Chefs Kiss 2011 3.7 2026-06-21T22-06Z HM0uQNJkR.7z",
+  "problems": [
+   "Libs/Tables/item/food__dddb_chefs_kiss.xml: row attributes not declared in the header: decay_ime_hours",
+   "Libs/Tables/item/pickable_item__dddb_chefs_kiss.xml: header columns not in the game's table: Weight; columns of the game's table missing from the header (rule 5: they are blanked): weight",
+   "Libs/Tables/rpg/buff__dddb_chefs_kiss.xml: row attributes not declared in the header: ui_name"
+  ],
+  "tables": {
+   "consumable_item": {
+    "files": 1,
+    "new": 5,
+    "changed": 38,
+    "same": 7,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   },
+   "food": {
+    "files": 1,
+    "new": 0,
+    "changed": 180,
+    "same": 2,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   },
+   "item": {
+    "files": 1,
+    "new": 0,
+    "changed": 4,
+    "same": 55,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 0,
+    "changed": 44,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   },
+   "potion": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   },
+   "buff_class": {
+    "files": 1,
+    "new": 9,
+    "changed": 0,
+    "same": 18,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 42,
+    "changed": 0,
+    "same": 24,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "dddb_chefs_kiss"
+    ]
+   }
+  },
+  "files": 13,
+  "listing_findings": [],
+  "entry": "Chefs Kiss 2011 3.7 2026-06-21T22-06Z HM0uQNJkR.7z"
+ },
+ {
+  "id": "2035",
+  "archive": "Ordinance Archery Overhaul DDDB-2035-6-1774914958.7z",
+  "problems": [
+   "Libs/tables/item/pickable_item__zzdddbordinance.xml: row attributes not declared in the header: charisma, conspicuousness, rpg_buff_weight, social_class_id, visibility, wealth_level"
+  ],
+  "tables": {
+   "ammo": {
+    "files": 1,
+    "new": 2,
+    "changed": 12,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "equippable_item": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "item": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "missile_weapon": {
+    "files": 1,
+    "new": 0,
+    "changed": 6,
+    "same": 17,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 2,
+    "changed": 16,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "player_item": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "weapon_class": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   },
+   "weapon": {
+    "files": 1,
+    "new": 0,
+    "changed": 13,
+    "same": 10,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "zzdddbordinance"
+    ]
+   }
+  },
+  "files": 14,
+  "listing_findings": [],
+  "entry": "Ordinance Archery Overhaul DDDB-2035-6-1774914958.7z"
+ },
+ {
+  "id": "2045",
+  "archive": "Polearms Unleashed Rebalanced Lite Edition-2045-1-1-1779784172.7z",
+  "problems": [],
+  "tables": {
+   "combat_action_attack": {
+    "files": 1,
+    "new": 6,
+    "changed": 0,
+    "same": 8,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "combat_action_guard_movement": {
+    "files": 1,
+    "new": 4,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "combat_action_pose_modifier": {
+    "files": 1,
+    "new": 16,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "combat_action_perfect_block": {
+    "files": 1,
+    "new": 5,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "combat_action_sync_pb_hit": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "skill": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "equippable_item": {
+    "files": 1,
+    "new": 0,
+    "changed": 8,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "melee_weapon": {
+    "files": 1,
+    "new": 0,
+    "changed": 11,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 0,
+    "changed": 10,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "weapon_class": {
+    "files": 1,
+    "new": 1,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "weapon": {
+    "files": 1,
+    "new": 0,
+    "changed": 12,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   },
+   "shop_type2item": {
+    "files": 1,
+    "new": 30,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "PURLE"
+    ]
+   }
+  },
+  "files": 26,
+  "listing_findings": [],
+  "entry": "Polearms Unleashed Rebalanced Lite Edition-2045-1-1-1779784172.7z"
+ },
+ {
+  "id": "2173",
+  "archive": "True Hardcore Maintenance-2173-2-0-1776308890.zip",
+  "problems": [],
+  "tables": {
+   "inventory_preset2item": {
+    "files": 1,
+    "new": 0,
+    "changed": 4,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "armor": {
+    "files": 1,
+    "new": 0,
+    "changed": 20,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "ointment_item": {
+    "files": 1,
+    "new": 0,
+    "changed": 1,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 0,
+    "changed": 8,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 0,
+    "changed": 2,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "perk_rpg_param_override": {
+    "files": 1,
+    "new": 0,
+    "changed": 4,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "rpg_param": {
+    "files": 1,
+    "new": 5,
+    "changed": 2,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   },
+   "skill2item_category": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcoremaintenance"
+    ]
+   }
+  },
+  "files": 20,
+  "listing_findings": [],
+  "entry": "True Hardcore Maintenance-2173-2-0-1776308890.zip"
+ },
+ {
+  "id": "2179",
+  "archive": "True Hardcore Combat-2179-1-3-1778946895.zip",
+  "problems": [],
+  "tables": {
+   "ammo": {
+    "files": 1,
+    "new": 0,
+    "changed": 14,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "food": {
+    "files": 1,
+    "new": 0,
+    "changed": 6,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 0,
+    "changed": 13,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 0,
+    "changed": 35,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "morale_change": {
+    "files": 1,
+    "new": 0,
+    "changed": 7,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "perk2perk_exclusivity": {
+    "files": 1,
+    "new": 1,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "perk_rpg_param_override": {
+    "files": 1,
+    "new": 0,
+    "changed": 7,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "rpg_movement_type": {
+    "files": 1,
+    "new": 0,
+    "changed": 3,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "rpg_param": {
+    "files": 1,
+    "new": 71,
+    "changed": 16,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "social_class": {
+    "files": 1,
+    "new": 0,
+    "changed": 42,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   },
+   "soul_archetype": {
+    "files": 1,
+    "new": 0,
+    "changed": 5,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "truehardcorecombat"
+    ]
+   }
+  },
+  "files": 26,
+  "listing_findings": [],
+  "entry": "True Hardcore Combat-2179-1-3-1778946895.zip"
+ },
+ {
+  "id": "2209",
+  "archive": "patch True Hardcore Poisonous Enemies-2209-1-0-1776249027.zip",
+  "problems": [],
+  "tables": {
+   "armor": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "patchtruehardcorepoisonousenemies"
+    ]
+   },
+   "armor_type": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "patchtruehardcorepoisonousenemies"
+    ]
+   },
+   "pickable_item": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "patchtruehardcorepoisonousenemies"
+    ]
+   },
+   "player_item": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "patchtruehardcorepoisonousenemies"
+    ]
+   },
+   "buff": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "patchtruehardcorepoisonousenemies"
+    ]
+   },
+   "shop_type2item": {
+    "files": 1,
+    "new": 26,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "patchtruehardcorepoisonousenemies"
+    ]
+   }
+  },
+  "files": 18,
+  "listing_findings": [],
+  "entry": "patch True Hardcore Poisonous Enemies-2209-1-0-1776249027.zip"
+ },
+ {
+  "id": "2318",
+  "archive": "Visual Combo Helper 1.0.0 2318 1.0.0 2026-07-31T14-42Z uBF0oq5om.zip",
+  "problems": [],
+  "tables": {},
+  "files": 8,
+  "listing_findings": [],
+  "entry": "Visual Combo Helper 1.0.0 2318 1.0.0 2026-07-31T14-42Z uBF0oq5om.zip"
+ },
+ {
+  "id": "2323",
+  "archive": "Zz Alchemy Stash Link 2323 1.0 2026-08-03T20-39Z eXqNkidke.7z",
+  "problems": [],
+  "tables": {},
+  "files": 5,
+  "listing_findings": [],
+  "entry": "Zz Alchemy Stash Link 2323 1.0 2026-08-03T20-39Z eXqNkidke.7z"
+ },
+ {
+  "id": "2343",
+  "archive": "Ultimate Horse Caparison Fix V1.0 2343 1.0 2026-08-24T20-12Z yvis1527X.zip",
+  "problems": [],
+  "tables": {
+   "character_hair": {
+    "files": 1,
+    "new": 2,
+    "changed": 0,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "ultimate_horse_caparison_fix"
+    ]
+   },
+   "soul": {
+    "files": 1,
+    "new": 0,
+    "changed": 4,
+    "same": 0,
+    "dropped": 0,
+    "whole": false,
+    "suffixes": [
+     "ultimate_horse_caparison_fix"
+    ]
+   }
+  },
+  "files": 12,
+  "listing_findings": [],
+  "entry": "Ultimate Horse Caparison Fix V1.0 2343 1.0 2026-08-24T20-12Z yvis1527X.zip"
+ },
+ {
+  "id": "2345",
+  "archive": "Food And Drinks Rebalance 2345 1 2026-08-30T23-35Z RVnPpl7KV.rar",
+  "problems": [],
+  "tables": {
+   "food": {
+    "files": 1,
+    "new": 0,
+    "changed": 155,
+    "same": 47,
+    "dropped": 0,
+    "whole": true,
+    "suffixes": [
+     ""
+    ]
+   }
+  },
+  "files": 4,
+  "listing_findings": [],
+  "entry": "Food And Drinks Rebalance 2345 1 2026-08-30T23-35Z RVnPpl7KV.rar"
+ }
+]

@@ -29,7 +29,7 @@ sys.path.insert(0, HERE)
 import paths  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
-DEFAULT_GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance")
+DEFAULT_GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\WIP_Mods\KingdomComeDeliverance")
 
 
 def run(cmd, **kw):

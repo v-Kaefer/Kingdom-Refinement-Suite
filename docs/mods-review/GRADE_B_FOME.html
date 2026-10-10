@@ -1,0 +1,166 @@
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fome, digestão e tempo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  /* layout: faixa fixa de navegação no topo; uma coluna de leitura de até 72rem; tabelas rolam dentro do próprio bloco */
+  --bg:#f3f5f8; --surface:#ffffff; --surface2:#eaeef3; --ink:#18212b; --muted:#566272; --line:#d5dce5; --accent:#1c6a86; --accent-ink:#ffffff;
+  --ok:#17683f; --ok-bg:#dff2e7; --warn:#82540a; --warn-bg:#faedcf; --bad:#9c2b24; --bad-bg:#f7dedb; --info:#27527a; --info-bg:#dde9f6;
+  --was:#9c2b24; --is:#17683f; --code-bg:#e9eef4;
+  --f-display:"IBM Plex Sans Condensed","IBM Plex Sans","Segoe UI",system-ui,sans-serif; --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e141a; --surface:#151d25; --surface2:#1c2630; --ink:#e4eaf1; --muted:#9aa7b6; --line:#2a3745; --accent:#59b4d3; --accent-ink:#06222c;
+  --ok:#6fd19b; --ok-bg:#12301f; --warn:#e7bb68; --warn-bg:#35280d; --bad:#f09088; --bad-bg:#3a1714; --info:#8fbbe6; --info-bg:#14283d;
+  --was:#f09088; --is:#6fd19b; --code-bg:#1d2833; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e141a; --surface:#151d25; --surface2:#1c2630; --ink:#e4eaf1; --muted:#9aa7b6; --line:#2a3745; --accent:#59b4d3; --accent-ink:#06222c;
+  --ok:#6fd19b; --ok-bg:#12301f; --warn:#e7bb68; --warn-bg:#35280d; --bad:#f09088; --bad-bg:#3a1714; --info:#8fbbe6; --info-bg:#14283d;
+  --was:#f09088; --is:#6fd19b; --code-bg:#1d2833; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);padding-inline:16px}
+*{box-sizing:border-box}
+a{color:var(--accent)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:8px 16px;display:flex;gap:6px 14px;align-items:center;flex-wrap:wrap}
+.top b{font-family:var(--f-display);font-size:1rem;letter-spacing:.02em;margin-right:6px}
+.top nav{display:flex;gap:4px 12px;flex-wrap:wrap;min-width:0}
+.top nav a{font-size:.85rem;text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+.top nav a:hover,.top nav a:focus-visible{color:var(--ink);border-color:var(--accent);outline:none}
+main{max-width:76rem;margin-inline:auto;padding-block:20px 56px}
+h1{font:600 clamp(1.7rem,4vw,2.4rem)/1.1 var(--f-display);margin:12px 0 6px;text-wrap:balance}
+h2{font:600 1.45rem/1.2 var(--f-display);margin:44px 0 8px;padding-top:6px;border-top:2px solid var(--ink);text-wrap:balance}
+h3{font:600 1.15rem/1.25 var(--f-display);margin:0 0 6px}
+h4{font:600 .78rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:0 0 4px}
+p{margin:.3em 0}.lead{color:var(--muted);max-width:68ch}
+.meta{color:var(--muted);font-size:.88rem}
+code,.mono{font-family:var(--f-mono);font-size:.85em}
+code{background:var(--code-bg);padding:0 .3em;border-radius:3px}
+code.was{color:var(--was);text-decoration:line-through;background:transparent;padding:0}
+code.is{color:var(--is);font-weight:600;background:transparent;padding:0}
+.chip{display:inline-block;font:600 .72rem/1 var(--f-display);letter-spacing:.05em;text-transform:uppercase;padding:4px 7px;border-radius:3px;white-space:nowrap;text-decoration:none}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}.chip.warn{background:var(--warn-bg);color:var(--warn)}.chip.bad{background:var(--bad-bg);color:var(--bad)}.chip.info{background:var(--info-bg);color:var(--info)}
+.cf{font:600 .62rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.05em;padding:2px 4px;border-radius:2px;border:1px solid currentColor;vertical-align:1px;white-space:nowrap;margin-left:2px}
+.cf-c{color:var(--ok)}.cf-d{color:var(--warn)}.cf-n{color:var(--bad)}
+.legend{display:flex;gap:10px 18px;flex-wrap:wrap;margin:8px 0 0;font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto;max-width:100%;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.t{border-collapse:collapse;width:100%;font-size:.88rem}
+.t th{font:600 .72rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.06em;text-align:left;color:var(--muted);background:var(--surface2);padding:8px 10px;position:sticky;top:0;white-space:nowrap}
+.t td{padding:8px 10px;border-top:1px solid var(--line);vertical-align:top;min-width:0}
+.t.compact td{padding:5px 8px}
+.t td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.t td.wrap{overflow-wrap:anywhere;min-width:12rem}
+.t td.mute{color:var(--muted)}
+.t tr.conf td{background:color-mix(in srgb,var(--bad-bg) 40%,transparent)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:14px;margin-top:14px}
+.find{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:12px 14px;min-width:0}
+.find h3{font-size:1rem}
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin:14px 0}
+.filters label{display:flex;flex-direction:column;font-size:.75rem;color:var(--muted);gap:3px;text-transform:uppercase;letter-spacing:.05em}
+.filters select,.filters input{font:inherit;font-size:.9rem;padding:6px 8px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink);min-width:0}
+.filters button{font:inherit;font-size:.85rem;padding:7px 10px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button:hover{border-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mod{background:var(--surface);border:1px solid var(--line);border-radius:4px;margin:8px 0}
+.mod>summary{cursor:pointer;display:flex;gap:6px 12px;align-items:center;flex-wrap:wrap;padding:10px 12px;list-style:none}
+.mod>summary::-webkit-details-marker{display:none}
+.mod>summary::before{content:"▸";color:var(--muted);transition:transform .15s}
+.mod[open]>summary::before{transform:rotate(90deg)}
+.mod[open]>summary{border-bottom:1px solid var(--line)}
+.mid{font:600 .9rem var(--f-mono);color:var(--accent)}
+.mname{font:600 1rem var(--f-display);flex:1 1 14rem;min-width:0}
+.msub{color:var(--muted);font-size:.8rem}
+.mbody{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,21rem),1fr));gap:14px 22px;padding:14px}
+.mbody section{min-width:0}.mbody .wide{grid-column:1/-1}
+.mbody ul{margin:.2em 0;padding-left:1.1em}.mbody li{margin:.15em 0}
+.none{color:var(--muted);font-style:italic;margin:.2em 0}
+.snip{margin:8px 0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--surface)}
+.snip figcaption{font:600 .78rem var(--f-display);letter-spacing:.04em;padding:5px 10px;background:var(--surface2);color:var(--muted)}
+.snip pre{margin:0;padding:10px;overflow-x:auto;font:.8rem/1.5 var(--f-mono);background:var(--code-bg)}
+.snip pre code{background:none;padding:0}.snip .add{color:var(--is);display:block}
+.snip p{padding:2px 10px 8px;color:var(--ink);font-size:.88rem}
+.sub{margin:22px 0}.count{font:500 .8rem var(--f-body);color:var(--muted);margin-left:6px}
+.bal{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:12px 14px;margin:12px 0;scroll-margin-top:70px}
+.bal header{display:flex;gap:6px 12px;align-items:baseline;flex-wrap:wrap}
+.bid{font:600 .85rem var(--f-mono);color:var(--accent)}.bmods{margin-left:auto;color:var(--muted);font-size:.82rem}
+.dims{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.bal dl{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:6px 14px;margin:8px 0 0}
+.bal dt{font:600 .74rem var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}.bal dd{margin:0;min-width:0}
+@media (max-width:640px){.bal dl{grid-template-columns:1fr}.bal dt{padding-top:8px}}
+footer{margin-top:48px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:12px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+
+/* --- additions for the Grade B page --- */
+.t.matrix th.mod,.t.matrix td.mod{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.t.matrix td.game{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.t.matrix td.diff{background:color-mix(in srgb,var(--warn-bg) 55%,transparent)}
+.t.matrix td.same{background:color-mix(in srgb,var(--ok-bg) 45%,transparent)}
+.t.matrix td.na{color:var(--muted)}
+.pdesc{display:block;color:var(--muted);font-size:.78rem;font-family:var(--f-body)}
+.note{color:var(--muted);font-size:.85rem;margin:6px 0}
+.badge{display:inline-block;font:600 .68rem/1 var(--f-display);letter-spacing:.05em;text-transform:uppercase;padding:2px 5px;border-radius:2px;background:var(--surface2);color:var(--muted);margin-right:4px}
+.fam{border-left:4px solid var(--accent);padding:6px 12px;background:var(--surface);margin:10px 0}
+.kv{display:grid;grid-template-columns:minmax(0,13rem) 1fr;gap:4px 14px;margin:6px 0}.kv dt{font-weight:600;color:var(--muted);font-size:.85rem}.kv dd{margin:0}
+@media (max-width:640px){.kv{grid-template-columns:1fr}}
+
+.ratio{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:10px 14px;margin:12px 0}
+.ratio input{font:inherit;width:6rem;padding:4px 6px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:3px}
+</style>
+<div class="top"><b>Fome e tempo</b><nav><a href="#resumo">Resumo</a><a href="#relogio">Relógio</a><a href="#parametros">Parâmetros</a><a href="#estados">Tempo até a fome</a><a href="#metas">Metas</a><a href="#modificadores">Modificadores</a><a href="#comidas">Comida</a><a href="#limites">Limites</a></nav></div>
+<main>
+<header>
+<h1>Fome, digestão e tempo: os parâmetros de base</h1>
+<p class="lead">Folha de referência para o ajuste fino de apodrecimento e nutrição. Reúne o relógio, o ritmo da fome, os limiares, os modificadores e os valores de comida, com o que o jogo traz e o que o KRS Items já muda. Só leitura: nada foi executado e nenhuma regra nova foi escolhida.</p>
+<p class="legend"><span><span class="cf cf-c">confirmado</span> lido nos arquivos</span><span><span class="cf cf-d">deduzido</span> inferido</span><span><span class="cf cf-n">não verificado</span> precisa de teste</span></p>
+</header>
+
+<h2 id="resumo">Resumo</h2>
+<div class="cols"><div class="find"><h3>A unidade é segundo de mundo, não segundo real</h3><p><code>DigestionSpeed</code> = 0.000578704 é igual a <code>ExhaustionSpeed</code>, e a ajuda do jogo diz que a regeneração de sono (<code>SleepHealthRegenBaseSpeed</code> = 0.00347222) enche em 8 horas 'de mundo': 100 unidades em 8 h. Com a mesma conta, a fome vai de 100 a 0 em 48 horas de mundo. Isso não depende da razão entre tempo real e tempo de jogo. <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></p></div><div class="find"><h3>Do jogo: com fome em 24 h, inanição em 48 h</h3><p>Cheio (100) chega a 50 ('com fome') em 24 h de mundo, a 25 em 36 h e a 0 em 48 h. Com o KRS Items (x2,25): 10,7, 16 e 21,3 h. <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></p></div><div class="find"><h3>A razão de tempo real foi medida: 15</h3><p>Medida em jogo (réplica 1.9.8, save carregado): 14,9 a 15,3 segundos de mundo por segundo real, igual à constante <code>DefaultWorldTimeRatio</code> (15). Uma hora de mundo dura 4 minutos reais e o dia, 96; o campo abaixo permite simular outras razões (por exemplo 10, uma hora de 6 minutos). O comando <code>Calendar.SetWorldTimeRatio</code> funciona por script. <span class="cf cf-c" title="confirmado: lido nos arquivos, no jogo ou no log">confirmado</span></p></div><div class="find"><h3>'Com fome a cada 3 horas' é 8 vezes o ritmo do jogo</h3><p>Para ficar com fome 3 horas de mundo depois de cheio, a digestão teria de ser 8x a do jogo (3,6x a do KRS Items). A tabela de metas mostra o valor de <code>DigestionSpeed</code> para cada intervalo. <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></p></div></div>
+
+<h2 id="relogio">Relógio: segundos de mundo e tempo real</h2>
+<div class="ratio"><label for="ratio"><b>Segundos de mundo por segundo real</b> (medido: 15)</label><input id="ratio" type="text" inputmode="decimal" value="15"><span>Um dia de mundo dura <b id="ratio-day"></b> de tempo real.</span></div>
+<p class="note">Todos os valores de tempo real das tabelas abaixo se recalculam com esse campo. A razão em si não está nos dados do jogo (ver o resumo). ^n</p>
+
+<h2 id="parametros">Parâmetros de base</h2>
+<p class="lead">Valor lido no jogo 1.9.6 (constantes ocultas, <code>rpg_constants_runtime.csv</code>), valor na tabela <code>rpg_param</code> do 1.9.8 quando existe, e o que o KRS Items já define. ^c</p>
+<div class="scroll"><table class="t compact"><thead><tr><th>Parâmetro</th><th>O que faz</th><th>Unidade</th><th>Valor lido no jogo (1.9.6)</th><th>Tabela do 1.9.8</th><th>KRS Items</th><th>Onde fica</th></tr></thead><tbody><tr><td class=""><code>DigestionSpeed</code></td><td class="">ritmo base da fome</td><td class="">unidades de fome por segundo de mundo</td><td class="num">0,000578704</td><td class="num">-</td><td class="num">0,001302084</td><td class="">oculta (não está na tabela <code>rpg_param</code>); o KRS Items a define por linha de patch</td></tr><tr><td class=""><code>ExhaustionSpeed</code></td><td class="">ritmo base do cansaço (energia/vigor de longo prazo)</td><td class="">unidades por segundo de mundo</td><td class="num">0,000578704</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>FoodFull</code></td><td class="">valor de 'cheio'</td><td class="">unidades da barra de fome</td><td class="num">100</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>FoodOverEat</code></td><td class="">teto absoluto ao comer: acima disso não se come mais</td><td class="">unidades da barra de fome</td><td class="num">120</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>StarvationThreshold</code></td><td class="">abaixo disto o jogador está 'com fome' (começam os efeitos)</td><td class="">unidades da barra de fome</td><td class="num">50</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>StarvationHugeThreshold</code></td><td class="">abaixo disto, fome grande</td><td class="">unidades da barra de fome</td><td class="num">25</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>StarvationExtremeThreshold</code></td><td class="">abaixo disto (0), inanição</td><td class="">unidades da barra de fome</td><td class="num">0</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>StarvationHealthLossSpeed</code></td><td class="">perda de vida por inanição ('por desenho, igual à digestão')</td><td class="">unidade de vida por segundo, não verificada</td><td class="num">0,001</td><td class="num">0.001</td><td class="num">-</td><td class="">tabela</td></tr><tr><td class=""><code>ShortTermNutritionDigestionSpeedMultiplier</code></td><td class="">a parte 'de curto prazo' de uma comida digere neste múltiplo do ritmo base</td><td class="">multiplicador</td><td class="num">5</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>StarvationPlayerEffectMinMin</code></td><td class="">menor intervalo entre efeitos de fome, fome baixa</td><td class="">unidade não verificada (segundos?)</td><td class="num">90</td><td class="num">90</td><td class="num">95</td><td class="">tabela</td></tr><tr><td class=""><code>StarvationPlayerEffectMaxMin</code></td><td class="">maior intervalo, fome baixa</td><td class="">idem</td><td class="num">120</td><td class="num">120</td><td class="num">-</td><td class="">tabela</td></tr><tr><td class=""><code>StarvationPlayerEffectMinMax</code></td><td class="">menor intervalo, fome alta</td><td class="">idem</td><td class="num">45</td><td class="num">45</td><td class="num">25</td><td class="">tabela</td></tr><tr><td class=""><code>StarvationPlayerEffectMaxMax</code></td><td class="">maior intervalo, fome alta</td><td class="">idem</td><td class="num">75</td><td class="num">75</td><td class="num">65</td><td class="">tabela</td></tr><tr><td class=""><code>FoodHealSpeed</code></td><td class="">regeneração de vida da comida que cura</td><td class="">unidade não verificada</td><td class="num">2</td><td class="num">2</td><td class="num">-</td><td class="">tabela</td></tr><tr><td class=""><code>FoodHealthThreshold</code></td><td class="">limiar de vida entre efeito positivo e negativo da comida</td><td class="">fração</td><td class="num">0,5</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>FoodPoisoningThreshold</code></td><td class="">desvio do início dos efeitos de intoxicação</td><td class="">fração</td><td class="num">0,0005</td><td class="num">0.0005</td><td class="num">-</td><td class="">tabela</td></tr><tr><td class=""><code>FoodPoisoningMinHealthEffectSpeed</code></td><td class="">perda mínima de vida por intoxicação</td><td class="">por segundo</td><td class="num">0,1</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>FoodPoisoningMaxHealthEffectSpeed</code></td><td class="">perda máxima de vida por intoxicação</td><td class="">por segundo</td><td class="num">0,5</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>MetabolismDigestSpeed</code></td><td class="">digestão de álcool e veneno</td><td class="">unidades por segundo de mundo</td><td class="num">0,0277</td><td class="num">0.0277</td><td class="num">-</td><td class="">tabela</td></tr><tr><td class=""><code>MetabolismAbsorbSpeed</code></td><td class="">absorção (remoção) de álcool e veneno</td><td class="">unidades por segundo de mundo</td><td class="num">0,0069</td><td class="num">0.0069</td><td class="num">-</td><td class="">tabela</td></tr><tr><td class=""><code>SleepHealthRegenBaseSpeed</code></td><td class="">regeneração de vida ao dormir ('cheia em 8 horas de mundo')</td><td class="">unidades por segundo de mundo</td><td class="num">0,00347222</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>FoodWitcherPerkNutritionModif</code></td><td class="">fator de nutrição com a perk de bruxo</td><td class="">multiplicador</td><td class="num">0,7</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>FoodSaltOrSmokePerkDecayModif</code></td><td class="">fator de apodrecimento com a perk de sal/defumação</td><td class="">multiplicador</td><td class="num">0,75</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>PerkProperDietActivationTime</code></td><td class="">tempo de dieta para a perk 'Proper diet' ativar</td><td class="">unidade não verificada</td><td class="num">120</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr><tr><td class=""><code>DefaultWorldTimeRatio</code></td><td class="">razão de tempo 'padrão' usada no avanço rápido do tempo (não é necessariamente o ritmo normal)</td><td class="">segundos de mundo por segundo real</td><td class="num">15</td><td class="num">-</td><td class="num">-</td><td class="">oculta</td></tr></tbody></table></div>
+<p class="note"><code>FoodTickInterval</code> aparece na referência de parâmetros, mas o motor 1.9.6 não a tem; não use. As descrições vêm de <code>Params Reference.md</code>; as unidades de vários limiares de efeito (StarvationPlayerEffect*) não estão documentadas. ^c</p>
+
+<h2 id="estados">Quanto tempo leva até a fome</h2>
+<p class="lead">Sem comer nada, a 100% de saciedade. A coluna em tempo real segue o campo do relógio acima. ^d</p>
+<div class="scroll"><table class="t compact"><thead><tr><th>Do estado ao estado</th><th>Unidades</th><th>Jogo (mundo)</th><th>Jogo (tempo real)</th><th>KRS Items (mundo)</th><th>KRS Items (tempo real)</th></tr></thead><tbody><tr><td class="">Cheio (100) → com fome (50)</td><td class="num">50</td><td class="num">24 h</td><td class=""><span data-w="24.0000"></span></td><td class="num">10,7 h</td><td class=""><span data-w="10.6667"></span></td></tr><tr><td class="">Cheio → fome grande (25)</td><td class="num">75</td><td class="num">36 h</td><td class=""><span data-w="36.0000"></span></td><td class="num">16 h</td><td class=""><span data-w="16.0000"></span></td></tr><tr><td class="">Cheio → inanição (0)</td><td class="num">100</td><td class="num">48 h</td><td class=""><span data-w="48.0000"></span></td><td class="num">21,3 h</td><td class=""><span data-w="21.3333"></span></td></tr><tr><td class="">Empanturrado (120) → com fome (50)</td><td class="num">70</td><td class="num">33,6 h</td><td class=""><span data-w="33.6000"></span></td><td class="num">14,9 h</td><td class=""><span data-w="14.9333"></span></td></tr></tbody></table></div>
+
+<h2 id="metas">Metas: que <code>DigestionSpeed</code> dá 'fome a cada N horas'</h2>
+<p class="lead">Conta direta: (100 − 50) unidades divididas pelas horas de mundo desejadas. O jogo está em 24 h e o KRS Items em 10,7 h. Isto é aritmética, não recomendação. ^d</p>
+<div class="scroll"><table class="t compact"><thead><tr><th>Cheio → com fome em (mundo)</th><th><code>DigestionSpeed</code> necessário</th><th>vs jogo</th><th>vs KRS Items</th><th>Em tempo real</th><th>Cheio → inanição (mundo)</th></tr></thead><tbody><tr><td class="">3 h</td><td class="num">0,004630</td><td class="num">8x</td><td class="num">3,56x</td><td class=""><span data-w="3"></span></td><td class="num">6 h</td></tr><tr><td class="">4 h</td><td class="num">0,003472</td><td class="num">6x</td><td class="num">2,67x</td><td class=""><span data-w="4"></span></td><td class="num">8 h</td></tr><tr><td class="">6 h</td><td class="num">0,002315</td><td class="num">4x</td><td class="num">1,78x</td><td class=""><span data-w="6"></span></td><td class="num">12 h</td></tr><tr><td class="">8 h</td><td class="num">0,001736</td><td class="num">3x</td><td class="num">1,33x</td><td class=""><span data-w="8"></span></td><td class="num">16 h</td></tr><tr><td class="">12 h</td><td class="num">0,001157</td><td class="num">2x</td><td class="num">0,89x</td><td class=""><span data-w="12"></span></td><td class="num">24 h</td></tr><tr><td class="">24 h</td><td class="num">0,000579</td><td class="num">1x</td><td class="num">0,44x</td><td class=""><span data-w="24"></span></td><td class="num">48 h</td></tr></tbody></table></div>
+
+<h2 id="modificadores">Modificadores do ritmo (<code>dig</code>) e do cansaço (<code>exh</code>)</h2>
+<p class="lead">No jogo, buffs multiplicam a digestão (<code>dig*x</code>) e o cansaço (<code>exh*x</code>); <code>dig*0</code> pausa a fome. Os parâmetros são lidos da tabela <code>buff</code>; o significado de <code>dig</code> é deduzido do nome dos buffs. ^d</p>
+<div class="scroll"><table class="t compact"><thead><tr><th>Efeito</th><th>Buff no jogo</th><th>Parâmetros</th><th>Duração</th></tr></thead><tbody><tr><td class="">perk Ascetic <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>perk_ascetic_digestion</code></td><td class=""><code>dig*0.70</code></td><td class="">permanente</td></tr><tr><td class="">perk Ascetic (Hardcore) <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>perk_ascetic_digestion_hardcore</code></td><td class=""><code>dig*0.85</code></td><td class="">permanente</td></tr><tr><td class="">perk Tapeworm (Hardcore) <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>HC perk Tapeworm</code></td><td class=""><code>dig*1.5</code></td><td class="">permanente</td></tr><tr><td class="">buff Good appetite <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>good_appetite</code></td><td class=""><code>dig*3,exh*2,vit+10</code></td><td class="">600 s</td></tr><tr><td class="">ler com a perk de leitura melhorada <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>perk_reading_regen_improved</code></td><td class=""><code>dig*0.5,exh*0.5</code></td><td class="">permanente</td></tr><tr><td class="">perk Contemplative (parado) <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>perk_contemplative</code></td><td class=""><code>dig*0,exh*0</code></td><td class="">permanente</td></tr><tr><td class="">comer/dormir forçado <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>healthEatSleep</code></td><td class=""><code>dig*0,exh*0,jrs*0,health+100/s</code></td><td class="">permanente</td></tr><tr><td class="">proteção em avanço de tempo forçado <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>forced_skiptime_protection</code></td><td class=""><code>exh=0,dig=0,ble=0</code></td><td class="">permanente</td></tr><tr><td class="">prisão <span class="cf cf-d" title="deduzido: inferido do nome, da ajuda ou do contexto">deduzido</span></td><td class=""><code>jail</code></td><td class=""><code>dig*0,exh*0,jrm*0,health+100/s</code></td><td class="">permanente</td></tr></tbody></table></div>
+
+<h2 id="comidas">Cada comida: quanto sacia</h2>
+<p class="lead">O ganho de uma comida está em três colunas da tabela <code>food</code>: <code>nutrition_benefit</code> (quanto sobe a barra), <code>short_term_nutrition_benefit_ratio</code> (parte que digere 5x mais rápido) e <code>max_status</code> (**não é teto da barra**: medido em jogo, um pão com <code>max_status</code> 50 levou a fome de 59,9 a 76,9, e comer soma a nutrição inteira na hora; o significado dele continua desconhecido). ^c</p>
+<div class="scroll"><table class="t compact"><thead><tr><th>Tipo (<code>food_type</code>)</th><th>Itens</th><th><code>nutrition_benefit</code></th><th><code>max_status</code> (mediana)</th></tr></thead><tbody><tr><td class="">fruta (fruit)</td><td class="num">8</td><td class="">0 a 4 (mediana 3)</td><td class="">45</td></tr><tr><td class="">carne (meat)</td><td class="num">70</td><td class="">0 a 27 (mediana 8)</td><td class="">45</td></tr><tr><td class="">bebida e poção (drink)</td><td class="num">61</td><td class="">-20 a 20 (mediana 5)</td><td class="">100</td></tr><tr><td class="">miúdos (bowel)</td><td class="num">21</td><td class="">3 a 22 (mediana 8)</td><td class="">40</td></tr><tr><td class="">verdura (vegetable)</td><td class="num">14</td><td class="">-0,5 a 20 (mediana 2,5)</td><td class="">50</td></tr><tr><td class="">cogumelo (mushroom)</td><td class="num">4</td><td class="">1 a 2 (mediana 2)</td><td class="">15</td></tr><tr><td class="">pão e massa (pastry)</td><td class="num">5</td><td class="">6 a 17 (mediana 8)</td><td class="">50</td></tr><tr><td class="">laticínio e ovo (dairy)</td><td class="num">4</td><td class="">3 a 16 (mediana 7,5)</td><td class="">30</td></tr><tr><td class="">sem tipo (-)</td><td class="num">15</td><td class="">0 a 25 (mediana 5)</td><td class="">100</td></tr></tbody></table></div>
+<h3>Exemplos, em horas de fome</h3>
+<p class="note">Horas = nutrição ÷ ritmo. Ignora a parte de curto prazo, então é ordem de grandeza. ^d</p>
+<div class="scroll"><table class="t compact"><thead><tr><th>Item</th><th><code>nutrition_benefit</code></th><th><code>max_status</code></th><th>Parte de curto prazo</th><th>Horas de fome no jogo</th><th>No KRS Items</th></tr></thead><tbody><tr><td class="">Bread</td><td class="num">17</td><td class="num">50</td><td class="num">-</td><td class="num">8,2 h</td><td class="num">3,6 h</td></tr><tr><td class="">Beef_cooked</td><td class="num">21</td><td class="num">40</td><td class="num">-</td><td class="num">10,1 h</td><td class="num">4,5 h</td></tr><tr><td class="">Rabbit meat cooked</td><td class="num">14</td><td class="num">40</td><td class="num">-</td><td class="num">6,7 h</td><td class="num">3 h</td></tr><tr><td class="">Smoked Rabbit meat</td><td class="num">8</td><td class="num">60</td><td class="num">-</td><td class="num">3,8 h</td><td class="num">1,7 h</td></tr><tr><td class="">Salami_01</td><td class="num">17</td><td class="num">60</td><td class="num">-</td><td class="num">8,2 h</td><td class="num">3,6 h</td></tr><tr><td class="">lentil_soup</td><td class="num">8</td><td class="num">20</td><td class="num">-</td><td class="num">3,8 h</td><td class="num">1,7 h</td></tr><tr><td class="">Cheese quarter</td><td class="num">10</td><td class="num">30</td><td class="num">-</td><td class="num">4,8 h</td><td class="num">2,1 h</td></tr><tr><td class="">hardboiled_egg</td><td class="num">5</td><td class="num">30</td><td class="num">-</td><td class="num">2,4 h</td><td class="num">1,1 h</td></tr><tr><td class="">Apple</td><td class="num">2</td><td class="num">50</td><td class="num">-</td><td class="num">1 h</td><td class="num">0,4 h</td></tr><tr><td class="">carrot cooked</td><td class="num">2,5</td><td class="num">50</td><td class="num">-</td><td class="num">1,2 h</td><td class="num">0,5 h</td></tr><tr><td class="">water</td><td class="num">0,5</td><td class="num">100</td><td class="num">-</td><td class="num">0,2 h</td><td class="num">0,1 h</td></tr></tbody></table></div>
+
+<h2 id="limites">Limites</h2>
+<ul>
+<li>A razão entre tempo real e tempo de mundo não consta nos dados lidos; o valor de partida, 15, foi medido em 10 out 2026 na réplica 1.9.8 (uma hora de mundo = 4 minutos reais, o dia = 96). As conversões são aritmética sobre os parâmetros.</li>
+<li>O mecanismo exato da parte de curto prazo, as unidades dos efeitos de inanição vêm de nomes e da ajuda do jogo, sem teste.</li>
+<li>Os valores 'do jogo' vêm da leitura de 1.9.6; no 1.9.8 o binário mudou e as constantes ocultas podem ter mudado.</li>
+</ul>
+<footer>Gerado por <code>tools/build_grade_b_fome.py</code> a partir de <code>docs/engine/rpg_constants_runtime.csv</code>, <code>Params Reference.md</code>, as tabelas do jogo e <code>modules/krs_items</code>.</footer>
+</main>
+<script>
+(function(){
+  var inp=document.getElementById('ratio');
+  function fmt(s){ if(s<90) return Math.round(s)+' s'; if(s<5400) return (s/60).toFixed(1).replace('.',',')+' min'; return (s/3600).toFixed(1).replace('.',',')+' h'; }
+  function upd(){
+    var r=parseFloat((inp.value||'').replace(',','.')); if(!(r>0)) r=15;
+    [].slice.call(document.querySelectorAll('[data-w]')).forEach(function(e){ e.textContent=fmt(parseFloat(e.dataset.w)*3600/r); });
+    document.getElementById('ratio-day').textContent=fmt(86400/r);
+  }
+  inp.addEventListener('input',upd); upd();
+})();
+</script>
