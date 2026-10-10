@@ -6,19 +6,23 @@
 .PARAMETER GameDir     KCD folder (the replica); Mods\krs_timeprobe must exist (tools/harness/build_timeprobe.py)
 .PARAMETER OutFile     stamped lines: "<ISO time with ms>  <log line>"
 .PARAMETER TimeoutSec  total wait including the time until someone presses Continue (default 1500)
+.PARAMETER ProbeMod    the mod that logs (default krs_timeprobe; krs_skipcost logs with the prefix KRS_SC)
+.PARAMETER ExtraMods   other mod folders (already in Mods\) to put in mod_order.txt after the probe, e.g. krs_items
 
   The person has to press Continue in the game window; nothing is clicked or typed by this script.
 #>
 param(
   [Parameter(Mandatory = $true)][string]$GameDir,
   [string]$OutFile = (Join-Path $PSScriptRoot 'timeprobe_result.log'),
-  [int]$TimeoutSec = 1500
+  [int]$TimeoutSec = 1500,
+  [string[]]$ExtraMods = @(),
+  [string]$ProbeMod = 'krs_timeprobe'
 )
 
 $exe = Join-Path $GameDir 'Bin\win64releasedll\kingdomcome.exe'
 $log = Join-Path $GameDir 'kcd.log'
 if (-not (Test-Path $exe)) { throw "not found: $exe" }
-if (-not (Test-Path (Join-Path $GameDir 'Mods\krs_timeprobe'))) { throw 'run build_timeprobe.py first' }
+if (-not (Test-Path (Join-Path $GameDir "Mods\$ProbeMod"))) { throw "Mods\$ProbeMod is not installed: run its build script first" }
 if (Get-Process -Name 'kingdomcome' -ErrorAction SilentlyContinue) { throw 'a KCD process is already running; close it first' }
 if (-not (Get-Process -Name 'steam' -ErrorAction SilentlyContinue)) { Write-Warning 'Steam is not running; the game may refuse to start' }
 
@@ -27,7 +31,7 @@ $orderBackup = Join-Path $GameDir 'Mods\mod_order.txt.krs_backup'
 if (Test-Path $orderBackup) { throw "$orderBackup exists: a previous run did not restore mod_order.txt. Restore it by hand first." }
 Copy-Item $orderFile $orderBackup
 try {
-  Set-Content -Path $orderFile -Value 'krs_timeprobe' -Encoding ASCII
+  Set-Content -Path $orderFile -Value (@($ProbeMod) + $ExtraMods) -Encoding ASCII
   Set-Content -Path $OutFile -Value '' -Encoding UTF8
   $started = Get-Date
   $p = Start-Process -FilePath $exe -WorkingDirectory $GameDir -PassThru
@@ -47,7 +51,7 @@ try {
       $now = (Get-Date).ToString('yyyy-MM-ddTHH:mm:ss.fff')
       $new = @()
       for ($i = $seen; $i -lt $lines.Count; $i++) {
-        if ($lines[$i] -match 'KRS_TP|Lua Error|Script error') { $new += "$now  $($lines[$i])" }
+        if ($lines[$i] -match 'KRS_TP|KRS_SC|Lua Error|Script error') { $new += "$now  $($lines[$i])" }
         if ($lines[$i] -match 'KRS_TP end') { $done = $true }
       }
       $seen = $lines.Count

@@ -336,6 +336,12 @@ MEAS = [
     ("Esperar (Wait) 8 horas (parte do teste E1)", "a hora do mundo foi de 5,15 a 13,48 e a fome ficou **exatamente igual** (79,5382 antes e depois) e o vigor também (99,8435). Esperar não gasta fome nem vigor: o motor zera a digestão e o cansaço durante o avanço de tempo. Dormir é outro tipo de avanço; não medido", "c"),
     ("Mexer na fome por script", "`player.soul:SetState('hunger', 60)` funcionou (lido de volta 60) e só vale na memória; nada foi salvo. A tela de inventário mostra 'Nourishment' (a fome) e 'Energy' (o vigor) arredondados", "c"),
     ("Menu da réplica", "não há botão Continue nesta instalação: 'Resume' só volta à cena vazia do menu. Foi preciso Load Game e o save mais recente (194)", "c"),
+    ("Como o jogo pula o tempo (Wait e sono)", "o motor manda ao gancho de quadro quadros de cerca de 0,25 s (os normais têm 0,02 a 0,05 s) e o relógio anda razão x tempo do quadro: o avanço é uma corrida de quadros longos, não um salto do relógio. A razão sobe durante o avanço e **muda com as horas**: Wait de 1 h 29,4; Wait de 2 a 4 h 36,6; sono de 6 h 58,1. O último trecho (cerca de 1 h) corre rápido com a razão já normal, então a razão sozinha subconta o salto; contar os quadros longos dá as horas certas (Wait de 2 h deu 1,993 h; Wait de 4 h, 3,991 h; sono de 6 h, 6,0 h)", "c"),
+    ("Dormir (teste E1, parcial)", "dormir 6 h numa cama (limite do diálogo com o vigor quase cheio: 'You can't sleep any longer now'): a fome ficou igual durante o avanço (54,07 -> 53,95) e o vigor foi de 99,52 a 100. Como o Wait, o sono não gasta fome no motor. O diálogo mostra a previsão 'Nourishment' sem custo. Só foi medido um sono curto com o vigor quase cheio, então a recuperação por hora não foi medida", "c"),
+    ("Depois de um Wait", "a fome e o vigor ficam parados até o personagem se mexer (testado: parados por mais de 3 minutos, voltaram ao andar). Depois do sono voltam em cerca de 20 s. É o motivo da barra parada na primeira medição", "c"),
+    ("Postura do jogador", "`player.player:IsLaying()` e `IsSitting()` existem e respondem: 'stand' em pé, 'lay' no diálogo de sono e durante o sono, 'sit' ao levantar depois de cancelar a cama (a sequência foi lay, sit, stand). Um Wait feito logo depois de cancelar o diálogo da cama foi lido como 'stand'", "c"),
+    ("Taxa de fome acordado com o KRS Items", "3,19 a 3,29 por hora de mundo (ritmo da barra, em janelas de 300 s), 0,70 do valor da constante (4,69 por hora): o 0,68 da primeira medição era a mesma perk, medida com menos precisão", "c"),
+    ("Cobrar a fome depois do pulo (mod `krs_skipcost`, protótipo)", "Wait de 3,991 h custou 9,534 (taxa 3,1853 x horas x 0,75) e Wait de 1,993 h custou 4,761, ambos conferem; a fome lida de volta bateu com o alvo; a taxa medida não foi contaminada pelos pulos. Wait feito em pé logo depois de cancelar a cama foi cobrado a 75% (kind=stand). Não testado: dormir de verdade com o mod (dormir numa cama grava um autosave no Saved Games e o jogo apaga o autosave mais antigo), Wait sentado, ler livro, desmaiar", "c"),
     ("Testes que falharam", "o primeiro probe criou o sensor no menu e o nível o destruiu ao carregar o save; a segunda versão o recria, mas deixou várias cópias ativas, que repetiram o teste da razão em cascata (10, 6,67, 4,44, 2,96, 1,98). Os dados continuam válidos (cada linha traz a razão lida), mas o valor final da razão em memória ficou errado até o jogo fechar. Nenhum save foi gravado", "c"),
 ]
 meas_table = table(["Etapa", "Estado", "Confiança"], [[a, b, f'<span class="cf cf-{k}">{CONF[k][0]}</span>'] for a, b, k in MEAS])
@@ -405,13 +411,20 @@ FIX = [
 fix_table = table(["Parâmetro", "Papel na v1"], [[a, b] for a, b in FIX])
 
 TESTS = [
-    ("E1. Sono", "dormir N horas numa cama com fome e vigor conhecidos; ler antes e depois fome, vigor e vida", "A FAZER. Parcial: esperar 8 h (Wait) não gasta fome nem vigor. Falta dormir de verdade: a cama estava ao lado do personagem, mas não consegui mirar nela pelo mouse"),
+    ("E1. Sono", "dormir N horas numa cama com fome e vigor conhecidos; ler antes e depois fome, vigor e vida", "PARCIAL: dormir 6 h não gasta fome no motor e devolve o vigor ao limite; falta a recuperação por hora com o vigor baixo e uma noite de 8 h"),
     ("E2. Comer", "comer o pão com a fome em 60 e ler a barra antes e depois", "FEITO: +17 na hora; `max_status` não é teto; a parte de curto prazo digere 6x mais depressa por um tempo"),
     ("E3. Fome nos limiares", "deixar a fome cruzar 50 e 25 em um save de teste; ler os efeitos e o tempo entre eles", "A FAZER: o que cada limiar liga e com que intervalo (unidade de `StarvationPlayerEffect*`)"),
-    ("E4. Digestão em cenas e diálogos", "ler a fome durante uma conversa e uma cena", "A FAZER. Pista: esperar zera a digestão, o que pode explicar a barra parada de 3 minutos"),
+    ("E4. Digestão em cenas e diálogos", "ler a fome durante uma conversa e uma cena", "PARCIAL: depois de um Wait a fome e o vigor ficam parados até o personagem se mexer (medido); cenas e diálogos ainda não"),
     ("E5. Vigor e estamina", "andar, correr e lutar um tempo conhecido; ler vigor e estamina", "A FAZER: gasto real de energia por atividade"),
 ]
 tests_table = table(["Teste", "Como", "Estado e resultado"], [[a, b, c] for a, b, c in TESTS])
+
+_awake_c = DIG_K * 3600
+_awake_m = _awake_c * 0.70
+skip_rows = []
+for lab, f in (("Acordado", 1.0), ("Esperar (Wait), em pé", 0.75), ("Ler livro ou desmaiar, sentado ou deitado", 0.5), ("Dormir, deitado", 0.5)):
+    skip_rows.append([lab, f"{int(round(f * 100))}%", num(_awake_c * f, 2), num(_awake_m * f, 2), num(_awake_m * f * 6, 1), num(_awake_m * f * 8, 1)])
+skip_table = table(["Ação", "Fator", "Por hora (constante)", "Por hora (medido, 0,70)", "6 h (limite do diálogo de sono com o vigor cheio)", "8 h"], skip_rows, nums=(1, 2, 3, 4, 5))
 
 V1SEC = f"""
 <h2 id="v1">v1: o dia fica em 96 minutos, o sono intocado</h2>
@@ -422,17 +435,22 @@ V1SEC = f"""
 <p class="note">Quanto a digestão precisa ser para uma comida de cada tamanho segurar a fome por 4, 5 ou 6 horas de mundo (unidades a {num(K_MED, 0)} kcal, mediana da calibração). O ritmo do jogo ({num(DIG * 3600, 2)} unidades por hora) já dá {num(hrs(U900, DIG), 1)} h para uma refeição de {num(U900, 0)} unidades: o ritmo do KRS Items ({num(DIG_K * 3600, 2)}), que fica na v1 por decisão do autor, segura essa mesma refeição por {num(hrs(U900, DIG_K), 1)} h, abaixo das 4 a 6 horas da tabela. ^d</p>
 {rate_table}
 <h3>2. A barra e o sono</h3>
-<p class="note">O jogo recusa deitar quando a fome impediria dormir o mínimo (`MinPossibleSleepTime`, descrição do jogo), então a fome limita o sono. Dormir 8 horas custaria 8 vezes o ritmo em unidades se a digestão continuasse durante o sono; esperar 8 horas custou zero (medido), e dormir ainda não foi medido (teste E1). Limiar necessário para a fome chegar 4, 5 ou 6 horas depois de comer até 80 (ponto de partida suposto; comer soma a nutrição inteira na hora, sem teto, medido). ^c</p>
+<p class="note">O jogo recusa deitar quando a fome impediria dormir o mínimo (`MinPossibleSleepTime`, descrição do jogo), então a fome limita o sono. Dormir 8 horas custaria 8 vezes o ritmo em unidades se a digestão continuasse durante o sono; esperar 8 horas custou zero e dormir 6 horas também (medido): o motor não cobra nada nos dois, e a cobrança vem do mod `krs_skipcost` (seção 6). Limiar necessário para a fome chegar 4, 5 ou 6 horas depois de comer até 80 (ponto de partida suposto; comer soma a nutrição inteira na hora, sem teto, medido). ^c</p>
 {bar_v1_table}
 <p class="note">Ritmos entre x1,25 e x1,5 do jogo, com o limiar entre {num(80 - DIG * 3600 * 1.25 * 6, 0)} e {num(80 - DIG * 3600 * 1.5 * 4, 0)}, cumprem 4 a 6 horas e deixam o sono de 8 horas custar de {num(8 * DIG * 3600 * 1.25, 0)} a {num(8 * DIG * 3600 * 1.5, 0)} unidades: cabe na barra sem encostar no zero. O x2,25 do KRS Items custa {num(8 * DIG_K * 3600, 0)} unidades por noite e faz a fome chegar {num(hrs(U900, DIG_K), 1)} horas depois de uma refeição. ^d</p>
 <h3>3. Energia (vigor)</h3>
-<p class="note">`ExhaustedThreshold` = {num(EXH_THR, 0)}: abaixo disso o jogador fica exausto. A 1,5x do ritmo do jogo, de 100 a exausto leva 16 horas acordado, que combina com 8 horas de sono. O sono tem de devolver o que foi gasto, e a recuperação por hora do sono não foi medida (teste E1); por isso `ExhaustionSpeed` fica como candidato, não como decisão. ^d</p>
+<p class="note">`ExhaustedThreshold` = {num(EXH_THR, 0)}: abaixo disso o jogador fica exausto. A 1,5x do ritmo do jogo, de 100 a exausto leva 16 horas acordado, que combina com 8 horas de sono. O sono tem de devolver o que foi gasto, e a recuperação por hora do sono não foi medida (teste E1, só um sono curto com o vigor cheio); por isso `ExhaustionSpeed` fica como candidato, não como decisão. ^d</p>
 {exh_table}
 <h3>4. O que fica fixo e o que se ajusta</h3>
 {fix_table}
 <p class="note">Atenção: as camas melhores (sleeping_quality 1,2 / 0,955 / 0,325 / 0,65) foram para o Exploration Reworked e alteram a recuperação do sono. Se o sono tem de ficar intocado, elas ficam de fora da v1. ^d</p>
 <h3>5. Testes que faltam antes de fechar os valores</h3>
 {tests_table}
+<h3>6. Custo de fome ao esperar e dormir (mod `krs_skipcost`, protótipo)</h3>
+<p class="lead">Decisão do autor (10 out 2026): com os parâmetros de fome do KRS Items, **dormir gasta 50% e esperar 75%** do que o mesmo tempo gasta acordado; **ler livro e desmaiar contam 50%**, porque só se lê em cama ou melhor. O motor não cobra nada em nenhum dos dois (medido), então um script cobra depois de cada pulo: horas puladas x taxa acordado x fator. ^c</p>
+{skip_table}
+<p class="note">Como o script sabe o tipo: pela **postura** do jogador durante o pulo (`IsLaying` / `IsSitting`): deitado (sono, desmaio, leitura deitado) 50%, sentado (leitura no banco, Wait na cadeira) 50%, em pé (Wait) 75%. Um pulo em que o vigor sobe mais de 0,05 também conta como deitado. A primeira versão marcava 'é sono' ao usar a cama (gancho em `Bed.OnUsedHold`); isso abria um atalho: abrir a cama, cancelar e esperar logo depois saía a 50%. Com a postura o atalho fecha: o teste mostrou lay, sit e stand depois de cancelar, e o Wait seguinte foi cobrado a 75%. ^c</p>
+<p class="note">Escolhas que o autor pode reverter: sentado = 50% (cobre ler no banco, mas também esperar numa cadeira a 50%; `--sit 0.75` o iguala ao Wait); ler em pé não existe no jogo, então leitura sempre cai em sentado ou deitado. Limites: a leitura por livro do inventário e o desmaio não foram testados no jogo; quem lê sentado fora de uma cama paga 50% do mesmo jeito. Onde está: `tools/harness/skipcost/` (`krs_skipcost.lua`, `krs_skipcost_entity.lua`, `build_skipcost.py`, README); ainda não é um módulo do pacote. ^d</p>
 <p class="note">Método de ajuste: escolher um alvo, calcular os parâmetros com as tabelas acima, aplicar no `krs_items` da réplica, medir com o probe e comparar com o alvo; repetir até que fome, vigor e sono fechem juntos. Os parâmetros fixos da tabela só mudam se um teste mostrar que é preciso. ^d</p>
 """
 
@@ -500,7 +518,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 {V1SEC}
 {SIX}
 <h2 id="medir">Medido no jogo (10 out 2026)</h2>
-<p class="lead">Execução única na réplica 1.9.8 com só o mod de teste `krs_timeprobe` carregado e o save mais recente (194, o que o Continue carregaria). O jogo abriu, mediu e fechou sozinho; o menu pedia Escape e Load Game porque não mostra Continue nesta instalação. ^c</p>
+<p class="lead">Quatro execuções na réplica 1.9.8 em 10 out 2026, com os mods de teste `krs_timeprobe` e `krs_skipcost` (e o `krs_items` na última). O menu pedia Escape e Load Game porque não mostra Continue nesta instalação; a pasta de saves do Steam foi copiada antes da última execução e comparada por hash depois (sem diferença). Uma execução anterior, que dormiu numa cama com 'Sleep and save', gravou o `autosave197` e o jogo apagou o `autosave060`, o mais antigo: não havia backup, então esse autosave se perdeu. ^c</p>
 {meas_table}
 <p class="note">Ferramentas novas: `tools/harness/build_timeprobe.py`, `run_time_probe.ps1`, `krs_timeprobe.lua` e `krs_timeprobe_entity.lua`. O `.ps1` marca a hora real de cada linha do log. A cópia do mod foi removida da réplica depois do teste. ^c</p>
 
@@ -512,7 +530,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <li>Parâmetros do jogo: `rpg_constants_runtime.csv` (constantes ocultas lidas no 1.9.6), `Params Reference.md` (descrições) e as tabelas `food` e `pickable_item` do 1.9.8 da réplica, só leitura.</li>
 <li>Fontes externas: [FAO, cálculo de necessidades de energia](https://www.fao.org/3/y5686e/y5686e08.htm); [Wikipedia, nível de atividade física](https://en.wikipedia.org/wiki/Physical_activity_level); [Minnesota Department of Health, tabela de armazenamento](https://www.health.mn.gov/people/foodsafety/store/cold.html); [esvaziamento gástrico e apetite após uma refeição mista](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12534588/). Nenhuma foi lida por inteiro; os números citados estão nos resumos.</li>
 <li>A calibração de kcal por unidade usa pesos do jogo e kcal de referência de memória; o intervalo é largo de propósito.</li>
-<li>Não há medição no jogo: nem do dia, nem do efeito de mudar a razão, nem da fome em jogo.</li>
+<li>As medições no jogo estão na seção 'Medido no jogo'; o que não foi medido está nos testes E1 a E5 e na lista de limites do custo de pulo.</li>
 </ul>
 <footer>Gerado por <code>tools/build_gluttony_base.py</code> a partir do jogo 1.9.8 da réplica e de <code>modules/krs_items</code>.</footer>
 </main>
