@@ -195,7 +195,7 @@ ex_table = table(["Item", "`nutrition_benefit`", "`max_status`", "Parte de curto
 FIND = [
     ("A unidade é segundo de mundo, não segundo real", f"`DigestionSpeed` = {DIG:.9f} é igual a `ExhaustionSpeed`, e a ajuda do jogo diz que a regeneração de sono (`SleepHealthRegenBaseSpeed` = {rt('SleepHealthRegenBaseSpeed'):.8f}) enche em 8 horas 'de mundo': {num(rt('SleepHealthRegenBaseSpeed') * 8 * 3600)} unidades em 8 h. Com a mesma conta, a fome vai de 100 a 0 em 48 horas de mundo. Isso não depende da razão entre tempo real e tempo de jogo. ^d"),
     ("Do jogo: com fome em 24 h, inanição em 48 h", f"Cheio (100) chega a 50 ('com fome') em {num(hours(FULL - THR, DIG), 1)} h de mundo, a 25 em {num(hours(FULL - HUGE, DIG), 1)} h e a 0 em {num(hours(FULL - EXTR, DIG), 1)} h. Com o KRS Items (x2,25): {num(hours(FULL - THR, DIG_KRS), 1)}, {num(hours(FULL - HUGE, DIG_KRS), 1)} e {num(hours(FULL - EXTR, DIG_KRS), 1)} h. ^d"),
-    ("A razão de tempo real não está nos dados", "O jogo a guarda no motor: o script de depuração do jogador só lê e grava `Calendar.GetWorldTimeRatio()` (e põe 600 no 'tempo rápido'), e a constante `DefaultWorldTimeRatio` vale 15 mas é descrita como base do avanço rápido. Os tempos reais da página usam o seu 1:360 e podem ser trocados no campo abaixo. Para confirmar, basta cronometrar quantos segundos reais dura uma hora do relógio do jogo. ^n"),
+    ("A razão de tempo real foi medida: 15", "Medida em jogo (réplica 1.9.8, save carregado): 14,9 a 15,3 segundos de mundo por segundo real, igual à constante `DefaultWorldTimeRatio` (15). Uma hora de mundo dura 4 minutos reais e o dia, 96; o campo abaixo permite simular outras razões (por exemplo 10, uma hora de 6 minutos). O comando `Calendar.SetWorldTimeRatio` funciona por script. ^c"),
     ("'Com fome a cada 3 horas' é 8 vezes o ritmo do jogo", f"Para ficar com fome 3 horas de mundo depois de cheio, a digestão teria de ser {num(((FULL - THR) / (3 * 3600)) / DIG, 1)}x a do jogo ({num(((FULL - THR) / (3 * 3600)) / DIG_KRS, 1)}x a do KRS Items). A tabela de metas mostra o valor de `DigestionSpeed` para cada intervalo. ^d"),
 ]
 fhtml = "".join(f'<div class="find"><h3>{esc(t)}</h3><p>{rich(d)}</p></div>' for t, d in FIND)
@@ -205,7 +205,7 @@ JS = r"""
   var inp=document.getElementById('ratio');
   function fmt(s){ if(s<90) return Math.round(s)+' s'; if(s<5400) return (s/60).toFixed(1).replace('.',',')+' min'; return (s/3600).toFixed(1).replace('.',',')+' h'; }
   function upd(){
-    var r=parseFloat((inp.value||'').replace(',','.')); if(!(r>0)) r=360;
+    var r=parseFloat((inp.value||'').replace(',','.')); if(!(r>0)) r=15;
     [].slice.call(document.querySelectorAll('[data-w]')).forEach(function(e){ e.textContent=fmt(parseFloat(e.dataset.w)*3600/r); });
     document.getElementById('ratio-day').textContent=fmt(86400/r);
   }
@@ -233,7 +233,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 <div class="cols">{fhtml}</div>
 
 <h2 id="relogio">Relógio: segundos de mundo e tempo real</h2>
-<div class="ratio"><label for="ratio"><b>Segundos de mundo por segundo real</b> (o seu 1:360)</label><input id="ratio" type="text" inputmode="decimal" value="360"><span>Um dia de mundo dura <b id="ratio-day"></b> de tempo real.</span></div>
+<div class="ratio"><label for="ratio"><b>Segundos de mundo por segundo real</b> (medido: 15)</label><input id="ratio" type="text" inputmode="decimal" value="15"><span>Um dia de mundo dura <b id="ratio-day"></b> de tempo real.</span></div>
 <p class="note">Todos os valores de tempo real das tabelas abaixo se recalculam com esse campo. A razão em si não está nos dados do jogo (ver o resumo). ^n</p>
 
 <h2 id="parametros">Parâmetros de base</h2>
@@ -262,7 +262,7 @@ page = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-wid
 
 <h2 id="limites">Limites</h2>
 <ul>
-<li>A razão entre tempo real e tempo de mundo não consta nos dados lidos; o valor 360 é o seu. As conversões são aritmética sobre os parâmetros.</li>
+<li>A razão entre tempo real e tempo de mundo não consta nos dados lidos; o valor de partida, 15, foi medido em 10 out 2026 na réplica 1.9.8 (uma hora de mundo = 4 minutos reais, o dia = 96). As conversões são aritmética sobre os parâmetros.</li>
 <li>O mecanismo exato da parte de curto prazo, o significado de `max_status` e as unidades dos efeitos de inanição vêm de nomes e da ajuda do jogo, sem teste.</li>
 <li>Os valores 'do jogo' vêm da leitura de 1.9.6; no 1.9.8 o binário mudou e as constantes ocultas podem ter mudado.</li>
 </ul>
