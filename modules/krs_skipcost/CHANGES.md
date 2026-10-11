@@ -1,5 +1,8 @@
 # krs_skipcost changes
 
+## Planned (from the 11 Oct 2026 review)
+- Confirm a skip by world seconds per real second before charging (low frame rate); replace the 40-respawn limit by a minimum interval; optional floor for the cost.
+
 ## 0.1.0 (2026-10-10)
 - First module, built from the prototype in `tools/harness/skipcost/` (the scripts moved here; the harness builds a test copy from them).
 - Charges hunger after a skip: awake rate x skipped hours x share by posture (standing 0.75, sitting 0.5, lying 0.5).

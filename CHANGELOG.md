@@ -5,6 +5,10 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-11: Gluttony Rebalanced v1 stability review (static)
+
+- `docs/modules/gluttony/V1_REVISAO.md`: verdict stable enough to close a v1 candidate without further in-game proof; evidence (checks at 0 problems, module equals the tested code, no `KRS_SC` Lua error in four runs, Wait cost checked); known risks for v1.1 (R1 frames of 0.15 s or more count as a skip, so under about 6 fps normal play would be charged as a Wait; R2 entity respawn limit of 40; R3 no Lua syntax checker here); open balance questions (hunger can reach 0 by a skip because the dialog predicts no cost, a 25 h book costs about 41 points at 50%, about 65 points a day is above realistic energy use, sitting at 50% also covers a Wait on a chair); package borders (`krs_items` still carries the books and the Aesop potion). Nothing in the module was changed.
+
 ## 2026-10-10: krs_skipcost becomes a module of the Gluttony Rebalanced package
 
 - Author's request. `modules/krs_skipcost` (id `krs_skipcost`, version 0.1.0; `mod.manifest`, README, CHANGES, `Data/Scripts/Startup/krs_skipcost.lua`, `Data/Scripts/Entities/KRSSkipCost.lua`, `Data/Entities/KRSSkipCost.ent`) holds the scripts that were in `tools/harness/skipcost/` (moved with `git mv`); `build_skipcost.py` now builds the test copy from the module. `tools/build_module.py krs_skipcost` builds it and `check_patch_names.py` reports 0 problems. The built entity and `.ent` are byte-identical to the copy tested in game; the startup script differs only by the config line the test builder adds (defaults are the same). The module itself was not loaded in game as a built archive. It is a scripts-only module (no tables), so `ownership.csv` has no rows for it. The package folder `WIP_Mods/Gluttony Rebalanced/PREVISTO.md` lists it.

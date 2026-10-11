@@ -33,3 +33,6 @@ Vortex: install `krs_skipcost-<version>.zip` and enable it. Manually: copy the f
 Scripts only: an entity (`KRSSkipCost`) with a frame hook and a startup script. It does not conflict with table patches. Another mod
 that moves hunger after a skip would add to it. How it was measured and tested: `docs/modules/gluttony/ANALISE_BASE.html` (section 6)
 and `tools/harness/skipcost/README.md`.
+
+## Known risks
+See `docs/modules/gluttony/V1_REVISAO.md` (frames under about 6 fps may be read as a skip; entity respawn limit; hunger can reach 0 by a skip; long reading costs a lot).
