@@ -1,5 +1,7 @@
 # Gluttony Rebalanced: revisão de estabilidade para fechar a V1 (11 out 2026)
 
+> **Status date:** 2026-10-11 | **Kind:** review | **Trust:** static evidence plus in-game runs of 10 Oct 2026 | **Game version:** 1.9.8
+
 Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mesmo sem todas as comprovações no jogo. Veredito: **estável o bastante para fechar como V1-candidata**, com as ressalvas abaixo. Base das medições: `ANALISE_BASE.html` (seção 6 e "Medido no jogo"); módulo: `modules/krs_skipcost`; ferramenta de teste: `tools/harness/skipcost/`.
 
 ## O que sustenta a V1
