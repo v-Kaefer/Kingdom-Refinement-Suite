@@ -12,12 +12,14 @@ Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mes
 - Comprovado no jogo: Wait de 3,991 h custou 9,534 e de 1,993 h custou 4,761 (taxa x horas x 0,75); a fome lida de volta bateu com o alvo; postura em pé, deitado, sentado, em pé ao abrir e cancelar a cama; o Wait logo depois foi cobrado a 75%.
 - O desenho falha para o lado seguro: erro do script é capturado e logado uma vez, o jogo segue como o vanilla; sem taxa medida o custo é zero.
 
-## Riscos conhecidos, para a V1.1 (não bloqueiam)
+## Riscos conhecidos (R1 a R3 tratados em 11 out 2026, ver o fim desta seção)
 | # | Risco | Efeito | Correção prevista |
 |---|---|---|---|
 | R1 | Quadros de 0,15 s ou mais contam como pulo (`LONG_FRAME_MIN`) | abaixo de cerca de 6 quadros por segundo o jogo normal seria cobrado como Wait (75% a mais por cima da fome normal) | confirmar ao fim do pulo que andou mais de 100 s de mundo por segundo real (`os.time`) antes de cobrar |
 | R2 | A partida recria a entidade a cada evento de interface se o contador de quadros não andou, com limite de 40 na sessão (`KRS_SC_Spawns`) | se a entidade parar de atualizar com o jogo pausado, o limite acaba e o mod para depois de uma troca de nível | trocar o limite por um intervalo mínimo entre recriações (por exemplo 10 s) |
 | R3 | Sem verificador de Lua nesta máquina | uma correção de R1 ou R2 não é conferida por sintaxe | executar uma vez o jogo (com backup dos saves) e ver o log sem `ERR` |
+
+**Tratamento (11 out 2026, módulo 0.1.1).** Instalado o Lua 5.1 do pacote `lupa` num venv à parte (só para isto; nada no sistema). R1: um pulo só conta se o relógio andou 100 s de mundo ou mais por segundo real (jogo normal anda 15). R2: recriação no máximo a cada 10 s, sem o limite de 40 (que só vale sem `os.time`). R3: `tools/harness/skipcost/test_skipcost.py` carrega os dois scripts com um jogo falso e roda 27 verificações, todas passando: sintaxe, taxa medida, Wait, sono, sentado, vigor subindo, jogo lento a 5 quadros por segundo, Wait depois de jogo lento, carga de save, engasgo, sem `os.time`, intervalo de recriação e troca de dono da entidade. Desligando o R1 de propósito o teste do jogo lento falha, então ele pega o defeito. A simulação prova a lógica e a sintaxe, não que o motor se comporte como o jogo falso; as duas mudanças não foram rodadas no jogo real.
 
 ## Decisões de balanceamento em aberto
 - **Fome em zero por pulo.** O diálogo de Wait e de sono prevê a fome como se o pulo não custasse nada, então não avisa o jogador. Um Wait de 8 h com a fome em 20 pode deixá-la em 0. Opções: piso para o desconto (por exemplo o limiar de inanição de 25) ou manter.
@@ -33,6 +35,6 @@ Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mes
 
 ## Para fechar a V1 "sólida"
 1. Decidir as quatro questões de balanceamento acima.
-2. Aplicar R1 e R2.
+2. ~~Aplicar R1 e R2~~ (feito, 0.1.1).
 3. Uma execução no jogo réplica (backup de `Saved Games\kingdomcome\saves` e `profiles` antes, comparação por hash depois): log sem `ERR`, um Wait em pé e uma posição de cama.
 4. Opcional: dormir de verdade com o mod (grava um autosave e o jogo apaga o autosave mais antigo).

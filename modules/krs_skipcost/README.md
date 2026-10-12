@@ -35,4 +35,4 @@ that moves hunger after a skip would add to it. How it was measured and tested: 
 and `tools/harness/skipcost/README.md`.
 
 ## Known risks
-See `docs/modules/gluttony/V1_REVISAO.md` (frames under about 6 fps may be read as a skip; entity respawn limit; hunger can reach 0 by a skip; long reading costs a lot).
+See `docs/modules/gluttony/V1_REVISAO.md`. The low frame rate (R1) and the respawn limit (R2) were fixed in 0.1.1 and checked with a simulation, not in the game. Open: hunger can reach 0 by a skip (the game's dialog predicts no cost), long reading costs a lot.

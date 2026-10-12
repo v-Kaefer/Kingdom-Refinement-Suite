@@ -21,6 +21,7 @@ local LONG_FRAME_MIN = 0.15   -- frame time (s) from which a frame counts as par
 local LONG_FRAME_MAX = 2.0    -- above this it is a loading hitch, not a skip
 local QUIET_FRAMES = 45       -- normal frames in a row that end a skip
 local WINDOW_SECS = 300       -- world seconds of awake time per rate measurement
+local MIN_SKIP_RATE = 100   -- world seconds per real second below which long frames are slow play, not a skip (normal play is 15)
 local MIN_SKIP_SECS = 120  -- world seconds below which a run of long frames is taken for a hitch
 local PRIOR_SHARE = 0.70      -- hunger bar rate over the DigestionSpeed constant (measured 0.70)
 
@@ -66,6 +67,12 @@ local function finish_skip(K, wt)
     local cfg = KRS_SC_CFG
     if K.secs < MIN_SKIP_SECS then
         -- a hitch in the frame time, not a skip
+        K.open, K.secs, K.frames, K.quiet = false, 0, 0, 0
+        return
+    end
+    local real = (K.t_last or K.t_open or 0) - (K.t_open or 0) + 1
+    if K.secs / real < MIN_SKIP_RATE then
+        -- long frames at a low frame rate: the clock did not run fast in real time
         K.open, K.secs, K.frames, K.quiet = false, 0, 0, 0
         return
     end
@@ -121,6 +128,18 @@ function KRSSkipCost:Step(frameTime)
             K.secs, K.frames = 0, 0
             K.e_start = state("exhaust")
             K.pos = posture()
+            K.t_open = realtime()
+            K.t_chk = K.t_open
+        end
+        K.t_last = realtime()
+        if K.t_last ~= K.t_chk then
+            -- slow play (under about 6 frames per second) also has long frames: drop an episode that runs under MIN_SKIP_RATE
+            K.t_chk = K.t_last
+            local el = K.t_last - K.t_open
+            if el >= 3 and K.secs / el < MIN_SKIP_RATE then
+                K.open, K.secs, K.frames, K.quiet = false, 0, 0, 0
+                return
+            end
         end
         -- the posture is read again now and then: the player can lie down after the skip has begun
         if K.frames % 30 == 5 and K.pos ~= "lay" then

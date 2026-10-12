@@ -5,6 +5,11 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-11: krs_skipcost 0.1.1 (R1 and R2) and a Lua test outside the game
+
+- Lua 5.1 installed only for this: a venv in the session scratch folder with `lupa` (no system change). `tools/harness/skipcost/test_skipcost.py` loads `krs_skipcost.lua` and `KRSSkipCost.lua` against a fake game (System, Calendar, `os.time`, player with posture, RPG, UIAction) and drives frames like the engine's; 27 checks pass; with R1 switched off the slow-play check fails.
+- R1 (low frame rate read as a skip): a skip needs 100 or more world seconds per real second. R2 (entity respawn): at most once per 10 s, no 40 cap unless `os.time` is missing. Version 0.1.1. Not run in the real game after these changes.
+
 ## 2026-10-11: Gluttony Rebalanced v1 stability review (static)
 
 - `docs/modules/gluttony/V1_REVISAO.md`: verdict stable enough to close a v1 candidate without further in-game proof; evidence (checks at 0 problems, module equals the tested code, no `KRS_SC` Lua error in four runs, Wait cost checked); known risks for v1.1 (R1 frames of 0.15 s or more count as a skip, so under about 6 fps normal play would be charged as a Wait; R2 entity respawn limit of 40; R3 no Lua syntax checker here); open balance questions (hunger can reach 0 by a skip because the dialog predicts no cost, a 25 h book costs about 41 points at 50%, about 65 points a day is above realistic energy use, sitting at 50% also covers a Wait on a chair); package borders (`krs_items` still carries the books and the Aesop potion). Nothing in the module was changed.

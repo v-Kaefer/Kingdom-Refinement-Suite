@@ -32,6 +32,13 @@ can only be read on a bed or better.
   `DigestionSpeed x 0.70`.
 - One line per skip in `kcd.log`: `KRS_SC SKIP kind=stand|sit|lay hours=... rate_per_h=... factor=... cost=... hunger a -> b`.
 
+## Test without the game
+
+    python -m venv <dir>; <dir>/Scripts/python -m pip install lupa
+    <dir>/Scripts/python tools/harness/skipcost/test_skipcost.py
+
+Loads the module scripts into Lua 5.1 against a fake game and runs the checks (syntax, Wait, sleep, sitting, slow play, respawn, takeover). It proves the logic, not the engine.
+
 ## Build and test
 
     python tools/harness/skipcost/build_skipcost.py --game "<KCD folder>" [--wait 0.75] [--sit 0.5] [--sleep 0.5] [--apply 0|1] [--remove]

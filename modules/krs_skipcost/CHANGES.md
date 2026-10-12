@@ -1,7 +1,10 @@
 # krs_skipcost changes
 
-## Planned (from the 11 Oct 2026 review)
-- Confirm a skip by world seconds per real second before charging (low frame rate); replace the 40-respawn limit by a minimum interval; optional floor for the cost.
+## 0.1.1 (2026-10-11)
+- R1: a run of long frames is a skip only if the world clock ran at 100 world seconds or more per real second (`MIN_SKIP_RATE`; normal play is 15, a skip hundreds). Under about 6 frames per second normal play was read as a Wait and charged. Checked while the episode runs (dropped after 3 real seconds under the rate) and when it ends.
+- R2: the starter respawns the entity at most once every 10 real seconds, and no longer stops after 40 respawns (the cap of 40 only applies when `os.time` is missing).
+- Checked outside the game with Lua 5.1 (`lupa`): `tools/harness/skipcost/test_skipcost.py` loads both scripts against a fake game and runs 27 checks (syntax, rate measurement, Wait, sleep, sitting, vigour rising, slow play at 5 fps, a Wait after slow play, a save load, a hitch, no `os.time`, respawn interval, owner takeover). Not run in the real game after these two changes.
+- Still planned: an optional floor for the cost (hunger reaching 0 by a skip).
 
 ## 0.1.0 (2026-10-10)
 - First module, built from the prototype in `tools/harness/skipcost/` (the scripts moved here; the harness builds a test copy from them).
