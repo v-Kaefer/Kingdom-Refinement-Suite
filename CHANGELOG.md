@@ -5,9 +5,13 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-11: krs_skipcost 0.1.2, the player is told what a skip cost
+
+- Author's answers to the review: warn the player (no floor for the cost), keep the KRS Items hunger rate, sitting = 50%. `krs_skipcost` 0.1.2 shows a message after each skip (`Waited 2.0 h: hunger -5`, `Slept 6.0 h: hunger -10 (you are hungry)`, `Rested 3.0 h: hunger -5 (starving)`) through `Game.ShowNotification` with a fallback to `Game.SendInfoText`; `notify = 0` turns it off. Simulation: 33 checks pass. Not seen on screen: the text is not a localization key, so whether the game shows it is for the next in-game run. `V1_REVISAO.md` updated (the long-reading cost is the only balance question left).
+
 ## 2026-10-11: krs_skipcost 0.1.1 (R1 and R2) and a Lua test outside the game
 
-- Lua 5.1 installed only for this: a venv in the session scratch folder with `lupa` (no system change). `tools/harness/skipcost/test_skipcost.py` loads `krs_skipcost.lua` and `KRSSkipCost.lua` against a fake game (System, Calendar, `os.time`, player with posture, RPG, UIAction) and drives frames like the engine's; 27 checks pass; with R1 switched off the slow-play check fails.
+- Lua 5.1 installed only for this: a venv in the session scratch folder with `lupa` (no system change). `tools/harness/skipcost/test_skipcost.py` loads `krs_skipcost.lua` and `KRSSkipCost.lua` against a fake game (System, Calendar, `os.time`, player with posture, RPG, UIAction) and drives frames like the engine's; 33 checks pass; with R1 switched off the slow-play check fails.
 - R1 (low frame rate read as a skip): a skip needs 100 or more world seconds per real second. R2 (entity respawn): at most once per 10 s, no 40 cap unless `os.time` is missing. Version 0.1.1. Not run in the real game after these changes.
 
 ## 2026-10-11: Gluttony Rebalanced v1 stability review (static)

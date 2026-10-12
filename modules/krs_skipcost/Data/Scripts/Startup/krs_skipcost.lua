@@ -13,6 +13,7 @@ if cfg.wait == nil then cfg.wait = 0.75 end        -- share of the awake hunger 
 if cfg.sit == nil then cfg.sit = 0.5 end           -- share charged for a skip made sitting (reading on a bench, a Wait on a chair)
 if cfg.sleep == nil then cfg.sleep = 0.5 end       -- share charged for a skip made lying down (sleep, faint) or with vigour rising
 if cfg.apply == nil then cfg.apply = 1 end         -- 0 only logs what would be charged
+if cfg.notify == nil then cfg.notify = 1 end       -- 1 tells the player on screen what the skip cost (the game's own dialog shows no cost)
 
 KRS_SC_Starter = {}
 KRS_SC_Beat = 0          -- the entity that owns the work adds 1 on every frame it updates

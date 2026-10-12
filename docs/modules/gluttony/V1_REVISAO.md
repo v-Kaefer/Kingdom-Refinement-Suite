@@ -19,14 +19,17 @@ Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mes
 | R2 | A partida recria a entidade a cada evento de interface se o contador de quadros não andou, com limite de 40 na sessão (`KRS_SC_Spawns`) | se a entidade parar de atualizar com o jogo pausado, o limite acaba e o mod para depois de uma troca de nível | trocar o limite por um intervalo mínimo entre recriações (por exemplo 10 s) |
 | R3 | Sem verificador de Lua nesta máquina | uma correção de R1 ou R2 não é conferida por sintaxe | executar uma vez o jogo (com backup dos saves) e ver o log sem `ERR` |
 
-**Tratamento (11 out 2026, módulo 0.1.1).** Instalado o Lua 5.1 do pacote `lupa` num venv à parte (só para isto; nada no sistema). R1: um pulo só conta se o relógio andou 100 s de mundo ou mais por segundo real (jogo normal anda 15). R2: recriação no máximo a cada 10 s, sem o limite de 40 (que só vale sem `os.time`). R3: `tools/harness/skipcost/test_skipcost.py` carrega os dois scripts com um jogo falso e roda 27 verificações, todas passando: sintaxe, taxa medida, Wait, sono, sentado, vigor subindo, jogo lento a 5 quadros por segundo, Wait depois de jogo lento, carga de save, engasgo, sem `os.time`, intervalo de recriação e troca de dono da entidade. Desligando o R1 de propósito o teste do jogo lento falha, então ele pega o defeito. A simulação prova a lógica e a sintaxe, não que o motor se comporte como o jogo falso; as duas mudanças não foram rodadas no jogo real.
+**Tratamento (11 out 2026, módulo 0.1.1).** Instalado o Lua 5.1 do pacote `lupa` num venv à parte (só para isto; nada no sistema). R1: um pulo só conta se o relógio andou 100 s de mundo ou mais por segundo real (jogo normal anda 15). R2: recriação no máximo a cada 10 s, sem o limite de 40 (que só vale sem `os.time`). R3: `tools/harness/skipcost/test_skipcost.py` carrega os dois scripts com um jogo falso e roda 33 verificações, todas passando: sintaxe, taxa medida, Wait, sono, sentado, vigor subindo, jogo lento a 5 quadros por segundo, Wait depois de jogo lento, carga de save, engasgo, sem `os.time`, intervalo de recriação e troca de dono da entidade. Desligando o R1 de propósito o teste do jogo lento falha, então ele pega o defeito. A simulação prova a lógica e a sintaxe, não que o motor se comporte como o jogo falso; as duas mudanças não foram rodadas no jogo real.
 
-## Decisões de balanceamento em aberto
-- **Fome em zero por pulo.** O diálogo de Wait e de sono prevê a fome como se o pulo não custasse nada, então não avisa o jogador. Um Wait de 8 h com a fome em 20 pode deixá-la em 0. Opções: piso para o desconto (por exemplo o limiar de inanição de 25) ou manter.
+## Decisões de balanceamento
+Respostas do autor em 11 out 2026:
+- **Fome em zero por pulo:** avisar o jogador (mensagem na tela depois do pulo, módulo 0.1.2), sem piso. O diálogo de Wait e de sono prevê a fome como se o pulo não custasse nada, então a mensagem diz o custo e se o jogador ficou com fome ou em inanição. Falta ver no jogo se o texto aparece (é texto simples, sem chave de localização).
+- **Demanda diária:** manter a taxa do KRS Items (cerca de 65 pontos por dia, perto de 4.500 kcal pela mediana de 69 kcal por unidade; o consumo realista é 3.200 a 3.800 kcal).
+- **Sentado = 50%:** confirmado (cobre ler num banco e também esperar numa cadeira; `--sit 0.75` o iguala ao Wait).
+
+Em aberto:
 - **Leitura longa.** Com os livros do KRS Items em 10 a 25 h, um livro de 25 h custa cerca de 41 pontos a 50% (3,28 por hora x 25 x 0,5): quase meia barra por livro.
-- **Demanda diária.** Com a taxa do KRS Items, 16 h acordado e 8 h dormindo gastam uns 65 pontos por dia, perto de 4.500 kcal pela mediana de 69 kcal por unidade; consumo realista é 3.200 a 3.800 kcal. Ajustável na nutrição ou na digestão.
-- **Sentado = 50%.** Cobre ler num banco, mas também esperar numa cadeira a 50%. `--sit 0.75` o iguala ao Wait.
-- **Limites do que foi testado.** Sem teste com o mod: dormir de verdade, Wait sentado, ler livro, desmaiar.
+- **Limites do que foi testado.** Sem teste com o mod: dormir de verdade, Wait sentado, ler livro, desmaiar, e a mensagem na tela.
 
 ## Fronteiras do pacote
 - O `krs_items` ainda leva os livros (56 linhas de `document` e `ReadingXpPerHour`) e a poção de Aesop; pela divisão, livros são do Leech & Lore Reworked e poções do Realistic Potions. Enquanto não forem movidos, o Gluttony V1 os traz junto.
@@ -34,7 +37,7 @@ Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mes
 - Conteúdo da V1: digestão x2,25 e efeitos de inanição (`krs_items`) e o custo de pular tempo (`krs_skipcost`).
 
 ## Para fechar a V1 "sólida"
-1. Decidir as quatro questões de balanceamento acima.
+1. Decidir a leitura longa (as outras três questões estão respondidas).
 2. ~~Aplicar R1 e R2~~ (feito, 0.1.1).
-3. Uma execução no jogo réplica (backup de `Saved Games\kingdomcome\saves` e `profiles` antes, comparação por hash depois): log sem `ERR`, um Wait em pé e uma posição de cama.
+3. Uma execução no jogo réplica (backup de `Saved Games\kingdomcome\saves` e `profiles` antes, comparação por hash depois): log sem `ERR`, um Wait em pé, uma posição de cama e a mensagem de custo na tela.
 4. Opcional: dormir de verdade com o mod (grava um autosave e o jogo apaga o autosave mais antigo).

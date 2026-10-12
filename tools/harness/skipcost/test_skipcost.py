@@ -30,7 +30,15 @@ HUNGER = 60.0
 EXHAUST = 99.0
 POSTURE = "stand"
 OSTIME_OK = true
-RPG = { DigestionSpeed = 0.001302084 }
+RPG = { DigestionSpeed = 0.001302084, StarvationThreshold = 50 }
+NOTES = {}
+INFOS = {}
+HAS_NOTIFY = true
+HAS_INFO = true
+Game = {
+    ShowNotification = function(t) if not HAS_NOTIFY then error("no") end NOTES[#NOTES + 1] = t end,
+    SendInfoText = function(t) if not HAS_INFO then error("no") end INFOS[#INFOS + 1] = t end,
+}
 System = {
     LogAlways = function(m) LOG[#LOG + 1] = m end,
     SpawnEntity = function(t) SPAWNED[#SPAWNED + 1] = t.name; return { name = t.name } end,
@@ -228,6 +236,47 @@ def run():
     s2.g.skip(s2.e, 2.0, 36.5625, 5.5)
     s2.g.play(s2.e, 3, 60, 0)
     check("no os.time: still charged, no ERR", len(s2.skips()) == 1 and not any("ERR" in x for x in s2.log()), s2.log()[-2:])
+
+    # 10b. the player is told what the skip cost
+    s6 = Sim()
+    s6.g.HUNGER = 80.0
+    s6.g.play(s6.e, 40, 60, awake_per_s)
+    s6.g.skip(s6.e, 2.0, 36.5625, 5.5)
+    s6.g.play(s6.e, 3, 60, 0)
+    notes = [str(x) for x in s6.g.NOTES.values()]
+    check("notification after a Wait", len(notes) == 1 and notes[0].startswith("Waited 2.0 h: hunger -5") and "hungry" not in notes[0], notes)
+    s6.g.HUNGER = 52.0
+    s6.g.POSTURE = "lay"
+    s6.g.play(s6.e, 20, 60, 0)
+    s6.g.skip(s6.e, 6.0, 58.125, 14)
+    s6.g.play(s6.e, 3, 60, 0)
+    notes = [str(x) for x in s6.g.NOTES.values()]
+    check("notification says Slept and hungry when it ends under the threshold", len(notes) == 2 and notes[1].startswith("Slept 6.0 h") and "(you are hungry)" in notes[1], notes[1:])
+    s6.g.HUNGER = 3.0
+    s6.g.POSTURE = "sit"
+    s6.g.play(s6.e, 20, 60, 0)
+    s6.g.skip(s6.e, 3.0, 36.5625, 7)
+    s6.g.play(s6.e, 3, 60, 0)
+    notes = [str(x) for x in s6.g.NOTES.values()]
+    check("notification says starving when the skip empties the bar", len(notes) == 3 and notes[2].startswith("Rested 3.0 h") and "(starving)" in notes[2] and s6.g.HUNGER == 0, notes[2:])
+    s7 = Sim()
+    s7.g.HAS_NOTIFY = False
+    s7.g.play(s7.e, 40, 60, awake_per_s)
+    s7.g.skip(s7.e, 2.0, 36.5625, 5.5)
+    s7.g.play(s7.e, 3, 60, 0)
+    check("if ShowNotification fails the info line is used", len(s7.g.NOTES) == 0 and len(s7.g.INFOS) == 1 and len(s7.skips()) == 1)
+    s8 = Sim()
+    s8.L.execute("Game = nil")
+    s8.g.play(s8.e, 40, 60, awake_per_s)
+    s8.g.skip(s8.e, 2.0, 36.5625, 5.5)
+    s8.g.play(s8.e, 3, 60, 0)
+    check("with no Game table the skip is still charged and nothing errors", len(s8.skips()) == 1 and not any("ERR" in x for x in s8.log()))
+    s9 = Sim()
+    s9.L.execute("KRS_SC_CFG.notify = 0")
+    s9.g.play(s9.e, 40, 60, awake_per_s)
+    s9.g.skip(s9.e, 2.0, 36.5625, 5.5)
+    s9.g.play(s9.e, 3, 60, 0)
+    check("notify = 0 stays silent", len(s9.g.NOTES) == 0 and len(s9.g.INFOS) == 0 and len(s9.skips()) == 1)
 
     # 11. R2: the starter respawns the entity at most once every 10 real seconds
     s3 = Sim()

@@ -63,6 +63,28 @@ local function posture()
     return nil
 end
 
+-- Tells the player what the skip cost: the game's own Wait and sleep dialogs predict no change in nourishment, so without this the drop
+-- would come as a surprise. Plain English text through the game's notification (the text has no "@" key); if that function is missing or
+-- fails, the info line is tried; nothing here can stop the charge.
+local function notify(text)
+    if KRS_SC_CFG.notify ~= 1 then return end
+    local ok = false
+    if Game and Game.ShowNotification then ok = pcall(Game.ShowNotification, text) end
+    if not ok and Game and Game.SendInfoText then ok = pcall(Game.SendInfoText, text) end
+    log("notify ok=" .. tostring(ok) .. " text=" .. text)
+end
+
+local function message(kind, hours, cost, left)
+    local verb = "Waited"
+    if kind == "lay" then verb = "Slept" elseif kind == "sit" then verb = "Rested" end
+    local m = string.format("%s %.1f h: hunger -%.0f", verb, hours, cost)
+    local limit = 50
+    local okc, v = pcall(function() return RPG.StarvationThreshold end)
+    if okc and type(v) == "number" then limit = v end
+    if left <= 0 then m = m .. " (starving)" elseif left < limit then m = m .. " (you are hungry)" end
+    return m
+end
+
 local function finish_skip(K, wt)
     local cfg = KRS_SC_CFG
     if K.secs < MIN_SKIP_SECS then
@@ -91,6 +113,7 @@ local function finish_skip(K, wt)
         local ok, err = pcall(function() player.soul:SetState("hunger", target) end)
         if not ok then log("SetState failed: " .. tostring(err)) end
     end
+    if cost >= 0.5 and h_now then notify(message(kind, K.secs / 3600, cost, target)) end
     log(string.format("SKIP kind=%s hours=%.3f rate_per_h=%s factor=%s cost=%.3f hunger %s -> %s exhaust %s -> %s frames=%d",
         kind, K.secs / 3600, rate and string.format("%.4f", rate * 3600) or "unknown", tostring(factor), cost, tostring(h_now), tostring(target),
         tostring(K.e_start), tostring(e_now), K.frames))

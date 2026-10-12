@@ -19,10 +19,15 @@ A skip during which vigour rises by more than 0.05 also counts as lying. Vigour 
 from the hunger bar itself, so it follows `DigestionSpeed` (KRS Items sets it) and perks; it needs about 20 real seconds of play after a
 load before the first measurement (until then it uses `DigestionSpeed x 0.70`).
 
+## What the player sees
+After each skip a short message tells what it cost, because the game's own Wait and sleep dialogs predict no change in nourishment:
+`Waited 2.0 h: hunger -5`, `Slept 6.0 h: hunger -10 (you are hungry)`, `Rested 3.0 h: hunger -5 (starving)`. Set `notify = 0` in `KRS_SC_CFG` to turn it off.
+The message is plain English text. Whether the game shows it as a notification (or as the info line it falls back to) is still to be confirmed in the game.
+
 ## What it does not do
 - It does not touch tables, saves or the sleep recovery. The hunger value it sets lives only in the game's memory and in your next save.
 - The shares are in `Data/Scripts/Startup/krs_skipcost.lua` (`KRS_SC_CFG`: `wait`, `sit`, `sleep`, `apply`); `apply = 0` only logs.
-- Not tested in game with this module: a real sleep, a Wait while sitting, reading a book, fainting (a Wait standing and the posture
+- Not tested in game with this module: how the message looks; a real sleep, a Wait while sitting, reading a book, fainting (a Wait standing and the posture
   change lay, sit, stand were). One line per skip goes to `kcd.log`: `KRS_SC SKIP kind=stand|sit|lay hours=... cost=...`.
 
 ## Install
@@ -35,4 +40,4 @@ that moves hunger after a skip would add to it. How it was measured and tested: 
 and `tools/harness/skipcost/README.md`.
 
 ## Known risks
-See `docs/modules/gluttony/V1_REVISAO.md`. The low frame rate (R1) and the respawn limit (R2) were fixed in 0.1.1 and checked with a simulation, not in the game. Open: hunger can reach 0 by a skip (the game's dialog predicts no cost), long reading costs a lot.
+See `docs/modules/gluttony/V1_REVISAO.md`. Fixed in 0.1.1 (low frame rate, respawn limit) and checked with a simulation, not in the game. Open: long reading costs a lot; hunger can reach 0 by a skip (the player is warned, there is no floor).
