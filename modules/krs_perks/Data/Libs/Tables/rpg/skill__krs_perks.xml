@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="skill__krs_perks" version="1">
+    <header>
+      <column name="hidden" type="boolean" />
+      <column name="icon_id" type="integer" />
+      <column name="induced_skill_id" type="integer" />
+      <column name="skill_desc_adept" type="character varying" />
+      <column name="skill_desc_beginner" type="character varying" />
+      <column name="skill_desc_expert" type="character varying" />
+      <column name="skill_desc_master" type="character varying" />
+      <column name="skill_desc_nolevel" type="character varying" />
+      <column name="skill_id" type="integer" />
+      <column name="skill_name" type="character varying" />
+      <column name="ui_levelup_string_name" type="character varying" />
+      <column name="ui_string_name" type="character varying" />
+    </header>
+    <rows>
+      <row hidden="False" icon_id="0" induced_skill_id="" skill_desc_adept="" skill_desc_beginner="" skill_desc_expert="" skill_desc_master="" skill_desc_nolevel="ui_skill_weapon_large_desc0" skill_id="23" skill_name="weapon_large" ui_levelup_string_name="ui_skill_wpnlarge_levelup" ui_string_name="ui_skill_weapon_large" />
+    </rows>
+  </table>
+</database>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="perk_buff_override__krs_perks" version="1">
+    <header>
+      <column name="perk_id" type="uuid" />
+      <column name="source_buff_id" type="uuid" />
+      <column name="target_buff_id" type="uuid" />
+    </header>
+    <rows>
+      <row perk_id="010b08d9-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d28-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d29-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b08e0-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d29-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d30-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b08e8-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d37-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d38-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b08e9-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d38-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d39-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b08c8-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d12-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d13-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b08c9-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d13-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d14-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0812-5346-402c-a7cb-a084d624b62e" source_buff_id="4b876924-f960-4332-9b28-e9176a9eac09" target_buff_id="44d83d42-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0813-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d42-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d43-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0821-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d50-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d51-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0822-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d51-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d52-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0824-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d53-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d54-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0825-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d54-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d55-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0835-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d64-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d65-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0836-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d65-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d66-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0838-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d67-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d68-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0841-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d70-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d71-9709-4e54-9b7d-9b6bcfb630be" />
+      <row perk_id="010b0843-5346-402c-a7cb-a084d624b62e" source_buff_id="44d83d72-9709-4e54-9b7d-9b6bcfb630be" target_buff_id="44d83d73-9709-4e54-9b7d-9b6bcfb630be" />
+    </rows>
+  </table>
+</database>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="perk2perk_exclusivity__krs_perks" version="1">
+    <header>
+      <column name="first_perk_id" type="uuid" />
+      <column name="second_perk_id" type="uuid" />
+    </header>
+    <rows>
+      <row first_perk_id="010b0817-5346-402c-a7cb-a084d624b62e" second_perk_id="010b0818-5346-402c-a7cb-a084d624b62e" />
+      <row first_perk_id="010b0810-5346-402c-a7cb-a084d624b62e" second_perk_id="010b0811-5346-402c-a7cb-a084d624b62e" />
+      <row first_perk_id="010b08e2-5346-402c-a7cb-a084d624b62e" second_perk_id="010b08e3-5346-402c-a7cb-a084d624b62e" />
+    </rows>
+  </table>
+</database>
