@@ -5,6 +5,10 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-11: Gluttony Rebalanced v1 closed for now
+
+- Author's decision. The v1 is `krs_items` 2.0.0 (digestion x2.25 and starvation effects) plus `krs_skipcost` 0.1.3 (hunger charged after Wait, sleep, reading and fainting by posture, with an on-screen message); day at 96 minutes and the sleep as in the game; the better beds stay held out. Closure section, contents and the backlog for v1.1 (untested sleep, sitting and reading; spoilage by class, nutrition, snacks, services; moving the books and the Aesop potion out of `krs_items`; translations) are at the end of `docs/modules/gluttony/V1_REVISAO.md`. Nothing moved to `Reviewed_Mods`.
+
 ## 2026-10-11: krs_skipcost 0.1.3, first game run with the 0.1.x changes
 
 - Author: keep the long reading cost; run the tests. The run found two defects the Lua simulation missed (a 1 h Wait on a busy PC ran at under 100 world seconds per real second and was dropped; the 10 s respawn pause left no entity after a load). Fixed: `MIN_SKIP_RATE` 40, no pause, cap 500, extra copies remove themselves. Then in the game: entity takes over after the load, awake rate 3.1848 per hour, a Wait of 2.993 h cost 7.148 (rate x hours x 0.75), the message "Waited 3.0 h: hunger -7" shows on screen. Saves copied before and compared by hash after: no difference. 36 simulation checks. Not tested: sitting, sleeping, reading, fainting, the hungry/starving endings. The Claude window was minimized to give the game the focus and restored afterwards.

@@ -1,8 +1,8 @@
-# Gluttony Rebalanced: revisão de estabilidade para fechar a V1 (11 out 2026)
+# Gluttony Rebalanced: revisão de estabilidade e fechamento da V1 (11 out 2026)
 
 > **Status date:** 2026-10-11 | **Kind:** review | **Trust:** static evidence plus in-game runs of 10 Oct 2026 | **Game version:** 1.9.8
 
-Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mesmo sem todas as comprovações no jogo. Veredito: **estável o bastante para fechar como V1-candidata**, com as ressalvas abaixo. Base das medições: `ANALISE_BASE.html` (seção 6 e "Medido no jogo"); módulo: `modules/krs_skipcost`; ferramenta de teste: `tools/harness/skipcost/`.
+**V1 fechada por ora em 11 out 2026** (ver a seção "Fechamento da V1" no fim). Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mesmo sem todas as comprovações no jogo. Veredito: **estável o bastante para fechar como V1-candidata**, com as ressalvas abaixo. Base das medições: `ANALISE_BASE.html` (seção 6 e "Medido no jogo"); módulo: `modules/krs_skipcost`; ferramenta de teste: `tools/harness/skipcost/`.
 
 ## O que sustenta a V1
 - `check_docs`, `check_patch_names` (krs_items, krs_skipcost, krs_exploration) e `check_ownership`: 0 problemas; `tools/build_module.py krs_skipcost` constrói.
@@ -47,3 +47,27 @@ Depois da correção, no jogo 1.9.8 com `krs_items`: a entidade assume depois da
 2. ~~Aplicar R1 e R2~~ (feito, 0.1.1).
 3. ~~Uma execução no jogo réplica~~ (feita em 11 out 2026, com backup e comparação por hash sem diferença; ver abaixo).
 4. Opcional: dormir de verdade com o mod (grava um autosave e o jogo apaga o autosave mais antigo).
+
+## Fechamento da V1 (11 out 2026)
+Fechada por decisão do autor, "por enquanto": é uma V1 de partida, não a versão completa do pacote.
+
+**O que a V1 contém**
+| Peça | Módulo e versão | O que faz |
+|---|---|---|
+| Digestão e inanição | `krs_items` 2.0.0 | `DigestionSpeed` 0,000578704 -> 0,001302084 (x2,25); `StarvationPlayerEffectMinMin` 90 -> 95, `MaxMax` 75 -> 65, `MinMax` 45 -> 25 |
+| Custo de pular tempo | `krs_skipcost` 0.1.3 | depois de Wait, sono, leitura ou desmaio, cobra fome = taxa acordado x horas x fator por postura (em pé 75%, sentado 50%, deitado 50%) e avisa o jogador na tela |
+
+O `krs_items` ainda carrega, fora do escopo do pacote, os 56 livros, `ReadingXpPerHour` e a poção de Aesop (de Leech & Lore e Realistic Potions); as camas melhores ficam fora (guardadas em `krs_exploration/src/held/`) para o sono continuar como no jogo.
+
+**Decisões do autor que a V1 fixa:** dia de 96 minutos (razão 15) e sono intocado; taxa de fome do KRS Items mantida; sentado 50%; sem piso para o custo, com aviso ao jogador; leitura longa mantida.
+
+**Evidência:** `check_docs`, `check_patch_names` e `check_ownership` em 0 problemas; 36 verificações de simulação em Lua 5.1; execução no jogo 1.9.8 (saves copiados antes e comparados por hash depois, sem diferença): Wait em pé cobrado certo e mensagem na tela. Detalhes na seção "Execução no jogo".
+
+**Fora da V1 (backlog para a V1.1 ou depois)**
+- Sem teste no jogo com o módulo: dormir de verdade, Wait sentado, ler livro, desmaiar, as mensagens "(you are hungry)" e "(starving)". Dormir grava um autosave e o jogo apaga o mais antigo.
+- Apodrecimento por classe de alimento (22 classes, valor escolhido vazio), nutrição e refresco, lanches com buffs (2011), serviços e banho (1105).
+- Mover os livros e a poção de Aesop do `krs_items` para os pacotes Leech & Lore Reworked e Realistic Potions.
+- Mensagem só em inglês (texto simples com números); chaves de tradução se for preciso.
+- Opcional: piso para o custo, `--sit 0.75`, ajustes da taxa diária (cerca de 65 pontos por dia).
+- O id técnico do pacote ainda não existe; os ids dos módulos não foram renomeados.
+- Antes de qualquer mudança no `krs_skipcost`: simulação (`tools/harness/skipcost/test_skipcost.py`) e uma execução curta no jogo.
