@@ -1,6 +1,12 @@
 /.embold
-/Mods WIP folder
 /dist/
-docs/data/table-audit/table_audit.json
+
 .env
 *.apikey
+*.zip
+*.rar
+
+/Mods WIP folder
+docs/data/table-audit/table_audit.json
+docs/table-audit/table_audit.json
+docs/table-audit/table_audit.json

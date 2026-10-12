@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="missile_weapon" version="1">
+    <header>
+      <column name="item_id" type="uuid" />
+      <column name="power" type="real" />
+      <column name="weapon_sound_switch" type="character varying" />
+    </header>
+    <rows>
+	
+<!--
+
+	/=============================\
+	|	 KNOX'S LABELLED ITEMS	  |
+	|							  |
+	|  Thank you for using this	  |
+	|  resource!			      |
+	\=============================/
+
+-->	
+	
+<!-- MISSILE WEAPONS -->
+
+<!-- BOW -->
+	
+      <!-- Ash Hunting Bow (Bow) --> <row item_id="7fc2317f-6237-4423-82d2-8c809f651e85" power="57" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Ash Longbow (Bow) --> <row item_id="c6909d59-330f-4fd6-8dad-36b4bd73613a" power="74" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Capon's Hunting Bow (Bow) --> <row item_id="f2c83abc-2252-49f6-bbb7-dc8bc02979b2" power="54" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Cuman Bow (Bow) --> <row item_id="3bafe608-b757-491d-a51c-3a48b758a6b8" power="62" weapon_sound_switch="c_w_cumanbow_55p" />
+      <!-- Cuman Bow (Bow) --> <row item_id="47267303-7658-40a7-b39c-57aa8093c176" power="74" weapon_sound_switch="c_w_cumanbow_55p" />
+      <!-- Cuman Bow (Bow) --> <row item_id="58649b63-8239-4ef5-a834-5530d145fe95" power="72" weapon_sound_switch="c_w_cumanbow_55p" />
+      <!-- Cuman Bow (Bow) --> <row item_id="7c1ee5f9-e089-4ee5-9f65-524976e86e7d" power="64" weapon_sound_switch="c_w_cumanbow_55p" />
+      <!-- EXAMPLE Bow (Bow) --> <row item_id="6e06e314-5cc0-41eb-a7b6-69896b121413" power="29" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Elm Longbow (Bow) --> <row item_id="0d03afe4-9785-44d2-88d2-2c870de8dbfa" power="72" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Hazel Hunting Bow (Bow) --> <row item_id="e38a3c49-811b-4ff2-80d6-fc4d49d89ba5" power="62" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Hunting Dogwood Bow (Bow) --> <row item_id="cea13fef-025c-47bb-b148-9783b9951acc" power="59" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Testing/Trial Bow (Bow) --> <row item_id="03589a69-d3f4-403a-a389-ca021e7c8f40" power="29" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Very Light Bow (Bow) --> <row item_id="65eb17e8-29e4-435f-98b1-74f577fe764c" power="29" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Villager's Ash Bow (Bow) --> <row item_id="b3fea5de-4ef1-4bcd-9836-7b3c7765ffbb" power="37" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Villager's Bow (Bow) --> <row item_id="deb5276d-4926-4545-bdda-f457cac8bc01" power="37" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Villager's Dogwood Bow (Bow) --> <row item_id="6096a15f-3d8a-496d-a24c-4776c10189d7" power="39" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Villager's Elm Bow (Bow) --> <row item_id="01b86c1e-1614-4310-8bed-10b7682e5815" power="44" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Villager's Hazel Bow (Bow) --> <row item_id="b063cb37-8f17-49b9-88f8-04111fc81838" power="42" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Villager's Yew Bow (Bow) --> <row item_id="481e7576-a6ee-4732-ba2f-98b88b430c41" power="47" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Yew Hunting Bow (Bow) --> <row item_id="53dffc64-bf9c-4a28-af02-a2ec9705d4a7" power="64" weapon_sound_switch="c_w_longbow_45p" />
+      <!-- Yew Longbow (Bow) --> <row item_id="57ace80d-3683-486a-93b1-1bbe4c21e598" power="77" weapon_sound_switch="c_w_longbow_45p" />
+	  
+    </rows>
+  </table>
+</database>

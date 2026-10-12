@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="skill2item_category_krspkg1" version="1">
+    <header>
+      <column name="item_category" type="character varying" />
+      <column name="skill_id" type="integer" />
+    </header>
+    <rows>
+      <row item_category="armor.horse_bridle.*" skill_id="8" />
+      <row item_category="armor.horse_saddle.*" skill_id="8" />
+    </rows>
+  </table>
+</database>

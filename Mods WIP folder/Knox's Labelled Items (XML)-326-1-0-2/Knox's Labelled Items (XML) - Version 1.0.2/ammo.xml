@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="ammo" version="1">
+    <header>
+      <column name="ammo_class_id" type="integer" />
+      <column name="broken_item_id" type="uuid" />
+      <column name="inquiver_material" type="character varying" />
+      <column name="inquiver_model" type="character varying" />
+      <column name="item_id" type="uuid" />
+      <column name="power_mod" type="real" />
+      <column name="slash_att" type="real" />
+      <column name="smash_att" type="real" />
+      <column name="stab_att" type="real" />
+    </header>
+    <rows>
+	
+<!--
+
+	/=============================\
+	|	 KNOX'S LABELLED ITEMS	  |
+	|							  |
+	|  Thank you for using this	  |
+	|  resource!			      |
+	\=============================/
+
+-->	
+	
+<!-- AMMO -->
+
+<!-- ARROWS -->
+	
+      <!-- Better Hunting Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_beige.cgf" item_id="710e3706-8974-404b-b23a-6f51670ef1ed" power_mod="1.1" slash_att="0" smash_att="0" stab_att="8" />
+      <!-- Better Long-Distance Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="c70cbea8-64fc-4309-b559-6b1ed76ea9d4" power_mod="1" slash_att="0" smash_att="0" stab_att="0" />
+      <!-- Better Long-Distance Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="d5e6764d-18ba-44cb-8dd0-6640a17785a8" power_mod="1.1" slash_att="0" smash_att="0" stab_att="12" />
+      <!-- Better Piercing Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="a5b31bbc-1e11-4831-835b-c06d5b13a7da" power_mod="0.9" slash_att="0" smash_att="0" stab_att="15" />
+      <!-- Better Wounding Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="13ba7468-11a2-483d-8cb9-25ce36a2d228" power_mod="1" slash_att="12.5" smash_att="0" stab_att="0" />
+      <!-- Hunting Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_brown.cgf" item_id="802507e9-d620-47b5-ae66-08fcc314e26a" power_mod="1" slash_att="0" smash_att="0" stab_att="8" />
+      <!-- Long-Distance Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle.cgf" item_id="ad6f0f01-aec4-44d1-982c-1210eb01b74a" power_mod="1.1" slash_att="0" smash_att="0" stab_att="11" />
+      <!-- New Testing Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle.cgf" item_id="278d26d1-e9a7-4354-84f9-37d20cb72b45" power_mod="1" slash_att="0" smash_att="0" stab_att="12" />
+      <!-- Ordinary Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="4fd563e5-a44a-4a6e-958d-95bcb196814a" power_mod="1" slash_att="0" smash_att="0" stab_att="9" />
+      <!-- Piercing Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="dfea5d01-b25c-414a-9ab4-6911a5f82118" power_mod="0.85" slash_att="0" smash_att="0" stab_att="13" />
+      <!-- Poor Quality Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="19df1c5c-3dbf-45c0-ac01-336facf5f741" power_mod="1" slash_att="0" smash_att="0" stab_att="10" />
+      <!-- Quality Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="e5b3f681-3714-4623-97be-4015fa454797" power_mod="1" slash_att="0" smash_att="0" stab_att="12.5" />
+      <!-- Tournament Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="2902cd40-2934-404e-87bc-c1ce57deed22" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_beige.cgf" item_id="7db6b854-e307-4a47-ba39-943190b2469e" power_mod="1" slash_att="0" smash_att="0" stab_att="10" />
+      <!-- Wounding Arrow (Arrow) --> <row ammo_class_id="1" broken_item_id="3b5be706-3cac-4223-a780-039867c65c4d" inquiver_material="weapons/quiver/quiver_back" inquiver_model="Objects/weapons/arrow/arrows_bundle_gray.cgf" item_id="c49aa63a-07a6-4417-9f9b-97f2712a4cd0" power_mod="1" slash_att="11.5" smash_att="0" stab_att="0" />
+	  
+    </rows>
+  </table>
+</database>
