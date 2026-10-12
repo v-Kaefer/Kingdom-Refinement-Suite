@@ -1,0 +1,20 @@
+Short Description
+Makes hunger matter during ordinary play and time skips in Kingdom Come: Deliverance.
+
+Description
+Gluttony Rebalanced combines a faster hunger rate and stronger starvation effects with a script that charges hunger when Henry waits, sleeps, reads, or faints. The base game does not charge hunger during accelerated time. This upload contains two independent mod folders, krs_gluttony and krs_skipcost.
+
+Installation instructions
+Install Gluttony-Rebalanced-1.0.0.zip with Vortex, or extract both mod folders into KingdomComeDeliverance/Mods and add krs_gluttony and krs_skipcost to Mods/mod_order.txt. Place them after other mods that patch the same hunger parameters. Disable the older krs_items package if installed. To keep the hunger tuning without the time-skip charge, install only krs_gluttony.
+
+Main features
+- DigestionSpeed rises from 0.000578704 to 0.001302084 (2.25x).
+- Starvation effects begin earlier and become stronger.
+- Time skips charge the measured awake hunger rate: 75% while standing and 50% while sitting or lying down.
+- A notification reports the hunger cost after each skip.
+
+Requirements
+Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. Other mods that change DigestionSpeed or starvation rows may override this patch according to mod order. Waiting while standing and its notification were verified in game on 1.9.8; sleeping, reading, fainting, and seated waiting still need separate game checks.
+
+Shout outs
+Thanks to the Kingdom Come: Deliverance modding community and the contributors whose hunger discussions informed this work.

@@ -1,9 +1,11 @@
 /.embold
 /dist/
+__pycache__/
 
 .env
 *.apikey
 *.zip
+!/nexus/**/*.zip
 *.rar
 
 /Mods WIP folder

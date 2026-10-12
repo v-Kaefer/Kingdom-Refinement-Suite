@@ -1,0 +1,19 @@
+Short Description
+Adds small improvements to herbs, carrying, repairs, and timed quest information.
+
+Description
+Everyday Tweaks packages the independent krs_qol module. It changes a few RPG parameters, makes horse equipment repairable through the repair skill, and marks timed quests in the journal.
+
+Installation instructions
+Install Everyday-Tweaks-1.0.0.zip with Vortex, or extract krs_qol into KingdomComeDeliverance/Mods and add krs_qol to Mods/mod_order.txt. Load it after mods changing the same RPG parameters if you want these values.
+
+Main features
+- Increases herb-gathering radius and carrying capacity per point of Strength.
+- Doubles repair prices and allows bridles and saddles to be repaired with the repair skill.
+- Marks 22 timed quests in the journal in English, Czech, and Portuguese.
+
+Requirements
+Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. The repository records permission requests for ideas from Realistic Repairs and Train More Carry More; resolve that status before publication. Some level-only repair rows still need a loaded-save check.
+
+Shout outs
+Thanks to the authors of Realistic Repairs, Train More Carry More, Herb Picking Radius 2x, and Timed Quest Indicator for their ideas.

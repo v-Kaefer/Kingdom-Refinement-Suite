@@ -1,0 +1,19 @@
+Short Description
+Makes Aesop Potion less nourishing without changing the rest of the game's potions.
+
+Description
+This is a focused first release of Realistic Potions. It moves the existing Aesop Potion food-table adjustment out of KRS Items into its own installable mod. It is not yet a full potion rebalance.
+
+Installation instructions
+Install Realistic-Potions-Aesop-1.0.0.zip with Vortex, or extract krs_realistic_potions into KingdomComeDeliverance/Mods and add krs_realistic_potions to Mods/mod_order.txt. Disable the older krs_items package if installed. Load this mod after other mods that change the Aesop Potion food row if you want this value.
+
+Main features
+- Changes Aesop Potion nutrition from 10 to 2.5.
+- Changes its short-term nutrition ratio from 0.1 to 0.5.
+- Changes one complete PTF row; other potions are untouched.
+
+Requirements
+Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. Food-spoilage mods such as Alternate Food Spoil 2X can change the same row; the later mod in mod_order.txt wins the complete row.
+
+Shout outs
+Thanks to the Kingdom Come: Deliverance modding community for the data and compatibility research behind this focused adjustment.

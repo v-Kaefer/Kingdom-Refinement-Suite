@@ -1,0 +1,19 @@
+Short Description
+Gives skill-book reading more weight by lengthening reading time and adjusting its XP rate.
+
+Description
+This initial Leech & Lore Reworked release focuses on books. It separates the reading changes formerly bundled in KRS Items into an independent mod. Treatment items such as bandages are planned for later versions and are not changed by this upload.
+
+Installation instructions
+Install Leech-and-Lore-Reworked-1.0.0.zip with Vortex, or extract krs_leech_lore into KingdomComeDeliverance/Mods and add krs_leech_lore to Mods/mod_order.txt. Disable the older krs_items package if installed. Load this mod after other mods that change the same books or ReadingXpPerHour if you want its values.
+
+Main features
+- Changes the reading times of 56 skill books from 4/6/8/10 hours to 10/15/20/25 hours.
+- Lowers ReadingXpPerHour from 20 to 5 to match the longer reading times.
+- Uses complete PTF rows rather than replacing the full document table.
+
+Requirements
+Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. Book-reading results after a loaded save should be checked before publication.
+
+Shout outs
+Thanks to hoskope for Skill Books Take Time 2x, which inspired the book timing, and to the Kingdom Come: Deliverance modding community.

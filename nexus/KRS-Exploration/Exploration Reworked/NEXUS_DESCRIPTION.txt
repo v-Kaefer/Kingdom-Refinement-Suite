@@ -1,0 +1,19 @@
+Short Description
+Rewards reading wayside shrines and shooting down nests with a small amount of skill XP.
+
+Description
+Exploration Reworked packages the core krs_exploration module. It adds small rewards for two exploration actions without replacing the game's complete scripts. The optional trough-washing animation is not included in this upload.
+
+Installation instructions
+Install Exploration-Reworked-1.0.0.zip with Vortex, or extract krs_exploration into KingdomComeDeliverance/Mods and add krs_exploration to Mods/mod_order.txt.
+
+Main features
+- Awards 1 Reading XP the first time a wayside shrine or cross is read.
+- Awards 1 Bow XP when a nest is shot down.
+- Leaves sleep recovery unchanged; better-bed rows are held out of this release.
+
+Requirements
+Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. The scripts loaded without error in the test game, but the XP awards have not yet been observed in play. The separate washing animation needs third-party assets and is excluded pending redistribution permission.
+
+Shout outs
+Thanks to CrEaToXx for Waystones Give XP and Shooting Nests Gives XP, which inspired the two independently written rewards, and to the Kingdom Come: Deliverance modding community.

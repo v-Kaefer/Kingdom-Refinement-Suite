@@ -1,0 +1,20 @@
+Short Description
+Restores Riposte and adds new perks across combat and character skill trees.
+
+Description
+Perks Reworked packages the krs_perks module as a standalone Nexus upload. It makes Riposte and the hidden Master Strike perk visible and adds 56 perks across several skill trees, with names, descriptions, icons, and translations.
+
+Installation instructions
+Install Perks-Reworked-1.0.0.zip with Vortex, or extract krs_perks into KingdomComeDeliverance/Mods and add krs_perks to Mods/mod_order.txt. Do not enable Restore Riposte at the same time unless you intentionally choose a load order; both alter the same perk rows.
+
+Main features
+- Riposte becomes visible and unlocks at level 10 after Perfect Block.
+- The hidden Master Strike perk becomes visible in Defence; Captain Bernard's taught Master Strike is not changed.
+- Adds 56 perks across Defence, Sword, Axe, Mace, Unarmed, Bow, Long Weapon, Fencing, and the Player tab.
+- Includes text for all 14 game languages, with English used where an upstream translation was unavailable.
+
+Requirements
+Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. Perk behaviour and visibility after loading a save require a final game check before publication.
+
+Shout outs
+Thanks to AcSiG for Restore Riposte (permission recorded as granted), the Perkaholic authors for the source ideas, and the Kingdom Come: Deliverance modding community.
