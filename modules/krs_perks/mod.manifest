@@ -2,9 +2,9 @@
 <kcd_mod>
   <info>
     <name>KRS Perks</name>
-    <description>Kingdom Refinement Suite - perks: Riposte and Master Strike are back (Riposte unlocks at level 10).</description>
+    <description>Kingdom Refinement Suite - 56 additional perks, restored Riposte at level 10, and a visible longsword Master Strike entry.</description>
     <author>Kaleb</author>
-    <version>1.0.0</version>
+    <version>1.1.1</version>
     <created_on>02/10/2026</created_on>
     <modid>krs_perks</modid>
     <modifies_level>false</modifies_level>

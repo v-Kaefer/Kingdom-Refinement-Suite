@@ -261,7 +261,37 @@ def merge_text(args):
                         + "\n".join(add) + "\n</Table>\n")
     out = fix_text()
     out.update(rename_keys())
+    out.update(fill_missing_text())
     return out
+
+
+def fill_missing_text():
+    """Fill missing referenced keys with English, keeping existing translations."""
+    changed = collections.Counter()
+    table = os.path.join(MODULE, "Data", "Libs", "Tables", "rpg", f"perk__{SUFFIX}.xml")
+    required = {row.get(col) for row in ET.parse(table).findall("./table/rows/row")
+                for col in ("perk_ui_name", "perk_ui_desc") if row.get(col)}
+    base = os.path.join(MODULE, "Localization")
+    english = ET.parse(os.path.join(base, "English", f"text__{SUFFIX}.xml")).getroot()
+    fallback = {row.findtext("Cell"): row for row in english.findall("Row")}
+    missing = required - fallback.keys()
+    if missing:
+        raise ValueError(f"English localization lacks referenced keys: {sorted(missing)}")
+    for lang in sorted(os.listdir(base)):
+        dest = os.path.join(base, lang, f"text__{SUFFIX}.xml")
+        if not os.path.isfile(dest):
+            continue
+        text = open(dest, encoding="utf-8").read()
+        have = {row.findtext("Cell") for row in ET.fromstring(text).findall("Row")}
+        missing = sorted(required - have)
+        if not missing:
+            continue
+        rows = [ET.tostring(fallback[key], encoding="unicode").strip() for key in missing]
+        with open(dest, "w", encoding="utf-8") as stream:
+            stream.write(text.rstrip().removesuffix("</Table>").rstrip() + "\n"
+                         + "\n".join(rows) + "\n</Table>\n")
+        changed["fallback:" + lang] += len(missing)
+    return changed
 
 
 def rename_keys():
