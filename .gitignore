@@ -10,3 +10,8 @@
 docs/data/table-audit/table_audit.json
 docs/table-audit/table_audit.json
 docs/table-audit/table_audit.json
+
+# third-party rows, script excerpts and strings read from mod archives (written again by tools/grade_b_extract.py)
+docs/mods-review/grade_b_newrows.json
+docs/mods-review/grade_b_scripts.json
+docs/mods-review/grade_b_text.csv

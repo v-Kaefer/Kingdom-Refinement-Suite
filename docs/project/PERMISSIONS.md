@@ -11,6 +11,8 @@ Status is copied from the README and is **not verifiable from the repo**.
 | Realistic Repairs (1842) | repairs | Requested |
 | Train More Carry More | carry capacity | Requested |
 | Enhanced Eyes (Grimsy, 969) | 28 `.mtl` + 2 `.dds`, byte-identical to the original | Request Permission |
+| Waystones Give XP (1518) and Shooting Nests Gives XP (1519), CrEaToXx | `krs_exploration` XP scripts: the idea only, the code is written for the module, credited | not requested |
+| Trough Washing Animation (2372, TofuDieb) | `krs_exploration_wash`: fragments, three text diffs, one Lua file, and 21 binary assets (KCD2 animation, splash textures) read from the mod archive at build time, never stored | not requested: **do not publish the wash package** |
 | Bed Comfort Restored (480), Timed Quest Indicator (1780), Skill Books Take Time (1950), Herb Picking Radius (1938) | inspiration or credit | credited, no permission noted |
 
 Non-table assets are not covered by the audit. Track them by hand: the Enhanced Eyes files above are unmodified copies;

@@ -2,7 +2,7 @@
 """
 scan_workspace_mods.py - list the mods that physically exist in the workspace, by Nexus id.
 
-    python tools/scan_workspace_mods.py [--wip "E:/Kingdom-Refinement-Suite/Mods WIP folder"]
+    python tools/scan_workspace_mods.py [--wip "E:/Kingdom-Refinement-Suite/WIP_Mods"]
 
 Sources (the id is the number in Nexus's download names, e.g. `Bed Comfort Restored-480-1-0`):
     * every file or folder in the category folders of `Mods WIP folder` (Archery, Etc, Items, Perks, Player, QoL, Tables,
@@ -33,7 +33,7 @@ def parse(name):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--wip", default=r"E:\Kingdom-Refinement-Suite\Mods WIP folder")
+    ap.add_argument("--wip", default=r"E:\Kingdom-Refinement-Suite\WIP_Mods")
     a = ap.parse_args()
     rows, unnamed = {}, []
 
