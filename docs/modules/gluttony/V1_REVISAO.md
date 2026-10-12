@@ -25,11 +25,17 @@ Revisão estática, sem abrir o jogo, para decidir se dá para fechar uma V1 mes
 Respostas do autor em 11 out 2026:
 - **Fome em zero por pulo:** avisar o jogador (mensagem na tela depois do pulo, módulo 0.1.2), sem piso. O diálogo de Wait e de sono prevê a fome como se o pulo não custasse nada, então a mensagem diz o custo e se o jogador ficou com fome ou em inanição. Falta ver no jogo se o texto aparece (é texto simples, sem chave de localização).
 - **Demanda diária:** manter a taxa do KRS Items (cerca de 65 pontos por dia, perto de 4.500 kcal pela mediana de 69 kcal por unidade; o consumo realista é 3.200 a 3.800 kcal).
+- **Leitura longa: mantida** (11 out 2026). Com os livros do KRS Items em 10 a 25 h, um livro de 25 h custa cerca de 41 pontos a 50% (3,28 por hora x 25 x 0,5): quase meia barra por livro; o jogador é avisado pela mensagem.
 - **Sentado = 50%:** confirmado (cobre ler num banco e também esperar numa cadeira; `--sit 0.75` o iguala ao Wait).
 
 Em aberto:
-- **Leitura longa.** Com os livros do KRS Items em 10 a 25 h, um livro de 25 h custa cerca de 41 pontos a 50% (3,28 por hora x 25 x 0,5): quase meia barra por livro.
-- **Limites do que foi testado.** Sem teste com o mod: dormir de verdade, Wait sentado, ler livro, desmaiar, e a mensagem na tela.
+- **Limites do que foi testado.** Sem teste com o mod: dormir de verdade, Wait sentado, ler livro, desmaiar, e as mensagens "(you are hungry)" e "(starving)".
+
+## Execução no jogo (11 out 2026, módulo 0.1.3)
+A primeira execução com as mudanças 0.1.x achou **dois defeitos que a simulação não pegou**, ambos corrigidos na 0.1.3:
+1. O limiar do R1 (100 s de mundo por segundo real) era apertado: um Wait de 1 h levou uns 25 s num PC ocupado e foi descartado, sem cobrança. Agora 40 (jogo normal, mesmo a 5 quadros por segundo, anda 15), e o descarte é logado.
+2. O intervalo de 10 s do R2 fazia a partida perder os eventos de interface logo depois de carregar um save, e não havia entidade no jogo. O intervalo saiu; o limite é 500 criações e as cópias extras se removem quando uma está trabalhando.
+Depois da correção, no jogo 1.9.8 com `krs_items`: a entidade assume depois da carga, a taxa acordado foi medida (3,1848 por hora), um Wait em pé de 2,993 h custou 7,148 (taxa x horas x 0,75), a fome foi de 59,16 a 52,01 e **a mensagem "Waited 3.0 h: hunger -7" apareceu na tela** como notificação (o jogo a desenha em maiúsculas). Os saves foram copiados antes e comparados por hash depois: nenhuma diferença. Lição: a simulação prova a lógica, mas não o tempo dos eventos do motor; uma mudança no módulo precisa de uma execução curta no jogo.
 
 ## Fronteiras do pacote
 - O `krs_items` ainda leva os livros (56 linhas de `document` e `ReadingXpPerHour`) e a poção de Aesop; pela divisão, livros são do Leech & Lore Reworked e poções do Realistic Potions. Enquanto não forem movidos, o Gluttony V1 os traz junto.
@@ -37,7 +43,7 @@ Em aberto:
 - Conteúdo da V1: digestão x2,25 e efeitos de inanição (`krs_items`) e o custo de pular tempo (`krs_skipcost`).
 
 ## Para fechar a V1 "sólida"
-1. Decidir a leitura longa (as outras três questões estão respondidas).
+1. ~~Decidir as questões de balanceamento~~ (todas respondidas em 11 out 2026).
 2. ~~Aplicar R1 e R2~~ (feito, 0.1.1).
-3. Uma execução no jogo réplica (backup de `Saved Games\kingdomcome\saves` e `profiles` antes, comparação por hash depois): log sem `ERR`, um Wait em pé, uma posição de cama e a mensagem de custo na tela.
+3. ~~Uma execução no jogo réplica~~ (feita em 11 out 2026, com backup e comparação por hash sem diferença; ver abaixo).
 4. Opcional: dormir de verdade com o mod (grava um autosave e o jogo apaga o autosave mais antigo).

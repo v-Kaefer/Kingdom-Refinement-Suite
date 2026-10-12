@@ -24,6 +24,7 @@ ENT = os.path.join(DATA, "Entities", "KRSSkipCost.lua")
 PRELUDE = r"""
 LOG = {}
 SPAWNED = {}
+REMOVED = {}
 NOW = 1000          -- os.time()
 WT = 4000000.0      -- world seconds
 HUNGER = 60.0
@@ -42,6 +43,7 @@ Game = {
 System = {
     LogAlways = function(m) LOG[#LOG + 1] = m end,
     SpawnEntity = function(t) SPAWNED[#SPAWNED + 1] = t.name; return { name = t.name } end,
+    RemoveEntity = function(id) REMOVED[#REMOVED + 1] = id end,
 }
 Calendar = { GetWorldTime = function() return WT end }
 local real_os = os
@@ -67,6 +69,7 @@ function new_entity()
     ENTS[#ENTS + 1] = e
     e.Activate = function() end
     e.Client = KRSSkipCost.Client
+    e.id = #ENTS + 100
     return e
 end
 function frame(e, ft, ratio)
@@ -217,6 +220,15 @@ def run():
     sk = s.skips()
     check("R1: a Wait after slow play is charged", len(sk) == n0 + 1 and abs(num(sk[-1], "hours") - 2.0) < 0.1, sk[-1][:100] if sk else "")
 
+    # 7b. a skip on a slow PC: a 1 h Wait (ratio 29.4) in 25 s and in 60 s of real time is still a skip (rate 144 and 60 per s)
+    for secs in (25, 60):
+        n0 = len(s.skips())
+        s.g.play(s.e, 20, 60, awake_per_s)
+        s.g.skip(s.e, 1.0, 29.375, secs)
+        s.g.play(s.e, 3, 60, 0)
+        sk = s.skips()
+        check(f"R1: a 1 h Wait that took {secs} s of real time is charged", len(sk) == n0 + 1 and abs(num(sk[-1], "hours") - 1.0) < 0.1, sk[-1][:90] if sk else s.log()[-1:])
+
     # 8. a save loading moves the clock by days: not a skip
     n0 = len(s.skips())
     s.g.WT = s.g.WT + 4300000
@@ -278,31 +290,24 @@ def run():
     s9.g.play(s9.e, 3, 60, 0)
     check("notify = 0 stays silent", len(s9.g.NOTES) == 0 and len(s9.g.INFOS) == 0 and len(s9.skips()) == 1)
 
-    # 11. R2: the starter respawns the entity at most once every 10 real seconds
+    # 11. R2: the starter respawns whenever the entity stopped updating, with no pause (a pause missed the events right after a load)
     s3 = Sim()
     fire = s3.g.fire_ui
     s3.g.NOW = 5000
-    for i in range(50):          # 50 UI events in the same second, the entity never updates
+    for i in range(30):          # 30 UI events during a load, the entity never updates
         fire()
-    check("R2: 50 events in one second spawn one entity", len(s3.g.SPAWNED) == 1, len(s3.g.SPAWNED))
-    s3.g.NOW = 5011
-    fire(); fire()
-    check("R2: after 10 s one more spawn", len(s3.g.SPAWNED) == 2, len(s3.g.SPAWNED))
-    for t in range(5020, 5020 + 600, 10):     # 10 minutes of paused game with events every 10 s
-        s3.g.NOW = t
-        fire()
-    check("R2: no cap that ends respawning (spawns keep happening)", len(s3.g.SPAWNED) > 40, len(s3.g.SPAWNED))
-    # when the entity is alive (beat moves) nothing is spawned
+    check("R2: every event after the first with a stalled entity respawns it (the first only records the counter)", len(s3.g.SPAWNED) == 29, len(s3.g.SPAWNED))
+    s3.g.NOW = 5002              # the level is ready 2 s later and the next event must still respawn
+    fire()
+    check("R2: an event 2 s after the burst still respawns (the case a 10 s pause broke in game)", len(s3.g.SPAWNED) == 30, len(s3.g.SPAWNED))
     n = len(s3.g.SPAWNED)
     s3.g.KRS_SC_Beat = s3.g.KRS_SC_Beat + 1
-    s3.g.NOW = 9000
     fire()
     check("R2: a living entity is not respawned", len(s3.g.SPAWNED) == n)
     s4 = Sim()
-    s4.g.OSTIME_OK = False
-    for i in range(100):
+    for i in range(700):
         s4.g.fire_ui()
-    check("R2: without os.time the respawns are capped at 40", len(s4.g.SPAWNED) == 40, len(s4.g.SPAWNED))
+    check("R2: a runaway is capped at 500 spawns", len(s4.g.SPAWNED) == 500, len(s4.g.SPAWNED))
 
     # 12. the entity copy that is not the owner does nothing, and takes over when the owner stops
     s5 = Sim()
@@ -314,6 +319,17 @@ def run():
     for i in range(6):
         s5.g.frame(e2, 0.017, 15)
     check("a second copy takes over when the owner stops", s5.L.eval("KRS_SC_Owner == ENTS[2]"))
+    # extra copies remove themselves once an owner works
+    s10 = Sim()
+    e3 = s10.L.eval("new_entity")()
+    s10.g.play(s10.e, 2, 60, 0)
+    for i in range(10):
+        s10.g.frame(s10.e, 0.017, 15)
+        s10.g.frame(e3, 0.017, 15)
+    check("a copy removes itself while an owner is working", len(s10.g.REMOVED) >= 1, len(s10.g.REMOVED))
+    s11 = Sim()
+    s11.g.play(s11.e, 2, 60, 0)
+    check("the owner never removes itself", len(s11.g.REMOVED) == 0)
 
     print()
     if fails:

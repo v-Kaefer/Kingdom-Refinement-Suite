@@ -5,6 +5,10 @@ tooling; the changes of each shipped mod are in `modules/<id>/CHANGES.md`. Statu
 
 Conventions: **measured** = observed in the running game, **reported** = from a third party, **default** = decided while the author was away and open to reversal.
 
+## 2026-10-11: krs_skipcost 0.1.3, first game run with the 0.1.x changes
+
+- Author: keep the long reading cost; run the tests. The run found two defects the Lua simulation missed (a 1 h Wait on a busy PC ran at under 100 world seconds per real second and was dropped; the 10 s respawn pause left no entity after a load). Fixed: `MIN_SKIP_RATE` 40, no pause, cap 500, extra copies remove themselves. Then in the game: entity takes over after the load, awake rate 3.1848 per hour, a Wait of 2.993 h cost 7.148 (rate x hours x 0.75), the message "Waited 3.0 h: hunger -7" shows on screen. Saves copied before and compared by hash after: no difference. 36 simulation checks. Not tested: sitting, sleeping, reading, fainting, the hungry/starving endings. The Claude window was minimized to give the game the focus and restored afterwards.
+
 ## 2026-10-11: krs_skipcost 0.1.2, the player is told what a skip cost
 
 - Author's answers to the review: warn the player (no floor for the cost), keep the KRS Items hunger rate, sitting = 50%. `krs_skipcost` 0.1.2 shows a message after each skip (`Waited 2.0 h: hunger -5`, `Slept 6.0 h: hunger -10 (you are hungry)`, `Rested 3.0 h: hunger -5 (starving)`) through `Game.ShowNotification` with a fallback to `Game.SendInfoText`; `notify = 0` turns it off. Simulation: 33 checks pass. Not seen on screen: the text is not a localization key, so whether the game shows it is for the next in-game run. `V1_REVISAO.md` updated (the long-reading cost is the only balance question left).

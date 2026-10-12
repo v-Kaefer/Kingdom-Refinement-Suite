@@ -4,7 +4,7 @@
     <name>KRS Skip Cost</name>
     <description>Kingdom Refinement Suite - waiting and sleeping cost hunger again: the game charges nothing during a time skip, this charges a share of the awake cost.</description>
     <author>Kaleb</author>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <created_on>10/10/2026</created_on>
     <modid>krs_skipcost</modid>
     <modifies_level>false</modifies_level>

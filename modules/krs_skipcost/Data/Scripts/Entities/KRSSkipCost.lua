@@ -21,7 +21,7 @@ local LONG_FRAME_MIN = 0.15   -- frame time (s) from which a frame counts as par
 local LONG_FRAME_MAX = 2.0    -- above this it is a loading hitch, not a skip
 local QUIET_FRAMES = 45       -- normal frames in a row that end a skip
 local WINDOW_SECS = 300       -- world seconds of awake time per rate measurement
-local MIN_SKIP_RATE = 100   -- world seconds per real second below which long frames are slow play, not a skip (normal play is 15)
+local MIN_SKIP_RATE = 40    -- world seconds per real second below which long frames are slow play, not a skip (normal play is 15; a 1 h Wait on a slow PC ran at 7 per frame)
 local MIN_SKIP_SECS = 120  -- world seconds below which a run of long frames is taken for a hitch
 local PRIOR_SHARE = 0.70      -- hunger bar rate over the DigestionSpeed constant (measured 0.70)
 
@@ -95,6 +95,7 @@ local function finish_skip(K, wt)
     local real = (K.t_last or K.t_open or 0) - (K.t_open or 0) + 1
     if K.secs / real < MIN_SKIP_RATE then
         -- long frames at a low frame rate: the clock did not run fast in real time
+        log(string.format("not a skip: %.0f world s in %d real s (%.0f per s)", K.secs, real, K.secs / real))
         K.open, K.secs, K.frames, K.quiet = false, 0, 0, 0
         return
     end
@@ -160,6 +161,7 @@ function KRSSkipCost:Step(frameTime)
             K.t_chk = K.t_last
             local el = K.t_last - K.t_open
             if el >= 3 and K.secs / el < MIN_SKIP_RATE then
+                log(string.format("not a skip (slow play): %.0f world s in %d real s (%.0f per s)", K.secs, el, K.secs / el))
                 K.open, K.secs, K.frames, K.quiet = false, 0, 0, 0
                 return
             end
@@ -223,13 +225,22 @@ end
 function KRSSkipCost.Client:OnUpdate(frameTime)
     if not self.stale then self:OnReset() end
     if KRS_SC_Owner ~= self then
-        if KRS_SC_OwnerStamp == self.seen_stamp then self.stale = self.stale + 1 else self.stale = 0 end
+        if KRS_SC_OwnerStamp == self.seen_stamp then
+            self.stale = self.stale + 1
+        else
+            self.stale = 0
+            self.owner_seen = (self.owner_seen or 0) + 1
+        end
         self.seen_stamp = KRS_SC_OwnerStamp
         if KRS_SC_Owner == nil or self.stale > 3 then
             KRS_SC_Owner = self
             self.stale = 0
             log("entity took over")
         else
+            -- a copy that has watched a working owner for a few frames is not needed: it removes itself
+            if self.owner_seen and self.owner_seen >= 5 and System.RemoveEntity and self.id then
+                pcall(System.RemoveEntity, self.id)
+            end
             return
         end
     end

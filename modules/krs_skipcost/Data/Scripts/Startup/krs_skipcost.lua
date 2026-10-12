@@ -19,25 +19,16 @@ KRS_SC_Starter = {}
 KRS_SC_Beat = 0          -- the entity that owns the work adds 1 on every frame it updates
 KRS_SC_LastBeat = -1
 KRS_SC_Spawns = 0
-KRS_SC_LastSpawnT = -1000
 
 function KRS_SC_Starter:onAction(actionName, eventName, argTable)
-    -- respawn the entity when its frame counter stopped moving since the previous UI event (a level change destroys it), at most once
-    -- every 10 real seconds; without os.time the number of respawns is capped instead
-    if KRS_SC_Beat == KRS_SC_LastBeat then
-        local now = 0
-        if os and os.time then
-            local ok, v = pcall(os.time)
-            if ok and type(v) == "number" then now = v end
-        end
-        local allowed
-        if now > 0 then allowed = now - KRS_SC_LastSpawnT >= 10 else allowed = KRS_SC_Spawns < 40 end
-        if allowed and KRS_SC_Spawns < 1000 then
-            KRS_SC_Spawns = KRS_SC_Spawns + 1
-            KRS_SC_LastSpawnT = now
-            local ok, ent = pcall(System.SpawnEntity, { class = "KRSSkipCost", name = "KRSSkipCost_Instance" .. KRS_SC_Spawns })
-            if not (ok and ent) then System.LogAlways("KRS_SC spawn " .. KRS_SC_Spawns .. " failed: " .. tostring(ent)) end
-        end
+    -- Respawn the entity when its frame counter stopped moving since the previous UI event: a level change destroys it, and the UI
+    -- events that follow a load are the only chance to make a new one (no pause between spawns: a rate limit here made the mod miss
+    -- the events right after a load, seen in game). Extra copies remove themselves once one copy is working (see the entity script);
+    -- the cap only guards against a runaway.
+    if KRS_SC_Beat == KRS_SC_LastBeat and KRS_SC_Spawns < 500 then
+        KRS_SC_Spawns = KRS_SC_Spawns + 1
+        local ok, ent = pcall(System.SpawnEntity, { class = "KRSSkipCost", name = "KRSSkipCost_Instance" .. KRS_SC_Spawns })
+        if not (ok and ent) then System.LogAlways("KRS_SC spawn " .. KRS_SC_Spawns .. " failed: " .. tostring(ent)) end
     end
     KRS_SC_LastBeat = KRS_SC_Beat
 end
