@@ -14,6 +14,3 @@ Main features
 
 Requirements
 Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. The repository records permission requests for ideas from Realistic Repairs and Train More Carry More; resolve that status before publication. Some level-only repair rows still need a loaded-save check.
-
-Shout outs
-Thanks to the authors of Realistic Repairs, Train More Carry More, Herb Picking Radius 2x, and Timed Quest Indicator for their ideas.
