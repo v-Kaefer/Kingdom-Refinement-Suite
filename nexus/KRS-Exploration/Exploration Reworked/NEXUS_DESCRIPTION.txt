@@ -14,6 +14,3 @@ Main features
 
 Requirements
 Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. The scripts loaded without error in the test game, but the XP awards have not yet been observed in play. The separate washing animation needs third-party assets and is excluded pending redistribution permission.
-
-Shout outs
-Thanks to CrEaToXx for Waystones Give XP and Shooting Nests Gives XP, which inspired the two independently written rewards, and to the Kingdom Come: Deliverance modding community.
