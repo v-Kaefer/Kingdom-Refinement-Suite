@@ -38,7 +38,7 @@ and the actual table contents. Lines marked *(proposed)* are recommendations, no
 
 | Module | In scope (target) | Source ideas |
 |---|---|---|
-| **KRS-Items** | Sleeping spots, nourishment / digestion / starvation, potion and food values, book reading time and XP | Realistic Items 1.1.x, Bed Comfort Restored, Skill Books Take Time, Potions.md |
+| **KRS-Items** | Nourishment / digestion / starvation, potion and food values, book reading time and XP (sleeping spots moved to KRS-Exploration on 2026-10-09) | Realistic Items 1.1.x, Skill Books Take Time, Potions.md |
 | **KRS-QoL** | Herb radius, carry capacity, repairs *(placement undecided)*, Timed Quest Indicator text (EN/CZ/PT) | hoskope_hgrx2, Train More Carry More, Realistic Repairs, Timed Quest Indicator |
 | **KRS-Perks** | Riposte at level 10 (Master Strike restored); Perkaholic is a *requirement*, not copied | Restore Riposte (1765), Perkaholic |
 | Outside the suite | Hoods, "more historically accurate item stats", Realistic Horses, Enhanced Eyes | cosmetic or intrusive (`CONTRIBUTING.md`: cosmetic mods stay out of gameplay modules) |

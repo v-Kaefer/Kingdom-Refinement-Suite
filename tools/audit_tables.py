@@ -16,7 +16,7 @@ counted.
 
 Usage (from anywhere):
     python tools/audit_tables.py --root "E:/Kingdom-Refinement-Suite" \
-        --game "E:/Kingdom-Refinement-Suite/Mods WIP folder/KingdomComeDeliverance" \
+        --game "E:/Kingdom-Refinement-Suite/WIP_Mods/KingdomComeDeliverance" \
         --out docs/data/table-audit [--extra LABEL=PATH ...]
 
 Writes <out>/TABLE_AUDIT.md and <out>/table_audit.json.

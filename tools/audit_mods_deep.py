@@ -41,7 +41,7 @@ import paths  # noqa: E402
 
 D = paths.MODS_REVIEW
 SEVENZ = ama.SEVENZ
-GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance")
+GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\WIP_Mods\KingdomComeDeliverance")
 MAX_EXTRACT_MB = 400          # larger archives: only text-like files and small paks are extracted
 MAX_PAK_MB = 200
 MAX_MEMBER = 6 * 1024 * 1024  # bytes read from one text file

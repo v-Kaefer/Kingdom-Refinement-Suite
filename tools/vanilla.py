@@ -13,7 +13,7 @@ import sys
 import xml.etree.ElementTree as ET
 import zipfile
 
-DEFAULT_GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance")
+DEFAULT_GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\WIP_Mods\KingdomComeDeliverance")
 
 
 def read_member(z, zi):

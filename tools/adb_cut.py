@@ -26,7 +26,7 @@ import sys
 import zipfile
 import xml.etree.ElementTree as ET
 
-GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\Mods WIP folder\KingdomComeDeliverance")
+GAME = os.environ.get("KCD_GAME", r"E:\Kingdom-Refinement-Suite\WIP_Mods\KingdomComeDeliverance")
 ADB = "Animations/Mannequin/ADB/kcd_male_database.adb"
 BS = chr(92)
 LEVELS = {"base": "Animations-part1.pak", "010300": "patch/ipl_patch_010300.pak", "010400": "patch/ipl_patch_010400.pak", "010500": "patch/ipl_patch_010500.pak",
