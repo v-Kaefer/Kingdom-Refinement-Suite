@@ -15,6 +15,3 @@ Main features
 
 Requirements
 Kingdom Come: Deliverance 1.9.6, 1.9.7, or 1.9.8. No other mod is required. Perk behaviour and visibility after loading a save require a final game check before publication.
-
-Shout outs
-Thanks to AcSiG for Restore Riposte (permission recorded as granted), the Perkaholic authors for the source ideas, and the Kingdom Come: Deliverance modding community.
