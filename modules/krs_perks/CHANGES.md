@@ -1,5 +1,12 @@
 # krs_perks changes
 
+## 1.1.1 (12 Oct 2026) - real-game profile candidate
+- Filled one missing referenced name in French and 108 missing referenced names/descriptions in Korean with the maintained English fallback. Existing translations are preserved. The source generator now fills missing referenced keys per language after applying the namespace changes.
+- Registered 189 existing Perks rows in `docs/data/ownership.csv`; the ownership check passes against the real Steam installation's `Tables.pak`. No balance values or perk ids changed.
+- The real installed profile shares the two restored perk rows with the old Riposte mod. Disable that mod when using `krs_perks`. The last existing game log (3 Oct 2026) already disables old Riposte on 1.9.8.
+- Package/schema/reference/localization checks are static. A new loaded-save run in the real installation is still required for acquisition, combat behavior and tier overrides.
+- Manifest version aligned to 1.1.1 so this corrected package is distinguishable from the old 1.0.0 package.
+
 ## 1.0.0
 - Manifest lists game versions 1.9.6, 1.9.7, 1.9.8. Gate passed on 1.9.8 (menu stage); the perk rows themselves still need a level (`--mode full`).
 - New module id `krs_perks`; `perk__krs_perks.xml` with complete rows (the upstream rows left out the `autolearnable` and `exclude_in_game_mode` columns, which blanks them).
